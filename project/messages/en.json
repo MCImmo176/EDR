@@ -1,0 +1,128 @@
+{
+    "navigation": {
+      "home": "Home",
+      "villa": "Our Villa",
+      "discover": "Discover",
+      "gallery": "Gallery",
+      "info": "Information",
+      "contact": "Contact"
+    },
+    "home": {
+      "hero": {
+        "title": "Villa Azur",
+        "subtitle": "Experience luxury and comfort",
+        "cta": "Discover"
+      },
+      "excellence": {
+        "title": "Pure excellence",
+        "description": "A 500m² exceptional villa nestled between sky and sea, offering an unparalleled luxury experience on the French Riviera."
+      },
+      "service": {
+        "title": "Tailored service",
+        "description": "Every stay at Villa Azur is a unique experience, with personalized service to meet your most demanding desires.",
+        "features": {
+          "concierge": "24/7 Concierge",
+          "chef": "Private Chef",
+          "butler": "Butler",
+          "spa": "Spa & massage",
+          "driver": "Private driver",
+          "security": "Security service"
+        }
+      }
+    },
+    "villa": {
+      "intro": {
+        "title": "Our Villa",
+        "subtitle": "Discover where Mediterranean luxury meets the art of living."
+      },
+      "overview": {
+        "title": "A haven on the French Riviera",
+        "description": "Perched on the heights of Roquebrune Cap Martin, Villa Azur offers breathtaking views of the Mediterranean and the Italian coast. This exceptional 500m² property has been designed to offer an unparalleled luxury experience.",
+        "features": {
+          "area": "Area",
+          "bedrooms": "Bedrooms",
+          "bathrooms": "Bathrooms",
+          "pool": "Pool",
+          "view": "View",
+          "beach": "Beach access"
+        }
+      },
+      "amenities": {
+        "title": "Amenities & Services",
+        "subtitle": "Villa Azur offers a complete range of amenities and services to meet all your expectations.",
+        "house": "House",
+        "exterior": "Exterior",
+        "services": "Services",
+        "leisure": "Leisure"
+      },
+      "kitchen": {
+        "title": "Our Kitchen",
+        "subtitle": "A fully equipped kitchen for optimal comfort"
+      },
+      "experience": {
+        "title": "The Villa Azur Experience",
+        "description": "Staying at Villa Azur means experiencing unparalleled luxury, where every detail has been considered for your comfort and pleasure. Our team is at your disposal to make your stay unforgettable, whether it's organizing personalized services, excursions, or exceptional events."
+      }
+    },
+    "discover": {
+      "title": "Discover",
+      "subtitle": "Explore the wonders of the French Riviera from Villa Azur.",
+      "experiences": {
+        "title": "Experiences",
+        "subtitle": "A multitude of activities to make your stay unforgettable."
+      }
+    },
+    "gallery": {
+      "title": "Gallery",
+      "subtitle": "Discover Villa Azur through our photo gallery.",
+      "categories": {
+        "all": "All",
+        "exterior": "Exterior",
+        "interior": "Interior",
+        "bedrooms": "Bedrooms",
+        "views": "Views"
+      }
+    },
+    "info": {
+      "title": "Information",
+      "subtitle": "Everything you need to know to prepare your stay at Villa Azur.",
+      "features": {
+        "location": "Location",
+        "availability": "Availability",
+        "amenities": "Amenities",
+        "security": "Security"
+      },
+      "location": {
+        "title": "Location & Access",
+        "description": "Villa Azur is located in Roquebrune Cap Martin, offering panoramic views of the Mediterranean while being close to the most beautiful sites of the French Riviera."
+      },
+      "rules": {
+        "title": "House Rules",
+        "subtitle": "To ensure everyone's comfort, please respect these rules during your stay."
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Contact us for any inquiries about the villa or to book your stay.",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "message": "Message",
+        "submit": "Send",
+        "success": "Message sent!",
+        "successDetail": "Thank you for your message. Our team will contact you shortly."
+      },
+      "info": {
+        "title": "Contact Information",
+        "email": "Email",
+        "phone": "Phone",
+        "address": "Address"
+      }
+    },
+    "footer": {
+      "terms": "Terms of Use",
+      "sales": "Terms of Sale",
+      "rights": "All rights reserved"
+    }
+  }
