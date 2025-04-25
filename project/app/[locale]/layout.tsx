@@ -22,7 +22,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Villa Azur - Roquebrune Cap Martin',
+  title: 'Les Étoiles du Rocher - Roquebrune Cap Martin',
   description: "Villa d'exception située à Roquebrune Cap Martin, destinée à la location de luxe",
 };
 

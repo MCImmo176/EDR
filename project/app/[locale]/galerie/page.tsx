@@ -5,55 +5,57 @@ import { useState } from "react";
 import Image from "next/image";
 import { X } from "lucide-react";
 import { SectionTitle } from "@/components/ui/section-title";
+import { useLanguage } from "@/hooks/useLanguage";
 
 export default function GaleriePage() {
+  const { tGallery } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   
   const photos = [
     {
       src: "https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg",
-      alt: "Vue extérieure de la villa",
-      category: "Extérieur"
+      alt: tGallery('images.exterior'),
+      category: tGallery('categories.exterior')
     },
     {
       src: "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg",
-      alt: "Salon avec vue panoramique",
-      category: "Intérieur"
+      alt: tGallery('images.living'),
+      category: tGallery('categories.interior')
     },
     {
       src: "https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg",
-      alt: "Chambre principale",
-      category: "Chambres"
+      alt: tGallery('images.bedroom'),
+      category: tGallery('categories.bedrooms')
     },
     {
       src: "https://images.pexels.com/photos/2631746/pexels-photo-2631746.jpeg",
-      alt: "Terrasse et piscine",
-      category: "Extérieur"
+      alt: tGallery('images.terrace'),
+      category: tGallery('categories.exterior')
     },
     {
       src: "https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg",
-      alt: "Cuisine équipée",
-      category: "Intérieur"
+      alt: tGallery('images.kitchen'),
+      category: tGallery('categories.interior')
     },
     {
       src: "https://images.pexels.com/photos/2119714/pexels-photo-2119714.jpeg",
-      alt: "Vue sur la mer",
-      category: "Vues"
+      alt: tGallery('images.seaView'),
+      category: tGallery('categories.views')
     },
     {
       src: "https://images.pexels.com/photos/4946956/pexels-photo-4946956.jpeg",
-      alt: "Salle à manger",
-      category: "Intérieur"
+      alt: tGallery('images.dining'),
+      category: tGallery('categories.interior')
     },
     {
       src: "https://images.pexels.com/photos/2707756/pexels-photo-2707756.jpeg",
-      alt: "Vue aérienne",
-      category: "Vues"
+      alt: tGallery('images.aerial'),
+      category: tGallery('categories.views')
     },
     {
       src: "https://images.pexels.com/photos/90319/pexels-photo-90319.jpeg",
-      alt: "Suite parentale",
-      category: "Chambres"
+      alt: tGallery('images.master'),
+      category: tGallery('categories.bedrooms')
     }
   ];
 
@@ -74,8 +76,8 @@ export default function GaleriePage() {
             transition={{ duration: 0.6 }}
           >
             <SectionTitle
-              title="Galerie"
-              subtitle="Découvrez Villa Azur à travers notre galerie photos."
+              title={tGallery('title')}
+              subtitle={tGallery('subtitle')}
               centered
             />
           </motion.div>
@@ -98,7 +100,7 @@ export default function GaleriePage() {
                   : "bg-muted hover:bg-muted/80"
               }`}
             >
-              Tout
+              {tGallery('categories.all')}
             </button>
             {categories.map((category, index) => (
               <button

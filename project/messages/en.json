@@ -11,19 +11,19 @@
     "learnMore": "Learn More"
   },
   "home": {
-    "title": "Villa Azur",
-    "subtitle": "Live in Luxury and Comfort",
-    "excellence": "Excellence in its Purest Form",
+    "title": "Les Étoiles du Rocher",
+    "subtitle": "Live in luxury and comfort",
+    "excellence": "Excellence in its purest form",
     "description": "An exceptional 500m² villa nestled between sky and sea, offering an incomparable luxury experience on the French Riviera.",
     "service": {
       "title": "Tailored Service",
-      "description": "Each stay at Villa Azur is a unique experience, with personalized service to satisfy your most demanding desires.",
+      "description": "Every stay at Les Étoiles du Rocher is a unique experience, with personalized service to meet your most demanding desires.",
       "features": {
         "concierge": "24/7 Concierge Service",
         "chef": "Private Chef",
         "spa": "In-Home Spa Service",
         "transport": "Private Transport",
-        "cleaning": "Daily Housekeeping",
+        "cleaning": "Daily Cleaning",
         "security": "24/7 Security"
       }
     }
@@ -34,7 +34,7 @@
   },
   "villa": {
     "title": "The Villa",
-    "description": "An Exceptional Residence",
+    "description": "An exceptional residence",
     "features": {
       "area": "Area",
       "bedrooms": "Bedrooms",
@@ -50,10 +50,10 @@
       "images": {
         "alt": "Villa kitchen with modern appliances"
       },
-      "noPoints": "Click on one of the points to display specific details about that part of the kitchen.",
+      "noPoints": "Click on one of the points to see specific details about this part of the kitchen.",
       "cabinets": {
         "title": "Upper and Lower Cabinets",
-        "description": "Upper cabinets with invisible fixings and smoked glass in the center, elevated lower cabinets with two shelves and 15% extra space."
+        "description": "Upper cabinets with invisible fixings and satin glass in the center, raised lower cabinets with two shelves and 15% extra space."
       },
       "counter": {
         "title": "Countertop and Backsplash",
@@ -61,11 +61,11 @@
       },
       "sink": {
         "title": "Sink and Faucet",
-        "description": "Stainless steel undermount sink with pull-out faucet with variable flow for more flexibility."
+        "description": "Undermount stainless steel sink with pull-out faucet with variable flow for more flexibility."
       },
       "dishwasher": {
         "title": "Smart Dishwasher",
-        "description": "Built-in dishwasher with eco program and automatic load detection for optimized consumption."
+        "description": "Integrated dishwasher with eco program and automatic load detection for optimized consumption."
       },
       "fridge": {
         "title": "Combined Refrigerators",
@@ -77,11 +77,11 @@
       },
       "stove": {
         "title": "Cooktop",
-        "description": "Induction cooktop with 5 cooking zones and variable bridge to adapt to all types of cookware."
+        "description": "Induction cooktop with 5 cooking zones and variable bridge to adapt to all types of pots."
       },
       "island": {
         "title": "Central Island",
-        "description": "Central island with integrated storage and concealed electrical outlets for more convenience."
+        "description": "Central island with integrated storage space and hidden electrical outlets for more convenience."
       }
     },
     "images": {
@@ -89,7 +89,7 @@
         "alt": "Villa exterior with pool and sea view"
       },
       "living": {
-        "alt": "Luxurious living room with glass doors"
+        "alt": "Luxury living room with glass doors"
       },
       "bedroom": {
         "alt": "Master bedroom with sea view"
@@ -119,13 +119,25 @@
     }
   },
   "gallery": {
-    "title": "Photos",
-    "description": "See the magic of Villa Azur",
+    "title": "Gallery",
+    "subtitle": "Discover Les Étoiles du Rocher through our photo gallery",
     "categories": {
+      "all": "All",
       "exterior": "Exterior",
       "interior": "Interior",
-      "pool": "Pool",
-      "garden": "Garden"
+      "bedrooms": "Bedrooms",
+      "views": "Views"
+    },
+    "images": {
+      "exterior": "Exterior view of the villa",
+      "living": "Living room with panoramic view",
+      "bedroom": "Master bedroom",
+      "terrace": "Terrace and pool",
+      "kitchen": "Fully equipped kitchen",
+      "seaView": "Sea view",
+      "dining": "Dining room",
+      "aerial": "Aerial view",
+      "master": "Master suite"
     }
   },
   "contact": {
@@ -151,7 +163,91 @@
       "arrival": "Arrival",
       "departure": "Departure",
       "rules": "Rules",
-      "amenities": "Amenities"
+      "amenities": "Services"
     }
+  },
+  "discover": {
+    "title": "Discover",
+    "subtitle": "Explore the wonders of the French Riviera from Les Étoiles du Rocher.",
+    "experiences": {
+      "title": "Experiences",
+      "subtitle": "A multitude of activities to make your stay unforgettable.",
+      "categories": {
+        "nautical": {
+          "title": "Water Activities",
+          "items": [
+            "Yacht rental",
+            "Scuba diving",
+            "Stand-up paddle and kayak",
+            "Jet ski"
+          ]
+        },
+        "culture": {
+          "title": "Culture & History",
+          "items": [
+            "Museums",
+            "Historic sites",
+            "Art galleries",
+            "Concerts"
+          ]
+        },
+        "gastronomy": {
+          "title": "Gastronomy",
+          "items": [
+            "Michelin-starred restaurants",
+            "Local markets",
+            "Wine tastings",
+            "Cooking classes"
+          ]
+        },
+        "nature": {
+          "title": "Nature & Sports",
+          "items": [
+            "Hiking",
+            "Golf",
+            "Tennis",
+            "Electric mountain biking"
+          ]
+        }
+      }
+    },
+    "activities": {
+      "monaco": {
+        "title": "Monaco",
+        "description": "Discover the Principality of Monaco, its legendary casinos, the Prince's Palace and the Formula 1 Grand Prix.",
+        "distance": "10 minutes"
+      },
+      "nice": {
+        "title": "Nice",
+        "description": "Stroll along the Promenade des Anglais, visit Old Nice and savor the local gastronomy.",
+        "distance": "30 minutes"
+      },
+      "eze": {
+        "title": "Èze Village",
+        "description": "Medieval perched village with breathtaking views of the Mediterranean and the famous Exotic Garden.",
+        "distance": "15 minutes"
+      },
+      "saintPaul": {
+        "title": "Saint-Paul-de-Vence",
+        "description": "Artists' village with art galleries, ramparts and the Maeght Foundation.",
+        "distance": "45 minutes"
+      },
+      "menton": {
+        "title": "Menton",
+        "description": "The pearl of France, known for its gardens, the lemon festival and its beaches.",
+        "distance": "15 minutes"
+      },
+      "antibes": {
+        "title": "Antibes",
+        "description": "Discover Port Vauban, Fort Carré and the Picasso Museum in this historic city.",
+        "distance": "40 minutes"
+      }
+    },
+    "readMore": "Read More"
+  },
+  "footer": {
+    "terms": "Terms and Conditions",
+    "sales": "Sales Conditions",
+    "rights": "All rights reserved"
   }
 } 

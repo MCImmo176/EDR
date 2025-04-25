@@ -6,27 +6,15 @@
     "services": "Services",
     "readMore": "En savoir plus",
     "discover": "Découvrir",
-    "bookNow": "Réserver maintenant",
+    "bookNow": "Réserver",
     "contactUs": "Contactez-nous",
     "learnMore": "En savoir plus"
   },
   "home": {
-    "title": "Villa Azur",
-    "subtitle": "Vivez le luxe et le confort",
+    "title": "Les Étoiles du Rocher",
+    "subtitle": "Votre havre de paix sur la Côte d'Azur",
     "excellence": "L'excellence dans sa forme la plus pure",
-    "description": "Une villa d'exception de 500m² nichée entre ciel et mer, offrant une expérience de luxe incomparable sur la Côte d'Azur.",
-    "service": {
-      "title": "Un service sur mesure",
-      "description": "Chaque séjour à la Villa Azur est une expérience unique, avec un service personnalisé pour satisfaire vos désirs les plus exigeants.",
-      "features": {
-        "concierge": "Service conciergerie 24/7",
-        "chef": "Chef privé",
-        "spa": "Service spa à domicile",
-        "transport": "Transport privé",
-        "cleaning": "Ménage quotidien",
-        "security": "Sécurité 24/7"
-      }
-    }
+    "description": "Découvrez un lieu d'exception où luxe et authenticité se rencontrent pour créer des moments inoubliables."
   },
   "about": {
     "title": "À propos de nous",
@@ -36,11 +24,11 @@
     "title": "La Villa",
     "description": "Une résidence d'exception",
     "features": {
-      "area": "Surface",
+      "area": "Superficie",
       "bedrooms": "Chambres",
       "bathrooms": "Salles de bain",
       "pool": "Piscine",
-      "poolType": "À débordement",
+      "poolType": "Infinity",
       "view": "Vue",
       "viewType": "Mer",
       "beach": "Accès à la plage",
@@ -48,79 +36,126 @@
     },
     "kitchen": {
       "images": {
-        "alt": "Cuisine de la villa avec équipements modernes"
+        "alt": "Cuisine de la villa avec électroménagers modernes"
       },
-      "noPoints": "Cliquez sur un des points pour afficher les détails spécifiques de cette partie de la cuisine.",
+      "noPoints": "Cliquez sur l'un des points pour voir les détails spécifiques de cette partie de la cuisine.",
       "cabinets": {
         "title": "Meubles hauts et bas",
-        "description": "Meubles hauts avec fixations invisibles et verres fumés au centre, meubles bas surélevés avec deux étagères et 15% d'espace supplémentaire."
+        "description": "Meubles hauts avec fixations invisibles et verre satiné au centre, meubles bas surélevés avec deux étagères et 15% d'espace supplémentaire."
       },
       "counter": {
-        "title": "Plan de travail et crédence",
-        "description": "Plan de travail en quartz noir avec finition mate contrastée, crédence en verre trempé pour un nettoyage facile."
+        "title": "Plan de travail et dosseret",
+        "description": "Plan de travail en quartz noir avec finition mate contrastante, dosseret en verre trempé pour un nettoyage facile."
       },
       "sink": {
-        "title": "Évier et mitigeur",
-        "description": "Évier encastré en inox avec mitigeur extractible à débit variable pour plus de flexibilité."
+        "title": "Évier et robinet",
+        "description": "Évier sous plan en acier inoxydable avec robinet extractible à débit variable pour plus de flexibilité."
       },
       "dishwasher": {
         "title": "Lave-vaisselle intelligent",
-        "description": "Lave-vaisselle encastré avec programme écologique et détection automatique de la charge pour une consommation optimisée."
+        "description": "Lave-vaisselle intégré avec programme éco et détection automatique de la charge pour une consommation optimisée."
       },
       "fridge": {
         "title": "Réfrigérateurs combinés",
-        "description": "Réfrigérateur-congélateur combiné avec compartiments No-Frost et zone fraîche spéciale pour les aliments sensibles."
+        "description": "Réfrigérateur-congélateur combiné avec compartiments No-Frost et zone fraîche spéciale pour aliments sensibles."
       },
       "oven": {
-        "title": "Four et Micro-ondes",
+        "title": "Four et micro-ondes",
         "description": "Four multifonction avec fonction vapeur et micro-ondes combiné pour une cuisson rapide et saine."
       },
       "stove": {
-        "title": "Surface de cuisson",
-        "description": "Table de cuisson à induction avec 5 zones de cuisson et pont variable pour s'adapter à tous les types de récipients."
+        "title": "Plaque de cuisson",
+        "description": "Plaque de cuisson à induction avec 5 zones de cuisson et pont variable pour s'adapter à tous les types de casseroles."
       },
       "island": {
         "title": "Îlot central",
-        "description": "Îlot central avec rangements intégrés et prises électriques dissimulées pour plus de praticité."
+        "description": "Îlot central avec espace de rangement intégré et prises électriques cachées pour plus de praticité."
       }
     },
     "images": {
       "exterior": {
-        "alt": "Extérieur de la villa avec piscine et vue sur la mer"
+        "alt": "Extérieur de la villa avec piscine et vue sur mer"
       },
       "living": {
-        "alt": "Salon luxueux avec baies vitrées"
+        "alt": "Salon de luxe avec portes vitrées"
       },
       "bedroom": {
-        "alt": "Chambre principale avec vue sur la mer"
+        "alt": "Chambre principale avec vue sur mer"
       }
     },
     "rooms": {
       "master": {
         "title": "Suite Principale",
-        "description": "Une suite principale spacieuse avec vue panoramique sur la mer, salle de bain en marbre et dressing.",
-        "alt": "Suite principale de la chambre"
+        "description": "Une spacieuse suite principale avec vue panoramique sur la mer, salle de bain en marbre et dressing.",
+        "alt": "Suite de la chambre principale"
       },
       "main": {
         "title": "Salon Principal",
-        "description": "Un salon élégant avec portes vitrées offrant une vue incomparable sur la Méditerranée.",
+        "description": "Un élégant salon avec portes vitrées offrant une vue incomparable sur la Méditerranée.",
         "alt": "Salon principal"
       },
       "terrace": {
         "title": "Terrasse & Piscine",
-        "description": "Une vaste terrasse avec piscine à débordement et espace détente avec vue sur la mer.",
-        "alt": "Terrasse avec piscine à débordement"
+        "description": "Une vaste terrasse avec piscine infinity et espace détente avec vue sur mer.",
+        "alt": "Terrasse avec piscine infinity"
       },
       "gourmet": {
         "title": "Cuisine Gastronomique",
-        "description": "Une cuisine entièrement équipée avec îlot central et électroménager haut de gamme.",
+        "description": "Une cuisine entièrement équipée avec îlot central et électroménagers haut de gamme.",
         "alt": "Cuisine gastronomique"
       }
     }
   },
+  "gallery": {
+    "title": "Galerie",
+    "subtitle": "Découvrez Les Étoiles du Rocher à travers notre galerie photos",
+    "categories": {
+      "all": "Tout",
+      "exterior": "Extérieur",
+      "interior": "Intérieur",
+      "bedrooms": "Chambres",
+      "views": "Vues"
+    },
+    "images": {
+      "exterior": "Vue extérieure de la villa",
+      "living": "Salon avec vue panoramique",
+      "bedroom": "Chambre principale",
+      "terrace": "Terrasse et piscine",
+      "kitchen": "Cuisine équipée",
+      "seaView": "Vue sur la mer",
+      "dining": "Salle à manger",
+      "aerial": "Vue aérienne",
+      "master": "Suite parentale"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Prenez contact avec nous",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "phone": "Téléphone",
+      "message": "Message",
+      "send": "Envoyer"
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Téléphone",
+      "address": "Adresse"
+    }
+  },
+  "info": {
+    "title": "Informations pratiques",
+    "subtitle": "Tout ce que vous devez savoir pour profiter pleinement de votre séjour aux Étoiles du Rocher",
+    "services": {
+      "title": "Équipements & Services",
+      "subtitle": "Les Étoiles du Rocher offre une gamme complète d'équipements et de services pour répondre à toutes vos attentes.",
+      "description": "Les Étoiles du Rocher vous offre une gamme complète de services et d'équipements pour rendre votre séjour aussi agréable que possible."
+    }
+  },
   "discover": {
     "title": "Découvrir",
-    "subtitle": "Explorez les merveilles de la Côte d'Azur depuis Villa Azur.",
+    "subtitle": "Explorez les merveilles de la Côte d'Azur depuis les Étoiles du Rocher.",
     "experiences": {
       "title": "Expériences",
       "subtitle": "Une multitude d'activités pour rendre votre séjour inoubliable.",
@@ -128,9 +163,9 @@
         "nautical": {
           "title": "Activités nautiques",
           "items": [
-            "Location de yachts",
+            "Location de yacht",
             "Plongée sous-marine",
-            "Paddle et kayak",
+            "Stand-up paddle et kayak",
             "Jet ski"
           ]
         },
@@ -166,27 +201,27 @@
     "activities": {
       "monaco": {
         "title": "Monaco",
-        "description": "Découvrez la principauté de Monaco, ses casinos légendaires, le Palais Princier et le Grand Prix de Formule 1.",
+        "description": "Découvrez la Principauté de Monaco, ses légendaires casinos, le Palais Princier et le Grand Prix de Formule 1.",
         "distance": "10 minutes"
       },
       "nice": {
         "title": "Nice",
-        "description": "Flânez sur la Promenade des Anglais, visitez le Vieux Nice et profitez de la gastronomie locale.",
+        "description": "Promenez-vous sur la Promenade des Anglais, visitez le Vieux Nice et savourez la gastronomie locale.",
         "distance": "30 minutes"
       },
       "eze": {
         "title": "Èze Village",
-        "description": "Village médiéval perché offrant une vue imprenable sur la Méditerranée et abritant le célèbre Jardin Exotique.",
+        "description": "Village médiéval perché avec vue imprenable sur la Méditerranée et le célèbre Jardin Exotique.",
         "distance": "15 minutes"
       },
       "saintPaul": {
         "title": "Saint-Paul-de-Vence",
-        "description": "Village des artistes avec ses galeries d'art, ses remparts et sa Fondation Maeght.",
+        "description": "Village des artistes avec galeries d'art, remparts et la Fondation Maeght.",
         "distance": "45 minutes"
       },
       "menton": {
         "title": "Menton",
-        "description": "La perle de la France, connue pour ses jardins, son festival du citron et ses plages.",
+        "description": "La perle de la France, connue pour ses jardins, le festival du citron et ses plages.",
         "distance": "15 minutes"
       },
       "antibes": {
@@ -196,5 +231,10 @@
       }
     },
     "readMore": "En savoir plus"
+  },
+  "footer": {
+    "terms": "Conditions Générales",
+    "sales": "Conditions de Vente",
+    "rights": "Tous droits réservés"
   }
 } 

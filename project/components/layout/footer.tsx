@@ -52,7 +52,7 @@ export function Footer() {
         </div>
         
         <div className="mt-8 pt-8 border-t border-border text-center text-muted-foreground text-xs">
-          <p>© {new Date().getFullYear()} Villa Azur. {t("footer.rights")}</p>
+          <p>© {new Date().getFullYear()} Les Étoiles du Rocher. {t("footer.rights")}</p>
         </div>
       </div>
     </footer>

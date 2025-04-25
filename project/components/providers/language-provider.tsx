@@ -21,7 +21,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.contact": "Contact",
     "footer.terms": "Conditions Générales",
     "footer.sales": "Conditions de Vente",
-    "hero.title": "Villa Azur",
+    "hero.title": "Les Étoiles du Rocher",
     "hero.subtitle": "Une expérience unique à Roquebrune Cap Martin",
     "hero.cta": "Découvrir",
     // Add more translations as needed
@@ -33,7 +33,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.contact": "Contact",
     "footer.terms": "Terms of Use",
     "footer.sales": "Terms of Sale",
-    "hero.title": "Villa Azur",
+    "hero.title": "Les Étoiles du Rocher",
     "hero.subtitle": "A unique experience in Roquebrune Cap Martin",
     "hero.cta": "Discover",
     // Add more translations as needed
@@ -45,7 +45,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.contact": "Contatto",
     "footer.terms": "Termini di Utilizzo",
     "footer.sales": "Termini di Vendita",
-    "hero.title": "Villa Azur",
+    "hero.title": "Les Étoiles du Rocher",
     "hero.subtitle": "Un'esperienza unica a Roquebrune Cap Martin",
     "hero.cta": "Scoprire",
     // Add more translations as needed
@@ -57,7 +57,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.contact": "Επικοινωνία",
     "footer.terms": "Όροι Χρήσης",
     "footer.sales": "Όροι Πώλησης",
-    "hero.title": "Villa Azur",
+    "hero.title": "Les Étoiles du Rocher",
     "hero.subtitle": "Μια μοναδική εμπειρία στο Roquebrune Cap Martin",
     "hero.cta": "Ανακαλύψτε",
     // Add more translations as needed
@@ -69,7 +69,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.contact": "Контакт",
     "footer.terms": "Условия использования",
     "footer.sales": "Условия продажи",
-    "hero.title": "Villa Azur",
+    "hero.title": "Les Étoiles du Rocher",
     "hero.subtitle": "Уникальный опыт в Рокебрюн-Кап-Мартен",
     "hero.cta": "Открыть",
     // Add more translations as needed

@@ -454,7 +454,7 @@ export default function VillaPage() {
         >
           <SectionTitle
             title="Découvrez nos espaces"
-            subtitle="Chaque espace de Villa Azur a été conçu pour vous offrir confort, élégance et moments inoubliables."
+            subtitle="Chaque espace des Étoiles du Rocher a été conçu pour vous offrir confort, élégance et moments inoubliables."
             centered
           />
           
@@ -598,9 +598,9 @@ export default function VillaPage() {
             viewport={{ once: true, margin: "-100px" }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="mb-6">L'expérience Villa Azur</h2>
+            <h2 className="mb-6">L'expérience Les Étoiles du Rocher</h2>
             <p className="text-lg">
-              Séjourner à Villa Azur, c'est vivre une expérience de luxe inégalée, où chaque détail a été pensé pour votre confort et votre plaisir. Notre équipe est à votre disposition pour rendre votre séjour inoubliable, qu'il s'agisse d'organiser des services personnalisés, des excursions ou des événements exceptionnels.
+              Séjourner aux Étoiles du Rocher, c'est vivre une expérience de luxe inégalée, où chaque détail a été pensé pour votre confort et votre plaisir. Notre équipe est à votre disposition pour rendre votre séjour inoubliable, qu'il s'agisse d'organiser des services personnalisés, des excursions ou des événements exceptionnels.
             </p>
           </motion.div>
         </div>

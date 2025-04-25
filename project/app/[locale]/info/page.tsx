@@ -49,8 +49,8 @@ export default function InfoPage() {
             transition={{ duration: 0.6 }}
           >
             <SectionTitle
-              title="Informations"
-              subtitle="Tout ce que vous devez savoir pour préparer votre séjour à Villa Azur."
+              title="Informations pratiques"
+              subtitle="Tout ce que vous devez savoir pour profiter pleinement de votre séjour aux Étoiles du Rocher"
               centered
             />
           </motion.div>
@@ -111,7 +111,7 @@ export default function InfoPage() {
         >
           <SectionTitle
             title="Équipements & Services"
-            subtitle="Villa Azur offre une gamme complète d'équipements et de services pour répondre à toutes vos attentes."
+            subtitle="Les Étoiles du Rocher offre une gamme complète d'équipements et de services pour répondre à toutes vos attentes."
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mt-12">
@@ -154,9 +154,9 @@ export default function InfoPage() {
             </div>
             
             <div className="col-span-1 md:col-span-6 flex flex-col justify-center">
-              <h2 className="mb-6">Situation & Accès</h2>
-              <p className="text-lg mb-6">
-                Villa Azur est située sur les hauteurs de Roquebrune Cap Martin, offrant une vue panoramique sur la Méditerranée tout en étant à proximité des plus beaux sites de la Côte d'Azur.
+              <h2 className="mb-6">Services et équipements</h2>
+              <p className="text-lg">
+                Les Étoiles du Rocher vous offre une gamme complète de services et d'équipements pour rendre votre séjour aussi agréable que possible.
               </p>
               
               <h3 className="text-xl mb-4">Distances</h3>

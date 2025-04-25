@@ -53,7 +53,7 @@ export function Header() {
     >
       <div className="container px-4 mx-auto flex items-center justify-between">
         <Link href="/" className="text-2xl font-display tracking-tight">
-          Villa Azur
+          Les Étoiles du Rocher
         </Link>
 
         {/* Desktop Navigation */}

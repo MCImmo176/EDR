@@ -14,14 +14,14 @@ export default function TermsPage() {
         <div>
           <h2 className="text-2xl mb-4">1. Acceptation des conditions</h2>
           <p className="text-muted-foreground">
-            L'utilisation du site web Villa Azur implique l'acceptation pleine et entière des conditions générales d'utilisation décrites ci-après. Ces conditions d'utilisation sont susceptibles d'être modifiées ou complétées à tout moment.
+            L'utilisation du site web Les Étoiles du Rocher implique l'acceptation pleine et entière des conditions générales d'utilisation décrites ci-après. Ces conditions d'utilisation sont susceptibles d'être modifiées ou complétées à tout moment.
           </p>
         </div>
         
         <div>
           <h2 className="text-2xl mb-4">2. Informations</h2>
           <p className="text-muted-foreground">
-            Les informations présentées sur ce site sont non contractuelles et sont sujettes à modification sans préavis. Malgré tous les soins apportés à la qualité de son contenu, Villa Azur ne pourra être tenue pour responsable des erreurs ou omissions, ni des conséquences de l'utilisation des informations contenues dans ce site.
+            Les informations présentées sur ce site sont non contractuelles et sont sujettes à modification sans préavis. Malgré tous les soins apportés à la qualité de son contenu, Les Étoiles du Rocher ne pourra être tenue pour responsable des erreurs ou omissions, ni des conséquences de l'utilisation des informations contenues dans ce site.
           </p>
         </div>
         
@@ -42,7 +42,7 @@ export default function TermsPage() {
         <div>
           <h2 className="text-2xl mb-4">5. Protection des données personnelles</h2>
           <p className="text-muted-foreground">
-            Conformément à la législation en vigueur, les informations collectées sur ce site sont destinées exclusivement à Villa Azur. Vous disposez d'un droit d'accès, de modification, de rectification et de suppression des données qui vous concernent.
+            Conformément à la législation en vigueur, les informations collectées sur ce site sont destinées exclusivement à Les Étoiles du Rocher. Vous disposez d'un droit d'accès, de modification, de rectification et de suppression des données qui vous concernent.
           </p>
         </div>
         

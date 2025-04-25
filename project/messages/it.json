@@ -11,13 +11,13 @@
     "learnMore": "Scopri di più"
   },
   "home": {
-    "title": "Villa Azur",
+    "title": "Les Étoiles du Rocher",
     "subtitle": "Vivi nel lusso e nel comfort",
     "excellence": "L'eccellenza nella sua forma più pura",
     "description": "Una villa eccezionale di 500m² incastonata tra cielo e mare, che offre un'esperienza di lusso incomparabile sulla Costa Azzurra.",
     "service": {
       "title": "Servizio su misura",
-      "description": "Ogni soggiorno a Villa Azur è un'esperienza unica, con un servizio personalizzato per soddisfare i vostri desideri più esigenti.",
+      "description": "Ogni soggiorno a Les Étoiles du Rocher è un'esperienza unica, con un servizio personalizzato per soddisfare i vostri desideri più esigenti.",
       "features": {
         "concierge": "Servizio concierge 24/7",
         "chef": "Chef privato",
@@ -115,13 +115,25 @@
     }
   },
   "gallery": {
-    "title": "Foto",
-    "description": "Scopri la magia di Villa Azur",
+    "title": "Galleria",
+    "subtitle": "Scopri Les Étoiles du Rocher attraverso la nostra galleria fotografica",
     "categories": {
+      "all": "Tutto",
       "exterior": "Esterno",
       "interior": "Interno",
-      "pool": "Piscina",
-      "garden": "Giardino"
+      "bedrooms": "Camere da letto",
+      "views": "Viste"
+    },
+    "images": {
+      "exterior": "Vista esterna della villa",
+      "living": "Soggiorno con vista panoramica",
+      "bedroom": "Camera da letto principale",
+      "terrace": "Terrazza e piscina",
+      "kitchen": "Cucina completamente attrezzata",
+      "seaView": "Vista sul mare",
+      "dining": "Sala da pranzo",
+      "aerial": "Vista aerea",
+      "master": "Suite principale"
     }
   },
   "contact": {
@@ -152,13 +164,13 @@
   },
   "discover": {
     "title": "Scopri",
-    "subtitle": "Esplora le meraviglie della Costa Azzurra da Villa Azur.",
+    "subtitle": "Esplora le meraviglie della Costa Azzurra da Les Étoiles du Rocher.",
     "experiences": {
       "title": "Esperienze",
       "subtitle": "Una moltitudine di attività per rendere il tuo soggiorno indimenticabile.",
       "categories": {
         "nautical": {
-          "title": "Attività nautiche",
+          "title": "Attività acquatiche",
           "items": [
             "Noleggio yacht",
             "Immersioni",
@@ -167,7 +179,7 @@
           ]
         },
         "culture": {
-          "title": "Cultura & Storia",
+          "title": "Cultura e storia",
           "items": [
             "Musei",
             "Siti storici",
@@ -178,14 +190,14 @@
         "gastronomy": {
           "title": "Gastronomia",
           "items": [
-            "Ristoranti stellati",
+            "Ristoranti stellati Michelin",
             "Mercati locali",
             "Degustazioni di vini",
             "Corsi di cucina"
           ]
         },
         "nature": {
-          "title": "Natura & Sport",
+          "title": "Natura e sport",
           "items": [
             "Escursioni",
             "Golf",

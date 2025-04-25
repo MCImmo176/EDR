@@ -14,7 +14,7 @@ export default function SalesTermsPage() {
         <div>
           <h2 className="text-2xl mb-4">1. Réservation</h2>
           <p className="text-muted-foreground">
-            La réservation de Villa Azur est considérée comme confirmée après réception d'un acompte de 50% du montant total du séjour et la signature du contrat de location. Le solde devra être réglé au plus tard 60 jours avant la date d'arrivée.
+            La réservation de Les Étoiles du Rocher est considérée comme confirmée après réception d'un acompte de 50% du montant total du séjour et la signature du contrat de location. Le solde devra être réglé au plus tard 60 jours avant la date d'arrivée.
           </p>
         </div>
         
