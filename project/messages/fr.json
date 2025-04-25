@@ -7,13 +7,38 @@
     "readMore": "En savoir plus",
     "discover": "Découvrir",
     "bookNow": "Réserver",
-    "contactUs": "Contactez-nous",
+    "contactUs": "Nous contacter",
     "learnMore": "En savoir plus"
   },
   "home": {
     "title": "Les Étoiles du Rocher",
     "subtitle": "Votre havre de paix sur la Côte d'Azur",
-    "excellence": "L'excellence dans sa forme la plus pure",
+    "booking": {
+      "title": "Réservez votre séjour d'exception"
+    },
+    "excellence": {
+      "title": "L'excellence dans sa forme la plus pure",
+      "interior": {
+        "reception": "Salle de réception",
+        "receptionDesc": "Un espace élégant pour vos moments de convivialité",
+        "salon": "Salon principal",
+        "salonDesc": "Un espace de vie élégant avec vue panoramique",
+        "kitchen": "Cuisine gastronomique",
+        "kitchenDesc": "Équipée des derniers appareils haut de gamme",
+        "dining": "Salle à manger",
+        "diningDesc": "Pour des moments de convivialité raffinés",
+        "master": "Suite principale",
+        "masterDesc": "Un havre de paix avec vue sur la mer",
+        "bathroom": "Salle de bain",
+        "bathroomDesc": "Un espace spa privé avec baignoire d'angle",
+        "pool": "Piscine",
+        "poolDesc": "Une piscine à débordement avec vue panoramique",
+        "exterior": "Vue extérieure",
+        "exteriorDesc": "Un cadre exceptionnel entre ciel et mer",
+        "night": "Vue nocturne",
+        "nightDesc": "Une ambiance magique sous les étoiles"
+      }
+    },
     "description": "Découvrez un lieu d'exception où luxe et authenticité se rencontrent pour créer des moments inoubliables."
   },
   "about": {
@@ -129,16 +154,19 @@
     }
   },
   "contact": {
-    "title": "Contact",
-    "description": "Prenez contact avec nous",
+    "title": "Contactez-nous",
+    "subtitle": "Pour toute demande d'information ou de réservation, n'hésitez pas à nous contacter.",
     "form": {
+      "title": "Formulaire de contact",
       "name": "Nom",
       "email": "Email",
       "phone": "Téléphone",
       "message": "Message",
-      "send": "Envoyer"
+      "send": "Envoyer",
+      "submit": "Envoyer le message"
     },
     "info": {
+      "title": "Informations de contact",
       "email": "Email",
       "phone": "Téléphone",
       "address": "Adresse"
@@ -236,5 +264,36 @@
     "terms": "Conditions Générales",
     "sales": "Conditions de Vente",
     "rights": "Tous droits réservés"
+  },
+  "terms": {
+    "title": "Conditions Générales d'Utilisation",
+    "section1": {
+      "title": "Acceptation des conditions",
+      "content": "L'utilisation du site web Les Étoiles du Rocher implique l'acceptation pleine et entière des conditions générales d'utilisation décrites ci-après."
+    },
+    "section2": {
+      "title": "Informations",
+      "content": "Les informations contenues sur ce site sont fournies à titre indicatif et peuvent être modifiées à tout moment sans préavis."
+    },
+    "section3": {
+      "title": "Services et disponibilité",
+      "content": "Les services proposés sur ce site sont soumis à disponibilité. Les Étoiles du Rocher se réserve le droit de modifier ou d'interrompre tout ou partie des services sans préavis."
+    },
+    "section4": {
+      "title": "Propriété intellectuelle",
+      "content": "Le site et toutes les photos utilisées sont la propriété exclusive de la SAS ALPHA GROUP. Toute reproduction, distribution ou utilisation non autorisée est strictement interdite."
+    },
+    "section5": {
+      "title": "Protection des données personnelles",
+      "content": "Les données personnelles collectées sur ce site sont traitées conformément à notre politique de confidentialité."
+    },
+    "section6": {
+      "title": "Droit applicable",
+      "content": "Les présentes conditions sont régies par le droit français."
+    }
+  },
+  "sales": {
+    "title": "Conditions Générales de Vente",
+    "content": "Le site internet et toutes les photographies utilisées sont la propriété exclusive de SAS ALPHA GROUP. Toute reproduction, distribution ou utilisation non autorisée est strictement interdite."
   }
 } 

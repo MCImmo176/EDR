@@ -1,58 +1,59 @@
 "use client";
 
-import Link from "next/link";
-import { useLanguage } from "@/components/providers/language-provider";
-import { cn } from "@/lib/utils";
-
-type Language = "fr" | "en" | "it" | "el" | "ru";
+import Link from 'next/link';
+import Image from 'next/image';
+import { useLanguage } from '@/hooks/useLanguage';
 
 export function Footer() {
-  const { language, setLanguage, t } = useLanguage();
+  const { t } = useLanguage();
 
-  const languageOptions: { code: Language; label: string; flag: string }[] = [
-    { code: "fr", label: "Français", flag: "🇫🇷" },
-    { code: "en", label: "English", flag: "🇬🇧" },
-    { code: "it", label: "Italiano", flag: "🇮🇹" },
-    { code: "el", label: "Ελληνικά", flag: "🇬🇷" },
-    { code: "ru", label: "Русский", flag: "🇷🇺" },
+  const flags = [
+    { locale: "fr", src: "/images/flags/france.png", alt: "Drapeau français" },
+    { locale: "en", src: "/images/flags/etats-unis.png", alt: "Drapeau américain" },
+    { locale: "el", src: "/images/flags/grece.png", alt: "Drapeau grec" },
+    { locale: "it", src: "/images/flags/italie.png", alt: "Drapeau italien" },
+    { locale: "ru", src: "/images/flags/russie.png", alt: "Drapeau russe" }
   ];
 
   return (
-    <footer className="border-t border-border py-12">
-      <div className="container px-4 mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="space-y-6 md:space-y-0 md:space-x-6 flex flex-col md:flex-row items-center mb-8 md:mb-0">
-            <Link 
-              href="/terms" 
-              className="text-sm text-muted-foreground underline-animation"
-            >
-              {t("footer.terms")}
-            </Link>
-            <Link 
-              href="/sales-terms" 
-              className="text-sm text-muted-foreground underline-animation"
-            >
-              {t("footer.sales")}
-            </Link>
+    <footer className="bg-black text-white py-8">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
+            <div className="flex flex-col md:flex-row gap-6">
+              <Link href="/terms" className="hover:text-primary transition-colors">
+                {t('footer.terms')}
+              </Link>
+              <Link href="/sales-terms" className="hover:text-primary transition-colors">
+                {t('footer.sales')}
+              </Link>
+            </div>
           </div>
-          
-          <div className="language-switcher">
-            {languageOptions.map((option) => (
-              <button
-                key={option.code}
-                onClick={() => setLanguage(option.code)}
-                className={cn(language === option.code && "active")}
-                title={option.label}
-                aria-label={`Switch to ${option.label}`}
+
+          <div className="text-center order-last md:order-2">
+            <span>© 2025 Les Étoiles du Rocher</span>
+          </div>
+
+          <div className="flex gap-4 items-center order-2 md:order-last">
+            {flags.map((flag) => (
+              <Link 
+                key={flag.locale} 
+                href={`/${flag.locale}`} 
+                className="block hover:opacity-80 transition-opacity"
               >
-                <span className="text-lg">{option.flag}</span>
-              </button>
+                <div className="w-[35px] h-[25px] relative">
+                  <Image
+                    src={flag.src}
+                    alt={flag.alt}
+                    fill
+                    sizes="35px"
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
+              </Link>
             ))}
           </div>
-        </div>
-        
-        <div className="mt-8 pt-8 border-t border-border text-center text-muted-foreground text-xs">
-          <p>© {new Date().getFullYear()} Les Étoiles du Rocher. {t("footer.rights")}</p>
         </div>
       </div>
     </footer>

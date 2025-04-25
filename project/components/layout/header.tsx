@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/components/providers/language-provider";
@@ -52,8 +53,15 @@ export function Header() {
       )}
     >
       <div className="container px-4 mx-auto flex items-center justify-between">
-        <Link href="/" className="text-2xl font-display tracking-tight">
-          Les Étoiles du Rocher
+        <Link href="/" className="relative">
+          <Image 
+            src="/images/logo.png"
+            alt="Les Étoiles du Rocher"
+            width={100}
+            height={25}
+            className="h-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}

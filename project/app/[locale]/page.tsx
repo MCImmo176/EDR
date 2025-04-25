@@ -14,7 +14,7 @@ import { images } from "@/config/images";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 export default function Home() {
-  const { tCommon, tHome } = useLanguage();
+  const { t } = useLanguage();
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -45,6 +45,26 @@ export default function Home() {
         ease: [0.6, 0.01, -0.05, 0.95]
       }
     }
+  };
+
+  const excellenceImages = {
+    interior: [
+      {
+        src: "/images/excellence/interieur/reception.jpeg",
+        alt: t('home.excellence.interior.reception'),
+        description: t('home.excellence.interior.receptionDesc')
+      },
+      {
+        src: "/images/excellence/interieur/exterieur.jpeg",
+        alt: t('home.excellence.interior.exterior'),
+        description: t('home.excellence.interior.exteriorDesc')
+      },
+      {
+        src: "/images/excellence/interieur/nuit.png",
+        alt: t('home.excellence.interior.night'),
+        description: t('home.excellence.interior.nightDesc')
+      }
+    ]
   };
 
   return (
@@ -91,7 +111,7 @@ export default function Home() {
                 className="text-7xl md:text-8xl lg:text-9xl font-display"
                 variants={textReveal}
               >
-                {tHome('title')}
+                {t('home.title')}
               </motion.h1>
             </div>
             
@@ -105,7 +125,7 @@ export default function Home() {
                 className="text-2xl md:text-3xl font-light tracking-widest uppercase relative z-10 py-4 px-8"
                 variants={textReveal}
               >
-                {tHome('subtitle')}
+                {t('home.subtitle')}
               </motion.p>
             </div>
             
@@ -116,11 +136,12 @@ export default function Home() {
               <Button 
                 asChild 
                 size="lg"
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-500 text-lg px-12 py-6 rounded-none"
+                className="relative bg-transparent border-2 border-white text-white overflow-hidden group hover:text-black transition-all duration-500 text-lg px-12 py-6 rounded-none"
               >
                 <Link href="/villa">
-                  {tCommon('discover')}
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <span className="relative z-10">{t('home.discover')}</span>
+                  <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                  <ArrowRight className="ml-2 h-5 w-5 relative z-10" />
                 </Link>
               </Button>
             </motion.div>
@@ -158,125 +179,38 @@ export default function Home() {
                   whileInView="visible"
                   viewport={{ once: true }}
                 >
-                  {tHome('excellence')}
+                  {t('home.excellence')}
                 </motion.h2>
               </div>
               <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-24">
-                {tHome('description')}
+                {t('home.description')}
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+              {excellenceImages.interior.map((image, index) => (
               <motion.div 
+                  key={index}
                 className="aspect-[4/5] relative overflow-hidden group"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
                 <Image 
-                  src={images.home.excellence.exterior}
-                  alt={tHome('excellence.exterior')}
+                    src={image.src}
+                    alt={image.alt}
                   fill
                   className="object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <p className="text-lg font-medium">{image.alt}</p>
+                    <p className="text-sm opacity-75">{image.description}</p>
+                  </div>
               </motion.div>
-              
-              <motion.div 
-                className="aspect-[4/5] relative overflow-hidden group lg:translate-y-20"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Image 
-                  src={images.home.excellence.interior}
-                  alt={tHome('excellence.interior')}
-                  fill
-                  className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </motion.div>
-              
-              <motion.div 
-                className="aspect-[4/5] relative overflow-hidden group"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <Image 
-                  src={images.home.excellence.pool}
-                  alt={tHome('excellence.pool')}
-                  fill
-                  className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </motion.div>
+              ))}
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="py-32 md:py-40 bg-black text-white">
-        <div className="container max-w-[1400px] mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"
-          >
-            <div>
-              <div className="overflow-hidden mb-8">
-                <motion.h2 
-                  className="text-5xl md:text-6xl font-display"
-                  variants={textReveal}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                >
-                  {tHome('service.title')}
-                </motion.h2>
-              </div>
-              <p className="text-xl text-white/80 mb-12 leading-relaxed">
-                {tHome('service.description')}
-              </p>
-              <ul className="grid grid-cols-2 gap-8 mb-12">
-                {Object.entries(tHome('service.features')).map(([key, value]) => (
-                  <li key={key} className="flex items-center">
-                    <span className="w-2 h-2 bg-white rounded-full mr-3" />
-                    {tHome(`service.features.${key}`)}
-                  </li>
-                ))}
-              </ul>
-              <Button 
-                asChild 
-                variant="outline" 
-                size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-500 rounded-none"
-              >
-                <Link href="/info">
-                  En savoir plus
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
-            <motion.div 
-              className="aspect-square relative"
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <Image 
-                src={images.home.service.concierge}
-                alt={tHome('service.concierge')}
-                fill
-                className="object-cover"
-              />
-            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -298,17 +232,18 @@ export default function Home() {
                 whileInView="visible"
                 viewport={{ once: true }}
               >
-                Réservez votre séjour d'exception
+                {t('home.booking.title')}
               </motion.h2>
             </div>
             <Button 
               asChild 
               size="lg"
-              className="bg-black text-white hover:bg-black/90 transition-all duration-500 text-lg px-12 py-6 rounded-none"
+              className="relative bg-black text-white overflow-hidden group hover:text-black transition-all duration-500 text-lg px-12 py-6 rounded-none"
             >
               <Link href="/contact">
-                Nous contacter
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <span className="relative z-10">{t('common.contactUs')}</span>
+                <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                <ArrowRight className="ml-2 h-5 w-5 relative z-10" />
               </Link>
             </Button>
           </motion.div>

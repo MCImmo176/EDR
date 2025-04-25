@@ -2,17 +2,20 @@
   "common": {
     "welcome": "Benvenuti",
     "about": "Chi siamo",
-    "contact": "Contatti",
+    "contact": "Contatto",
     "services": "Servizi",
     "readMore": "Scopri di più",
-    "discover": "Scopri",
+    "discover": "Scoprire",
     "bookNow": "Prenota ora",
     "contactUs": "Contattaci",
     "learnMore": "Scopri di più"
   },
   "home": {
     "title": "Les Étoiles du Rocher",
-    "subtitle": "Vivi nel lusso e nel comfort",
+    "subtitle": "Il tuo paradiso sulla Costa Azzurra",
+    "booking": {
+      "title": "Prenota il tuo soggiorno eccezionale"
+    },
     "excellence": "L'eccellenza nella sua forma più pura",
     "description": "Una villa eccezionale di 500m² incastonata tra cielo e mare, che offre un'esperienza di lusso incomparabile sulla Costa Azzurra.",
     "service": {
@@ -240,5 +243,36 @@
       }
     },
     "readMore": "Scopri di più"
+  },
+  "terms": {
+    "title": "Termini e Condizioni",
+    "section1": {
+      "title": "1. Accettazione dei Termini",
+      "content": "L'utilizzo del sito web Les Étoiles du Rocher implica l'accettazione piena e completa delle condizioni generali di utilizzo descritte di seguito. Queste condizioni di utilizzo possono essere modificate o integrate in qualsiasi momento."
+    },
+    "section2": {
+      "title": "2. Informazioni",
+      "content": "Le informazioni presentate su questo sito sono non contrattuali e soggette a modifiche senza preavviso. Nonostante tutte le cure prese per garantire la qualità dei suoi contenuti, Les Étoiles du Rocher non può essere ritenuta responsabile per errori o omissioni, o per le conseguenze dell'utilizzo delle informazioni contenute sul sito."
+    },
+    "section3": {
+      "title": "3. Servizi e Disponibilità",
+      "content": "I servizi e le strutture presentate sul sito sono soggetti a disponibilità. I prezzi indicati possono variare a seconda della stagione e della durata del soggiorno. La prenotazione è confermata solo dopo la validazione da parte del nostro team e il pagamento dell'acconto."
+    },
+    "section4": {
+      "title": "4. Proprietà Intellettuale",
+      "content": "Tutti gli elementi presenti sul sito (testi, immagini, logo, ecc.) sono protetti dalle leggi sulla proprietà intellettuale. Qualsiasi riproduzione totale o parziale di questi elementi è severamente vietata senza autorizzazione preventiva."
+    },
+    "section5": {
+      "title": "5. Protezione dei Dati Personali",
+      "content": "In conformità con la legislazione vigente, le informazioni raccolte su questo sito sono destinate esclusivamente a Les Étoiles du Rocher. Hai il diritto di accedere, modificare, correggere e cancellare i dati che ti riguardano."
+    },
+    "section6": {
+      "title": "6. Legge Applicabile",
+      "content": "Queste condizioni di utilizzo sono regolate dalla legge francese. In caso di controversia, i tribunali francesi avranno giurisdizione esclusiva."
+    }
+  },
+  "sales": {
+    "title": "Termini Generali di Vendita",
+    "content": "Il sito web e tutte le fotografie utilizzate sono di esclusiva proprietà di SAS ALPHA GROUP. Qualsiasi riproduzione, distribuzione o utilizzo non autorizzato è severamente vietato."
   }
 } 

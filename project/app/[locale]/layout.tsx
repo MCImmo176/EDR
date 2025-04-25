@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Playfair_Display, Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';

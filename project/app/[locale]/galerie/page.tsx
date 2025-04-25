@@ -6,6 +6,7 @@ import Image from "next/image";
 import { X } from "lucide-react";
 import { SectionTitle } from "@/components/ui/section-title";
 import { useLanguage } from "@/hooks/useLanguage";
+import Link from "next/link";
 
 export default function GaleriePage() {
   const { tGallery } = useLanguage();
@@ -146,6 +147,20 @@ export default function GaleriePage() {
                 </div>
               </motion.div>
             ))}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex justify-center mt-8"
+          >
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-black rounded-full hover:bg-white hover:text-black transition-all duration-300 ease-in-out transform hover:scale-105"
+            >
+              {tGallery('cta')}
+            </Link>
           </motion.div>
         </div>
       </section>
