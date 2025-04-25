@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { SectionTitle } from "@/components/ui/section-title";
 import { Divider } from "@/components/ui/divider";
 import { images } from "@/config/images";
+import { useEffect } from "react";
 
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
@@ -33,6 +34,13 @@ export default function Home() {
         duration: 1.2,
         ease: [0.6, 0.01, -0.05, 0.95]
       }
+    },
+    exit: {
+      y: "-100%",
+      transition: {
+        duration: 0.8,
+        ease: [0.6, 0.01, -0.05, 0.95]
+      }
     }
   };
 
@@ -47,25 +55,27 @@ export default function Home() {
     }
   };
 
-  const excellenceImages = {
-    interior: [
-      {
-        src: "/images/excellence/interieur/reception.jpeg",
-        alt: t('home.excellence.interior.reception'),
-        description: t('home.excellence.interior.receptionDesc')
-      },
-      {
-        src: "/images/excellence/interieur/exterieur.jpeg",
-        alt: t('home.excellence.interior.exterior'),
-        description: t('home.excellence.interior.exteriorDesc')
-      },
-      {
-        src: "/images/excellence/interieur/nuit.png",
-        alt: t('home.excellence.interior.night'),
-        description: t('home.excellence.interior.nightDesc')
+  const containerVariants = {
+    initial: { opacity: 1 },
+    exit: {
+      opacity: 0,
+      transition: {
+        delay: 1,
+        duration: 0.8
       }
-    ]
+    }
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const heroContent = document.querySelector('.hero-content');
+      if (heroContent) {
+        heroContent.classList.add('translate-y-[-100%]', 'opacity-0');
+      }
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
@@ -95,16 +105,8 @@ export default function Home() {
           <motion.div
             initial="hidden"
             animate="visible"
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: {
-                  staggerChildren: 0.3
-                }
-              }
-            }}
-            className="text-center px-6"
+            variants={containerVariants}
+            className="text-center px-6 hero-content transition-all duration-800 ease-in-out"
           >
             <div className="overflow-hidden mb-8">
               <motion.h1 
@@ -170,46 +172,77 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true, margin: "-100px" }}
           >
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="overflow-hidden mb-8">
-                <motion.h2 
-                  className="text-5xl md:text-6xl lg:text-7xl font-display"
-                  variants={textReveal}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                >
-                  {t('home.excellence')}
-                </motion.h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+              <div className="md:col-span-1">
+                <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
+                  <Image 
+                    src="/images/excellence/interieur/reception.jpeg"
+                    alt={t('home.excellence.interior.reception')}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               </div>
-              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-24">
-                {t('home.description')}
-              </p>
+              <div className="md:col-span-2">
+                <h2 className="text-4xl md:text-5xl font-display mb-6">{t('home.excellence.title')}</h2>
+                <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                  {t('home.description')}
+                </p>
+              </div>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-              {excellenceImages.interior.map((image, index) => (
-              <motion.div 
-                  key={index}
-                className="aspect-[4/5] relative overflow-hidden group"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Image 
-                    src={image.src}
-                    alt={image.alt}
-                  fill
-                  className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <p className="text-lg font-medium">{image.alt}</p>
-                    <p className="text-sm opacity-75">{image.description}</p>
-                  </div>
-              </motion.div>
-              ))}
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-32 md:py-40 bg-muted">
+        <div className="container max-w-[1400px] mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+              <div className="md:col-span-2">
+                <h2 className="text-4xl md:text-5xl font-display mb-6">{t('home.service.title')}</h2>
+                <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                  {t('home.service.description')}
+                </p>
+              </div>
+              <div className="md:col-span-1">
+                <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
+                  <Image 
+                    src="/images/excellence/interieur/exterieur.jpeg"
+                    alt={t('home.excellence.interior.exterior')}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-32 md:py-40">
+        <div className="container max-w-[1400px] mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            <div className="flex justify-center">
+              <div className="w-2/3">
+                <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
+                  <Image 
+                    src="/images/excellence/interieur/nuit.png"
+                    alt={t('home.excellence.interior.night')}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
