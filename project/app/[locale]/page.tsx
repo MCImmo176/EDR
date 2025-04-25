@@ -9,6 +9,7 @@ import { useLanguage } from "@/hooks/useLanguage";
 import { Button } from "@/components/ui/button";
 import { SectionTitle } from "@/components/ui/section-title";
 import { Divider } from "@/components/ui/divider";
+import { images } from "@/config/images";
 
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
@@ -51,7 +52,7 @@ export default function Home() {
       <section className="relative h-screen w-full overflow-hidden">
         <div className="absolute inset-0 bg-black">
           <ReactPlayer
-            url="https://player.vimeo.com/video/517031319"
+            url={images.home.hero.video}
             playing
             loop
             muted
@@ -174,8 +175,8 @@ export default function Home() {
                 viewport={{ once: true }}
               >
                 <Image 
-                  src="https://images.pexels.com/photos/2631746/pexels-photo-2631746.jpeg"
-                  alt="Villa Azur exterior"
+                  src={images.home.excellence.exterior}
+                  alt={tHome('excellence.exterior')}
                   fill
                   className="object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
@@ -190,8 +191,8 @@ export default function Home() {
                 viewport={{ once: true }}
               >
                 <Image 
-                  src="https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg"
-                  alt="Luxury interior"
+                  src={images.home.excellence.interior}
+                  alt={tHome('excellence.interior')}
                   fill
                   className="object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
@@ -206,8 +207,8 @@ export default function Home() {
                 viewport={{ once: true }}
               >
                 <Image 
-                  src="https://images.pexels.com/photos/2119714/pexels-photo-2119714.jpeg"
-                  alt="Pool view"
+                  src={images.home.excellence.pool}
+                  alt={tHome('excellence.pool')}
                   fill
                   className="object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
@@ -270,8 +271,8 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <Image 
-                src="https://images.pexels.com/photos/4946956/pexels-photo-4946956.jpeg"
-                alt="Luxury service"
+                src={images.home.service.concierge}
+                alt={tHome('service.concierge')}
                 fill
                 className="object-cover"
               />
