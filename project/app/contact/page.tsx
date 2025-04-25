@@ -6,8 +6,8 @@ import { Mail, Phone, MapPin, Send, Check } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
+import { useTranslations } from "next-intl";
 
-import { useLanguage } from "@/components/providers/language-provider";
 import { SectionTitle } from "@/components/ui/section-title";
 import { Map } from "@/components/ui/map";
 import { Button } from "@/components/ui/button";
@@ -23,14 +23,14 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: "Le nom doit contenir au moins 2 caractères" }),
-  email: z.string().email({ message: "Veuillez entrer une adresse email valide" }),
-  phone: z.string().min(5, { message: "Veuillez entrer un numéro de téléphone valide" }),
-  message: z.string().min(10, { message: "Le message doit contenir au moins 10 caractères" }),
+  name: z.string().min(2, { message: "Name must contain at least 2 characters" }),
+  email: z.string().email({ message: "Please enter a valid email address" }),
+  phone: z.string().min(5, { message: "Please enter a valid phone number" }),
+  message: z.string().min(10, { message: "Message must contain at least 10 characters" }),
 });
 
 export default function ContactPage() {
-  const { t } = useLanguage();
+  const t = useTranslations('contact');
   const [isSubmitted, setIsSubmitted] = useState(false);
   
   const form = useForm<z.infer<typeof formSchema>>({
@@ -44,7 +44,6 @@ export default function ContactPage() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // In a real app, you would submit the form data to your backend
     console.log(values);
     
     setTimeout(() => {
@@ -55,17 +54,17 @@ export default function ContactPage() {
   const contactInfo = [
     {
       icon: <Mail className="h-6 w-6" />,
-      title: "Email",
+      title: t('info.email'),
       details: "contact@villa-azur.com",
     },
     {
       icon: <Phone className="h-6 w-6" />,
-      title: "Téléphone",
+      title: t('info.phone'),
       details: "+33 4 93 XX XX XX",
     },
     {
       icon: <MapPin className="h-6 w-6" />,
-      title: "Adresse",
+      title: t('info.address'),
       details: "Roquebrune Cap Martin, France",
     },
   ];
@@ -85,8 +84,8 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
           >
             <SectionTitle
-              title="Contact"
-              subtitle="Contactez-nous pour toute demande concernant la villa ou pour réserver votre séjour."
+              title={t('title')}
+              subtitle={t('subtitle')}
               centered
             />
           </motion.div>
@@ -103,16 +102,16 @@ export default function ContactPage() {
           >
             <div className="content-grid">
               <div className="col-span-1 md:col-span-5">
-                <h2 className="text-2xl mb-8">Envoyez-nous un message</h2>
+                <h2 className="text-2xl mb-8">{t('form.title')}</h2>
                 
                 {isSubmitted ? (
                   <div className="bg-muted p-8 text-center">
                     <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary mb-6">
                       <Check className="h-8 w-8 text-white" />
                     </div>
-                    <h3 className="text-xl mb-4">Message envoyé !</h3>
+                    <h3 className="text-xl mb-4">{t('form.success')}</h3>
                     <p className="text-muted-foreground">
-                      Merci pour votre message. Notre équipe vous contactera dans les plus brefs délais.
+                      {t('form.successDetail')}
                     </p>
                   </div>
                 ) : (
@@ -123,9 +122,9 @@ export default function ContactPage() {
                         name="name"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Nom</FormLabel>
+                            <FormLabel>{t('form.name')}</FormLabel>
                             <FormControl>
-                              <Input placeholder="Votre nom" {...field} />
+                              <Input placeholder={t('form.name')} {...field} />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -138,9 +137,9 @@ export default function ContactPage() {
                           name="email"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Email</FormLabel>
+                              <FormLabel>{t('form.email')}</FormLabel>
                               <FormControl>
-                                <Input placeholder="Votre email" {...field} />
+                                <Input placeholder={t('form.email')} {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -152,9 +151,9 @@ export default function ContactPage() {
                           name="phone"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Téléphone</FormLabel>
+                              <FormLabel>{t('form.phone')}</FormLabel>
                               <FormControl>
-                                <Input placeholder="Votre téléphone" {...field} />
+                                <Input placeholder={t('form.phone')} {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -167,10 +166,10 @@ export default function ContactPage() {
                         name="message"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Message</FormLabel>
+                            <FormLabel>{t('form.message')}</FormLabel>
                             <FormControl>
                               <Textarea 
-                                placeholder="Votre message" 
+                                placeholder={t('form.message')} 
                                 className="resize-none min-h-[150px]"
                                 {...field} 
                               />
@@ -181,7 +180,7 @@ export default function ContactPage() {
                       />
                       
                       <Button type="submit" className="w-full md:w-auto">
-                        Envoyer
+                        {t('form.submit')}
                         <Send className="ml-2 h-4 w-4" />
                       </Button>
                     </form>
@@ -190,7 +189,7 @@ export default function ContactPage() {
               </div>
               
               <div className="col-span-1 md:col-span-6 md:col-start-7">
-                <h2 className="text-2xl mb-8">Informations de contact</h2>
+                <h2 className="text-2xl mb-8">{t('info.title')}</h2>
                 
                 <div className="space-y-8 mb-10">
                   {contactInfo.map((item, index) => (

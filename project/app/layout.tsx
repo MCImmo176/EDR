@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Playfair_Display, Inter } from 'next/font/google';
+import { NextIntlClientProvider } from 'next-intl';
 
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
@@ -24,13 +25,27 @@ export const metadata: Metadata = {
   description: "Villa d'exception située à Roquebrune Cap Martin, destinée à la location de luxe",
 };
 
-export default function RootLayout({
+export function generateStaticParams() {
+  return [{ locale: 'fr' }, { locale: 'en' }, { locale: 'el' }];
+}
+
+export default async function LocaleLayout({
   children,
+  params: { locale }
 }: {
   children: React.ReactNode;
+  params: { locale: string };
 }) {
+  let messages;
+  try {
+    messages = (await import(`@/messages/${locale}.json`)).default;
+  } catch (error) {
+    // En cas d'erreur, on utilise les messages français par défaut
+    messages = (await import('@/messages/fr.json')).default;
+  }
+
   return (
-    <html lang="fr" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${playfair.variable} ${inter.variable} font-sans min-h-screen flex flex-col`}>
         <ThemeProvider
           attribute="class"
@@ -39,9 +54,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <LanguageProvider>
-            <Header />
-            <main className="flex-grow">{children}</main>
-            <Footer />
+            <NextIntlClientProvider locale={locale} messages={messages}>
+              <Header />
+              <main className="flex-grow">{children}</main>
+              <Footer />
+            </NextIntlClientProvider>
           </LanguageProvider>
         </ThemeProvider>
       </body>

@@ -1,0 +1,117 @@
+{
+  "common": {
+    "welcome": "Bienvenue",
+    "about": "À propos",
+    "contact": "Contact",
+    "services": "Services",
+    "readMore": "En savoir plus",
+    "discover": "Découvrir",
+    "bookNow": "Réserver maintenant",
+    "contactUs": "Contactez-nous",
+    "learnMore": "En savoir plus"
+  },
+  "home": {
+    "title": "Villa Azur",
+    "subtitle": "Vivez le luxe et le confort",
+    "excellence": "L'excellence dans sa forme la plus pure",
+    "description": "Une villa d'exception de 500m² nichée entre ciel et mer, offrant une expérience de luxe incomparable sur la Côte d'Azur.",
+    "service": {
+      "title": "Un service sur mesure",
+      "description": "Chaque séjour à la Villa Azur est une expérience unique, avec un service personnalisé pour satisfaire vos désirs les plus exigeants.",
+      "features": {
+        "concierge": "Service conciergerie 24/7",
+        "chef": "Chef privé",
+        "spa": "Service spa à domicile",
+        "transport": "Transport privé",
+        "cleaning": "Ménage quotidien",
+        "security": "Sécurité 24/7"
+      }
+    }
+  },
+  "about": {
+    "title": "À propos de nous",
+    "description": "Notre histoire et notre mission"
+  },
+  "villa": {
+    "title": "La Villa",
+    "description": "Une résidence d'exception",
+    "features": {
+      "area": "Surface",
+      "bedrooms": "Chambres",
+      "bathrooms": "Salles de bain",
+      "pool": "Piscine",
+      "poolType": "À débordement",
+      "view": "Vue",
+      "viewType": "Mer",
+      "beach": "Accès à la plage",
+      "beachType": "Privé"
+    },
+    "kitchen": {
+      "cabinets": {
+        "title": "Meubles hauts et bas",
+        "description": "Meubles hauts avec fixations invisibles et verres fumés au centre, meubles bas surélevés avec deux étagères et 15% d'espace supplémentaire."
+      },
+      "counter": {
+        "title": "Plan de travail et crédence",
+        "description": "Plan de travail en quartz noir avec finition mate contrastée, crédence en verre trempé pour un nettoyage facile."
+      },
+      "sink": {
+        "title": "Évier et mitigeur",
+        "description": "Évier encastré en inox avec mitigeur extractible à débit variable pour plus de flexibilité."
+      },
+      "dishwasher": {
+        "title": "Lave-vaisselle intelligent",
+        "description": "Lave-vaisselle encastré avec programme écologique et détection automatique de la charge pour une consommation optimisée."
+      },
+      "fridge": {
+        "title": "Réfrigérateurs combinés",
+        "description": "Réfrigérateur-congélateur combiné avec compartiments No-Frost et zone fraîche spéciale pour les aliments sensibles."
+      },
+      "oven": {
+        "title": "Four et Micro-ondes",
+        "description": "Four multifonction avec fonction vapeur et micro-ondes combiné pour une cuisson rapide et saine."
+      },
+      "stove": {
+        "title": "Surface de cuisson",
+        "description": "Table de cuisson à induction avec 5 zones de cuisson et pont variable pour s'adapter à tous les types de récipients."
+      },
+      "island": {
+        "title": "Îlot central",
+        "description": "Îlot central avec rangements intégrés et prises électriques dissimulées pour plus de praticité."
+      }
+    },
+    "images": {
+      "exterior": {
+        "alt": "Extérieur de la villa avec piscine et vue sur la mer"
+      },
+      "living": {
+        "alt": "Salon luxueux avec baies vitrées"
+      },
+      "bedroom": {
+        "alt": "Chambre principale avec vue sur la mer"
+      }
+    },
+    "rooms": {
+      "master": {
+        "title": "Suite Principale",
+        "description": "Une suite principale spacieuse avec vue panoramique sur la mer, salle de bain en marbre et dressing.",
+        "alt": "Suite principale de la chambre"
+      },
+      "main": {
+        "title": "Salon Principal",
+        "description": "Un salon élégant avec portes vitrées offrant une vue incomparable sur la Méditerranée.",
+        "alt": "Salon principal"
+      },
+      "terrace": {
+        "title": "Terrasse & Piscine",
+        "description": "Une vaste terrasse avec piscine à débordement et espace détente avec vue sur la mer.",
+        "alt": "Terrasse avec piscine à débordement"
+      },
+      "gourmet": {
+        "title": "Cuisine Gastronomique",
+        "description": "Une cuisine entièrement équipée avec îlot central et électroménager haut de gamme.",
+        "alt": "Cuisine gastronomique"
+      }
+    }
+  }
+} 

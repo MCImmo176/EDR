@@ -1,128 +1,117 @@
 {
-    "navigation": {
-      "home": "Home",
-      "villa": "Our Villa",
-      "discover": "Discover",
-      "gallery": "Gallery",
-      "info": "Information",
-      "contact": "Contact"
-    },
-    "home": {
-      "hero": {
-        "title": "Villa Azur",
-        "subtitle": "Experience luxury and comfort",
-        "cta": "Discover"
-      },
-      "excellence": {
-        "title": "Pure excellence",
-        "description": "A 500m² exceptional villa nestled between sky and sea, offering an unparalleled luxury experience on the French Riviera."
-      },
-      "service": {
-        "title": "Tailored service",
-        "description": "Every stay at Villa Azur is a unique experience, with personalized service to meet your most demanding desires.",
-        "features": {
-          "concierge": "24/7 Concierge",
-          "chef": "Private Chef",
-          "butler": "Butler",
-          "spa": "Spa & massage",
-          "driver": "Private driver",
-          "security": "Security service"
-        }
-      }
-    },
-    "villa": {
-      "intro": {
-        "title": "Our Villa",
-        "subtitle": "Discover where Mediterranean luxury meets the art of living."
-      },
-      "overview": {
-        "title": "A haven on the French Riviera",
-        "description": "Perched on the heights of Roquebrune Cap Martin, Villa Azur offers breathtaking views of the Mediterranean and the Italian coast. This exceptional 500m² property has been designed to offer an unparalleled luxury experience.",
-        "features": {
-          "area": "Area",
-          "bedrooms": "Bedrooms",
-          "bathrooms": "Bathrooms",
-          "pool": "Pool",
-          "view": "View",
-          "beach": "Beach access"
-        }
-      },
-      "amenities": {
-        "title": "Amenities & Services",
-        "subtitle": "Villa Azur offers a complete range of amenities and services to meet all your expectations.",
-        "house": "House",
-        "exterior": "Exterior",
-        "services": "Services",
-        "leisure": "Leisure"
-      },
-      "kitchen": {
-        "title": "Our Kitchen",
-        "subtitle": "A fully equipped kitchen for optimal comfort"
-      },
-      "experience": {
-        "title": "The Villa Azur Experience",
-        "description": "Staying at Villa Azur means experiencing unparalleled luxury, where every detail has been considered for your comfort and pleasure. Our team is at your disposal to make your stay unforgettable, whether it's organizing personalized services, excursions, or exceptional events."
-      }
-    },
-    "discover": {
-      "title": "Discover",
-      "subtitle": "Explore the wonders of the French Riviera from Villa Azur.",
-      "experiences": {
-        "title": "Experiences",
-        "subtitle": "A multitude of activities to make your stay unforgettable."
-      }
-    },
-    "gallery": {
-      "title": "Gallery",
-      "subtitle": "Discover Villa Azur through our photo gallery.",
-      "categories": {
-        "all": "All",
-        "exterior": "Exterior",
-        "interior": "Interior",
-        "bedrooms": "Bedrooms",
-        "views": "Views"
-      }
-    },
-    "info": {
-      "title": "Information",
-      "subtitle": "Everything you need to know to prepare your stay at Villa Azur.",
+  "common": {
+    "welcome": "Welcome",
+    "about": "About",
+    "contact": "Contact",
+    "services": "Services",
+    "readMore": "Read more",
+    "discover": "Discover",
+    "bookNow": "Book now",
+    "contactUs": "Contact us",
+    "learnMore": "Learn more"
+  },
+  "home": {
+    "title": "Villa Azur",
+    "subtitle": "Experience luxury and comfort",
+    "excellence": "Excellence in its purest form",
+    "description": "An exceptional 500m² villa nestled between sky and sea, offering an incomparable luxury experience on the French Riviera.",
+    "service": {
+      "title": "Tailored service",
+      "description": "Each stay at Villa Azur is a unique experience, with personalized service to satisfy your most demanding desires.",
       "features": {
-        "location": "Location",
-        "availability": "Availability",
-        "amenities": "Amenities",
-        "security": "Security"
+        "concierge": "24/7 concierge service",
+        "chef": "Private chef",
+        "spa": "In-house spa service",
+        "transport": "Private transport",
+        "cleaning": "Daily housekeeping",
+        "security": "24/7 security"
+      }
+    }
+  },
+  "about": {
+    "title": "About us",
+    "description": "Our story and mission"
+  },
+  "villa": {
+    "title": "The Villa",
+    "description": "An exceptional residence",
+    "features": {
+      "area": "Area",
+      "bedrooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "pool": "Pool",
+      "poolType": "Infinity",
+      "view": "View",
+      "viewType": "Sea",
+      "beach": "Beach access",
+      "beachType": "Private"
+    },
+    "kitchen": {
+      "cabinets": {
+        "title": "Upper and lower cabinets",
+        "description": "Upper cabinets with invisible fixings and smoked glass center, elevated lower cabinets with two shelves and 15% extra space."
       },
-      "location": {
-        "title": "Location & Access",
-        "description": "Villa Azur is located in Roquebrune Cap Martin, offering panoramic views of the Mediterranean while being close to the most beautiful sites of the French Riviera."
+      "counter": {
+        "title": "Countertop and backsplash",
+        "description": "Black quartz countertop with contrasting matte finish, tempered glass backsplash for easy cleaning."
       },
-      "rules": {
-        "title": "House Rules",
-        "subtitle": "To ensure everyone's comfort, please respect these rules during your stay."
+      "sink": {
+        "title": "Sink and faucet",
+        "description": "Stainless steel undermount sink with pull-out faucet featuring variable flow for added flexibility."
+      },
+      "dishwasher": {
+        "title": "Smart dishwasher",
+        "description": "Built-in dishwasher with eco program and automatic load detection for optimized consumption."
+      },
+      "fridge": {
+        "title": "Combined refrigerators",
+        "description": "Combined refrigerator-freezer with No-Frost compartments and special fresh zone for sensitive foods."
+      },
+      "oven": {
+        "title": "Oven and Microwave",
+        "description": "Multifunction oven with steam function and combined microwave for quick and healthy cooking."
+      },
+      "stove": {
+        "title": "Cooking surface",
+        "description": "Induction cooktop with 5 cooking zones and variable bridge to adapt to all types of cookware."
+      },
+      "island": {
+        "title": "Central island",
+        "description": "Central island with integrated storage and concealed electrical outlets for added convenience."
       }
     },
-    "contact": {
-      "title": "Contact",
-      "subtitle": "Contact us for any inquiries about the villa or to book your stay.",
-      "form": {
-        "name": "Name",
-        "email": "Email",
-        "phone": "Phone",
-        "message": "Message",
-        "submit": "Send",
-        "success": "Message sent!",
-        "successDetail": "Thank you for your message. Our team will contact you shortly."
+    "images": {
+      "exterior": {
+        "alt": "Villa exterior with pool and sea view"
       },
-      "info": {
-        "title": "Contact Information",
-        "email": "Email",
-        "phone": "Phone",
-        "address": "Address"
+      "living": {
+        "alt": "Luxurious living room with floor-to-ceiling windows"
+      },
+      "bedroom": {
+        "alt": "Master bedroom with sea view"
       }
     },
-    "footer": {
-      "terms": "Terms of Use",
-      "sales": "Terms of Sale",
-      "rights": "All rights reserved"
+    "rooms": {
+      "master": {
+        "title": "Master Suite",
+        "description": "A spacious master suite with panoramic sea view, marble bathroom and walk-in closet.",
+        "alt": "Master bedroom suite"
+      },
+      "main": {
+        "title": "Main Living Room",
+        "description": "An elegant living room with glass doors offering an incomparable view of the Mediterranean.",
+        "alt": "Main living room"
+      },
+      "terrace": {
+        "title": "Terrace & Pool",
+        "description": "A vast terrace with infinity pool and relaxation area with sea view.",
+        "alt": "Terrace with infinity pool"
+      },
+      "gourmet": {
+        "title": "Gourmet Kitchen",
+        "description": "A fully equipped kitchen with central island and high-end appliances.",
+        "alt": "Gourmet kitchen"
+      }
     }
   }
+} 

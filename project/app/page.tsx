@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { ArrowRight } from "lucide-react";
-import { useLanguage } from "@/components/providers/language-provider";
+import { useLanguage } from "@/hooks/useLanguage";
 import { Button } from "@/components/ui/button";
 import { SectionTitle } from "@/components/ui/section-title";
 import { Divider } from "@/components/ui/divider";
@@ -13,7 +13,7 @@ import { Divider } from "@/components/ui/divider";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 export default function Home() {
-  const { t } = useLanguage();
+  const { tCommon, tHome } = useLanguage();
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -90,7 +90,7 @@ export default function Home() {
                 className="text-7xl md:text-8xl lg:text-9xl font-display"
                 variants={textReveal}
               >
-                Villa Azur
+                {tHome('title')}
               </motion.h1>
             </div>
             
@@ -104,7 +104,7 @@ export default function Home() {
                 className="text-2xl md:text-3xl font-light tracking-widest uppercase relative z-10 py-4 px-8"
                 variants={textReveal}
               >
-                Vivez le luxe et le confort
+                {tHome('subtitle')}
               </motion.p>
             </div>
             
@@ -118,7 +118,7 @@ export default function Home() {
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-500 text-lg px-12 py-6 rounded-none"
               >
                 <Link href="/villa">
-                  Découvrir
+                  {tCommon('discover')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -157,11 +157,11 @@ export default function Home() {
                   whileInView="visible"
                   viewport={{ once: true }}
                 >
-                  L'excellence à l'état pur
+                  {tHome('excellence')}
                 </motion.h2>
               </div>
               <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-24">
-                Une villa d'exception de 500m² nichée entre ciel et mer, offrant une expérience de luxe inégalée sur la Côte d'Azur.
+                {tHome('description')}
               </p>
             </div>
             
@@ -236,32 +236,18 @@ export default function Home() {
                   whileInView="visible"
                   viewport={{ once: true }}
                 >
-                  Un service sur mesure
+                  {tHome('service.title')}
                 </motion.h2>
               </div>
               <p className="text-xl text-white/80 mb-12 leading-relaxed">
-                Chaque séjour à Villa Azur est une expérience unique, avec un service personnalisé pour répondre à vos désirs les plus exigeants.
+                {tHome('service.description')}
               </p>
               <ul className="grid grid-cols-2 gap-8 mb-12">
-                {[
-                  "Conciergerie 24/7",
-                  "Chef privé",
-                  "Majordome",
-                  "Spa & massage",
-                  "Chauffeur privé",
-                  "Service de sécurité"
-                ].map((service, index) => (
-                  <motion.li 
-                    key={index} 
-                    className="flex items-center text-white/80 text-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="w-1 h-1 bg-white rounded-full mr-3"></div>
-                    {service}
-                  </motion.li>
+                {Object.entries(tHome('service.features')).map(([key, value]) => (
+                  <li key={key} className="flex items-center">
+                    <span className="w-2 h-2 bg-white rounded-full mr-3" />
+                    {value}
+                  </li>
                 ))}
               </ul>
               <Button 

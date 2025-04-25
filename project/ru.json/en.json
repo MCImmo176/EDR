@@ -1,0 +1,335 @@
+{
+    "navigation": {
+      "home": "Home",
+      "villa": "Our Villa",
+      "discover": "Discover",
+      "gallery": "Gallery",
+      "info": "Information",
+      "contact": "Contact"
+    },
+    "home": {
+      "hero": {
+        "title": "Villa Azur",
+        "subtitle": "Experience luxury and comfort",
+        "cta": "Discover"
+      },
+      "excellence": {
+        "title": "Pure excellence",
+        "description": "A 500m² exceptional villa nestled between sky and sea, offering an unparalleled luxury experience on the French Riviera."
+      },
+      "service": {
+        "title": "Tailored service",
+        "description": "Every stay at Villa Azur is a unique experience, with personalized service to meet your most demanding desires.",
+        "features": {
+          "concierge": "24/7 Concierge",
+          "chef": "Private Chef",
+          "butler": "Butler",
+          "spa": "Spa & massage",
+          "driver": "Private driver",
+          "security": "Security service"
+        }
+      },
+      "booking": {
+        "title": "Book your exceptional stay",
+        "cta": "Contact us"
+      }
+    },
+    "villa": {
+      "intro": {
+        "title": "Our Villa",
+        "subtitle": "Discover where Mediterranean luxury meets the art of living."
+      },
+      "overview": {
+        "title": "A haven on the French Riviera",
+        "description": "Perched on the heights of Roquebrune Cap Martin, Villa Azur offers breathtaking views of the Mediterranean and the Italian coast. This exceptional 500m² property has been designed to offer an unparalleled luxury experience.",
+        "features": {
+          "area": "Area",
+          "bedrooms": "Bedrooms",
+          "bathrooms": "Bathrooms",
+          "pool": "Pool",
+          "view": "View",
+          "beach": "Beach access"
+        }
+      },
+      "kitchen": {
+        "title": "Our Kitchen",
+        "subtitle": "A fully equipped kitchen for optimal comfort",
+        "sections": {
+          "cabinets": {
+            "title": "Upper and Lower Cabinets",
+            "description": "Upper cabinets with invisible fixings and smoked glass in the center, raised lower cabinets with two shelves and 15% extra space."
+          },
+          "countertop": {
+            "title": "Countertop and Backsplash",
+            "description": "Black quartz countertop with matte anti-fingerprint finish, tempered glass backsplash for easy maintenance."
+          },
+          "sink": {
+            "title": "Sink and Faucet",
+            "description": "Undermount brushed stainless steel sink with pull-out faucet with variable jet for greater flexibility."
+          },
+          "dishwasher": {
+            "title": "Smart Dishwasher",
+            "description": "Built-in dishwasher with eco program and automatic load detection for optimized consumption."
+          },
+          "refrigerator": {
+            "title": "Combined Refrigerators",
+            "description": "Combined refrigerator-freezer with No-Frost compartments and special freshness zone for delicate foods."
+          },
+          "oven": {
+            "title": "Oven and Microwave",
+            "description": "Multifunction oven with steam function and combined microwave for quick and healthy cooking."
+          },
+          "cooktop": {
+            "title": "Cooktop",
+            "description": "Induction cooktop with 5 cooking zones and modular bridge to adapt to all types of cookware."
+          },
+          "island": {
+            "title": "Central Island",
+            "description": "Central island with integrated storage and concealed electrical outlets for greater practicality in daily use."
+          }
+        },
+        "interactive": {
+          "island": {
+            "title": "Central Island",
+            "description": "Marble central island with integrated storage space and designer stools."
+          },
+          "appliances": {
+            "title": "High-end Appliances",
+            "description": "Gaggenau equipment with built-in refrigerator, steam oven, and induction cooktop."
+          },
+          "dining": {
+            "title": "Dining Area",
+            "description": "Solid oak table that can accommodate up to 8 people."
+          }
+        }
+      },
+      "spaces": {
+        "title": "Discover our spaces",
+        "subtitle": "Each space in Villa Azur has been designed to offer comfort, elegance, and unforgettable moments.",
+        "rooms": {
+          "master": {
+            "title": "Master Suite",
+            "description": "A spacious master suite with panoramic sea view, marble bathroom, and dressing room."
+          },
+          "living": {
+            "title": "Main Living Room",
+            "description": "An elegant living room with bay windows offering breathtaking views of the Mediterranean."
+          },
+          "terrace": {
+            "title": "Terrace & Pool",
+            "description": "A spacious terrace with infinity pool and relaxation area facing the sea."
+          },
+          "kitchen": {
+            "title": "Gourmet Kitchen",
+            "description": "A fully equipped kitchen with central island and high-end appliances."
+          }
+        }
+      }
+    },
+    "discover": {
+      "title": "Discover",
+      "subtitle": "Explore the wonders of the French Riviera from Villa Azur.",
+      "activities": {
+        "monaco": {
+          "title": "Monaco",
+          "description": "Discover the Principality of Monaco, its legendary casinos, the Prince's Palace, and the Formula 1 Grand Prix.",
+          "distance": "10 minutes"
+        },
+        "nice": {
+          "title": "Nice",
+          "description": "Stroll along the Promenade des Anglais, visit Old Nice and enjoy local gastronomy.",
+          "distance": "30 minutes"
+        },
+        "eze": {
+          "title": "Èze Village",
+          "description": "Medieval village perched offering breathtaking views of the Mediterranean and home to the famous Exotic Garden.",
+          "distance": "15 minutes"
+        },
+        "saint_paul": {
+          "title": "Saint-Paul-de-Vence",
+          "description": "Artists' village with its art galleries, ramparts, and Maeght Foundation.",
+          "distance": "45 minutes"
+        },
+        "menton": {
+          "title": "Menton",
+          "description": "The pearl of France, known for its gardens, lemon festival, and beaches.",
+          "distance": "15 minutes"
+        },
+        "antibes": {
+          "title": "Antibes",
+          "description": "Discover Port Vauban, Fort Carré, and the Picasso Museum in this historic city.",
+          "distance": "40 minutes"
+        }
+      },
+      "experiences": {
+        "title": "Experiences",
+        "subtitle": "A multitude of activities to make your stay unforgettable.",
+        "categories": {
+          "water": {
+            "title": "Water Activities",
+            "items": [
+              "Yacht rental",
+              "Scuba diving",
+              "Paddle and kayak",
+              "Jet ski"
+            ]
+          },
+          "culture": {
+            "title": "Culture & History",
+            "items": [
+              "Museums",
+              "Historic sites",
+              "Art galleries",
+              "Concerts"
+            ]
+          },
+          "gastronomy": {
+            "title": "Gastronomy",
+            "items": [
+              "Starred restaurants",
+              "Local markets",
+              "Wine tasting",
+              "Cooking classes"
+            ]
+          },
+          "nature": {
+            "title": "Nature & Sport",
+            "items": [
+              "Hiking",
+              "Golf",
+              "Tennis",
+              "Electric mountain bikes"
+            ]
+          }
+        }
+      }
+    },
+    "gallery": {
+      "title": "Gallery",
+      "subtitle": "Discover Villa Azur through our photo gallery.",
+      "categories": {
+        "all": "All",
+        "exterior": "Exterior",
+        "interior": "Interior",
+        "bedrooms": "Bedrooms",
+        "views": "Views"
+      },
+      "photos": {
+        "exterior": {
+          "title": "Villa exterior",
+          "alt": "Villa exterior with pool and sea view"
+        },
+        "living": {
+          "title": "Main Living Room",
+          "alt": "Luxury living room with panoramic windows"
+        },
+        "master": {
+          "title": "Master Suite",
+          "alt": "Master bedroom suite"
+        },
+        "terrace": {
+          "title": "Terrace & Pool",
+          "alt": "Terrace with infinity pool"
+        },
+        "kitchen": {
+          "title": "Gourmet Kitchen",
+          "alt": "Gourmet kitchen"
+        }
+      }
+    },
+    "info": {
+      "title": "Information",
+      "subtitle": "Everything you need to know to prepare your stay at Villa Azur.",
+      "features": {
+        "location": {
+          "title": "Location",
+          "description": "Ideally located in Roquebrune Cap Martin, minutes away from Monaco and the most beautiful beaches of the French Riviera."
+        },
+        "availability": {
+          "title": "Availability",
+          "description": "The villa is available for rent all year round, with a minimum stay of one week."
+        },
+        "amenities": {
+          "title": "Amenities",
+          "description": "High-end amenities and personalized services for an exceptional stay."
+        },
+        "security": {
+          "title": "Security",
+          "description": "Fully secured property with alarm system, video surveillance, and security service on request."
+        }
+      },
+      "location": {
+        "title": "Location & Access",
+        "description": "Villa Azur is located in Roquebrune Cap Martin, offering panoramic views of the Mediterranean while being close to the most beautiful sites of the French Riviera.",
+        "distances": {
+          "beach": "Direct access",
+          "monaco": "10 minutes",
+          "airport": "30 minutes",
+          "cannes": "45 minutes",
+          "saint_tropez": "1h30"
+        }
+      },
+      "rules": {
+        "title": "House Rules",
+        "subtitle": "To ensure everyone's comfort, please respect these rules during your stay.",
+        "list": [
+          "Check-in: 4:00 PM / Check-out: 10:00 AM",
+          "No smoking",
+          "No pets",
+          "No parties or events without prior authorization",
+          "Respect the neighborhood and no noise after 10:00 PM"
+        ]
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Contact us for any inquiries about the villa or to book your stay.",
+      "form": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Your name",
+          "error": "Name must contain at least 2 characters"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Your email",
+          "error": "Please enter a valid email address"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "Your phone number",
+          "error": "Please enter a valid phone number"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Your message",
+          "error": "Message must contain at least 10 characters"
+        },
+        "submit": "Send",
+        "success": {
+          "title": "Message sent!",
+          "description": "Thank you for your message. Our team will contact you shortly."
+        }
+      },
+      "info": {
+        "title": "Contact Information",
+        "email": {
+          "label": "Email",
+          "value": "contact@villa-azur.com"
+        },
+        "phone": {
+          "label": "Phone",
+          "value": "+33 4 93 XX XX XX"
+        },
+        "address": {
+          "label": "Address",
+          "value": "Roquebrune Cap Martin, France"
+        }
+      }
+    },
+    "footer": {
+      "terms": "Terms of Use",
+      "sales": "Terms of Sale",
+      "rights": "All rights reserved"
+    }
+  }

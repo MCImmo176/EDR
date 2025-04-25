@@ -1,0 +1,17 @@
+{
+  "common": {
+    "welcome": "Benvenuto",
+    "about": "Chi siamo",
+    "contact": "Contatti",
+    "services": "Servizi",
+    "readMore": "Leggi di più"
+  },
+  "home": {
+    "title": "Home",
+    "description": "Benvenuto sul nostro sito web"
+  },
+  "about": {
+    "title": "Chi siamo",
+    "description": "La nostra storia e missione"
+  }
+} 
