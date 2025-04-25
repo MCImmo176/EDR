@@ -4,27 +4,27 @@
     "about": "About",
     "contact": "Contact",
     "services": "Services",
-    "readMore": "Read more",
+    "readMore": "Read More",
     "discover": "Discover",
-    "bookNow": "Book now",
-    "contactUs": "Contact us",
-    "learnMore": "Learn more"
+    "bookNow": "Book Now",
+    "contactUs": "Contact Us",
+    "learnMore": "Learn More"
   },
   "home": {
     "title": "Villa Azur",
-    "subtitle": "Experience luxury and comfort",
-    "excellence": "Excellence in its purest form",
+    "subtitle": "Live in Luxury and Comfort",
+    "excellence": "Excellence in its Purest Form",
     "description": "An exceptional 500m² villa nestled between sky and sea, offering an incomparable luxury experience on the French Riviera.",
     "service": {
-      "title": "Tailored service",
+      "title": "Tailored Service",
       "description": "Each stay at Villa Azur is a unique experience, with personalized service to satisfy your most demanding desires.",
       "features": {
-        "concierge": "24/7 concierge service",
-        "chef": "Private chef",
-        "spa": "In-house spa service",
-        "transport": "Private transport",
-        "cleaning": "Daily housekeeping",
-        "security": "24/7 security"
+        "concierge": "24/7 Concierge Service",
+        "chef": "Private Chef",
+        "spa": "In-Home Spa Service",
+        "transport": "Private Transport",
+        "cleaning": "Daily Housekeeping",
+        "security": "24/7 Security"
       }
     }
   },
@@ -34,7 +34,7 @@
   },
   "villa": {
     "title": "The Villa",
-    "description": "An exceptional residence",
+    "description": "An Exceptional Residence",
     "features": {
       "area": "Area",
       "bedrooms": "Bedrooms",
@@ -43,28 +43,32 @@
       "poolType": "Infinity",
       "view": "View",
       "viewType": "Sea",
-      "beach": "Beach access",
+      "beach": "Beach Access",
       "beachType": "Private"
     },
     "kitchen": {
+      "images": {
+        "alt": "Villa kitchen with modern appliances"
+      },
+      "noPoints": "Click on one of the points to display specific details about that part of the kitchen.",
       "cabinets": {
-        "title": "Upper and lower cabinets",
-        "description": "Upper cabinets with invisible fixings and smoked glass center, elevated lower cabinets with two shelves and 15% extra space."
+        "title": "Upper and Lower Cabinets",
+        "description": "Upper cabinets with invisible fixings and smoked glass in the center, elevated lower cabinets with two shelves and 15% extra space."
       },
       "counter": {
-        "title": "Countertop and backsplash",
+        "title": "Countertop and Backsplash",
         "description": "Black quartz countertop with contrasting matte finish, tempered glass backsplash for easy cleaning."
       },
       "sink": {
-        "title": "Sink and faucet",
-        "description": "Stainless steel undermount sink with pull-out faucet featuring variable flow for added flexibility."
+        "title": "Sink and Faucet",
+        "description": "Stainless steel undermount sink with pull-out faucet with variable flow for more flexibility."
       },
       "dishwasher": {
-        "title": "Smart dishwasher",
+        "title": "Smart Dishwasher",
         "description": "Built-in dishwasher with eco program and automatic load detection for optimized consumption."
       },
       "fridge": {
-        "title": "Combined refrigerators",
+        "title": "Combined Refrigerators",
         "description": "Combined refrigerator-freezer with No-Frost compartments and special fresh zone for sensitive foods."
       },
       "oven": {
@@ -72,12 +76,12 @@
         "description": "Multifunction oven with steam function and combined microwave for quick and healthy cooking."
       },
       "stove": {
-        "title": "Cooking surface",
+        "title": "Cooktop",
         "description": "Induction cooktop with 5 cooking zones and variable bridge to adapt to all types of cookware."
       },
       "island": {
-        "title": "Central island",
-        "description": "Central island with integrated storage and concealed electrical outlets for added convenience."
+        "title": "Central Island",
+        "description": "Central island with integrated storage and concealed electrical outlets for more convenience."
       }
     },
     "images": {
@@ -85,7 +89,7 @@
         "alt": "Villa exterior with pool and sea view"
       },
       "living": {
-        "alt": "Luxurious living room with floor-to-ceiling windows"
+        "alt": "Luxurious living room with glass doors"
       },
       "bedroom": {
         "alt": "Master bedroom with sea view"
@@ -112,6 +116,42 @@
         "description": "A fully equipped kitchen with central island and high-end appliances.",
         "alt": "Gourmet kitchen"
       }
+    }
+  },
+  "gallery": {
+    "title": "Photos",
+    "description": "See the magic of Villa Azur",
+    "categories": {
+      "exterior": "Exterior",
+      "interior": "Interior",
+      "pool": "Pool",
+      "garden": "Garden"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Get in touch with us",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "send": "Send"
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address"
+    }
+  },
+  "info": {
+    "title": "Information",
+    "description": "Useful information for your stay",
+    "sections": {
+      "arrival": "Arrival",
+      "departure": "Departure",
+      "rules": "Rules",
+      "amenities": "Amenities"
     }
   }
 } 

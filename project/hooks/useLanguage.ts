@@ -4,20 +4,20 @@ export function useLanguage() {
   const t = useTranslations();
   const tCommon = useTranslations('common');
   const tHome = useTranslations('home');
-  const tAbout = useTranslations('about');
   const tVilla = useTranslations('villa');
   const tGallery = useTranslations('gallery');
   const tContact = useTranslations('contact');
   const tInfo = useTranslations('info');
+  const tDiscover = useTranslations('discover');
 
   return {
     t,
     tCommon,
     tHome,
-    tAbout,
     tVilla,
     tGallery,
     tContact,
-    tInfo
+    tInfo,
+    tDiscover
   };
 } 

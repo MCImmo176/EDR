@@ -6,89 +6,72 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { SectionTitle } from "@/components/ui/section-title";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
 export default function DecouvrirPage() {
+  const t = useTranslations("discover");
+
   const activities = [
     {
-      title: "Monaco",
-      description: "Découvrez la principauté de Monaco, ses casinos légendaires, le Palais Princier et le Grand Prix de Formule 1.",
+      title: t("activities.monaco.title"),
+      description: t("activities.monaco.description"),
       image: "https://images.pexels.com/photos/4825701/pexels-photo-4825701.jpeg",
-      distance: "10 minutes",
+      distance: t("activities.monaco.distance"),
       link: "https://www.visitmonaco.com"
     },
     {
-      title: "Nice",
-      description: "Flânez sur la Promenade des Anglais, visitez le Vieux Nice et profitez de la gastronomie locale.",
+      title: t("activities.nice.title"),
+      description: t("activities.nice.description"),
       image: "https://images.pexels.com/photos/4179480/pexels-photo-4179480.jpeg",
-      distance: "30 minutes",
+      distance: t("activities.nice.distance"),
       link: "https://www.nicetourisme.com"
     },
     {
-      title: "Èze Village",
-      description: "Village médiéval perché offrant une vue imprenable sur la Méditerranée et abritant le célèbre Jardin Exotique.",
+      title: t("activities.eze.title"),
+      description: t("activities.eze.description"),
       image: "https://images.pexels.com/photos/5759959/pexels-photo-5759959.jpeg",
-      distance: "15 minutes",
+      distance: t("activities.eze.distance"),
       link: "https://www.eze-tourisme.com"
     },
     {
-      title: "Saint-Paul-de-Vence",
-      description: "Village des artistes avec ses galeries d'art, ses remparts et sa Fondation Maeght.",
+      title: t("activities.saintPaul.title"),
+      description: t("activities.saintPaul.description"),
       image: "https://images.pexels.com/photos/5759949/pexels-photo-5759949.jpeg",
-      distance: "45 minutes",
+      distance: t("activities.saintPaul.distance"),
       link: "https://www.saint-pauldevence.com"
     },
     {
-      title: "Menton",
-      description: "La perle de la France, connue pour ses jardins, son festival du citron et ses plages.",
+      title: t("activities.menton.title"),
+      description: t("activities.menton.description"),
       image: "https://images.pexels.com/photos/5490356/pexels-photo-5490356.jpeg",
-      distance: "15 minutes",
+      distance: t("activities.menton.distance"),
       link: "https://www.menton-riviera-merveilles.fr"
     },
     {
-      title: "Antibes",
-      description: "Découvrez le Port Vauban, le Fort Carré et le musée Picasso dans cette ville historique.",
+      title: t("activities.antibes.title"),
+      description: t("activities.antibes.description"),
       image: "https://images.pexels.com/photos/4179489/pexels-photo-4179489.jpeg",
-      distance: "40 minutes",
+      distance: t("activities.antibes.distance"),
       link: "https://www.antibes-juanlespins.com"
     }
   ];
 
   const experiences = [
     {
-      title: "Activités nautiques",
-      items: [
-        "Location de yachts",
-        "Plongée sous-marine",
-        "Paddle et kayak",
-        "Jet ski"
-      ]
+      title: t("experiences.categories.nautical.title"),
+      items: t.raw("experiences.categories.nautical.items")
     },
     {
-      title: "Culture & Histoire",
-      items: [
-        "Musées",
-        "Sites historiques",
-        "Galeries d'art",
-        "Concerts"
-      ]
+      title: t("experiences.categories.culture.title"),
+      items: t.raw("experiences.categories.culture.items")
     },
     {
-      title: "Gastronomie",
-      items: [
-        "Restaurants étoilés",
-        "Marchés locaux",
-        "Dégustations de vins",
-        "Cours de cuisine"
-      ]
+      title: t("experiences.categories.gastronomy.title"),
+      items: t.raw("experiences.categories.gastronomy.items")
     },
     {
-      title: "Nature & Sport",
-      items: [
-        "Randonnées",
-        "Golf",
-        "Tennis",
-        "VTT électrique"
-      ]
+      title: t("experiences.categories.nature.title"),
+      items: t.raw("experiences.categories.nature.items")
     }
   ];
 
@@ -102,8 +85,8 @@ export default function DecouvrirPage() {
             transition={{ duration: 0.6 }}
           >
             <SectionTitle
-              title="Découvrir"
-              subtitle="Explorez les merveilles de la Côte d'Azur depuis Villa Azur."
+              title={t("title")}
+              subtitle={t("subtitle")}
               centered
             />
           </motion.div>
@@ -141,7 +124,7 @@ export default function DecouvrirPage() {
                   <p className="text-muted-foreground mb-4">{activity.description}</p>
                   <Button asChild variant="minimal" className="group/button">
                     <Link href={activity.link} target="_blank">
-                      En savoir plus
+                      {t("readMore")}
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/button:translate-x-1" />
                     </Link>
                   </Button>
@@ -161,8 +144,8 @@ export default function DecouvrirPage() {
             viewport={{ once: true, margin: "-100px" }}
           >
             <SectionTitle
-              title="Expériences"
-              subtitle="Une multitude d'activités pour rendre votre séjour inoubliable."
+              title={t("experiences.title")}
+              subtitle={t("experiences.subtitle")}
               centered
             />
             
@@ -178,7 +161,7 @@ export default function DecouvrirPage() {
                 >
                   <h3 className="text-xl mb-4">{category.title}</h3>
                   <ul className="space-y-2">
-                    {category.items.map((item, itemIndex) => (
+                    {category.items.map((item: string, itemIndex: number) => (
                       <li key={itemIndex} className="flex items-center text-muted-foreground">
                         <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3" />
                         {item}

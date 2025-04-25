@@ -1,6 +1,7 @@
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import { useLocale } from 'next-intl';
 
 const languages = [
   { code: 'fr', name: 'Français', flag: '/flags/fr.svg' },
@@ -13,10 +14,11 @@ const languages = [
 export default function LanguageSelector() {
   const router = useRouter();
   const pathname = usePathname();
+  const locale = useLocale();
 
-  const handleLanguageChange = (lang: string) => {
+  const handleLanguageChange = (newLocale: string) => {
     const currentPath = pathname;
-    const newPath = currentPath.replace(/^\/(fr|en|el|ru|it)/, `/${lang}`);
+    const newPath = currentPath.replace(`/${locale}`, `/${newLocale}`);
     router.push(newPath);
   };
 
@@ -26,7 +28,9 @@ export default function LanguageSelector() {
         <button
           key={lang.code}
           onClick={() => handleLanguageChange(lang.code)}
-          className="flex items-center space-x-1 p-2 hover:bg-gray-100 rounded-full"
+          className={`flex items-center space-x-1 p-2 hover:bg-gray-100 rounded-full ${
+            locale === lang.code ? 'bg-gray-100' : ''
+          }`}
           title={lang.name}
         >
           <Image

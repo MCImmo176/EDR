@@ -35,6 +35,7 @@ function AccordionItem({ title, description, isOpen, toggleOpen }: {
 
 // Composant pour l'affichage de la cuisine interactive
 function InteractiveKitchen({ kitchenData }: { kitchenData: any }) {
+  const { tVilla } = useLanguage();
   const [activePoint, setActivePoint] = useState<number | null>(null);
   const [hoverPoint, setHoverPoint] = useState<number | null>(null);
 
@@ -45,7 +46,7 @@ function InteractiveKitchen({ kitchenData }: { kitchenData: any }) {
       <div className="md:col-span-2 relative h-[500px] rounded-lg overflow-hidden">
         <Image
           src={kitchenData.imagePath}
-          alt="Cuisine de la villa"
+          alt={tVilla('kitchen.images.alt')}
           fill
           className="object-cover"
         />
@@ -80,14 +81,14 @@ function InteractiveKitchen({ kitchenData }: { kitchenData: any }) {
             key={index} 
             className={`mb-6 ${activePoint !== null && activePoint !== index ? 'opacity-50' : ''}`}
           >
-            <h3 className="text-xl mb-2">{point.title}</h3>
-            <p className="text-muted-foreground">{point.description}</p>
+            <h3 className="text-xl mb-2">{tVilla(`kitchen.${point.id}.title`)}</h3>
+            <p className="text-muted-foreground">{tVilla(`kitchen.${point.id}.description`)}</p>
           </div>
         ))}
 
         {kitchenData.points.length === 0 && (
           <p className="text-muted-foreground">
-            Cliquez sur un des points pour afficher les détails spécifiques de cette partie de la cuisine.
+            {tVilla('kitchen.noPoints')}
           </p>
         )}
       </div>

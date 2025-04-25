@@ -246,7 +246,7 @@ export default function Home() {
                 {Object.entries(tHome('service.features')).map(([key, value]) => (
                   <li key={key} className="flex items-center">
                     <span className="w-2 h-2 bg-white rounded-full mr-3" />
-                    {value}
+                    {tHome(`service.features.${key}`)}
                   </li>
                 ))}
               </ul>

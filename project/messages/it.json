@@ -1,17 +1,232 @@
 {
   "common": {
-    "welcome": "Benvenuto",
+    "welcome": "Benvenuti",
     "about": "Chi siamo",
     "contact": "Contatti",
     "services": "Servizi",
-    "readMore": "Leggi di più"
+    "readMore": "Scopri di più",
+    "discover": "Scopri",
+    "bookNow": "Prenota ora",
+    "contactUs": "Contattaci",
+    "learnMore": "Scopri di più"
   },
   "home": {
-    "title": "Home",
-    "description": "Benvenuto sul nostro sito web"
+    "title": "Villa Azur",
+    "subtitle": "Vivi nel lusso e nel comfort",
+    "excellence": "L'eccellenza nella sua forma più pura",
+    "description": "Una villa eccezionale di 500m² incastonata tra cielo e mare, che offre un'esperienza di lusso incomparabile sulla Costa Azzurra.",
+    "service": {
+      "title": "Servizio su misura",
+      "description": "Ogni soggiorno a Villa Azur è un'esperienza unica, con un servizio personalizzato per soddisfare i vostri desideri più esigenti.",
+      "features": {
+        "concierge": "Servizio concierge 24/7",
+        "chef": "Chef privato",
+        "spa": "Servizio spa a domicilio",
+        "transport": "Trasporto privato",
+        "cleaning": "Pulizia quotidiana",
+        "security": "Sicurezza 24/7"
+      }
+    }
   },
-  "about": {
-    "title": "Chi siamo",
-    "description": "La nostra storia e missione"
+  "villa": {
+    "title": "La Villa",
+    "description": "Una residenza eccezionale",
+    "features": {
+      "area": "Superficie",
+      "bedrooms": "Camere da letto",
+      "bathrooms": "Bagni",
+      "pool": "Piscina",
+      "poolType": "Infinity",
+      "view": "Vista",
+      "viewType": "Mare",
+      "beach": "Accesso alla spiaggia",
+      "beachType": "Privato"
+    },
+    "kitchen": {
+      "images": {
+        "alt": "Cucina della villa con elettrodomestici moderni"
+      },
+      "noPoints": "Clicca su uno dei punti per visualizzare i dettagli specifici di quella parte della cucina.",
+      "cabinets": {
+        "title": "Mobili superiori e inferiori",
+        "description": "Mobili superiori con fissaggi invisibili e vetro satinato al centro, mobili inferiori rialzati con due ripiani e 15% di spazio extra."
+      },
+      "counter": {
+        "title": "Piano di lavoro e schienale",
+        "description": "Piano di lavoro in quarzo nero con finitura opaca contrastante, schienale in vetro temperato per una facile pulizia."
+      },
+      "sink": {
+        "title": "Lavello e rubinetto",
+        "description": "Lavello sottopiano in acciaio inox con rubinetto estraibile a flusso variabile per maggiore flessibilità."
+      },
+      "dishwasher": {
+        "title": "Lavastoviglie intelligente",
+        "description": "Lavastoviglie integrata con programma eco e rilevamento automatico del carico per un consumo ottimizzato."
+      },
+      "fridge": {
+        "title": "Frigoriferi combinati",
+        "description": "Frigorifero-congelatore combinato con scomparti No-Frost e zona fresca speciale per alimenti sensibili."
+      },
+      "oven": {
+        "title": "Forno e microonde",
+        "description": "Forno multifunzione con funzione vapore e microonde combinato per una cottura rapida e sana."
+      },
+      "stove": {
+        "title": "Piano cottura",
+        "description": "Piano cottura a induzione con 5 zone di cottura e ponte variabile per adattarsi a tutti i tipi di pentole."
+      },
+      "island": {
+        "title": "Isola centrale",
+        "description": "Isola centrale con spazio di archiviazione integrato e prese elettriche nascoste per maggiore praticità."
+      }
+    },
+    "images": {
+      "exterior": {
+        "alt": "Esterno della villa con piscina e vista mare"
+      },
+      "living": {
+        "alt": "Soggiorno di lusso con porte vetrate"
+      },
+      "bedroom": {
+        "alt": "Camera da letto principale con vista mare"
+      }
+    },
+    "rooms": {
+      "master": {
+        "title": "Suite Principale",
+        "description": "Una spaziosa suite principale con vista panoramica sul mare, bagno in marmo e guardaroba.",
+        "alt": "Suite della camera da letto principale"
+      },
+      "main": {
+        "title": "Soggiorno Principale",
+        "description": "Un elegante soggiorno con porte vetrate che offre una vista incomparabile sul Mediterraneo.",
+        "alt": "Soggiorno principale"
+      },
+      "terrace": {
+        "title": "Terrazza & Piscina",
+        "description": "Una vasta terrazza con piscina infinity e area relax con vista mare.",
+        "alt": "Terrazza con piscina infinity"
+      },
+      "gourmet": {
+        "title": "Cucina Gourmet",
+        "description": "Una cucina completamente attrezzata con isola centrale ed elettrodomestici di alta gamma.",
+        "alt": "Cucina gourmet"
+      }
+    }
+  },
+  "gallery": {
+    "title": "Foto",
+    "description": "Scopri la magia di Villa Azur",
+    "categories": {
+      "exterior": "Esterno",
+      "interior": "Interno",
+      "pool": "Piscina",
+      "garden": "Giardino"
+    }
+  },
+  "contact": {
+    "title": "Contatti",
+    "description": "Mettiti in contatto con noi",
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "phone": "Telefono",
+      "message": "Messaggio",
+      "send": "Invia"
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Telefono",
+      "address": "Indirizzo"
+    }
+  },
+  "info": {
+    "title": "Informazioni",
+    "description": "Informazioni utili per il tuo soggiorno",
+    "sections": {
+      "arrival": "Arrivo",
+      "departure": "Partenza",
+      "rules": "Regole",
+      "amenities": "Servizi"
+    }
+  },
+  "discover": {
+    "title": "Scopri",
+    "subtitle": "Esplora le meraviglie della Costa Azzurra da Villa Azur.",
+    "experiences": {
+      "title": "Esperienze",
+      "subtitle": "Una moltitudine di attività per rendere il tuo soggiorno indimenticabile.",
+      "categories": {
+        "nautical": {
+          "title": "Attività nautiche",
+          "items": [
+            "Noleggio yacht",
+            "Immersioni",
+            "Stand-up paddle e kayak",
+            "Jet ski"
+          ]
+        },
+        "culture": {
+          "title": "Cultura & Storia",
+          "items": [
+            "Musei",
+            "Siti storici",
+            "Gallerie d'arte",
+            "Concerti"
+          ]
+        },
+        "gastronomy": {
+          "title": "Gastronomia",
+          "items": [
+            "Ristoranti stellati",
+            "Mercati locali",
+            "Degustazioni di vini",
+            "Corsi di cucina"
+          ]
+        },
+        "nature": {
+          "title": "Natura & Sport",
+          "items": [
+            "Escursioni",
+            "Golf",
+            "Tennis",
+            "Mountain bike elettrica"
+          ]
+        }
+      }
+    },
+    "activities": {
+      "monaco": {
+        "title": "Monaco",
+        "description": "Scopri il Principato di Monaco, i suoi leggendari casinò, il Palazzo del Principe e il Gran Premio di Formula 1.",
+        "distance": "10 minuti"
+      },
+      "nice": {
+        "title": "Nizza",
+        "description": "Passeggia sulla Promenade des Anglais, visita la Vecchia Nizza e goditi la gastronomia locale.",
+        "distance": "30 minuti"
+      },
+      "eze": {
+        "title": "Eze Village",
+        "description": "Villaggio medievale arroccato con vista mozzafiato sul Mediterraneo e il famoso Giardino Esotico.",
+        "distance": "15 minuti"
+      },
+      "saintPaul": {
+        "title": "Saint-Paul-de-Vence",
+        "description": "Villaggio degli artisti con gallerie d'arte, mura e la Fondazione Maeght.",
+        "distance": "45 minuti"
+      },
+      "menton": {
+        "title": "Mentone",
+        "description": "La perla della Francia, nota per i suoi giardini, il festival del limone e le sue spiagge.",
+        "distance": "15 minuti"
+      },
+      "antibes": {
+        "title": "Antibes",
+        "description": "Scopri il Port Vauban, il Fort Carré e il museo Picasso in questa città storica.",
+        "distance": "40 minuti"
+      }
+    },
+    "readMore": "Scopri di più"
   }
 } 

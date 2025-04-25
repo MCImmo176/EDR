@@ -47,6 +47,10 @@
       "beachType": "Privé"
     },
     "kitchen": {
+      "images": {
+        "alt": "Cuisine de la villa avec équipements modernes"
+      },
+      "noPoints": "Cliquez sur un des points pour afficher les détails spécifiques de cette partie de la cuisine.",
       "cabinets": {
         "title": "Meubles hauts et bas",
         "description": "Meubles hauts avec fixations invisibles et verres fumés au centre, meubles bas surélevés avec deux étagères et 15% d'espace supplémentaire."
@@ -113,5 +117,84 @@
         "alt": "Cuisine gastronomique"
       }
     }
+  },
+  "discover": {
+    "title": "Découvrir",
+    "subtitle": "Explorez les merveilles de la Côte d'Azur depuis Villa Azur.",
+    "experiences": {
+      "title": "Expériences",
+      "subtitle": "Une multitude d'activités pour rendre votre séjour inoubliable.",
+      "categories": {
+        "nautical": {
+          "title": "Activités nautiques",
+          "items": [
+            "Location de yachts",
+            "Plongée sous-marine",
+            "Paddle et kayak",
+            "Jet ski"
+          ]
+        },
+        "culture": {
+          "title": "Culture & Histoire",
+          "items": [
+            "Musées",
+            "Sites historiques",
+            "Galeries d'art",
+            "Concerts"
+          ]
+        },
+        "gastronomy": {
+          "title": "Gastronomie",
+          "items": [
+            "Restaurants étoilés",
+            "Marchés locaux",
+            "Dégustations de vins",
+            "Cours de cuisine"
+          ]
+        },
+        "nature": {
+          "title": "Nature & Sport",
+          "items": [
+            "Randonnées",
+            "Golf",
+            "Tennis",
+            "VTT électrique"
+          ]
+        }
+      }
+    },
+    "activities": {
+      "monaco": {
+        "title": "Monaco",
+        "description": "Découvrez la principauté de Monaco, ses casinos légendaires, le Palais Princier et le Grand Prix de Formule 1.",
+        "distance": "10 minutes"
+      },
+      "nice": {
+        "title": "Nice",
+        "description": "Flânez sur la Promenade des Anglais, visitez le Vieux Nice et profitez de la gastronomie locale.",
+        "distance": "30 minutes"
+      },
+      "eze": {
+        "title": "Èze Village",
+        "description": "Village médiéval perché offrant une vue imprenable sur la Méditerranée et abritant le célèbre Jardin Exotique.",
+        "distance": "15 minutes"
+      },
+      "saintPaul": {
+        "title": "Saint-Paul-de-Vence",
+        "description": "Village des artistes avec ses galeries d'art, ses remparts et sa Fondation Maeght.",
+        "distance": "45 minutes"
+      },
+      "menton": {
+        "title": "Menton",
+        "description": "La perle de la France, connue pour ses jardins, son festival du citron et ses plages.",
+        "distance": "15 minutes"
+      },
+      "antibes": {
+        "title": "Antibes",
+        "description": "Découvrez le Port Vauban, le Fort Carré et le musée Picasso dans cette ville historique.",
+        "distance": "40 minutes"
+      }
+    },
+    "readMore": "En savoir plus"
   }
 } 
