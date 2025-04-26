@@ -2,16 +2,15 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, Check } from "lucide-react";
+import { Send, Check } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { useTranslations } from "next-intl";
 import { ComboboxCountry } from '@/components/ui/combobox-country';
 import { countryCodes } from '@/data/country-codes';
+import Image from "next/image";
 
-import { SectionTitle } from "@/components/ui/section-title";
-import { Map } from "@/components/ui/map";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -49,149 +48,125 @@ export default function ContactPage() {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
-    
     setTimeout(() => {
       setIsSubmitted(true);
     }, 1000);
   }
-  
-  const contactInfo = [
-    {
-      icon: <Mail className="h-6 w-6" />,
-      title: t('info.email'),
-      details: "contact@villa-azur.com",
-    },
-    {
-      icon: <Phone className="h-6 w-6" />,
-      title: t('info.phone'),
-      details: "+33 4 93 XX XX XX",
-    },
-    {
-      icon: <MapPin className="h-6 w-6" />,
-      title: t('info.address'),
-      details: "Roquebrune Cap Martin, France",
-    },
-  ];
-  
-  const mapCenter = {
-    lat: 43.756,
-    lng: 7.452,
-  };
 
   return (
     <>
-      <section className="pt-24 md:pt-32 pb-16">
-        <div className="container">
+      <section className="relative h-[60vh] overflow-hidden">
+        <Image
+          src="https://images.pexels.com/photos/5875837/pexels-photo-5875837.jpeg"
+          alt="Contact Us"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 flex items-center justify-center text-white">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
           >
-            <SectionTitle
-              title={t('title')}
-              subtitle={t('subtitle')}
-              centered
-            />
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display mb-4">
+              Contactez-nous
+            </h1>
+            <p className="text-xl md:text-2xl max-w-2xl mx-auto">
+              Pour toute demande d'information ou réservation
+            </p>
           </motion.div>
         </div>
       </section>
-      
-      <section className="pb-24">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true, margin: "-100px" }}
-          >
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-              <div className="col-span-1 md:col-span-5">
-                <h2 className="text-2xl mb-8">{t('form.title')}</h2>
-                
-                {isSubmitted ? (
-                  <div className="bg-muted p-8 text-center rounded-lg shadow-sm">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary mb-6">
-                      <Check className="h-8 w-8 text-white" />
-                    </div>
-                    <h3 className="text-xl mb-4">{t('form.success')}</h3>
-                    <p className="text-muted-foreground">
-                      {t('form.successDetail')}
-                    </p>
+
+      <section className="py-24">
+        <div className="container max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="lg:sticky lg:top-32"
+            >
+              <h2 className="text-4xl font-display mb-6">Échangeons ensemble</h2>
+              <div className="prose prose-lg">
+                <p className="text-xl text-muted-foreground mb-4">
+                  Merci d'avoir visité notre site web !
+                </p>
+                <p className="text-lg text-muted-foreground">
+                  Nous serions ravis d'échanger avec vous. Que vous ayez des questions, 
+                  des retours à partager ou que vous souhaitiez en savoir plus sur nos villas, 
+                  n'hésitez pas à nous contacter.
+                </p>
+                <p className="text-lg text-muted-foreground mt-4">
+                  Nos conseillers vous répondront dans les plus brefs délais.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-muted/30 p-8 rounded-xl shadow-sm"
+            >
+              {isSubmitted ? (
+                <div className="text-center py-12">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary mb-6">
+                    <Check className="h-8 w-8 text-white" />
                   </div>
-                ) : (
-                  <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <h3 className="text-2xl font-display mb-4">{t('form.success')}</h3>
+                  <p className="text-muted-foreground">
+                    {t('form.successDetail')}
+                  </p>
+                </div>
+              ) : (
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Nom & Prénom</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Votre nom complet" className="bg-background" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Email</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Votre adresse email" className="bg-background" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <div className="flex gap-4">
                       <FormField
                         control={form.control}
-                        name="name"
+                        name="countryCode"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>{t('form.name')}</FormLabel>
+                            <FormLabel>Indicatif</FormLabel>
                             <FormControl>
-                              <Input placeholder={t('form.name')} {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>{t('form.email')}</FormLabel>
-                            <FormControl>
-                              <Input placeholder={t('form.email')} {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      
-                      <div className="flex gap-4">
-                        <FormField
-                          control={form.control}
-                          name="countryCode"
-                          render={({ field }) => (
-                            <FormItem className="w-32">
                               <ComboboxCountry
                                 value={field.value}
                                 onChange={field.onChange}
-                                label="Indicatif"
                                 countryCodes={countryCodes}
-                              />
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                        
-                        <FormField
-                          control={form.control}
-                          name="phone"
-                          render={({ field }) => (
-                            <FormItem className="flex-1">
-                              <FormLabel>{t('form.phone')}</FormLabel>
-                              <FormControl>
-                                <Input placeholder={t('form.phone')} {...field} />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                      </div>
-                      
-                      <FormField
-                        control={form.control}
-                        name="message"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>{t('form.message')}</FormLabel>
-                            <FormControl>
-                              <Textarea 
-                                placeholder={t('form.message')} 
-                                className="resize-none min-h-[150px]"
-                                {...field} 
                               />
                             </FormControl>
                             <FormMessage />
@@ -199,38 +174,48 @@ export default function ContactPage() {
                         )}
                       />
                       
-                      <Button type="submit" className="w-full md:w-auto">
-                        {t('form.submit')}
-                        <Send className="ml-2 h-4 w-4" />
-                      </Button>
-                    </form>
-                  </Form>
-                )}
-              </div>
-              
-              <div className="col-span-1 md:col-span-7">
-                <h2 className="text-2xl mb-8">{t('info.title')}</h2>
-                
-                <div className="space-y-8 mb-10">
-                  {contactInfo.map((item, index) => (
-                    <div key={index} className="flex items-start p-4 bg-muted rounded-lg">
-                      <div className="flex-shrink-0 mr-6 p-3 bg-background rounded-full">
-                        {item.icon}
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-medium mb-1">{item.title}</h3>
-                        <p className="text-muted-foreground">{item.details}</p>
-                      </div>
+                      <FormField
+                        control={form.control}
+                        name="phone"
+                        render={({ field }) => (
+                          <FormItem className="flex-1">
+                            <FormLabel>Téléphone</FormLabel>
+                            <FormControl>
+                              <Input placeholder="Votre numéro de téléphone" className="bg-background" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
                     </div>
-                  ))}
-                </div>
-                
-                <div className="rounded-lg overflow-hidden shadow-lg">
-                  <Map center={mapCenter} />
-                </div>
-              </div>
-            </div>
-          </motion.div>
+                    
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Message</FormLabel>
+                          <FormControl>
+                            <Textarea 
+                              placeholder="Votre message" 
+                              className="resize-none min-h-[150px] bg-background"
+                              {...field} 
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <Button type="submit" className="w-full text-lg py-6">
+                      Envoyer le message
+                      <Send className="ml-2 h-4 w-4" />
+                    </Button>
+                  </form>
+                </Form>
+              )}
+            </motion.div>
+          </div>
         </div>
       </section>
     </>
