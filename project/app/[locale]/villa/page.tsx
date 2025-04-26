@@ -9,6 +9,7 @@ import { ImageCarousel } from "@/components/ui/image-carousel";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Compass, Clock, Star, ShieldCheck } from "lucide-react";
 
 // Composant pour un élément d'accordéon
 function AccordionItem({ title, description, isOpen, toggleOpen }: { 
@@ -350,7 +351,7 @@ export default function VillaPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-white font-sans" style={{ fontFamily: 'Montserrat, Arial Black, Arial, Helvetica, sans-serif' }}>
+    <main className="min-h-screen bg-white">
       <section className="py-32 bg-white">
         <div className="container max-w-[1400px] mx-auto px-4">
           <motion.div
@@ -434,85 +435,187 @@ export default function VillaPage() {
         </div>
       </section>
 
-      {/* Section 4 colonnes : Situation, Disponibilité, Équipements, Sécurité */}
-      <section className="py-16 bg-white">
-        <div className="container max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
-            {/* Situation */}
-            <div>
-              <div className="flex justify-center mb-4">
-                <svg width="48" height="48" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-black" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8l2 4h-4l2 4"/></svg>
-              </div>
-              <h3 className="text-xl font-extrabold uppercase mb-3 font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>Situation</h3>
-              <p className="text-base text-black font-sans text-justify" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>
-                Idéalement située à Roquebrune Cap Martin, à quelques minutes de Monaco et des plus belles plages de la Côte d'Azur.
-              </p>
-            </div>
-            {/* Disponibilité */}
-            <div>
-              <div className="flex justify-center mb-4">
-                <svg width="48" height="48" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-black" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-              </div>
-              <h3 className="text-xl font-extrabold uppercase mb-3 font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>Disponibilité</h3>
-              <p className="text-base text-black font-sans text-justify" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>
-                La villa est disponible à la location toute l'année, avec une durée minimale de séjour d'une semaine.
-              </p>
-            </div>
-            {/* Équipements */}
-            <div>
-              <div className="flex justify-center mb-4">
-                <svg width="48" height="48" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-black" viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5 12 2"/></svg>
-              </div>
-              <h3 className="text-xl font-extrabold uppercase mb-3 font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>Équipements</h3>
-              <p className="text-base text-black font-sans text-justify" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>
-                Des équipements haut de gamme et des services personnalisés pour un séjour d'exception.
-              </p>
-            </div>
-            {/* Sécurité */}
-            <div>
-              <div className="flex justify-center mb-4">
-                <svg width="48" height="48" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-black" viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 5-3.5 9.7-7 10-3.5-0.3-7-5-7-10V6l7-4z"/><path d="M9 12l2 2 4-4"/></svg>
-              </div>
-              <h3 className="text-xl font-extrabold uppercase mb-3 font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>Sécurité</h3>
-              <p className="text-base text-black font-sans text-justify" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>
-                Propriété entièrement sécurisée avec système d'alarme, vidéosurveillance et service de sécurité sur demande.
-              </p>
-            </div>
-          </div>
+      {/* --- Début du contenu de l'onglet Informations --- */}
+      <section className="pt-24 md:pt-32 pb-16">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <SectionTitle
+              title="Informations pratiques"
+              subtitle="Tout ce que vous devez savoir pour profiter pleinement de votre séjour aux Étoiles du Rocher"
+              centered
+            />
+          </motion.div>
         </div>
       </section>
-
-      {/* Section caractéristiques : Suites, SDB, Garages, Piscine */}
-      <section className="py-12 bg-white">
-        <div className="container max-w-3xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 bg-white rounded-lg">
-            {/* Suites */}
-            <div className="flex flex-col items-center py-6">
-              <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2.2" className="mb-2 text-black" viewBox="0 0 24 24"><rect x="3" y="10" width="18" height="8" rx="2"/><path d="M7 10V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3"/></svg>
-              <div className="text-base font-extrabold uppercase text-black font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>Suites</div>
-              <div className="text-xl font-bold text-black font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>5</div>
+      <section className="section-padding bg-muted">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="flex flex-col items-center text-center p-6">
+                <Compass className="h-12 w-12 mb-4" />
+                <h3 className="text-xl mb-3">Situation</h3>
+                <p>
+                  Idéalement située à Roquebrune Cap Martin, à quelques minutes de Monaco et des plus belles plages de la Côte d'Azur.
+                </p>
+              </div>
+              <div className="flex flex-col items-center text-center p-6">
+                <Clock className="h-12 w-12 mb-4" />
+                <h3 className="text-xl mb-3">Disponibilité</h3>
+                <p>
+                  La villa est disponible à la location toute l'année, avec une durée minimale de séjour d'une semaine.
+                </p>
+              </div>
+              <div className="flex flex-col items-center text-center p-6">
+                <Star className="h-12 w-12 mb-4" />
+                <h3 className="text-xl mb-3">Équipements</h3>
+                <p>
+                  Des équipements haut de gamme et des services personnalisés pour un séjour d'exception.
+                </p>
+              </div>
+              <div className="flex flex-col items-center text-center p-6">
+                <ShieldCheck className="h-12 w-12 mb-4" />
+                <h3 className="text-xl mb-3">Sécurité</h3>
+                <p>
+                  Propriété entièrement sécurisée avec système d'alarme, vidéosurveillance et service de sécurité sur demande.
+                </p>
+              </div>
             </div>
-            {/* SDB */}
-            <div className="flex flex-col items-center py-6">
-              <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2.2" className="mb-2 text-black" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="8" rx="2"/><path d="M8 10V6a4 4 0 0 1 8 0v4"/></svg>
-              <div className="text-base font-extrabold uppercase text-black font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>SDB</div>
-              <div className="text-xl font-bold text-black font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>6</div>
-            </div>
-            {/* Garages */}
-            <div className="flex flex-col items-center py-6">
-              <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2.2" className="mb-2 text-black" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="10" rx="2"/><path d="M7 18V8"/><path d="M17 18V8"/><path d="M7 13h10"/></svg>
-              <div className="text-base font-extrabold uppercase text-black font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>Garages</div>
-              <div className="text-xl font-bold text-black font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>2</div>
-            </div>
-            {/* Piscine */}
-            <div className="flex flex-col items-center py-6">
-              <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2.2" className="mb-2 text-black" viewBox="0 0 24 24"><rect x="3" y="10" width="18" height="7" rx="2"/><path d="M7 10V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3"/><path d="M6 17c1.5-1 4.5-1 6 0s4.5 1 6 0"/></svg>
-              <div className="text-base font-extrabold uppercase text-black font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>Piscine</div>
-              <div className="text-xl font-bold text-black font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>1</div>
-            </div>
-          </div>
+          </motion.div>
         </div>
       </section>
+      <section className="section-padding container">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <SectionTitle
+            title="Équipements & Services"
+            subtitle="Les Étoiles du Rocher offre une gamme complète d'équipements et de services pour répondre à toutes vos attentes."
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mt-12">
+            {/* Liste des équipements */}
+            <div>
+              <h3 className="text-xl mb-4 after:content-[''] after:block after:w-12 after:h-px after:bg-primary after:mt-2">Maison</h3>
+              <ul className="space-y-2">
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>500m² d'espace habitable</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>5 chambres en-suite</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Salon spacieux</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Salle à manger</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Cuisine équipée</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Home cinéma</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Buanderie</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Cave à vin climatisée</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl mb-4 after:content-[''] after:block after:w-12 after:h-px after:bg-primary after:mt-2">Extérieur</h3>
+              <ul className="space-y-2">
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Piscine à débordement chauffée</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Terrasses aménagées</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Jardin méditerranéen</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Accès privé à la plage</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Parking sécurisé</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Système d'alarme</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl mb-4 after:content-[''] after:block after:w-12 after:h-px after:bg-primary after:mt-2">Services</h3>
+              <ul className="space-y-2">
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Ménage quotidien</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Chef privé (optionnel)</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Majordome (optionnel)</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Service de conciergerie 24/7</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Sécurité</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Transferts aéroport</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl mb-4 after:content-[''] after:block after:w-12 after:h-px after:bg-primary after:mt-2">Loisirs</h3>
+              <ul className="space-y-2">
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Équipement fitness</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Kayaks et paddle boards</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Matériel de plongée</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Home cinéma</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Système audio haut de gamme</li>
+                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Bibliothèque</li>
+              </ul>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+      <Divider className="container mx-auto" />
+      <section className="section-padding container">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <div className="content-grid">
+            <div className="col-span-1 md:col-span-6">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <Image 
+                  src="https://images.pexels.com/photos/2707756/pexels-photo-2707756.jpeg" 
+                  alt="Vue aérienne de Roquebrune Cap Martin"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <div className="col-span-1 md:col-span-6 flex flex-col justify-center">
+              <h2 className="mb-6">Services et équipements</h2>
+              <p className="text-lg">
+                Les Étoiles du Rocher vous offre une gamme complète de services et d'équipements pour rendre votre séjour aussi agréable que possible.
+              </p>
+              <h3 className="text-xl mb-4">Distances</h3>
+              <ul className="space-y-2 mb-8">
+                <li className="flex justify-between"><span>Plage</span><span className="font-medium">Accès direct</span></li>
+                <li className="flex justify-between"><span>Monaco</span><span className="font-medium">10 minutes</span></li>
+                <li className="flex justify-between"><span>Nice Côte d'Azur (Aéroport)</span><span className="font-medium">30 minutes</span></li>
+                <li className="flex justify-between"><span>Cannes</span><span className="font-medium">45 minutes</span></li>
+                <li className="flex justify-between"><span>Saint-Tropez</span><span className="font-medium">1h30</span></li>
+              </ul>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+      <section className="section-padding bg-muted">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            <SectionTitle
+              title="Règlement de la villa"
+              subtitle="Pour garantir le confort de tous, nous vous prions de respecter ces quelques règles pendant votre séjour."
+              centered
+            />
+            <div className="max-w-2xl mx-auto mt-12 bg-background p-8">
+              <ul className="space-y-4">
+                <li className="flex items-baseline"><div className="w-2 h-2 bg-primary rounded-full mr-3 mt-1"></div>Check-in: 16h00 / Check-out: 10h00</li>
+                <li className="flex items-baseline"><div className="w-2 h-2 bg-primary rounded-full mr-3 mt-1"></div>Non-fumeur</li>
+                <li className="flex items-baseline"><div className="w-2 h-2 bg-primary rounded-full mr-3 mt-1"></div>Pas d'animaux de compagnie</li>
+                <li className="flex items-baseline"><div className="w-2 h-2 bg-primary rounded-full mr-3 mt-1"></div>Pas de fêtes ou événements sans autorisation préalable</li>
+                <li className="flex items-baseline"><div className="w-2 h-2 bg-primary rounded-full mr-3 mt-1"></div>Respecter le voisinage et ne pas faire de bruit après 22h00</li>
+              </ul>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      {/* --- Fin du contenu de l'onglet Informations --- */}
     </main>
   );
 }
