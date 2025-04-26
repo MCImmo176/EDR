@@ -7,6 +7,8 @@ import { SectionTitle } from "@/components/ui/section-title";
 import { Divider } from "@/components/ui/divider";
 import { ImageCarousel } from "@/components/ui/image-carousel";
 import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 // Composant pour un élément d'accordéon
 function AccordionItem({ title, description, isOpen, toggleOpen }: { 
@@ -18,16 +20,35 @@ function AccordionItem({ title, description, isOpen, toggleOpen }: {
   return (
     <div className="border-b border-gray-200 py-4">
       <div 
-        className="flex items-center justify-between cursor-pointer" 
+        className="flex items-center justify-between cursor-pointer px-6 py-2 transition-all duration-300 hover:bg-opacity-10 hover:bg-white"
         onClick={toggleOpen}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            toggleOpen();
+          }
+        }}
       >
         <h3 className="text-lg font-medium">{title}</h3>
-        <span className="text-2xl">{isOpen ? "−" : "+"}</span>
+        <motion.span 
+          className="text-2xl"
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          {isOpen ? "−" : "+"}
+        </motion.span>
       </div>
       {isOpen && (
-        <div className="mt-3 text-muted-foreground">
+        <motion.div 
+          className="mt-3 text-muted-foreground px-6"
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: 'auto' }}
+          exit={{ opacity: 0, height: 0 }}
+          transition={{ duration: 0.3 }}
+        >
           <p>{description}</p>
-        </div>
+        </motion.div>
       )}
     </div>
   );
@@ -43,19 +64,20 @@ function InteractiveKitchen({ kitchenData }: { kitchenData: any }) {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-      <div className="md:col-span-2 relative h-[500px] rounded-lg overflow-hidden">
+      <div className="md:col-span-2 relative h-[500px] rounded-lg overflow-hidden group">
         <Image
           src={kitchenData.imagePath}
           alt={tVilla('kitchen.images.alt')}
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          priority
         />
         
         {kitchenData.points.map((point: any, index: number) => (
-          <div
+          <motion.div
             key={index}
-            className={`absolute w-8 h-8 bg-white rounded-full flex items-center justify-center cursor-pointer shadow-md transition-transform ${
-              activePoint === index ? 'bg-orange-500' : ''
+            className={`absolute w-8 h-8 bg-white rounded-full flex items-center justify-center cursor-pointer shadow-md transition-all duration-300 ${
+              activePoint === index ? 'bg-orange-500 scale-110' : ''
             }`}
             style={{ left: `${point.x}%`, top: `${point.y}%` }}
             onClick={() => {
@@ -67,23 +89,38 @@ function InteractiveKitchen({ kitchenData }: { kitchenData: any }) {
             }}
             onMouseEnter={() => setHoverPoint(index)}
             onMouseLeave={() => setHoverPoint(null)}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            aria-label={tVilla(`kitchen.${point.id}.title`)}
+            role="button"
+            tabIndex={0}
           >
             {activePoint === index && (
-              <span className="w-3 h-3 rounded-full bg-white"></span>
+              <motion.span 
+                className="w-3 h-3 rounded-full bg-white"
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.2 }}
+              />
             )}
-          </div>
+          </motion.div>
         ))}
       </div>
       
-      <div className="bg-muted p-6 rounded-lg">
+      <div className="bg-muted p-6 rounded-lg shadow-lg">
         {kitchenData.points.map((point: any, index: number) => (
-          <div 
+          <motion.div 
             key={index} 
-            className={`mb-6 ${activePoint !== null && activePoint !== index ? 'opacity-50' : ''}`}
+            className={`mb-6 p-4 rounded-lg transition-all duration-300 ${
+              activePoint !== null && activePoint !== index ? 'opacity-50' : ''
+            } ${activePoint === index ? 'bg-white shadow-md' : ''}`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: index * 0.1 }}
           >
-            <h3 className="text-xl mb-2">{tVilla(`kitchen.${point.id}.title`)}</h3>
+            <h3 className="text-xl font-semibold mb-2">{tVilla(`kitchen.${point.id}.title`)}</h3>
             <p className="text-muted-foreground">{tVilla(`kitchen.${point.id}.description`)}</p>
-          </div>
+          </motion.div>
         ))}
 
         {kitchenData.points.length === 0 && (
@@ -93,7 +130,6 @@ function InteractiveKitchen({ kitchenData }: { kitchenData: any }) {
         )}
       </div>
 
-      {/* Styles pour les effets d'ondes uniquement au survol */}
       <style jsx>{`
         .absolute {
           overflow: visible;
@@ -197,23 +233,31 @@ function KitchenAccordion() {
   ];
   
   return (
-    <div className="bg-neutral-100 rounded-lg p-0 overflow-hidden">
+    <div className="bg-neutral-100 rounded-lg shadow-lg overflow-hidden">
       {kitchenSections.map((section) => (
-        <div key={section.id} className={`transition-all ${openSection === section.id ? 'bg-amber-700 text-white' : ''}`}>
+        <motion.div 
+          key={section.id} 
+          className={`transition-all duration-300 ${
+            openSection === section.id ? 'bg-amber-700 text-white' : 'hover:bg-neutral-200'
+          }`}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+        >
           <AccordionItem
             title={section.title}
             description={section.description}
             isOpen={openSection === section.id}
             toggleOpen={() => toggleSection(section.id)}
           />
-        </div>
+        </motion.div>
       ))}
     </div>
   );
 }
 
 export default function VillaPage() {
-  const { tVilla, tCommon } = useLanguage();
+  const { tVilla } = useLanguage();
   const [kitchenData, setKitchenData] = useState<any>(null);
   const [activePoint, setActivePoint] = useState<number | null>(null);
   const [hoverPoint, setHoverPoint] = useState<number | null>(null);
@@ -245,28 +289,28 @@ export default function VillaPage() {
   
   const roomImages = [
     {
-      title: tVilla('rooms.master.title'),
-      description: tVilla('rooms.master.description'),
-      src: "https://images.pexels.com/photos/90319/pexels-photo-90319.jpeg",
-      alt: tVilla('rooms.master.alt')
+      title: "Salon lumineux",
+      description: "Un espace convivial avec vue panoramique sur la Méditerranée.",
+      src: "/images/villa/IMG_2409.JPEG",
+      alt: "Salon lumineux avec vue mer"
     },
     {
-      title: tVilla('rooms.main.title'),
-      description: tVilla('rooms.main.description'),
-      src: "https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg",
-      alt: tVilla('rooms.main.alt')
+      title: "Salon ouvert et lumineux",
+      description: "Un vaste espace de vie baigné de lumière, idéal pour se détendre ou recevoir.",
+      src: "/images/villa/IMG_2286.JPEG",
+      alt: "Salon ouvert et lumineux"
     },
     {
-      title: tVilla('rooms.terrace.title'),
-      description: tVilla('rooms.terrace.description'),
-      src: "https://images.pexels.com/photos/261327/pexels-photo-261327.jpeg",
-      alt: tVilla('rooms.terrace.alt')
+      title: "Piscine privative",
+      description: "Profitez d'une baignade face à la mer.",
+      src: "/images/villa/IMG_2348.JPEG",
+      alt: "Piscine privative vue mer"
     },
     {
-      title: tVilla('rooms.gourmet.title'),
-      description: tVilla('rooms.gourmet.description'),
-      src: "https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg",
-      alt: tVilla('rooms.gourmet.alt')
+      title: "5 suites privatives",
+      description: "Chaque chambre dispose de sa salle de bain, s'ouvre sur l'extérieur et profite d'une lumière naturelle abondante.",
+      src: "/images/villa/IMG_2359.JPEG",
+      alt: "Suites privatives lumineuses"
     }
   ];
 
@@ -280,18 +324,21 @@ export default function VillaPage() {
           {
             x: 30,
             y: 25,
+            id: "ilot",
             title: "Îlot central",
             description: "Îlot central en marbre avec espace de rangement intégré et tabourets design."
           },
           {
             x: 65,
             y: 40,
+            id: "electromenagers",
             title: "Électroménagers haut de gamme",
             description: "Équipement Gaggenau avec réfrigérateur intégré, four vapeur et plaque à induction."
           },
           {
             x: 20,
             y: 60,
+            id: "repas",
             title: "Espace repas",
             description: "Table en chêne massif pouvant accueillir jusqu'à 8 personnes."
           }
@@ -300,309 +347,170 @@ export default function VillaPage() {
     };
 
     loadKitchenData();
-
-    const animateTopBorder = () => {
-      return new Promise(resolve => {
-        const topBorder = document.querySelector('.border-top');
-        if (!topBorder) return resolve();
-        let width = 0;
-        const interval = setInterval(() => {
-          width += 1;
-          topBorder.style.width = width + '%';
-          if (width >= 100) {
-            clearInterval(interval);
-            resolve();
-          }
-        }, 5);
-      });
-    };
-    
-    const animateRightBorder = () => {
-      return new Promise(resolve => {
-        const rightBorder = document.querySelector('.border-right');
-        if (!rightBorder) return resolve();
-        let height = 0;
-        const interval = setInterval(() => {
-          height += 1;
-          rightBorder.style.height = height + '%';
-          if (height >= 100) {
-            clearInterval(interval);
-            resolve();
-          }
-        }, 5);
-      });
-    };
-    
-    const animateBottomBorder = () => {
-      return new Promise(resolve => {
-        const bottomBorder = document.querySelector('.border-bottom');
-        if (!bottomBorder) return resolve();
-        let width = 0;
-        const interval = setInterval(() => {
-          width += 1;
-          bottomBorder.style.width = width + '%';
-          bottomBorder.style.right = 'auto';
-          bottomBorder.style.left = (100 - width) + '%';
-          if (width >= 100) {
-            clearInterval(interval);
-            resolve();
-          }
-        }, 5);
-      });
-    };
-    
-    const animateLeftBorder = () => {
-      return new Promise(resolve => {
-        const leftBorder = document.querySelector('.border-left');
-        if (!leftBorder) return resolve();
-        let height = 0;
-        const interval = setInterval(() => {
-          height += 1;
-          leftBorder.style.height = height + '%';
-          leftBorder.style.bottom = 'auto';
-          leftBorder.style.top = (100 - height) + '%';
-          if (height >= 100) {
-            clearInterval(interval);
-            resolve();
-          }
-        }, 5);
-      });
-    };
-    
-    const animateTextLine = (index: number) => {
-      return new Promise(resolve => {
-        const textContent = document.querySelectorAll('.text-content')[index];
-        if (!textContent) return resolve();
-        let position = -100;
-        
-        const interval = setInterval(() => {
-          position += 2;
-          (textContent as HTMLElement).style.transform = `translateX(${position}%)`;
-          
-          if (position >= 0) {
-            (textContent as HTMLElement).style.transform = 'translateX(0)';
-            clearInterval(interval);
-            resolve();
-          }
-        }, 10);
-      });
-    };
-    
-    const animateText = async () => {
-      await animateTextLine(0);
-      await new Promise(resolve => setTimeout(resolve, 200));
-      await animateTextLine(1);
-    };
-    
-    const playAnimation = async () => {
-      await animateTopBorder();
-      await animateRightBorder();
-      await animateBottomBorder();
-      await animateLeftBorder();
-      await animateText();
-    };
-
-    playAnimation();
   }, []);
 
   return (
-    <main>
-      <section className="relative h-screen w-full overflow-hidden">
-        <ImageCarousel images={villaImages} />
-      </section>
-
-      <section className="py-32">
-        <div className="container max-w-[1400px] mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="max-w-3xl mx-auto text-center mb-16">
-              <SectionTitle>{tVilla('title')}</SectionTitle>
-              <p className="text-xl text-muted-foreground mt-6">
-                {tVilla('description')}
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-              {villaFeatures.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  className="text-center"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <h3 className="text-lg font-medium mb-2">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.value}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="section-padding container">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          <SectionTitle
-            title="Découvrez nos espaces"
-            subtitle="Chaque espace des Étoiles du Rocher a été conçu pour vous offrir confort, élégance et moments inoubliables."
-            centered
-          />
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
-            {roomImages.map((room, index) => (
-              <motion.div 
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="image-wrapper mb-6">
-                  <Image 
-                    src={room.src} 
-                    alt={room.alt}
-                    width={800}
-                    height={600}
-                    className="w-full h-auto"
-                  />
-                </div>
-                <h3 className="text-2xl mb-3">{room.title}</h3>
-                <p className="text-muted-foreground">{room.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
-
-      <section className="section-padding container">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          <SectionTitle
-            title="Notre Cuisine"
-            subtitle="Une cuisine équipée de tout le nécessaire pour un confort optimal"
-            centered
-          />
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
-            <div className="relative h-[600px] rounded-lg overflow-hidden">
-              {kitchenData ? (
-                <div className="relative h-full">
-                  <Image
-                    src={kitchenData.imagePath}
-                    alt="Cuisine de la villa"
-                    fill
-                    className="object-cover"
-                  />
-                  
-                  {kitchenData.points.map((point: any, index: number) => (
-                    <div
-                      key={index}
-                      className={`absolute w-8 h-8 bg-white rounded-full flex items-center justify-center cursor-pointer shadow-md transition-transform ${
-                        activePoint === index ? 'bg-orange-500' : ''
-                      }`}
-                      style={{ left: `${point.x}%`, top: `${point.y}%` }}
-                      onClick={() => {
-                        if (activePoint === index) {
-                          setActivePoint(null);
-                        } else {
-                          setActivePoint(index);
-                        }
-                      }}
-                      onMouseEnter={() => setHoverPoint(index)}
-                      onMouseLeave={() => setHoverPoint(null)}
-                    >
-                      {activePoint === index && (
-                        <span className="w-3 h-3 rounded-full bg-white"></span>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="flex items-center justify-center h-full bg-gray-100">
-                  <p>Chargement de l'image...</p>
-                </div>
-              )}
-              
-              {/* Styles pour les effets d'ondes uniquement au survol */}
-              <style jsx>{`
-                .absolute {
-                  overflow: visible;
-                }
-                .absolute::before {
-                  content: "";
-                  position: absolute;
-                  width: 100%;
-                  height: 100%;
-                  background-color: rgba(255, 255, 255, 0.7);
-                  border-radius: 50%;
-                  z-index: -1;
-                  opacity: 0;
-                  transform: scale(1);
-                  transition: all 0.5s ease-out;
-                }
-                .absolute:hover::before {
-                  opacity: 1;
-                  transform: scale(1.5);
-                  animation: pulse 1.5s infinite;
-                }
-                .absolute:not(:hover)::before {
-                  animation: none;
-                  opacity: 0;
-                }
-                @keyframes pulse {
-                  0% {
-                    transform: scale(1);
-                    opacity: 0.7;
-                  }
-                  50% {
-                    opacity: 0.4;
-                  }
-                  100% {
-                    transform: scale(1.8);
-                    opacity: 0;
-                  }
-                }
-                .bg-orange-500::before {
-                  background-color: rgba(233, 84, 32, 0.4);
-                }
-              `}</style>
-            </div>
-            
-            <div>
-              <KitchenAccordion />
-            </div>
-          </div>
-        </motion.div>
-      </section>
-      
-      <section className="bg-muted section-padding">
-        <div className="container">
+    <main className="min-h-screen bg-white font-sans" style={{ fontFamily: 'Montserrat, Arial Black, Arial, Helvetica, sans-serif' }}>
+      <section className="py-32 bg-white">
+        <div className="container max-w-[1400px] mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="mb-6">L'expérience Les Étoiles du Rocher</h2>
-            <p className="text-lg">
-              Séjourner aux Étoiles du Rocher, c'est vivre une expérience de luxe inégalée, où chaque détail a été pensé pour votre confort et votre plaisir. Notre équipe est à votre disposition pour rendre votre séjour inoubliable, qu'il s'agisse d'organiser des services personnalisés, des excursions ou des événements exceptionnels.
-            </p>
+            <SectionTitle
+              title="Découvrez nos espaces"
+              subtitle="Chaque espace des Étoiles du Rocher a été conçu pour vous offrir confort, élégance et moments inoubliables."
+              centered
+            />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+              {roomImages.map((room, index) => (
+                <motion.div 
+                  key={index}
+                  className="group"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="relative h-[400px] rounded-lg overflow-hidden mb-6">
+                    <Image 
+                      src={room.src} 
+                      alt={room.alt}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <h3 className="text-2xl font-semibold mb-3">{room.title}</h3>
+                  <p className="text-muted-foreground">{room.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
+          {/* Bouton centré vers la galerie */}
+          <div className="flex justify-center mt-16">
+            <Button
+              asChild
+              size="lg"
+              className="relative bg-transparent border-2 border-black text-black overflow-hidden group hover:text-white transition-all duration-500 text-lg px-12 py-6 rounded-none"
+            >
+              <Link href="/galerie">
+                <span className="relative z-10">Accéder à la galerie</span>
+                <div className="absolute inset-0 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Nouvelle section avec photo à droite et texte à gauche */}
+      <section className="py-24 bg-neutral-50">
+        <div className="container max-w-[1400px] mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Colonne gauche : texte */}
+            <div>
+              <h2 className="text-3xl font-bold mb-6 font-sans text-black" style={{ fontFamily: 'Roboto, Arial, Helvetica, sans-serif' }}>DES LIEUX DE VIE SUR-MESURE.</h2>
+              <p className="text-lg mb-10 font-sans text-black" style={{ fontFamily: 'Roboto, Arial, Helvetica, sans-serif' }}>
+                Découvrez un lieu de vie idéal pour recevoir ou passer des moments en famille.<br /><br />
+                Les villas ont été méticuleusement pensées pour donner vie à des espaces intelligents, fonctionnels et harmonieux.<br /><br />
+                Les intérieurs des villas sont conçus pour préserver votre intimité tout en offrant de belles ouvertures sur les espaces extérieurs.<br /><br />
+                Chacune des 5 suites propose des espaces de vie intérieurs et extérieurs spacieux et parfaitement agencés.
+              </p>
+            </div>
+            {/* Colonne droite : image */}
+            <div className="flex justify-center">
+              <div className="relative w-full max-w-md h-[400px] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/images/villa/IMG_5967.JPEG"
+                  alt="Vue de la villa"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4 colonnes : Situation, Disponibilité, Équipements, Sécurité */}
+      <section className="py-16 bg-white">
+        <div className="container max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
+            {/* Situation */}
+            <div>
+              <div className="flex justify-center mb-4">
+                <svg width="48" height="48" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-black" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8l2 4h-4l2 4"/></svg>
+              </div>
+              <h3 className="text-xl font-extrabold uppercase mb-3 font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>Situation</h3>
+              <p className="text-base text-black font-sans text-justify" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>
+                Idéalement située à Roquebrune Cap Martin, à quelques minutes de Monaco et des plus belles plages de la Côte d'Azur.
+              </p>
+            </div>
+            {/* Disponibilité */}
+            <div>
+              <div className="flex justify-center mb-4">
+                <svg width="48" height="48" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-black" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <h3 className="text-xl font-extrabold uppercase mb-3 font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>Disponibilité</h3>
+              <p className="text-base text-black font-sans text-justify" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>
+                La villa est disponible à la location toute l'année, avec une durée minimale de séjour d'une semaine.
+              </p>
+            </div>
+            {/* Équipements */}
+            <div>
+              <div className="flex justify-center mb-4">
+                <svg width="48" height="48" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-black" viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5 12 2"/></svg>
+              </div>
+              <h3 className="text-xl font-extrabold uppercase mb-3 font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>Équipements</h3>
+              <p className="text-base text-black font-sans text-justify" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>
+                Des équipements haut de gamme et des services personnalisés pour un séjour d'exception.
+              </p>
+            </div>
+            {/* Sécurité */}
+            <div>
+              <div className="flex justify-center mb-4">
+                <svg width="48" height="48" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-black" viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 5-3.5 9.7-7 10-3.5-0.3-7-5-7-10V6l7-4z"/><path d="M9 12l2 2 4-4"/></svg>
+              </div>
+              <h3 className="text-xl font-extrabold uppercase mb-3 font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>Sécurité</h3>
+              <p className="text-base text-black font-sans text-justify" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>
+                Propriété entièrement sécurisée avec système d'alarme, vidéosurveillance et service de sécurité sur demande.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section caractéristiques : Suites, SDB, Garages, Piscine */}
+      <section className="py-12 bg-white">
+        <div className="container max-w-3xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 bg-white rounded-lg">
+            {/* Suites */}
+            <div className="flex flex-col items-center py-6">
+              <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2.2" className="mb-2 text-black" viewBox="0 0 24 24"><rect x="3" y="10" width="18" height="8" rx="2"/><path d="M7 10V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3"/></svg>
+              <div className="text-base font-extrabold uppercase text-black font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>Suites</div>
+              <div className="text-xl font-bold text-black font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>5</div>
+            </div>
+            {/* SDB */}
+            <div className="flex flex-col items-center py-6">
+              <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2.2" className="mb-2 text-black" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="8" rx="2"/><path d="M8 10V6a4 4 0 0 1 8 0v4"/></svg>
+              <div className="text-base font-extrabold uppercase text-black font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>SDB</div>
+              <div className="text-xl font-bold text-black font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>6</div>
+            </div>
+            {/* Garages */}
+            <div className="flex flex-col items-center py-6">
+              <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2.2" className="mb-2 text-black" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="10" rx="2"/><path d="M7 18V8"/><path d="M17 18V8"/><path d="M7 13h10"/></svg>
+              <div className="text-base font-extrabold uppercase text-black font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>Garages</div>
+              <div className="text-xl font-bold text-black font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>2</div>
+            </div>
+            {/* Piscine */}
+            <div className="flex flex-col items-center py-6">
+              <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2.2" className="mb-2 text-black" viewBox="0 0 24 24"><rect x="3" y="10" width="18" height="7" rx="2"/><path d="M7 10V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3"/><path d="M6 17c1.5-1 4.5-1 6 0s4.5 1 6 0"/></svg>
+              <div className="text-base font-extrabold uppercase text-black font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>Piscine</div>
+              <div className="text-xl font-bold text-black font-sans" style={{ fontFamily: 'Montserrat, Arial, Helvetica, Inter, sans-serif' }}>1</div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

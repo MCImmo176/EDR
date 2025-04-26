@@ -1,0 +1,75 @@
+{
+  "title": "Les Étoiles du Rocher",
+  "description": "Une villa d'exception nichée au cœur de la Côte d'Azur, offrant un cadre idyllique pour des vacances de rêve.",
+  "features": {
+    "area": "Surface",
+    "bedrooms": "Chambres",
+    "bathrooms": "Salles de bain",
+    "pool": "Piscine",
+    "poolType": "Infinity avec vue panoramique",
+    "view": "Vue",
+    "viewType": "Panoramique sur la Méditerranée",
+    "beach": "Plage",
+    "beachType": "À 5 minutes à pied"
+  },
+  "rooms": {
+    "salon": {
+      "title": "Salon Principal",
+      "description": "Un élégant salon avec portes vitrées offrant une vue incomparable sur la Méditerranée. Cet espace lumineux et spacieux est le cœur de la villa, parfait pour des moments de détente ou des réceptions.",
+      "alt": "Salon principal de la villa avec vue sur la mer"
+    },
+    "pool": {
+      "title": "Piscine à Débordement",
+      "description": "Une magnifique piscine à débordement avec vue panoramique sur la Méditerranée. L'endroit idéal pour se rafraîchir tout en profitant du paysage exceptionnel.",
+      "alt": "Piscine à débordement avec vue sur la mer"
+    },
+    "kitchen": {
+      "title": "Espace Cuisine Intégré",
+      "description": "Une cuisine moderne et fonctionnelle intégrée au salon principal. Équipée d'appareils haut de gamme, elle offre tout le confort nécessaire pour préparer des repas tout en profitant de la vue spectaculaire et de la convivialité du salon.",
+      "alt": "Cuisine intégrée au salon principal"
+    },
+    "suite": {
+      "title": "Suite d'Exception",
+      "description": "La villa compte 5 suites luxueuses, chacune avec sa propre salle de bain privative. Des espaces de vie raffinés offrant intimité et confort, avec des vues imprenables sur la Méditerranée.",
+      "alt": "Suite de la villa avec salle de bain privative"
+    }
+  },
+  "kitchen": {
+    "images": {
+      "alt": "Vue d'ensemble de la cuisine"
+    },
+    "noPoints": "Aucun point d'intérêt disponible",
+    "cabinets": {
+      "title": "Rangements",
+      "description": "Des rangements optimisés pour un maximum de fonctionnalité"
+    },
+    "counter": {
+      "title": "Plan de travail",
+      "description": "Un plan de travail en marbre pour une cuisine élégante"
+    },
+    "sink": {
+      "title": "Évier",
+      "description": "Un évier double vasque pour plus de praticité"
+    },
+    "dishwasher": {
+      "title": "Lave-vaisselle",
+      "description": "Un lave-vaisselle intégré silencieux"
+    },
+    "fridge": {
+      "title": "Réfrigérateur",
+      "description": "Un réfrigérateur américain avec distributeur de glace"
+    },
+    "oven": {
+      "title": "Four",
+      "description": "Un four vapeur multifonction"
+    },
+    "stove": {
+      "title": "Plaque de cuisson",
+      "description": "Une plaque à induction dernière génération"
+    },
+    "island": {
+      "title": "Îlot central",
+      "description": "Un îlot central avec espace repas"
+    }
+  }
+} 
