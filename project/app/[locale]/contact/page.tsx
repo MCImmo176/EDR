@@ -7,6 +7,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { useTranslations } from "next-intl";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
+import { countryCodes } from '@/data/country-codes';
+import { ComboboxCountry } from '@/components/ui/combobox-country';
 
 import { SectionTitle } from "@/components/ui/section-title";
 import { Map } from "@/components/ui/map";
@@ -23,11 +26,23 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must contain at least 2 characters" }),
-  email: z.string().email({ message: "Please enter a valid email address" }),
-  phone: z.string().min(5, { message: "Please enter a valid phone number" }),
-  message: z.string().min(10, { message: "Message must contain at least 10 characters" }),
+  name: z.string().min(2, { message: "Le nom doit contenir au moins 2 caractères" }),
+  email: z.string().email({ message: "Veuillez entrer une adresse e-mail valide" }),
+  countryCode: z.string().min(2, { message: "Veuillez sélectionner un indicatif" }),
+  phone: z.string().min(5, { message: "Veuillez entrer un numéro de téléphone valide" }),
+  message: z.string().min(10, { message: "Le message doit contenir au moins 10 caractères" }),
 });
+
+// Fonction utilitaire pour générer l'emoji drapeau à partir du code ISO (2 lettres uniquement)
+function getFlagEmoji(countryCode: string) {
+  if (!countryCode || countryCode.length !== 2) return '';
+  return String.fromCodePoint(
+    ...countryCode
+      .toUpperCase()
+      .split('')
+      .map(char => 127397 + char.charCodeAt(0))
+  );
+}
 
 export default function ContactPage() {
   const t = useTranslations('contact');
@@ -38,6 +53,7 @@ export default function ContactPage() {
     defaultValues: {
       name: "",
       email: "",
+      countryCode: countryCodes.find(c => c.code === 'FR')?.dial_code || '',
       phone: "",
       message: "",
     },
@@ -145,12 +161,26 @@ export default function ContactPage() {
                             </FormItem>
                           )}
                         />
-                        
+                        <FormField
+                          control={form.control}
+                          name="countryCode"
+                          render={({ field }) => (
+                            <FormItem className="w-32">
+                              <ComboboxCountry
+                                value={field.value}
+                                onChange={field.onChange}
+                                label="Indicatif"
+                                countryCodes={countryCodes}
+                              />
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
                         <FormField
                           control={form.control}
                           name="phone"
                           render={({ field }) => (
-                            <FormItem>
+                            <FormItem className="flex-1">
                               <FormLabel>{t('form.phone')}</FormLabel>
                               <FormControl>
                                 <Input placeholder={t('form.phone')} {...field} />

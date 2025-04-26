@@ -13,50 +13,249 @@ export default function GaleriePage() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   
   const photos = [
+    // Chambres
     {
-      src: "https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg",
-      alt: tGallery('images.exterior'),
-      category: tGallery('categories.exterior')
-    },
-    {
-      src: "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg",
-      alt: tGallery('images.living'),
-      category: tGallery('categories.interior')
-    },
-    {
-      src: "https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg",
-      alt: tGallery('images.bedroom'),
+      src: "/images/gallery/chambres/chamber verte.png",
+      alt: "Chambre verte",
       category: tGallery('categories.bedrooms')
     },
     {
-      src: "https://images.pexels.com/photos/2631746/pexels-photo-2631746.jpeg",
-      alt: tGallery('images.terrace'),
+      src: "/images/gallery/chambres/chambre verte 2.png",
+      alt: "Chambre verte",
+      category: tGallery('categories.bedrooms')
+    },
+    {
+      src: "/images/gallery/chambres/chambrerose.png",
+      alt: "Chambre rose",
+      category: tGallery('categories.bedrooms')
+    },
+    {
+      src: "/images/gallery/chambres/chambre noire 2è.png",
+      alt: "Chambre noire",
+      category: tGallery('categories.bedrooms')
+    },
+    {
+      src: "/images/gallery/chambres/chambre noire1.png",
+      alt: "Chambre noire",
+      category: tGallery('categories.bedrooms')
+    },
+    {
+      src: "/images/gallery/chambres/chambre.jpg",
+      alt: "Chambre",
+      category: tGallery('categories.bedrooms')
+    },
+    {
+      src: "/images/gallery/chambres/chambre noire 2.avif",
+      alt: "Chambre noire",
+      category: tGallery('categories.bedrooms')
+    },
+    {
+      src: "/images/gallery/chambres/chambre noire.avif",
+      alt: "Chambre noire",
+      category: tGallery('categories.bedrooms')
+    },
+    {
+      src: "/images/gallery/chambres/chambre Rose.avif",
+      alt: "Chambre rose",
+      category: tGallery('categories.bedrooms')
+    },
+    {
+      src: "/images/gallery/chambres/chambre verte2.avif",
+      alt: "Chambre verte",
+      category: tGallery('categories.bedrooms')
+    },
+    {
+      src: "/images/gallery/chambres/chambre.avif",
+      alt: "Chambre",
+      category: tGallery('categories.bedrooms')
+    },
+    // Vues
+    {
+      src: "/images/gallery/vues/Coucher de soleil 3.png",
+      alt: "Coucher de soleil",
+      category: tGallery('categories.views')
+    },
+    {
+      src: "/images/gallery/vues/Coucher de soleil 2.png",
+      alt: "Coucher de soleil",
+      category: tGallery('categories.views')
+    },
+    {
+      src: "/images/gallery/vues/Coucher de soleil.png",
+      alt: "Coucher de soleil",
+      category: tGallery('categories.views')
+    },
+    {
+      src: "/images/gallery/vues/IMG_2349.JPEG",
+      alt: "Vue panoramique",
+      category: tGallery('categories.views')
+    },
+    {
+      src: "/images/gallery/vues/IMG_2363.JPEG",
+      alt: "Vue panoramique",
+      category: tGallery('categories.views')
+    },
+    {
+      src: "/images/gallery/vues/IMG_2350.JPEG",
+      alt: "Vue panoramique",
+      category: tGallery('categories.views')
+    },
+    // Extérieur
+    {
+      src: "/images/gallery/exterieur/IMG_5953.JPEG",
+      alt: "Vue extérieure de la villa",
       category: tGallery('categories.exterior')
     },
     {
-      src: "https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg",
-      alt: tGallery('images.kitchen'),
+      src: "/images/gallery/exterieur/IMG_5960.JPEG",
+      alt: "Vue extérieure de la villa",
+      category: tGallery('categories.exterior')
+    },
+    {
+      src: "/images/gallery/exterieur/IMG_2280.JPEG",
+      alt: "Vue extérieure de la villa",
+      category: tGallery('categories.exterior')
+    },
+    {
+      src: "/images/gallery/exterieur/IMG_2300.JPEG",
+      alt: "Vue extérieure de la villa",
+      category: tGallery('categories.exterior')
+    },
+    {
+      src: "/images/gallery/exterieur/IMG_2304.JPEG",
+      alt: "Vue extérieure de la villa",
+      category: tGallery('categories.exterior')
+    },
+    {
+      src: "/images/gallery/exterieur/IMG_2305.JPEG",
+      alt: "Vue extérieure de la villa",
+      category: tGallery('categories.exterior')
+    },
+    {
+      src: "/images/gallery/exterieur/IMG_2314.JPEG",
+      alt: "Vue extérieure de la villa",
+      category: tGallery('categories.exterior')
+    },
+    {
+      src: "/images/gallery/exterieur/IMG_2347.JPEG",
+      alt: "Vue extérieure de la villa",
+      category: tGallery('categories.exterior')
+    },
+    {
+      src: "/images/gallery/exterieur/IMG_2348.JPEG",
+      alt: "Piscine",
+      category: tGallery('categories.exterior')
+    },
+    {
+      src: "/images/gallery/exterieur/IMG_2364.JPEG",
+      alt: "Vue extérieure de la villa",
+      category: tGallery('categories.exterior')
+    },
+    {
+      src: "/images/gallery/exterieur/IMG_2398.JPEG",
+      alt: "Vue extérieure de la villa",
+      category: tGallery('categories.exterior')
+    },
+    {
+      src: "/images/gallery/exterieur/IMG_2406.JPEG",
+      alt: "Vue extérieure de la villa",
+      category: tGallery('categories.exterior')
+    },
+    // Intérieur
+    {
+      src: "/images/gallery/interieur/IMG_2290.JPEG",
+      alt: "Intérieur de la villa",
       category: tGallery('categories.interior')
     },
     {
-      src: "https://images.pexels.com/photos/2119714/pexels-photo-2119714.jpeg",
-      alt: tGallery('images.seaView'),
-      category: tGallery('categories.views')
-    },
-    {
-      src: "https://images.pexels.com/photos/4946956/pexels-photo-4946956.jpeg",
-      alt: tGallery('images.dining'),
+      src: "/images/gallery/interieur/sdb5.avif",
+      alt: "Salle de bain",
       category: tGallery('categories.interior')
     },
     {
-      src: "https://images.pexels.com/photos/2707756/pexels-photo-2707756.jpeg",
-      alt: tGallery('images.aerial'),
-      category: tGallery('categories.views')
+      src: "/images/gallery/interieur/Salon.png",
+      alt: "Salon",
+      category: tGallery('categories.interior')
     },
     {
-      src: "https://images.pexels.com/photos/90319/pexels-photo-90319.jpeg",
-      alt: tGallery('images.master'),
-      category: tGallery('categories.bedrooms')
+      src: "/images/gallery/interieur/IMG_5959.JPEG",
+      alt: "Intérieur de la villa",
+      category: tGallery('categories.interior')
+    },
+    {
+      src: "/images/gallery/interieur/IMG_5967.JPEG",
+      alt: "Intérieur de la villa",
+      category: tGallery('categories.interior')
+    },
+    {
+      src: "/images/gallery/interieur/IMG_2286.JPEG",
+      alt: "Intérieur de la villa",
+      category: tGallery('categories.interior')
+    },
+    {
+      src: "/images/gallery/interieur/IMG_2287.JPEG",
+      alt: "Intérieur de la villa",
+      category: tGallery('categories.interior')
+    },
+    {
+      src: "/images/gallery/interieur/IMG_2288.JPEG",
+      alt: "Intérieur de la villa",
+      category: tGallery('categories.interior')
+    },
+    {
+      src: "/images/gallery/interieur/IMG_2294.JPEG",
+      alt: "Intérieur de la villa",
+      category: tGallery('categories.interior')
+    },
+    {
+      src: "/images/gallery/interieur/IMG_2298.JPEG",
+      alt: "Intérieur de la villa",
+      category: tGallery('categories.interior')
+    },
+    {
+      src: "/images/gallery/interieur/IMG_2318.JPEG",
+      alt: "Intérieur de la villa",
+      category: tGallery('categories.interior')
+    },
+    {
+      src: "/images/gallery/interieur/IMG_2328.JPEG",
+      alt: "Intérieur de la villa",
+      category: tGallery('categories.interior')
+    },
+    {
+      src: "/images/gallery/interieur/IMG_2337.JPEG",
+      alt: "Intérieur de la villa",
+      category: tGallery('categories.interior')
+    },
+    {
+      src: "/images/gallery/interieur/IMG_2338.JPEG",
+      alt: "Intérieur de la villa",
+      category: tGallery('categories.interior')
+    },
+    {
+      src: "/images/gallery/interieur/IMG_2339.JPEG",
+      alt: "Intérieur de la villa",
+      category: tGallery('categories.interior')
+    },
+    {
+      src: "/images/gallery/interieur/IMG_2360.JPEG",
+      alt: "Intérieur de la villa",
+      category: tGallery('categories.interior')
+    },
+    {
+      src: "/images/gallery/interieur/IMG_2361.JPEG",
+      alt: "Intérieur de la villa",
+      category: tGallery('categories.interior')
+    },
+    {
+      src: "/images/gallery/interieur/IMG_2392.JPEG",
+      alt: "Intérieur de la villa",
+      category: tGallery('categories.interior')
+    },
+    {
+      src: "/images/gallery/interieur/IMG_2409.JPEG",
+      alt: "Intérieur de la villa",
+      category: tGallery('categories.interior')
     }
   ];
 
