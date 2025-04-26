@@ -19,22 +19,22 @@ export default function TermsPage() {
           <h2 className="text-2xl font-semibold mb-4">{t('section2.title')}</h2>
           <p className="text-gray-600">{t('section2.content')}</p>
         </section>
-
+        
         <section>
           <h2 className="text-2xl font-semibold mb-4">{t('section3.title')}</h2>
           <p className="text-gray-600">{t('section3.content')}</p>
         </section>
-
+        
         <section>
           <h2 className="text-2xl font-semibold mb-4">{t('section4.title')}</h2>
           <p className="text-gray-600">{t('section4.content')}</p>
         </section>
-
+        
         <section>
           <h2 className="text-2xl font-semibold mb-4">{t('section5.title')}</h2>
           <p className="text-gray-600">{t('section5.content')}</p>
         </section>
-
+        
         <section>
           <h2 className="text-2xl font-semibold mb-4">{t('section6.title')}</h2>
           <p className="text-gray-600">{t('section6.content')}</p>

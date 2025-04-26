@@ -23,17 +23,17 @@ export function Footer() {
             <div className="flex flex-col md:flex-row gap-6">
               <Link href="/terms" className="hover:text-primary transition-colors">
                 {t('footer.terms')}
-              </Link>
+            </Link>
               <Link href="/sales-terms" className="hover:text-primary transition-colors">
                 {t('footer.sales')}
-              </Link>
+            </Link>
             </div>
           </div>
 
           <div className="text-center order-last md:order-2">
             <span>© 2025 Les Étoiles du Rocher</span>
           </div>
-
+          
           <div className="flex gap-4 items-center order-2 md:order-last">
             {flags.map((flag) => (
               <Link 

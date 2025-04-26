@@ -149,22 +149,27 @@ export default function Home() {
             </motion.div>
           </motion.div>
         </div>
-        
-        <motion.div 
-          className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-20"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2, duration: 1 }}
-        >
-          <div className="mouse-scroll-indicator">
-            <div className="mouse">
-              <div className="wheel"></div>
+      </section>
+
+      {/* Section slogan compact à déplacer */}
+      <section className="py-1 md:py-2 bg-white">
+        <div className="container max-w-[1400px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 items-center">
+            <div>
+              <h2 className="text-5xl md:text-6xl font-extrabold text-black mb-1" style={{ fontFamily: 'inherit' }}>
+                VIVEZ L'EXCEPTION.
+              </h2>
+            </div>
+            <div>
+              <p className="text-2xl md:text-3xl font-light text-black leading-relaxed mb-1">
+                Profitez de Monaco, sans ses contraintes.
+              </p>
             </div>
           </div>
-        </motion.div>
+        </div>
       </section>
 
-      <section className="py-32 md:py-40">
+      <section className="py-4 md:py-8">
         <div className="container max-w-[1400px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -172,51 +177,30 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true, margin: "-100px" }}
           >
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-              <div className="md:col-span-1">
-                <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
-                  <Image 
-                    src="/images/excellence/interieur/reception.jpeg"
-                    alt={t('home.excellence.interior.reception')}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-12 items-stretch min-h-[600px] md:min-h-[700px]">
+              <div className="md:col-span-1 h-[350px] md:h-auto relative">
+                <Image 
+                  src="/images/excellence/interieur/reception.jpeg"
+                  alt={t('home.excellence.interior.reception')}
+                  fill
+                  className="object-cover w-full h-full rounded-none"
+                  priority
+                />
               </div>
-              <div className="md:col-span-2">
-                <h2 className="text-4xl md:text-5xl font-display mb-6">{t('home.excellence.title')}</h2>
-                <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                  {t('home.description')}
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="py-32 md:py-40 bg-muted">
-        <div className="container max-w-[1400px] mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true, margin: "-100px" }}
-          >
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-              <div className="md:col-span-2">
-                <h2 className="text-4xl md:text-5xl font-display mb-6">{t('home.service.title')}</h2>
-                <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                  {t('home.service.description')}
-                </p>
-              </div>
-              <div className="md:col-span-1">
-                <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
-                  <Image 
-                    src="/images/excellence/interieur/exterieur.jpeg"
-                    alt={t('home.excellence.interior.exterior')}
-                    fill
-                    className="object-cover"
-                  />
+              <div className="md:col-span-1 flex items-center">
+                <div>
+                  <p className="text-xl leading-relaxed mb-8 text-black text-justify" style={{ fontFamily: 'Roboto, Arial, Helvetica, sans-serif' }}>
+                    <span className="font-bold italic" style={{ fontSize: '1.3em' }}>« Il y a des lieux où souffle l'esprit. »</span><br />
+                    <span className="block font-medium text-right mb-4">— Maurice Barrès</span>
+                    <span className="font-light">
+                      Certains lieux possèdent une âme rare, une énergie silencieuse qui inspire et apaise. Notre domaine en est l'illustration parfaite : notre domaine vous accueille à seulement <span className="font-bold">5 minutes de l'effervescence monégasque</span>. Ici, la <span className="font-bold">tranquillité absolue</span> règne, tout en offrant un accès immédiat aux plus belles plages, aux boutiques de prestige et aux événements de la Côte d'Azur.<br /><br />
+                      Profitez de <span className="font-bold">350 m²</span> répartis sur deux étages, entièrement dédiés à votre confort. <span className="font-bold">Cinq suites privatives</span> avec une literie d'exception, toutes pensées pour conjuguer raffinement et intimité, vous promettent des nuits paisibles et un bien-être total.<br />
+                      Une <span className="font-bold">dépendance discrète</span>, blottie dans la végétation méditerranéenne, offre un espace supplémentaire pour accueillir famille ou amis en toute indépendance.<br /><br />
+                      Laissez-vous séduire par notre <span className="font-bold">piscine surplombant la mer</span>, un véritable joyau où le bleu du ciel se confond avec celui de l'horizon.<br />
+                      Le <span className="font-bold">rooftop</span>, spacieux et aménagé, vous invite à contempler le panorama exceptionnel sur Monaco et la Méditerranée. C'est également l'endroit parfait pour organiser des <span className="font-bold">dîners inoubliables</span> ou des <span className="font-bold">événements privés sous les étoiles</span>.<br /><br />
+                      <span className="italic">Entre intimité, élégance et art de vivre, notre domaine est l'adresse idéale pour une escapade unique sur la Riviera.</span>
+                    </span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -224,31 +208,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-32 md:py-40">
-        <div className="container max-w-[1400px] mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true, margin: "-100px" }}
-          >
-            <div className="flex justify-center">
-              <div className="w-2/3">
-                <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
-                  <Image 
-                    src="/images/excellence/interieur/nuit.png"
-                    alt={t('home.excellence.interior.night')}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </motion.div>
+      {/* Ajout de la photo salon.png en full screen avant la section réservation */}
+      <section className="relative w-full h-screen overflow-hidden">
+        <Image 
+          src="/images/excellence/interieur/salon.png"
+          alt="Salon luxueux"
+          fill
+          className="object-cover w-full h-full"
+          priority
+        />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <span className="w-full text-center text-white font-extrabold text-4xl md:text-6xl lg:text-7xl drop-shadow-lg uppercase tracking-tight" style={{letterSpacing: '-0.04em'}}>
+            Les Étoiles du Rocher
+          </span>
         </div>
       </section>
 
-      <section className="py-32 md:py-40">
+      <section className="py-12 md:py-16 bg-muted">
         <div className="container max-w-[1400px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -259,7 +235,7 @@ export default function Home() {
           >
             <div className="overflow-hidden mb-12">
               <motion.h2 
-                className="text-5xl md:text-6xl lg:text-7xl font-display"
+                className="text-5xl md:text-6xl lg:text-7xl font-display leading-[1.1] mb-8"
                 variants={textReveal}
                 initial="hidden"
                 whileInView="visible"
