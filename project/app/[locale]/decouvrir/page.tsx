@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Calendar, MapPin, Clock, ArrowRight, Compass, Star } from "lucide-react";
+import { Calendar, MapPin, Clock, ArrowRight, Compass, Star, Landmark, Mountain, Building, Sparkles } from "lucide-react";
 import { SectionTitle } from "@/components/ui/section-title";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
@@ -15,7 +15,7 @@ export default function DecouvrirPage() {
     {
       title: "Grand Prix de Monaco 2025",
       description: "Vivez la course mythique dans les rues de la Principauté. Une expérience unique mêlant adrénaline, luxe et prestige.",
-      image: "https://images.pexels.com/photos/12718068/pexels-photo-12718068.jpeg",
+      image: "/images/discover/F1Monaco.jpg",
       date: "22-25 Mai 2025",
       category: "Événement Sportif",
       link: "https://www.formula1.com/monaco"
@@ -23,15 +23,15 @@ export default function DecouvrirPage() {
     {
       title: "Casino de Monte-Carlo",
       description: "Chef-d'œuvre architectural Belle Époque et temple du jeu de prestige, le Casino de Monte-Carlo est une expérience incontournable.",
-      image: "https://images.pexels.com/photos/5087174/pexels-photo-5087174.jpeg",
-      category: "Culture & Histoire",
+      image: "/images/discover/Casio.jpg",
+      category: "Jeux de hasard",
       schedule: "14h - 4h",
       link: "https://www.montecarlosbm.com"
     },
     {
       title: "Musée Océanographique",
       description: "Découvrez les merveilles des océans dans ce musée centenaire surplombant la Méditerranée.",
-      image: "https://images.pexels.com/photos/2122926/pexels-photo-2122926.jpeg",
+      image: "/images/discover/musee.jpg",
       category: "Culture",
       schedule: "10h - 18h",
       link: "https://www.oceano.mc"
@@ -39,7 +39,7 @@ export default function DecouvrirPage() {
     {
       title: "Rallye Monte-Carlo Historique",
       description: "Un voyage dans le temps avec les plus belles voitures de collection sur les routes légendaires de Monaco.",
-      image: "https://images.pexels.com/photos/12165038/pexels-photo-12165038.jpeg",
+      image: "/images/discover/rallyhistorique.jpg",
       date: "31 Jan - 5 Fév 2025",
       category: "Sport Automobile",
       link: "https://acm.mc"
@@ -50,16 +50,26 @@ export default function DecouvrirPage() {
     {
       title: "Sentier des Douaniers",
       description: "Découvrez la partie cachée du Cap Martin, entre la Pointe du Cap et la Villa E-1027. Un parcours sauvage ponctué de criques secrètes idéales pour la baignade.",
-      image: "https://images.pexels.com/photos/4319752/pexels-photo-4319752.jpeg",
+      image: "/images/discover/sentierdouaniers.jpg",
       category: "Randonnée",
       difficulty: "Modérée",
       duration: "2-3h",
       bestTime: "Lever du soleil"
     },
     {
+      title: "Visiter le village d'Èze",
+      description: "Parcourez les ruelles pittoresques d'Èze, village médiéval perché avec une vue imprenable sur la Méditerranée.",
+      image: "/images/discover/eze.jpg",
+      category: "Découverte",
+      comments: [
+        { icon: Landmark, text: "Village médiéval" },
+        { icon: Mountain, text: "Vue panoramique sur la Méditerranée" }
+      ]
+    },
+    {
       title: "Vallon de la Petite Afrique",
-      description: "Une jungle méditerranéenne secrète nichée entre les falaises de Beausoleil. Sentiers ombragés et vue imprenable sur la mer, loin des circuits touristiques.",
-      image: "https://images.pexels.com/photos/4666751/pexels-photo-4666751.jpeg",
+      description: "Une jungle méditerranéenne secrète nichée à Beaulieu-sur-Mer. Sentiers ombragés et vue imprenable sur la mer, loin des circuits touristiques.",
+      image: "/images/discover/beaulieu.jpg",
       category: "Nature",
       difficulty: "Facile",
       duration: "1h",
@@ -68,7 +78,7 @@ export default function DecouvrirPage() {
     {
       title: "Rocher du Corbusier",
       description: "Un lieu de méditation privilégié surplombant la mer, accessible par un sentier discret. Un spot paisible connu des seuls initiés.",
-      image: "https://images.pexels.com/photos/1751482/pexels-photo-1751482.jpeg",
+      image: "/images/discover/sentierlecorbusier.jpg",
       category: "Point de vue",
       difficulty: "Facile",
       duration: "30min",
@@ -77,23 +87,20 @@ export default function DecouvrirPage() {
     {
       title: "Salle Garnier",
       description: "L'opéra de Monaco, un joyau architectural caché dans le Casino. Une salle intimiste aux dorures somptueuses, souvent méconnue des visiteurs.",
-      image: "https://images.pexels.com/photos/109669/pexels-photo-109669.jpeg",
+      image: "/images/discover/theatre.jpg",
       category: "Culture",
-      schedule: "Visites guidées sur réservation"
+      schedule: "Visites guidées sur réservation",
+      comments: [
+        { icon: Building, text: "Opéra Belle Époque" },
+        { icon: Sparkles, text: "Décor somptueux" }
+      ]
     },
     {
       title: "Plage du Golfe Bleu",
       description: "Une plage préservée entre Monaco et Cap-Martin, idéale pour échapper à la foule. Un spot parfait pour les couchers de soleil.",
-      image: "https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg",
+      image: "/images/discover/plageroquebrune.jpg",
       category: "Plage",
       bestTime: "Coucher du soleil"
-    },
-    {
-      title: "Crique de Cap Martin",
-      description: "Entre la Plage du Buse et la Villa E-1027, découvrez des criques sauvages accessibles par des sentiers discrets. Le secret le mieux gardé de la côte.",
-      image: "https://images.pexels.com/photos/1559699/pexels-photo-1559699.jpeg",
-      category: "Baignade",
-      bestTime: "Matin tôt"
     }
   ];
 
@@ -101,8 +108,8 @@ export default function DecouvrirPage() {
     <>
       <section className="relative h-[50vh] overflow-hidden">
         <Image
-          src="https://images.pexels.com/photos/4825701/pexels-photo-4825701.jpeg"
-          alt="Monaco vue panoramique"
+          src="https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg"
+          alt="Plage de la Côte d'Azur"
           fill
           className="object-cover"
           priority
@@ -116,10 +123,10 @@ export default function DecouvrirPage() {
             className="text-center text-white"
           >
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-display mb-4">
-              Découvrez Monaco & Roquebrune
+              Merveilles & escapades 
             </h1>
             <p className="text-xl md:text-2xl max-w-2xl mx-auto">
-              Entre événements prestigieux et secrets bien gardés
+              Plages, panoramas et secrets à explorer autour de Monaco
             </p>
           </motion.div>
         </div>
@@ -175,10 +182,15 @@ export default function DecouvrirPage() {
                       {event.schedule}
                     </div>
                   )}
-                  <Button asChild variant="default" className="mt-2">
+                  <Button
+                    asChild
+                    size="lg"
+                    className="relative bg-transparent border-2 border-black text-black overflow-hidden group hover:text-white transition-all duration-500 text-lg px-12 py-6 rounded-none mt-2"
+                  >
                     <Link href={event.link} target="_blank">
                       En savoir plus
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      <ArrowRight className="ml-2 h-4 w-4 relative z-10" />
+                      <div className="absolute inset-0 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                     </Link>
                   </Button>
                 </div>
@@ -250,6 +262,12 @@ export default function DecouvrirPage() {
                         <span>Meilleur moment : {secret.bestTime}</span>
                       </div>
                     )}
+                    {secret.comments && secret.comments.map((comment, i) => (
+                      <div key={i} className="flex items-center text-sm">
+                        <comment.icon className="mr-2 h-5 w-5 text-black" />
+                        <span>{comment.text}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </motion.div>

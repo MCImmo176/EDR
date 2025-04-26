@@ -160,8 +160,7 @@ export default function ContactPage() {
                         control={form.control}
                         name="countryCode"
                         render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Indicatif</FormLabel>
+                          <FormItem className="flex-1">
                             <FormControl>
                               <ComboboxCountry
                                 value={field.value}
@@ -207,7 +206,7 @@ export default function ContactPage() {
                       )}
                     />
                     
-                    <Button type="submit" className="w-full text-lg py-6">
+                    <Button type="submit" className="relative bg-transparent border-2 border-black text-black overflow-hidden group hover:text-white transition-all duration-500 text-lg px-12 py-6 rounded-none w-full">
                       Envoyer le message
                       <Send className="ml-2 h-4 w-4" />
                     </Button>

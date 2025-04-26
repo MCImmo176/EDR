@@ -53,7 +53,7 @@ export const ComboboxCountry: React.FC<ComboboxCountryProps> = ({ value, onChang
   );
 
   return (
-    <div className="relative w-full" style={{ maxWidth: 260, minWidth: 220 }}>
+    <div className="relative w-full">
       {label && <label className="block mb-1 text-sm font-medium">{label}</label>}
       <button
         type="button"

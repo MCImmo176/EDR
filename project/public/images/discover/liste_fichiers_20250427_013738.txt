@@ -1,0 +1,14 @@
+Liste des fichiers dans C:\Users\maxim\OneDrive\Bureau\Les_Etoiles_Du_Rocher\project\public\images\discover:
+
+1. beaulieu.jpg
+2. Casio.jpg
+3. criquecapmartin.jpg
+4. F1Monaco.jpg
+5. identify.bat
+6. identify.py
+7. musee.jpg
+8. plageroquebrune.jpg
+9. rallyhistorique.jpg
+10. sentierdouaniers.jpg
+11. sentierlecorbusier.jpg
+12. theatre.jpg
