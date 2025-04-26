@@ -7,9 +7,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { useTranslations } from "next-intl";
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
-import { countryCodes } from '@/data/country-codes';
 import { ComboboxCountry } from '@/components/ui/combobox-country';
+import { countryCodes } from '@/data/country-codes';
 
 import { SectionTitle } from "@/components/ui/section-title";
 import { Map } from "@/components/ui/map";
@@ -32,17 +31,6 @@ const formSchema = z.object({
   phone: z.string().min(5, { message: "Veuillez entrer un numéro de téléphone valide" }),
   message: z.string().min(10, { message: "Le message doit contenir au moins 10 caractères" }),
 });
-
-// Fonction utilitaire pour générer l'emoji drapeau à partir du code ISO (2 lettres uniquement)
-function getFlagEmoji(countryCode: string) {
-  if (!countryCode || countryCode.length !== 2) return '';
-  return String.fromCodePoint(
-    ...countryCode
-      .toUpperCase()
-      .split('')
-      .map(char => 127397 + char.charCodeAt(0))
-  );
-}
 
 export default function ContactPage() {
   const t = useTranslations('contact');
@@ -116,12 +104,12 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true, margin: "-100px" }}
           >
-            <div className="content-grid">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               <div className="col-span-1 md:col-span-5">
                 <h2 className="text-2xl mb-8">{t('form.title')}</h2>
                 
                 {isSubmitted ? (
-                  <div className="bg-muted p-8 text-center">
+                  <div className="bg-muted p-8 text-center rounded-lg shadow-sm">
                     <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary mb-6">
                       <Check className="h-8 w-8 text-white" />
                     </div>
@@ -147,20 +135,21 @@ export default function ContactPage() {
                         )}
                       />
                       
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <FormField
-                          control={form.control}
-                          name="email"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>{t('form.email')}</FormLabel>
-                              <FormControl>
-                                <Input placeholder={t('form.email')} {...field} />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>{t('form.email')}</FormLabel>
+                            <FormControl>
+                              <Input placeholder={t('form.email')} {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      
+                      <div className="flex gap-4">
                         <FormField
                           control={form.control}
                           name="countryCode"
@@ -176,6 +165,7 @@ export default function ContactPage() {
                             </FormItem>
                           )}
                         />
+                        
                         <FormField
                           control={form.control}
                           name="phone"
@@ -218,13 +208,13 @@ export default function ContactPage() {
                 )}
               </div>
               
-              <div className="col-span-1 md:col-span-6 md:col-start-7">
+              <div className="col-span-1 md:col-span-7">
                 <h2 className="text-2xl mb-8">{t('info.title')}</h2>
                 
                 <div className="space-y-8 mb-10">
                   {contactInfo.map((item, index) => (
-                    <div key={index} className="flex">
-                      <div className="flex-shrink-0 mr-6">
+                    <div key={index} className="flex items-start p-4 bg-muted rounded-lg">
+                      <div className="flex-shrink-0 mr-6 p-3 bg-background rounded-full">
                         {item.icon}
                       </div>
                       <div>
@@ -235,7 +225,9 @@ export default function ContactPage() {
                   ))}
                 </div>
                 
-                <Map center={mapCenter} />
+                <div className="rounded-lg overflow-hidden shadow-lg">
+                  <Map center={mapCenter} />
+                </div>
               </div>
             </div>
           </motion.div>
