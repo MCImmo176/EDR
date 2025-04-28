@@ -10,6 +10,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Compass, Clock, Star, ShieldCheck, MapPin, Users, Key, Volume2, ArrowRight } from "lucide-react";
+import SnakeRectangleAnimation from '../../../src/components/SnakeRectangleAnimation';
 
 // Composant pour un élément d'accordéon
 function AccordionItem({ title, description, isOpen, toggleOpen }: { 
@@ -310,9 +311,59 @@ export default function VillaPage() {
     {
       title: "5 suites privatives",
       description: "Chaque chambre dispose de sa salle de bain, s'ouvre sur l'extérieur et profite d'une lumière naturelle abondante.",
-      src: "/images/villa/IMG_2359.JPEG",
+      src: "/images/villa/IMG_2359.JPG",
       alt: "Suites privatives lumineuses"
     }
+  ];
+
+  const practicalInfo = [
+    {
+      icon: MapPin,
+      title: "Situation",
+      description: "Idéalement située à Roquebrune Cap Martin, à quelques minutes de Monaco et des plus belles plages de la Côte d'Azur."
+    },
+    {
+      icon: Clock,
+      title: "Disponibilité",
+      description: "La villa est disponible à la location toute l'année, avec une durée minimale de séjour d'une semaine."
+    },
+    {
+      icon: Star,
+      title: "Équipements",
+      description: "Des équipements haut de gamme et des services personnalisés pour un séjour d'exception."
+    },
+    {
+      icon: ShieldCheck,
+      title: "Sécurité",
+      description: "Propriété entièrement sécurisée avec système d'alarme, vidéosurveillance et service de sécurité sur demande."
+    }
+  ];
+
+  const houseRules = [
+    {
+      icon: Users,
+      title: "Check-in & Check-out",
+      description: "Arrivée à partir de 16h00 et départ au plus tard à 10h00. Un accueil personnalisé vous sera réservé."
+    },
+    {
+      icon: Key,
+      title: "Accès & Sécurité",
+      description: "La villa est équipée d'un système de sécurité dernière génération. Les codes d'accès vous seront remis à votre arrivée."
+    },
+    {
+      icon: Volume2,
+      title: "Tranquillité",
+      description: "Par respect pour le voisinage, nous vous demandons de maintenir un niveau sonore raisonnable, particulièrement après 22h00."
+    }
+  ];
+
+  const distances = [
+    { destination: "Monaco", duration: "10 min" },
+    { destination: "Nice", duration: "30 min" },
+    { destination: "Cannes", duration: "45 min" },
+    { destination: "Saint-Tropez", duration: "1h30" },
+    { destination: "Aéroport Nice", duration: "30 min" },
+    { destination: "Plage", duration: "5 min" }
   ];
 
   useEffect(() => {
@@ -352,6 +403,28 @@ export default function VillaPage() {
 
   return (
     <main className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative w-screen h-screen overflow-hidden p-0 m-0">
+        <Image
+          src="/images/villa/IMG_2298.JPEG"
+          alt="Villa de luxe"
+          fill
+          className="object-cover"
+          priority
+          quality={100}
+        />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-full h-full">
+            <SnakeRectangleAnimation 
+              textLine1="Une villa"
+              textLine2="d'exception"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Spaces Section */}
       <section className="py-32 bg-white">
         <div className="container max-w-[1400px] mx-auto px-4">
           <motion.div
@@ -405,7 +478,7 @@ export default function VillaPage() {
         </div>
       </section>
 
-      {/* Nouvelle section avec photo à droite et texte à gauche */}
+      {/* Custom Living Spaces Section */}
       <section className="py-24 bg-neutral-50">
         <div className="container max-w-[1400px] mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -435,124 +508,40 @@ export default function VillaPage() {
         </div>
       </section>
 
-      {/* --- Début du contenu de l'onglet Informations --- */}
-      <section className="pt-24 md:pt-32 pb-16 bg-muted/30">
-        <div className="container max-w-[1400px] mx-auto px-4">
+      {/* Practical Information Section */}
+      <section className="py-24 bg-white">
+        <div className="container max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <SectionTitle
-              title="Informations pratiques"
-              subtitle="Tout ce que vous devez savoir pour profiter pleinement de votre séjour aux Étoiles du Rocher"
-              centered
-            />
-          </motion.div>
-        </div>
-      </section>
-      
-      {/* Section améliorée avec les nouvelles cartes */}
-      <section className="section-padding bg-muted/30">
-        <div className="container max-w-[1400px] mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="flex flex-col items-center text-center p-8 bg-white shadow-lg rounded-lg transition-transform duration-300 hover:transform hover:-translate-y-2">
-                <MapPin className="h-12 w-12 mb-6 text-primary" />
-                <h3 className="text-xl font-display mb-4">Situation</h3>
-                <p className="text-muted-foreground">
-                  Idéalement située à Roquebrune Cap Martin, à quelques minutes de Monaco et des plus belles plages de la Côte d'Azur.
-                </p>
-              </div>
-              
-              <div className="flex flex-col items-center text-center p-8 bg-white shadow-lg rounded-lg transition-transform duration-300 hover:transform hover:-translate-y-2">
-                <Clock className="h-12 w-12 mb-6 text-primary" />
-                <h3 className="text-xl font-display mb-4">Disponibilité</h3>
-                <p className="text-muted-foreground">
-                  La villa est disponible à la location toute l'année, avec une durée minimale de séjour d'une semaine.
-                </p>
-              </div>
-              
-              <div className="flex flex-col items-center text-center p-8 bg-white shadow-lg rounded-lg transition-transform duration-300 hover:transform hover:-translate-y-2">
-                <Star className="h-12 w-12 mb-6 text-primary" />
-                <h3 className="text-xl font-display mb-4">Équipements</h3>
-                <p className="text-muted-foreground">
-                  Des équipements haut de gamme et des services personnalisés pour un séjour d'exception.
-                </p>
-              </div>
-              
-              <div className="flex flex-col items-center text-center p-8 bg-white shadow-lg rounded-lg transition-transform duration-300 hover:transform hover:-translate-y-2">
-                <ShieldCheck className="h-12 w-12 mb-6 text-primary" />
-                <h3 className="text-xl font-display mb-4">Sécurité</h3>
-                <p className="text-muted-foreground">
-                  Propriété entièrement sécurisée avec système d'alarme, vidéosurveillance et service de sécurité sur demande.
-                </p>
-              </div>
-            </div>
+            <h2 className="text-4xl font-display mb-6">Informations pratiques</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Tout ce que vous devez savoir pour profiter pleinement de votre séjour aux Étoiles du Rocher
+            </p>
           </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {practicalInfo.map((info, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex flex-col items-center text-center p-8 bg-white shadow-lg rounded-lg transition-transform duration-300 hover:transform hover:-translate-y-2"
+              >
+                <info.icon className="h-12 w-12 mb-6 text-primary" />
+                <h3 className="text-xl font-display mb-4">{info.title}</h3>
+                <p className="text-muted-foreground">{info.description}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
-
-      {/* Nouvelle section améliorée pour les règles */}
-      <section className="py-32 bg-muted/30">
-        <div className="container max-w-[1400px] mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true, margin: "-100px" }}
-          >
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-4xl font-display mb-12 text-center">Règlement de la villa</h2>
-              
-              <div className="space-y-8">
-                <div className="flex items-start gap-6 p-8 bg-white rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl">
-                  <Users className="h-8 w-8 text-primary flex-shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-display mb-2">Check-in & Check-out</h3>
-                    <p className="text-muted-foreground">Arrivée à partir de 16h00 et départ au plus tard à 10h00. Un accueil personnalisé vous sera réservé.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-6 p-8 bg-white rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl">
-                  <Key className="h-8 w-8 text-primary flex-shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-display mb-2">Accès & Sécurité</h3>
-                    <p className="text-muted-foreground">La villa est équipée d'un système de sécurité dernière génération. Les codes d'accès vous seront remis à votre arrivée.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-6 p-8 bg-white rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl">
-                  <Volume2 className="h-8 w-8 text-primary flex-shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-display mb-2">Tranquillité</h3>
-                    <p className="text-muted-foreground">Par respect pour le voisinage, nous vous demandons de maintenir un niveau sonore raisonnable, particulièrement après 22h00.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-16 text-center">
-                <Button 
-                  asChild
-                  className="relative bg-transparent border-2 border-black text-black overflow-hidden group hover:text-white transition-all duration-500 text-lg px-12 py-6 rounded-none"
-                >
-                  <Link href="/contact">
-                    Réserver votre séjour
-                    <ArrowRight className="ml-2 h-5 w-5 relative z-10" />
-                    <div className="absolute inset-0 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      {/* --- Fin du contenu de l'onglet Informations --- */}
     </main>
   );
 }
