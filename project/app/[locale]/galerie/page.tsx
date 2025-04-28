@@ -290,14 +290,14 @@ export default function GaleriePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex justify-center gap-4 mb-12"
+            className="flex flex-wrap justify-center gap-4 mb-12"
           >
             <button
               onClick={() => setActiveCategory(null)}
-              className={`px-4 py-2 rounded-full transition-all ${
+              className={`px-6 py-3 rounded-full transition-all duration-300 ${
                 activeCategory === null
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-muted hover:bg-muted/80"
+                  ? "bg-black text-white"
+                  : "bg-muted hover:bg-black hover:text-white"
               }`}
             >
               {tGallery('categories.all')}
@@ -306,10 +306,10 @@ export default function GaleriePage() {
               <button
                 key={index}
                 onClick={() => setActiveCategory(category)}
-                className={`px-4 py-2 rounded-full transition-all ${
+                className={`px-6 py-3 rounded-full transition-all duration-300 ${
                   activeCategory === category
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-muted hover:bg-muted/80"
+                    ? "bg-black text-white"
+                    : "bg-muted hover:bg-black hover:text-white"
                 }`}
               >
                 {category}
@@ -317,48 +317,44 @@ export default function GaleriePage() {
             ))}
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPhotos.map((photo, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative aspect-[4/3] cursor-pointer overflow-hidden rounded-lg"
+                className="group relative aspect-[4/3] cursor-pointer overflow-hidden rounded-lg bg-muted"
                 onClick={() => setSelectedImage(index)}
               >
                 <Image
                   src={photo.src}
                   alt={photo.alt}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  priority
                 />
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                  <p className="text-sm">{photo.alt}</p>
-                  <p className="text-xs opacity-75">{photo.category}</p>
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0">
+                  <p className="text-lg font-display">{photo.alt}</p>
+                  <p className="text-sm opacity-75 mt-1">{photo.category}</p>
                 </div>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex justify-center mt-8"
+            className="flex justify-center mt-16"
           >
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-black rounded-full hover:bg-white hover:text-black transition-all duration-300 ease-in-out transform hover:scale-105"
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-black rounded-full hover:bg-white hover:text-black border-2 border-black transition-all duration-300 ease-in-out transform hover:scale-105"
             >
-              {tGallery('cta')}
+              Je prends contact
             </Link>
           </motion.div>
         </div>
@@ -367,7 +363,7 @@ export default function GaleriePage() {
       {/* Lightbox */}
       {selectedImage !== null && (
         <div 
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >
           <button 
@@ -377,13 +373,14 @@ export default function GaleriePage() {
             <X className="h-8 w-8" />
           </button>
           
-          <div className="relative w-full max-w-6xl aspect-[16/9]">
+          <div className="relative w-full max-w-7xl aspect-[16/9]">
             <Image
               src={photos[selectedImage].src}
               alt={photos[selectedImage].alt}
               fill
               className="object-contain"
               priority
+              sizes="100vw"
             />
           </div>
         </div>

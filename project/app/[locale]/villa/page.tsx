@@ -9,7 +9,7 @@ import { ImageCarousel } from "@/components/ui/image-carousel";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Compass, Clock, Star, ShieldCheck } from "lucide-react";
+import { Compass, Clock, Star, ShieldCheck, MapPin, Users, Key, Volume2, ArrowRight } from "lucide-react";
 
 // Composant pour un élément d'accordéon
 function AccordionItem({ title, description, isOpen, toggleOpen }: { 
@@ -436,8 +436,8 @@ export default function VillaPage() {
       </section>
 
       {/* --- Début du contenu de l'onglet Informations --- */}
-      <section className="pt-24 md:pt-32 pb-16">
-        <div className="container">
+      <section className="pt-24 md:pt-32 pb-16 bg-muted/30">
+        <div className="container max-w-[1400px] mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -451,8 +451,10 @@ export default function VillaPage() {
           </motion.div>
         </div>
       </section>
-      <section className="section-padding bg-muted">
-        <div className="container">
+      
+      {/* Section améliorée avec les nouvelles cartes */}
+      <section className="section-padding bg-muted/30">
+        <div className="container max-w-[1400px] mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -460,31 +462,34 @@ export default function VillaPage() {
             viewport={{ once: true, margin: "-100px" }}
           >
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="flex flex-col items-center text-center p-6">
-                <Compass className="h-12 w-12 mb-4" />
-                <h3 className="text-xl mb-3">Situation</h3>
-                <p>
+              <div className="flex flex-col items-center text-center p-8 bg-white shadow-lg rounded-lg transition-transform duration-300 hover:transform hover:-translate-y-2">
+                <MapPin className="h-12 w-12 mb-6 text-primary" />
+                <h3 className="text-xl font-display mb-4">Situation</h3>
+                <p className="text-muted-foreground">
                   Idéalement située à Roquebrune Cap Martin, à quelques minutes de Monaco et des plus belles plages de la Côte d'Azur.
                 </p>
               </div>
-              <div className="flex flex-col items-center text-center p-6">
-                <Clock className="h-12 w-12 mb-4" />
-                <h3 className="text-xl mb-3">Disponibilité</h3>
-                <p>
+              
+              <div className="flex flex-col items-center text-center p-8 bg-white shadow-lg rounded-lg transition-transform duration-300 hover:transform hover:-translate-y-2">
+                <Clock className="h-12 w-12 mb-6 text-primary" />
+                <h3 className="text-xl font-display mb-4">Disponibilité</h3>
+                <p className="text-muted-foreground">
                   La villa est disponible à la location toute l'année, avec une durée minimale de séjour d'une semaine.
                 </p>
               </div>
-              <div className="flex flex-col items-center text-center p-6">
-                <Star className="h-12 w-12 mb-4" />
-                <h3 className="text-xl mb-3">Équipements</h3>
-                <p>
+              
+              <div className="flex flex-col items-center text-center p-8 bg-white shadow-lg rounded-lg transition-transform duration-300 hover:transform hover:-translate-y-2">
+                <Star className="h-12 w-12 mb-6 text-primary" />
+                <h3 className="text-xl font-display mb-4">Équipements</h3>
+                <p className="text-muted-foreground">
                   Des équipements haut de gamme et des services personnalisés pour un séjour d'exception.
                 </p>
               </div>
-              <div className="flex flex-col items-center text-center p-6">
-                <ShieldCheck className="h-12 w-12 mb-4" />
-                <h3 className="text-xl mb-3">Sécurité</h3>
-                <p>
+              
+              <div className="flex flex-col items-center text-center p-8 bg-white shadow-lg rounded-lg transition-transform duration-300 hover:transform hover:-translate-y-2">
+                <ShieldCheck className="h-12 w-12 mb-6 text-primary" />
+                <h3 className="text-xl font-display mb-4">Sécurité</h3>
+                <p className="text-muted-foreground">
                   Propriété entièrement sécurisée avec système d'alarme, vidéosurveillance et service de sécurité sur demande.
                 </p>
               </div>
@@ -492,125 +497,57 @@ export default function VillaPage() {
           </motion.div>
         </div>
       </section>
-      <section className="section-padding container">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          <SectionTitle
-            title="Équipements & Services"
-            subtitle="Les Étoiles du Rocher offre une gamme complète d'équipements et de services pour répondre à toutes vos attentes."
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mt-12">
-            {/* Liste des équipements */}
-            <div>
-              <h3 className="text-xl mb-4 after:content-[''] after:block after:w-12 after:h-px after:bg-primary after:mt-2">Maison</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>500m² d'espace habitable</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>5 chambres en-suite</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Salon spacieux</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Salle à manger</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Cuisine équipée</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Home cinéma</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Buanderie</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Cave à vin climatisée</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl mb-4 after:content-[''] after:block after:w-12 after:h-px after:bg-primary after:mt-2">Extérieur</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Piscine à débordement chauffée</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Terrasses aménagées</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Jardin méditerranéen</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Accès privé à la plage</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Parking sécurisé</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Système d'alarme</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl mb-4 after:content-[''] after:block after:w-12 after:h-px after:bg-primary after:mt-2">Services</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Ménage quotidien</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Chef privé (optionnel)</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Majordome (optionnel)</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Service de conciergerie 24/7</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Sécurité</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Transferts aéroport</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl mb-4 after:content-[''] after:block after:w-12 after:h-px after:bg-primary after:mt-2">Loisirs</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Équipement fitness</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Kayaks et paddle boards</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Matériel de plongée</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Home cinéma</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Système audio haut de gamme</li>
-                <li className="flex items-center"><div className="w-1 h-1 bg-primary rounded-full mr-2"></div>Bibliothèque</li>
-              </ul>
-            </div>
-          </div>
-        </motion.div>
-      </section>
-      <Divider className="container mx-auto" />
-      <section className="section-padding container">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          <div className="content-grid">
-            <div className="col-span-1 md:col-span-6">
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <Image 
-                  src="https://images.pexels.com/photos/2707756/pexels-photo-2707756.jpeg" 
-                  alt="Vue aérienne de Roquebrune Cap Martin"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-            <div className="col-span-1 md:col-span-6 flex flex-col justify-center">
-              <h2 className="mb-6">Services et équipements</h2>
-              <p className="text-lg">
-                Les Étoiles du Rocher vous offre une gamme complète de services et d'équipements pour rendre votre séjour aussi agréable que possible.
-              </p>
-              <h3 className="text-xl mb-4">Distances</h3>
-              <ul className="space-y-2 mb-8">
-                <li className="flex justify-between"><span>Plage</span><span className="font-medium">Accès direct</span></li>
-                <li className="flex justify-between"><span>Monaco</span><span className="font-medium">10 minutes</span></li>
-                <li className="flex justify-between"><span>Nice Côte d'Azur (Aéroport)</span><span className="font-medium">30 minutes</span></li>
-                <li className="flex justify-between"><span>Cannes</span><span className="font-medium">45 minutes</span></li>
-                <li className="flex justify-between"><span>Saint-Tropez</span><span className="font-medium">1h30</span></li>
-              </ul>
-            </div>
-          </div>
-        </motion.div>
-      </section>
-      <section className="section-padding bg-muted">
-        <div className="container">
+
+      {/* Nouvelle section améliorée pour les règles */}
+      <section className="py-32 bg-muted/30">
+        <div className="container max-w-[1400px] mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true, margin: "-100px" }}
           >
-            <SectionTitle
-              title="Règlement de la villa"
-              subtitle="Pour garantir le confort de tous, nous vous prions de respecter ces quelques règles pendant votre séjour."
-              centered
-            />
-            <div className="max-w-2xl mx-auto mt-12 bg-background p-8">
-              <ul className="space-y-4">
-                <li className="flex items-baseline"><div className="w-2 h-2 bg-primary rounded-full mr-3 mt-1"></div>Check-in: 16h00 / Check-out: 10h00</li>
-                <li className="flex items-baseline"><div className="w-2 h-2 bg-primary rounded-full mr-3 mt-1"></div>Non-fumeur</li>
-                <li className="flex items-baseline"><div className="w-2 h-2 bg-primary rounded-full mr-3 mt-1"></div>Pas d'animaux de compagnie</li>
-                <li className="flex items-baseline"><div className="w-2 h-2 bg-primary rounded-full mr-3 mt-1"></div>Pas de fêtes ou événements sans autorisation préalable</li>
-                <li className="flex items-baseline"><div className="w-2 h-2 bg-primary rounded-full mr-3 mt-1"></div>Respecter le voisinage et ne pas faire de bruit après 22h00</li>
-              </ul>
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-4xl font-display mb-12 text-center">Règlement de la villa</h2>
+              
+              <div className="space-y-8">
+                <div className="flex items-start gap-6 p-8 bg-white rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl">
+                  <Users className="h-8 w-8 text-primary flex-shrink-0" />
+                  <div>
+                    <h3 className="text-xl font-display mb-2">Check-in & Check-out</h3>
+                    <p className="text-muted-foreground">Arrivée à partir de 16h00 et départ au plus tard à 10h00. Un accueil personnalisé vous sera réservé.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-6 p-8 bg-white rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl">
+                  <Key className="h-8 w-8 text-primary flex-shrink-0" />
+                  <div>
+                    <h3 className="text-xl font-display mb-2">Accès & Sécurité</h3>
+                    <p className="text-muted-foreground">La villa est équipée d'un système de sécurité dernière génération. Les codes d'accès vous seront remis à votre arrivée.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-6 p-8 bg-white rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl">
+                  <Volume2 className="h-8 w-8 text-primary flex-shrink-0" />
+                  <div>
+                    <h3 className="text-xl font-display mb-2">Tranquillité</h3>
+                    <p className="text-muted-foreground">Par respect pour le voisinage, nous vous demandons de maintenir un niveau sonore raisonnable, particulièrement après 22h00.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-16 text-center">
+                <Button 
+                  asChild
+                  className="relative bg-transparent border-2 border-black text-black overflow-hidden group hover:text-white transition-all duration-500 text-lg px-12 py-6 rounded-none"
+                >
+                  <Link href="/contact">
+                    Réserver votre séjour
+                    <ArrowRight className="ml-2 h-5 w-5 relative z-10" />
+                    <div className="absolute inset-0 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </motion.div>
         </div>
