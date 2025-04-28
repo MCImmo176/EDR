@@ -83,13 +83,15 @@ export default function ContactPage() {
                     iv_load_policy: 3,
                     playsinline: 1,
                     origin: window.location.origin,
+                    light: 1,
+                    brightness: 150
                   }
                 }
               }}
             />
           </div>
         </div>
-        <div className="absolute inset-0 bg-black/50 flex items-center">
+        <div className="absolute inset-0 bg-black/20 flex items-center">
           <div className="w-full h-full flex items-center">
             <SnakeRectangleAnimation 
               textLine1="Votre villa"
@@ -107,7 +109,7 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="lg:sticky lg:top-32"
+              className="lg:sticky lg:top-32 px-4 md:px-8"
             >
               <h2 className="text-4xl font-display mb-6">Échangeons ensemble</h2>
               <div className="prose prose-lg">
@@ -144,12 +146,12 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                     <FormField
                       control={form.control}
                       name="name"
                       render={({ field }) => (
-                        <FormItem>
+                        <FormItem className="space-y-4">
                           <FormLabel>Nom & Prénom</FormLabel>
                           <FormControl>
                             <Input placeholder="Votre nom complet" className="bg-background" {...field} />
@@ -163,7 +165,7 @@ export default function ContactPage() {
                       control={form.control}
                       name="email"
                       render={({ field }) => (
-                        <FormItem>
+                        <FormItem className="space-y-4">
                           <FormLabel>Email</FormLabel>
                           <FormControl>
                             <Input placeholder="Votre adresse email" className="bg-background" {...field} />
@@ -173,45 +175,56 @@ export default function ContactPage() {
                       )}
                     />
                     
-                    <div className="flex gap-4 items-end">
-                      <FormField
-                        control={form.control}
-                        name="countryCode"
-                        render={({ field }) => (
-                          <FormItem className="flex-[0_0_180px]">
-                            <FormLabel>Indicatif</FormLabel>
-                            <FormControl>
-                              <ComboboxCountry
-                                value={field.value}
-                                onChange={field.onChange}
-                                countryCodes={countryCodes}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
+                    <div className="flex gap-4 items-start">
+                      {/* Champ Indicatif */}
+                      <div className="flex-[0_0_180px]">
+                        <FormField
+                          control={form.control}
+                          name="countryCode"
+                          render={({ field }) => (
+                            <FormItem className="space-y-1"> {/* Réduction de l'espace vertical */}
+                              <FormControl>
+                                <ComboboxCountry
+                                  value={field.value}
+                                  onChange={field.onChange}
+                                  countryCodes={countryCodes}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
                       
-                      <FormField
-                        control={form.control}
-                        name="phone"
-                        render={({ field }) => (
-                          <FormItem className="flex-1">
-                            <FormLabel>Téléphone</FormLabel>
-                            <FormControl>
-                              <Input placeholder="Votre numéro de téléphone" className="bg-background" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
+                      {/* Champ Téléphone */}
+                      <div className="flex-1">
+                        <FormField
+                          control={form.control}
+                          name="phone"
+                          render={({ field }) => (
+                            <FormItem className="space-y-1"> {/* Même espacement que l'indicatif */}
+                              <div className="h-[20px] flex items-center mb-1"> {/* Conteneur du label avec hauteur fixe */}
+                                <FormLabel className="text-sm font-medium leading-none">Téléphone</FormLabel>
+                              </div>
+                              <FormControl>
+                                <Input 
+                                  placeholder="Votre numéro de téléphone" 
+                                  className="bg-background h-[40px]" 
+                                  {...field} 
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
                     </div>
                     
                     <FormField
                       control={form.control}
                       name="message"
                       render={({ field }) => (
-                        <FormItem>
+                        <FormItem className="space-y-4">
                           <FormLabel>Message</FormLabel>
                           <FormControl>
                             <Textarea 
@@ -225,9 +238,13 @@ export default function ContactPage() {
                       )}
                     />
                     
-                    <Button type="submit" className="relative bg-transparent border-2 border-black text-black overflow-hidden group hover:text-white transition-all duration-500 text-lg px-12 py-6 rounded-none w-full">
-                      Envoyer le message
-                      <Send className="ml-2 h-4 w-4" />
+                    <Button 
+                      type="submit" 
+                      className="relative bg-black text-white overflow-hidden group hover:bg-white hover:text-black border-2 border-black transition-all duration-500 text-lg px-12 py-6 rounded-none w-full"
+                    >
+                      <span className="relative z-10">Envoyer le message</span>
+                      <Send className="ml-2 h-4 w-4 relative z-10" />
+                      <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                     </Button>
                   </form>
                 </Form>
@@ -241,6 +258,7 @@ export default function ContactPage() {
         .react-player {
           aspect-ratio: 16/9;
           transform: translate(-50%, -50%) scale(1.5) !important;
+          filter: brightness(1.3);
         }
       `}</style>
     </>

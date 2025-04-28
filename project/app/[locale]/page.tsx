@@ -7,14 +7,19 @@ import dynamic from "next/dynamic";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import { Button } from "@/components/ui/button";
-import { SectionTitle } from "@/components/ui/section-title";
-import { Divider } from "@/components/ui/divider";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
-const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
+const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
 export default function Home() {
   const { t } = useLanguage();
+  const [hasWindow, setHasWindow] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setHasWindow(true);
+    }
+  }, []);
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -78,9 +83,10 @@ export default function Home() {
 
   return (
     <>
+      {/* Hero Section with Video Background */}
       <section className="relative h-screen w-full overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="relative w-full h-full">
+        <div className="absolute inset-0 bg-black">
+          {hasWindow && (
             <ReactPlayer
               url="https://www.youtube.com/watch?v=wl-HzkOtHC0"
               playing
@@ -88,32 +94,39 @@ export default function Home() {
               muted
               width="100%"
               height="100%"
+              playsinline
               style={{
                 position: 'absolute',
                 top: '50%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
-                width: '100vw',
-                height: '100vh',
+                minWidth: '100%',
+                minHeight: '100%',
+                width: 'auto',
+                height: 'auto'
               }}
               config={{
                 youtube: {
-                  playerVars: {
+                  playerVars: { 
+                    autoplay: 1,
                     controls: 0,
-                    showinfo: 0,
-                    rel: 0,
-                    modestbranding: 1,
+                    disablekb: 1,
+                    fs: 0,
                     iv_load_policy: 3,
-                    playsinline: 1,
+                    modestbranding: 1,
+                    rel: 0,
+                    showinfo: 0,
+                    cc_load_policy: 0,
+                    playsinline: 1
                   }
                 }
               }}
             />
-          </div>
-          <div className="absolute inset-0 bg-black/40" />
+          )}
+          <div className="absolute inset-0 bg-black/30" />
         </div>
-        
-        <div className="relative z-10 h-full flex items-center justify-center text-white">
+
+        <div className="relative z-10 h-full flex items-center justify-center text-white px-4">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -122,7 +135,7 @@ export default function Home() {
           >
             <div className="overflow-hidden mb-8">
               <motion.h1 
-                className="text-7xl md:text-8xl lg:text-9xl font-display"
+                className="text-6xl md:text-7xl lg:text-8xl font-display"
                 variants={textReveal}
               >
                 {t('home.title')}
@@ -136,39 +149,40 @@ export default function Home() {
                 style={{ originX: 0 }}
               />
               <motion.p 
-                className="text-2xl md:text-3xl font-light tracking-widest uppercase relative z-10 py-4 px-8"
+                className="text-xl md:text-2xl font-light tracking-widest uppercase relative z-10 py-4 px-8"
                 variants={textReveal}
               >
                 {t('home.subtitle')}
               </motion.p>
             </div>
             
-            <motion.div 
-              variants={fadeIn}
-              className="overflow-hidden"
-            >
+            <motion.div variants={fadeIn} className="overflow-hidden">
               <Button 
                 asChild 
                 size="lg"
                 className="relative bg-transparent border-2 border-white text-white overflow-hidden group hover:text-black transition-all duration-500 text-lg px-12 py-6 rounded-none"
               >
+                <Link href="/reservations">
+                  <span className="relative z-10">Réserver</span>
+                  <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                </Link>
               </Button>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Section slogan compact à déplacer */}
-      <section className="py-1 md:py-2 bg-white">
-        <div className="container max-w-[1400px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 items-center">
-            <div>
-              <h2 className="text-5xl md:text-6xl font-extrabold text-black mb-1" style={{ fontFamily: 'inherit' }}>
+      {/* Slogan Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container max-w-6xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
+            <div className="flex-1">
+              <h2 className="text-4xl md:text-5xl font-bold text-black leading-tight">
                 VIVEZ L'EXCEPTION.
               </h2>
             </div>
-            <div>
-              <p className="text-2xl md:text-3xl font-light text-black leading-relaxed mb-1">
+            <div className="flex-1">
+              <p className="text-xl md:text-2xl font-light text-black leading-relaxed">
                 Profitez de Monaco, sans ses contraintes.
               </p>
             </div>
@@ -176,37 +190,52 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-4 md:py-8">
-        <div className="container max-w-[1400px] mx-auto">
+      {/* Content Section */}
+      <section className="py-12 md:py-20 bg-white">
+        <div className="container max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true }}
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-12 items-stretch min-h-[600px] md:min-h-[700px]">
-              <div className="md:col-span-1 h-[350px] md:h-auto relative">
-                <Image 
+            <div className="flex flex-col md:flex-row gap-10 items-stretch">
+              <div className="w-full md:w-1/2 h-96 md:h-[500px] relative">
+                <Image
                   src="/images/excellence/interieur/reception.jpeg"
-                  alt={t('home.excellence.interior.reception')}
+                  alt="Reception de luxe"
                   fill
-                  className="object-cover w-full h-full rounded-none"
+                  className="object-cover"
                   priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
-              <div className="md:col-span-1 flex items-center">
-                <div>
-                  <p className="text-xl leading-relaxed mb-8 text-black text-justify" style={{ fontFamily: 'Roboto, Arial, Helvetica, sans-serif' }}>
-                    <span className="font-bold italic" style={{ fontSize: '1.3em' }}>« Il y a des lieux où souffle l'esprit. »</span><br />
-                    <span className="block font-medium text-right mb-4">— Maurice Barrès</span>
-                    <span className="font-light">
-                      Certains lieux possèdent une âme rare, une énergie silencieuse qui inspire et apaise. Notre domaine en est l'illustration parfaite : notre domaine vous accueille à seulement <span className="font-bold">5 minutes de l'effervescence monégasque</span>. Ici, la <span className="font-bold">tranquillité absolue</span> règne, tout en offrant un accès immédiat aux plus belles plages, aux boutiques de prestige et aux événements de la Côte d'Azur.<br /><br />
-                      Profitez de <span className="font-bold">350 m²</span> répartis sur deux étages, entièrement dédiés à votre confort. <span className="font-bold">Cinq suites privatives</span> avec une literie d'exception, toutes pensées pour conjuguer raffinement et intimité, vous promettent des nuits paisibles et un bien-être total.<br />
-                      Une <span className="font-bold">dépendance discrète</span>, blottie dans la végétation méditerranéenne, offre un espace supplémentaire pour accueillir famille ou amis en toute indépendance.<br /><br />
-                      Laissez-vous séduire par notre <span className="font-bold">piscine surplombant la mer</span>, un véritable joyau où le bleu du ciel se confond avec celui de l'horizon.<br />
-                      Le <span className="font-bold">rooftop</span>, spacieux et aménagé, vous invite à contempler le panorama exceptionnel sur Monaco et la Méditerranée. C'est également l'endroit parfait pour organiser des <span className="font-bold">dîners inoubliables</span> ou des <span className="font-bold">événements privés sous les étoiles</span>.<br /><br />
-                      <span className="italic">Entre intimité, élégance et art de vivre, notre domaine est l'adresse idéale pour une escapade unique sur la Riviera.</span>
-                    </span>
+              <div className="w-full md:w-1/2 flex items-center">
+                <div className="prose prose-lg max-h-[500px] overflow-y-auto pr-4">
+                  <blockquote className="text-xl italic font-serif mb-6">
+                    « Il y a des lieux où souffle l'esprit. »
+                    <footer className="mt-2 text-right font-sans not-italic">— Maurice Barrès</footer>
+                  </blockquote>
+                  <p className="mb-4">
+                    Certains lieux possèdent une âme rare, une énergie silencieuse qui inspire et apaise. 
+                    Notre domaine en est l'illustration parfaite : situé à seulement <strong>5 minutes de l'effervescence monégasque</strong>, 
+                    il offre une <strong>tranquillité absolue</strong> tout en permettant un accès immédiat aux plus belles plages, 
+                    boutiques de prestige et événements de la Côte d'Azur.
+                  </p>
+                  <p className="mb-4">
+                    Profitez de <strong>350 m²</strong> répartis sur deux étages, avec <strong>cinq suites privatives</strong> 
+                    à la literie d'exception, conçues pour allier raffinement et intimité. 
+                    Une <strong>dépendance discrète</strong>, nichée dans la végétation méditerranéenne, 
+                    offre un espace supplémentaire pour vos invités.
+                  </p>
+                  <p className="mb-4">
+                    Découvrez notre <strong>piscine surplombant la mer</strong> et notre <strong>rooftop</strong> 
+                    offrant un panorama exceptionnel sur Monaco et la Méditerranée - 
+                    l'endroit idéal pour des <strong>dîners inoubliables</strong> sous les étoiles.
+                  </p>
+                  <p className="italic">
+                    Entre intimité, élégance et art de vivre, notre domaine est l'adresse idéale 
+                    pour une escapade unique sur la Riviera.
                   </p>
                 </div>
               </div>
@@ -215,51 +244,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Ajout de la photo salon.png en full screen avant la section réservation */}
+      {/* Fullscreen Image Section */}
       <section className="relative w-full h-screen overflow-hidden">
-        <Image 
-          src="/images/excellence/interieur/salon.png"
-          alt="Salon luxueux"
-          fill
-          className="object-cover w-full h-full"
-          priority
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="w-full text-center text-white font-extrabold text-4xl md:text-6xl lg:text-7xl drop-shadow-lg uppercase tracking-tight" style={{letterSpacing: '-0.04em'}}>
+        <div className="absolute inset-0 bg-gray-100">
+          <Image
+            src="/images/excellence/interieur/salon.png"
+            alt="Salon luxueux"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+          <motion.h2 
+            className="text-5xl md:text-7xl font-bold text-white text-center px-8 tracking-tight"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
             Les Étoiles du Rocher
-          </span>
+          </motion.h2>
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-muted">
-        <div className="container max-w-[1400px] mx-auto">
+      {/* Contact Section */}
+      <section className="py-20 md:py-28 bg-gray-50">
+        <div className="container max-w-4xl mx-auto text-center px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="text-center"
+            viewport={{ once: true }}
           >
-            <div className="overflow-hidden mb-12">
-              <motion.h2 
-                className="text-5xl md:text-6xl lg:text-7xl font-display leading-[1.1] mb-8"
-                variants={textReveal}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-              >
-                {t('home.booking.title')}
-              </motion.h2>
-            </div>
-            <Button 
-              asChild 
-              size="lg"
-              className="relative bg-black text-white overflow-hidden group hover:text-black transition-all duration-500 text-lg px-12 py-6 rounded-none"
+            <h2 className="text-4xl md:text-5xl font-display mb-10">
+              {t('home.booking.title')}
+            </h2>
+            <Button
+              asChild
+              size="xl"
+              className="bg-black text-white hover:bg-gray-800 transition-colors px-12 py-6 rounded-none"
             >
               <Link href="/contact">
-                <span className="relative z-10">{t('common.contactUs')}</span>
-                <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-                <ArrowRight className="ml-2 h-5 w-5 relative z-10" />
+                {t('common.contactUs')}
+                <ArrowRight className="ml-3 h-5 w-5" />
               </Link>
             </Button>
           </motion.div>

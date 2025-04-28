@@ -4,12 +4,22 @@ interface SnakeRectangleAnimationProps {
   backgroundColor?: string;
   textLine1?: string;
   textLine2?: string;
+  fontFamily?: string;
+  fontSize?: string;
+  fontWeight?: string;
+  letterSpacing?: string;
+  lineHeight?: string;
 }
 
 const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({ 
   backgroundColor = '#333', 
   textLine1 = 'Votre villa', 
-  textLine2 = 'vous attend' 
+  textLine2 = 'vous attend',
+  fontFamily = 'Arial, sans-serif',
+  fontSize = '3rem',
+  fontWeight = 'bold',
+  letterSpacing = '1px',
+  lineHeight = '1.2'
 }) => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [isInitialLoad, setIsInitialLoad] = useState(true);
@@ -174,15 +184,30 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
             return prev2;
           });
           j++;
-        }, 40);
+        }, 100); // Ralenti l'animation pour l'effet accordéon
         return prev;
       });
       i++;
-    }, 40);
+    }, 100); // Ralenti l'animation pour l'effet accordéon
     return () => {
       clearInterval(interval1);
     };
   }, [textLine1, textLine2]);
+
+  // Style pour l'effet accordéon
+  const getLetterStyle = (index: number, visibleIndex: number, isFirstLine: boolean) => ({
+    opacity: index <= visibleIndex ? 1 : 0,
+    transform: index <= visibleIndex 
+      ? 'translateY(0) rotateX(0)' 
+      : `translateY(${isFirstLine ? '-30px' : '30px'}) rotateX(90deg)`,
+    display: 'inline-block',
+    transition: `opacity 0.5s cubic-bezier(0.2,0.8,0.4,1) ${index * 0.1}s, 
+                transform 0.7s cubic-bezier(0.2,0.8,0.4,1) ${index * 0.1}s`,
+    transformOrigin: 'top center',
+    perspective: '500px',
+    willChange: 'transform, opacity',
+    backfaceVisibility: 'hidden'
+  });
 
   return (
     <>
@@ -200,7 +225,7 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
         <div 
           style={{
             position: 'relative',
-            width: '250px',
+            width: '300px',
             height: '405px',
             display: 'flex',
             alignItems: 'center',
@@ -269,7 +294,7 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
               transform: 'translateY(-50%)',
               width: '900px',
               paddingRight: '0',
-              paddingLeft: '20%',
+              paddingLeft: '15%',
               zIndex: 10,
               pointerEvents: 'auto',
               overflow: 'visible',
@@ -282,14 +307,14 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
           >
             <div 
               style={{
-                fontSize: '40px',
+                fontSize: '80px',
                 fontWeight: 700,
                 color: 'white',
                 textTransform: 'none',
                 letterSpacing: '1px',
                 lineHeight: 1.05,
                 whiteSpace: 'normal',
-                margin: '0 0 0 0',
+                margin: '0 0 10px 0', // Ajout de marge entre les lignes
                 overflow: 'visible',
                 textShadow: '0 2px 16px rgba(0,0,0,0.18)',
                 position: 'relative',
@@ -298,17 +323,13 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
                 textAlign: 'left',
                 display: 'block',
                 minWidth: 0,
+                perspective: '1000px'
               }}
             >
               {textLine1.split('').map((char, idx) => (
                 <span
                   key={idx}
-                  style={{
-                    opacity: idx <= visibleIndexes1 ? 1 : 0,
-                    transform: idx <= visibleIndexes1 ? 'translateY(0)' : 'translateY(20px)',
-                    display: 'inline-block',
-                    transition: 'opacity 0.3s, transform 0.3s',
-                  }}
+                  style={getLetterStyle(idx, visibleIndexes1, true)}
                 >
                   {char === ' ' ? '\u00A0' : char}
                 </span>
@@ -316,7 +337,7 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
             </div>
             <div 
               style={{
-                fontSize: '40px',
+                fontSize: '80px',
                 fontWeight: 700,
                 color: 'white',
                 textTransform: 'none',
@@ -332,17 +353,13 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
                 textAlign: 'left',
                 display: 'block',
                 minWidth: 0,
+                perspective: '1000px'
               }}
             >
               {textLine2.split('').map((char, idx) => (
                 <span
                   key={idx}
-                  style={{
-                    opacity: idx <= visibleIndexes2 ? 1 : 0,
-                    transform: idx <= visibleIndexes2 ? 'translateY(0)' : 'translateY(20px)',
-                    display: 'inline-block',
-                    transition: 'opacity 0.3s, transform 0.3s',
-                  }}
+                  style={getLetterStyle(idx, visibleIndexes2, false)}
                 >
                   {char === ' ' ? '\u00A0' : char}
                 </span>
@@ -355,4 +372,4 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
   );
 };
 
-export default SnakeRectangleAnimation; 
+export default SnakeRectangleAnimation;
