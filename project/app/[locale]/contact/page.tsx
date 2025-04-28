@@ -9,7 +9,7 @@ import * as z from "zod";
 import { useTranslations } from "next-intl";
 import { ComboboxCountry } from '@/components/ui/combobox-country';
 import { countryCodes } from '@/data/country-codes';
-import Image from "next/image";
+import ReactPlayer from 'react-player';
 import SnakeRectangleAnimation from '../../../src/components/SnakeRectangleAnimation';
 
 import { Button } from "@/components/ui/button";
@@ -57,13 +57,38 @@ export default function ContactPage() {
   return (
     <>
       <section className="relative w-screen h-screen overflow-hidden p-0 m-0">
-        <Image
-          src="/images/contact/Salon.png"
-          alt="Salon de la villa"
-          fill
-          className="object-cover"
-          priority
-        />
+        <div className="absolute inset-0 w-full h-full">
+          <div className="relative w-full h-full overflow-hidden">
+            <ReactPlayer
+              url="https://www.youtube.com/watch?v=UBBkPrnRtcE"
+              playing
+              loop
+              muted
+              width="100%"
+              height="100%"
+              className="react-player"
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+              }}
+              config={{
+                youtube: {
+                  playerVars: {
+                    controls: 0,
+                    showinfo: 0,
+                    rel: 0,
+                    modestbranding: 1,
+                    iv_load_policy: 3,
+                    playsinline: 1,
+                    origin: window.location.origin,
+                  }
+                }
+              }}
+            />
+          </div>
+        </div>
         <div className="absolute inset-0 bg-black/50 flex items-center">
           <div className="w-full h-full flex items-center">
             <SnakeRectangleAnimation 
@@ -148,12 +173,13 @@ export default function ContactPage() {
                       )}
                     />
                     
-                    <div className="flex gap-4">
+                    <div className="flex gap-4 items-end">
                       <FormField
                         control={form.control}
                         name="countryCode"
                         render={({ field }) => (
-                          <FormItem className="flex-1">
+                          <FormItem className="flex-[0_0_180px]">
+                            <FormLabel>Indicatif</FormLabel>
                             <FormControl>
                               <ComboboxCountry
                                 value={field.value}
@@ -210,6 +236,13 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <style jsx global>{`
+        .react-player {
+          aspect-ratio: 16/9;
+          transform: translate(-50%, -50%) scale(1.5) !important;
+        }
+      `}</style>
     </>
   );
 }
