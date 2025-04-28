@@ -9,7 +9,6 @@ import { useLanguage } from "@/hooks/useLanguage";
 import { Button } from "@/components/ui/button";
 import { SectionTitle } from "@/components/ui/section-title";
 import { Divider } from "@/components/ui/divider";
-import { images } from "@/config/images";
 import { useEffect } from "react";
 
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
@@ -80,24 +79,37 @@ export default function Home() {
   return (
     <>
       <section className="relative h-screen w-full overflow-hidden">
-        <div className="absolute inset-0 bg-black">
-          <ReactPlayer
-            url={images.home.hero.video}
-            playing
-            loop
-            muted
-            width="100%"
-            height="100%"
-            style={{ objectFit: "cover" }}
-            config={{
-              vimeo: {
-                playerOptions: {
-                  background: true,
-                  quality: "1080p",
+        <div className="absolute inset-0">
+          <div className="relative w-full h-full">
+            <ReactPlayer
+              url="https://www.youtube.com/watch?v=wl-HzkOtHC0"
+              playing
+              loop
+              muted
+              width="100%"
+              height="100%"
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                width: '100vw',
+                height: '100vh',
+              }}
+              config={{
+                youtube: {
+                  playerVars: {
+                    controls: 0,
+                    showinfo: 0,
+                    rel: 0,
+                    modestbranding: 1,
+                    iv_load_policy: 3,
+                    playsinline: 1,
+                  }
                 }
-              }
-            }}
-          />
+              }}
+            />
+          </div>
           <div className="absolute inset-0 bg-black/40" />
         </div>
         
@@ -140,11 +152,6 @@ export default function Home() {
                 size="lg"
                 className="relative bg-transparent border-2 border-white text-white overflow-hidden group hover:text-black transition-all duration-500 text-lg px-12 py-6 rounded-none"
               >
-                <Link href="/villa">
-                  <span className="relative z-10">{t('home.discover')}</span>
-                  <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-                  <ArrowRight className="ml-2 h-5 w-5 relative z-10" />
-                </Link>
               </Button>
             </motion.div>
           </motion.div>
