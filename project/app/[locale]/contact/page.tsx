@@ -10,6 +10,7 @@ import { useTranslations } from "next-intl";
 import { ComboboxCountry } from '@/components/ui/combobox-country';
 import { countryCodes } from '@/data/country-codes';
 import Image from "next/image";
+import SnakeRectangleAnimation from '../../../src/components/SnakeRectangleAnimation';
 
 import { Button } from "@/components/ui/button";
 import {
@@ -55,29 +56,21 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="relative h-[60vh] overflow-hidden">
+      <section className="relative w-screen h-screen overflow-hidden p-0 m-0">
         <Image
-          src="https://images.pexels.com/photos/5875837/pexels-photo-5875837.jpeg"
-          alt="Contact Us"
+          src="/images/contact/Salon.png"
+          alt="Salon de la villa"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 flex items-center justify-center text-white">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display mb-4">
-              Contactez-nous
-            </h1>
-            <p className="text-xl md:text-2xl max-w-2xl mx-auto">
-              Pour toute demande d'information ou réservation
-            </p>
-          </motion.div>
+        <div className="absolute inset-0 bg-black/50 flex items-center">
+          <div className="w-full h-full flex items-center">
+            <SnakeRectangleAnimation 
+              textLine1="Votre villa"
+              textLine2="vous attend"
+            />
+          </div>
         </div>
       </section>
 

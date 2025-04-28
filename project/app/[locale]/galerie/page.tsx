@@ -354,7 +354,7 @@ export default function GaleriePage() {
               href="/contact"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-black rounded-full hover:bg-white hover:text-black border-2 border-black transition-all duration-300 ease-in-out transform hover:scale-105"
             >
-              Je prends contact
+              Découvrir les alentours
             </Link>
           </motion.div>
         </div>

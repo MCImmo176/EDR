@@ -23,10 +23,16 @@ export function Footer() {
             <div className="flex flex-col md:flex-row gap-6">
               <Link href="/terms" className="hover:text-primary transition-colors">
                 {t('footer.terms')}
-            </Link>
+              </Link>
               <Link href="/sales-terms" className="hover:text-primary transition-colors">
                 {t('footer.sales')}
-            </Link>
+              </Link>
+              <Link href="/galerie" className="hover:text-primary transition-colors">
+                Galerie
+              </Link>
+              <Link href="/decouvrir" className="hover:text-primary transition-colors">
+                Découvrir
+              </Link>
             </div>
           </div>
 
