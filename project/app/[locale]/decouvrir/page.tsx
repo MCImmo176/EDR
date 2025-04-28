@@ -7,6 +7,7 @@ import { Calendar, MapPin, Clock, ArrowRight, Compass, Star, Landmark, Mountain,
 import { SectionTitle } from "@/components/ui/section-title";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
+import SnakeRectangleAnimation from "../../../src/components/SnakeRectangleAnimation";
 
 export default function DecouvrirPage() {
   const t = useTranslations("discover");
@@ -106,29 +107,23 @@ export default function DecouvrirPage() {
 
   return (
     <>
-      <section className="relative h-[50vh] overflow-hidden">
+      <section className="relative h-screen w-screen overflow-hidden p-0 m-0">
         <Image
-          src="https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg"
-          alt="Plage de la Côte d'Azur"
+          src="/images/discover/newpiscine.JPG"
+          alt="Piscine de la villa"
           fill
           className="object-cover"
           priority
+          quality={100}
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center text-white"
-          >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display mb-4">
-              Merveilles & escapades 
-            </h1>
-            <p className="text-xl md:text-2xl max-w-2xl mx-auto">
-              Plages, panoramas et secrets à explorer autour de Monaco
-            </p>
-          </motion.div>
+          <div className="w-full h-full">
+            <SnakeRectangleAnimation 
+              textLine1="Découvrez les"
+              textLine2="merveilles Monégasques"
+            />
+          </div>
         </div>
       </section>
 
