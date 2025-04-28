@@ -7,19 +7,40 @@ import dynamic from "next/dynamic";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
 export default function Home() {
   const { t } = useLanguage();
   const [hasWindow, setHasWindow] = useState(false);
+  const playerContainerRef = useRef(null);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       setHasWindow(true);
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
     }
   }, []);
+
+  const handleResize = () => {
+    if (playerContainerRef.current) {
+      const container = playerContainerRef.current;
+      const containerRatio = container.offsetWidth / container.offsetHeight;
+      const videoRatio = 16 / 9;
+      
+      if (containerRatio > videoRatio) {
+        const newHeight = container.offsetWidth / videoRatio;
+        container.style.height = `${newHeight}px`;
+        container.style.width = '100%';
+      } else {
+        const newWidth = container.offsetHeight * videoRatio;
+        container.style.width = `${newWidth}px`;
+        container.style.height = '100%';
+      }
+    }
+  };
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -85,43 +106,60 @@ export default function Home() {
     <>
       {/* Hero Section with Video Background */}
       <section className="relative h-screen w-full overflow-hidden">
-        <div className="absolute inset-0 bg-black">
+        <div className="absolute inset-0 bg-black flex items-center justify-center">
           {hasWindow && (
-            <ReactPlayer
-              url="https://www.youtube.com/watch?v=wl-HzkOtHC0"
-              playing
-              loop
-              muted
-              width="100%"
-              height="100%"
-              playsinline
+            <div 
+              ref={playerContainerRef}
+              className="absolute min-w-full min-h-full"
               style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                minWidth: '100%',
-                minHeight: '100%',
-                width: 'auto',
-                height: 'auto'
+                aspectRatio: '16/9'
               }}
-              config={{
-                youtube: {
-                  playerVars: { 
-                    autoplay: 1,
-                    controls: 0,
-                    disablekb: 1,
-                    fs: 0,
-                    iv_load_policy: 3,
-                    modestbranding: 1,
-                    rel: 0,
-                    showinfo: 0,
-                    cc_load_policy: 0,
-                    playsinline: 1
+            >
+              <ReactPlayer
+                url="https://www.youtube.com/watch?v=wl-HzkOtHC0"
+                playing
+                loop
+                muted
+                width="100%"
+                height="100%"
+                playsinline
+                style={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  minWidth: '100%',
+                  minHeight: '100%'
+                }}
+                config={{
+                  youtube: {
+                    playerVars: { 
+                      autoplay: 1,
+                      controls: 0,
+                      disablekb: 1,
+                      fs: 0,
+                      iv_load_policy: 3,
+                      modestbranding: 1,
+                      rel: 0,
+                      showinfo: 0,
+                      cc_load_policy: 0,
+                      playsinline: 1
+                    }
                   }
-                }
-              }}
-            />
+                }}
+                onReady={(player) => {
+                  handleResize();
+                  const iframe = player.getInternalPlayer();
+                  if (iframe) {
+                    iframe.style.width = '100%';
+                    iframe.style.height = '100%';
+                    iframe.style.position = 'absolute';
+                    iframe.style.top = '0';
+                    iframe.style.left = '0';
+                  }
+                }}
+              />
+            </div>
           )}
           <div className="absolute inset-0 bg-black/30" />
         </div>
@@ -174,15 +212,15 @@ export default function Home() {
 
       {/* Slogan Section */}
       <section className="py-16 md:py-24 bg-white">
-        <div className="container max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
-            <div className="flex-1">
-              <h2 className="text-4xl md:text-5xl font-bold text-black leading-tight">
+        <div className="container max-w-[1400px] mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 className="text-5xl md:text-6xl font-extrabold text-black mb-2" style={{ fontFamily: 'inherit' }}>
                 VIVEZ L'EXCEPTION.
               </h2>
             </div>
-            <div className="flex-1">
-              <p className="text-xl md:text-2xl font-light text-black leading-relaxed">
+            <div>
+              <p className="text-2xl md:text-3xl font-light text-black leading-relaxed">
                 Profitez de Monaco, sans ses contraintes.
               </p>
             </div>
@@ -224,14 +262,11 @@ export default function Home() {
                   </p>
                   <p className="mb-4">
                     Profitez de <strong>350 m²</strong> répartis sur deux étages, avec <strong>cinq suites privatives</strong> 
-                    à la literie d'exception, conçues pour allier raffinement et intimité. 
-                    Une <strong>dépendance discrète</strong>, nichée dans la végétation méditerranéenne, 
+                    à la literie d'exception. Une <strong>dépendance discrète</strong>, nichée dans la végétation méditerranéenne, 
                     offre un espace supplémentaire pour vos invités.
                   </p>
                   <p className="mb-4">
-                    Découvrez notre <strong>piscine surplombant la mer</strong> et notre <strong>rooftop</strong> 
-                    offrant un panorama exceptionnel sur Monaco et la Méditerranée - 
-                    l'endroit idéal pour des <strong>dîners inoubliables</strong> sous les étoiles.
+                    Découvrez notre <strong>piscine surplombant la mer</strong> et notre <strong>rooftop</strong>  offrant un panorama exceptionnel sur Monaco et la Méditerranée.
                   </p>
                   <p className="italic">
                     Entre intimité, élégance et art de vivre, notre domaine est l'adresse idéale 
