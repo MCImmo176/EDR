@@ -109,19 +109,18 @@ export default function DecouvrirPage() {
     <>
       <section className="relative h-screen w-screen overflow-hidden p-0 m-0">
         <Image
-          src="/images/discover/newpiscine.JPG"
-          alt="Piscine de la villa"
+          src="/images/discover/DJI_0017.JPG"
+          alt="Vue aérienne de la villa et de la côte"
           fill
           className="object-cover"
           priority
           quality={100}
         />
-        <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-full h-full">
             <SnakeRectangleAnimation 
-              textLine1="Découvrez les"
-              textLine2="merveilles Monégasques"
+              textLine1="Profitez de"
+              textLine2="Notre localisation"
             />
           </div>
         </div>
@@ -166,7 +165,7 @@ export default function DecouvrirPage() {
 
                   <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                     <h3 className="text-3xl font-display mb-4">{event.title}</h3>
-                    <p className="text-lg text-white/80 mb-6">{event.description}</p>
+                    {/* <p className="text-lg text-white/80 mb-6">{event.description}</p> */}
                     
                     <div className="flex flex-wrap gap-4 mb-6">
                       {event.date && (
@@ -202,21 +201,16 @@ export default function DecouvrirPage() {
       </section>
 
       <section className="py-24 bg-neutral-50">
-        <div className="container">
+        <div className="container max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            className="text-center mb-16"
           >
-            <div className="max-w-2xl mb-16">
-              <h2 className="text-4xl font-display mb-6">Secrets d'Initiés</h2>
-              <div className="h-1 w-20 bg-primary mb-6" />
-              <p className="text-lg text-muted-foreground">
-                Découvrez les trésors cachés de Monaco et Roquebrune, loin des sentiers battus.
-                Des spots confidentiels pour vivre des expériences authentiques.
-              </p>
-            </div>
+            <h2 className="text-5xl font-display mb-6">Secrets d'Initiés</h2>
+            <div className="h-1 w-20 bg-primary mx-auto" />
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -227,9 +221,9 @@ export default function DecouvrirPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+                className="group relative overflow-hidden rounded-lg shadow-2xl transform transition-all duration-500 hover:-translate-y-2"
               >
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-96">
                   <Image
                     src={secret.image}
                     alt={secret.title}
@@ -241,8 +235,8 @@ export default function DecouvrirPage() {
                     {secret.category}
                   </div>
                 </div>
-                <div className="p-8">
-                  <h3 className="text-xl font-display mb-4">{secret.title}</h3>
+                <div className="p-8 bg-white">
+                  <h3 className="text-2xl font-display mb-4">{secret.title}</h3>
                   <p className="text-muted-foreground mb-6">{secret.description}</p>
                   <div className="space-y-3">
                     {secret.difficulty && (

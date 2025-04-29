@@ -184,11 +184,11 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
             return prev2;
           });
           j++;
-        }, 100); // Ralenti l'animation pour l'effet accordéon
+        }, 30);
         return prev;
       });
       i++;
-    }, 100); // Ralenti l'animation pour l'effet accordéon
+    }, 30);
     return () => {
       clearInterval(interval1);
     };
@@ -198,15 +198,13 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
   const getLetterStyle = (index: number, visibleIndex: number, isFirstLine: boolean) => ({
     opacity: index <= visibleIndex ? 1 : 0,
     transform: index <= visibleIndex 
-      ? 'translateY(0) rotateX(0)' 
-      : `translateY(${isFirstLine ? '-30px' : '30px'}) rotateX(90deg)`,
+      ? 'translateX(0) scale(1)' 
+      : `translateX(-50px) scale(0.8)`,
     display: 'inline-block',
-    transition: `opacity 0.5s cubic-bezier(0.2,0.8,0.4,1) ${index * 0.1}s, 
-                transform 0.7s cubic-bezier(0.2,0.8,0.4,1) ${index * 0.1}s`,
-    transformOrigin: 'top center',
-    perspective: '500px',
-    willChange: 'transform, opacity',
-    backfaceVisibility: 'hidden'
+    transition: `opacity 0.2s cubic-bezier(0.2,0.8,0.4,1) ${index * 0.05}s, 
+                transform 0.3s cubic-bezier(0.2,0.8,0.4,1) ${index * 0.05}s`,
+    transformOrigin: 'right center',
+    willChange: 'transform, opacity'
   });
 
   return (

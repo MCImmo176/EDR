@@ -7,267 +7,104 @@ import { X } from "lucide-react";
 import { SectionTitle } from "@/components/ui/section-title";
 import { useLanguage } from "@/hooks/useLanguage";
 import Link from "next/link";
+import SnakeRectangleAnimation from "../../../src/components/SnakeRectangleAnimation";
 
 export default function GaleriePage() {
   const { tGallery } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   
-  const photos = [
-    // Chambres
-    {
-      src: "/images/gallery/chambres/chamber verte.png",
-      alt: "Chambre verte",
-      category: tGallery('categories.bedrooms')
-    },
-    {
-      src: "/images/gallery/chambres/chambre verte 2.png",
-      alt: "Chambre verte",
-      category: tGallery('categories.bedrooms')
-    },
-    {
-      src: "/images/gallery/chambres/chambrerose.png",
-      alt: "Chambre rose",
-      category: tGallery('categories.bedrooms')
-    },
-    {
-      src: "/images/gallery/chambres/chambre noire 2è.png",
-      alt: "Chambre noire",
-      category: tGallery('categories.bedrooms')
-    },
-    {
-      src: "/images/gallery/chambres/chambre noire1.png",
-      alt: "Chambre noire",
-      category: tGallery('categories.bedrooms')
-    },
-    {
-      src: "/images/gallery/chambres/chambre.jpg",
-      alt: "Chambre",
-      category: tGallery('categories.bedrooms')
-    },
-    {
-      src: "/images/gallery/chambres/chambre noire 2.avif",
-      alt: "Chambre noire",
-      category: tGallery('categories.bedrooms')
-    },
-    {
-      src: "/images/gallery/chambres/chambre noire.avif",
-      alt: "Chambre noire",
-      category: tGallery('categories.bedrooms')
-    },
-    {
-      src: "/images/gallery/chambres/chambre Rose.avif",
-      alt: "Chambre rose",
-      category: tGallery('categories.bedrooms')
-    },
-    {
-      src: "/images/gallery/chambres/chambre verte2.avif",
-      alt: "Chambre verte",
-      category: tGallery('categories.bedrooms')
-    },
-    {
-      src: "/images/gallery/chambres/chambre.avif",
-      alt: "Chambre",
-      category: tGallery('categories.bedrooms')
-    },
-    // Vues
-    {
-      src: "/images/gallery/vues/Coucher de soleil 3.png",
-      alt: "Coucher de soleil",
-      category: tGallery('categories.views')
-    },
-    {
-      src: "/images/gallery/vues/Coucher de soleil 2.png",
-      alt: "Coucher de soleil",
-      category: tGallery('categories.views')
-    },
-    {
-      src: "/images/gallery/vues/Coucher de soleil.png",
-      alt: "Coucher de soleil",
-      category: tGallery('categories.views')
-    },
-    {
-      src: "/images/gallery/vues/IMG_2349.JPEG",
-      alt: "Vue panoramique",
-      category: tGallery('categories.views')
-    },
-    {
-      src: "/images/gallery/vues/IMG_2363.JPEG",
-      alt: "Vue panoramique",
-      category: tGallery('categories.views')
-    },
-    {
-      src: "/images/gallery/vues/IMG_2350.JPEG",
-      alt: "Vue panoramique",
-      category: tGallery('categories.views')
-    },
-    // Extérieur
-    {
-      src: "/images/gallery/exterieur/IMG_5953.JPEG",
-      alt: "Vue extérieure de la villa",
-      category: tGallery('categories.exterior')
-    },
-    {
-      src: "/images/gallery/exterieur/IMG_5960.JPEG",
-      alt: "Vue extérieure de la villa",
-      category: tGallery('categories.exterior')
-    },
-    {
-      src: "/images/gallery/exterieur/IMG_2280.JPEG",
-      alt: "Vue extérieure de la villa",
-      category: tGallery('categories.exterior')
-    },
-    {
-      src: "/images/gallery/exterieur/IMG_2300.JPEG",
-      alt: "Vue extérieure de la villa",
-      category: tGallery('categories.exterior')
-    },
-    {
-      src: "/images/gallery/exterieur/IMG_2304.JPEG",
-      alt: "Vue extérieure de la villa",
-      category: tGallery('categories.exterior')
-    },
-    {
-      src: "/images/gallery/exterieur/IMG_2305.JPEG",
-      alt: "Vue extérieure de la villa",
-      category: tGallery('categories.exterior')
-    },
-    {
-      src: "/images/gallery/exterieur/IMG_2314.JPEG",
-      alt: "Vue extérieure de la villa",
-      category: tGallery('categories.exterior')
-    },
-    {
-      src: "/images/gallery/exterieur/IMG_2347.JPEG",
-      alt: "Vue extérieure de la villa",
-      category: tGallery('categories.exterior')
-    },
-    {
-      src: "/images/gallery/exterieur/IMG_2348.JPEG",
-      alt: "Piscine",
-      category: tGallery('categories.exterior')
-    },
-    {
-      src: "/images/gallery/exterieur/IMG_2364.JPEG",
-      alt: "Vue extérieure de la villa",
-      category: tGallery('categories.exterior')
-    },
-    {
-      src: "/images/gallery/exterieur/IMG_2398.JPEG",
-      alt: "Vue extérieure de la villa",
-      category: tGallery('categories.exterior')
-    },
-    {
-      src: "/images/gallery/exterieur/IMG_2406.JPEG",
-      alt: "Vue extérieure de la villa",
-      category: tGallery('categories.exterior')
-    },
-    // Intérieur
-    {
-      src: "/images/gallery/interieur/IMG_2290.JPEG",
-      alt: "Intérieur de la villa",
-      category: tGallery('categories.interior')
-    },
-    {
-      src: "/images/gallery/interieur/sdb5.avif",
-      alt: "Salle de bain",
-      category: tGallery('categories.interior')
-    },
-    {
-      src: "/images/gallery/interieur/Salon.png",
-      alt: "Salon",
-      category: tGallery('categories.interior')
-    },
-    {
-      src: "/images/gallery/interieur/IMG_5959.JPEG",
-      alt: "Intérieur de la villa",
-      category: tGallery('categories.interior')
-    },
-    {
-      src: "/images/gallery/interieur/IMG_5967.JPEG",
-      alt: "Intérieur de la villa",
-      category: tGallery('categories.interior')
-    },
-    {
-      src: "/images/gallery/interieur/IMG_2286.JPEG",
-      alt: "Intérieur de la villa",
-      category: tGallery('categories.interior')
-    },
-    {
-      src: "/images/gallery/interieur/IMG_2287.JPEG",
-      alt: "Intérieur de la villa",
-      category: tGallery('categories.interior')
-    },
-    {
-      src: "/images/gallery/interieur/IMG_2288.JPEG",
-      alt: "Intérieur de la villa",
-      category: tGallery('categories.interior')
-    },
-    {
-      src: "/images/gallery/interieur/IMG_2294.JPEG",
-      alt: "Intérieur de la villa",
-      category: tGallery('categories.interior')
-    },
-    {
-      src: "/images/gallery/interieur/IMG_2298.JPEG",
-      alt: "Intérieur de la villa",
-      category: tGallery('categories.interior')
-    },
-    {
-      src: "/images/gallery/interieur/IMG_2318.JPEG",
-      alt: "Intérieur de la villa",
-      category: tGallery('categories.interior')
-    },
-    {
-      src: "/images/gallery/interieur/IMG_2328.JPEG",
-      alt: "Intérieur de la villa",
-      category: tGallery('categories.interior')
-    },
-    {
-      src: "/images/gallery/interieur/IMG_2337.JPEG",
-      alt: "Intérieur de la villa",
-      category: tGallery('categories.interior')
-    },
-    {
-      src: "/images/gallery/interieur/IMG_2338.JPEG",
-      alt: "Intérieur de la villa",
-      category: tGallery('categories.interior')
-    },
-    {
-      src: "/images/gallery/interieur/IMG_2339.JPEG",
-      alt: "Intérieur de la villa",
-      category: tGallery('categories.interior')
-    },
-    {
-      src: "/images/gallery/interieur/IMG_2360.JPEG",
-      alt: "Intérieur de la villa",
-      category: tGallery('categories.interior')
-    },
-    {
-      src: "/images/gallery/interieur/IMG_2361.JPEG",
-      alt: "Intérieur de la villa",
-      category: tGallery('categories.interior')
-    },
-    {
-      src: "/images/gallery/interieur/IMG_2392.JPEG",
-      alt: "Intérieur de la villa",
-      category: tGallery('categories.interior')
-    },
-    {
-      src: "/images/gallery/interieur/IMG_2409.JPEG",
-      alt: "Intérieur de la villa",
-      category: tGallery('categories.interior')
-    }
+  const exterieurPhotos = [
+    { src: "/images/gallery/exterieur/1.JPG", alt: "Façade de la villa côté mer", category: tGallery('categories.exterior') },
+    { src: "/images/gallery/exterieur/2.JPEG", alt: "Jardin méditerranéen et terrasse", category: tGallery('categories.exterior') },
+    { src: "/images/gallery/exterieur/3.JPEG", alt: "Piscine à débordement vue mer", category: tGallery('categories.exterior') },
+    { src: "/images/gallery/exterieur/4.JPEG", alt: "Entrée principale de la villa", category: tGallery('categories.exterior') },
+    { src: "/images/gallery/exterieur/5.JPEG", alt: "Vue panoramique sur la baie", category: tGallery('categories.exterior') },
+    { src: "/images/gallery/exterieur/6.JPEG", alt: "Terrasse ombragée avec salon d'été", category: tGallery('categories.exterior') },
+  ];
+  const suitesPhotos = [
+    { src: "/images/gallery/chambres/1.JPG", alt: "Suite parentale lumineuse", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/2.JPEG", alt: "Suite double avec vue jardin", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/3.JPEG", alt: "Suite cosy avec balcon", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/4.jpg", alt: "Suite contemporaine", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/5.jpg", alt: "Suite familiale spacieuse", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/6.JPEG", alt: "Suite avec salle de bain privative", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/7.jpg", alt: "Suite élégante avec dressing", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/8.JPEG", alt: "Suite avec terrasse privée", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/9.png", alt: "Suite design et colorée", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/10.JPG", alt: "Suite avec vue mer", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/11.JPEG", alt: "Suite raffinée", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/12.JPEG", alt: "Suite avec coin bureau", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/13.JPEG", alt: "Suite lumineuse et calme", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/14.JPEG", alt: "Suite avec accès direct au jardin", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/15.jpg", alt: "Suite avec grande armoire", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/16.JPEG", alt: "Suite avec salle d'eau moderne", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/17.JPEG", alt: "Suite avec lit king size", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/18.JPEG", alt: "Suite avec vue sur la pinède", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/19.JPEG", alt: "Suite avec décoration épurée", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/20.JPEG", alt: "Suite avec salle de bain attenante", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/21.JPEG", alt: "Suite avec terrasse fleurie", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/22.jpg", alt: "Suite avec vue sur la mer", category: tGallery('categories.suites') },
+    { src: "/images/gallery/chambres/23.JPEG", alt: "Suite avec ambiance zen", category: tGallery('categories.suites') },
+  ];
+  const interieurPhotos = [
+    { src: "/images/gallery/interieur/1.JPEG", alt: "Salon spacieux et lumineux", category: tGallery('categories.interior') },
+    { src: "/images/gallery/interieur/2.JPEG", alt: "Salle à manger élégante", category: tGallery('categories.interior') },
+    { src: "/images/gallery/interieur/3.JPEG", alt: "Cuisine moderne toute équipée", category: tGallery('categories.interior') },
+    { src: "/images/gallery/interieur/4.JPEG", alt: "Salle de bain design", category: tGallery('categories.interior') },
+    { src: "/images/gallery/interieur/5.JPEG", alt: "Coin lecture cosy", category: tGallery('categories.interior') },
+    { src: "/images/gallery/interieur/6.JPEG", alt: "Entrée chaleureuse", category: tGallery('categories.interior') },
+    { src: "/images/gallery/interieur/7.JPEG", alt: "Salle de jeux pour enfants", category: tGallery('categories.interior') },
+    { src: "/images/gallery/interieur/8.JPEG", alt: "Salle de bain supplémentaire", category: tGallery('categories.interior') },
+    { src: "/images/gallery/interieur/9.JPEG", alt: "Chambre d'amis", category: tGallery('categories.interior') },
+    { src: "/images/gallery/interieur/10.JPG", alt: "Salon TV", category: tGallery('categories.interior') },
+    { src: "/images/gallery/interieur/11.JPEG", alt: "Salle de sport", category: tGallery('categories.interior') },
+    { src: "/images/gallery/interieur/12.JPEG", alt: "Bureau avec vue", category: tGallery('categories.interior') },
+    { src: "/images/gallery/interieur/13.png", alt: "Dressing moderne", category: tGallery('categories.interior') },
+  ];
+  const vuesPhotos = [
+    { src: "/images/gallery/vues/Coucher de soleil.png", alt: "Coucher de soleil sur la mer", category: tGallery('categories.views') },
+    { src: "/images/gallery/vues/Coucher de soleil 2.png", alt: "Vue sur la baie au crépuscule", category: tGallery('categories.views') },
+    { src: "/images/gallery/vues/Coucher de soleil 3.png", alt: "Panorama méditerranéen", category: tGallery('categories.views') },
   ];
 
-  const categories = Array.from(new Set(photos.map(photo => photo.category)));
+  const allPhotos = [
+    ...exterieurPhotos,
+    ...suitesPhotos,
+    ...interieurPhotos,
+    ...vuesPhotos,
+  ];
+
+  const categories = Array.from(new Set(allPhotos.map(photo => photo.category)));
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
-  const filteredPhotos = activeCategory 
-    ? photos.filter(photo => photo.category === activeCategory)
-    : photos;
+  const filteredPhotos = activeCategory === null
+    ? allPhotos
+    : activeCategory === tGallery('categories.exterior') ? exterieurPhotos
+    : activeCategory === tGallery('categories.suites') ? suitesPhotos
+    : activeCategory === tGallery('categories.interior') ? interieurPhotos
+    : vuesPhotos;
 
   return (
     <>
+      <section className="relative h-screen w-screen overflow-hidden p-0 m-0">
+        <Image
+          src="/images/gallery/13.png"
+          alt="Galerie de la villa - ambiance"
+          fill
+          className="object-cover"
+          priority
+          quality={100}
+        />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-full h-full flex items-center justify-center">
+            <SnakeRectangleAnimation
+              textLine1="Explorez la"
+              textLine2="Galerie de la villa"
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="pt-24 md:pt-32 pb-16">
         <div className="container">
           <motion.div
@@ -312,7 +149,7 @@ export default function GaleriePage() {
                     : "bg-muted hover:bg-black hover:text-white"
                 }`}
               >
-                {category}
+                {category === tGallery('categories.suites') ? 'Suites' : category}
               </button>
             ))}
           </motion.div>
@@ -333,7 +170,7 @@ export default function GaleriePage() {
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  priority
+                  loading="eager"
                 />
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0">
@@ -343,6 +180,21 @@ export default function GaleriePage() {
               </motion.div>
             ))}
           </div>
+
+          {activeCategory === tGallery('categories.views') && (
+            <div className="w-full flex justify-center mt-8">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/wl-HzkOtHC0"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="rounded-lg shadow-lg w-full max-w-2xl aspect-video"
+              />
+            </div>
+          )}
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -375,8 +227,8 @@ export default function GaleriePage() {
           
           <div className="relative w-full max-w-7xl aspect-[16/9]">
             <Image
-              src={photos[selectedImage].src}
-              alt={photos[selectedImage].alt}
+              src={allPhotos[selectedImage].src}
+              alt={allPhotos[selectedImage].alt}
               fill
               className="object-contain"
               priority
