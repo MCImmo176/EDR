@@ -131,7 +131,7 @@ export default function Home() {
 
   return (
     <>
-      {/* Hero Section with Video Background */}
+      {/* Hero Section with Video Background - MODIFIÉ */}
       <section className="relative h-screen w-full overflow-hidden">
         <div className="absolute inset-0" style={{ zIndex: 0 }}>
           <iframe
@@ -139,18 +139,19 @@ export default function Home() {
             src="https://www.youtube.com/embed/pSl-FvfrLzs?autoplay=1&mute=1&loop=1&playlist=pSl-FvfrLzs&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
             title="Vidéo accueil villa"
             frameBorder="0"
-            allow="autoplay; encrypted-media"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             className="absolute"
             style={{ 
               width: '100%', 
               height: '100%',
               position: 'absolute',
-              objectFit: 'cover'
+              objectFit: 'cover',
+              transform: 'scale(1.2)',
+              transformOrigin: 'center center'
             }}
           />
         </div>
-        <div className="absolute inset-0 bg-black/30" />
       
         {/* Contenu Hero */}
         <div className="relative z-10 h-full flex items-center justify-center text-white px-4">

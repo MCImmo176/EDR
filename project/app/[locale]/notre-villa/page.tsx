@@ -12,7 +12,7 @@ export default function NotreVillaPage() {
         overlay={false}
       />
       
-      <div className="relative z-10 h-full flex items-center justify-center text-white px-4">
+      <div className="fixed inset-0 z-10 h-screen w-screen flex items-center justify-center text-white px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -29,4 +29,4 @@ export default function NotreVillaPage() {
       </div>
     </>
   );
-} 
+}
