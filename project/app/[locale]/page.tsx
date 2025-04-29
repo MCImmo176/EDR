@@ -8,6 +8,7 @@ import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
+import { FullscreenVideo } from "@/components/FullscreenVideo";
 
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
@@ -15,16 +16,43 @@ export default function Home() {
   const { t } = useLanguage();
   const [hasWindow, setHasWindow] = useState(false);
   const playerContainerRef = useRef(null);
+  const videoRef = useRef(null);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       setHasWindow(true);
       window.addEventListener('resize', handleResize);
+      handleResize(); // Initial resize
       return () => window.removeEventListener('resize', handleResize);
     }
   }, []);
 
   const handleResize = () => {
+    if (videoRef.current) {
+      const videoContainer = videoRef.current;
+      const windowWidth = window.innerWidth;
+      const windowHeight = window.innerHeight;
+      const windowRatio = windowWidth / windowHeight;
+      const videoRatio = 16 / 9;
+      
+      // Adjust iframe dimensions to cover the entire container without black bars
+      if (windowRatio < videoRatio) {
+        // Window is taller than video ratio - adjust width
+        const newWidth = windowHeight * videoRatio;
+        videoContainer.style.width = `${newWidth}px`;
+        videoContainer.style.height = '100%';
+        videoContainer.style.left = `${(windowWidth - newWidth) / 2}px`;
+        videoContainer.style.top = '0';
+      } else {
+        // Window is wider than video ratio - adjust height
+        const newHeight = windowWidth / videoRatio;
+        videoContainer.style.width = '100%';
+        videoContainer.style.height = `${newHeight}px`;
+        videoContainer.style.left = '0';
+        videoContainer.style.top = `${(windowHeight - newHeight) / 2}px`;
+      }
+    }
+    
     if (playerContainerRef.current) {
       const container = playerContainerRef.current;
       const containerRatio = container.offsetWidth / container.offsetHeight;
@@ -105,19 +133,12 @@ export default function Home() {
   return (
     <>
       {/* Hero Section with Video Background */}
-      <section className="relative h-screen w-full overflow-hidden">
-        <iframe
-          src="https://www.youtube.com/embed/pSl-FvfrLzs?autoplay=1&mute=1&loop=1&playlist=pSl-FvfrLzs&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
-          title="Vidéo accueil villa"
-          frameBorder="0"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ zIndex: 0 }}
-        />
-        <div className="absolute inset-0 bg-black/30" />
-      </section>
-
+      <FullscreenVideo 
+        videoUrl="https://www.youtube.com/embed/pSl-FvfrLzs?autoplay=1&mute=1&loop=1&playlist=pSl-FvfrLzs&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
+        title="Vidéo accueil villa"
+      />
+      
+      {/* Contenu Hero */}
       <div className="relative z-10 h-full flex items-center justify-center text-white px-4">
         <motion.div
           initial="hidden"
@@ -164,19 +185,19 @@ export default function Home() {
       </div>
 
       {/* Content Section */}
-      <section className="py-0 md:py-0 bg-white">
-        <div className="container max-w-6xl mx-auto px-6 mt-0">
+      <section className="py-20 md:py-28 bg-white">
+        <div className="container max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="mt-0"
+            className=""
           >
             <div className="flex flex-col md:flex-row gap-10 items-stretch">
               <div className="w-full md:w-1/2 h-96 md:h-[500px] relative">
                 <Image
-                  src="/images/excellence/interieur/4.jpg"
+                  src="/images/excellence/interieur/2.jpeg"
                   alt="Salon d'exception de la villa"
                   fill
                   className="object-cover"
@@ -216,7 +237,7 @@ export default function Home() {
       </section>
 
       {/* Slogan Section */}
-      <section className="py-10 md:py-16 bg-white">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container max-w-[1400px] mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
