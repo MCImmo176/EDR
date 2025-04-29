@@ -11,25 +11,47 @@
     "learnMore": "Learn more"
   },
   "home": {
-    "title": "Les Étoiles du Rocher",
+    "title": "The Stars of the Rock",
     "subtitle": "Your haven of peace on the French Riviera",
     "booking": {
       "title": "Book your exceptional stay"
     },
-    "excellence": "Excellence in its purest form",
-    "description": "An exceptional 500m² villa nestled between sky and sea, offering an incomparable luxury experience on the French Riviera.",
-    "service": {
-      "title": "Tailored Service",
-      "description": "Every stay at Les Étoiles du Rocher is a unique experience, with personalized service to meet your most demanding desires.",
-      "features": {
-        "concierge": "24/7 Concierge Service",
-        "chef": "Private Chef",
-        "spa": "In-Home Spa Service",
-        "transport": "Private Transport",
-        "cleaning": "Daily Cleaning",
-        "security": "24/7 Security"
+    "content": {
+      "quote": "« There are places where the spirit breathes. »",
+      "quoteAuthor": "— Maurice Barrès",
+      "description1": "Some places possess a rare soul, a silent energy that inspires and soothes. Our estate is the perfect illustration: located just 5 minutes from the Monegasque effervescence, it offers absolute tranquility while providing immediate access to the most beautiful beaches, luxury boutiques, and events on the French Riviera.",
+      "description2": "Enjoy 350 m² spread over two floors, with five private suites featuring exceptional bedding. A discreet guesthouse, nestled in Mediterranean vegetation, offers additional space for your guests.",
+      "description3": "Discover our infinity pool overlooking the sea and our rooftop offering an exceptional panorama of Monaco and the Mediterranean.",
+      "description4": "Between intimacy, elegance, and the art of living, our estate is the ideal address for a unique getaway on the Riviera."
+    },
+    "slogan": {
+      "title": "LIVE THE EXCEPTION",
+      "subtitle": "Enjoy Monaco, without its constraints."
+    },
+    "excellence": {
+      "title": "Excellence in its purest form",
+      "interior": {
+        "reception": "Reception room",
+        "receptionDesc": "An elegant space for your convivial moments",
+        "salon": "Main living room",
+        "salonDesc": "An elegant living space with panoramic view",
+        "kitchen": "Gourmet kitchen",
+        "kitchenDesc": "Equipped with the latest high-end appliances",
+        "dining": "Dining room",
+        "diningDesc": "For refined moments of conviviality",
+        "master": "Master suite",
+        "masterDesc": "A haven of peace with sea view",
+        "bathroom": "Bathroom",
+        "bathroomDesc": "A private spa space with corner bathtub",
+        "pool": "Swimming pool",
+        "poolDesc": "An infinity pool with panoramic view",
+        "exterior": "Exterior view",
+        "exteriorDesc": "An exceptional setting between sky and sea",
+        "night": "Night view",
+        "nightDesc": "A magical atmosphere under the stars"
       }
-    }
+    },
+    "description": "Discover an exceptional place where luxury and authenticity meet to create unforgettable moments."
   },
   "about": {
     "title": "About us",
@@ -46,7 +68,7 @@
       "poolType": "Infinity",
       "view": "View",
       "viewType": "Sea",
-      "beach": "Beach Access",
+      "beach": "Beach access",
       "beachType": "Private"
     },
     "kitchen": {
@@ -55,35 +77,35 @@
       },
       "noPoints": "Click on one of the points to see specific details about this part of the kitchen.",
       "cabinets": {
-        "title": "Upper and Lower Cabinets",
-        "description": "Upper cabinets with invisible fixings and satin glass in the center, raised lower cabinets with two shelves and 15% extra space."
+        "title": "Upper and lower cabinets",
+        "description": "Upper cabinets with invisible fixings and satin glass in the center, raised lower cabinets with two shelves and 15% additional space."
       },
       "counter": {
-        "title": "Countertop and Backsplash",
+        "title": "Countertop and backsplash",
         "description": "Black quartz countertop with contrasting matte finish, tempered glass backsplash for easy cleaning."
       },
       "sink": {
-        "title": "Sink and Faucet",
-        "description": "Undermount stainless steel sink with pull-out faucet with variable flow for more flexibility."
+        "title": "Sink and faucet",
+        "description": "Undermount stainless steel sink with pull-out faucet and variable flow for more flexibility."
       },
       "dishwasher": {
-        "title": "Smart Dishwasher",
+        "title": "Smart dishwasher",
         "description": "Integrated dishwasher with eco program and automatic load detection for optimized consumption."
       },
       "fridge": {
-        "title": "Combined Refrigerators",
+        "title": "Combined refrigerators",
         "description": "Combined refrigerator-freezer with No-Frost compartments and special fresh zone for sensitive foods."
       },
       "oven": {
-        "title": "Oven and Microwave",
+        "title": "Oven and microwave",
         "description": "Multifunction oven with steam function and combined microwave for quick and healthy cooking."
       },
       "stove": {
         "title": "Cooktop",
-        "description": "Induction cooktop with 5 cooking zones and variable bridge to adapt to all types of pots."
+        "description": "Induction cooktop with 5 cooking zones and variable bridge to adapt to all types of pans."
       },
       "island": {
-        "title": "Central Island",
+        "title": "Central island",
         "description": "Central island with integrated storage space and hidden electrical outlets for more convenience."
       }
     },
@@ -102,7 +124,7 @@
       "master": {
         "title": "Master Suite",
         "description": "A spacious master suite with panoramic sea view, marble bathroom and walk-in closet.",
-        "alt": "Master bedroom suite"
+        "alt": "Master suite"
       },
       "main": {
         "title": "Main Living Room",
@@ -144,20 +166,23 @@
     }
   },
   "contact": {
-    "title": "Contact",
-    "description": "Get in touch with us",
     "form": {
-      "name": "Name",
+      "success": "Message sent successfully",
+      "successDetail": "We will get back to you as soon as possible.",
+      "name": "Full Name",
+      "namePlaceholder": "Your full name",
       "email": "Email",
+      "emailPlaceholder": "Your email address",
       "phone": "Phone",
+      "phonePlaceholder": "Your phone number",
       "message": "Message",
-      "send": "Send"
+      "messagePlaceholder": "Your message",
+      "submit": "Send message"
     },
-    "info": {
-      "email": "Email",
-      "phone": "Phone",
-      "address": "Address"
-    }
+    "title": "Let's connect",
+    "intro": "Thank you for visiting our website!",
+    "description": "We would love to hear from you. Whether you have questions, feedback to share, or would like to learn more about our villas, please don't hesitate to contact us.",
+    "response": "Our advisors will get back to you as soon as possible."
   },
   "info": {
     "title": "Information",

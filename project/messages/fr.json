@@ -1,5 +1,6 @@
 {
   "common": {
+    "language": "Langue",
     "welcome": "Bienvenue",
     "about": "À propos",
     "contact": "Contact",
@@ -7,14 +8,28 @@
     "readMore": "En savoir plus",
     "discover": "Découvrir",
     "bookNow": "Réserver",
-    "contactUs": "Nous contacter",
-    "learnMore": "En savoir plus"
+    "contactUs": "Contactez-nous",
+    "learnMore": "En savoir plus",
+    "reserve": "Réserver",
+    "villaName": "Les Étoiles du Rocher"
   },
   "home": {
     "title": "Les Étoiles du Rocher",
     "subtitle": "Votre havre de paix sur la Côte d'Azur",
     "booking": {
       "title": "Réservez votre séjour d'exception"
+    },
+    "content": {
+      "quote": "« Il y a des lieux où souffle l'esprit. »",
+      "quoteAuthor": "— Maurice Barrès",
+      "description1": "Certains lieux possèdent une âme rare, une énergie silencieuse qui inspire et apaise. Notre domaine en est l'illustration parfaite : situé à seulement 5 minutes de l'effervescence monégasque, il offre une tranquillité absolue tout en permettant un accès immédiat aux plus belles plages, boutiques de prestige et événements de la Côte d'Azur.",
+      "description2": "Profitez de 350 m² répartis sur deux étages, avec cinq suites privatives à la literie d'exception. Une dépendance discrète, nichée dans la végétation méditerranéenne, offre un espace supplémentaire pour vos invités.",
+      "description3": "Découvrez notre piscine surplombant la mer et notre rooftop offrant un panorama exceptionnel sur Monaco et la Méditerranée.",
+      "description4": "Entre intimité, élégance et art de vivre, notre domaine est l'adresse idéale pour une escapade unique sur la Riviera."
+    },
+    "slogan": {
+      "title": "VIVEZ L'EXCEPTION",
+      "subtitle": "Profitez de Monaco, sans ses contraintes."
     },
     "excellence": {
       "title": "L'excellence dans sa forme la plus pure",
@@ -47,9 +62,9 @@
   },
   "villa": {
     "title": "La Villa",
-    "description": "Une résidence d'exception",
+    "description": "Une demeure d'exception",
     "features": {
-      "area": "Superficie",
+      "area": "Surface",
       "bedrooms": "Chambres",
       "bathrooms": "Salles de bain",
       "pool": "Piscine",
@@ -61,41 +76,95 @@
     },
     "kitchen": {
       "images": {
-        "alt": "Cuisine de la villa avec électroménagers modernes"
+        "alt": "Cuisine de la villa avec équipements modernes"
       },
       "noPoints": "Cliquez sur l'un des points pour voir les détails spécifiques de cette partie de la cuisine.",
       "cabinets": {
         "title": "Meubles hauts et bas",
-        "description": "Meubles hauts avec fixations invisibles et verre satiné au centre, meubles bas surélevés avec deux étagères et 15% d'espace supplémentaire."
+        "description": "Des rangements optimisés pour une organisation parfaite"
       },
-      "counter": {
-        "title": "Plan de travail et dosseret",
-        "description": "Plan de travail en quartz noir avec finition mate contrastante, dosseret en verre trempé pour un nettoyage facile."
-      },
-      "sink": {
-        "title": "Évier et robinet",
-        "description": "Évier sous plan en acier inoxydable avec robinet extractible à débit variable pour plus de flexibilité."
-      },
-      "dishwasher": {
-        "title": "Lave-vaisselle intelligent",
-        "description": "Lave-vaisselle intégré avec programme éco et détection automatique de la charge pour une consommation optimisée."
-      },
-      "fridge": {
-        "title": "Réfrigérateurs combinés",
-        "description": "Réfrigérateur-congélateur combiné avec compartiments No-Frost et zone fraîche spéciale pour aliments sensibles."
-      },
-      "oven": {
-        "title": "Four et micro-ondes",
-        "description": "Four multifonction avec fonction vapeur et micro-ondes combiné pour une cuisson rapide et saine."
-      },
-      "stove": {
-        "title": "Plaque de cuisson",
-        "description": "Plaque de cuisson à induction avec 5 zones de cuisson et pont variable pour s'adapter à tous les types de casseroles."
+      "appliances": {
+        "title": "Électroménager",
+        "description": "Des appareils haut de gamme pour une cuisine professionnelle"
       },
       "island": {
         "title": "Îlot central",
-        "description": "Îlot central avec espace de rangement intégré et prises électriques cachées pour plus de praticité."
+        "description": "Un espace convivial pour préparer et partager"
+      },
+      "storage": {
+        "title": "Rangements",
+        "description": "Des espaces de stockage intelligents et fonctionnels"
       }
+    },
+    "spaces": {
+      "title": "Découvrez nos espaces",
+      "subtitle": "Chaque espace des Étoiles du Rocher a été conçu pour vous offrir confort, élégance et moments inoubliables.",
+      "galleryButton": "Accéder à la galerie",
+      "living": {
+        "title": "Salon lumineux",
+        "description": "Un espace convivial avec vue panoramique sur la Méditerranée"
+      },
+      "living2": {
+        "title": "Salon ouvert et lumineux",
+        "description": "Un vaste espace de vie baigné de lumière, idéal pour se détendre ou recevoir"
+      },
+      "pool": {
+        "title": "Piscine privative",
+        "description": "Profitez d'une baignade face à la mer"
+      },
+      "suites": {
+        "title": "5 suites privatives",
+        "description": "Chaque chambre dispose de sa salle de bain, s'ouvre sur l'extérieur et profite d'une lumière naturelle abondante"
+      }
+    },
+    "livingSpaces": {
+      "title": "DES LIEUX DE VIE SUR-MESURE",
+      "description1": "Découvrez un lieu de vie idéal pour recevoir ou passer des moments en famille.",
+      "description2": "Les villas ont été méticuleusement pensées pour donner vie à des espaces intelligents, fonctionnels et harmonieux.",
+      "description3": "Les intérieurs des villas sont conçus pour préserver votre intimité tout en offrant de belles ouvertures sur les espaces extérieurs.",
+      "description4": "Chacune des 5 suites propose des espaces de vie intérieurs et extérieurs spacieux et parfaitement agencés."
+    },
+    "practicalInfo": {
+      "title": "Informations pratiques",
+      "subtitle": "Tout ce que vous devez savoir pour profiter pleinement de votre séjour aux Étoiles du Rocher",
+      "location": {
+        "title": "Situation",
+        "description": "Idéalement située à Roquebrune Cap Martin, à quelques minutes de Monaco et des plus belles plages de la Côte d'Azur"
+      },
+      "availability": {
+        "title": "Disponibilité",
+        "description": "La villa est disponible à la location toute l'année, avec une durée minimale de séjour d'une semaine"
+      },
+      "equipment": {
+        "title": "Équipements",
+        "description": "Des équipements haut de gamme et des services personnalisés pour un séjour d'exception"
+      },
+      "security": {
+        "title": "Sécurité",
+        "description": "Propriété entièrement sécurisée avec système d'alarme, vidéosurveillance et service de sécurité sur demande"
+      }
+    },
+    "houseRules": {
+      "checkin": {
+        "title": "Check-in & Check-out",
+        "description": "Arrivée à partir de 16h00 et départ au plus tard à 10h00. Un accueil personnalisé vous sera réservé"
+      },
+      "access": {
+        "title": "Accès & Sécurité",
+        "description": "La villa est équipée d'un système de sécurité dernière génération. Les codes d'accès vous seront remis à votre arrivée"
+      },
+      "quiet": {
+        "title": "Tranquillité",
+        "description": "Par respect pour le voisinage, nous vous demandons de maintenir un niveau sonore raisonnable, particulièrement après 22h00"
+      }
+    },
+    "distances": {
+      "monaco": "Monaco",
+      "nice": "Nice",
+      "cannes": "Cannes",
+      "saintTropez": "Saint-Tropez",
+      "airport": "Aéroport Nice",
+      "beach": "Plage"
     },
     "images": {
       "exterior": {
@@ -133,36 +202,35 @@
   },
   "gallery": {
     "title": "Galerie",
-    "subtitle": "Découvrez Les Étoiles du Rocher à travers notre galerie photos",
-    "categories": {
-      "all": "Tout",
-      "exterior": "Extérieur",
-      "interior": "Intérieur",
-      "bedrooms": "Chambres",
-      "views": "Vues"
-    },
-    "images": {
-      "exterior": "Vue extérieure de la villa",
-      "living": "Salon avec vue panoramique",
-      "bedroom": "Chambre principale",
-      "terrace": "Terrasse et piscine",
-      "kitchen": "Cuisine équipée",
-      "seaView": "Vue sur la mer",
-      "dining": "Salle à manger",
-      "aerial": "Vue aérienne",
-      "master": "Suite parentale"
+    "description": "Découvrez la beauté de notre villa à travers nos photos.",
+    "photos": {
+      "exterior": "Vue extérieure de la villa avec piscine et vue mer",
+      "living": "Salon de luxe avec portes vitrées",
+      "bedroom": "Chambre principale avec vue mer",
+      "terrace": "Terrasse avec piscine à débordement",
+      "kitchen": "Cuisine entièrement équipée",
+      "seaView": "Vue panoramique sur la Méditerranée",
+      "dining": "Salle à manger élégante",
+      "aerial": "Vue aérienne de la villa",
+      "master": "Suite principale"
     }
   },
   "contact": {
-    "title": "Contactez-nous",
-    "subtitle": "Pour toute demande d'information ou de réservation, n'hésitez pas à nous contacter.",
+    "title": "Échangeons ensemble",
+    "intro": "Merci d'avoir visité notre site web !",
+    "description": "Nous serions ravis d'échanger avec vous. Que vous ayez des questions, des retours à partager ou que vous souhaitiez en savoir plus sur nos villas, n'hésitez pas à nous contacter.",
+    "response": "Nos conseillers vous répondront dans les plus brefs délais.",
     "form": {
-      "title": "Formulaire de contact",
-      "name": "Nom",
+      "success": "Message envoyé avec succès",
+      "successDetail": "Nous vous répondrons dans les plus brefs délais.",
+      "name": "Nom & Prénom",
+      "namePlaceholder": "Votre nom complet",
       "email": "Email",
+      "emailPlaceholder": "Votre adresse email",
       "phone": "Téléphone",
+      "phonePlaceholder": "Votre numéro de téléphone",
       "message": "Message",
-      "send": "Envoyer",
+      "messagePlaceholder": "Votre message",
       "submit": "Envoyer le message"
     },
     "info": {
@@ -183,7 +251,7 @@
   },
   "discover": {
     "title": "Découvrir",
-    "subtitle": "Explorez les merveilles de la Côte d'Azur depuis les Étoiles du Rocher.",
+    "subtitle": "Explorez les merveilles de la Côte d'Azur depuis Les Étoiles du Rocher.",
     "experiences": {
       "title": "Expériences",
       "subtitle": "Une multitude d'activités pour rendre votre séjour inoubliable.",
@@ -193,35 +261,35 @@
           "items": [
             "Location de yacht",
             "Plongée sous-marine",
-            "Stand-up paddle et kayak",
-            "Jet ski"
+            "Voile",
+            "Pêche"
           ]
         },
         "culture": {
-          "title": "Culture & Histoire",
+          "title": "Culture et histoire",
           "items": [
             "Musées",
             "Sites historiques",
-            "Galeries d'art",
-            "Concerts"
+            "Monuments",
+            "Villages perchés"
           ]
         },
         "gastronomy": {
           "title": "Gastronomie",
           "items": [
-            "Restaurants étoilés",
-            "Marchés locaux",
+            "Restaurants étoilés Michelin",
             "Dégustations de vins",
-            "Cours de cuisine"
+            "Marchés locaux",
+            "Cuisine méditerranéenne"
           ]
         },
         "nature": {
-          "title": "Nature & Sport",
+          "title": "Nature et sports",
           "items": [
             "Randonnées",
             "Golf",
             "Tennis",
-            "VTT électrique"
+            "Cyclisme"
           ]
         }
       }
@@ -229,71 +297,49 @@
     "activities": {
       "monaco": {
         "title": "Monaco",
-        "description": "Découvrez la Principauté de Monaco, ses légendaires casinos, le Palais Princier et le Grand Prix de Formule 1.",
-        "distance": "10 minutes"
+        "description": "Le célèbre rocher monégasque",
+        "distance": "5 minutes"
       },
       "nice": {
         "title": "Nice",
-        "description": "Promenez-vous sur la Promenade des Anglais, visitez le Vieux Nice et savourez la gastronomie locale.",
-        "distance": "30 minutes"
+        "description": "La capitale de la Côte d'Azur",
+        "distance": "20 minutes"
       },
       "eze": {
-        "title": "Èze Village",
-        "description": "Village médiéval perché avec vue imprenable sur la Méditerranée et le célèbre Jardin Exotique.",
+        "title": "Eze Village",
+        "description": "Village médiéval perché",
         "distance": "15 minutes"
       },
       "saintPaul": {
         "title": "Saint-Paul-de-Vence",
-        "description": "Village des artistes avec galeries d'art, remparts et la Fondation Maeght.",
-        "distance": "45 minutes"
+        "description": "Village d'artistes",
+        "distance": "30 minutes"
       },
       "menton": {
         "title": "Menton",
-        "description": "La perle de la France, connue pour ses jardins, le festival du citron et ses plages.",
-        "distance": "15 minutes"
+        "description": "La perle de la France",
+        "distance": "25 minutes"
       },
       "antibes": {
         "title": "Antibes",
-        "description": "Découvrez le Port Vauban, le Fort Carré et le musée Picasso dans cette ville historique.",
-        "distance": "40 minutes"
+        "description": "Ville historique et portuaire",
+        "distance": "35 minutes"
       }
     },
     "readMore": "En savoir plus"
   },
   "footer": {
-    "terms": "Conditions Générales",
-    "sales": "Conditions de Vente",
-    "rights": "Tous droits réservés"
+    "terms": "Conditions générales",
+    "sales": "Conditions de vente",
+    "gallery": "Galerie",
+    "discover": "Découvrir"
   },
   "terms": {
-    "title": "Conditions Générales d'Utilisation",
-    "section1": {
-      "title": "Acceptation des conditions",
-      "content": "L'utilisation du site web Les Étoiles du Rocher implique l'acceptation pleine et entière des conditions générales d'utilisation décrites ci-après."
-    },
-    "section2": {
-      "title": "Informations",
-      "content": "Les informations contenues sur ce site sont fournies à titre indicatif et peuvent être modifiées à tout moment sans préavis."
-    },
-    "section3": {
-      "title": "Services et disponibilité",
-      "content": "Les services proposés sur ce site sont soumis à disponibilité. Les Étoiles du Rocher se réserve le droit de modifier ou d'interrompre tout ou partie des services sans préavis."
-    },
-    "section4": {
-      "title": "Propriété intellectuelle",
-      "content": "Le site et toutes les photos utilisées sont la propriété exclusive de la SAS ALPHA GROUP. Toute reproduction, distribution ou utilisation non autorisée est strictement interdite."
-    },
-    "section5": {
-      "title": "Protection des données personnelles",
-      "content": "Les données personnelles collectées sur ce site sont traitées conformément à notre politique de confidentialité."
-    },
-    "section6": {
-      "title": "Droit applicable",
-      "content": "Les présentes conditions sont régies par le droit français."
-    }
+    "title": "Conditions générales",
+    "content": "Contenu des conditions générales..."
   },
   "sales": {
-    "title": "Conditions Générales de Vente",
-    "content": "Le site internet et toutes les photographies utilisées sont la propriété exclusive de SAS ALPHA GROUP. Toute reproduction, distribution ou utilisation non autorisée est strictement interdite."
+    "title": "Conditions de vente",
+    "content": "Contenu des conditions de vente..."
   }
 } 

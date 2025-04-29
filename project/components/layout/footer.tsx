@@ -3,9 +3,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useLanguage } from '@/hooks/useLanguage';
+import { usePathname } from 'next/navigation';
 
 export function Footer() {
   const { t } = useLanguage();
+  const pathname = usePathname();
+  const currentLocale = pathname.split('/')[1];
 
   const flags = [
     { locale: "fr", src: "/images/flags/france.png", alt: "Drapeau français" },
@@ -21,44 +24,51 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
             <div className="flex flex-col md:flex-row gap-6">
-              <Link href="/terms" className="hover:text-primary transition-colors">
+              <Link href={`/${currentLocale}/terms`} className="hover:text-primary transition-colors">
                 {t('footer.terms')}
               </Link>
-              <Link href="/sales-terms" className="hover:text-primary transition-colors">
+              <Link href={`/${currentLocale}/sales-terms`} className="hover:text-primary transition-colors">
                 {t('footer.sales')}
               </Link>
-              <Link href="/galerie" className="hover:text-primary transition-colors">
-                Galerie
+              <Link href={`/${currentLocale}/galerie`} className="hover:text-primary transition-colors">
+                {t('gallery.title')}
               </Link>
-              <Link href="/decouvrir" className="hover:text-primary transition-colors">
-                Découvrir
+              <Link href={`/${currentLocale}/decouvrir`} className="hover:text-primary transition-colors">
+                {t('discover.title')}
               </Link>
             </div>
           </div>
 
           <div className="text-center order-last md:order-2">
-            <span>© 2025 Les Étoiles du Rocher</span>
+            <span>© 2025 {t('common.villaName')}</span>
           </div>
           
           <div className="flex gap-4 items-center order-2 md:order-last">
-            {flags.map((flag) => (
-              <Link 
-                key={flag.locale} 
-                href={`/${flag.locale}`} 
-                className="block hover:opacity-80 transition-opacity"
-              >
-                <div className="w-[35px] h-[25px] relative">
-                  <Image
-                    src={flag.src}
-                    alt={flag.alt}
-                    fill
-                    sizes="35px"
-                    className="object-cover"
-                    unoptimized
-                  />
-                </div>
-              </Link>
-            ))}
+            {flags.map((flag) => {
+              // Extraire le chemin actuel sans la locale
+              const currentPath = pathname.split('/').slice(2).join('/');
+              // Construire le nouveau chemin avec la nouvelle locale
+              const newPath = `/${flag.locale}/${currentPath}`;
+              
+              return (
+                <Link 
+                  key={flag.locale} 
+                  href={newPath}
+                  className="block hover:opacity-80 transition-opacity"
+                >
+                  <div className="w-[35px] h-[25px] relative">
+                    <Image
+                      src={flag.src}
+                      alt={flag.alt}
+                      fill
+                      sizes="35px"
+                      className="object-cover"
+                      unoptimized
+                    />
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>

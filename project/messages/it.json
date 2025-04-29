@@ -1,6 +1,6 @@
 {
   "common": {
-    "welcome": "Benvenuti",
+    "welcome": "Benvenuto",
     "about": "Chi siamo",
     "contact": "Contatto",
     "services": "Servizi",
@@ -8,32 +8,94 @@
     "discover": "Scoprire",
     "bookNow": "Prenota ora",
     "contactUs": "Contattaci",
-    "learnMore": "Scopri di più"
+    "learnMore": "Scopri di più",
+    "language": "Lingua",
+    "reserve": "Prenota",
+    "villaName": "Le Stelle della Roccia",
+    "menu": {
+      "home": "Home",
+      "villa": "La Villa",
+      "gallery": "Galleria",
+      "contact": "Contatti"
+    }
   },
   "home": {
-    "title": "Les Étoiles du Rocher",
-    "subtitle": "Il tuo paradiso sulla Costa Azzurra",
+    "title": "Le Stelle della Roccia",
+    "subtitle": "Il tuo rifugio di pace sulla Costa Azzurra",
     "booking": {
       "title": "Prenota il tuo soggiorno eccezionale"
     },
-    "excellence": "L'eccellenza nella sua forma più pura",
-    "description": "Una villa eccezionale di 500m² incastonata tra cielo e mare, che offre un'esperienza di lusso incomparabile sulla Costa Azzurra.",
-    "service": {
-      "title": "Servizio su misura",
-      "description": "Ogni soggiorno a Les Étoiles du Rocher è un'esperienza unica, con un servizio personalizzato per soddisfare i vostri desideri più esigenti.",
-      "features": {
-        "concierge": "Servizio concierge 24/7",
-        "chef": "Chef privato",
-        "spa": "Servizio spa a domicilio",
-        "transport": "Trasporto privato",
-        "cleaning": "Pulizia quotidiana",
-        "security": "Sicurezza 24/7"
+    "content": {
+      "quote": "« Ci sono luoghi dove soffia lo spirito. »",
+      "quoteAuthor": "— Maurice Barrès",
+      "description1": "Alcuni luoghi possiedono un'anima rara, un'energia silenziosa che ispira e placa. Il nostro dominio ne è l'illustrazione perfetta: situato a soli 5 minuti dall'effervescenza monegasca, offre un'assoluta tranquillità garantendo al contempo un accesso immediato alle più belle spiagge, boutique di prestigio ed eventi della Costa Azzurra.",
+      "description2": "Goditi 350 m² distribuiti su due piani, con cinque suite private dotate di letti eccezionali. Una dependance discreta, incastonata nella vegetazione mediterranea, offre uno spazio aggiuntivo per i tuoi ospiti.",
+      "description3": "Scopri la nostra piscina a sfioro che domina il mare e il nostro rooftop che offre un panorama eccezionale su Monaco e il Mediterraneo.",
+      "description4": "Tra intimità, eleganza e arte di vivere, il nostro dominio è l'indirizzo ideale per una fuga unica sulla Riviera."
+    },
+    "slogan": {
+      "title": "VIVI L'ECCEZIONALE",
+      "subtitle": "Goditi Monaco, senza i suoi vincoli."
+    },
+    "excellence": {
+      "title": "L'eccellenza nella sua forma più pura",
+      "interior": {
+        "reception": "Sala ricevimenti",
+        "receptionDesc": "Uno spazio elegante per i tuoi momenti conviviali",
+        "salon": "Salone principale",
+        "salonDesc": "Uno spazio abitativo elegante con vista panoramica",
+        "kitchen": "Cucina gourmet",
+        "kitchenDesc": "Dotata degli ultimi elettrodomestici di alta gamma",
+        "dining": "Sala da pranzo",
+        "diningDesc": "Per momenti conviviali raffinati",
+        "master": "Suite principale",
+        "masterDesc": "Un'oasi di pace con vista mare",
+        "bathroom": "Bagno",
+        "bathroomDesc": "Uno spazio spa privato con vasca angolare",
+        "pool": "Piscina",
+        "poolDesc": "Una piscina a sfioro con vista panoramica",
+        "exterior": "Vista esterna",
+        "exteriorDesc": "Una cornice eccezionale tra cielo e mare",
+        "night": "Vista notturna",
+        "nightDesc": "Un'atmosfera magica sotto le stelle"
       }
-    }
+    },
+    "description": "Scopri un luogo eccezionale dove lusso e autenticità si incontrano per creare momenti indimenticabili."
   },
   "villa": {
     "title": "La Villa",
     "description": "Una residenza eccezionale",
+    "ourVilla": {
+      "title": "La Nostra Villa",
+      "description": "Scopri la nostra villa di lusso con vista mozzafiato sul Mediterraneo.",
+      "features": {
+        "title": "Caratteristiche",
+        "area": "Superficie",
+        "bedrooms": "Camere da letto",
+        "bathrooms": "Bagni",
+        "pool": "Piscina",
+        "view": "Vista",
+        "beach": "Accesso alla spiaggia"
+      },
+      "spaces": {
+        "title": "Spazi",
+        "living": "Soggiorno",
+        "dining": "Sala da pranzo",
+        "kitchen": "Cucina",
+        "bedrooms": "Camere da letto",
+        "bathrooms": "Bagni",
+        "terrace": "Terrazza",
+        "garden": "Giardino"
+      },
+      "amenities": {
+        "title": "Servizi",
+        "wifi": "Wi-Fi",
+        "parking": "Parcheggio",
+        "security": "Sicurezza",
+        "cleaning": "Servizio di pulizia",
+        "concierge": "Concierge"
+      }
+    },
     "features": {
       "area": "Superficie",
       "bedrooms": "Camere da letto",
@@ -49,10 +111,10 @@
       "images": {
         "alt": "Cucina della villa con elettrodomestici moderni"
       },
-      "noPoints": "Clicca su uno dei punti per visualizzare i dettagli specifici di quella parte della cucina.",
+      "noPoints": "Clicca su uno dei punti per vedere i dettagli specifici di questa parte della cucina.",
       "cabinets": {
-        "title": "Mobili superiori e inferiori",
-        "description": "Mobili superiori con fissaggi invisibili e vetro satinato al centro, mobili inferiori rialzati con due ripiani e 15% di spazio extra."
+        "title": "Mobili alti e bassi",
+        "description": "Mobili alti con fissaggi invisibili e vetro satinato al centro, mobili bassi rialzati con due ripiani e 15% di spazio aggiuntivo."
       },
       "counter": {
         "title": "Piano di lavoro e schienale",
@@ -80,79 +142,101 @@
       },
       "island": {
         "title": "Isola centrale",
-        "description": "Isola centrale con spazio di archiviazione integrato e prese elettriche nascoste per maggiore praticità."
+        "description": "Isola centrale con spazio di stoccaggio integrato e prese elettriche nascoste per maggiore praticità."
       }
     },
-    "images": {
-      "exterior": {
-        "alt": "Esterno della villa con piscina e vista mare"
-      },
+    "spaces": {
+      "title": "Gli spazi",
       "living": {
-        "alt": "Soggiorno di lusso con porte vetrate"
+        "title": "Soggiorno",
+        "description": "Un ampio soggiorno con vista panoramica sul mare."
       },
-      "bedroom": {
-        "alt": "Camera da letto principale con vista mare"
-      }
-    },
-    "rooms": {
-      "master": {
-        "title": "Suite Principale",
-        "description": "Una spaziosa suite principale con vista panoramica sul mare, bagno in marmo e guardaroba.",
-        "alt": "Suite della camera da letto principale"
-      },
-      "main": {
-        "title": "Soggiorno Principale",
-        "description": "Un elegante soggiorno con porte vetrate che offre una vista incomparabile sul Mediterraneo.",
-        "alt": "Soggiorno principale"
+      "dining": {
+        "title": "Sala da pranzo",
+        "description": "Una sala da pranzo elegante per i vostri momenti conviviali."
       },
       "terrace": {
-        "title": "Terrazza & Piscina",
-        "description": "Una vasta terrazza con piscina infinity e area relax con vista mare.",
-        "alt": "Terrazza con piscina infinity"
-      },
-      "gourmet": {
-        "title": "Cucina Gourmet",
-        "description": "Una cucina completamente attrezzata con isola centrale ed elettrodomestici di alta gamma.",
-        "alt": "Cucina gourmet"
+        "title": "Terrazza",
+        "description": "Una terrazza spaziosa con vista mozzafiato sul Mediterraneo."
       }
+    },
+    "practicalInfo": {
+      "title": "Informazioni pratiche",
+      "location": {
+        "title": "Posizione",
+        "description": "La villa si trova a Cap d'Ail, a pochi minuti da Monaco."
+      },
+      "availability": {
+        "title": "Disponibilità",
+        "description": "Contattateci per conoscere le disponibilità e le tariffe."
+      },
+      "equipment": {
+        "title": "Attrezzature",
+        "description": "La villa è completamente attrezzata per il vostro comfort."
+      },
+      "security": {
+        "title": "Sicurezza",
+        "description": "Sistema di allarme e videosorveglianza per la vostra tranquillità."
+      }
+    },
+    "houseRules": {
+      "title": "Regole della casa",
+      "checkIn": {
+        "title": "Check-in/Check-out",
+        "description": "Check-in dalle 16:00, check-out entro le 11:00."
+      },
+      "access": {
+        "title": "Accesso",
+        "description": "Accesso riservato ai soli ospiti registrati."
+      },
+      "noise": {
+        "title": "Rumore",
+        "description": "Rispetto del silenzio dopo le 22:00."
+      }
+    },
+    "distances": {
+      "title": "Distanze",
+      "monaco": "Monaco",
+      "nice": "Nizza",
+      "cannes": "Cannes",
+      "saintTropez": "Saint-Tropez",
+      "niceAirport": "Aeroporto di Nizza"
     }
   },
   "gallery": {
     "title": "Galleria",
-    "subtitle": "Scopri Les Étoiles du Rocher attraverso la nostra galleria fotografica",
-    "categories": {
-      "all": "Tutto",
-      "exterior": "Esterno",
-      "interior": "Interno",
-      "bedrooms": "Camere da letto",
-      "views": "Viste"
-    },
-    "images": {
-      "exterior": "Vista esterna della villa",
-      "living": "Soggiorno con vista panoramica",
-      "bedroom": "Camera da letto principale",
-      "terrace": "Terrazza e piscina",
+    "description": "Scopri la bellezza della nostra villa attraverso le nostre foto.",
+    "photos": {
+      "exterior": "Vista esterna della villa con piscina e vista mare",
+      "living": "Salone di lusso con porte vetrate",
+      "bedroom": "Camera da letto principale con vista mare",
+      "terrace": "Terrazza con piscina infinity",
       "kitchen": "Cucina completamente attrezzata",
-      "seaView": "Vista sul mare",
-      "dining": "Sala da pranzo",
-      "aerial": "Vista aerea",
+      "seaView": "Vista panoramica sul Mediterraneo",
+      "dining": "Sala da pranzo elegante",
+      "aerial": "Vista aerea della villa",
       "master": "Suite principale"
     }
   },
   "contact": {
     "title": "Contatti",
-    "description": "Mettiti in contatto con noi",
+    "description": "Contattateci per qualsiasi informazione o prenotazione.",
     "form": {
-      "name": "Nome",
+      "name": "Nome e Cognome",
       "email": "Email",
       "phone": "Telefono",
       "message": "Messaggio",
-      "send": "Invia"
+      "submit": "Invia",
+      "success": "Messaggio inviato con successo",
+      "error": "Si è verificato un errore durante l'invio del messaggio"
     },
     "info": {
-      "email": "Email",
+      "title": "Informazioni di contatto",
+      "address": "Indirizzo",
       "phone": "Telefono",
-      "address": "Indirizzo"
+      "email": "Email",
+      "hours": "Orari di apertura",
+      "social": "Seguici sui social media"
     }
   },
   "info": {
@@ -167,18 +251,18 @@
   },
   "discover": {
     "title": "Scopri",
-    "subtitle": "Esplora le meraviglie della Costa Azzurra da Les Étoiles du Rocher.",
+    "subtitle": "Esplora le meraviglie della Costa Azzurra da Le Stelle della Roccia.",
     "experiences": {
       "title": "Esperienze",
       "subtitle": "Una moltitudine di attività per rendere il tuo soggiorno indimenticabile.",
       "categories": {
         "nautical": {
-          "title": "Attività acquatiche",
+          "title": "Attività nautiche",
           "items": [
             "Noleggio yacht",
             "Immersioni",
-            "Stand-up paddle e kayak",
-            "Jet ski"
+            "Vela",
+            "Pesca"
           ]
         },
         "culture": {
@@ -186,17 +270,17 @@
           "items": [
             "Musei",
             "Siti storici",
-            "Gallerie d'arte",
-            "Concerti"
+            "Monumenti",
+            "Villaggi arroccati"
           ]
         },
         "gastronomy": {
           "title": "Gastronomia",
           "items": [
             "Ristoranti stellati Michelin",
-            "Mercati locali",
             "Degustazioni di vini",
-            "Corsi di cucina"
+            "Mercati locali",
+            "Cucina mediterranea"
           ]
         },
         "nature": {
@@ -205,7 +289,7 @@
             "Escursioni",
             "Golf",
             "Tennis",
-            "Mountain bike elettrica"
+            "Ciclismo"
           ]
         }
       }
@@ -213,66 +297,49 @@
     "activities": {
       "monaco": {
         "title": "Monaco",
-        "description": "Scopri il Principato di Monaco, i suoi leggendari casinò, il Palazzo del Principe e il Gran Premio di Formula 1.",
-        "distance": "10 minuti"
+        "description": "Il celebre scoglio monegasco",
+        "distance": "5 minuti"
       },
       "nice": {
         "title": "Nizza",
-        "description": "Passeggia sulla Promenade des Anglais, visita la Vecchia Nizza e goditi la gastronomia locale.",
-        "distance": "30 minuti"
+        "description": "La capitale della Costa Azzurra",
+        "distance": "20 minuti"
       },
       "eze": {
         "title": "Eze Village",
-        "description": "Villaggio medievale arroccato con vista mozzafiato sul Mediterraneo e il famoso Giardino Esotico.",
+        "description": "Villaggio medievale arroccato",
         "distance": "15 minuti"
       },
       "saintPaul": {
         "title": "Saint-Paul-de-Vence",
-        "description": "Villaggio degli artisti con gallerie d'arte, mura e la Fondazione Maeght.",
-        "distance": "45 minuti"
+        "description": "Villaggio degli artisti",
+        "distance": "30 minuti"
       },
       "menton": {
         "title": "Mentone",
-        "description": "La perla della Francia, nota per i suoi giardini, il festival del limone e le sue spiagge.",
-        "distance": "15 minuti"
+        "description": "La perla della Francia",
+        "distance": "25 minuti"
       },
       "antibes": {
         "title": "Antibes",
-        "description": "Scopri il Port Vauban, il Fort Carré e il museo Picasso in questa città storica.",
-        "distance": "40 minuti"
+        "description": "Città storica e portuale",
+        "distance": "35 minuti"
       }
     },
     "readMore": "Scopri di più"
   },
   "terms": {
-    "title": "Termini e Condizioni",
-    "section1": {
-      "title": "1. Accettazione dei Termini",
-      "content": "L'utilizzo del sito web Les Étoiles du Rocher implica l'accettazione piena e completa delle condizioni generali di utilizzo descritte di seguito. Queste condizioni di utilizzo possono essere modificate o integrate in qualsiasi momento."
-    },
-    "section2": {
-      "title": "2. Informazioni",
-      "content": "Le informazioni presentate su questo sito sono non contrattuali e soggette a modifiche senza preavviso. Nonostante tutte le cure prese per garantire la qualità dei suoi contenuti, Les Étoiles du Rocher non può essere ritenuta responsabile per errori o omissioni, o per le conseguenze dell'utilizzo delle informazioni contenute sul sito."
-    },
-    "section3": {
-      "title": "3. Servizi e Disponibilità",
-      "content": "I servizi e le strutture presentate sul sito sono soggetti a disponibilità. I prezzi indicati possono variare a seconda della stagione e della durata del soggiorno. La prenotazione è confermata solo dopo la validazione da parte del nostro team e il pagamento dell'acconto."
-    },
-    "section4": {
-      "title": "4. Proprietà Intellettuale",
-      "content": "Tutti gli elementi presenti sul sito (testi, immagini, logo, ecc.) sono protetti dalle leggi sulla proprietà intellettuale. Qualsiasi riproduzione totale o parziale di questi elementi è severamente vietata senza autorizzazione preventiva."
-    },
-    "section5": {
-      "title": "5. Protezione dei Dati Personali",
-      "content": "In conformità con la legislazione vigente, le informazioni raccolte su questo sito sono destinate esclusivamente a Les Étoiles du Rocher. Hai il diritto di accedere, modificare, correggere e cancellare i dati che ti riguardano."
-    },
-    "section6": {
-      "title": "6. Legge Applicabile",
-      "content": "Queste condizioni di utilizzo sono regolate dalla legge francese. In caso di controversia, i tribunali francesi avranno giurisdizione esclusiva."
-    }
+    "title": "Termini e condizioni",
+    "content": "Contenuto dei termini e condizioni..."
   },
   "sales": {
-    "title": "Termini Generali di Vendita",
-    "content": "Il sito web e tutte le fotografie utilizzate sono di esclusiva proprietà di SAS ALPHA GROUP. Qualsiasi riproduzione, distribuzione o utilizzo non autorizzato è severamente vietato."
+    "title": "Condizioni di vendita",
+    "content": "Contenuto delle condizioni di vendita..."
+  },
+  "footer": {
+    "terms": "Termini e condizioni",
+    "sales": "Condizioni di vendita",
+    "gallery": "Galleria",
+    "discover": "Scopri"
   }
 } 

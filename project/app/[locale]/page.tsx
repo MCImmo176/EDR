@@ -224,26 +224,20 @@ export default function Home() {
               <div className="w-full md:w-1/2 flex items-center">
                 <div className="prose prose-lg max-h-[500px] overflow-y-auto pr-4">
                   <blockquote className="text-xl italic font-serif mb-6">
-                    « Il y a des lieux où souffle l'esprit. »
-                    <footer className="mt-2 text-right font-sans not-italic">— Maurice Barrès</footer>
+                    {t('home.content.quote')}
+                    <footer className="mt-2 text-right font-sans not-italic">{t('home.content.quoteAuthor')}</footer>
                   </blockquote>
                   <p className="mb-4">
-                    Certains lieux possèdent une âme rare, une énergie silencieuse qui inspire et apaise. 
-                    Notre domaine en est l'illustration parfaite : situé à seulement <strong>5 minutes de l'effervescence monégasque</strong>, 
-                    il offre une <strong>tranquillité absolue</strong> tout en permettant un accès immédiat aux plus belles plages, 
-                    boutiques de prestige et événements de la Côte d'Azur.
+                    {t('home.content.description1')}
                   </p>
                   <p className="mb-4">
-                    Profitez de <strong>350 m²</strong> répartis sur deux étages, avec <strong>cinq suites privatives</strong> 
-                    à la literie d'exception. Une <strong>dépendance discrète</strong>, nichée dans la végétation méditerranéenne, 
-                    offre un espace supplémentaire pour vos invités.
+                    {t('home.content.description2')}
                   </p>
                   <p className="mb-4">
-                    Découvrez notre <strong>piscine surplombant la mer</strong> et notre <strong>rooftop</strong>  offrant un panorama exceptionnel sur Monaco et la Méditerranée.
+                    {t('home.content.description3')}
                   </p>
                   <p className="italic">
-                    Entre intimité, élégance et art de vivre, notre domaine est l'adresse idéale 
-                    pour une escapade unique sur la Riviera.
+                    {t('home.content.description4')}
                   </p>
                 </div>
               </div>
@@ -258,12 +252,12 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-5xl md:text-6xl font-extrabold text-black mb-2" style={{ fontFamily: 'inherit' }}>
-                VIVEZ L'EXCEPTION
+                {t('home.slogan.title')}
               </h2>
             </div>
             <div>
               <p className="text-2xl md:text-3xl font-light text-black leading-relaxed">
-                Profitez de Monaco, sans ses contraintes.
+                {t('home.slogan.subtitle')}
               </p>
             </div>
           </div>
