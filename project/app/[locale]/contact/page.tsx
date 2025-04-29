@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react"; // Ajout de useEffect et useRef
 import { Send, Check } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -35,7 +35,43 @@ const formSchema = z.object({
 export default function ContactPage() {
   const t = useTranslations('contact');
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const videoRef = useRef(null); // Ajout de la référence pour la vidéo
   
+  // Fonction pour ajuster la taille de la vidéo
+  const handleResize = () => {
+    if (videoRef.current) {
+      const videoContainer = videoRef.current;
+      const windowWidth = window.innerWidth;
+      const windowHeight = window.innerHeight;
+      const windowRatio = windowWidth / windowHeight;
+      const videoRatio = 16 / 9;
+      
+      if (windowRatio < videoRatio) {
+        // Window is taller than video ratio - adjust width
+        const newWidth = windowHeight * videoRatio;
+        videoContainer.style.width = `${newWidth}px`;
+        videoContainer.style.height = '100%';
+        videoContainer.style.left = `${(windowWidth - newWidth) / 2}px`;
+        videoContainer.style.top = '0';
+      } else {
+        // Window is wider than video ratio - adjust height
+        const newHeight = windowWidth / videoRatio;
+        videoContainer.style.width = '100%';
+        videoContainer.style.height = `${newHeight}px`;
+        videoContainer.style.left = '0';
+        videoContainer.style.top = `${(windowHeight - newHeight) / 2}px`;
+      }
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener('resize', handleResize);
+      handleResize(); // Initial resize
+      return () => window.removeEventListener('resize', handleResize);
+    }
+  }, []);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -57,16 +93,34 @@ export default function ContactPage() {
   return (
     <>
       <section className="relative w-screen h-screen overflow-hidden p-0 m-0">
-        <iframe
-          src="https://www.youtube.com/embed/hoGfA3DP2PQ?autoplay=1&mute=1&loop=1&playlist=hoGfA3DP2PQ&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
-          title="Vidéo contact villa"
-          frameBorder="0"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ zIndex: 0 }}
-        />
-        <div className="absolute inset-0 bg-black/20 flex items-center">
+        <div 
+          ref={videoRef}
+          className="absolute inset-0 w-full h-full"
+          style={{
+            overflow: 'hidden',
+            zIndex: 0
+          }}
+        >
+          <iframe
+            src="https://www.youtube.com/embed/hoGfA3DP2PQ?autoplay=1&mute=1&loop=1&playlist=hoGfA3DP2PQ&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
+            title="Vidéo contact villa"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover', // Garantit le remplissage complet
+              transform: 'none', // Retire le translate qui pouvait causer des problèmes
+            }}
+          />
+        </div>
+        
+        {/* Overlay complètement transparent */}
+        <div className="absolute inset-0 flex items-center bg-transparent">
           <div className="w-full h-full flex items-center">
             <SnakeRectangleAnimation 
               textLine1="Votre villa"
@@ -75,6 +129,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
 
       <section className="py-24">
         <div className="container max-w-7xl mx-auto">
