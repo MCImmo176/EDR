@@ -106,109 +106,62 @@ export default function Home() {
     <>
       {/* Hero Section with Video Background */}
       <section className="relative h-screen w-full overflow-hidden">
-        <div className="absolute inset-0 bg-black flex items-center justify-center">
-          {hasWindow && (
-            <div 
-              ref={playerContainerRef}
-              className="absolute min-w-full min-h-full"
-              style={{
-                aspectRatio: '16/9'
-              }}
-            >
-              <ReactPlayer
-                url="https://www.youtube.com/watch?v=wl-HzkOtHC0"
-                playing
-                loop
-                muted
-                width="100%"
-                height="100%"
-                playsinline
-                style={{
-                  position: 'absolute',
-                  top: '50%',
-                  left: '50%',
-                  transform: 'translate(-50%, -50%)',
-                  minWidth: '100%',
-                  minHeight: '100%'
-                }}
-                config={{
-                  youtube: {
-                    playerVars: { 
-                      autoplay: 1,
-                      controls: 0,
-                      disablekb: 1,
-                      fs: 0,
-                      iv_load_policy: 3,
-                      modestbranding: 1,
-                      rel: 0,
-                      showinfo: 0,
-                      cc_load_policy: 0,
-                      playsinline: 1
-                    }
-                  }
-                }}
-                onReady={(player) => {
-                  handleResize();
-                  const iframe = player.getInternalPlayer();
-                  if (iframe) {
-                    iframe.style.width = '100%';
-                    iframe.style.height = '100%';
-                    iframe.style.position = 'absolute';
-                    iframe.style.top = '0';
-                    iframe.style.left = '0';
-                  }
-                }}
-              />
-            </div>
-          )}
-          <div className="absolute inset-0 bg-black/30" />
-        </div>
-
-        <div className="relative z-10 h-full flex items-center justify-center text-white px-4">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={containerVariants}
-            className="text-center px-6 hero-content transition-all duration-800 ease-in-out"
-          >
-            <div className="overflow-hidden mb-8">
-              <motion.h1 
-                className="text-6xl md:text-7xl lg:text-8xl font-display"
-                variants={textReveal}
-              >
-                {t('home.title')}
-              </motion.h1>
-            </div>
-            
-            <div className="relative overflow-hidden mb-12">
-              <motion.div 
-                className="absolute left-0 top-0 w-full h-full bg-white/10"
-                variants={rectangleReveal}
-                style={{ originX: 0 }}
-              />
-              <motion.p 
-                className="text-xl md:text-2xl font-light tracking-widest uppercase relative z-10 py-4 px-8"
-                variants={textReveal}
-              >
-                {t('home.subtitle')}
-              </motion.p>
-            </div>
-            
-            <motion.div variants={fadeIn} className="overflow-hidden">
-              <Button 
-                asChild 
-                size="lg"
-                className="relative bg-transparent border-2 border-white text-white overflow-hidden group hover:text-black transition-all duration-500 text-lg px-12 py-6 rounded-none"
-              >
-                <Link href="/reservations">
-                  <span className="relative z-10">Réserver</span>
-                  <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-                </Link>
-              </Button>
-            </motion.div>
-          </motion.div>
-        </div>
+        <iframe
+          src="https://www.youtube.com/embed/pSl-FvfrLzs?autoplay=1&mute=1&loop=1&playlist=pSl-FvfrLzs&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
+          title="Vidéo accueil villa"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ zIndex: 0 }}
+        />
+        <div className="absolute inset-0 bg-black/30" />
       </section>
+
+      <div className="relative z-10 h-full flex items-center justify-center text-white px-4">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+          className="text-center px-6 hero-content transition-all duration-800 ease-in-out"
+        >
+          <div className="overflow-hidden mb-8">
+            <motion.h1 
+              className="text-6xl md:text-7xl lg:text-8xl font-display"
+              variants={textReveal}
+            >
+              {t('home.title')}
+            </motion.h1>
+          </div>
+          
+          <div className="relative overflow-hidden mb-12">
+            <motion.div 
+              className="absolute left-0 top-0 w-full h-full bg-white/10"
+              variants={rectangleReveal}
+              style={{ originX: 0 }}
+            />
+            <motion.p 
+              className="text-xl md:text-2xl font-light tracking-widest uppercase relative z-10 py-4 px-8"
+              variants={textReveal}
+            >
+              {t('home.subtitle')}
+            </motion.p>
+          </div>
+          
+          <motion.div variants={fadeIn} className="overflow-hidden">
+            <Button 
+              asChild 
+              size="lg"
+              className="relative bg-transparent border-2 border-white text-white overflow-hidden group hover:text-black transition-all duration-500 text-lg px-12 py-6 rounded-none"
+            >
+              <Link href="/reservations">
+                <span className="relative z-10">Réserver</span>
+                <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+              </Link>
+            </Button>
+          </motion.div>
+        </motion.div>
+      </div>
 
       {/* Slogan Section */}
       <section className="py-16 md:py-24 bg-white">

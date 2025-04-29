@@ -404,14 +404,15 @@ export default function VillaPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative w-screen h-screen overflow-hidden p-0 m-0">
-        <Image
-          src="/images/villa/IMG_2298.JPEG"
-          alt="Villa de luxe"
-          fill
-          className="object-cover"
-          priority
-          quality={100}
+      <section className="relative h-screen w-screen overflow-hidden p-0 m-0">
+        <iframe
+          src="https://www.youtube.com/embed/GYvCKCN_J9s?autoplay=1&mute=1&loop=1&playlist=GYvCKCN_J9s&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
+          title="Vidéo villa"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ zIndex: 0 }}
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex items-center justify-center">

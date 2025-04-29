@@ -57,40 +57,15 @@ export default function ContactPage() {
   return (
     <>
       <section className="relative w-screen h-screen overflow-hidden p-0 m-0">
-        <div className="absolute inset-0 w-full h-full">
-          <div className="relative w-full h-full overflow-hidden">
-            <ReactPlayer
-              url="https://www.youtube.com/watch?v=UBBkPrnRtcE"
-              playing
-              loop
-              muted
-              width="100%"
-              height="100%"
-              className="react-player"
-              style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-              }}
-              config={{
-                youtube: {
-                  playerVars: {
-                    controls: 0,
-                    showinfo: 0,
-                    rel: 0,
-                    modestbranding: 1,
-                    iv_load_policy: 3,
-                    playsinline: 1,
-                    origin: window.location.origin,
-                    light: 1,
-                    brightness: 150
-                  }
-                }
-              }}
-            />
-          </div>
-        </div>
+        <iframe
+          src="https://www.youtube.com/embed/hoGfA3DP2PQ?autoplay=1&mute=1&loop=1&playlist=hoGfA3DP2PQ&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
+          title="Vidéo contact villa"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ zIndex: 0 }}
+        />
         <div className="absolute inset-0 bg-black/20 flex items-center">
           <div className="w-full h-full flex items-center">
             <SnakeRectangleAnimation 

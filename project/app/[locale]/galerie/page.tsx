@@ -87,15 +87,16 @@ export default function GaleriePage() {
   return (
     <>
       <section className="relative h-screen w-screen overflow-hidden p-0 m-0">
-        <Image
-          src="/images/gallery/13.png"
-          alt="Galerie de la villa - ambiance"
-          fill
-          className="object-cover"
-          priority
-          quality={100}
+        <iframe
+          src="https://www.youtube.com/embed/ZZ3G80btSc8?autoplay=1&mute=1&loop=1&playlist=ZZ3G80btSc8&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
+          title="Vidéo galerie villa"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ zIndex: 0 }}
         />
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center z-10">
           <div className="w-full h-full flex items-center justify-center">
             <SnakeRectangleAnimation
               textLine1="Explorez la"
