@@ -14,7 +14,41 @@ export default function GaleriePage() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [columns, setColumns] = useState(3);
-  
+  const videoContainerRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLIFrameElement>(null);
+
+  // Fonction pour ajuster la taille de la vidéo
+  const adjustVideoSize = () => {
+    if (!videoContainerRef.current || !videoRef.current) return;
+
+    const container = videoContainerRef.current;
+    const video = videoRef.current;
+    const containerWidth = container.offsetWidth;
+    const containerHeight = container.offsetHeight;
+    const containerRatio = containerWidth / containerHeight;
+    const videoRatio = 16 / 9;
+
+    if (containerRatio > videoRatio) {
+      const newHeight = containerWidth / videoRatio;
+      video.style.width = '100%';
+      video.style.height = `${newHeight}px`;
+      video.style.left = '0';
+      video.style.top = `${(containerHeight - newHeight) / 2}px`;
+    } else {
+      const newWidth = containerHeight * videoRatio;
+      video.style.width = `${newWidth}px`;
+      video.style.height = '100%';
+      video.style.left = `${(containerWidth - newWidth) / 2}px`;
+      video.style.top = '0';
+    }
+  };
+
+  useEffect(() => {
+    adjustVideoSize();
+    window.addEventListener('resize', adjustVideoSize);
+    return () => window.removeEventListener('resize', adjustVideoSize);
+  }, []);
+
   const exterieurPhotos = [
     { src: "/images/gallery/exterieur/1.JPG", alt: "Façade de la villa côté mer", category: tGallery('categories.exterior'), size: "regular" },
     { src: "/images/gallery/exterieur/2.JPEG", alt: "Jardin méditerranéen et terrasse", category: tGallery('categories.exterior'), size: "large" },
@@ -23,6 +57,7 @@ export default function GaleriePage() {
     { src: "/images/gallery/exterieur/5.JPEG", alt: "Vue panoramique sur la baie", category: tGallery('categories.exterior'), size: "large" },
     { src: "/images/gallery/exterieur/6.JPEG", alt: "Terrasse ombragée avec salon d'été", category: tGallery('categories.exterior'), size: "regular" },
   ];
+
   const suitesPhotos = [
     { src: "/images/gallery/chambres/1.JPG", alt: "Suite parentale lumineuse", category: tGallery('categories.suites'), size: "large" },
     { src: "/images/gallery/chambres/2.JPEG", alt: "Suite double avec vue jardin", category: tGallery('categories.suites'), size: "regular" },
@@ -48,6 +83,7 @@ export default function GaleriePage() {
     { src: "/images/gallery/chambres/22.jpg", alt: "Suite avec vue sur la mer", category: tGallery('categories.suites'), size: "regular" },
     { src: "/images/gallery/chambres/23.JPEG", alt: "Suite avec ambiance zen", category: tGallery('categories.suites'), size: "large" },
   ];
+
   const interieurPhotos = [
     { src: "/images/gallery/interieur/1.JPEG", alt: "Salon spacieux et lumineux", category: tGallery('categories.interior'), size: "large" },
     { src: "/images/gallery/interieur/2.JPEG", alt: "Salle à manger élégante", category: tGallery('categories.interior'), size: "regular" },
@@ -63,6 +99,7 @@ export default function GaleriePage() {
     { src: "/images/gallery/interieur/12.JPEG", alt: "Bureau avec vue", category: tGallery('categories.interior'), size: "regular" },
     { src: "/images/gallery/interieur/13.png", alt: "Dressing moderne", category: tGallery('categories.interior'), size: "large" },
   ];
+
   const vuesPhotos = [
     { src: "/images/gallery/vues/Coucher de soleil.png", alt: "Coucher de soleil sur la mer", category: tGallery('categories.views'), size: "large" },
     { src: "/images/gallery/vues/Coucher de soleil 2.png", alt: "Vue sur la baie au crépuscule", category: tGallery('categories.views'), size: "regular" },
@@ -86,7 +123,6 @@ export default function GaleriePage() {
     : activeCategory === tGallery('categories.interior') ? interieurPhotos
     : vuesPhotos;
 
-  // Ajuster le nombre de colonnes en fonction de la largeur d'écran
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 640) {
@@ -98,21 +134,17 @@ export default function GaleriePage() {
       }
     };
 
-    handleResize(); // Initialiser
+    handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Créer les colonnes
   const getPhotoColumns = () => {
     const columnPhotos: any[][] = Array.from({ length: columns }, () => []);
     let currentColumn = 0;
 
     filteredPhotos.forEach((photo, index) => {
-      // Ajouter la photo à la colonne actuelle
       columnPhotos[currentColumn].push(photo);
-      
-      // Passer à la colonne suivante
       currentColumn = (currentColumn + 1) % columns;
     });
 
@@ -121,8 +153,6 @@ export default function GaleriePage() {
 
   const photoColumns = getPhotoColumns();
 
-  // CORRECTION: Modification des gestionnaires d'événements pour empêcher
-  // la propagation des événements et la fermeture du lightbox
   const handlePrevImage = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
@@ -139,7 +169,6 @@ export default function GaleriePage() {
     }
   };
 
-  // Ajout de gestionnaires pour les touches du clavier
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (selectedImage === null) return;
@@ -161,17 +190,27 @@ export default function GaleriePage() {
 
   return (
     <>
-      <section className="relative h-screen w-screen overflow-hidden p-0 m-0">
-        <iframe
-          src="https://www.youtube.com/embed/ZZ3G80btSc8?autoplay=1&mute=1&loop=1&playlist=ZZ3G80btSc8&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
-          title="Vidéo galerie villa"
-          frameBorder="0"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ zIndex: 0 }}
-        />
-        <div className="absolute inset-0 flex items-center justify-center z-10">
+      <section className="relative w-screen h-screen overflow-hidden p-0 m-0">
+        <div 
+          ref={videoContainerRef}
+          className="absolute inset-0 w-full h-full overflow-hidden"
+        >
+          <iframe
+            ref={videoRef}
+            src="https://www.youtube.com/embed/ZZ3G80btSc8?autoplay=1&mute=1&loop=1&playlist=ZZ3G80btSc8&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
+            title="Vidéo galerie villa"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="absolute object-cover"
+            style={{
+              filter: 'brightness(100%)',
+              border: 'none'
+            }}
+          />
+        </div>
+        
+        <div className="absolute inset-0 flex items-center justify-center bg-transparent z-10">
           <div className="w-full h-full flex items-center justify-center">
             <SnakeRectangleAnimation
               textLine1="Explorez la"
@@ -230,7 +269,6 @@ export default function GaleriePage() {
             ))}
           </motion.div>
 
-          {/* Grille de photos style Masonry */}
           <div className="flex gap-4" ref={containerRef}>
             {photoColumns.map((column, colIndex) => (
               <div className="flex-1 flex flex-col gap-4" key={colIndex}>
@@ -244,7 +282,6 @@ export default function GaleriePage() {
                       photo.size === "large" ? "aspect-[3/4]" : "aspect-[3/3.5]"
                     }`}
                     onClick={() => {
-                      // Trouver l'index dans filteredPhotos
                       const globalIndex = filteredPhotos.findIndex(
                         (p) => p.src === photo.src && p.alt === photo.alt
                       );
@@ -301,7 +338,6 @@ export default function GaleriePage() {
         </div>
       </section>
 
-      {/* Lightbox amélioré avec contrôles - CORRIGÉ */}
       {selectedImage !== null && (
         <div 
           className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
@@ -317,7 +353,6 @@ export default function GaleriePage() {
             <X className="h-8 w-8" />
           </button>
           
-          {/* CORRECTION: Utilisation d'une div au lieu d'un bouton pour éviter les comportements par défaut */}
           <div
             className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-white/80 transition-colors p-2 rounded-full bg-black/30 cursor-pointer z-50"
             onClick={handlePrevImage}
@@ -332,7 +367,6 @@ export default function GaleriePage() {
             <ChevronRight className="h-8 w-8" />
           </div>
           
-          {/* CORRECTION: Ajout d'un onClick qui arrête la propagation pour empêcher la fermeture */}
           <div 
             className="relative w-full max-w-7xl aspect-[16/9]"
             onClick={(e) => e.stopPropagation()}

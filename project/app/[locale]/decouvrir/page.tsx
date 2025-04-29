@@ -8,9 +8,43 @@ import { SectionTitle } from "@/components/ui/section-title";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import SnakeRectangleAnimation from "../../../src/components/SnakeRectangleAnimation";
+import { useRef, useEffect } from "react";
 
 export default function DecouvrirPage() {
   const t = useTranslations("discover");
+  const videoContainerRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLIFrameElement>(null);
+
+  const adjustVideoSize = () => {
+    if (!videoContainerRef.current || !videoRef.current) return;
+
+    const container = videoContainerRef.current;
+    const video = videoRef.current;
+    const containerWidth = container.offsetWidth;
+    const containerHeight = container.offsetHeight;
+    const containerRatio = containerWidth / containerHeight;
+    const videoRatio = 16 / 9;
+
+    if (containerRatio > videoRatio) {
+      const newHeight = containerWidth / videoRatio;
+      video.style.width = '100%';
+      video.style.height = `${newHeight}px`;
+      video.style.left = '0';
+      video.style.top = `${(containerHeight - newHeight) / 2}px`;
+    } else {
+      const newWidth = containerHeight * videoRatio;
+      video.style.width = `${newWidth}px`;
+      video.style.height = '100%';
+      video.style.left = `${(containerWidth - newWidth) / 2}px`;
+      video.style.top = '0';
+    }
+  };
+
+  useEffect(() => {
+    adjustVideoSize();
+    window.addEventListener('resize', adjustVideoSize);
+    return () => window.removeEventListener('resize', adjustVideoSize);
+  }, []);
 
   const unmissableEvents = [
     {
@@ -107,17 +141,27 @@ export default function DecouvrirPage() {
 
   return (
     <>
-      <section className="relative h-screen w-screen overflow-hidden p-0 m-0">
-        <iframe
-          src="https://www.youtube.com/embed/KC_DhNv3iM4?autoplay=1&mute=1&loop=1&playlist=KC_DhNv3iM4&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
-          title="Vidéo découvrir villa"
-          frameBorder="0"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ zIndex: 0 }}
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
+      <section className="relative w-screen h-screen overflow-hidden p-0 m-0">
+        <div 
+          ref={videoContainerRef}
+          className="absolute inset-0 w-full h-full overflow-hidden"
+        >
+          <iframe
+            ref={videoRef}
+            src="https://www.youtube.com/embed/KC_DhNv3iM4?autoplay=1&mute=1&loop=1&playlist=KC_DhNv3iM4&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
+            title="Vidéo découvrir villa"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="absolute object-cover"
+            style={{
+              filter: 'brightness(100%)',
+              border: 'none'
+            }}
+          />
+        </div>
+        
+        <div className="absolute inset-0 flex items-center justify-center bg-transparent">
           <div className="w-full h-full">
             <SnakeRectangleAnimation 
               textLine1="Profitez de"
@@ -127,7 +171,6 @@ export default function DecouvrirPage() {
         </div>
       </section>
 
-      {/* Section Événements à ne pas manquer - Redesigned */}
       <section className="py-24 bg-white">
         <div className="container">
           <motion.div
@@ -166,7 +209,6 @@ export default function DecouvrirPage() {
 
                   <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                     <h3 className="text-3xl font-display mb-4">{event.title}</h3>
-                    {/* <p className="text-lg text-white/80 mb-6">{event.description}</p> */}
                     
                     <div className="flex flex-wrap gap-4 mb-6">
                       {event.date && (

@@ -8,7 +8,6 @@ import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
-import { FullscreenVideo } from "@/components/FullscreenVideo";
 
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
@@ -133,56 +132,72 @@ export default function Home() {
   return (
     <>
       {/* Hero Section with Video Background */}
-      <FullscreenVideo 
-        videoUrl="https://www.youtube.com/embed/pSl-FvfrLzs?autoplay=1&mute=1&loop=1&playlist=pSl-FvfrLzs&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
-        title="Vidéo accueil villa"
-      />
+      <section className="relative h-screen w-full overflow-hidden">
+        <div className="absolute inset-0" style={{ zIndex: 0 }}>
+          <iframe
+            ref={videoRef}
+            src="https://www.youtube.com/embed/pSl-FvfrLzs?autoplay=1&mute=1&loop=1&playlist=pSl-FvfrLzs&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
+            title="Vidéo accueil villa"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+            className="absolute"
+            style={{ 
+              width: '100%', 
+              height: '100%',
+              position: 'absolute',
+              objectFit: 'cover'
+            }}
+          />
+        </div>
+        <div className="absolute inset-0 bg-black/30" />
       
-      {/* Contenu Hero */}
-      <div className="relative z-10 h-full flex items-center justify-center text-white px-4">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-          className="text-center px-6 hero-content transition-all duration-800 ease-in-out"
-        >
-          <div className="overflow-hidden mb-8">
-            <motion.h1 
-              className="text-6xl md:text-7xl lg:text-8xl font-display"
-              variants={textReveal}
-            >
-              {t('home.title')}
-            </motion.h1>
-          </div>
-          
-          <div className="relative overflow-hidden mb-12">
-            <motion.div 
-              className="absolute left-0 top-0 w-full h-full bg-white/10"
-              variants={rectangleReveal}
-              style={{ originX: 0 }}
-            />
-            <motion.p 
-              className="text-xl md:text-2xl font-light tracking-widest uppercase relative z-10 py-4 px-8"
-              variants={textReveal}
-            >
-              {t('home.subtitle')}
-            </motion.p>
-          </div>
-          
-          <motion.div variants={fadeIn} className="overflow-hidden">
-            <Button 
-              asChild 
-              size="lg"
-              className="relative bg-transparent border-2 border-white text-white overflow-hidden group hover:text-black transition-all duration-500 text-lg px-12 py-6 rounded-none"
-            >
-              <Link href="/reservations">
-                <span className="relative z-10">Réserver</span>
-                <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-              </Link>
-            </Button>
+        {/* Contenu Hero */}
+        <div className="relative z-10 h-full flex items-center justify-center text-white px-4">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+            className="text-center px-6 hero-content transition-all duration-800 ease-in-out"
+          >
+            <div className="overflow-hidden mb-8">
+              <motion.h1 
+                className="text-6xl md:text-7xl lg:text-8xl font-display"
+                variants={textReveal}
+              >
+                {t('home.title')}
+              </motion.h1>
+            </div>
+            
+            <div className="relative overflow-hidden mb-12">
+              <motion.div 
+                className="absolute left-0 top-0 w-full h-full bg-white/10"
+                variants={rectangleReveal}
+                style={{ originX: 0 }}
+              />
+              <motion.p 
+                className="text-xl md:text-2xl font-light tracking-widest uppercase relative z-10 py-4 px-8"
+                variants={textReveal}
+              >
+                {t('home.subtitle')}
+              </motion.p>
+            </div>
+            
+            <motion.div variants={fadeIn} className="overflow-hidden">
+              <Button 
+                asChild 
+                size="lg"
+                className="relative bg-transparent border-2 border-white text-white overflow-hidden group hover:text-black transition-all duration-500 text-lg px-12 py-6 rounded-none"
+              >
+                <Link href="/reservations">
+                  <span className="relative z-10">Réserver</span>
+                  <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                </Link>
+              </Button>
+            </motion.div>
           </motion.div>
-        </motion.div>
-      </div>
+        </div>
+      </section>
 
       {/* Content Section */}
       <section className="py-20 md:py-28 bg-white">
