@@ -108,13 +108,14 @@ export default function DecouvrirPage() {
   return (
     <>
       <section className="relative h-screen w-screen overflow-hidden p-0 m-0">
-        <Image
-          src="/images/discover/DJI_0017.JPG"
-          alt="Vue aérienne de la villa et de la côte"
-          fill
-          className="object-cover"
-          priority
-          quality={100}
+        <iframe
+          src="https://www.youtube.com/embed/KC_DhNv3iM4?autoplay=1&mute=1&loop=1&playlist=KC_DhNv3iM4&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
+          title="Vidéo découvrir villa"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ zIndex: 0 }}
         />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-full h-full">

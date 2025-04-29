@@ -163,38 +163,21 @@ export default function Home() {
         </motion.div>
       </div>
 
-      {/* Slogan Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container max-w-[1400px] mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h2 className="text-5xl md:text-6xl font-extrabold text-black mb-2" style={{ fontFamily: 'inherit' }}>
-                VIVEZ L'EXCEPTION.
-              </h2>
-            </div>
-            <div>
-              <p className="text-2xl md:text-3xl font-light text-black leading-relaxed">
-                Profitez de Monaco, sans ses contraintes.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Content Section */}
-      <section className="py-12 md:py-20 bg-white">
-        <div className="container max-w-6xl mx-auto px-6">
+      <section className="py-0 md:py-0 bg-white">
+        <div className="container max-w-6xl mx-auto px-6 mt-0">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="mt-0"
           >
             <div className="flex flex-col md:flex-row gap-10 items-stretch">
               <div className="w-full md:w-1/2 h-96 md:h-[500px] relative">
                 <Image
-                  src="/images/excellence/interieur/reception.jpeg"
-                  alt="Reception de luxe"
+                  src="/images/excellence/interieur/4.jpg"
+                  alt="Salon d'exception de la villa"
                   fill
                   className="object-cover"
                   priority
@@ -229,6 +212,24 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Slogan Section */}
+      <section className="py-10 md:py-16 bg-white">
+        <div className="container max-w-[1400px] mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 className="text-5xl md:text-6xl font-extrabold text-black mb-2" style={{ fontFamily: 'inherit' }}>
+                VIVEZ L'EXCEPTION
+              </h2>
+            </div>
+            <div>
+              <p className="text-2xl md:text-3xl font-light text-black leading-relaxed">
+                Profitez de Monaco, sans ses contraintes.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

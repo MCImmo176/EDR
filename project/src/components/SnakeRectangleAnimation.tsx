@@ -247,7 +247,7 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
                 left: 0,
                 height: '5px',
                 width: 0,
-                backgroundColor: 'white'
+                backgroundColor: '#F5CFBA'
               }}
             />
             <div 
@@ -258,7 +258,7 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
                 right: 0,
                 width: '5px',
                 height: 0,
-                backgroundColor: 'white'
+                backgroundColor: '#F5CFBA'
               }}
             />
             <div 
@@ -269,7 +269,7 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
                 right: 0,
                 height: '5px',
                 width: 0,
-                backgroundColor: 'white'
+                backgroundColor: '#F5CFBA'
               }}
             />
             <div 
@@ -280,7 +280,7 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
                 left: 0,
                 width: '5px',
                 height: 0,
-                backgroundColor: 'white'
+                backgroundColor: '#F5CFBA'
               }}
             />
           </div>
