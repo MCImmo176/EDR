@@ -123,8 +123,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 flex items-center bg-transparent">
           <div className="w-full h-full flex items-center">
             <SnakeRectangleAnimation 
-              textLine1="Votre villa"
-              textLine2="vous attend"
+              textKey="contact"
             />
           </div>
         </div>
@@ -141,18 +140,10 @@ export default function ContactPage() {
               viewport={{ once: true }}
               className="lg:sticky lg:top-32 px-4 md:px-8"
             >
-              <h2 className="text-4xl font-display mb-6">Échangeons ensemble</h2>
+              <h2 className="text-4xl font-display mb-6">{t('yourVilla.subtitle')}</h2>
               <div className="prose prose-lg">
                 <p className="text-xl text-muted-foreground mb-4">
-                  Merci d'avoir visité notre site web !
-                </p>
-                <p className="text-lg text-muted-foreground">
-                  Nous serions ravis d'échanger avec vous. Que vous ayez des questions, 
-                  des retours à partager ou que vous souhaitiez en savoir plus sur nos villas, 
-                  n'hésitez pas à nous contacter.
-                </p>
-                <p className="text-lg text-muted-foreground mt-4">
-                  Nos conseillers vous répondront dans les plus brefs délais.
+                  {t('yourVilla.description')}
                 </p>
               </div>
             </motion.div>
@@ -182,9 +173,9 @@ export default function ContactPage() {
                       name="name"
                       render={({ field }) => (
                         <FormItem className="space-y-4">
-                          <FormLabel>Nom & Prénom</FormLabel>
+                          <FormLabel>{t('form.name')}</FormLabel>
                           <FormControl>
-                            <Input placeholder="Votre nom complet" className="bg-background" {...field} />
+                            <Input placeholder={t('form.namePlaceholder')} className="bg-background" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -196,9 +187,9 @@ export default function ContactPage() {
                       name="email"
                       render={({ field }) => (
                         <FormItem className="space-y-4">
-                          <FormLabel>Email</FormLabel>
+                          <FormLabel>{t('form.email')}</FormLabel>
                           <FormControl>
-                            <Input placeholder="Votre adresse email" className="bg-background" {...field} />
+                            <Input placeholder={t('form.emailPlaceholder')} className="bg-background" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -206,13 +197,12 @@ export default function ContactPage() {
                     />
                     
                     <div className="flex gap-4 items-start">
-                      {/* Champ Indicatif */}
                       <div className="flex-[0_0_180px]">
                         <FormField
                           control={form.control}
                           name="countryCode"
                           render={({ field }) => (
-                            <FormItem className="space-y-1"> {/* Réduction de l'espace vertical */}
+                            <FormItem className="space-y-1">
                               <FormControl>
                                 <ComboboxCountry
                                   value={field.value}
@@ -226,19 +216,18 @@ export default function ContactPage() {
                         />
                       </div>
                       
-                      {/* Champ Téléphone */}
                       <div className="flex-1">
                         <FormField
                           control={form.control}
                           name="phone"
                           render={({ field }) => (
-                            <FormItem className="space-y-1"> {/* Même espacement que l'indicatif */}
-                              <div className="h-[20px] flex items-center mb-1"> {/* Conteneur du label avec hauteur fixe */}
-                                <FormLabel className="text-sm font-medium leading-none">Téléphone</FormLabel>
+                            <FormItem className="space-y-1">
+                              <div className="h-[20px] flex items-center mb-1">
+                                <FormLabel className="text-sm font-medium leading-none">{t('form.phone')}</FormLabel>
                               </div>
                               <FormControl>
                                 <Input 
-                                  placeholder="Votre numéro de téléphone" 
+                                  placeholder={t('form.phonePlaceholder')}
                                   className="bg-background h-[40px]" 
                                   {...field} 
                                 />
@@ -255,10 +244,10 @@ export default function ContactPage() {
                       name="message"
                       render={({ field }) => (
                         <FormItem className="space-y-4">
-                          <FormLabel>Message</FormLabel>
+                          <FormLabel>{t('form.message')}</FormLabel>
                           <FormControl>
                             <Textarea 
-                              placeholder="Votre message" 
+                              placeholder={t('form.messagePlaceholder')}
                               className="resize-none min-h-[150px] bg-background"
                               {...field} 
                             />
@@ -272,7 +261,7 @@ export default function ContactPage() {
                       type="submit" 
                       className="relative bg-black text-white overflow-hidden group hover:bg-white hover:text-black border-2 border-black transition-all duration-500 text-lg px-12 py-6 rounded-none w-full"
                     >
-                      <span className="relative z-10">Envoyer le message</span>
+                      <span className="relative z-10">{t('form.submit')}</span>
                       <Send className="ml-2 h-4 w-4 relative z-10" />
                       <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                     </Button>

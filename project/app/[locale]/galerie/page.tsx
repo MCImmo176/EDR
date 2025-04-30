@@ -213,8 +213,7 @@ export default function GaleriePage() {
         <div className="absolute inset-0 flex items-center justify-center bg-transparent z-10">
           <div className="w-full h-full flex items-center justify-center">
             <SnakeRectangleAnimation
-              textLine1="Explorez la"
-              textLine2="Galerie de la villa"
+              textKey="gallery"
             />
           </div>
         </div>

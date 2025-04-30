@@ -48,94 +48,93 @@ export default function DecouvrirPage() {
 
   const unmissableEvents = [
     {
-      title: "Grand Prix de Monaco 2025",
-      description: "Vivez la course mythique dans les rues de la Principauté. Une expérience unique mêlant adrénaline, luxe et prestige.",
+      title: t('enjoy.events.monacoGP.title'),
+      description: t('enjoy.events.monacoGP.description'),
       image: "/images/discover/F1Monaco.jpg",
-      date: "22-25 Mai 2025",
-      category: "Événement Sportif",
+      date: t('enjoy.events.monacoGP.date'),
+      category: t('enjoy.events.monacoGP.type'),
       link: "https://www.formula1.com/monaco"
     },
     {
-      title: "Casino de Monte-Carlo",
-      description: "Chef-d'œuvre architectural Belle Époque et temple du jeu de prestige, le Casino de Monte-Carlo est une expérience incontournable.",
+      title: t('enjoy.events.casino.title'),
+      description: t('enjoy.events.casino.description'),
       image: "/images/discover/Casio.jpg",
-      category: "Jeux de hasard",
-      schedule: "14h - 4h",
+      category: t('enjoy.events.casino.type'),
+      schedule: t('enjoy.events.casino.hours'),
       link: "https://www.montecarlosbm.com"
     },
     {
-      title: "Musée Océanographique",
-      description: "Découvrez les merveilles des océans dans ce musée centenaire surplombant la Méditerranée.",
+      title: t('enjoy.events.oceanographic.title'),
+      description: t('enjoy.events.oceanographic.description'),
       image: "/images/discover/musee.jpg",
-      category: "Culture",
-      schedule: "10h - 18h",
+      category: t('enjoy.events.oceanographic.type'),
+      schedule: t('enjoy.events.oceanographic.hours'),
       link: "https://www.oceano.mc"
     },
     {
-      title: "Rallye Monte-Carlo Historique",
-      description: "Un voyage dans le temps avec les plus belles voitures de collection sur les routes légendaires de Monaco.",
+      title: t('enjoy.events.rally.title'),
+      description: t('enjoy.events.rally.description'),
       image: "/images/discover/rallyhistorique.jpg",
-      date: "31 Jan - 5 Fév 2025",
-      category: "Sport Automobile",
+      date: t('enjoy.events.rally.date'),
+      category: t('enjoy.events.rally.type'),
       link: "https://acm.mc"
     }
   ];
 
   const insiderSecrets = [
     {
-      title: "Sentier des Douaniers",
-      description: "Découvrez la partie cachée du Cap Martin, entre la Pointe du Cap et la Villa E-1027. Un parcours sauvage ponctué de criques secrètes idéales pour la baignade.",
+      title: t('enjoy.secrets.customsPath.title'),
+      description: t('enjoy.secrets.customsPath.description'),
       image: "/images/discover/sentierdouaniers.jpg",
-      category: "Randonnée",
-      difficulty: "Modérée",
-      duration: "2-3h",
-      bestTime: "Lever du soleil"
+      category: t('enjoy.secrets.customsPath.category'),
+      difficulty: t('enjoy.secrets.customsPath.difficulty'),
+      duration: t('enjoy.secrets.customsPath.duration'),
+      bestTime: t('enjoy.secrets.customsPath.bestTime')
     },
     {
-      title: "Visiter le village d'Èze",
-      description: "Parcourez les ruelles pittoresques d'Èze, village médiéval perché avec une vue imprenable sur la Méditerranée.",
+      title: t('enjoy.secrets.ezeVillage.title'),
+      description: t('enjoy.secrets.ezeVillage.description'),
       image: "/images/discover/eze.jpg",
-      category: "Découverte",
+      category: t('enjoy.secrets.ezeVillage.category'),
       comments: [
-        { icon: Landmark, text: "Village médiéval" },
-        { icon: Mountain, text: "Vue panoramique sur la Méditerranée" }
+        { icon: Landmark, text: t('enjoy.secrets.ezeVillage.comments.medieval') },
+        { icon: Mountain, text: t('enjoy.secrets.ezeVillage.comments.view') }
       ]
     },
     {
-      title: "Vallon de la Petite Afrique",
-      description: "Une jungle méditerranéenne secrète nichée à Beaulieu-sur-Mer. Sentiers ombragés et vue imprenable sur la mer, loin des circuits touristiques.",
+      title: t('enjoy.secrets.littleAfrica.title'),
+      description: t('enjoy.secrets.littleAfrica.description'),
       image: "/images/discover/beaulieu.jpg",
-      category: "Nature",
-      difficulty: "Facile",
-      duration: "1h",
-      bestTime: "Matinée"
+      category: t('enjoy.secrets.littleAfrica.category'),
+      difficulty: t('enjoy.secrets.littleAfrica.difficulty'),
+      duration: t('enjoy.secrets.littleAfrica.duration'),
+      bestTime: t('enjoy.secrets.littleAfrica.bestTime')
     },
     {
-      title: "Rocher du Corbusier",
-      description: "Un lieu de méditation privilégié surplombant la mer, accessible par un sentier discret. Un spot paisible connu des seuls initiés.",
+      title: t('enjoy.secrets.corbusier.title'),
+      description: t('enjoy.secrets.corbusier.description'),
       image: "/images/discover/sentierlecorbusier.jpg",
-      category: "Point de vue",
-      difficulty: "Facile",
-      duration: "30min",
-      bestTime: "Coucher du soleil"
+      category: t('enjoy.secrets.corbusier.category'),
+      difficulty: t('enjoy.secrets.corbusier.difficulty'),
+      duration: t('enjoy.secrets.corbusier.duration'),
+      bestTime: t('enjoy.secrets.corbusier.bestTime')
     },
     {
-      title: "Salle Garnier",
-      description: "L'opéra de Monaco, un joyau architectural caché dans le Casino. Une salle intimiste aux dorures somptueuses, souvent méconnue des visiteurs.",
+      title: t('enjoy.secrets.garnier.title'),
+      description: t('enjoy.secrets.garnier.description'),
       image: "/images/discover/theatre.jpg",
-      category: "Culture",
-      schedule: "Visites guidées sur réservation",
+      category: t('enjoy.secrets.garnier.category'),
       comments: [
-        { icon: Building, text: "Opéra Belle Époque" },
-        { icon: Sparkles, text: "Décor somptueux" }
+        { icon: Building, text: t('enjoy.secrets.garnier.comments.opera') },
+        { icon: Sparkles, text: t('enjoy.secrets.garnier.comments.decor') }
       ]
     },
     {
-      title: "Plage du Golfe Bleu",
-      description: "Une plage préservée entre Monaco et Cap-Martin, idéale pour échapper à la foule. Un spot parfait pour les couchers de soleil.",
+      title: t('enjoy.secrets.blueGulf.title'),
+      description: t('enjoy.secrets.blueGulf.description'),
       image: "/images/discover/plageroquebrune.jpg",
-      category: "Plage",
-      bestTime: "Coucher du soleil"
+      category: t('enjoy.secrets.blueGulf.category'),
+      bestTime: t('enjoy.secrets.blueGulf.bestTime')
     }
   ];
 
@@ -164,8 +163,7 @@ export default function DecouvrirPage() {
         <div className="absolute inset-0 flex items-center justify-center bg-transparent">
           <div className="w-full h-full">
             <SnakeRectangleAnimation 
-              textLine1="Profitez de"
-              textLine2="Notre localisation"
+              textKey="discover"
             />
           </div>
         </div>
@@ -180,7 +178,7 @@ export default function DecouvrirPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl font-display mb-6">Événements à ne pas manquer</h2>
+            <h2 className="text-5xl font-display mb-6">{t('enjoy.events.title')}</h2>
             <div className="h-1 w-20 bg-primary mx-auto" />
           </motion.div>
 
@@ -230,7 +228,7 @@ export default function DecouvrirPage() {
                       className="relative overflow-hidden group/btn bg-white text-black hover:text-white border-2 border-white transition-all duration-500"
                     >
                       <Link href={event.link} target="_blank">
-                        En savoir plus
+                        {t('enjoy.events.monacoGP.learnMore')}
                         <ArrowRight className="ml-2 h-4 w-4 relative z-10" />
                         <div className="absolute inset-0 bg-black transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left" />
                       </Link>
@@ -252,7 +250,7 @@ export default function DecouvrirPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl font-display mb-6">Secrets d'Initiés</h2>
+            <h2 className="text-5xl font-display mb-6">{t('enjoy.secrets.title')}</h2>
             <div className="h-1 w-20 bg-primary mx-auto" />
           </motion.div>
 
@@ -285,19 +283,19 @@ export default function DecouvrirPage() {
                     {secret.difficulty && (
                       <div className="flex items-center text-sm">
                         <Compass className="h-5 w-5 mr-2 text-primary" />
-                        <span>Difficulté : {secret.difficulty}</span>
+                        <span>{secret.difficulty}</span>
                       </div>
                     )}
                     {secret.duration && (
                       <div className="flex items-center text-sm">
                         <Clock className="h-5 w-5 mr-2 text-primary" />
-                        <span>Durée : {secret.duration}</span>
+                        <span>{secret.duration}</span>
                       </div>
                     )}
                     {secret.bestTime && (
                       <div className="flex items-center text-sm">
                         <Star className="h-5 w-5 mr-2 text-primary" />
-                        <span>Meilleur moment : {secret.bestTime}</span>
+                        <span>{secret.bestTime}</span>
                       </div>
                     )}
                     {secret.comments && secret.comments.map((comment, i) => (

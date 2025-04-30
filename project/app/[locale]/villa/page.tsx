@@ -427,8 +427,7 @@ export default function VillaPage() {
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="w-full h-full">
             <SnakeRectangleAnimation 
-              textLine1="Une villa"
-              textLine2="d'exception"
+              textKey="villaException"
             />
           </div>
         </div>
@@ -480,7 +479,7 @@ export default function VillaPage() {
               className="relative bg-transparent border-2 border-black text-black overflow-hidden group hover:text-white transition-all duration-500 text-lg px-12 py-6 rounded-none"
             >
               <Link href="/galerie">
-                <span className="relative z-10">Accéder à la galerie</span>
+                <span className="relative z-10">{tVilla('common.gallery')}</span>
                 <div className="absolute inset-0 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
               </Link>
             </Button>

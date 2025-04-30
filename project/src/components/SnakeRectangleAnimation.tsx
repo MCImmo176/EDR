@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 interface SnakeRectangleAnimationProps {
   backgroundColor?: string;
-  textLine1?: string;
-  textLine2?: string;
+  textKey?: string;
   fontFamily?: string;
   fontSize?: string;
   fontWeight?: string;
@@ -13,14 +13,14 @@ interface SnakeRectangleAnimationProps {
 
 const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({ 
   backgroundColor = '#333', 
-  textLine1 = 'Votre villa', 
-  textLine2 = 'vous attend',
+  textKey = 'villa',
   fontFamily = 'Arial, sans-serif',
   fontSize = '3rem',
   fontWeight = 'bold',
   letterSpacing = '1px',
   lineHeight = '1.2'
 }) => {
+  const t = useTranslations('snakeRectangle');
   const [isAnimating, setIsAnimating] = useState(false);
   const [isInitialLoad, setIsInitialLoad] = useState(true);
   const [visibleIndexes1, setVisibleIndexes1] = useState<number>(-1);
@@ -32,6 +32,9 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
   const leftBorderRef = useRef<HTMLDivElement>(null);
   const textContent1Ref = useRef<HTMLSpanElement>(null);
   const textContent2Ref = useRef<HTMLSpanElement>(null);
+  
+  const textLine1 = t(`${textKey}.line1`);
+  const textLine2 = t(`${textKey}.line2`);
   
   const animateTopBorder = () => {
     return new Promise<void>(resolve => {
@@ -312,7 +315,7 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
                 letterSpacing: '1px',
                 lineHeight: 1.05,
                 whiteSpace: 'normal',
-                margin: '0 0 10px 0', // Ajout de marge entre les lignes
+                margin: '0 0 10px 0',
                 overflow: 'visible',
                 textShadow: '0 2px 16px rgba(0,0,0,0.18)',
                 position: 'relative',

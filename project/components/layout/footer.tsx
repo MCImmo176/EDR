@@ -31,10 +31,10 @@ export function Footer() {
                 {t('footer.sales')}
               </Link>
               <Link href={`/${currentLocale}/galerie`} className="hover:text-primary transition-colors">
-                {t('gallery.title')}
+                {t('footer.gallery')}
               </Link>
               <Link href={`/${currentLocale}/decouvrir`} className="hover:text-primary transition-colors">
-                {t('discover.title')}
+                {t('footer.discover')}
               </Link>
             </div>
           </div>
