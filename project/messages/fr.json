@@ -102,19 +102,23 @@
       "galleryButton": "Accéder à la galerie",
       "living": {
         "title": "Salon lumineux",
-        "description": "Un espace convivial avec vue panoramique sur la Méditerranée"
+        "description": "Un espace convivial avec vue panoramique sur la Méditerranée",
+        "alt": "Salon lumineux avec vue panoramique sur la Méditerranée"
       },
       "living2": {
         "title": "Salon ouvert et lumineux",
-        "description": "Un vaste espace de vie baigné de lumière, idéal pour se détendre ou recevoir"
+        "description": "Un vaste espace de vie baigné de lumière, idéal pour se détendre ou recevoir",
+        "alt": "Grand salon lumineux, parfait pour la détente et la réception"
       },
       "pool": {
         "title": "Piscine privative",
-        "description": "Profitez d'une baignade face à la mer"
+        "description": "Profitez d'une baignade face à la mer",
+        "alt": "Piscine privée avec vue sur la mer"
       },
       "suites": {
         "title": "5 suites privatives",
-        "description": "Chaque chambre dispose de sa salle de bain, s'ouvre sur l'extérieur et profite d'une lumière naturelle abondante"
+        "description": "Chaque chambre dispose de sa salle de bain, s'ouvre sur l'extérieur et profite d'une lumière naturelle abondante",
+        "alt": "Cinq suites privatives avec salles de bain et lumière naturelle"
       }
     },
     "livingSpaces": {

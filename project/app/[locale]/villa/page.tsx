@@ -291,79 +291,79 @@ export default function VillaPage() {
   
   const roomImages = [
     {
-      title: "Salon lumineux",
-      description: "Un espace convivial avec vue panoramique sur la Méditerranée.",
+      title: tVilla('spaces.living.title'),
+      description: tVilla('spaces.living.description'),
       src: "/images/villa/IMG_2409.JPEG",
-      alt: "Salon lumineux avec vue mer"
+      alt: tVilla('spaces.living.alt')
     },
     {
-      title: "Salon ouvert et lumineux",
-      description: "Un vaste espace de vie baigné de lumière, idéal pour se détendre ou recevoir.",
+      title: tVilla('spaces.living2.title'),
+      description: tVilla('spaces.living2.description'),
       src: "/images/villa/IMG_2286.JPEG",
-      alt: "Salon ouvert et lumineux"
+      alt: tVilla('spaces.living2.alt')
     },
     {
-      title: "Piscine privative",
-      description: "Profitez d'une baignade face à la mer.",
+      title: tVilla('spaces.pool.title'),
+      description: tVilla('spaces.pool.description'),
       src: "/images/villa/IMG_2348.JPEG",
-      alt: "Piscine privative vue mer"
+      alt: tVilla('spaces.pool.alt')
     },
     {
-      title: "5 suites privatives",
-      description: "Chaque chambre dispose de sa salle de bain, s'ouvre sur l'extérieur et profite d'une lumière naturelle abondante.",
+      title: tVilla('spaces.suites.title'),
+      description: tVilla('spaces.suites.description'),
       src: "/images/villa/IMG_2359.JPG",
-      alt: "Suites privatives lumineuses"
+      alt: tVilla('spaces.suites.alt')
     }
   ];
 
   const practicalInfo = [
     {
       icon: MapPin,
-      title: "Situation",
-      description: "Idéalement située à Roquebrune Cap Martin, à quelques minutes de Monaco et des plus belles plages de la Côte d'Azur."
+      title: tVilla('practicalInfo.location.title'),
+      description: tVilla('practicalInfo.location.description')
     },
     {
       icon: Clock,
-      title: "Disponibilité",
-      description: "La villa est disponible à la location toute l'année, avec une durée minimale de séjour d'une semaine."
+      title: tVilla('practicalInfo.availability.title'),
+      description: tVilla('practicalInfo.availability.description')
     },
     {
       icon: Star,
-      title: "Équipements",
-      description: "Des équipements haut de gamme et des services personnalisés pour un séjour d'exception."
+      title: tVilla('practicalInfo.equipment.title'),
+      description: tVilla('practicalInfo.equipment.description')
     },
     {
       icon: ShieldCheck,
-      title: "Sécurité",
-      description: "Propriété entièrement sécurisée avec système d'alarme, vidéosurveillance et service de sécurité sur demande."
+      title: tVilla('practicalInfo.security.title'),
+      description: tVilla('practicalInfo.security.description')
     }
   ];
 
   const houseRules = [
     {
       icon: Users,
-      title: "Check-in & Check-out",
-      description: "Arrivée à partir de 16h00 et départ au plus tard à 10h00. Un accueil personnalisé vous sera réservé."
+      title: tVilla('houseRules.checkin.title'),
+      description: tVilla('houseRules.checkin.description')
     },
     {
       icon: Key,
-      title: "Accès & Sécurité",
-      description: "La villa est équipée d'un système de sécurité dernière génération. Les codes d'accès vous seront remis à votre arrivée."
+      title: tVilla('houseRules.access.title'),
+      description: tVilla('houseRules.access.description')
     },
     {
       icon: Volume2,
-      title: "Tranquillité",
-      description: "Par respect pour le voisinage, nous vous demandons de maintenir un niveau sonore raisonnable, particulièrement après 22h00."
+      title: tVilla('houseRules.quiet.title'),
+      description: tVilla('houseRules.quiet.description')
     }
   ];
 
   const distances = [
-    { destination: "Monaco", duration: "10 min" },
-    { destination: "Nice", duration: "30 min" },
-    { destination: "Cannes", duration: "45 min" },
-    { destination: "Saint-Tropez", duration: "1h30" },
-    { destination: "Aéroport Nice", duration: "30 min" },
-    { destination: "Plage", duration: "5 min" }
+    { destination: tVilla('distances.monaco'), duration: "10 min" },
+    { destination: tVilla('distances.nice'), duration: "30 min" },
+    { destination: tVilla('distances.cannes'), duration: "45 min" },
+    { destination: tVilla('distances.saintTropez'), duration: "1h30" },
+    { destination: tVilla('distances.airport'), duration: "30 min" },
+    { destination: tVilla('distances.beach'), duration: "5 min" }
   ];
 
   useEffect(() => {
@@ -494,12 +494,14 @@ export default function VillaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Colonne gauche : texte */}
             <div className="pl-8 md:pl-12">
-              <h2 className="text-3xl font-bold mb-6 font-sans text-black" style={{ fontFamily: 'Roboto, Arial, Helvetica, sans-serif' }}>DES LIEUX DE VIE SUR-MESURE.</h2>
+              <h2 className="text-3xl font-bold mb-6 font-sans text-black" style={{ fontFamily: 'Roboto, Arial, Helvetica, sans-serif' }}>
+                {tVilla('livingSpaces.title')}
+              </h2>
               <p className="text-lg mb-10 font-sans text-black" style={{ fontFamily: 'Roboto, Arial, Helvetica, sans-serif' }}>
-                Découvrez un lieu de vie idéal pour recevoir ou passer des moments en famille.<br /><br />
-                Les villas ont été méticuleusement pensées pour donner vie à des espaces intelligents, fonctionnels et harmonieux.<br /><br />
-                Les intérieurs des villas sont conçus pour préserver votre intimité tout en offrant de belles ouvertures sur les espaces extérieurs.<br /><br />
-                Chacune des 5 suites propose des espaces de vie intérieurs et extérieurs spacieux et parfaitement agencés.
+                {tVilla('livingSpaces.description1')}<br /><br />
+                {tVilla('livingSpaces.description2')}<br /><br />
+                {tVilla('livingSpaces.description3')}<br /><br />
+                {tVilla('livingSpaces.description4')}
               </p>
             </div>
             {/* Colonne droite : image */}
@@ -507,7 +509,7 @@ export default function VillaPage() {
               <div className="relative w-full max-w-md h-[400px] rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src="/images/villa/IMG_5967.JPEG"
-                  alt="Vue de la villa"
+                  alt={tVilla('images.exterior.alt')}
                   fill
                   className="object-cover"
                   priority
@@ -528,9 +530,9 @@ export default function VillaPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-display mb-6">Informations pratiques</h2>
+            <h2 className="text-4xl font-display mb-6">{tVilla('practicalInfo.title')}</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Tout ce que vous devez savoir pour profiter pleinement de votre séjour aux Étoiles du Rocher
+              {tVilla('practicalInfo.subtitle')}
             </p>
           </motion.div>
 
