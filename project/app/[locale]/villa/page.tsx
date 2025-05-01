@@ -443,8 +443,8 @@ export default function VillaPage() {
             viewport={{ once: true, margin: "-100px" }}
           >
             <SectionTitle
-              title="Découvrez nos espaces"
-              subtitle="Chaque espace des Étoiles du Rocher a été conçu pour vous offrir confort, élégance et moments inoubliables."
+              title={tVilla('spaces.title')}
+              subtitle={tVilla('spaces.subtitle')}
               centered
             />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">

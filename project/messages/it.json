@@ -205,17 +205,68 @@
   },
   "gallery": {
     "title": "Galleria",
-    "description": "Scopri la bellezza della nostra villa attraverso le nostre foto.",
-    "photos": {
-      "exterior": "Vista esterna della villa con piscina e vista mare",
-      "living": "Salone di lusso con porte vetrate",
-      "bedroom": "Camera da letto principale con vista mare",
-      "terrace": "Terrazza con piscina infinity",
-      "kitchen": "Cucina completamente attrezzata",
-      "seaView": "Vista panoramica sul Mediterraneo",
-      "dining": "Sala da pranzo elegante",
-      "aerial": "Vista aerea della villa",
-      "master": "Suite principale"
+    "subtitle": "Scopri Les Étoiles du Rocher attraverso la nostra galleria fotografica",
+    "categories": {
+      "all": "Tutto",
+      "exterior": "Esterno",
+      "interior": "Interno",
+      "suites": "Suite",
+      "views": "Viste"
+    },
+    "images": {
+      "exterior": {
+        "1": "Facciata della villa con vista mare",
+        "2": "Giardino mediterraneo e terrazza",
+        "3": "Piscina a sfioro con vista mare",
+        "4": "Ingresso principale della villa",
+        "5": "Vista panoramica sulla baia",
+        "6": "Terrazza ombreggiata con salotto estivo"
+      },
+      "suites": {
+        "1": "Suite principale luminosa",
+        "2": "Suite doppia con vista giardino",
+        "3": "Suite accogliente con balcone",
+        "4": "Suite contemporanea",
+        "5": "Suite familiare spaziosa",
+        "6": "Suite con bagno privato",
+        "7": "Suite elegante con guardaroba",
+        "8": "Suite con terrazza privata",
+        "9": "Suite design e colorata",
+        "10": "Suite con vista mare",
+        "11": "Suite raffinata",
+        "12": "Suite con spazio ufficio",
+        "13": "Suite luminosa e tranquilla",
+        "14": "Suite con accesso diretto al giardino",
+        "15": "Suite con grande armadio",
+        "16": "Suite con bagno moderno",
+        "17": "Suite con letto king size",
+        "18": "Suite con vista pineta",
+        "19": "Suite con arredamento minimalista",
+        "20": "Suite con bagno privato",
+        "21": "Suite con terrazza fiorita",
+        "22": "Suite con vista mare",
+        "23": "Suite con atmosfera zen"
+      },
+      "interior": {
+        "1": "Soggiorno spazioso e luminoso",
+        "2": "Sala da pranzo elegante",
+        "3": "Cucina moderna completamente attrezzata",
+        "4": "Bagno design",
+        "5": "Angolo lettura accogliente",
+        "6": "Ingresso accogliente",
+        "7": "Sala giochi per bambini",
+        "8": "Bagno aggiuntivo",
+        "9": "Camera per gli ospiti",
+        "10": "Sala TV",
+        "11": "Sala fitness",
+        "12": "Ufficio con vista",
+        "13": "Guardaroba moderno"
+      },
+      "views": {
+        "1": "Tramonto sul mare",
+        "2": "Vista sulla baia al crepuscolo",
+        "3": "Panorama mediterraneo"
+      }
     }
   },
   "contact": {

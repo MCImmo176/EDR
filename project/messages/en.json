@@ -97,6 +97,9 @@
     "title": "The Villa",
     "description": "An exceptional residence",
     "spaces": {
+      "title": "Discover our spaces",
+      "subtitle": "Each space at Les Étoiles du Rocher has been designed to offer you comfort, elegance and unforgettable moments.",
+      "galleryButton": "Access the gallery",
       "living": {
         "title": "Main Living Room",
         "description": "An elegant living space with panoramic view of the Mediterranean",
@@ -238,22 +241,81 @@
       "all": "All",
       "exterior": "Exterior",
       "interior": "Interior",
-      "bedrooms": "Bedrooms",
+      "suites": "Suites",
       "views": "Views"
     },
     "images": {
-      "exterior": "Exterior view of the villa",
-      "living": "Living room with panoramic view",
-      "bedroom": "Master bedroom",
-      "terrace": "Terrace and pool",
-      "kitchen": "Fully equipped kitchen",
-      "seaView": "Sea view",
-      "dining": "Dining room",
-      "aerial": "Aerial view",
-      "master": "Master suite"
+      "exterior": {
+        "1": "Villa facade with sea view",
+        "2": "Mediterranean garden and terrace",
+        "3": "Infinity pool with sea view",
+        "4": "Main entrance of the villa",
+        "5": "Panoramic view of the bay",
+        "6": "Shaded terrace with summer lounge"
+      },
+      "suites": {
+        "1": "Bright master suite",
+        "2": "Double suite with garden view",
+        "3": "Cozy suite with balcony",
+        "4": "Contemporary suite",
+        "5": "Spacious family suite",
+        "6": "Suite with private bathroom",
+        "7": "Elegant suite with walk-in closet",
+        "8": "Suite with private terrace",
+        "9": "Design and colorful suite",
+        "10": "Suite with sea view",
+        "11": "Refined suite",
+        "12": "Suite with office space",
+        "13": "Bright and peaceful suite",
+        "14": "Suite with direct garden access",
+        "15": "Suite with large wardrobe",
+        "16": "Suite with modern bathroom",
+        "17": "Suite with king size bed",
+        "18": "Suite with pine forest view",
+        "19": "Suite with minimalist decor",
+        "20": "Suite with en-suite bathroom",
+        "21": "Suite with flowered terrace",
+        "22": "Suite with sea view",
+        "23": "Suite with zen atmosphere"
+      },
+      "interior": {
+        "1": "Spacious and bright living room",
+        "2": "Elegant dining room",
+        "3": "Modern fully equipped kitchen",
+        "4": "Design bathroom",
+        "5": "Cozy reading corner",
+        "6": "Welcoming entrance",
+        "7": "Children's playroom",
+        "8": "Additional bathroom",
+        "9": "Guest room",
+        "10": "TV lounge",
+        "11": "Fitness room",
+        "12": "Office with view",
+        "13": "Modern walk-in closet"
+      },
+      "views": {
+        "1": "Sunset over the sea",
+        "2": "Bay view at dusk",
+        "3": "Mediterranean panorama"
+      }
     }
   },
   "contact": {
+    "yourVilla": {
+      "subtitle": "Your Villa Awaits You",
+      "description": "Contact us to book your exceptional stay at Les Étoiles du Rocher",
+      "form": {
+        "name": "Full Name",
+        "namePlaceholder": "Your full name",
+        "email": "Email",
+        "emailPlaceholder": "Your email address",
+        "phone": "Phone",
+        "phonePlaceholder": "Your phone number",
+        "message": "Message",
+        "messagePlaceholder": "Your message",
+        "submit": "Send message"
+      }
+    },
     "form": {
       "success": "Message sent successfully",
       "successDetail": "We will get back to you as soon as possible.",
@@ -285,81 +347,88 @@
   "discover": {
     "title": "Discover",
     "subtitle": "Explore the wonders of the French Riviera from Les Étoiles du Rocher.",
-    "experiences": {
-      "title": "Experiences",
-      "subtitle": "A multitude of activities to make your stay unforgettable.",
-      "categories": {
-        "nautical": {
-          "title": "Water Activities",
-          "items": [
-            "Yacht rental",
-            "Scuba diving",
-            "Stand-up paddle and kayak",
-            "Jet ski"
-          ]
+    "enjoy": {
+      "title": "Enjoy",
+      "ourLocation": "Our location",
+      "events": {
+        "title": "Unmissable Events",
+        "monacoGP": {
+          "title": "Monaco Grand Prix 2025",
+          "type": "Sporting Event",
+          "date": "May 22-25, 2025",
+          "learnMore": "Learn more"
         },
-        "culture": {
-          "title": "Culture & History",
-          "items": [
-            "Museums",
-            "Historic sites",
-            "Art galleries",
-            "Concerts"
-          ]
+        "casino": {
+          "title": "Monte-Carlo Casino",
+          "type": "Gaming",
+          "hours": "2:00 PM - 4:00 AM",
+          "learnMore": "Learn more"
         },
-        "gastronomy": {
-          "title": "Gastronomy",
-          "items": [
-            "Michelin-starred restaurants",
-            "Local markets",
-            "Wine tastings",
-            "Cooking classes"
-          ]
+        "oceanographic": {
+          "title": "Oceanographic Museum",
+          "type": "Culture",
+          "hours": "10:00 AM - 6:00 PM",
+          "learnMore": "Learn more"
         },
-        "nature": {
-          "title": "Nature & Sports",
-          "items": [
-            "Hiking",
-            "Golf",
-            "Tennis",
-            "Electric mountain biking"
-          ]
+        "rally": {
+          "title": "Monte-Carlo Historic Rally",
+          "type": "Historic Car Event",
+          "date": "Jan 31 - Feb 5, 2025",
+          "learnMore": "Learn more"
+        }
+      },
+      "secrets": {
+        "title": "Secrets to Discover",
+        "customsPath": {
+          "title": "Customs Path",
+          "category": "Hiking",
+          "description": "Discover the hidden part of Cap Martin, between Pointe du Cap and Villa E-1027. A wild trail with secret coves perfect for swimming.",
+          "difficulty": "Difficulty: Medium",
+          "duration": "Duration: 2-3 hours",
+          "bestTime": "Best time: Sunrise"
+        },
+        "ezeVillage": {
+          "title": "Visit Èze Village",
+          "category": "History",
+          "description": "Wander through the picturesque streets of Èze, a medieval village with panoramic views of the Mediterranean.",
+          "comments": {
+            "medieval": "Medieval village",
+            "view": "Panoramic view of the Mediterranean"
+          }
+        },
+        "littleAfrica": {
+          "title": "Little Africa Valley",
+          "category": "Nature",
+          "description": "A secret Mediterranean jungle hidden in Beaulieu-sur-Mer. Shaded trails and breathtaking sea views, far from tourist paths.",
+          "difficulty": "Difficulty: Easy",
+          "duration": "Duration: 1 hour",
+          "bestTime": "Best time: Morning"
+        },
+        "corbusier": {
+          "title": "Le Corbusier's Rock",
+          "category": "Viewpoint",
+          "description": "A privileged meditation spot with sea views, accessible by a discreet path. A quiet place known only to the initiated.",
+          "difficulty": "Difficulty: Easy",
+          "duration": "Duration: 30 minutes",
+          "bestTime": "Best time: Sunset"
+        },
+        "garnier": {
+          "title": "Garnier Opera",
+          "category": "Culture",
+          "description": "A masterpiece of Belle Époque architecture, the Garnier Opera is a must-see in Monaco.",
+          "comments": {
+            "opera": "Opera house",
+            "decor": "Belle Époque decor"
+          }
+        },
+        "blueGulf": {
+          "title": "Blue Gulf Beach",
+          "category": "Beach",
+          "description": "A peaceful beach with crystal clear waters, perfect for a relaxing day by the sea.",
+          "bestTime": "Best time: Afternoon"
         }
       }
-    },
-    "activities": {
-      "monaco": {
-        "title": "Monaco",
-        "description": "Discover the Principality of Monaco, its legendary casinos, the Prince's Palace and the Formula 1 Grand Prix.",
-        "distance": "10 minutes"
-      },
-      "nice": {
-        "title": "Nice",
-        "description": "Stroll along the Promenade des Anglais, visit Old Nice and savor the local gastronomy.",
-        "distance": "30 minutes"
-      },
-      "eze": {
-        "title": "Èze Village",
-        "description": "Medieval perched village with breathtaking views of the Mediterranean and the famous Exotic Garden.",
-        "distance": "15 minutes"
-      },
-      "saintPaul": {
-        "title": "Saint-Paul-de-Vence",
-        "description": "Artists' village with art galleries, ramparts and the Maeght Foundation.",
-        "distance": "45 minutes"
-      },
-      "menton": {
-        "title": "Menton",
-        "description": "The pearl of France, known for its gardens, the lemon festival and its beaches.",
-        "distance": "15 minutes"
-      },
-      "antibes": {
-        "title": "Antibes",
-        "description": "Discover Port Vauban, Fort Carré and the Picasso Museum in this historic city.",
-        "distance": "40 minutes"
-      }
-    },
-    "readMore": "Read More"
+    }
   },
   "footer": {
     "terms": "Terms and Conditions",
