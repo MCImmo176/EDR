@@ -5,7 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { useLanguage } from "@/components/providers/language-provider";
+import { useLanguageContext } from "@/components/providers/language-provider";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -13,7 +14,8 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const { t } = useLanguage();
+  const { language, setLanguage } = useLanguageContext();
+  const t = useTranslations();
 
   // Handle scroll event to change header style
   useEffect(() => {

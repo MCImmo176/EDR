@@ -6,7 +6,7 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { usePathname } from 'next/navigation';
 
 export function Footer() {
-  const { t } = useLanguage();
+  const { tCommon } = useLanguage();
   const pathname = usePathname();
   const currentLocale = pathname.split('/')[1];
 
@@ -25,22 +25,22 @@ export function Footer() {
           <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
             <div className="flex flex-col md:flex-row gap-6">
               <Link href={`/${currentLocale}/terms`} className="hover:text-primary transition-colors">
-                {t('footer.terms')}
+                {tCommon('footer.terms')}
               </Link>
               <Link href={`/${currentLocale}/sales-terms`} className="hover:text-primary transition-colors">
-                {t('footer.sales')}
+                {tCommon('footer.sales')}
               </Link>
               <Link href={`/${currentLocale}/galerie`} className="hover:text-primary transition-colors">
-                {t('footer.gallery')}
+                {tCommon('footer.gallery')}
               </Link>
               <Link href={`/${currentLocale}/decouvrir`} className="hover:text-primary transition-colors">
-                {t('footer.discover')}
+                {tCommon('footer.discover')}
               </Link>
             </div>
           </div>
 
           <div className="text-center order-last md:order-2">
-            <span>© 2025 {t('common.villaName')}</span>
+            <span>© 2025 {tCommon('footer.villaName')}</span>
           </div>
           
           <div className="flex gap-4 items-center order-2 md:order-last">

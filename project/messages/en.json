@@ -8,7 +8,43 @@
     "discover": "Discover",
     "bookNow": "Book now",
     "contactUs": "Contact us",
-    "learnMore": "Learn more"
+    "learnMore": "Learn more",
+    "footer": {
+      "terms": "Terms and Conditions",
+      "sales": "Sales Conditions",
+      "gallery": "Gallery",
+      "discover": "Discover",
+      "villaName": "Les Étoiles du Rocher"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "villa": "Our Villa",
+    "gallery": "Gallery",
+    "discover": "Discover",
+    "contact": "Contact"
+  },
+  "snakeRectangle": {
+    "villa": {
+      "line1": "Your villa",
+      "line2": "awaits you"
+    },
+    "contact": {
+      "line1": "Contact us",
+      "line2": "for your stay"
+    },
+    "gallery": {
+      "line1": "Explore the",
+      "line2": "Villa Gallery"
+    },
+    "discover": {
+      "line1": "Enjoy",
+      "line2": "our location"
+    },
+    "villaException": {
+      "line1": "A unique experience",
+      "line2": "in Roquebrune Cap Martin"
+    }
   },
   "home": {
     "title": "The Stars of the Rock",
@@ -60,6 +96,58 @@
   "villa": {
     "title": "The Villa",
     "description": "An exceptional residence",
+    "spaces": {
+      "living": {
+        "title": "Main Living Room",
+        "description": "An elegant living space with panoramic view of the Mediterranean",
+        "alt": "Main living room with panoramic view"
+      },
+      "living2": {
+        "title": "Second Living Room",
+        "description": "A cozy space for intimate moments",
+        "alt": "Second living room"
+      },
+      "pool": {
+        "title": "Infinity Pool",
+        "description": "A stunning infinity pool with breathtaking sea view",
+        "alt": "Infinity pool with sea view"
+      },
+      "suites": {
+        "title": "Private Suites",
+        "description": "Five elegant suites offering comfort and privacy",
+        "alt": "Private suite"
+      }
+    },
+    "common": {
+      "gallery": "Gallery"
+    },
+    "livingSpaces": {
+      "title": "Discover our spaces",
+      "description1": "Each space at Les Étoiles du Rocher has been designed to offer you comfort, elegance and unforgettable moments.",
+      "description2": "Enjoy 350 m² spread over two floors, with five private suites featuring exceptional bedding.",
+      "description3": "A discreet guesthouse, nestled in Mediterranean vegetation, offers additional space for your guests.",
+      "description4": "Discover our infinity pool overlooking the sea and our rooftop offering an exceptional panorama of Monaco and the Mediterranean."
+    },
+    "practicalInfo": {
+      "title": "Practical Information",
+      "subtitle": "Everything you need to know for your stay",
+      "location": {
+        "title": "Location",
+        "description": "Located in Roquebrune Cap Martin, just 5 minutes from Monaco"
+      },
+      "availability": {
+        "title": "Availability",
+        "description": "Available for rent all year round"
+      },
+      "equipment": {
+        "title": "Equipment",
+        "description": "Fully equipped with high-end appliances and amenities"
+      },
+      "security": {
+        "title": "Security",
+        "description": "24/7 security and surveillance system"
+      }
+    },
     "features": {
       "area": "Area",
       "bedrooms": "Bedrooms",
