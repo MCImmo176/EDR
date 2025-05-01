@@ -12,12 +12,26 @@
     "language": "Lingua",
     "reserve": "Prenota",
     "villaName": "Le Stelle della Roccia",
+    "footer": {
+      "terms": "Termini e condizioni",
+      "sales": "Condizioni di vendita",
+      "gallery": "Galleria",
+      "discover": "Scoprire",
+      "villaName": "Le Stelle della Roccia"
+    },
     "menu": {
       "home": "Home",
       "villa": "La Villa",
       "gallery": "Galleria",
       "contact": "Contatti"
     }
+  },
+  "nav": {
+    "home": "Home",
+    "villa": "La Villa",
+    "gallery": "Galleria",
+    "discover": "Scoprire",
+    "contact": "Contatti"
   },
   "home": {
     "title": "Le Stelle della Roccia",
@@ -65,6 +79,65 @@
   "villa": {
     "title": "La Villa",
     "description": "Una residenza eccezionale",
+    "spaces": {
+      "title": "Gli spazi",
+      "subtitle": "Ogni spazio a Le Stelle della Roccia è stato progettato per offrirti comfort, eleganza e momenti indimenticabili.",
+      "living": {
+        "title": "Soggiorno",
+        "description": "Un ampio soggiorno con vista panoramica sul mare.",
+        "alt": "Soggiorno principale con vista panoramica"
+      },
+      "living2": {
+        "title": "Secondo soggiorno",
+        "description": "Uno spazio accogliente per momenti intimi",
+        "alt": "Secondo soggiorno"
+      },
+      "pool": {
+        "title": "Piscina a sfioro",
+        "description": "Una splendida piscina a sfioro con vista mozzafiato sul mare",
+        "alt": "Piscina a sfioro con vista mare"
+      },
+      "suites": {
+        "title": "Suite private",
+        "description": "Cinque suite eleganti che offrono comfort e privacy",
+        "alt": "Suite privata"
+      }
+    },
+    "common": {
+      "gallery": "Galleria"
+    },
+    "livingSpaces": {
+      "title": "Scopri i nostri spazi",
+      "description1": "Ogni spazio a Le Stelle della Roccia è stato progettato per offrirti comfort, eleganza e momenti indimenticabili.",
+      "description2": "Goditi 350 m² distribuiti su due piani, con cinque suite private dotate di letti eccezionali.",
+      "description3": "Una dependance discreta, incastonata nella vegetazione mediterranea, offre uno spazio aggiuntivo per i tuoi ospiti.",
+      "description4": "Scopri la nostra piscina a sfioro che domina il mare e il nostro rooftop che offre un panorama eccezionale su Monaco e il Mediterraneo."
+    },
+    "images": {
+      "exterior": {
+        "alt": "Vista esterna della villa con piscina e vista mare"
+      }
+    },
+    "practicalInfo": {
+      "title": "Informazioni pratiche",
+      "subtitle": "Tutto ciò che devi sapere per preparare il tuo soggiorno",
+      "location": {
+        "title": "Posizione",
+        "description": "Situata a soli 5 minuti da Monaco, la villa offre un accesso privilegiato alle principali attrazioni della Costa Azzurra."
+      },
+      "availability": {
+        "title": "Disponibilità",
+        "description": "La villa è disponibile tutto l'anno. Contattateci per verificare le date disponibili e le tariffe stagionali."
+      },
+      "equipment": {
+        "title": "Dotazioni",
+        "description": "La villa è completamente attrezzata con tutti i comfort moderni, inclusi Wi-Fi ad alta velocità, aria condizionata e una cucina gourmet."
+      },
+      "security": {
+        "title": "Sicurezza",
+        "description": "La villa è dotata di un sistema di sicurezza all'avanguardia e di un servizio di vigilanza 24/7 per garantire la vostra tranquillità."
+      }
+    },
     "ourVilla": {
       "title": "La Nostra Villa",
       "description": "Scopri la nostra villa di lusso con vista mozzafiato sul Mediterraneo.",
@@ -143,40 +216,6 @@
       "island": {
         "title": "Isola centrale",
         "description": "Isola centrale con spazio di stoccaggio integrato e prese elettriche nascoste per maggiore praticità."
-      }
-    },
-    "spaces": {
-      "title": "Gli spazi",
-      "living": {
-        "title": "Soggiorno",
-        "description": "Un ampio soggiorno con vista panoramica sul mare."
-      },
-      "dining": {
-        "title": "Sala da pranzo",
-        "description": "Una sala da pranzo elegante per i vostri momenti conviviali."
-      },
-      "terrace": {
-        "title": "Terrazza",
-        "description": "Una terrazza spaziosa con vista mozzafiato sul Mediterraneo."
-      }
-    },
-    "practicalInfo": {
-      "title": "Informazioni pratiche",
-      "location": {
-        "title": "Posizione",
-        "description": "La villa si trova a Cap d'Ail, a pochi minuti da Monaco."
-      },
-      "availability": {
-        "title": "Disponibilità",
-        "description": "Contattateci per conoscere le disponibilità e le tariffe."
-      },
-      "equipment": {
-        "title": "Attrezzature",
-        "description": "La villa è completamente attrezzata per il vostro comfort."
-      },
-      "security": {
-        "title": "Sicurezza",
-        "description": "Sistema di allarme e videosorveglianza per la vostra tranquillità."
       }
     },
     "houseRules": {
@@ -288,6 +327,27 @@
       "email": "Email",
       "hours": "Orari di apertura",
       "social": "Seguici sui social media"
+    },
+    "yourVilla": {
+      "title": "La tua villa ti aspetta",
+      "subtitle": "Contattaci!",
+      "description": "Grazie per aver visitato il nostro sito web! Saremo felici di parlare con te. Che tu abbia domande, feedback o desideri saperne di più sulle nostre ville, non esitare a contattarci. I nostri consulenti ti risponderanno il prima possibile.",
+      "form": {
+        "name": "Nome e Cognome",
+        "namePlaceholder": "Il tuo nome completo",
+        "email": "Email",
+        "emailPlaceholder": "Il tuo indirizzo email",
+        "phone": "Telefono",
+        "phonePlaceholder": "Il tuo numero di telefono",
+        "message": "Messaggio",
+        "messagePlaceholder": "Il tuo messaggio",
+        "submit": "Invia messaggio",
+        "countryCode": {
+          "label": "Prefisso",
+          "france": "Francia",
+          "code": "+33"
+        }
+      }
     }
   },
   "info": {
@@ -377,7 +437,89 @@
         "distance": "35 minuti"
       }
     },
-    "readMore": "Scopri di più"
+    "readMore": "Scopri di più",
+    "enjoy": {
+      "title": "Approfitta",
+      "ourLocation": "Della nostra posizione",
+      "events": {
+        "title": "Eventi da non perdere",
+        "monacoGP": {
+          "title": "Gran Premio di Monaco 2025",
+          "type": "Evento sportivo",
+          "date": "22-25 maggio 2025",
+          "learnMore": "Scopri di più"
+        },
+        "casino": {
+          "title": "Casino di Monte-Carlo",
+          "type": "Giochi d'azzardo",
+          "hours": "14:00 - 4:00",
+          "learnMore": "Scopri di più"
+        },
+        "oceanographic": {
+          "title": "Museo Oceanografico",
+          "type": "Cultura",
+          "hours": "10:00 - 18:00",
+          "learnMore": "Scopri di più"
+        },
+        "rally": {
+          "title": "Rally storico di Monte-Carlo",
+          "type": "Evento automobilistico sportivo",
+          "date": "31 gen - 5 feb 2025",
+          "learnMore": "Scopri di più"
+        }
+      },
+      "secrets": {
+        "title": "Segreti da scoprire",
+        "customsPath": {
+          "title": "Sentiero dei Doganieri",
+          "category": "Escursione",
+          "description": "Scopri la parte nascosta di Cap Martin, tra la Pointe du Cap e la Villa E-1027. Un sentiero selvaggio con calette segrete perfette per il bagno.",
+          "difficulty": "Difficoltà: Media",
+          "duration": "Durata: 2-3 ore",
+          "bestTime": "Momento migliore: Alba"
+        },
+        "ezeVillage": {
+          "title": "Visita al Villaggio di Èze",
+          "category": "Storia",
+          "description": "Passeggia tra le pittoresche stradine di Èze, un villaggio medievale con vista panoramica sul Mediterraneo.",
+          "comments": {
+            "medieval": "Villaggio medievale",
+            "view": "Vista panoramica sul Mediterraneo"
+          }
+        },
+        "littleAfrica": {
+          "title": "Valle di Little Africa",
+          "category": "Natura",
+          "description": "Una giungla mediterranea segreta nascosta a Beaulieu-sur-Mer. Sentieri ombreggiati e viste mozzafiato sul mare, lontano dai percorsi turistici.",
+          "difficulty": "Difficoltà: Facile",
+          "duration": "Durata: 1 ora",
+          "bestTime": "Momento migliore: Mattina"
+        },
+        "corbusier": {
+          "title": "La Roccia di Le Corbusier",
+          "category": "Punto panoramico",
+          "description": "Un luogo privilegiato per la meditazione con vista mare, accessibile da un sentiero discreto. Un posto tranquillo conosciuto solo dagli iniziati.",
+          "difficulty": "Difficoltà: Facile",
+          "duration": "Durata: 30 minuti",
+          "bestTime": "Momento migliore: Tramonto"
+        },
+        "garnier": {
+          "title": "Opera Garnier",
+          "category": "Cultura",
+          "description": "Un capolavoro dell'architettura Belle Époque, l'Opera Garnier è una tappa imperdibile a Monaco.",
+          "comments": {
+            "opera": "Teatro dell'opera",
+            "decor": "Decorazioni Belle Époque"
+          }
+        },
+        "blueGulf": {
+          "title": "Spiaggia del Golfo Blu",
+          "category": "Spiaggia",
+          "description": "Una spiaggia preservata tra Monaco e Cap-Martin, ideale per evitare la folla. Il punto perfetto per i tramonti.",
+          "bestTime": "Momento migliore: Tramonto"
+        }
+      }
+    }
   },
   "terms": {
     "title": "Termini e condizioni",
@@ -391,6 +533,28 @@
     "terms": "Termini e condizioni",
     "sales": "Condizioni di vendita",
     "gallery": "Galleria",
-    "discover": "Scopri"
+    "discover": "Scoprire"
+  },
+  "snakeRectangle": {
+    "villa": {
+      "line1": "La tua villa",
+      "line2": "ti aspetta"
+    },
+    "contact": {
+      "line1": "Contattaci",
+      "line2": "per il tuo soggiorno"
+    },
+    "gallery": {
+      "line1": "Esplora la",
+      "line2": "Galleria della villa"
+    },
+    "discover": {
+      "line1": "Goditi",
+      "line2": "la nostra posizione"
+    },
+    "villaException": {
+      "line1": "Un'esperienza unica",
+      "line2": "a Roquebrune Cap Martin"
+    }
   }
 } 
