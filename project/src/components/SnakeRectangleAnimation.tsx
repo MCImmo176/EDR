@@ -12,7 +12,7 @@ interface SnakeRectangleAnimationProps {
 }
 
 const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({ 
-  backgroundColor = '#333', 
+  backgroundColor = '#b7a66b', 
   textKey = 'villa',
   fontFamily = 'Arial, sans-serif',
   fontSize = '3rem',
@@ -250,7 +250,7 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
                 left: 0,
                 height: '5px',
                 width: 0,
-                backgroundColor: '#F5CFBA'
+                backgroundColor: '#b7a66b'
               }}
             />
             <div 
@@ -261,7 +261,7 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
                 right: 0,
                 width: '5px',
                 height: 0,
-                backgroundColor: '#F5CFBA'
+                backgroundColor: '#b7a66b'
               }}
             />
             <div 
@@ -272,7 +272,7 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
                 right: 0,
                 height: '5px',
                 width: 0,
-                backgroundColor: '#F5CFBA'
+                backgroundColor: '#b7a66b'
               }}
             />
             <div 
@@ -283,7 +283,7 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
                 left: 0,
                 width: '5px',
                 height: 0,
-                backgroundColor: '#F5CFBA'
+                backgroundColor: '#b7a66b'
               }}
             />
           </div>

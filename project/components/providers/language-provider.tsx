@@ -17,6 +17,8 @@ const translations: Record<Language, Record<string, string>> = {
   fr: {
     "nav.home": "Accueil",
     "nav.villa": "Notre Villa",
+    "nav.gallery": "Galerie",
+    "nav.discover": "Découvrir",
     "nav.info": "Informations",
     "nav.contact": "Contact",
     "footer.terms": "Conditions Générales",
@@ -29,6 +31,8 @@ const translations: Record<Language, Record<string, string>> = {
   en: {
     "nav.home": "Home",
     "nav.villa": "Our Villa",
+    "nav.gallery": "Gallery",
+    "nav.discover": "Discover",
     "nav.info": "Information",
     "nav.contact": "Contact",
     "footer.terms": "Terms of Use",
@@ -41,6 +45,8 @@ const translations: Record<Language, Record<string, string>> = {
   it: {
     "nav.home": "Home",
     "nav.villa": "La Nostra Villa",
+    "nav.gallery": "Galleria",
+    "nav.discover": "Scoprire",
     "nav.info": "Informazioni",
     "nav.contact": "Contatto",
     "footer.terms": "Termini di Utilizzo",
@@ -53,6 +59,8 @@ const translations: Record<Language, Record<string, string>> = {
   el: {
     "nav.home": "Αρχική",
     "nav.villa": "Η Βίλα μας",
+    "nav.gallery": "Εκθέσεις",
+    "nav.discover": "Ανακαλύψτε",
     "nav.info": "Πληροφορίες",
     "nav.contact": "Επικοινωνία",
     "footer.terms": "Όροι Χρήσης",
@@ -65,6 +73,8 @@ const translations: Record<Language, Record<string, string>> = {
   ru: {
     "nav.home": "Главная",
     "nav.villa": "Наша Вилла",
+    "nav.gallery": "Галерея",
+    "nav.discover": "Открыть",
     "nav.info": "Информация",
     "nav.contact": "Контакт",
     "footer.terms": "Условия использования",

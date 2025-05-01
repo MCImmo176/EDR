@@ -206,6 +206,13 @@
   },
   "gallery": {
     "title": "Galerie",
+    "subtitle": "Découvrez nos photos",
+    "categories": {
+      "all": "Toutes les photos",
+      "exterior": "Extérieur",
+      "interior": "Intérieur",
+      "views": "Vue"
+    },
     "description": "Découvrez la beauté de notre villa à travers nos photos.",
     "photos": {
       "exterior": "Vue extérieure de la villa avec piscine et vue mer",
@@ -220,28 +227,30 @@
     }
   },
   "contact": {
-    "title": "Échangeons ensemble",
-    "intro": "Merci d'avoir visité notre site web !",
-    "description": "Nous serions ravis d'échanger avec vous. Que vous ayez des questions, des retours à partager ou que vous souhaitiez en savoir plus sur nos villas, n'hésitez pas à nous contacter.",
-    "response": "Nos conseillers vous répondront dans les plus brefs délais.",
-    "form": {
-      "success": "Message envoyé avec succès",
-      "successDetail": "Nous vous répondrons dans les plus brefs délais.",
-      "name": "Nom & Prénom",
-      "namePlaceholder": "Votre nom complet",
-      "email": "Email",
-      "emailPlaceholder": "Votre adresse email",
-      "phone": "Téléphone",
-      "phonePlaceholder": "Votre numéro de téléphone",
-      "message": "Message",
-      "messagePlaceholder": "Votre message",
-      "submit": "Envoyer le message"
-    },
-    "info": {
-      "title": "Informations de contact",
-      "email": "Email",
-      "phone": "Téléphone",
-      "address": "Adresse"
+    "title": "Contact",
+    "description": "Contactez-nous",
+    "yourVilla": {
+      "title": "Votre villa vous attend",
+      "subtitle": "Contactez-nous !",
+      "description": "Merci d'avoir visité notre site web ! Nous serions ravis d'échanger avec vous. Que vous ayez des questions, des retours à partager ou que vous souhaitiez en savoir plus sur nos villas, n'hésitez pas à nous contacter. Nos conseillers vous répondront dans les plus brefs délais.",
+      "form": {
+        "name": "Nom & Prénom",
+        "namePlaceholder": "Votre nom complet",
+        "email": "Email",
+        "emailPlaceholder": "Votre adresse email",
+        "phone": "Téléphone",
+        "phonePlaceholder": "Votre numéro de téléphone",
+        "message": "Message",
+        "messagePlaceholder": "Votre message",
+        "submit": "Envoyer le message",
+        "success": "Message envoyé avec succès",
+        "successDetail": "Nous vous répondrons dans les plus brefs délais.",
+        "countryCode": {
+          "label": "Indicatif",
+          "france": "France",
+          "code": "+33"
+        }
+      }
     }
   },
   "info": {
@@ -256,81 +265,88 @@
   "discover": {
     "title": "Découvrir",
     "subtitle": "Explorez les merveilles de la Côte d'Azur depuis Les Étoiles du Rocher.",
-    "experiences": {
-      "title": "Expériences",
-      "subtitle": "Une multitude d'activités pour rendre votre séjour inoubliable.",
-      "categories": {
-        "nautical": {
-          "title": "Activités nautiques",
-          "items": [
-            "Location de yacht",
-            "Plongée sous-marine",
-            "Voile",
-            "Pêche"
-          ]
+    "enjoy": {
+      "title": "Profitez",
+      "ourLocation": "De notre emplacement",
+      "events": {
+        "title": "Événements à ne pas manquer",
+        "monacoGP": {
+          "title": "Grand Prix de Monaco 2025",
+          "type": "Événement sportif",
+          "date": "22-25 mai 2025",
+          "learnMore": "En savoir plus"
         },
-        "culture": {
-          "title": "Culture et histoire",
-          "items": [
-            "Musées",
-            "Sites historiques",
-            "Monuments",
-            "Villages perchés"
-          ]
+        "casino": {
+          "title": "Casino de Monte-Carlo",
+          "type": "Jeux de hasard",
+          "hours": "14h00 - 4h00",
+          "learnMore": "En savoir plus"
         },
-        "gastronomy": {
-          "title": "Gastronomie",
-          "items": [
-            "Restaurants étoilés Michelin",
-            "Dégustations de vins",
-            "Marchés locaux",
-            "Cuisine méditerranéenne"
-          ]
+        "oceanographic": {
+          "title": "Musée océanographique",
+          "type": "Culture",
+          "hours": "10h00 - 18h00",
+          "learnMore": "En savoir plus"
         },
-        "nature": {
-          "title": "Nature et sports",
-          "items": [
-            "Randonnées",
-            "Golf",
-            "Tennis",
-            "Cyclisme"
-          ]
+        "rally": {
+          "title": "Rallye historique de Monte-Carlo",
+          "type": "Événement sportif automobile",
+          "date": "31 jan - 5 fév 2025",
+          "learnMore": "En savoir plus"
+        }
+      },
+      "secrets": {
+        "title": "Secrets à découvrir",
+        "customsPath": {
+          "title": "Sentier des douaniers",
+          "category": "Randonnée",
+          "description": "Découvrez la partie cachée du Cap Martin, entre la Pointe du Cap et la Villa E-1027. Un sentier sauvage avec des criques secrètes idéales pour la baignade.",
+          "difficulty": "Difficulté : Moyenne",
+          "duration": "Durée : 2-3 heures",
+          "bestTime": "Meilleur moment : Lever du soleil"
+        },
+        "ezeVillage": {
+          "title": "Visitez le village d'Èze",
+          "category": "Histoire",
+          "description": "Parcourez les ruelles pittoresques d'Èze, un village médiéval avec vue panoramique sur la Méditerranée.",
+          "comments": {
+            "medieval": "Village médiéval",
+            "view": "Vue panoramique sur la Méditerranée"
+          }
+        },
+        "littleAfrica": {
+          "title": "Vallée de la Petite Afrique",
+          "category": "Nature",
+          "description": "Une jungle méditerranéenne secrète cachée à Beaulieu-sur-Mer. Des sentiers ombragés et une vue imprenable sur la mer, loin des sentiers touristiques.",
+          "difficulty": "Difficulté : Facile",
+          "duration": "Durée : 1 heure",
+          "bestTime": "Meilleur moment : Matin"
+        },
+        "corbusier": {
+          "title": "Rocher de Le Corbusier",
+          "category": "Point de vue",
+          "description": "Un lieu privilégié de méditation avec vue sur la mer, accessible par un sentier discret. Un point calme connu uniquement des initiés.",
+          "difficulty": "Difficulté : Facile",
+          "duration": "Durée : 30 minutes",
+          "bestTime": "Meilleur moment : Coucher de soleil"
+        },
+        "garnier": {
+          "title": "Salle Garnier",
+          "category": "Culture",
+          "description": "L'opéra de Monaco, un joyau architectural caché dans le Casino. Une salle intimiste aux ornements dorés élaborés, souvent méconnue des visiteurs.",
+          "comments": {
+            "opera": "Opéra Belle Époque",
+            "decor": "Décoration élaborée"
+          }
+        },
+        "blueGulf": {
+          "title": "Plage du Golfe Bleu",
+          "category": "Plage",
+          "description": "Une plage préservée entre Monaco et Cap-Martin, idéale pour éviter la foule. Le point parfait pour les couchers de soleil.",
+          "bestTime": "Meilleur moment : Coucher de soleil"
         }
       }
-    },
-    "activities": {
-      "monaco": {
-        "title": "Monaco",
-        "description": "Le célèbre rocher monégasque",
-        "distance": "5 minutes"
-      },
-      "nice": {
-        "title": "Nice",
-        "description": "La capitale de la Côte d'Azur",
-        "distance": "20 minutes"
-      },
-      "eze": {
-        "title": "Eze Village",
-        "description": "Village médiéval perché",
-        "distance": "15 minutes"
-      },
-      "saintPaul": {
-        "title": "Saint-Paul-de-Vence",
-        "description": "Village d'artistes",
-        "distance": "30 minutes"
-      },
-      "menton": {
-        "title": "Menton",
-        "description": "La perle de la France",
-        "distance": "25 minutes"
-      },
-      "antibes": {
-        "title": "Antibes",
-        "description": "Ville historique et portuaire",
-        "distance": "35 minutes"
-      }
-    },
-    "readMore": "En savoir plus"
+    }
   },
   "footer": {
     "terms": "Conditions générales",
@@ -345,5 +361,15 @@
   "sales": {
     "title": "Conditions de vente",
     "content": "Contenu des conditions de vente..."
+  },
+  "snakeRectangle": {
+    "contact": {
+      "line1": "Contactez-nous",
+      "line2": "Pour votre séjour"
+    },
+    "discover": {
+      "line1": "Découvrez",
+      "line2": "les alentours"
+    }
   }
 } 

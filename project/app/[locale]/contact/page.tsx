@@ -173,9 +173,9 @@ export default function ContactPage() {
                       name="name"
                       render={({ field }) => (
                         <FormItem className="space-y-4">
-                          <FormLabel>{t('form.name')}</FormLabel>
+                          <FormLabel>{t('yourVilla.form.name')}</FormLabel>
                           <FormControl>
-                            <Input placeholder={t('form.namePlaceholder')} className="bg-background" {...field} />
+                            <Input placeholder={t('yourVilla.form.namePlaceholder')} className="bg-background" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -187,9 +187,9 @@ export default function ContactPage() {
                       name="email"
                       render={({ field }) => (
                         <FormItem className="space-y-4">
-                          <FormLabel>{t('form.email')}</FormLabel>
+                          <FormLabel>{t('yourVilla.form.email')}</FormLabel>
                           <FormControl>
-                            <Input placeholder={t('form.emailPlaceholder')} className="bg-background" {...field} />
+                            <Input placeholder={t('yourVilla.form.emailPlaceholder')} className="bg-background" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -223,11 +223,11 @@ export default function ContactPage() {
                           render={({ field }) => (
                             <FormItem className="space-y-1">
                               <div className="h-[20px] flex items-center mb-1">
-                                <FormLabel className="text-sm font-medium leading-none">{t('form.phone')}</FormLabel>
+                                <FormLabel className="text-sm font-medium leading-none">{t('yourVilla.form.phone')}</FormLabel>
                               </div>
                               <FormControl>
                                 <Input 
-                                  placeholder={t('form.phonePlaceholder')}
+                                  placeholder={t('yourVilla.form.phonePlaceholder')}
                                   className="bg-background h-[40px]" 
                                   {...field} 
                                 />
@@ -244,10 +244,10 @@ export default function ContactPage() {
                       name="message"
                       render={({ field }) => (
                         <FormItem className="space-y-4">
-                          <FormLabel>{t('form.message')}</FormLabel>
+                          <FormLabel>{t('yourVilla.form.message')}</FormLabel>
                           <FormControl>
                             <Textarea 
-                              placeholder={t('form.messagePlaceholder')}
+                              placeholder={t('yourVilla.form.messagePlaceholder')}
                               className="resize-none min-h-[150px] bg-background"
                               {...field} 
                             />
@@ -261,7 +261,7 @@ export default function ContactPage() {
                       type="submit" 
                       className="relative bg-black text-white overflow-hidden group hover:bg-white hover:text-black border-2 border-black transition-all duration-500 text-lg px-12 py-6 rounded-none w-full"
                     >
-                      <span className="relative z-10">{t('form.submit')}</span>
+                      <span className="relative z-10">{t('yourVilla.form.submit')}</span>
                       <Send className="ml-2 h-4 w-4 relative z-10" />
                       <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                     </Button>
