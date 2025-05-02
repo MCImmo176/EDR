@@ -1,6 +1,20 @@
+'use client';
+
+import { Metadata } from 'next';
 import React from 'react';
 
-export default function ExterieurPage() {
+export const metadata: Metadata = {
+  title: 'Extérieur - Les Étoiles du Rocher',
+  description: 'Découvrez l\'extérieur de notre villa de luxe sur la Côte d\'Azur',
+};
+
+interface PageProps {
+  params: {
+    locale: string;
+  };
+}
+
+const ExterieurPage: React.FC<PageProps> = ({ params }) => {
   return (
     <section className="relative h-screen w-screen overflow-hidden p-0 m-0">
       <iframe
@@ -15,4 +29,6 @@ export default function ExterieurPage() {
       {/* Garder le contenu overlay/texte/animation existant ici */}
     </section>
   );
-} 
+};
+
+export default ExterieurPage; 
