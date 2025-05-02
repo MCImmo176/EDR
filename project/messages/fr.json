@@ -231,7 +231,8 @@
       "dining": "Salle à manger élégante",
       "aerial": "Vue aérienne de la villa",
       "master": "Suite principale"
-    }
+    },
+    "discoverButton": "Découvrir les alentours"
   },
   "contact": {
     "title": "Contact",

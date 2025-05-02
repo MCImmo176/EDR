@@ -209,7 +209,8 @@
       "interior": "Интерьер",
       "pool": "Бассейн",
       "garden": "Сад"
-    }
+    },
+    "discoverButton": "Открыть окрестности"
   },
   "contact": {
     "title": "Контакты",

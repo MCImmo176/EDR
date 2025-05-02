@@ -331,7 +331,7 @@ export default function GaleriePage() {
               href="/contact"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-[#b7a66b] rounded-full hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-all duration-300 ease-in-out transform hover:scale-105"
             >
-              Découvrir les alentours
+              {tGallery('discoverButton')}
             </Link>
           </motion.div>
         </div>
