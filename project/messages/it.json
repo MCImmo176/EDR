@@ -343,7 +343,7 @@
         "messagePlaceholder": "Il tuo messaggio",
         "submit": "Invia messaggio",
         "countryCode": {
-          "label": "Prefisso",
+          "label": "Prefisso internazionale",
           "france": "Francia",
           "code": "+33"
         }

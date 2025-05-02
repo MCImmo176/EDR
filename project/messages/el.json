@@ -308,7 +308,7 @@
       "form": {
         "name": "Όνομα & Επώνυμο",
         "namePlaceholder": "Το πλήρες όνομά σας",
-        "email": "Email",
+        "email": "Ηλ. ταχυδρομείο",
         "emailPlaceholder": "Η διεύθυνση email σας",
         "phone": "Τηλέφωνο",
         "phonePlaceholder": "Ο αριθμός τηλεφώνου σας",
@@ -316,7 +316,12 @@
         "messagePlaceholder": "Το μήνυμά σας",
         "submit": "Αποστολή μηνύματος",
         "success": "Το μήνυμά σας εστάλη επιτυχώς!",
-        "successDetail": "Θα σας απαντήσουμε το συντομότερο δυνατό."
+        "successDetail": "Θα σας απαντήσουμε το συντομότερο δυνατό.",
+        "countryCode": {
+          "label": "Διεθνής κωδικός",
+          "france": "Γαλλία",
+          "code": "+33"
+        }
       }
     },
     "common": {
@@ -484,7 +489,12 @@
         "message": "Μήνυμα",
         "messagePlaceholder": "Το μήνυμά σας",
         "send": "Αποστολή μηνύματος",
-        "submit": "Αποστολή μηνύματος"
+        "submit": "Αποστολή μηνύματος",
+        "countryCode": {
+          "label": "Διεθνής κωδικός",
+          "france": "Γαλλία",
+          "code": "+33"
+        }
       }
     }
   },

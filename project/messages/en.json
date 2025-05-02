@@ -327,7 +327,12 @@
       "phonePlaceholder": "Your phone number",
       "message": "Message",
       "messagePlaceholder": "Your message",
-      "submit": "Send message"
+      "submit": "Send message",
+      "countryCode": {
+        "label": "Country code",
+        "france": "France",
+        "code": "+33"
+      }
     },
     "title": "Let's connect",
     "intro": "Thank you for visiting our website!",

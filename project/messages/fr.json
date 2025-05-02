@@ -13,6 +13,13 @@
     "reserve": "Réserver",
     "villaName": "Les Étoiles du Rocher"
   },
+  "nav": {
+    "home": "Accueil",
+    "villa": "Notre villa",
+    "gallery": "Galerie",
+    "discover": "Découverte",
+    "contact": "Contact"
+  },
   "home": {
     "title": "Les Étoiles du Rocher",
     "subtitle": "Votre havre de paix sur la Côte d'Azur",
