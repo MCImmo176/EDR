@@ -1,12 +1,6 @@
 'use client';
 
-import { Metadata } from 'next';
 import React from 'react';
-
-export const metadata: Metadata = {
-  title: 'Extérieur - Les Étoiles du Rocher',
-  description: 'Découvrez l\'extérieur de notre villa de luxe sur la Côte d\'Azur',
-};
 
 interface PageProps {
   params: {
@@ -26,7 +20,6 @@ const ExterieurPage: React.FC<PageProps> = ({ params }) => {
         className="absolute inset-0 w-full h-full object-cover"
         style={{ zIndex: 0 }}
       />
-      {/* Garder le contenu overlay/texte/animation existant ici */}
     </section>
   );
 };
