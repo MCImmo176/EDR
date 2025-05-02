@@ -476,11 +476,11 @@ export default function VillaPage() {
             <Button
               asChild
               size="lg"
-              className="relative bg-transparent border-2 border-black text-black overflow-hidden group hover:text-white transition-all duration-500 text-lg px-12 py-6 rounded-none"
+              className="relative bg-[#b7a66b] text-white border-2 border-[#b7a66b] overflow-hidden group hover:bg-white hover:text-[#b7a66b] transition-all duration-500 text-lg px-12 py-6 rounded-none"
             >
               <Link href="/galerie">
-                <span className="relative z-10">{tVilla('common.gallery')}</span>
-                <div className="absolute inset-0 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                <span className="relative z-10">{tVilla('spaces.galleryButton')}</span>
+                <div className="absolute inset-0 bg-white z-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
               </Link>
             </Button>
           </div>
