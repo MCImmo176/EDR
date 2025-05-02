@@ -11,13 +11,13 @@
     "learnMore": "Scopri di più",
     "language": "Lingua",
     "reserve": "Prenota",
-    "villaName": "Le Stelle della Roccia",
+    "villaName": "Les Étoiles du Rocher",
     "footer": {
       "terms": "Termini e condizioni",
       "sales": "Condizioni di vendita",
       "gallery": "Galleria",
       "discover": "Scoprire",
-      "villaName": "Le Stelle della Roccia"
+      "villaName": "Les Étoiles du Rocher"
     },
     "menu": {
       "home": "Home",
@@ -34,7 +34,7 @@
     "contact": "Contatti"
   },
   "home": {
-    "title": "Le Stelle della Roccia",
+    "title": "Les Étoiles du Rocher",
     "subtitle": "Il tuo rifugio di pace sulla Costa Azzurra",
     "booking": {
       "title": "Prenota il tuo soggiorno eccezionale"
@@ -101,7 +101,8 @@
         "title": "Suite private",
         "description": "Cinque suite eleganti che offrono comfort e privacy",
         "alt": "Suite privata"
-      }
+      },
+      "galleryButton": "Accedi alla galleria"
     },
     "common": {
       "gallery": "Galleria"
