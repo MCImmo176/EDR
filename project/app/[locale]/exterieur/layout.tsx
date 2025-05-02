@@ -1,4 +1,5 @@
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
+import React from 'react';
 
 export const metadata: Metadata = {
   title: 'Extérieur - Les Étoiles du Rocher',
@@ -6,5 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return children;
+  return <>{children}</>;
 } 

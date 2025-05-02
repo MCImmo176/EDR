@@ -1,6 +1,8 @@
 'use client';
 
-interface PageProps {
+import React from 'react';
+
+export interface PageProps {
   params: { locale: string };
 }
 
@@ -10,7 +12,7 @@ export default function ExterieurPage({ params }: PageProps) {
       <iframe
         src="https://www.youtube.com/embed/KC_DhNv3iM4?autoplay=1&mute=1&loop=1&playlist=KC_DhNv3iM4&controls=0"
         title="Villa luxe Côte d'Azur"
-        allow="autoplay; encrypted-media"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         className="absolute inset-0 w-full h-full object-cover"
       />
     </section>
