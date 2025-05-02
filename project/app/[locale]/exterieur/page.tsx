@@ -1,19 +1,13 @@
 'use client';
 
-import React from 'react';
-
-export interface PageProps {
-  params: { locale: string };
-}
-
-export default function ExterieurPage({ params }: PageProps) {
+export default function ExterieurPage() {
   return (
-    <section className="relative h-screen w-screen overflow-hidden p-0 m-0">
+    <section className="relative h-screen w-screen overflow-hidden">
       <iframe
-        src="https://www.youtube.com/embed/KC_DhNv3iM4?autoplay=1&mute=1&loop=1&playlist=KC_DhNv3iM4&controls=0"
-        title="Villa luxe Côte d'Azur"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        className="absolute inset-0 w-full h-full object-cover"
+        src="https://www.youtube.com/embed/KC_DhNv3iM4?autoplay=1&mute=1&loop=1"
+        className="absolute inset-0 w-full h-full"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope"
+        allowFullScreen
       />
     </section>
   );

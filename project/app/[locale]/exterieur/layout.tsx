@@ -1,11 +1,18 @@
-import { Metadata } from 'next';
-import React from 'react';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Extérieur - Les Étoiles du Rocher',
-  description: 'Découvrez l\'extérieur de notre villa de luxe',
+  description: 'Découvrez notre villa de luxe',
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="fr">
+      <body>{children}</body>
+    </html>
+  );
 } 
