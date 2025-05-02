@@ -530,10 +530,9 @@
     "content": "Contenuto delle condizioni di vendita..."
   },
   "footer": {
-    "terms": "Termini e condizioni",
-    "sales": "Condizioni di vendita",
-    "gallery": "Galleria",
-    "discover": "Scoprire"
+    "terms": "Termini Generali",
+    "sales": "Termini Generali di Vendita",
+    "rights": "Tutti i diritti riservati"
   },
   "snakeRectangle": {
     "villa": {
@@ -553,8 +552,8 @@
       "line2": "la nostra posizione"
     },
     "villaException": {
-      "line1": "Un'esperienza unica",
-      "line2": "a Roquebrune Cap Martin"
+      "line1": "Un'esperienza",
+      "line2": "Unica"
     }
   }
 } 

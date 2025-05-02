@@ -356,10 +356,9 @@
     }
   },
   "footer": {
-    "terms": "Conditions générales",
-    "sales": "Conditions de vente",
-    "gallery": "Galerie",
-    "discover": "Découvrir"
+    "terms": "Conditions Générales",
+    "sales": "Conditions Générales de vente",
+    "rights": "Tous droits réservés"
   },
   "terms": {
     "title": "Conditions générales",
@@ -370,13 +369,25 @@
     "content": "Contenu des conditions de vente..."
   },
   "snakeRectangle": {
+    "villa": {
+      "line1": "Votre villa",
+      "line2": "vous attend"
+    },
     "contact": {
       "line1": "Contactez-nous",
-      "line2": "Pour votre séjour"
+      "line2": "pour votre séjour"
+    },
+    "gallery": {
+      "line1": "Explorez la",
+      "line2": "Galerie de la villa"
     },
     "discover": {
       "line1": "Découvrez",
       "line2": "les alentours"
+    },
+    "villaException": {
+      "line1": "Une expérience",
+      "line2": "Unique"
     }
   }
 } 

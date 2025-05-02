@@ -4,11 +4,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useLanguage } from '@/hooks/useLanguage';
 import { usePathname } from 'next/navigation';
+import { useParams } from 'next/navigation';
 
 export function Footer() {
-  const { tCommon } = useLanguage();
-  const pathname = usePathname();
-  const currentLocale = pathname.split('/')[1];
+  const { t } = useLanguage();
+  const currentLocale = useParams().locale as string;
 
   const flags = [
     { locale: "fr", src: "/images/flags/france.png", alt: "Drapeau français" },
@@ -19,35 +19,27 @@ export function Footer() {
   ];
 
   return (
-    <footer className="py-8">
+    <footer className="bg-neutral-50 py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
             <div className="flex flex-col md:flex-row gap-6">
               <Link href={`/${currentLocale}/terms`} className="hover:text-primary transition-colors">
-                {tCommon('footer.terms')}
+                {t('footer.terms')}
               </Link>
               <Link href={`/${currentLocale}/sales-terms`} className="hover:text-primary transition-colors">
-                {tCommon('footer.sales')}
-              </Link>
-              <Link href={`/${currentLocale}/galerie`} className="hover:text-primary transition-colors">
-                {tCommon('footer.gallery')}
-              </Link>
-              <Link href={`/${currentLocale}/decouvrir`} className="hover:text-primary transition-colors">
-                {tCommon('footer.discover')}
+                {t('footer.sales')}
               </Link>
             </div>
           </div>
 
           <div className="text-center order-last md:order-2">
-            <span>© 2025 {tCommon('footer.villaName')}</span>
+            <span>© 2025 Les Étoiles du Rocher</span>
           </div>
           
           <div className="flex gap-4 items-center order-2 md:order-last">
             {flags.map((flag) => {
-              // Extraire le chemin actuel sans la locale
-              const currentPath = pathname.split('/').slice(2).join('/');
-              // Construire le nouveau chemin avec la nouvelle locale
+              const currentPath = usePathname().split('/').slice(2).join('/');
               const newPath = `/${flag.locale}/${currentPath}`;
               
               return (

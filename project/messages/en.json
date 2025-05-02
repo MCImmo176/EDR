@@ -42,8 +42,8 @@
       "line2": "our location"
     },
     "villaException": {
-      "line1": "A unique experience",
-      "line2": "in Roquebrune Cap Martin"
+      "line1": "An experience",
+      "line2": "Unique"
     }
   },
   "home": {
@@ -436,8 +436,8 @@
     }
   },
   "footer": {
-    "terms": "Terms and Conditions",
-    "sales": "Sales Conditions",
+    "terms": "General Terms",
+    "sales": "General Terms of Sale",
     "rights": "All rights reserved"
   },
   "terms": {
