@@ -38,13 +38,13 @@ export default function ContactPage() {
   const videoRef = useRef(null);
   
   const handleResize = () => {
-    if (videoRef.current) {
+    if (videoRef.current instanceof HTMLDivElement) {
       const videoContainer = videoRef.current;
       const windowWidth = window.innerWidth;
       const windowHeight = window.innerHeight;
       const windowRatio = windowWidth / windowHeight;
       const videoRatio = 16 / 9;
-      
+  
       if (windowRatio < videoRatio) {
         const newWidth = windowHeight * videoRatio;
         videoContainer.style.width = `${newWidth}px`;
