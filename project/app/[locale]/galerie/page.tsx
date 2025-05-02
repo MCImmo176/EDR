@@ -247,8 +247,8 @@ export default function GaleriePage() {
               onClick={() => setActiveCategory(null)}
               className={`px-6 py-3 rounded-full transition-all duration-300 ${
                 activeCategory === null
-                  ? "bg-black text-white"
-                  : "bg-muted hover:bg-black hover:text-white"
+                  ? "bg-[#b7a66b] text-white"
+                  : "bg-muted hover:bg-[#b7a66b] hover:text-white"
               }`}
             >
               {tGallery('categories.all')}
@@ -259,8 +259,8 @@ export default function GaleriePage() {
                 onClick={() => setActiveCategory(category)}
                 className={`px-6 py-3 rounded-full transition-all duration-300 ${
                   activeCategory === category
-                    ? "bg-black text-white"
-                    : "bg-muted hover:bg-black hover:text-white"
+                    ? "bg-[#b7a66b] text-white"
+                    : "bg-muted hover:bg-[#b7a66b] hover:text-white"
                 }`}
               >
                 {category === tGallery('categories.suites') ? 'Suites' : category}
@@ -329,7 +329,7 @@ export default function GaleriePage() {
           >
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-black rounded-full hover:bg-white hover:text-black border-2 border-black transition-all duration-300 ease-in-out transform hover:scale-105"
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-[#b7a66b] rounded-full hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-all duration-300 ease-in-out transform hover:scale-105"
             >
               Découvrir les alentours
             </Link>

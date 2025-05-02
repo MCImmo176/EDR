@@ -179,7 +179,7 @@ export default function DecouvrirPage() {
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-display mb-6">{t('enjoy.events.title')}</h2>
-            <div className="h-1 w-20 bg-primary mx-auto" />
+            <div className="h-1 w-20 bg-[#b7a66b] mx-auto" />
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -225,12 +225,12 @@ export default function DecouvrirPage() {
 
                     <Button
                       asChild
-                      className="relative overflow-hidden group/btn bg-white text-black hover:text-white border-2 border-white transition-all duration-500"
+                      className="relative overflow-hidden group/btn bg-white text-[#b7a66b] hover:text-white border-2 border-white transition-all duration-500"
                     >
                       <Link href={event.link} target="_blank">
                         {t('enjoy.events.monacoGP.learnMore')}
                         <ArrowRight className="ml-2 h-4 w-4 relative z-10" />
-                        <div className="absolute inset-0 bg-black transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left" />
+                        <div className="absolute inset-0 bg-[#b7a66b] transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left" />
                       </Link>
                     </Button>
                   </div>
@@ -251,7 +251,7 @@ export default function DecouvrirPage() {
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-display mb-6">{t('enjoy.secrets.title')}</h2>
-            <div className="h-1 w-20 bg-primary mx-auto" />
+            <div className="h-1 w-20 bg-[#b7a66b] mx-auto" />
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -282,25 +282,25 @@ export default function DecouvrirPage() {
                   <div className="space-y-3">
                     {secret.difficulty && (
                       <div className="flex items-center text-sm">
-                        <Compass className="h-5 w-5 mr-2 text-primary" />
+                        <Compass className="h-5 w-5 mr-2 text-[#b7a66b]" />
                         <span>{secret.difficulty}</span>
                       </div>
                     )}
                     {secret.duration && (
                       <div className="flex items-center text-sm">
-                        <Clock className="h-5 w-5 mr-2 text-primary" />
+                        <Clock className="h-5 w-5 mr-2 text-[#b7a66b]" />
                         <span>{secret.duration}</span>
                       </div>
                     )}
                     {secret.bestTime && (
                       <div className="flex items-center text-sm">
-                        <Star className="h-5 w-5 mr-2 text-primary" />
+                        <Star className="h-5 w-5 mr-2 text-[#b7a66b]" />
                         <span>{secret.bestTime}</span>
                       </div>
                     )}
                     {secret.comments && secret.comments.map((comment, i) => (
                       <div key={i} className="flex items-center text-sm">
-                        <comment.icon className="mr-2 h-5 w-5 text-primary" />
+                        <comment.icon className="mr-2 h-5 w-5 text-[#b7a66b]" />
                         <span>{comment.text}</span>
                       </div>
                     ))}

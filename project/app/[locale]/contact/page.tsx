@@ -35,9 +35,8 @@ const formSchema = z.object({
 export default function ContactPage() {
   const t = useTranslations('contact');
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const videoRef = useRef(null); // Ajout de la référence pour la vidéo
+  const videoRef = useRef(null);
   
-  // Fonction pour ajuster la taille de la vidéo
   const handleResize = () => {
     if (videoRef.current) {
       const videoContainer = videoRef.current;
@@ -47,14 +46,12 @@ export default function ContactPage() {
       const videoRatio = 16 / 9;
       
       if (windowRatio < videoRatio) {
-        // Window is taller than video ratio - adjust width
         const newWidth = windowHeight * videoRatio;
         videoContainer.style.width = `${newWidth}px`;
         videoContainer.style.height = '100%';
         videoContainer.style.left = `${(windowWidth - newWidth) / 2}px`;
         videoContainer.style.top = '0';
       } else {
-        // Window is wider than video ratio - adjust height
         const newHeight = windowWidth / videoRatio;
         videoContainer.style.width = '100%';
         videoContainer.style.height = `${newHeight}px`;
@@ -67,7 +64,7 @@ export default function ContactPage() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener('resize', handleResize);
-      handleResize(); // Initial resize
+      handleResize();
       return () => window.removeEventListener('resize', handleResize);
     }
   }, []);
@@ -113,13 +110,12 @@ export default function ContactPage() {
               left: 0,
               width: '100%',
               height: '100%',
-              objectFit: 'cover', // Garantit le remplissage complet
-              transform: 'none', // Retire le translate qui pouvait causer des problèmes
+              objectFit: 'cover',
+              transform: 'none',
             }}
           />
         </div>
         
-        {/* Overlay complètement transparent */}
         <div className="absolute inset-0 flex items-center bg-transparent">
           <div className="w-full h-full flex items-center">
             <SnakeRectangleAnimation 
@@ -128,7 +124,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
 
       <section className="py-24">
         <div className="container max-w-7xl mx-auto">
@@ -157,7 +152,7 @@ export default function ContactPage() {
             >
               {isSubmitted ? (
                 <div className="text-center py-12">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary mb-6">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#b7a66b] mb-6">
                     <Check className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-display mb-4">{t('form.success')}</h3>
@@ -259,7 +254,7 @@ export default function ContactPage() {
                     
                     <Button 
                       type="submit" 
-                      className="relative bg-black text-white overflow-hidden group hover:bg-white hover:text-black border-2 border-black transition-all duration-500 text-lg px-12 py-6 rounded-none w-full"
+                      className="relative bg-[#b7a66b] text-white overflow-hidden group hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-all duration-500 text-lg px-12 py-6 rounded-none w-full"
                     >
                       <span className="relative z-10">{t('yourVilla.form.submit')}</span>
                       <Send className="ml-2 h-4 w-4 relative z-10" />

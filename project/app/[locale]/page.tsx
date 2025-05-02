@@ -188,7 +188,7 @@ export default function Home() {
               <Button 
                 asChild 
                 size="lg"
-                className="relative bg-transparent border-2 border-white text-white overflow-hidden group hover:text-black transition-all duration-500 text-lg px-12 py-6 rounded-none"
+                className="relative bg-transparent border-2 border-white text-white overflow-hidden group hover:text-[#b7a66b] transition-all duration-500 text-lg px-12 py-6 rounded-none"
               >
                 <Link href="/reservations">
                   <span className="relative z-10">Réserver</span>
@@ -303,7 +303,7 @@ export default function Home() {
             <Button
               asChild
               size="xl"
-              className="bg-black text-white hover:bg-gray-800 transition-colors px-12 py-6 rounded-none"
+              className="bg-[#b7a66b] text-white hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-colors px-12 py-6 rounded-none"
             >
               <Link href="/contact">
                 {t('common.contactUs')}
