@@ -225,12 +225,14 @@ export default function DecouvrirPage() {
 
                     <Button
                       asChild
-                      className="relative overflow-hidden group/btn bg-white text-[#b7a66b] hover:text-white border-2 border-white transition-all duration-500"
+                      className="relative overflow-hidden group bg-white text-[#b7a66b] border-2 border-white transition-all duration-500"
                     >
                       <Link href={event.link} target="_blank">
-                        {t('enjoy.events.monacoGP.learnMore')}
-                        <ArrowRight className="ml-2 h-4 w-4 relative z-10" />
-                        <div className="absolute inset-0 bg-[#b7a66b] transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left" />
+                        <span className="relative z-10 flex items-center transition-colors duration-500 group-hover:text-white">
+                          {t('enjoy.events.monacoGP.learnMore')}
+                          <ArrowRight className="ml-2 h-4 w-4 z-10" />
+                        </span>
+                        <div className="absolute inset-0 bg-[#b7a66b] z-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                       </Link>
                     </Button>
                   </div>
