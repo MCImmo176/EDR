@@ -309,10 +309,10 @@ export default function VillaPage() {
       alt: tVilla('spaces.pool.alt')
     },
     {
-      title: tVilla('spaces.suites.title'),
-      description: tVilla('spaces.suites.description'),
-      src: "/images/villa/IMG_2359.jpg",
-      alt: tVilla('spaces.suites.alt')
+      title: "5 suites privatives",
+      description: "Chaque chambre dispose de sa salle de bain, s'ouvre sur l'extérieur et profite d'une lumière naturelle abondante",
+      src: "/images/gallery/chambres/4.jpg",
+      alt: "Suite privative"
     }
   ];
 

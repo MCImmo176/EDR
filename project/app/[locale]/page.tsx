@@ -133,6 +133,16 @@ export default function Home() {
     <>
       {/* Hero Section with Video Background - MODIFIÉ */}
       <section className="relative h-screen w-full overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/gallery/chambres/2.JPEG"
+            alt="Les Étoiles du Rocher"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
         <div className="absolute inset-0" style={{ zIndex: 0 }}>
           <iframe
             ref={videoRef}
