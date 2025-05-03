@@ -14,8 +14,8 @@ const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 export default function Home() {
   const { t } = useLanguage();
   const [hasWindow, setHasWindow] = useState(false);
-  const playerContainerRef = useRef(null);
-  const videoRef = useRef(null);
+  const playerContainerRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -28,7 +28,7 @@ export default function Home() {
 
   const handleResize = () => {
     if (videoRef.current) {
-      const videoContainer = videoRef.current;
+      const videoContainer = videoRef.current as HTMLIFrameElement;
       const windowWidth = window.innerWidth;
       const windowHeight = window.innerHeight;
       const windowRatio = windowWidth / windowHeight;
@@ -302,7 +302,7 @@ export default function Home() {
             </h2>
             <Button
               asChild
-              size="xl"
+              size="lg"
               className="bg-[#b7a66b] text-white hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-colors px-12 py-6 rounded-none"
             >
               <Link href="/contact">
