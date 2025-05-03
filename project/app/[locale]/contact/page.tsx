@@ -35,7 +35,7 @@ const formSchema = z.object({
 export default function ContactPage() {
   const t = useTranslations('contact');
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLDivElement>(null);
   
   const handleResize = () => {
     if (videoRef.current instanceof HTMLDivElement) {
