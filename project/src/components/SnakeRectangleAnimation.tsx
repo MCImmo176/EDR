@@ -5,7 +5,6 @@ interface SnakeRectangleAnimationProps {
   backgroundColor?: string;
   textKey?: string;
   textLine1?: string;
-  textLine2?: string;
   fontFamily?: string;
   fontSize?: string;
   fontWeight?: string;
@@ -17,7 +16,6 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
   backgroundColor = '#b7a66b', 
   textKey = 'villa',
   textLine1,
-  textLine2,
   fontFamily = 'Arial, sans-serif',
   fontSize = '3rem',
   fontWeight = 'bold',
@@ -28,17 +26,14 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
   const [isAnimating, setIsAnimating] = useState(false);
   const [isInitialLoad, setIsInitialLoad] = useState(true);
   const [visibleIndexes1, setVisibleIndexes1] = useState<number>(-1);
-  const [visibleIndexes2, setVisibleIndexes2] = useState<number>(-1);
   
   const topBorderRef = useRef<HTMLDivElement>(null);
   const rightBorderRef = useRef<HTMLDivElement>(null);
   const bottomBorderRef = useRef<HTMLDivElement>(null);
   const leftBorderRef = useRef<HTMLDivElement>(null);
   const textContent1Ref = useRef<HTMLSpanElement>(null);
-  const textContent2Ref = useRef<HTMLSpanElement>(null);
   
   const finalTextLine1 = textLine1 || t(`${textKey}.line1`);
-  const finalTextLine2 = textLine2 || t(`${textKey}.line2`);
   
   const animateTopBorder = () => {
     return new Promise<void>(resolve => {
@@ -134,10 +129,6 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
   
   const animateText = async () => {
     await animateTextLine(textContent1Ref);
-    await new Promise<void>(resolve => setTimeout(resolve, 200));
-    if (finalTextLine2) {
-      await animateTextLine(textContent2Ref);
-    }
   };
   
   const playAnimation = async () => {
@@ -160,7 +151,6 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
     }
     
     if (textContent1Ref.current) textContent1Ref.current.style.transform = 'translateX(-100%)';
-    if (textContent2Ref.current) textContent2Ref.current.style.transform = 'translateX(-100%)';
     
     await animateTopBorder();
     await animateRightBorder();
@@ -177,23 +167,12 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
       setIsInitialLoad(false);
     }
     setVisibleIndexes1(-1);
-    setVisibleIndexes2(-1);
     const total1 = finalTextLine1.length;
-    const total2 = finalTextLine2?.length || 0;
     let i = 0;
     const interval1 = setInterval(() => {
       setVisibleIndexes1((prev) => {
         if (prev < total1 - 1) return prev + 1;
         clearInterval(interval1);
-        let j = 0;
-        const interval2 = setInterval(() => {
-          setVisibleIndexes2((prev2) => {
-            if (prev2 < total2 - 1) return prev2 + 1;
-            clearInterval(interval2);
-            return prev2;
-          });
-          j++;
-        }, 30);
         return prev;
       });
       i++;
@@ -201,10 +180,10 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
     return () => {
       clearInterval(interval1);
     };
-  }, [finalTextLine1, finalTextLine2]);
+  }, [finalTextLine1]);
 
   // Style pour l'effet accordéon
-  const getLetterStyle = (index: number, visibleIndex: number, isFirstLine: boolean) => ({
+  const getLetterStyle = (index: number, visibleIndex: number) => ({
     opacity: index <= visibleIndex ? 1 : 0,
     transform: index <= visibleIndex 
       ? 'translateX(0) scale(1)' 
@@ -215,6 +194,27 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
     transformOrigin: 'right center',
     willChange: 'transform, opacity'
   });
+
+  // Fonction pour grouper les caractères par mots
+  const groupCharactersByWord = (text: string) => {
+    const words = text.split(' ');
+    let currentIndex = 0;
+    return words.map((word, wordIndex) => {
+      const characters = word.split('').map((char, charIndex) => ({
+        char,
+        index: currentIndex + charIndex
+      }));
+      currentIndex += word.length + 1; // +1 pour l'espace
+      return {
+        word,
+        characters,
+        startIndex: currentIndex - word.length - 1,
+        endIndex: currentIndex - 1
+      };
+    });
+  };
+
+  const words = groupCharactersByWord(finalTextLine1);
 
   return (
     <>
@@ -296,7 +296,7 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
           <div 
             style={{
               position: 'absolute',
-              top: '40%',
+              top: '50%',
               left: '0',
               transform: 'translateY(-50%)',
               width: '900px',
@@ -321,7 +321,7 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
                 letterSpacing: '1px',
                 lineHeight: 1.05,
                 whiteSpace: 'normal',
-                margin: '0 0 10px 0',
+                margin: '0',
                 overflow: 'visible',
                 textShadow: '0 2px 16px rgba(0,0,0,0.18)',
                 position: 'relative',
@@ -333,47 +333,25 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
                 perspective: '1000px'
               }}
             >
-              {finalTextLine1.split('').map((char, idx) => (
+              {words.map((word, wordIndex) => (
                 <span
-                  key={idx}
-                  style={getLetterStyle(idx, visibleIndexes1, true)}
+                  key={wordIndex}
+                  style={{
+                    display: 'inline-block',
+                    marginRight: '0.2em'
+                  }}
                 >
-                  {char === ' ' ? '\u00A0' : char}
+                  {word.characters.map(({ char, index }) => (
+                    <span
+                      key={index}
+                      style={getLetterStyle(index, visibleIndexes1)}
+                    >
+                      {char === ' ' ? '\u00A0' : char}
+                    </span>
+                  ))}
                 </span>
               ))}
             </div>
-            {finalTextLine2 && (
-              <div 
-                style={{
-                  fontSize: '80px',
-                  fontWeight: 700,
-                  color: 'white',
-                  textTransform: 'none',
-                  letterSpacing: '1px',
-                  lineHeight: 1.05,
-                  whiteSpace: 'normal',
-                  margin: '0',
-                  overflow: 'visible',
-                  textShadow: '0 2px 16px rgba(0,0,0,0.18)',
-                  position: 'relative',
-                  width: '100%',
-                  maxWidth: '100%',
-                  textAlign: 'left',
-                  display: 'block',
-                  minWidth: 0,
-                  perspective: '1000px'
-                }}
-              >
-                {finalTextLine2.split('').map((char, idx) => (
-                  <span
-                    key={idx}
-                    style={getLetterStyle(idx, visibleIndexes2, false)}
-                  >
-                    {char === ' ' ? '\u00A0' : char}
-                  </span>
-                ))}
-              </div>
-            )}
           </div>
         </div>
       </div>

@@ -133,16 +133,6 @@ export default function Home() {
     <>
       {/* Hero Section with Video Background - MODIFIÉ */}
       <section className="relative h-screen w-full overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/gallery/chambres/2.JPEG"
-            alt="Les Étoiles du Rocher"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/40" />
-        </div>
         <div className="absolute inset-0" style={{ zIndex: 0 }}>
           <iframe
             ref={videoRef}
@@ -223,7 +213,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row gap-10 items-stretch">
               <div className="w-full md:w-1/2 h-96 md:h-[500px] relative">
                 <Image
-                  src="/images/excellence/interieur/2.jpeg"
+                  src="/images/excellence/interieur/2.jpg"
                   alt="Salon d'exception de la villa"
                   fill
                   className="object-cover"
