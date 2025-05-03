@@ -311,7 +311,7 @@ export default function VillaPage() {
     {
       title: tVilla('spaces.suites.title'),
       description: tVilla('spaces.suites.description'),
-      src: "/images/villa/IMG_2359.JPG",
+      src: "/images/villa/IMG_2359.jpg",
       alt: tVilla('spaces.suites.alt')
     }
   ];
@@ -462,6 +462,9 @@ export default function VillaPage() {
                       src={room.src} 
                       alt={room.alt}
                       fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      quality={90}
+                      priority={index === 0}
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>

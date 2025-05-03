@@ -25,17 +25,15 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const initialLocale = pathname.split('/')[1] as Language;
   const [language, setLanguage] = useState<Language>(initialLocale || "fr");
 
-  // Synchroniser la langue avec l'URL
-  useEffect(() => {
-    const currentLocale = pathname.split('/')[1];
-    if (currentLocale !== language) {
-      const newPath = pathname.replace(`/${currentLocale}`, `/${language}`);
-      router.push(newPath);
-    }
-  }, [language, pathname, router]);
+  // Fonction pour changer la langue
+  const handleLanguageChange = (newLang: Language) => {
+    setLanguage(newLang);
+    const newPath = pathname.replace(`/${initialLocale}`, `/${newLang}`);
+    router.push(newPath);
+  };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage }}>
+    <LanguageContext.Provider value={{ language, setLanguage: handleLanguageChange }}>
       {children}
     </LanguageContext.Provider>
   );
