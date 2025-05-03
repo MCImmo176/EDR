@@ -20,8 +20,7 @@ const ContactPage = () => {
       <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
         <div className="w-full h-full">
           <SnakeRectangleAnimation 
-            textLine1="Contactez-nous"
-            textLine2="pour votre séjour"
+            textLine1="Contactez-nous pour votre séjour"
           />
         </div>
       </div>
