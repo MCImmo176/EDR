@@ -4,6 +4,8 @@ import { useTranslations } from 'next-intl';
 interface SnakeRectangleAnimationProps {
   backgroundColor?: string;
   textKey?: string;
+  textLine1?: string;
+  textLine2?: string;
   fontFamily?: string;
   fontSize?: string;
   fontWeight?: string;
@@ -14,6 +16,8 @@ interface SnakeRectangleAnimationProps {
 const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({ 
   backgroundColor = '#b7a66b', 
   textKey = 'villa',
+  textLine1,
+  textLine2,
   fontFamily = 'Arial, sans-serif',
   fontSize = '3rem',
   fontWeight = 'bold',
@@ -33,8 +37,8 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
   const textContent1Ref = useRef<HTMLSpanElement>(null);
   const textContent2Ref = useRef<HTMLSpanElement>(null);
   
-  const textLine1 = t(`${textKey}.line1`);
-  const textLine2 = t(`${textKey}.line2`);
+  const finalTextLine1 = textLine1 || t(`${textKey}.line1`);
+  const finalTextLine2 = textLine2 || t(`${textKey}.line2`);
   
   const animateTopBorder = () => {
     return new Promise<void>(resolve => {
@@ -172,8 +176,8 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
     }
     setVisibleIndexes1(-1);
     setVisibleIndexes2(-1);
-    const total1 = textLine1.length;
-    const total2 = textLine2.length;
+    const total1 = finalTextLine1.length;
+    const total2 = finalTextLine2.length;
     let i = 0;
     const interval1 = setInterval(() => {
       setVisibleIndexes1((prev) => {
@@ -195,7 +199,7 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
     return () => {
       clearInterval(interval1);
     };
-  }, [textLine1, textLine2]);
+  }, [finalTextLine1, finalTextLine2]);
 
   // Style pour l'effet accordéon
   const getLetterStyle = (index: number, visibleIndex: number, isFirstLine: boolean) => ({
@@ -327,7 +331,7 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
                 perspective: '1000px'
               }}
             >
-              {textLine1.split('').map((char, idx) => (
+              {finalTextLine1.split('').map((char, idx) => (
                 <span
                   key={idx}
                   style={getLetterStyle(idx, visibleIndexes1, true)}
@@ -357,7 +361,7 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
                 perspective: '1000px'
               }}
             >
-              {textLine2.split('').map((char, idx) => (
+              {finalTextLine2.split('').map((char, idx) => (
                 <span
                   key={idx}
                   style={getLetterStyle(idx, visibleIndexes2, false)}
