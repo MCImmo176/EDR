@@ -26,24 +26,19 @@
   },
   "snakeRectangle": {
     "villa": {
-      "line1": "Your villa",
-      "line2": "awaits you"
+      "line1": "Your villa awaits you"
     },
     "contact": {
-      "line1": "Contact us",
-      "line2": "for your stay"
+      "line1": "Contact us for your stay"
     },
     "gallery": {
-      "line1": "Explore the",
-      "line2": "Villa Gallery"
+      "line1": "Explore the villa gallery"
     },
     "discover": {
-      "line1": "Enjoy",
-      "line2": "our location"
+      "line1": "Enjoy our location"
     },
     "villaException": {
-      "line1": "An experience",
-      "line2": "Unique"
+      "line1": "A unique experience"
     }
   },
   "home": {

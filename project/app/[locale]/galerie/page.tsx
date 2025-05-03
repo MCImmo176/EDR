@@ -17,7 +17,6 @@ export default function GaleriePage() {
   const videoContainerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLIFrameElement>(null);
 
-  // Fonction pour ajuster la taille de la vidéo
   const adjustVideoSize = () => {
     if (!videoContainerRef.current || !videoRef.current) return;
 
@@ -219,7 +218,7 @@ export default function GaleriePage() {
         </div>
       </section>
 
-      <section className="pt-24 md:pt-32 pb-16">
+      <section className="pt-16 sm:pt-24 md:pt-32 pb-12 sm:pb-16">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -235,17 +234,17 @@ export default function GaleriePage() {
         </div>
       </section>
 
-      <section className="pb-24">
+      <section className="pb-16 sm:pb-20 md:pb-24">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-wrap justify-center gap-4 mb-12"
+            className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-12"
           >
             <button
               onClick={() => setActiveCategory(null)}
-              className={`px-6 py-3 rounded-full transition-all duration-300 ${
+              className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full transition-all duration-300 text-sm sm:text-base ${
                 activeCategory === null
                   ? "bg-[#b7a66b] text-white"
                   : "bg-muted hover:bg-[#b7a66b] hover:text-white"
@@ -257,7 +256,7 @@ export default function GaleriePage() {
               <button
                 key={index}
                 onClick={() => setActiveCategory(category)}
-                className={`px-6 py-3 rounded-full transition-all duration-300 ${
+                className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full transition-all duration-300 text-sm sm:text-base ${
                   activeCategory === category
                     ? "bg-[#b7a66b] text-white"
                     : "bg-muted hover:bg-[#b7a66b] hover:text-white"
@@ -268,7 +267,7 @@ export default function GaleriePage() {
             ))}
           </motion.div>
 
-          <div className="flex gap-4" ref={containerRef}>
+          <div className="flex flex-col sm:flex-row gap-4" ref={containerRef}>
             {photoColumns.map((column, colIndex) => (
               <div className="flex-1 flex flex-col gap-4" key={colIndex}>
                 {column.map((photo, photoIndex) => (
@@ -296,9 +295,9 @@ export default function GaleriePage() {
                       loading="eager"
                     />
                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0">
-                      <p className="text-lg font-display">{photo.alt}</p>
-                      <p className="text-sm opacity-75 mt-1">{photo.category}</p>
+                    <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 bg-gradient-to-t from-black/80 to-transparent text-white opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0">
+                      <p className="text-base sm:text-lg font-display">{photo.alt}</p>
+                      <p className="text-xs sm:text-sm opacity-75 mt-1">{photo.category}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -325,11 +324,11 @@ export default function GaleriePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex justify-center mt-16"
+            className="flex justify-center mt-12 sm:mt-16"
           >
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-[#b7a66b] rounded-full hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-all duration-300 ease-in-out transform hover:scale-105"
+              className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-white bg-[#b7a66b] rounded-full hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-all duration-300 ease-in-out transform hover:scale-105"
             >
               {tGallery('discoverButton')}
             </Link>
@@ -349,21 +348,21 @@ export default function GaleriePage() {
               setSelectedImage(null);
             }}
           >
-            <X className="h-8 w-8" />
+            <X className="h-6 sm:h-8 w-6 sm:w-8" />
           </button>
           
           <div
             className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-white/80 transition-colors p-2 rounded-full bg-black/30 cursor-pointer z-50"
             onClick={handlePrevImage}
           >
-            <ChevronLeft className="h-8 w-8" />
+            <ChevronLeft className="h-6 sm:h-8 w-6 sm:w-8" />
           </div>
 
           <div
             className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-white/80 transition-colors p-2 rounded-full bg-black/30 cursor-pointer z-50"
             onClick={handleNextImage}
           >
-            <ChevronRight className="h-8 w-8" />
+            <ChevronRight className="h-6 sm:h-8 w-6 sm:w-8" />
           </div>
           
           <div 
@@ -379,8 +378,8 @@ export default function GaleriePage() {
               sizes="100vw"
             />
             <div className="absolute bottom-4 left-0 right-0 text-center text-white">
-              <p className="text-lg font-medium">{filteredPhotos[selectedImage].alt}</p>
-              <p className="text-sm opacity-75">{filteredPhotos[selectedImage].category}</p>
+              <p className="text-base sm:text-lg font-medium">{filteredPhotos[selectedImage].alt}</p>
+              <p className="text-xs sm:text-sm opacity-75">{filteredPhotos[selectedImage].category}</p>
             </div>
           </div>
         </div>

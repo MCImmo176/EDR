@@ -371,24 +371,19 @@
   },
   "snakeRectangle": {
     "villa": {
-      "line1": "Votre villa",
-      "line2": "vous attend"
+      "line1": "Votre villa vous attend"
     },
     "contact": {
-      "line1": "Contactez-nous",
-      "line2": "pour votre séjour"
+      "line1": "Contactez-nous pour votre séjour"
     },
     "gallery": {
-      "line1": "Explorez la",
-      "line2": "Galerie de la villa"
+      "line1": "Explorez la galerie de la villa"
     },
     "discover": {
-      "line1": "Découvrez",
-      "line2": "les alentours"
+      "line1": "Profitez de notre emplacement"
     },
     "villaException": {
-      "line1": "Une expérience",
-      "line2": "Unique"
+      "line1": "Une expérience unique"
     }
   }
 } 

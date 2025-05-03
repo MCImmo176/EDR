@@ -169,20 +169,20 @@ export default function DecouvrirPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      <section className="py-16 sm:py-20 md:py-24 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-5xl font-display mb-6">{t('enjoy.events.title')}</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display mb-4 sm:mb-6">{t('enjoy.events.title')}</h2>
             <div className="h-1 w-20 bg-[#b7a66b] mx-auto" />
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
             {unmissableEvents.map((event, index) => (
               <motion.div
                 key={index}
@@ -192,7 +192,7 @@ export default function DecouvrirPage() {
                 viewport={{ once: true }}
                 className="group relative overflow-hidden rounded-lg shadow-2xl transform transition-all duration-500 hover:-translate-y-2"
               >
-                <div className="relative h-[400px]">
+                <div className="relative h-[300px] sm:h-[400px]">
                   <Image
                     src={event.image}
                     alt={event.title}
@@ -201,22 +201,22 @@ export default function DecouvrirPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
                   
-                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-black px-4 py-2 rounded-full text-sm font-medium">
+                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-black px-3 sm:px-4 py-2 rounded-full text-sm font-medium">
                     {event.category}
                   </div>
 
-                  <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                    <h3 className="text-3xl font-display mb-4">{event.title}</h3>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 text-white">
+                    <h3 className="text-2xl sm:text-3xl font-display mb-4">{event.title}</h3>
                     
-                    <div className="flex flex-wrap gap-4 mb-6">
+                    <div className="flex flex-wrap gap-3 sm:gap-4 mb-6">
                       {event.date && (
-                        <div className="flex items-center text-sm bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                        <div className="flex items-center text-sm bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full">
                           <Calendar className="h-4 w-4 mr-2" />
                           {event.date}
                         </div>
                       )}
                       {event.schedule && (
-                        <div className="flex items-center text-sm bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                        <div className="flex items-center text-sm bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full">
                           <Clock className="h-4 w-4 mr-2" />
                           {event.schedule}
                         </div>
@@ -225,7 +225,7 @@ export default function DecouvrirPage() {
 
                     <Button
                       asChild
-                      className="relative overflow-hidden group bg-white text-[#b7a66b] border-2 border-white transition-all duration-500"
+                      className="relative overflow-hidden group bg-white text-[#b7a66b] border-2 border-white transition-all duration-500 text-base sm:text-lg"
                     >
                       <Link href={event.link} target="_blank">
                         <span className="relative z-10 flex items-center transition-colors duration-500 group-hover:text-white">
@@ -243,20 +243,20 @@ export default function DecouvrirPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-neutral-50">
+      <section className="py-16 sm:py-20 md:py-24 bg-neutral-50">
         <div className="container max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-5xl font-display mb-6">{t('enjoy.secrets.title')}</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display mb-4 sm:mb-6">{t('enjoy.secrets.title')}</h2>
             <div className="h-1 w-20 bg-[#b7a66b] mx-auto" />
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {insiderSecrets.map((secret, index) => (
               <motion.div
                 key={index}
@@ -266,20 +266,20 @@ export default function DecouvrirPage() {
                 viewport={{ once: true }}
                 className="group relative overflow-hidden rounded-lg shadow-2xl transform transition-all duration-500 hover:-translate-y-2"
               >
-                <div className="relative h-96">
+                <div className="relative h-64 sm:h-96">
                   <Image
                     src={secret.image}
                     alt={secret.title}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-black px-4 py-2 rounded-full text-sm font-medium">
+                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-black px-3 sm:px-4 py-2 rounded-full text-sm font-medium">
                     {secret.category}
                   </div>
                 </div>
-                <div className="p-8 bg-white">
-                  <h3 className="text-2xl font-display mb-4">{secret.title}</h3>
-                  <p className="text-muted-foreground mb-6">{secret.description}</p>
+                <div className="p-6 sm:p-8 bg-white">
+                  <h3 className="text-xl sm:text-2xl font-display mb-3 sm:mb-4">{secret.title}</h3>
+                  <p className="text-muted-foreground mb-4 sm:mb-6">{secret.description}</p>
                   <div className="space-y-3">
                     {secret.difficulty && (
                       <div className="flex items-center text-sm">
