@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Playfair_Display, Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
+import { getMessages } from 'next-intl/server';
 import Link from 'next/link';
 
 import { Header } from '@/components/layout/header';
@@ -33,16 +34,14 @@ export function generateStaticParams() {
 
 export default async function LocaleLayout({
   children,
-  params
+  params: { locale }
 }: {
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  const { locale } = params;
-  
   let messages;
   try {
-    messages = (await import(`../../messages/${locale}.json`)).default;
+    messages = await getMessages({ locale });
   } catch (error) {
     notFound();
   }
