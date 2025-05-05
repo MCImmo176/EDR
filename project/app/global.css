@@ -69,4 +69,13 @@
 
 .smooth-scroll {
   scroll-behavior: smooth;
+}
+
+.highlight {
+  color: #b7a66b;
+  background: linear-gradient(90deg,rgba(183,166,107,0.10),rgba(183,166,107,0.08));
+  border-radius: 0.4em;
+  padding: 0.05em 0.25em;
+  font-weight: 600;
+  transition: background 0.3s;
 } 

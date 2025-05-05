@@ -728,7 +728,7 @@ export default function VillaPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -736,31 +736,24 @@ export default function VillaPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
                 viewport={{ once: true }}
-                className="group"
+                className="group flex justify-center"
               >
-                <div className="bg-white/90 backdrop-blur-sm p-14 rounded-2xl shadow-lg transition-all duration-700 hover:shadow-2xl hover:-translate-y-3 border border-neutral-100/50 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#b7a66b]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#b7a66b]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                  <div className="relative mb-12">
-                    <feature.icon className="h-14 w-14 text-[#b7a66b] transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-700" />
-                    <div className="absolute -inset-4 bg-[#b7a66b]/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                <div className="bg-white/95 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-lg transition-all duration-700 hover:shadow-2xl hover:-translate-y-3 border border-neutral-100/50 relative overflow-hidden max-w-xl w-full flex flex-col">
+                  <div className="flex items-center mb-4 gap-3">
+                    <feature.icon className="h-8 w-8 text-[#b7a66b] flex-shrink-0" />
+                    <h3 className="text-xl font-display font-semibold tracking-tight text-black">
+                      {feature.title}
+                    </h3>
                   </div>
-                  <h3 className="text-3xl font-display mb-10 transform group-hover:translate-x-3 transition-transform duration-700">{feature.title}</h3>
-                  <ul className="space-y-8">
+                  <ul className="space-y-2">
                     {feature.items.map((item, i) => (
-                      <motion.li 
+                      <li 
                         key={i} 
-                        className="flex items-center text-muted-foreground group/item"
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6, delay: i * 0.1 }}
-                        viewport={{ once: true }}
+                        className="flex items-start text-muted-foreground text-base"
                       >
-                        <span className="w-2 h-2 bg-[#b7a66b] rounded-full mr-5 transform group-hover/item:scale-150 transition-transform duration-700"></span>
-                        <span className="text-lg transform group-hover/item:translate-x-6 transition-transform duration-700 group-hover/item:text-[#b7a66b]">
-                          {item}
-                        </span>
-                      </motion.li>
+                        <span className="w-2 h-2 mt-2 bg-[#b7a66b] rounded-full mr-3 flex-shrink-0"></span>
+                        <span>{item}</span>
+                      </li>
                     ))}
                   </ul>
                 </div>
