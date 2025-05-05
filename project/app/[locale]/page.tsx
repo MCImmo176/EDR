@@ -31,7 +31,7 @@ export default function Home() {
       handleResize();
       return () => window.removeEventListener('resize', handleResize);
     }
-  }, []);
+  }, []); // <-- This was the missing closing part
 
   const handleResize = () => {
     if (videoRef.current) {
@@ -176,30 +176,17 @@ export default function Home() {
                 Réserver votre séjour
               </Link>
             </Button>
-              <Button 
-                asChild 
-                size="lg"
+            <Button 
+              asChild 
+              size="lg"
               variant="outline"
               className="bg-transparent hover:bg-white/10 text-white border-2 border-white/50 rounded-full px-8 py-6 text-lg transition-all duration-500"
-              >
+            >
               <Link href="/galerie">
                 Découvrir la villa
-                </Link>
-              </Button>
-            </motion.div>
+              </Link>
+            </Button>
           </motion.div>
-
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isVisible ? 1 : 0 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20"
-        >
-          <div className="mouse-scroll-indicator">
-            <div className="mouse">
-              <div className="wheel"></div>
-            </div>
-        </div>
         </motion.div>
       </section>
 
@@ -374,7 +361,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl"
               >
-                <Image
+          <Image
                   src={image.src}
                   alt={image.alt}
                   fill
@@ -385,15 +372,19 @@ export default function Home() {
                 <div className="absolute inset-0 border-2 border-white/20 rounded-2xl transform scale-105 group-hover:scale-110 transition-transform duration-1000"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#b7a66b]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  <span className="text-[#b7a66b] text-sm font-medium tracking-wider uppercase mb-2 block">
-                    {image.category}
-                  </span>
+                  {image.description && (
+                    <span className="text-[#b7a66b] text-sm font-medium tracking-wider uppercase mb-2 block">
+                      {image.category}
+                    </span>
+                  )}
                   <h3 className="text-white text-xl font-display mb-2">{image.alt}</h3>
-                  <p className="text-white/80 text-sm">{image.description}</p>
+                  {image.description && (
+                    <p className="text-white/80 text-sm">{image.description}</p>
+                  )}
                 </div>
               </motion.div>
             ))}
-          </div>
+        </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
