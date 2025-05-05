@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sun, Mountain, Landmark, ShoppingBag, Map, Leaf, Flag, School as Pool } from 'lucide-react';
 import { useLanguage } from "@/hooks/useLanguage";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
@@ -216,8 +216,8 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-black mb-8">L'art de vivre, version Riviera</h2>
             <div className="h-px w-20 bg-[#b7a66b] mx-auto mb-12"></div>
             <div className="space-y-8 text-lg md:text-xl text-neutral-800 leading-relaxed">
-              <p>Fraîchement achevée en début d’année, cette villa de luxe, encore jamais louée, est prête à vous offrir des moments inoubliables, en famille ou entre amis.</p>
-              <p>Découvrez le mariage parfait entre luxe et sérénité, au cœur d’un écrin niché entre mer et montagne, aux portes de Monaco et de l’Italie.</p>
+              <p>Fraîchement achevée en début d'année, cette villa de luxe, encore jamais louée, est prête à vous offrir des moments inoubliables, en famille ou entre amis.</p>
+              <p>Découvrez le mariage parfait entre luxe et sérénité, au cœur d'un écrin niché entre mer et montagne, aux portes de Monaco et de l'Italie.</p>
             </div>
           </motion.div>
         </div>
@@ -270,11 +270,11 @@ export default function Home() {
               </p>
 
               <div className="grid grid-cols-2 gap-6 pt-4">
-                {[
-                  { icon: "🌊", text: "Vue panoramique mer" },
-                  { icon: "🏊", text: "Piscine à débordement" },
-                  { icon: "🌴", text: "Jardin méditerranéen" },
-                  { icon: "✨", text: "Services VIP" }
+                {[ 
+                  { icon: <Sun className="w-7 h-7 text-[#b7a66b]" />, text: "Vue panoramique mer" },
+                  { icon: <Pool className="w-7 h-7 text-[#b7a66b]" />, text: "Piscine à débordement" },
+                  { icon: <Leaf className="w-7 h-7 text-[#b7a66b]" />, text: "Jardin méditerranéen" },
+                  { icon: <ShoppingBag className="w-7 h-7 text-[#b7a66b]" />, text: "Services VIP" }
                 ].map((feature, index) => (
                   <motion.div
                     key={index}
@@ -284,7 +284,7 @@ export default function Home() {
                     viewport={{ once: true }}
                     className="flex items-center space-x-3 group"
                   >
-                    <span className="text-2xl transform group-hover:scale-110 transition-transform duration-300">
+                    <span className="transform group-hover:scale-110 transition-transform duration-300">
                       {feature.icon}
                     </span>
                     <span className="text-neutral-800 group-hover:text-[#b7a66b] transition-colors duration-300">
@@ -407,7 +407,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Bloc Découverte */}
+      {/* Bloc Découverte (nouvelle version) */}
       <section className="py-32 bg-neutral-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-[0.02]"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#b7a66b]/5 via-transparent to-[#b7a66b]/5"></div>
@@ -419,67 +419,89 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-black mb-6">Découverte</h2>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-black mb-6">Autour de la Villa</h2>
             <div className="h-px w-20 bg-[#b7a66b] mx-auto mb-8"></div>
             <p className="text-lg md:text-xl text-neutral-800 leading-relaxed max-w-3xl mx-auto">
-              Plongez dans l'art de vivre de la villa : services sur-mesure, histoire du lieu, 
-              atmosphère méditerranéenne… Découvrez ce qui fait de ce domaine un écrin unique sur la Riviera.
+              Découvrez les expériences exclusives et les trésors de la Côte d'Azur à quelques minutes de la villa.
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Services VIP",
-                description: "Conciergerie privée, chef à domicile, transferts en voiture de luxe...",
-                icon: "✨"
-              },
-              {
-                title: "Histoire du lieu",
-                description: "Un domaine chargé d'histoire, témoin de l'âge d'or de la Côte d'Azur.",
-                icon: "📜"
-              },
-              {
-                title: "Activités locales",
-                description: "Monaco, Menton, les villages perchés... Explorez la région à votre rythme.",
-                icon: "🌅"
-              }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500"
-              >
-                <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-500">
-                  {item.icon}
-                </div>
-                <h3 className="text-xl font-display font-bold text-black mb-3">{item.title}</h3>
-                <p className="text-neutral-600 leading-relaxed">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
-          >
-            <Button
-              asChild
-              size="lg"
-              className="bg-white border-2 border-[#b7a66b] text-[#b7a66b] hover:bg-[#b7a66b] hover:text-white transition-all duration-500 px-10 py-5 rounded-full font-semibold text-lg shadow-md group"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Monaco & Menton */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0 }}
+              viewport={{ once: true }}
+              className="group bg-white/90 backdrop-blur-sm p-0 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col"
             >
-              <Link href="/decouvrir" className="flex items-center gap-2">
-                Découvrir l'expérience
+              <div className="relative h-48 w-full">
+                <Image src="/images/monaco.jpg" alt="Monaco & Menton" fill className="object-cover" />
+                <div className="absolute top-4 left-4 bg-white/80 rounded-full p-2 shadow">
+                  <Landmark className="w-7 h-7 text-[#b7a66b]" />
+                </div>
+              </div>
+              <div className="flex-1 flex flex-col p-6">
+                <h3 className="text-xl font-display font-bold text-black mb-2">Monaco & Menton</h3>
+                <p className="text-neutral-600 leading-relaxed mb-4">Luxe, shopping, musées, jardins suspendus…</p>
+                <Button asChild size="sm" className="bg-[#b7a66b] text-white hover:bg-[#a08c4a] rounded-full mt-auto">
+                  <Link href="/decouvrir/monaco" className="flex items-center gap-2">Explorer Monaco <ArrowRight className="w-4 h-4" /></Link>
+                </Button>
+              </div>
+            </motion.div>
+            {/* Italie */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="group bg-white/90 backdrop-blur-sm p-0 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col"
+            >
+              <div className="relative h-48 w-full">
+                <Image src="/images/italie.jpg" alt="Évasion en Italie" fill className="object-cover" />
+                <div className="absolute top-4 left-4 bg-white/80 rounded-full p-2 shadow">
+                  <Flag className="w-7 h-7 text-[#b7a66b]" />
+                </div>
+              </div>
+              <div className="flex-1 flex flex-col p-6">
+                <h3 className="text-xl font-display font-bold text-black mb-2">Évasion en Italie</h3>
+                <p className="text-neutral-600 leading-relaxed mb-4">Marchés de Vintimille, cuisine ligure, Dolce Vita à moins de 30 min.</p>
+                <Button asChild size="sm" className="bg-[#b7a66b] text-white hover:bg-[#a08c4a] rounded-full mt-auto">
+                  <Link href="/decouvrir/italie" className="flex items-center gap-2">Passer la frontière <ArrowRight className="w-4 h-4" /></Link>
+                </Button>
+              </div>
+            </motion.div>
+            {/* Côte d'Azur secrète */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="group bg-white/90 backdrop-blur-sm p-0 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col"
+            >
+              <div className="relative h-48 w-full">
+                <Image src="/images/azur.jpg" alt="Trésors cachés de la Côte d'Azur" fill className="object-cover" />
+                <div className="absolute top-4 left-4 bg-white/80 rounded-full p-2 shadow">
+                  <Map className="w-7 h-7 text-[#b7a66b]" />
+                </div>
+              </div>
+              <div className="flex-1 flex flex-col p-6">
+                <h3 className="text-xl font-display font-bold text-black mb-2">Trésors cachés de la Côte d'Azur</h3>
+                <p className="text-neutral-600 leading-relaxed mb-4">Villages perchés, sentiers secrets, criques sauvages…</p>
+                <Button asChild size="sm" className="bg-[#b7a66b] text-white hover:bg-[#a08c4a] rounded-full mt-auto">
+                  <Link href="/decouvrir/azur" className="flex items-center gap-2">Nos coins secrets <ArrowRight className="w-4 h-4" /></Link>
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+          <div className="text-center mt-12">
+            <p className="text-lg text-neutral-700 mb-4">Nous vous conseillerons personnellement selon vos envies.</p>
+            <Button asChild size="lg" className="bg-white border-2 border-[#b7a66b] text-[#b7a66b] hover:bg-[#b7a66b] hover:text-white transition-all duration-500 px-10 py-5 rounded-full font-semibold text-lg shadow-md group">
+              <Link href="/contact" className="flex items-center gap-2">
+                Contactez-nous pour un séjour sur-mesure
                 <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
-          </motion.div>
+          </div>
         </div>
       </section>
 
