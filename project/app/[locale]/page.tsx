@@ -348,22 +348,16 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                src: "/images/villa/IMG_2348.JPEG",
-                alt: "Vue panoramique sur la Méditerranée",
-                category: "Extérieur",
-                description: "Une vue imprenable sur la baie de Monaco"
+                src: "/images/gallery/chambres/2.JPEG",
+                alt: "Chambres",
               },
               {
-                src: "/images/villa/IMG_2409.JPEG",
-                alt: "Piscine à débordement",
-                category: "Extérieur",
-                description: "Piscine à débordement avec vue sur la mer"
+                src: "/images/gallery/interieur/3.JPEG",
+                alt: "Intérieur",
               },
               {
-                src: "/images/villa/IMG_2359.jpg",
-                alt: "Salon principal",
-                category: "Intérieur",
-                description: "Espace de vie lumineux et élégant"
+                src: "/images/gallery/exterieur/2.JPEG",
+                alt: "Extérieur",
               }
             ].map((image, index) => (
               <motion.div
@@ -374,7 +368,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl"
               >
-          <Image
+                <Image
                   src={image.src}
                   alt={image.alt}
                   fill
@@ -384,7 +378,6 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="absolute inset-0 border-2 border-white/20 rounded-2xl transform scale-105 group-hover:scale-110 transition-transform duration-1000"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#b7a66b]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-                
                 <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                   <span className="text-[#b7a66b] text-sm font-medium tracking-wider uppercase mb-2 block">
                     {image.category}
@@ -394,7 +387,7 @@ export default function Home() {
                 </div>
               </motion.div>
             ))}
-        </div>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -445,7 +438,7 @@ export default function Home() {
               className="group bg-white/90 backdrop-blur-sm p-0 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col"
             >
               <div className="relative h-48 w-full">
-                <Image src="/images/monaco.jpg" alt="Monaco & Menton" fill className="object-cover" />
+                <Image src="/images/discover/F1Monaco.jpg" alt="Monaco & Menton" fill className="object-cover" />
                 <div className="absolute top-4 left-4 bg-white/80 rounded-full p-2 shadow">
                   <Landmark className="w-7 h-7 text-[#b7a66b]" />
                 </div>
@@ -467,7 +460,7 @@ export default function Home() {
               className="group bg-white/90 backdrop-blur-sm p-0 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col"
             >
               <div className="relative h-48 w-full">
-                <Image src="/images/italie.jpg" alt="Évasion en Italie" fill className="object-cover" />
+                <Image src="/images/discover/plageroquebrune.jpg" alt="Évasion en Italie" fill className="object-cover" />
                 <div className="absolute top-4 left-4 bg-white/80 rounded-full p-2 shadow">
                   <Flag className="w-7 h-7 text-[#b7a66b]" />
                 </div>
@@ -489,7 +482,7 @@ export default function Home() {
               className="group bg-white/90 backdrop-blur-sm p-0 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col"
             >
               <div className="relative h-48 w-full">
-                <Image src="/images/azur.jpg" alt="Trésors cachés de la Côte d'Azur" fill className="object-cover" />
+                <Image src="/images/discover/sentierdouaniers.jpg" alt="Trésors cachés de la Côte d'Azur" fill className="object-cover" />
                 <div className="absolute top-4 left-4 bg-white/80 rounded-full p-2 shadow">
                   <Map className="w-7 h-7 text-[#b7a66b]" />
                 </div>
