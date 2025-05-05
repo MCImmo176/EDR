@@ -235,8 +235,8 @@ export default function Home() {
 
       {/* Bloc Villa - Introduction */}
       <section className="py-32 bg-neutral-50 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-[0.02]"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#b7a66b]/5 via-transparent to-[#b7a66b]/5"></div>
+        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-[0.02] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#b7a66b]/5 via-transparent to-[#b7a66b]/5 pointer-events-none"></div>
         <div className="container max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-16">
             <motion.div
@@ -327,8 +327,8 @@ export default function Home() {
 
       {/* Bloc Galerie */}
       <section className="py-32 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-[0.02]"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#b7a66b]/5 via-transparent to-[#b7a66b]/5"></div>
+        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-[0.02] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#b7a66b]/5 via-transparent to-[#b7a66b]/5 pointer-events-none"></div>
         <div className="container max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -419,8 +419,8 @@ export default function Home() {
 
       {/* Bloc Découverte (nouvelle version) */}
       <section className="py-32 bg-neutral-50 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-[0.02]"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#b7a66b]/5 via-transparent to-[#b7a66b]/5"></div>
+        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-[0.02] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#b7a66b]/5 via-transparent to-[#b7a66b]/5 pointer-events-none"></div>
         <div className="container max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -506,7 +506,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <p className="text-lg text-neutral-700 mb-4">Nous vous conseillerons personnellement selon vos envies.</p>
             <Button asChild size="lg" className="bg-white border-2 border-[#b7a66b] text-[#b7a66b] hover:bg-[#b7a66b] hover:text-white transition-all duration-500 px-10 py-5 rounded-full font-semibold text-lg shadow-md group">
-              <Link href="/contact" className="flex items-center gap-2">
+              <Link href="#contact" scroll className="flex items-center gap-2">
                 Contactez-nous pour un séjour sur-mesure
                 <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -517,8 +517,8 @@ export default function Home() {
 
       {/* Bloc Contact */}
       <section className="py-32 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-[0.02]"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#b7a66b]/5 via-transparent to-[#b7a66b]/5"></div>
+        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-[0.02] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#b7a66b]/5 via-transparent to-[#b7a66b]/5 pointer-events-none"></div>
         <div className="container max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -600,7 +600,7 @@ export default function Home() {
                   size="lg"
                   className="bg-white border-2 border-[#b7a66b] text-[#b7a66b] hover:bg-[#b7a66b] hover:text-white transition-all duration-500 px-10 py-5 rounded-full font-semibold text-lg shadow-md group w-full"
                 >
-                  <Link href="/contact" className="flex items-center justify-center gap-2">
+                  <Link href="#contact" scroll className="flex items-center justify-center gap-2">
                     Planifier une visite privée
                     <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
                   </Link>

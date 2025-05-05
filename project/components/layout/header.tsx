@@ -41,7 +41,7 @@ export function Header() {
     { href: "/villa", label: t("nav.villa") },
     { href: "/galerie", label: t("nav.gallery") },
     { href: "/decouvrir", label: t("nav.discover") },
-    { href: "/contact", label: t("nav.contact") },
+    { href: "/#contact", label: t("nav.contact") },
   ];
 
   return (
@@ -75,10 +75,14 @@ export function Header() {
                 "nav-link",
                 pathname === link.href && "active"
               )}
+              scroll={link.href.startsWith('/#') ? true : undefined}
             >
               {link.label}
             </Link>
           ))}
+          <Link href="/#contact" scroll className="luxury-btn ml-6 px-6 py-2 text-base font-semibold shadow-md hover:scale-105 transition-transform duration-200">
+            Demander une visite
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -113,10 +117,15 @@ export function Header() {
                 "nav-link text-xl",
                 pathname === link.href && "active"
               )}
+              scroll={link.href.startsWith('/#') ? true : undefined}
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.label}
             </Link>
           ))}
+          <Link href="/#contact" scroll className="luxury-btn px-8 py-3 text-lg font-semibold shadow-md hover:scale-105 transition-transform duration-200">
+            Demander une visite
+          </Link>
         </div>
       </div>
     </header>
