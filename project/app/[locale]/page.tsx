@@ -203,7 +203,7 @@ export default function Home() {
                 viewport={{ once: true }}
               >
                 <Image
-                  src="/images/excellence/interieur/2.jpg"
+                  src="/images/excellence/interieur/2.jpgit add g"
                   alt="Salon d'exception de la villa"
                   fill
                   className="object-cover transition-transform duration-700 hover:scale-105"
