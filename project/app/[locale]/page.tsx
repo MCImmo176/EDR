@@ -156,7 +156,7 @@ export default function Home() {
           className="relative z-20 h-full flex flex-col items-center justify-center text-white px-4"
         >
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-center mb-8 leading-tight tracking-tight luxury-text-shadow">
-            Les étoiles du rocher
+            Les Étoiles du Rocher
           </h1>
           <p className="text-xl md:text-2xl font-light text-center max-w-3xl mb-12 leading-relaxed tracking-wide luxury-text-shadow">
             Laissez-vous porter par la lumière dorée, le murmure des pins<br />et l'horizon infini de la Méditerranée.
