@@ -349,15 +349,21 @@ export default function Home() {
             {[
               {
                 src: "/images/gallery/chambres/2.JPEG",
-                alt: "Chambres",
+                alt: "Chambre principale",
+                category: "Chambres",
+                description: "Suite parentale avec vue mer"
               },
               {
                 src: "/images/gallery/interieur/3.JPEG",
-                alt: "Intérieur",
+                alt: "Salon",
+                category: "Intérieur",
+                description: "Espace de vie lumineux"
               },
               {
                 src: "/images/gallery/exterieur/2.JPEG",
-                alt: "Extérieur",
+                alt: "Terrasse",
+                category: "Extérieur",
+                description: "Terrasse panoramique avec vue"
               }
             ].map((image, index) => (
               <motion.div
