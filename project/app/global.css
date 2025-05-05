@@ -23,6 +23,30 @@
 }
 
 @layer components {
+  .mouse-scroll-indicator {
+    @apply flex justify-center;
+  }
+
+  .mouse {
+    @apply w-8 h-12 border-2 border-white rounded-full relative;
+  }
+
+  .wheel {
+    @apply w-1 h-1 bg-white rounded-full absolute left-1/2 top-2 -translate-x-1/2;
+    animation: scroll 1.5s infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-50%) translateY(20px);
+      opacity: 0;
+    }
+  }
+
   .luxury-container {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }

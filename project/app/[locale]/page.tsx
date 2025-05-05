@@ -18,6 +18,11 @@ export default function Home() {
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.2], [1, 1.2]);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -118,7 +123,7 @@ export default function Home() {
 
   return (
     <>
-      {/* Hero Section immersive avec vidéo */}
+      {/* Section Hero améliorée */}
       <section className="relative h-screen w-full overflow-hidden">
         <motion.div 
           className="absolute inset-0" 
@@ -143,69 +148,115 @@ export default function Home() {
           />
         </motion.div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
-        <div className="relative z-20 h-full flex flex-col items-center justify-center text-white px-4">
-          <motion.h1
-            className="text-4xl md:text-6xl font-serif font-bold text-center mb-8 drop-shadow-xl"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+        
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          className="relative z-20 h-full flex flex-col items-center justify-center text-white px-4"
+        >
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-center mb-8 leading-tight tracking-tight">
+            Un sanctuaire entre<br />ciel, mer et nature
+          </h1>
+          <p className="text-xl md:text-2xl font-light text-center max-w-3xl mb-12 leading-relaxed tracking-wide">
+            Laissez-vous porter par la lumière dorée, le murmure des pins<br />et l'horizon infini de la Méditerranée.
+          </p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 1, delay: 0.5 }}
           >
-            Un sanctuaire entre ciel, mer et nature
-          </motion.h1>
-          <motion.p
-            className="text-lg md:text-2xl font-light text-center max-w-2xl mb-8 drop-shadow-lg"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          >
-            Laissez-vous porter par la lumière dorée, le murmure des pins et l'horizon infini de la Méditerranée.
-          </motion.p>
-        </div>
+            <Button
+              asChild
+              size="lg"
+              className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border-2 border-white/50 rounded-full px-8 py-6 text-lg transition-all duration-500"
+            >
+              <Link href="/contact">
+                Réserver votre séjour
+              </Link>
+            </Button>
+          </motion.div>
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isVisible ? 1 : 0 }}
+          transition={{ duration: 1, delay: 1 }}
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20"
+        >
+          <div className="mouse-scroll-indicator">
+            <div className="mouse">
+              <div className="wheel"></div>
+            </div>
+          </div>
+        </motion.div>
       </section>
 
       {/* Section Art de vivre */}
-      <section className="py-24 bg-white">
-        <div className="container max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-black mb-8 text-center">L'art de vivre, version Riviera</h2>
-          <div className="space-y-6 text-lg md:text-xl text-neutral-800 leading-relaxed text-center">
-            <p>Ici, le murmure des pins se mêle au clapotis de la piscine. La lumière dorée caresse chaque pierre, chaque feuille. L'horizon s'ouvre, infini, sur la Méditerranée.</p>
-            <p>Chaque instant est une invitation au voyage intérieur, à la contemplation, à la douceur de vivre.</p>
-          </div>
+      <section className="py-32 bg-white">
+        <div className="container max-w-4xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-black mb-8">L'art de vivre, version Riviera</h2>
+            <div className="h-px w-20 bg-[#b7a66b] mx-auto mb-12"></div>
+            <div className="space-y-8 text-lg md:text-xl text-neutral-800 leading-relaxed">
+              <p className="italic font-serif">"Il y a des lieux où souffle l'esprit."</p>
+              <p>Ici, le murmure des pins se mêle au clapotis de la piscine. La lumière dorée caresse chaque pierre, chaque feuille. L'horizon s'ouvre, infini, sur la Méditerranée.</p>
+              <p>Chaque instant est une invitation au voyage intérieur, à la contemplation, à la douceur de vivre.</p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Bloc Villa - Introduction */}
-      <section className="py-24 bg-white">
-        <div className="container max-w-6xl mx-auto px-4">
+      <section className="py-32 bg-neutral-50">
+        <div className="container max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-16">
-            {/* Image immersive à gauche */}
-            <div className="w-full md:w-1/2 mb-8 md:mb-0">
-              <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
-                <Image
-                  src="/images/villa/IMG_2409.JPEG"
-                  alt="La Villa Les Étoiles du Rocher"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            </div>
-            {/* Texte à droite */}
-            <div className="w-full md:w-1/2 flex flex-col items-start justify-center">
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-black mb-6">La Villa</h2>
-              <p className="text-lg md:text-xl text-neutral-800 leading-relaxed mb-8 max-w-xl">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="w-full md:w-1/2 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl"
+            >
+              <Image
+                src="/images/villa/IMG_2409.JPEG"
+                alt="La Villa Les Étoiles du Rocher"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="w-full md:w-1/2 flex flex-col items-start justify-center"
+            >
+              <span className="text-[#b7a66b] uppercase tracking-widest text-sm font-medium mb-4">Notre villa</span>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-black mb-6">Un écrin d'exception</h2>
+              <p className="text-lg text-neutral-700 leading-relaxed mb-8 max-w-xl">
                 Un écrin contemporain niché entre ciel et mer, à deux pas de Monaco. Architecture lumineuse, matériaux nobles, espaces ouverts sur la Méditerranée… Ici, chaque instant est une invitation à la détente et à l'émerveillement.
               </p>
               <Button
                 asChild
                 size="lg"
-                className="bg-white border-2 border-[#b7a66b] text-[#b7a66b] hover:bg-[#b7a66b] hover:text-white transition-all duration-500 px-10 py-5 rounded-full font-semibold text-lg shadow-md"
+                className="bg-[#b7a66b] hover:bg-[#a69154] text-white rounded-none px-10 py-7 text-lg transition-all duration-500 group"
               >
-                <Link href="/villa">
+                <Link href="/villa" className="flex items-center gap-2">
                   Découvrir la villa
+                  <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
