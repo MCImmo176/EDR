@@ -29,10 +29,10 @@
     "content": {
       "quote": "« Il y a des lieux où souffle l'esprit. »",
       "quoteAuthor": "— Maurice Barrès",
-      "description1": "Certains lieux possèdent une âme rare, une énergie silencieuse qui inspire et apaise. Notre domaine en est l'illustration parfaite : situé à seulement 5 minutes de l'effervescence monégasque, il offre une tranquillité absolue tout en permettant un accès immédiat aux plus belles plages, boutiques de prestige et événements de la Côte d'Azur.",
-      "description2": "Profitez de 350 m² répartis sur deux étages, avec cinq suites privatives à la literie d'exception. Une dépendance discrète, nichée dans la végétation méditerranéenne, offre un espace supplémentaire pour vos invités.",
-      "description3": "Découvrez notre piscine surplombant la mer et notre rooftop offrant un panorama exceptionnel sur Monaco et la Méditerranée.",
-      "description4": "Entre intimité, élégance et art de vivre, notre domaine est l'adresse idéale pour une escapade unique sur la Riviera."
+      "description1": "Imaginez un lieu où le luxe rencontre l'authenticité, où chaque détail a été pensé pour votre bien-être. Notre domaine, niché à seulement 5 minutes de Monaco, vous offre l'équilibre parfait entre tranquillité absolue et accès privilégié aux plus belles plages, boutiques de prestige et événements de la Côte d'Azur.",
+      "description2": "Plongez dans un univers de 350 m² répartis sur deux étages, où cinq suites privatives vous accueillent avec une literie d'exception. Une dépendance discrète, lovée dans la végétation méditerranéenne, s'offre à vous pour accueillir vos invités dans un cadre idyllique.",
+      "description3": "Laissez-vous séduire par notre piscine à débordement qui se fond dans l'horizon marin, et découvrez notre rooftop offrant un panorama à couper le souffle sur Monaco et la Méditerranée.",
+      "description4": "Entre intimité, élégance et art de vivre, notre domaine est l'écrin idéal pour une escapade inoubliable sur la Riviera."
     },
     "slogan": {
       "title": "VIVEZ L'EXCEPTION",
@@ -71,15 +71,79 @@
     "title": "La Villa",
     "description": "Une demeure d'exception",
     "features": {
-      "area": "Surface",
-      "bedrooms": "Chambres",
-      "bathrooms": "Salles de bain",
-      "pool": "Piscine",
-      "poolType": "Infinity",
-      "view": "Vue",
-      "viewType": "Mer",
-      "beach": "Accès à la plage",
-      "beachType": "Privé"
+      "title": "Louez une villa d'exception à 10 minutes de Monaco avec vue mer imprenable",
+      "subtitle": "Fraîchement achevée en début d'année, cette villa de luxe, encore jamais louée, est prête à vous offrir des moments inoubliables, en famille ou entre amis.",
+      "location": {
+        "title": "📍 Emplacement idéal",
+        "items": {
+          "monaco": "À seulement 10 minutes du centre de Monaco",
+          "airport": "À 30 minutes de l'aéroport de Nice",
+          "cannes": "À 45 minutes de Cannes",
+          "italy": "Et à 15 minutes de l'Italie"
+        }
+      },
+      "interior": {
+        "title": "À l'intérieur",
+        "items": {
+          "living": "Un salon élégant avec vue mer",
+          "dining": "Une salle à manger lumineuse",
+          "bar": "Un bar raffiné",
+          "tv": "Un coin TV",
+          "kitchen": "Une cuisine entièrement équipée avec du matériel haut de gamme"
+        }
+      },
+      "bedrooms": {
+        "title": "L'espace nuit",
+        "items": {
+          "total": "5 chambres luxueuses avec literie et surmatelas d'hôtel",
+          "sea": "4 chambres avec vue mer et terrasses privées",
+          "pine": "1 chambre paisible donnant sur une pinède",
+          "bedding": "Toutes dotées de coffre-fort, cafetière Nespresso, bouilloire et minibar",
+          "amenities": "5 salles de bain équipées de packs bien-être et sèche-cheveux"
+        }
+      },
+      "services": {
+        "title": "Services inclus",
+        "items": {
+          "bathrooms": "5 salles de bain équipées",
+          "wc": "6 WC dont 1 invités à l'étage",
+          "wellness": "Packs bien-être complets",
+          "wifi": "Wifi haut débit",
+          "safe": "Coffre-fort dans chaque chambre"
+        }
+      }
+    },
+    "additionalServices": {
+      "title": "Extras disponibles",
+      "subtitle": "Personnalisez votre séjour avec nos services sur mesure",
+      "chef": {
+        "title": "Chef à domicile",
+        "description": "Profitez des services d'un chef privé pour des repas d'exception"
+      },
+      "valet": {
+        "title": "Service voiturier",
+        "description": "Transport et gestion de vos véhicules en toute sérénité"
+      },
+      "cleaning": {
+        "title": "Femme de ménage",
+        "description": "Service de ménage quotidien sur demande"
+      }
+    },
+    "bookNow": "Réserver votre séjour",
+    "images": {
+      "pool": {
+        "alt": "Piscine privée de la villa avec vue mer"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Pourquoi choisir cette villa ?",
+      "description": "C'est une véritable perle rare, neuve et prête à sublimer votre séjour. Que ce soit pour des vacances reposantes ou une escapade luxueuse, vous serez conquis par ses prestations haut de gamme et son emplacement unique.",
+      "features": {
+        "pool": "Piscine privée avec vue imprenable",
+        "parking": "Parking privé pour 8 voitures",
+        "wifi": "Wifi haut débit",
+        "capacity": "Jusqu'à 10 personnes"
+      }
     },
     "kitchen": {
       "images": {

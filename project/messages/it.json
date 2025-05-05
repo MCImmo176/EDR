@@ -42,10 +42,10 @@
     "content": {
       "quote": "« Ci sono luoghi dove soffia lo spirito. »",
       "quoteAuthor": "— Maurice Barrès",
-      "description1": "Alcuni luoghi possiedono un'anima rara, un'energia silenziosa che ispira e placa. Il nostro dominio ne è l'illustrazione perfetta: situato a soli 5 minuti dall'effervescenza monegasca, offre un'assoluta tranquillità garantendo al contempo un accesso immediato alle più belle spiagge, boutique di prestigio ed eventi della Costa Azzurra.",
-      "description2": "Goditi 350 m² distribuiti su due piani, con cinque suite private dotate di letti eccezionali. Una dependance discreta, incastonata nella vegetazione mediterranea, offre uno spazio aggiuntivo per i tuoi ospiti.",
-      "description3": "Scopri la nostra piscina a sfioro che domina il mare e il nostro rooftop che offre un panorama eccezionale su Monaco e il Mediterraneo.",
-      "description4": "Tra intimità, eleganza e arte di vivere, il nostro dominio è l'indirizzo ideale per una fuga unica sulla Riviera."
+      "description1": "Immagina un luogo dove il lusso incontra l'autenticità, dove ogni dettaglio è stato pensato per il tuo benessere. Il nostro dominio, incastonato a soli 5 minuti da Monaco, ti offre il perfetto equilibrio tra assoluta tranquillità e accesso privilegiato alle più belle spiagge, boutique di prestigio ed eventi della Costa Azzurra.",
+      "description2": "Immergiti in un universo di 350 m² distribuiti su due piani, dove cinque suite private ti accolgono con letti eccezionali. Una dependance discreta, adagiata nella vegetazione mediterranea, ti aspetta per ospitare i tuoi invitati in un ambiente idilliaco.",
+      "description3": "Lasciati sedurre dalla nostra piscina a sfioro che si fonde con l'orizzonte marino, e scopri il nostro rooftop che offre un panorama mozzafiato su Monaco e il Mediterraneo.",
+      "description4": "Tra intimità, eleganza e arte di vivere, il nostro dominio è la cornice perfetta per una fuga indimenticabile sulla Riviera."
     },
     "slogan": {
       "title": "VIVI L'ECCEZIONALE",
@@ -171,15 +171,79 @@
       }
     },
     "features": {
-      "area": "Superficie",
-      "bedrooms": "Camere da letto",
-      "bathrooms": "Bagni",
-      "pool": "Piscina",
-      "poolType": "Infinity",
-      "view": "Vista",
-      "viewType": "Mare",
-      "beach": "Accesso alla spiaggia",
-      "beachType": "Privato"
+      "title": "Affitta una villa eccezionale a 10 minuti da Monaco con vista mare mozzafiato",
+      "subtitle": "Completata all'inizio dell'anno, questa villa di lusso, mai affittata prima, è pronta a offrirti momenti indimenticabili, in famiglia o con amici.",
+      "location": {
+        "title": "📍 Posizione ideale",
+        "items": {
+          "monaco": "A soli 10 minuti dal centro di Monaco",
+          "airport": "30 minuti dall'aeroporto di Nizza",
+          "cannes": "45 minuti da Cannes",
+          "italy": "E 15 minuti dall'Italia"
+        }
+      },
+      "interior": {
+        "title": "Interni",
+        "items": {
+          "living": "Un elegante soggiorno con vista mare",
+          "dining": "Una luminosa sala da pranzo",
+          "bar": "Un raffinato bar",
+          "tv": "Un angolo TV",
+          "kitchen": "Una cucina completamente attrezzata con elettrodomestici di alta gamma"
+        }
+      },
+      "bedrooms": {
+        "title": "Camere da letto",
+        "items": {
+          "total": "5 lussuose camere da letto con biancheria da hotel",
+          "sea": "4 camere con vista mare e terrazze private",
+          "pine": "1 camera tranquilla che si affaccia su una pineta",
+          "bedding": "Tutte dotate di cassaforte, macchina Nespresso, bollitore e minibar",
+          "amenities": "5 bagni attrezzati con kit benessere e asciugacapelli"
+        }
+      },
+      "services": {
+        "title": "Servizi inclusi",
+        "items": {
+          "bathrooms": "5 bagni attrezzati",
+          "wc": "6 servizi igienici inclusi 1 per gli ospiti al piano superiore",
+          "wellness": "Kit benessere completi",
+          "wifi": "WiFi ad alta velocità",
+          "safe": "Cassaforte in ogni camera"
+        }
+      }
+    },
+    "additionalServices": {
+      "title": "Extra disponibili",
+      "subtitle": "Personalizza il tuo soggiorno con i nostri servizi su misura",
+      "chef": {
+        "title": "Chef privato",
+        "description": "Goditi i servizi di uno chef privato per pasti eccezionali"
+      },
+      "valet": {
+        "title": "Servizio parcheggiatore",
+        "description": "Trasporto e gestione dei tuoi veicoli in tutta serenità"
+      },
+      "cleaning": {
+        "title": "Servizio pulizie",
+        "description": "Servizio di pulizia giornaliero su richiesta"
+      }
+    },
+    "bookNow": "Prenota il tuo soggiorno",
+    "images": {
+      "pool": {
+        "alt": "Piscina privata della villa con vista mare"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Perché scegliere questa villa?",
+      "description": "È una vera rarità, nuova di zecca e pronta a valorizzare il tuo soggiorno. Che sia per una vacanza rilassante o una fuga di lusso, sarai conquistato dalle sue prestazioni di alta gamma e dalla sua posizione unica.",
+      "features": {
+        "pool": "Piscina privata con vista mozzafiato",
+        "parking": "Parcheggio privato per 8 auto",
+        "wifi": "WiFi ad alta velocità",
+        "capacity": "Fino a 10 persone"
+      }
     },
     "kitchen": {
       "images": {

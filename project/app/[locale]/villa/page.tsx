@@ -9,7 +9,7 @@ import { ImageCarousel } from "@/components/ui/image-carousel";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Compass, Clock, Star, ShieldCheck, MapPin, Users, Key, Volume2, ArrowRight } from "lucide-react";
+import { Compass, Clock, Star, ShieldCheck, MapPin, Users, Key, Volume2, ArrowRight, Car, ChefHat as Chef, Home, ParkingMeter as Parking, School as Pool, Wifi } from "lucide-react";
 import SnakeRectangleAnimation from '../../../src/components/SnakeRectangleAnimation';
 
 // Composant pour un élément d'accordéon
@@ -280,15 +280,70 @@ export default function VillaPage() {
     }
   ];
   
-  const villaFeatures = [
-    { title: tVilla('features.area'), value: "500 m²" },
-    { title: tVilla('features.bedrooms'), value: "5" },
-    { title: tVilla('features.bathrooms'), value: "6" },
-    { title: tVilla('features.pool'), value: tVilla('features.poolType') },
-    { title: tVilla('features.view'), value: tVilla('features.viewType') },
-    { title: tVilla('features.beach'), value: tVilla('features.beachType') }
+  const features = [
+    {
+      icon: MapPin,
+      title: tVilla('features.location.title'),
+      items: [
+        tVilla('features.location.items.monaco'),
+        tVilla('features.location.items.airport'),
+        tVilla('features.location.items.cannes'),
+        tVilla('features.location.items.italy')
+      ]
+    },
+    {
+      icon: Home,
+      title: tVilla('features.interior.title'),
+      items: [
+        tVilla('features.interior.items.living'),
+        tVilla('features.interior.items.dining'),
+        tVilla('features.interior.items.bar'),
+        tVilla('features.interior.items.tv'),
+        tVilla('features.interior.items.kitchen')
+      ]
+    },
+    {
+      icon: Users,
+      title: tVilla('features.bedrooms.title'),
+      items: [
+        tVilla('features.bedrooms.items.total'),
+        tVilla('features.bedrooms.items.sea'),
+        tVilla('features.bedrooms.items.pine'),
+        tVilla('features.bedrooms.items.bedding'),
+        tVilla('features.bedrooms.items.amenities')
+      ]
+    },
+    {
+      icon: Star,
+      title: tVilla('features.services.title'),
+      items: [
+        tVilla('features.services.items.bathrooms'),
+        tVilla('features.services.items.wc'),
+        tVilla('features.services.items.wellness'),
+        tVilla('features.services.items.wifi'),
+        tVilla('features.services.items.safe')
+      ]
+    }
   ];
-  
+
+  const additionalServices = [
+    {
+      icon: Chef,
+      title: tVilla('additionalServices.chef.title'),
+      description: tVilla('additionalServices.chef.description')
+    },
+    {
+      icon: Car,
+      title: tVilla('additionalServices.valet.title'),
+      description: tVilla('additionalServices.valet.description')
+    },
+    {
+      icon: Home,
+      title: tVilla('additionalServices.cleaning.title'),
+      description: tVilla('additionalServices.cleaning.description')
+    }
+  ];
+
   const roomImages = [
     {
       title: tVilla('spaces.living.title'),
@@ -553,6 +608,153 @@ export default function VillaPage() {
                 <p className="text-muted-foreground">{info.description}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-24 bg-white">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-display mb-6">{tVilla('features.title')}</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              {tVilla('features.subtitle')}
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-neutral-50 p-8 rounded-xl"
+              >
+                <feature.icon className="h-8 w-8 text-[#b7a66b] mb-4" />
+                <h3 className="text-2xl font-display mb-4">{feature.title}</h3>
+                <ul className="space-y-2">
+                  {feature.items.map((item, i) => (
+                    <li key={i} className="flex items-center text-muted-foreground">
+                      <span className="w-2 h-2 bg-[#b7a66b] rounded-full mr-3" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Services Section */}
+      <section className="py-24 bg-neutral-50">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-display mb-6">{tVilla('additionalServices.title')}</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              {tVilla('additionalServices.subtitle')}
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {additionalServices.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white p-8 rounded-xl text-center"
+              >
+                <service.icon className="h-12 w-12 text-[#b7a66b] mx-auto mb-4" />
+                <h3 className="text-xl font-display mb-2">{service.title}</h3>
+                <p className="text-muted-foreground">{service.description}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <Button
+              asChild
+              size="lg"
+              className="bg-[#b7a66b] text-white hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-all duration-300"
+            >
+              <Link href="/contact">
+                {tVilla('bookNow')}
+              </Link>
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-24 bg-white">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="relative h-[600px] rounded-xl overflow-hidden"
+            >
+              <Image
+                src="/images/villa/IMG_2348.JPEG"
+                alt={tVilla('images.pool.alt')}
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <h2 className="text-4xl font-display">{tVilla('whyChooseUs.title')}</h2>
+              <p className="text-lg text-muted-foreground">
+                {tVilla('whyChooseUs.description')}
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="flex items-center space-x-3">
+                  <Pool className="h-6 w-6 text-[#b7a66b]" />
+                  <span>{tVilla('whyChooseUs.features.pool')}</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Parking className="h-6 w-6 text-[#b7a66b]" />
+                  <span>{tVilla('whyChooseUs.features.parking')}</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Wifi className="h-6 w-6 text-[#b7a66b]" />
+                  <span>{tVilla('whyChooseUs.features.wifi')}</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Users className="h-6 w-6 text-[#b7a66b]" />
+                  <span>{tVilla('whyChooseUs.features.capacity')}</span>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

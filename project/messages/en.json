@@ -50,10 +50,10 @@
     "content": {
       "quote": "« There are places where the spirit breathes. »",
       "quoteAuthor": "— Maurice Barrès",
-      "description1": "Some places possess a rare soul, a silent energy that inspires and soothes. Our estate is the perfect illustration: located just 5 minutes from the Monegasque effervescence, it offers absolute tranquility while providing immediate access to the most beautiful beaches, luxury boutiques, and events on the French Riviera.",
-      "description2": "Enjoy 350 m² spread over two floors, with five private suites featuring exceptional bedding. A discreet guesthouse, nestled in Mediterranean vegetation, offers additional space for your guests.",
-      "description3": "Discover our infinity pool overlooking the sea and our rooftop offering an exceptional panorama of Monaco and the Mediterranean.",
-      "description4": "Between intimacy, elegance, and the art of living, our estate is the ideal address for a unique getaway on the Riviera."
+      "description1": "Picture a place where luxury meets authenticity, where every detail has been crafted for your comfort. Our estate, nestled just 5 minutes from Monaco, offers you the perfect balance between absolute tranquility and privileged access to the most beautiful beaches, luxury boutiques, and events on the French Riviera.",
+      "description2": "Immerse yourself in a 350 m² universe spread over two floors, where five private suites welcome you with exceptional bedding. A discreet guesthouse, nestled in Mediterranean vegetation, awaits to host your guests in an idyllic setting.",
+      "description3": "Let yourself be seduced by our infinity pool that blends into the marine horizon, and discover our rooftop offering a breathtaking panorama of Monaco and the Mediterranean.",
+      "description4": "Between intimacy, elegance, and the art of living, our estate is the perfect setting for an unforgettable getaway on the Riviera."
     },
     "slogan": {
       "title": "LIVE THE EXCEPTION",
@@ -147,15 +147,47 @@
       }
     },
     "features": {
-      "area": "Area",
-      "bedrooms": "Bedrooms",
-      "bathrooms": "Bathrooms",
-      "pool": "Pool",
-      "poolType": "Infinity",
-      "view": "View",
-      "viewType": "Sea",
-      "beach": "Beach access",
-      "beachType": "Private"
+      "title": "Rent an exceptional villa 10 minutes from Monaco with breathtaking sea views",
+      "subtitle": "Freshly completed at the beginning of the year, this luxury villa, never rented before, is ready to offer you unforgettable moments, with family or friends.",
+      "location": {
+        "title": "📍 Ideal location",
+        "items": {
+          "monaco": "Just 10 minutes from Monaco city center",
+          "airport": "30 minutes from Nice airport",
+          "cannes": "45 minutes from Cannes",
+          "italy": "And 15 minutes from Italy"
+        }
+      },
+      "interior": {
+        "title": "Interior",
+        "items": {
+          "living": "An elegant living room with sea view",
+          "dining": "A bright dining room",
+          "bar": "A refined bar",
+          "tv": "A TV corner",
+          "kitchen": "A fully equipped kitchen with high-end appliances"
+        }
+      },
+      "bedrooms": {
+        "title": "Bedrooms",
+        "items": {
+          "total": "5 luxurious bedrooms with hotel-quality bedding",
+          "sea": "4 bedrooms with sea view and private terraces",
+          "pine": "1 peaceful bedroom overlooking a pine forest",
+          "bedding": "All equipped with safe, Nespresso coffee maker, kettle and minibar",
+          "amenities": "5 bathrooms equipped with wellness packs and hair dryers"
+        }
+      },
+      "services": {
+        "title": "Included services",
+        "items": {
+          "bathrooms": "5 equipped bathrooms",
+          "wc": "6 toilets including 1 guest toilet upstairs",
+          "wellness": "Complete wellness packs",
+          "wifi": "High-speed WiFi",
+          "safe": "Safe in each bedroom"
+        }
+      }
     },
     "kitchen": {
       "images": {
@@ -204,6 +236,9 @@
       },
       "bedroom": {
         "alt": "Master bedroom with sea view"
+      },
+      "pool": {
+        "alt": "Private pool of the villa with sea view"
       }
     },
     "rooms": {
@@ -226,6 +261,33 @@
         "title": "Gourmet Kitchen",
         "description": "A fully equipped kitchen with central island and high-end appliances.",
         "alt": "Gourmet kitchen"
+      }
+    },
+    "additionalServices": {
+      "title": "Available extras",
+      "subtitle": "Customize your stay with our tailored services",
+      "chef": {
+        "title": "Private chef",
+        "description": "Enjoy the services of a private chef for exceptional meals"
+      },
+      "valet": {
+        "title": "Valet service",
+        "description": "Transport and management of your vehicles with peace of mind"
+      },
+      "cleaning": {
+        "title": "Housekeeping",
+        "description": "Daily cleaning service available on request"
+      }
+    },
+    "bookNow": "Book your stay",
+    "whyChooseUs": {
+      "title": "Why choose this villa?",
+      "description": "It's a true rare gem, brand new and ready to enhance your stay. Whether for a relaxing vacation or a luxury getaway, you'll be won over by its high-end amenities and unique location.",
+      "features": {
+        "pool": "Private pool with breathtaking view",
+        "parking": "Private parking for 8 cars",
+        "wifi": "High-speed WiFi",
+        "capacity": "Up to 10 people"
       }
     }
   },
