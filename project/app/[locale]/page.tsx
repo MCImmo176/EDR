@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { ArrowRight, Sun, Mountain, Landmark, ShoppingBag, Map, Leaf, Flag, School as Pool } from 'lucide-react';
+import { ArrowRight, Sun, Mountain, Landmark, ShoppingBag, Map, Leaf, Flag, School as Pool, Phone, Mail, MapPin } from 'lucide-react';
 import { useLanguage } from "@/hooks/useLanguage";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
@@ -282,7 +282,7 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-6 pt-4">
                 {[ 
                   { icon: <Sun className="w-7 h-7 text-[#b7a66b]" />, text: "Vue panoramique mer" },
-                  { icon: <Pool className="w-7 h-7 text-[#b7a66b]" />, text: "Piscine à débordement" },
+                  { icon: <Pool className="w-7 h-7 text-[#b7a66b]" />, text: "Piscine avec vue sur mer" },
                   { icon: <Leaf className="w-7 h-7 text-[#b7a66b]" />, text: "Jardin méditerranéen" },
                   { icon: <ShoppingBag className="w-7 h-7 text-[#b7a66b]" />, text: "Services VIP" }
                 ].map((feature, index) => (
@@ -341,7 +341,7 @@ export default function Home() {
             <div className="h-px w-20 bg-[#b7a66b] mx-auto mb-8"></div>
             <p className="text-lg md:text-xl text-neutral-800 leading-relaxed max-w-3xl mx-auto">
               Explorez les plus beaux espaces de la propriété : suites baignées de lumière, 
-              piscine à débordement, rooftop panoramique… Laissez-vous inspirer par l'atmosphère unique de la villa.
+              piscine vue sur mer, rooftop panoramique… Laissez-vous inspirer par l'atmosphère unique de la villa.
             </p>
           </motion.div>
 
@@ -557,8 +557,8 @@ export default function Home() {
             >
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 rounded-full bg-[#b7a66b]/10 flex items-center justify-center">
-                    <span className="text-2xl">📞</span>
+                  <div className="w-12 h-12 rounded-full bg-white shadow flex items-center justify-center">
+                    <Phone className="w-7 h-7 text-[#b7a66b]" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-black">Téléphone</h3>
@@ -567,8 +567,8 @@ export default function Home() {
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 rounded-full bg-[#b7a66b]/10 flex items-center justify-center">
-                    <span className="text-2xl">✉️</span>
+                  <div className="w-12 h-12 rounded-full bg-white shadow flex items-center justify-center">
+                    <Mail className="w-7 h-7 text-[#b7a66b]" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-black">Email</h3>
@@ -577,8 +577,8 @@ export default function Home() {
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 rounded-full bg-[#b7a66b]/10 flex items-center justify-center">
-                    <span className="text-2xl">📍</span>
+                  <div className="w-12 h-12 rounded-full bg-white shadow flex items-center justify-center">
+                    <MapPin className="w-7 h-7 text-[#b7a66b]" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-black">Adresse</h3>
