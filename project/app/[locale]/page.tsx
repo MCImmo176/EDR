@@ -176,18 +176,18 @@ export default function Home() {
                 Réserver votre séjour
               </Link>
             </Button>
-            <Button
-              asChild
-              size="lg"
+              <Button 
+                asChild 
+                size="lg"
               variant="outline"
               className="bg-transparent hover:bg-white/10 text-white border-2 border-white/50 rounded-full px-8 py-6 text-lg transition-all duration-500"
-            >
+              >
               <Link href="/galerie">
                 Découvrir la villa
-              </Link>
-            </Button>
+                </Link>
+              </Button>
+            </motion.div>
           </motion.div>
-        </motion.div>
 
         <motion.div 
           initial={{ opacity: 0 }}
@@ -199,7 +199,7 @@ export default function Home() {
             <div className="mouse">
               <div className="wheel"></div>
             </div>
-          </div>
+        </div>
         </motion.div>
       </section>
 
@@ -213,11 +213,21 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-black mb-8">L'art de vivre, version Riviera</h2>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-black mb-8 text-center">
+              L'art de vivre, version{' '}
+              <span className="relative inline-block align-baseline">
+                <span className="z-10 relative">Riviera</span>
+                <span
+                  className="absolute inset-x-0 bottom-1 h-3 bg-[#D4AF37]/30 rounded-md z-0"
+                  aria-hidden="true"
+                ></span>
+              </span>
+            </h2>
             <div className="h-px w-20 bg-[#b7a66b] mx-auto mb-12"></div>
             <div className="space-y-8 text-lg md:text-xl text-neutral-800 leading-relaxed">
-              <p>Fraîchement achevée en début d'année, cette villa de luxe, encore jamais louée, est prête à vous offrir des moments inoubliables, en famille ou entre amis.</p>
-              <p>Découvrez le mariage parfait entre luxe et sérénité, au cœur d'un écrin niché entre mer et montagne, aux portes de Monaco et de l'Italie.</p>
+              <p className="italic font-serif">"Il y a des lieux où souffle l'esprit."</p>
+              <p>Ici, le murmure des <span className="relative inline-block align-baseline"><span className="z-10 relative">pins</span><span className="absolute inset-x-0 bottom-1 h-3 bg-[#D4AF37]/30 rounded-md z-0" aria-hidden="true"></span></span> se mêle au clapotis de la piscine. La <span className="relative inline-block align-baseline"><span className="z-10 relative">lumière dorée</span><span className="absolute inset-x-0 bottom-1 h-3 bg-[#D4AF37]/30 rounded-md z-0" aria-hidden="true"></span></span> caresse chaque pierre, chaque feuille. L'horizon s'ouvre, infini, sur la <span className="relative inline-block align-baseline"><span className="z-10 relative">Méditerranée</span><span className="absolute inset-x-0 bottom-1 h-3 bg-[#D4AF37]/30 rounded-md z-0" aria-hidden="true"></span></span>.</p>
+              <p>Chaque instant est une invitation au <span className="relative inline-block align-baseline"><span className="z-10 relative">voyage intérieur</span><span className="absolute inset-x-0 bottom-1 h-3 bg-[#D4AF37]/30 rounded-md z-0" aria-hidden="true"></span></span>, à la contemplation, à la <span className="relative inline-block align-baseline"><span className="z-10 relative">douceur de vivre</span><span className="absolute inset-x-0 bottom-1 h-3 bg-[#D4AF37]/30 rounded-md z-0" aria-hidden="true"></span></span>.</p>
             </div>
           </motion.div>
         </div>
@@ -259,9 +269,9 @@ export default function Home() {
               <div className="space-y-4">
                 <h2 className="text-4xl md:text-5xl font-display font-bold text-black">
                   Une villa d'exception
-                </h2>
+              </h2>
                 <div className="h-px w-20 bg-[#b7a66b]"></div>
-              </div>
+            </div>
               
               <p className="text-lg md:text-xl text-neutral-800 leading-relaxed">
                 Réveillez-vous avec le doux murmure des vagues et une vue imprenable sur la Méditerranée. 
@@ -292,7 +302,7 @@ export default function Home() {
                     </span>
                   </motion.div>
                 ))}
-              </div>
+            </div>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -364,7 +374,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl"
               >
-                <Image
+          <Image
                   src={image.src}
                   alt={image.alt}
                   fill
@@ -384,7 +394,7 @@ export default function Home() {
                 </div>
               </motion.div>
             ))}
-          </div>
+        </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
