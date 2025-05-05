@@ -317,109 +317,282 @@ export default function Home() {
       </section>
 
       {/* Bloc Galerie */}
-      <section className="py-24 bg-white">
-        <div className="container max-w-6xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row-reverse items-center gap-16">
-            {/* Image immersive à droite */}
-            <div className="w-full md:w-1/2 mb-8 md:mb-0">
-              <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
-                <Image
-                  src="/images/villa/IMG_2348.JPEG"
-                  alt="Galerie Les Étoiles du Rocher"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            </div>
-            {/* Texte à gauche */}
-            <div className="w-full md:w-1/2 flex flex-col items-start justify-center">
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-black mb-6">Galerie</h2>
-              <p className="text-lg md:text-xl text-neutral-800 leading-relaxed mb-8 max-w-xl">
-                Explorez les plus beaux espaces de la propriété : suites baignées de lumière, piscine à débordement, rooftop panoramique… Laissez-vous inspirer par l'atmosphère unique de la villa.
-              </p>
-              <Button
-                asChild
-                size="lg"
-                className="bg-white border-2 border-[#b7a66b] text-[#b7a66b] hover:bg-[#b7a66b] hover:text-white transition-all duration-500 px-10 py-5 rounded-full font-semibold text-lg shadow-md"
+      <section className="py-32 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-[0.02]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#b7a66b]/5 via-transparent to-[#b7a66b]/5"></div>
+        <div className="container max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-black mb-6">Galerie</h2>
+            <div className="h-px w-20 bg-[#b7a66b] mx-auto mb-8"></div>
+            <p className="text-lg md:text-xl text-neutral-800 leading-relaxed max-w-3xl mx-auto">
+              Explorez les plus beaux espaces de la propriété : suites baignées de lumière, 
+              piscine à débordement, rooftop panoramique… Laissez-vous inspirer par l'atmosphère unique de la villa.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                src: "/images/villa/IMG_2348.JPEG",
+                alt: "Vue panoramique sur la Méditerranée",
+                category: "Extérieur",
+                description: "Une vue imprenable sur la baie de Monaco"
+              },
+              {
+                src: "/images/villa/IMG_2409.JPEG",
+                alt: "Piscine à débordement",
+                category: "Extérieur",
+                description: "Piscine à débordement avec vue sur la mer"
+              },
+              {
+                src: "/images/villa/IMG_2359.jpg",
+                alt: "Salon principal",
+                category: "Intérieur",
+                description: "Espace de vie lumineux et élégant"
+              }
+            ].map((image, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl"
               >
-                <Link href="/galerie">
-                  Voir la galerie
-                </Link>
-              </Button>
-            </div>
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover transform group-hover:scale-110 transition-transform duration-1000"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 border-2 border-white/20 rounded-2xl transform scale-105 group-hover:scale-110 transition-transform duration-1000"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#b7a66b]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+                
+                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                  <span className="text-[#b7a66b] text-sm font-medium tracking-wider uppercase mb-2 block">
+                    {image.category}
+                  </span>
+                  <h3 className="text-white text-xl font-display mb-2">{image.alt}</h3>
+                  <p className="text-white/80 text-sm">{image.description}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <Button
+              asChild
+              size="lg"
+              className="bg-white border-2 border-[#b7a66b] text-[#b7a66b] hover:bg-[#b7a66b] hover:text-white transition-all duration-500 px-10 py-5 rounded-full font-semibold text-lg shadow-md group"
+            >
+              <Link href="/galerie" className="flex items-center gap-2">
+                Voir la galerie complète
+                <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
+          </motion.div>
         </div>
       </section>
 
       {/* Bloc Découverte */}
-      <section className="py-24 bg-white">
-        <div className="container max-w-6xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center gap-16">
-            {/* Image immersive à gauche */}
-            <div className="w-full md:w-1/2 mb-8 md:mb-0">
-              <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
-                <Image
-                  src="/images/villa/IMG_2359.jpg"
-                  alt="Découverte Les Étoiles du Rocher"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            </div>
-            {/* Texte à droite */}
-            <div className="w-full md:w-1/2 flex flex-col items-start justify-center">
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-black mb-6">Découverte</h2>
-              <p className="text-lg md:text-xl text-neutral-800 leading-relaxed mb-8 max-w-xl">
-                Plongez dans l'art de vivre de la villa : services sur-mesure, histoire du lieu, atmosphère méditerranéenne… Découvrez ce qui fait de ce domaine un écrin unique sur la Riviera.
-              </p>
-              <Button
-                asChild
-                size="lg"
-                className="bg-white border-2 border-[#b7a66b] text-[#b7a66b] hover:bg-[#b7a66b] hover:text-white transition-all duration-500 px-10 py-5 rounded-full font-semibold text-lg shadow-md"
+      <section className="py-32 bg-neutral-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-[0.02]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#b7a66b]/5 via-transparent to-[#b7a66b]/5"></div>
+        <div className="container max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-black mb-6">Découverte</h2>
+            <div className="h-px w-20 bg-[#b7a66b] mx-auto mb-8"></div>
+            <p className="text-lg md:text-xl text-neutral-800 leading-relaxed max-w-3xl mx-auto">
+              Plongez dans l'art de vivre de la villa : services sur-mesure, histoire du lieu, 
+              atmosphère méditerranéenne… Découvrez ce qui fait de ce domaine un écrin unique sur la Riviera.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Services VIP",
+                description: "Conciergerie privée, chef à domicile, transferts en voiture de luxe...",
+                icon: "✨"
+              },
+              {
+                title: "Histoire du lieu",
+                description: "Un domaine chargé d'histoire, témoin de l'âge d'or de la Côte d'Azur.",
+                icon: "📜"
+              },
+              {
+                title: "Activités locales",
+                description: "Monaco, Menton, les villages perchés... Explorez la région à votre rythme.",
+                icon: "🌅"
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500"
               >
-                <Link href="/decouvrir">
-                  Découvrir l'expérience
-                </Link>
-              </Button>
-            </div>
+                <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-500">
+                  {item.icon}
+                </div>
+                <h3 className="text-xl font-display font-bold text-black mb-3">{item.title}</h3>
+                <p className="text-neutral-600 leading-relaxed">{item.description}</p>
+              </motion.div>
+            ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <Button
+              asChild
+              size="lg"
+              className="bg-white border-2 border-[#b7a66b] text-[#b7a66b] hover:bg-[#b7a66b] hover:text-white transition-all duration-500 px-10 py-5 rounded-full font-semibold text-lg shadow-md group"
+            >
+              <Link href="/decouvrir" className="flex items-center gap-2">
+                Découvrir l'expérience
+                <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
+          </motion.div>
         </div>
       </section>
 
       {/* Bloc Contact */}
-      <section className="py-24 bg-white">
-        <div className="container max-w-4xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row-reverse items-center gap-16">
-            {/* (Optionnel) Image à droite */}
-            <div className="w-full md:w-1/2 mb-8 md:mb-0">
-              <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl">
-                <Image
-                  src="/images/villa/IMG_2286.JPEG"
-                  alt="Contact Les Étoiles du Rocher"
-                  fill
-                  className="object-cover"
-                  priority
-                />
+      <section className="py-32 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-[0.02]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#b7a66b]/5 via-transparent to-[#b7a66b]/5"></div>
+        <div className="container max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-black mb-6">Contact & Réservation</h2>
+            <div className="h-px w-20 bg-[#b7a66b] mx-auto mb-8"></div>
+            <p className="text-lg md:text-xl text-neutral-800 leading-relaxed max-w-3xl mx-auto">
+              Un séjour sur-mesure, une question ? Notre équipe vous répond avec discrétion et réactivité. 
+              Contactez-nous pour vivre l'exception.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl group"
+            >
+              <Image
+                src="/images/villa/IMG_2286.JPEG"
+                alt="Contact Les Étoiles du Rocher"
+                fill
+                className="object-cover transform group-hover:scale-110 transition-transform duration-1000"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+              <div className="absolute inset-0 border-2 border-white/20 rounded-2xl transform scale-105 group-hover:scale-110 transition-transform duration-1000"></div>
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#b7a66b]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-8"
+            >
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 rounded-full bg-[#b7a66b]/10 flex items-center justify-center">
+                    <span className="text-2xl">📞</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-black">Téléphone</h3>
+                    <p className="text-neutral-600">+33 6 XX XX XX XX</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 rounded-full bg-[#b7a66b]/10 flex items-center justify-center">
+                    <span className="text-2xl">✉️</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-black">Email</h3>
+                    <p className="text-neutral-600">contact@lesetoilesdurocher.com</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 rounded-full bg-[#b7a66b]/10 flex items-center justify-center">
+                    <span className="text-2xl">📍</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-black">Adresse</h3>
+                    <p className="text-neutral-600">Roquebrune-Cap-Martin, Côte d'Azur</p>
+                  </div>
+                </div>
               </div>
-            </div>
-            {/* Texte à gauche */}
-            <div className="w-full md:w-1/2 flex flex-col items-start justify-center">
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-black mb-6">Contact & Réservation</h2>
-              <p className="text-lg md:text-xl text-neutral-800 leading-relaxed mb-8 max-w-xl">
-                Un séjour sur-mesure, une question ? Notre équipe vous répond avec discrétion et réactivité. Contactez-nous pour vivre l'exception.
-              </p>
-              <Button
-                asChild
-                size="lg"
-                className="bg-white border-2 border-[#b7a66b] text-[#b7a66b] hover:bg-[#b7a66b] hover:text-white transition-all duration-500 px-10 py-5 rounded-full font-semibold text-lg shadow-md"
-              >
-                <Link href="/contact">
-                  Contactez-nous
-                </Link>
-              </Button>
-            </div>
+
+              <div className="pt-6">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-white border-2 border-[#b7a66b] text-[#b7a66b] hover:bg-[#b7a66b] hover:text-white transition-all duration-500 px-10 py-5 rounded-full font-semibold text-lg shadow-md group w-full"
+                >
+                  <Link href="/contact" className="flex items-center justify-center gap-2">
+                    Planifier une visite privée
+                    <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </Button>
+              </div>
+
+              <div className="flex items-center justify-center space-x-6 pt-6">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-[#b7a66b]">10+</div>
+                  <div className="text-sm text-neutral-600">Années d'expertise</div>
+                </div>
+                <div className="h-12 w-px bg-neutral-200"></div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-[#b7a66b]">100%</div>
+                  <div className="text-sm text-neutral-600">Clients satisfaits</div>
+                </div>
+                <div className="h-12 w-px bg-neutral-200"></div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-[#b7a66b]">24/7</div>
+                  <div className="text-sm text-neutral-600">Support dédié</div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
