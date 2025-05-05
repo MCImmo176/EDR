@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 38, 38, 38;
+  --background-rgb: 255, 255, 255;
+  
+  --luxury-gold: 183, 166, 107;
+  --luxury-beige: 245, 245, 240;
+  --luxury-gray: 38, 38, 38;
+}
+
+@layer base {
+  body {
+    @apply text-luxury-gray bg-white;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .luxury-container {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .luxury-title {
+    @apply font-display text-4xl sm:text-5xl md:text-6xl leading-tight;
+  }
+
+  .luxury-subtitle {
+    @apply text-lg sm:text-xl text-luxury-gray/80 leading-relaxed;
+  }
+
+  .luxury-button {
+    @apply inline-flex items-center px-8 py-3 border-2 border-luxury-gold 
+           text-sm font-medium transition-colors duration-300
+           hover:bg-luxury-gold hover:text-white;
+  }
+
+  .luxury-section {
+    @apply py-24 sm:py-32;
+  }
+}
+
+.parallax-bg {
+  @apply fixed inset-0 w-full h-full;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.text-fade-in {
+  animation: textFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes textFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.smooth-scroll {
+  scroll-behavior: smooth;
+} 
