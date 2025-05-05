@@ -156,7 +156,7 @@ export default function Home() {
           className="relative z-20 h-full flex flex-col items-center justify-center text-white px-4"
         >
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-center mb-8 leading-tight tracking-tight luxury-text-shadow">
-            Un sanctuaire entre<br />ciel, mer et nature
+            Les étoiles du rocher
           </h1>
           <p className="text-xl md:text-2xl font-light text-center max-w-3xl mb-12 leading-relaxed tracking-wide luxury-text-shadow">
             Laissez-vous porter par la lumière dorée, le murmure des pins<br />et l'horizon infini de la Méditerranée.
@@ -216,9 +216,8 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-black mb-8">L'art de vivre, version Riviera</h2>
             <div className="h-px w-20 bg-[#b7a66b] mx-auto mb-12"></div>
             <div className="space-y-8 text-lg md:text-xl text-neutral-800 leading-relaxed">
-              <p className="italic font-serif">"Il y a des lieux où souffle l'esprit."</p>
-              <p>Ici, le murmure des pins se mêle au clapotis de la piscine. La lumière dorée caresse chaque pierre, chaque feuille. L'horizon s'ouvre, infini, sur la Méditerranée.</p>
-              <p>Chaque instant est une invitation au voyage intérieur, à la contemplation, à la douceur de vivre.</p>
+              <p>Fraîchement achevée en début d’année, cette villa de luxe, encore jamais louée, est prête à vous offrir des moments inoubliables, en famille ou entre amis.</p>
+              <p>Découvrez le mariage parfait entre luxe et sérénité, au cœur d’un écrin niché entre mer et montagne, aux portes de Monaco et de l’Italie.</p>
             </div>
           </motion.div>
         </div>
