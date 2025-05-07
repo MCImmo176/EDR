@@ -234,7 +234,7 @@ export default function Home() {
               className="w-full md:w-1/2 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl group"
             >
               <Image
-                src="/images/villa/IMG_2409.JPEG"
+                src="/images/villa/alinterieur.jpg"
                 alt="La Villa Les Étoiles du Rocher"
                 fill
                 className="object-cover transform group-hover:scale-110 transition-transform duration-1000"
