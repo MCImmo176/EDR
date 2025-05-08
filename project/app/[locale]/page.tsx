@@ -335,7 +335,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                src: "/images/gallery/chambres/2.JPEG",
+                src: "/images/gallery/chambres/8.jpeg",
                 alt: "Chambre principale",
                 category: "Chambres",
                 description: "Suite parentale avec vue mer"
