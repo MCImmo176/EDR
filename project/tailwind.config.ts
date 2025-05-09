@@ -38,9 +38,12 @@ const config: Config = {
       },
       colors: {
         luxury: {
-          gold: '#b7a66b',
-          beige: '#f5f5f0',
-          gray: '#262626',
+          gold: '#CBA135', // Garde la valeur du deuxième code
+          beige: '#f5f5f0', // Conserve du premier code
+          gray: '#262626', // Conserve du premier code
+          dark: '#2E2E2E', // Ajout du deuxième code
+          light: '#F5F5F5', // Ajout du deuxième code
+          accent: '#b7a66b', // Ajout du deuxième code
         },
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
@@ -85,6 +88,8 @@ const config: Config = {
       },
       spacing: {
         '128': '32rem',
+        'section': 'var(--section-spacing)', // Ajout du deuxième code
+        'content': 'var(--content-spacing)', // Ajout du deuxième code
       },
       height: {
         'screen-90': '90vh',
@@ -113,6 +118,18 @@ const config: Config = {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
+        fadeIn: { // Ajout du deuxième code (alias de 'fade-in')
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: { // Ajout du deuxième code (alias de 'slide-up')
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        scaleIn: { // Ajout du deuxième code
+          '0%': { transform: 'scale(0.95)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -120,6 +137,7 @@ const config: Config = {
         'fade-in': 'fade-in 0.5s ease-out',
         'fade-out': 'fade-out 0.5s ease-out',
         'slide-up': 'slide-up 0.7s ease-out',
+        'scale-in': 'scaleIn 0.3s ease-out', // Ajout du deuxième code
       },
     },
   },
