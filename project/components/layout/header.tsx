@@ -41,7 +41,7 @@ export function Header() {
     { href: "/villa", label: t("nav.villa") },
     { href: "/galerie", label: t("nav.gallery") },
     { href: "/decouvrir", label: t("nav.discover") },
-    { href: "/#contact", label: t("nav.contact") },
+    { href: "/contact", label: t("nav.contact") },
   ];
 
   return (

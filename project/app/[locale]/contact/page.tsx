@@ -9,8 +9,9 @@ import Link from "next/link";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import { ComboboxCountry } from '@/components/ui/combobox-country';
-import { countryCodes } from '@/data/country-codes';
+import { ComboboxCountry } from "@/components/ui/combobox-country";
+import { countryCodes } from "@/data/country-codes";
+import SnakeRectangleAnimation from "@/src/components/SnakeRectangleAnimation";
 
 import {
   Form,
@@ -68,12 +69,20 @@ export default function ContactPage() {
             allow="autoplay; encrypted-media"
             allowFullScreen
             className="absolute w-full h-full object-cover"
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              width: '100vw',
+              height: '100vh',
+              transform: 'translate(-50%, -50%) scale(1.5)',
+              transformOrigin: 'center center'
+            }}
             onLoad={() => setIsVideoLoaded(true)}
-            style={{ filter: 'brightness(0.7)' }}
           />
         </div>
         
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
           <div className="container max-w-6xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -117,24 +126,24 @@ export default function ContactPage() {
                   </Button>
                 </div>
               ) : (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                   className="bg-white/10 backdrop-blur-md p-8 rounded-lg max-w-2xl mx-auto"
-            >
-              {isSubmitted ? (
+                >
+                  {isSubmitted ? (
                     <div className="text-center py-8">
                       <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#b7a66b] mb-6">
                         <Check className="h-8 w-8 text-white" />
-                  </div>
+                      </div>
                       <h3 className="text-2xl font-display mb-4">{t('form.success')}</h3>
                       <p className="text-white/80">
-                    {t('form.successDetail')}
-                  </p>
-                </div>
-              ) : (
-                <Form {...form}>
+                        {t('form.successDetail')}
+                      </p>
+                    </div>
+                  ) : (
+                    <Form {...form}>
                       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                         <div className="flex flex-col md:flex-row gap-4">
                           <div className="flex-1">
@@ -153,90 +162,90 @@ export default function ContactPage() {
                             />
                           </div>
                           <div className="flex-1">
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
+                            <FormField
+                              control={form.control}
+                              name="name"
+                              render={({ field }) => (
                                 <FormItem>
                                   <FormLabel className="text-white text-left block">Prénom</FormLabel>
-                          <FormControl>
+                                  <FormControl>
                                     <Input placeholder="Votre prénom" className="bg-white/20 border-white/20 text-white placeholder:text-white/50" {...field} />
-                          </FormControl>
+                                  </FormControl>
                                   <FormMessage className="text-red-300" />
-                        </FormItem>
-                      )}
-                    />
+                                </FormItem>
+                              )}
+                            />
                           </div>
                         </div>
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                            <FormItem>
-                              <FormLabel className="text-white text-left block">{t('yourVilla.form.email')}</FormLabel>
-                          <FormControl>
-                                <Input placeholder={t('yourVilla.form.emailPlaceholder')} className="bg-white/20 border-white/20 text-white placeholder:text-white/50" {...field} />
-                          </FormControl>
-                              <FormMessage className="text-red-300" />
-                        </FormItem>
-                      )}
-                    />
-                        <div className="flex gap-4 items-end">
-                          <div className="w-[180px] flex items-end">
                         <FormField
                           control={form.control}
-                          name="countryCode"
+                          name="email"
                           render={({ field }) => (
-                                <FormItem className="w-full">
+                            <FormItem>
+                              <FormLabel className="text-white text-left block">{t('yourVilla.form.email')}</FormLabel>
                               <FormControl>
-                                <ComboboxCountry
-                                  value={field.value}
-                                  onChange={field.onChange}
-                                  countryCodes={countryCodes}
-                                />
+                                <Input placeholder={t('yourVilla.form.emailPlaceholder')} className="bg-white/20 border-white/20 text-white placeholder:text-white/50" {...field} />
                               </FormControl>
-                                  <FormMessage className="text-red-300" />
+                              <FormMessage className="text-red-300" />
                             </FormItem>
                           )}
                         />
-                      </div>
-                      <div className="flex-1">
-                        <FormField
-                          control={form.control}
-                          name="phone"
-                          render={({ field }) => (
+                        <div className="flex gap-4 items-end">
+                          <div className="w-[180px] flex items-end">
+                            <FormField
+                              control={form.control}
+                              name="countryCode"
+                              render={({ field }) => (
+                                <FormItem className="w-full">
+                                  <FormControl>
+                                    <ComboboxCountry
+                                      value={field.value}
+                                      onChange={field.onChange}
+                                      countryCodes={countryCodes}
+                                    />
+                                  </FormControl>
+                                  <FormMessage className="text-red-300" />
+                                </FormItem>
+                              )}
+                            />
+                          </div>
+                          <div className="flex-1">
+                            <FormField
+                              control={form.control}
+                              name="phone"
+                              render={({ field }) => (
                                 <FormItem>
                                   <FormLabel className="text-white text-left block">Téléphone</FormLabel>
-                              <FormControl>
-                                <Input 
+                                  <FormControl>
+                                    <Input 
                                       placeholder="Votre numéro de téléphone"
                                       className="bg-white/20 border-white/20 text-white placeholder:text-white/50" 
+                                      {...field} 
+                                    />
+                                  </FormControl>
+                                  <FormMessage className="text-red-300" />
+                                </FormItem>
+                              )}
+                            />
+                          </div>
+                        </div>
+                        <FormField
+                          control={form.control}
+                          name="message"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-white text-left block">{t('yourVilla.form.message')}</FormLabel>
+                              <FormControl>
+                                <Textarea 
+                                  placeholder={t('yourVilla.form.messagePlaceholder')}
+                                  className="resize-none min-h-[150px] bg-white/20 border-white/20 text-white placeholder:text-white/50"
                                   {...field} 
                                 />
                               </FormControl>
-                                  <FormMessage className="text-red-300" />
+                              <FormMessage className="text-red-300" />
                             </FormItem>
                           )}
                         />
-                      </div>
-                    </div>
-                    <FormField
-                      control={form.control}
-                      name="message"
-                      render={({ field }) => (
-                            <FormItem>
-                              <FormLabel className="text-white text-left block">{t('yourVilla.form.message')}</FormLabel>
-                          <FormControl>
-                            <Textarea 
-                              placeholder={t('yourVilla.form.messagePlaceholder')}
-                                  className="resize-none min-h-[150px] bg-white/20 border-white/20 text-white placeholder:text-white/50"
-                              {...field} 
-                            />
-                          </FormControl>
-                              <FormMessage className="text-red-300" />
-                        </FormItem>
-                      )}
-                    />
                         <div className="flex gap-4">
                           <Button
                             type="button"
@@ -245,16 +254,16 @@ export default function ContactPage() {
                           >
                             Retour
                           </Button>
-                    <Button 
-                      type="submit" 
+                          <Button 
+                            type="submit" 
                             className="flex-1 bg-[#b7a66b] text-white hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-all duration-500"
-                    >
-                      <span className="relative z-10">{t('yourVilla.form.submit')}</span>
-                      <Send className="ml-2 h-4 w-4 relative z-10" />
-                    </Button>
+                          >
+                            <span className="relative z-10">{t('yourVilla.form.submit')}</span>
+                            <Send className="ml-2 h-4 w-4 relative z-10" />
+                          </Button>
                         </div>
-                  </form>
-                </Form>
+                      </form>
+                    </Form>
                   )}
                 </motion.div>
               )}
