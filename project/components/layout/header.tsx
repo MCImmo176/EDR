@@ -9,6 +9,7 @@ import { useLanguageContext } from "@/components/providers/language-provider";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { useContactForm } from "@/components/providers/contact-form-provider";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,6 +17,7 @@ export function Header() {
   const pathname = usePathname();
   const { language, setLanguage } = useLanguageContext();
   const t = useTranslations();
+  const { openForm } = useContactForm();
 
   // Handle scroll event to change header style
   useEffect(() => {
@@ -80,9 +82,12 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <Link href="/#contact" scroll className="luxury-btn ml-6 px-6 py-2 text-base font-semibold shadow-md hover:scale-105 transition-transform duration-200 rounded-full bg-[#b7a66b] text-white border-none">
+          <Button
+            onClick={openForm}
+            className="luxury-btn ml-6 px-6 py-2 text-base font-semibold shadow-md hover:scale-105 transition-transform duration-200 rounded-full bg-[#b7a66b] text-white border-none"
+          >
             J'organise une visite
-          </Link>
+          </Button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -123,9 +128,15 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <Link href="/#contact" scroll className="luxury-btn px-8 py-3 text-lg font-semibold shadow-md hover:scale-105 transition-transform duration-200 rounded-full bg-[#b7a66b] text-white border-none">
+          <Button
+            onClick={() => {
+              openForm();
+              setIsMobileMenuOpen(false);
+            }}
+            className="luxury-btn px-8 py-3 text-lg font-semibold shadow-md hover:scale-105 transition-transform duration-200 rounded-full bg-[#b7a66b] text-white border-none"
+          >
             J'organise une visite
-          </Link>
+          </Button>
         </div>
       </div>
     </header>
