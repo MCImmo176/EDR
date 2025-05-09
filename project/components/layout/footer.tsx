@@ -31,18 +31,16 @@ export function Footer() {
     { locale: "ru", src: "/images/flags/russie.png", alt: "Drapeau russe" }
   ];
 
-  const footerClass = py-6 transition-colors duration-300 ${isAtBottom ? 'bg-neutral-50' : 'bg-transparent'};
-
   return (
-    <footer className={footerClass}>
-      <div className="container mx-auto px-4">
+    <footer className={`py-6 transition-colors duration-300 ${isAtBottom ? 'bg-neutral-50' : 'bg-transparent'}`}>
+      <div className="container max-w-5xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
             <div className="flex flex-col md:flex-row gap-6">
-              <Link href={/${currentLocale}/terms} className="hover:text-primary transition-colors">
+              <Link href={`/${currentLocale}/terms`} className="hover:text-primary transition-colors">
                 {t('footer.terms')}
               </Link>
-              <Link href={/${currentLocale}/sales-terms} className="hover:text-primary transition-colors">
+              <Link href={`/${currentLocale}/sales-terms`} className="hover:text-primary transition-colors">
                 {t('footer.sales')}
               </Link>
             </div>
@@ -56,7 +54,7 @@ export function Footer() {
             {flags.map((flag) => {
               const pathname = usePathname();
               const currentPath = pathname ? pathname.split('/').slice(2).join('/') : '';
-              const newPath = /${flag.locale}/${currentPath};
+              const newPath = `/${flag.locale}/${currentPath}`;
               
               return (
                 <Link 
