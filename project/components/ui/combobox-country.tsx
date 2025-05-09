@@ -54,7 +54,7 @@ export const ComboboxCountry: React.FC<ComboboxCountryProps> = ({ value, onChang
 
   return (
     <div className="relative w-full">
-      {label && <label className="block mb-1 text-sm font-medium">{label}</label>}
+      {label && <label className="block mb-1 text-sm font-medium text-left">{label}</label>}
       <button
         type="button"
         className="flex items-center w-full border rounded-md px-3 py-2 h-10 bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring hover:bg-accent transition-colors"
@@ -65,7 +65,7 @@ export const ComboboxCountry: React.FC<ComboboxCountryProps> = ({ value, onChang
         {selected ? (
           <span className="inline-flex items-center gap-2">
             <FlagIcon code={selected.code} />
-            <span>{selected.dial_code}</span>
+            <span style={{ background: 'white', color: 'black', borderRadius: 4, padding: '2px 8px', fontWeight: 600 }}>{selected.dial_code}</span>
             <span className="text-xs text-muted-foreground truncate max-w-[100px]">{selected.name}</span>
           </span>
         ) : (
@@ -96,7 +96,7 @@ export const ComboboxCountry: React.FC<ComboboxCountryProps> = ({ value, onChang
                   className="flex gap-2 items-center py-2 px-3 cursor-pointer hover:bg-accent"
                 >
                   <FlagIcon code={country.code} />
-                  <span className="font-medium min-w-[60px]">{country.dial_code}</span>
+                  <span style={{ background: 'white', color: 'black', borderRadius: 4, padding: '2px 8px', fontWeight: 600 }} className="font-medium min-w-[60px]">{country.dial_code}</span>
                   <span className="text-sm text-muted-foreground truncate">{country.name}</span>
                 </CommandItem>
               ))}
