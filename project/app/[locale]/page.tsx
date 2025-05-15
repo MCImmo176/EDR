@@ -155,11 +155,11 @@ export default function Home() {
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className="relative z-20 h-full flex flex-col items-center justify-center text-white px-4"
         >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-light text-center mb-8 leading-tight tracking-wide luxury-text-shadow">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-light text-center mb-6 sm:mb-8 leading-tight tracking-wide luxury-text-shadow">
             Les Étoiles du Rocher
           </h1>
-          <p className="text-xl md:text-2xl font-light text-center max-w-3xl mb-12 leading-relaxed tracking-wide luxury-text-shadow">
-            Laissez-vous porter par la lumière dorée, le murmure des pins<br />et l'horizon infini de la Méditerranée.
+          <p className="text-base sm:text-lg md:text-2xl font-light text-center max-w-3xl mb-8 sm:mb-12 leading-relaxed tracking-wide luxury-text-shadow">
+            Laissez-vous porter par la lumière dorée, le murmure des pins<br className="hidden sm:block" />et l'horizon infini de la Méditerranée.
           </p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -201,6 +201,7 @@ export default function GaleriePage() {
                   L'expérience<br />
                   ciel et mer
                 </h1>
+                <div className="h-1 w-20 bg-[#b7a66b] mt-6"></div>
               </div>
               
               {/* Texte secondaire avec animation de fondu */}
@@ -361,10 +362,10 @@ export default function GaleriePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex justify-center mt-12 sm:mt-16"
+            className="flex justify-center mt-12 sm:mt-16 mb-8"
           >
             <Link
-              href="/contact"
+              href="/decouvrir"
               className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-white bg-[#b7a66b] rounded-full hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-all duration-300 ease-in-out transform hover:scale-105"
             >
               {tGallery('discoverButton')}

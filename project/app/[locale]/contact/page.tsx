@@ -83,44 +83,44 @@ export default function ContactPage() {
         </div>
         
         <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-          <div className="container max-w-6xl mx-auto px-4">
+          <div className="container max-w-6xl mx-auto px-2 sm:px-4 py-10 sm:py-0 overflow-auto max-h-screen">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVideoLoaded ? 1 : 0, y: isVideoLoaded ? 0 : 20 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="text-center text-white space-y-12"
+              className="text-center text-white space-y-8 sm:space-y-12"
             >
-              <div className="space-y-8">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-display">Les Étoiles du Rocher</h2>
-                <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 lg:gap-16">
+              <div className="space-y-6 sm:space-y-8">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display">Les Étoiles du Rocher</h2>
+                <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-8 lg:gap-16">
                   <div className="flex items-center gap-2 sm:gap-3">
-                    <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-[#b7a66b]" />
-                    <span className="text-sm sm:text-base text-white">+33 6 XX XX XX XX</span>
+                    <Phone className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-[#b7a66b]" />
+                    <span className="text-xs sm:text-sm md:text-base text-white">+33 6 XX XX XX XX</span>
                   </div>
                   <div className="flex items-center gap-2 sm:gap-3">
-                    <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-[#b7a66b]" />
-                    <span className="text-sm sm:text-base text-white">contact@lesetoilesdurocher.com</span>
+                    <Mail className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-[#b7a66b]" />
+                    <span className="text-xs sm:text-sm md:text-base text-white">contact@lesetoilesdurocher.com</span>
                   </div>
                   <div className="flex items-center gap-2 sm:gap-3">
-                    <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-[#b7a66b]" />
-                    <span className="text-sm sm:text-base text-white">Roquebrune-Cap-Martin, France</span>
+                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-[#b7a66b]" />
+                    <span className="text-xs sm:text-sm md:text-base text-white">Roquebrune-Cap-Martin, France</span>
                   </div>
                 </div>
               </div>
 
               {!showForm ? (
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
                   <Button
                     size="lg"
                     onClick={() => setShowForm(true)}
-                    className="bg-[#b7a66b] text-white hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-all duration-500 px-6 sm:px-8 py-5 sm:py-6 rounded-none min-w-[200px] sm:min-w-[250px] w-full sm:w-auto"
+                    className="bg-[#b7a66b] text-white hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-all duration-500 px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 rounded-none text-sm sm:text-base min-w-[180px] sm:min-w-[220px] w-full sm:w-auto"
                   >
                     Réservez votre séjour
                   </Button>
                   <Button
                     size="lg"
                     onClick={() => setShowForm(true)}
-                    className="bg-transparent text-white hover:bg-white hover:text-[#b7a66b] border-2 border-white transition-all duration-500 px-6 sm:px-8 py-5 sm:py-6 rounded-none min-w-[200px] sm:min-w-[250px] w-full sm:w-auto"
+                    className="bg-transparent text-white hover:bg-white hover:text-[#b7a66b] border-2 border-white transition-all duration-500 px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 rounded-none text-sm sm:text-base min-w-[180px] sm:min-w-[220px] w-full sm:w-auto"
                   >
                     Demande d'informations
                   </Button>
@@ -130,7 +130,7 @@ export default function ContactPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="bg-white/10 backdrop-blur-md p-4 sm:p-6 md:p-8 rounded-lg max-w-2xl mx-auto"
+                  className="bg-white/10 backdrop-blur-md p-3 sm:p-4 md:p-6 lg:p-8 rounded-lg max-w-2xl mx-auto mb-12 sm:mb-4"
                 >
                   {isSubmitted ? (
                     <div className="text-center py-8">
@@ -144,7 +144,7 @@ export default function ContactPage() {
                     </div>
                   ) : (
                     <Form {...form}>
-                      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
+                      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6 pb-4">
                         <div className="flex flex-col md:flex-row gap-4">
                           <div className="flex-1">
                             <FormField
@@ -238,7 +238,7 @@ export default function ContactPage() {
                               <FormControl>
                                 <Textarea 
                                   placeholder={t('yourVilla.form.messagePlaceholder')}
-                                  className="resize-none min-h-[150px] bg-white/20 border-white/20 text-white placeholder:text-white/50"
+                                  className="resize-none min-h-[120px] bg-white/20 border-white/20 text-white placeholder:text-white/50"
                                   {...field} 
                                 />
                               </FormControl>
@@ -246,7 +246,7 @@ export default function ContactPage() {
                             </FormItem>
                           )}
                         />
-                        <div className="flex gap-4">
+                        <div className="flex gap-4 pt-4">
                           <Button
                             type="button"
                             onClick={() => setShowForm(false)}

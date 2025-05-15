@@ -400,6 +400,7 @@ export default function DecouvrirPage() {
                   L'expérience<br />
                   ciel et mer
                 </h1>
+                <div className="h-1 w-20 bg-[#b7a66b] mt-6"></div>
               </div>
               
               <motion.div
@@ -476,18 +477,18 @@ export default function DecouvrirPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-16"
           >
-            <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-5xl mx-auto overflow-x-auto whitespace-nowrap">
+            <div className="flex flex-wrap justify-center gap-2 md:gap-3 max-w-6xl mx-auto px-2">
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => setActiveCategory(null)}
-                className={`p-3 sm:p-4 rounded-lg transition-all duration-300 flex flex-col items-center justify-center w-[110px] sm:w-[120px] h-16 sm:h-20 ${
+                className={`p-2 sm:p-3 rounded-lg transition-all duration-300 flex flex-col items-center justify-center w-[100px] sm:w-[110px] h-14 sm:h-16 ${
                   activeCategory === null
                     ? "bg-[#b7a66b] text-white shadow-lg shadow-[#b7a66b]/30"
                     : "bg-white text-gray-700 hover:bg-[#b7a66b]/80 hover:text-white border border-gray-200 shadow-sm"
                 }`}
               >
-                <Star className={`h-5 sm:h-6 w-5 sm:w-6 mb-1 sm:mb-2 ${activeCategory === null ? "text-white" : "text-[#b7a66b]"}`} />
+                <Star className={`h-4 sm:h-5 w-4 sm:w-5 mb-1 ${activeCategory === null ? "text-white" : "text-[#b7a66b]"}`} />
                 <span className="text-xs font-medium">Tous les lieux</span>
               </motion.button>
               
@@ -497,13 +498,13 @@ export default function DecouvrirPage() {
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                   onClick={() => setActiveCategory(category.code)}
-                  className={`p-3 sm:p-4 rounded-lg transition-all duration-300 flex flex-col items-center justify-center w-[110px] sm:w-[120px] h-16 sm:h-20 ${
+                  className={`p-2 sm:p-3 rounded-lg transition-all duration-300 flex flex-col items-center justify-center w-[100px] sm:w-[110px] h-14 sm:h-16 ${
                     activeCategory === category.code
                       ? "bg-[#b7a66b] text-white shadow-lg shadow-[#b7a66b]/30"
                       : "bg-white text-gray-700 hover:bg-[#b7a66b]/80 hover:text-white border border-gray-200 shadow-sm"
                   }`}
                 >
-                  <category.icon className={`h-5 sm:h-6 w-5 sm:w-6 mb-1 sm:mb-2 ${activeCategory === category.code ? "text-white" : "text-[#b7a66b]"}`} />
+                  <category.icon className={`h-4 sm:h-5 w-4 sm:w-5 mb-1 ${activeCategory === category.code ? "text-white" : "text-[#b7a66b]"}`} />
                   <span className="text-xs font-medium">{category.title.split(' ').slice(1).join(' ')}</span>
                 </motion.button>
               ))}
