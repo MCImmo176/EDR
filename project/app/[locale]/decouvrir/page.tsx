@@ -296,11 +296,11 @@ export default function DecouvrirPage() {
   ];
 
   const categories = [
-    { code: "culture-monaco", title: "🎭 Culture & Événements à Monaco", icon: Building },
+    { code: "culture-monaco", title: "🎭 Culture & Événements", icon: Building },
     { code: "sport-loisirs", title: "🎾 Sport & Loisirs", icon: Star },
-    { code: "nature-paysages", title: "🏞 Excursions Nature & Paysages", icon: Mountain },
-    { code: "villages-art-vivre", title: "🏘 Villages & Art de Vivre", icon: Landmark },
-    { code: "premium-experiences", title: "✈ Transferts & Expériences Premium", icon: Compass },
+    { code: "nature-paysages", title: "🏞 Nature & Paysages", icon: Mountain },
+    { code: "villages-art-vivre", title: "🏘 Villages", icon: Landmark },
+    { code: "premium-experiences", title: "✈ Expériences Premium", icon: Compass },
     { code: "secrets", title: "🔍 Secrets d'Initiés", icon: MapPin }
   ];
 
@@ -463,7 +463,7 @@ export default function DecouvrirPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-12 sm:mb-16"
+            className="text-center mb-12 sm:mb-16 sticky top-0 z-10 bg-white bg-opacity-90 backdrop-blur-sm pt-8 pb-4"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display mb-4 sm:mb-6 text-gray-900">{t('enjoy.events.title')}</h2>
             <div className="h-1 w-20 bg-[#b7a66b] mx-auto" />
@@ -476,19 +476,19 @@ export default function DecouvrirPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-16"
           >
-            <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-5xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-5xl mx-auto overflow-x-auto whitespace-nowrap">
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => setActiveCategory(null)}
-                className={`p-4 rounded-lg transition-all duration-300 flex flex-col items-center justify-center w-[140px] h-24 ${
+                className={`p-3 sm:p-4 rounded-lg transition-all duration-300 flex flex-col items-center justify-center w-[110px] sm:w-[120px] h-16 sm:h-20 ${
                   activeCategory === null
                     ? "bg-[#b7a66b] text-white shadow-lg shadow-[#b7a66b]/30"
                     : "bg-white text-gray-700 hover:bg-[#b7a66b]/80 hover:text-white border border-gray-200 shadow-sm"
                 }`}
               >
-                <Star className={`h-6 w-6 mb-3 ${activeCategory === null ? "text-white" : "text-[#b7a66b]"}`} />
-                <span className="text-sm font-medium">Tous les lieux</span>
+                <Star className={`h-5 sm:h-6 w-5 sm:w-6 mb-1 sm:mb-2 ${activeCategory === null ? "text-white" : "text-[#b7a66b]"}`} />
+                <span className="text-xs font-medium">Tous les lieux</span>
               </motion.button>
               
               {categories.map((category, index) => (
@@ -497,14 +497,14 @@ export default function DecouvrirPage() {
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                   onClick={() => setActiveCategory(category.code)}
-                  className={`p-4 rounded-lg transition-all duration-300 flex flex-col items-center justify-center w-[140px] h-24 ${
+                  className={`p-3 sm:p-4 rounded-lg transition-all duration-300 flex flex-col items-center justify-center w-[110px] sm:w-[120px] h-16 sm:h-20 ${
                     activeCategory === category.code
                       ? "bg-[#b7a66b] text-white shadow-lg shadow-[#b7a66b]/30"
                       : "bg-white text-gray-700 hover:bg-[#b7a66b]/80 hover:text-white border border-gray-200 shadow-sm"
                   }`}
                 >
-                  <category.icon className={`h-6 w-6 mb-3 ${activeCategory === category.code ? "text-white" : "text-[#b7a66b]"}`} />
-                  <span className="text-sm font-medium">{category.title.split(' ').slice(1).join(' ')}</span>
+                  <category.icon className={`h-5 sm:h-6 w-5 sm:w-6 mb-1 sm:mb-2 ${activeCategory === category.code ? "text-white" : "text-[#b7a66b]"}`} />
+                  <span className="text-xs font-medium">{category.title.split(' ').slice(1).join(' ')}</span>
                 </motion.button>
               ))}
             </div>
@@ -528,65 +528,64 @@ export default function DecouvrirPage() {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
                 className="group relative overflow-hidden rounded-xl shadow-md transform transition-all duration-500 hover:-translate-y-2 hover:shadow-xl bg-white border border-gray-200"
               >
-                <div className="relative h-60 sm:h-64">
+                <div className="relative h-48 xs:h-56 sm:h-64">
                   <Image
                     src={article.image}
                     alt={article.title}
                     fill
-                    priority={index < 6}
+                    priority={true}
                     className="object-cover transition-transform duration-700 group-hover:scale-110 rounded-t-xl"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                   
-                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 px-3 sm:px-4 py-2 rounded-full text-sm font-medium shadow-md transform transition-all duration-300 group-hover:scale-105">
+                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 px-2 xs:px-3 sm:px-4 py-1 xs:py-2 rounded-full text-xs xs:text-sm font-medium shadow-md transform transition-all duration-300 group-hover:scale-105">
                     {categories.find(cat => cat.code === article.category)?.title.split(' ').slice(1).join(' ')}
                   </div>
                   
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="text-xl sm:text-2xl font-display mb-1 text-white drop-shadow-md">{article.title}</h3>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
+                    <h3 className="text-lg xs:text-xl sm:text-2xl font-display mb-1 text-white drop-shadow-md">{article.title}</h3>
                     <div className="h-0.5 w-12 bg-[#b7a66b] mt-2 mb-2 transform origin-left transition-all duration-300 group-hover:w-24"></div>
                   </div>
                 </div>
                 
-                <div className="p-6 sm:p-6 bg-white rounded-b-xl">
-                  <p className="text-gray-700 mb-6 font-light leading-relaxed">{article.description}</p>
+                <div className="p-4 xs:p-5 sm:p-6 bg-white rounded-b-xl">
+                  <p className="text-sm xs:text-base text-gray-700 mb-4 sm:mb-6 font-light leading-relaxed">{article.description}</p>
                   
-                  <div className="space-y-3 mt-4 text-gray-600">
+                  <div className="space-y-2 sm:space-y-3 mt-3 sm:mt-4 text-gray-600">
                     {article.difficulty && (
-                      <div className="flex items-center text-sm group-hover:text-gray-900 transition-colors duration-300">
-                        <Mountain className="mr-3 h-4 w-4 text-[#b7a66b]" />
+                      <div className="flex items-center text-xs sm:text-sm group-hover:text-gray-900 transition-colors duration-300">
+                        <Mountain className="mr-2 sm:mr-3 h-3 sm:h-4 w-3 sm:w-4 text-[#b7a66b]" />
                         <span className="tracking-wide">{article.difficulty.replace('🥾', '')}</span>
                       </div>
                     )}
                     {article.duration && (
-                      <div className="flex items-center text-sm group-hover:text-gray-900 transition-colors duration-300">
-                        <Clock className="mr-3 h-4 w-4 text-[#b7a66b]" />
+                      <div className="flex items-center text-xs sm:text-sm group-hover:text-gray-900 transition-colors duration-300">
+                        <Clock className="mr-2 sm:mr-3 h-3 sm:h-4 w-3 sm:w-4 text-[#b7a66b]" />
                         <span className="tracking-wide">{article.duration.replace('⏱️', '')}</span>
                       </div>
                     )}
                     {article.bestTime && (
-                      <div className="flex items-center text-sm group-hover:text-gray-900 transition-colors duration-300">
-                        <Calendar className="mr-3 h-4 w-4 text-[#b7a66b]" />
+                      <div className="flex items-center text-xs sm:text-sm group-hover:text-gray-900 transition-colors duration-300">
+                        <Calendar className="mr-2 sm:mr-3 h-3 sm:h-4 w-3 sm:w-4 text-[#b7a66b]" />
                         <span className="tracking-wide">{article.bestTime.replace(/🌅|☀️|🌇|🌿|🎭|🍽️|🎨|🛥️|🎵|🌊|🗓️|⏰/, '')}</span>
                       </div>
                     )}
                     {article.comments && article.comments.map((comment, i) => (
-                      <div key={i} className="flex items-center text-sm group-hover:text-gray-900 transition-colors duration-300">
-                        <comment.icon className="mr-3 h-4 w-4 text-[#b7a66b]" />
+                      <div key={i} className="flex items-center text-xs sm:text-sm group-hover:text-gray-900 transition-colors duration-300">
+                        <comment.icon className="mr-2 sm:mr-3 h-3 sm:h-4 w-3 sm:w-4 text-[#b7a66b]" />
                         <span className="tracking-wide">{comment.text}</span>
                       </div>
                     ))}
                   </div>
                   
-                  <div className="mt-6 pt-4 border-t border-gray-100">
-                    <div className="flex items-center text-[#b7a66b] text-sm font-medium cursor-pointer group-hover:translate-x-1 transition-transform duration-300">
+                  <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-gray-100">
+                    <div className="flex items-center text-[#b7a66b] text-xs sm:text-sm font-medium cursor-pointer group-hover:translate-x-1 transition-transform duration-300">
                       <span>En savoir plus</span>
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      <ArrowRight className="ml-2 h-3 sm:h-4 w-3 sm:w-4" />
                     </div>
                   </div>
                 </div>
@@ -700,14 +699,14 @@ export default function DecouvrirPage() {
             >
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-[#b7a66b] rounded-lg hover:bg-[#b7a66b]/90 transition-all duration-300 ease-in-out transform hover:scale-105 shadow-md"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-white bg-[#b7a66b] rounded-lg hover:bg-[#b7a66b]/90 transition-all duration-300 ease-in-out transform hover:scale-105 shadow-md"
               >
                 Réserver votre séjour
               </Link>
               
               <Link
                 href="/galerie"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-[#b7a66b] border-2 border-[#b7a66b] rounded-lg hover:bg-[#b7a66b]/10 transition-all duration-300 ease-in-out"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-[#b7a66b] border-2 border-[#b7a66b] rounded-lg hover:bg-[#b7a66b]/10 transition-all duration-300 ease-in-out"
               >
                 Explorer notre galerie
               </Link>

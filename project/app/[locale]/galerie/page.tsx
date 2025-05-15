@@ -108,11 +108,21 @@ export default function GaleriePage() {
 
   const getPhotoColumns = () => {
     const columnPhotos: any[][] = Array.from({ length: columns }, () => []);
-    let currentColumn = 0;
-
-    filteredPhotos.forEach((photo, index) => {
-      columnPhotos[currentColumn].push(photo);
-      currentColumn = (currentColumn + 1) % columns;
+    
+    // Calculer les hauteurs totales par colonne
+    const columnHeights = Array(columns).fill(0);
+    
+    // Distribuer les photos dans les colonnes de manière équilibrée
+    filteredPhotos.forEach((photo) => {
+      // Trouver la colonne avec la hauteur la plus petite
+      const minHeightColumn = columnHeights.indexOf(Math.min(...columnHeights));
+      
+      // Ajouter la photo à cette colonne
+      columnPhotos[minHeightColumn].push(photo);
+      
+      // Mettre à jour la hauteur de la colonne
+      // On utilise la taille de la photo (large=4, regular=3.5) pour calculer la hauteur
+      columnHeights[minHeightColumn] += photo.size === "large" ? 4 : 3.5;
     });
 
     return columnPhotos;

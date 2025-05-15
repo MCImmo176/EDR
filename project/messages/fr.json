@@ -342,86 +342,117 @@
   "discover": {
     "title": "Découvrir",
     "subtitle": "Explorez les merveilles de la Côte d'Azur depuis Les Étoiles du Rocher.",
+    "hero": {
+      "title": "L'expérience ciel et mer",
+      "subtitle": "Profitez des hauteurs de la Côte d'Azur, un havre de paix avec vue imprenable sur la Méditerranée.",
+      "bookNow": "Réserver maintenant",
+      "scrollDown": "Découvrir plus"
+    },
     "enjoy": {
       "title": "Profitez",
       "ourLocation": "De notre emplacement",
       "events": {
-        "title": "Événements à ne pas manquer",
+        "title": "Lieux & Événements à Découvrir",
+        "description": "Découvrez notre sélection des lieux et événements incontournables à visiter pendant votre séjour dans notre villa d'exception.",
+        "allPlaces": "Tous les lieux",
         "monacoGP": {
-          "title": "Grand Prix de Monaco 2025",
-          "type": "Événement sportif",
-          "date": "22-25 mai 2025",
-          "learnMore": "En savoir plus"
+          "title": "Grand Prix de Monaco",
+          "description": "Vivez la course mythique depuis notre villa ou avec nos accès VIP aux meilleures tribunes du circuit.",
+          "date": "Fin mai chaque année",
+          "type": "Événement sportif"
         },
         "casino": {
           "title": "Casino de Monte-Carlo",
-          "type": "Jeux de hasard",
-          "hours": "14h00 - 4h00",
-          "learnMore": "En savoir plus"
+          "description": "Tentez votre chance dans le casino légendaire où James Bond a ses habitudes. Architecture Belle Époque et ambiance feutrée.",
+          "hours": "Ouvert tous les jours",
+          "type": "Divertissement"
         },
         "oceanographic": {
-          "title": "Musée océanographique",
-          "type": "Culture",
-          "hours": "10h00 - 18h00",
-          "learnMore": "En savoir plus"
+          "title": "Musée Océanographique",
+          "description": "Plus de 6000 espèces marines, aquariums géants et expositions interactives dans un bâtiment majestueux surplombant la mer.",
+          "hours": "Ouvert tous les jours",
+          "type": "Culture"
         },
         "rally": {
-          "title": "Rallye historique de Monte-Carlo",
-          "type": "Événement sportif automobile",
-          "date": "31 jan - 5 fév 2025",
-          "learnMore": "En savoir plus"
+          "title": "Rallye Monte-Carlo Historique",
+          "description": "Admirez les voitures de collection parcourant les routes sinueuses de l'arrière-pays lors de cette compétition prestigieuse.",
+          "date": "Janvier chaque année",
+          "type": "Événement sportif"
         }
       },
       "secrets": {
-        "title": "Secrets à découvrir",
+        "title": "Secrets d'Initiés",
         "customsPath": {
-          "title": "Sentier des douaniers",
-          "category": "Randonnée",
-          "description": "Magnifique sentier côtier longeant le Cap Martin avec des vues imprenables sur la mer. Découvrez des criques secrètes idéales pour la baignade loin de la foule.",
-          "difficulty": "🥾 Difficulté : Moyenne",
-          "duration": "⏱️ Durée : 2-3 heures",
-          "bestTime": "🌅 Meilleur moment : Lever du soleil"
+          "title": "Sentier des Douaniers",
+          "description": "Promenade côtière préservée offrant des vues spectaculaires sur la mer et les criques secrètes de la Côte d'Azur.",
+          "category": "secrets",
+          "difficulty": "Facile à modérée",
+          "duration": "1-3 heures",
+          "bestTime": "Lever ou coucher du soleil"
         },
         "ezeVillage": {
-          "title": "Visitez le village d'Èze",
-          "category": "Histoire",
-          "description": "Village médiéval perché à flanc de falaise avec une vue époustouflante sur toute la côte. Ruelles pittoresques bordées de boutiques d'artisans et d'ateliers d'art.",
-          "difficulty": "🥾 Difficulté : Moyenne (montée)",
-          "duration": "⏱️ Durée : 2 heures",
-          "bestTime": "🌅 Meilleur moment : Matin"
+          "title": "Village d'Èze",
+          "description": "Perché à 429m d'altitude, ce village médiéval offre une vue à 360° sur la Côte d'Azur et abrite le célèbre Jardin Exotique.",
+          "category": "secrets",
+          "comments": {
+            "medieval": "Village médiéval authentique",
+            "view": "Vue panoramique exceptionnelle"
+          }
         },
         "littleAfrica": {
-          "title": "Vallée de la Petite Afrique",
-          "category": "Nature",
-          "description": "Jardin exotique naturel caché à Beaulieu-sur-Mer avec microchmat subtropical. Sentiers ombragés entre palmiers et plantes exotiques loin des circuits touristiques.",
-          "difficulty": "🥾 Difficulté : Facile",
-          "duration": "⏱️ Durée : 1 heure",
-          "bestTime": "🌿 Meilleur moment : Matin"
+          "title": "La Petite Afrique de Beaulieu",
+          "description": "Jardin botanique secret abritant des espèces exotiques rares et une plage intimiste loin des foules.",
+          "category": "secrets",
+          "difficulty": "Facile",
+          "duration": "1-2 heures",
+          "bestTime": "Matinée"
         },
         "corbusier": {
-          "title": "Rocher de Le Corbusier",
-          "category": "Point de vue",
-          "description": "Promontoire paisible offrant une vue imprenable sur la Méditerranée et le Cap Martin. Lieu de méditation favori de l'architecte Le Corbusier.",
-          "difficulty": "🥾 Difficulté : Facile",
-          "duration": "⏱️ Durée : 30 minutes",
-          "bestTime": "🌇 Meilleur moment : Coucher de soleil"
+          "title": "Sentier Le Corbusier",
+          "description": "Parcours architectural longeant la mer et révélant des villas iconiques, dont la célèbre Villa E-1027 d'Eileen Gray.",
+          "category": "secrets",
+          "difficulty": "Facile à modérée",
+          "duration": "2-3 heures",
+          "bestTime": "Début de matinée"
         },
         "garnier": {
-          "title": "Salle Garnier",
-          "category": "Culture",
-          "description": "Opéra intimiste au cœur du Casino de Monte-Carlo, chef-d'œuvre de l'architecture Belle Époque. Décors et ornements dorés rivalisant avec l'Opéra Garnier de Paris.",
-          "price": "💰 Tarif : Visite guidée 17€",
-          "duration": "⏱️ Durée : 1 heure",
-          "bestTime": "🎭 Meilleur moment : Soirée de représentation"
+          "title": "Opéra Garnier de Monte-Carlo",
+          "description": "Chef-d'œuvre architectural habituellement fermé au public, mais accessible lors de visites guidées exclusives que nous pouvons organiser.",
+          "category": "secrets",
+          "comments": {
+            "opera": "Salle d'opéra légendaire",
+            "decor": "Décor Belle Époque somptueux"
+          }
         },
         "blueGulf": {
-          "title": "Plage du Golfe Bleu",
-          "category": "Plage",
-          "description": "Petite crique préservée entre Monaco et Cap-Martin aux eaux cristallines. Idéale pour échapper à la foule et profiter d'un cadre naturel exceptionnel.",
-          "difficulty": "🥾 Difficulté : Facile",
-          "bestTime": "🌊 Meilleur moment : Matinée ou coucher de soleil"
+          "title": "Golfe Bleu",
+          "description": "Crique secrète accessible uniquement par un sentier discret ou par la mer, offrant des eaux cristallines et une tranquillité rare.",
+          "category": "secrets",
+          "bestTime": "Début de journée"
         }
+      },
+      "categories": {
+        "culture": "Culture & Événements",
+        "sports": "Sport & Loisirs",
+        "nature": "Nature & Paysages",
+        "villages": "Villages",
+        "premium": "Expériences Premium",
+        "secrets": "Secrets d'Initiés"
+      },
+      "filters": {
+        "placesCount": "{count} {count, plural, one {lieu} other {lieux}} dans cette catégorie",
+        "learnMore": "En savoir plus"
       }
+    },
+    "quote": {
+      "text": "\"Voir le monde, c'est être au-delà de soi-même. L'art et la culture sont ce qui fait de nous des êtres vivants.\"",
+      "author": "F. Scott Fitzgerald"
+    },
+    "cta": {
+      "title": "Votre expérience unique sur la Côte d'Azur",
+      "description": "Profitez de tous ces lieux d'exception depuis votre villa de luxe aux Étoiles du Rocher. Notre équipe de conciergerie se tient à votre disposition pour organiser vos excursions et créer des moments inoubliables sur mesure.",
+      "bookNow": "Réserver votre séjour",
+      "exploreGallery": "Explorer notre galerie"
     }
   },
   "footer": {

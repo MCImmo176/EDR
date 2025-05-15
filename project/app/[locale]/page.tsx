@@ -155,7 +155,7 @@ export default function Home() {
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className="relative z-20 h-full flex flex-col items-center justify-center text-white px-4"
         >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-center mb-8 leading-tight tracking-tight luxury-text-shadow">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-light text-center mb-8 leading-tight tracking-wide luxury-text-shadow">
             Les Étoiles du Rocher
           </h1>
           <p className="text-xl md:text-2xl font-light text-center max-w-3xl mb-12 leading-relaxed tracking-wide luxury-text-shadow">
@@ -198,21 +198,17 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center"
+            className="space-y-12"
           >
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-black mb-8 text-center">
-              L'art de vivre, version{' '}
-              <span className="relative inline-block align-baseline">
-                <span className="z-10 relative">Riviera</span>
-                <span
-                  className="absolute inset-x-0 bottom-1 h-3 bg-[#D4AF37]/30 rounded-md z-0"
-                  aria-hidden="true"
-                ></span>
-              </span>
-            </h2>
-            <div className="h-px w-20 bg-[#b7a66b] mx-auto mb-12"></div>
+            <div className="text-center">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-light text-black mb-6">
+                Art de vivre
+              </h2>
+              <div className="h-px w-20 bg-[#b7a66b] mx-auto mb-8"></div>
+            </div>
+            
             <div className="space-y-8 text-lg md:text-xl text-neutral-800 leading-relaxed">
-              <p className="italic font-serif">"Il y a des lieux où souffle l'esprit."</p>
+              <p className="italic font-light">"Il y a des lieux où souffle l'esprit."</p>
               <p>Ici, le murmure des <span className="relative inline-block align-baseline"><span className="z-10 relative">pins</span><span className="absolute inset-x-0 bottom-1 h-3 bg-[#D4AF37]/30 rounded-md z-0" aria-hidden="true"></span></span> se mêle au clapotis de la piscine. La <span className="relative inline-block align-baseline"><span className="z-10 relative">lumière dorée</span><span className="absolute inset-x-0 bottom-1 h-3 bg-[#D4AF37]/30 rounded-md z-0" aria-hidden="true"></span></span> caresse chaque pierre, chaque feuille. L'horizon s'ouvre, infini, sur la <span className="relative inline-block align-baseline"><span className="z-10 relative">Méditerranée</span><span className="absolute inset-x-0 bottom-1 h-3 bg-[#D4AF37]/30 rounded-md z-0" aria-hidden="true"></span></span>.</p>
               <p>Chaque instant est une invitation au <span className="relative inline-block align-baseline"><span className="z-10 relative">voyage intérieur</span><span className="absolute inset-x-0 bottom-1 h-3 bg-[#D4AF37]/30 rounded-md z-0" aria-hidden="true"></span></span>, à la contemplation, à la <span className="relative inline-block align-baseline"><span className="z-10 relative">douceur de vivre</span><span className="absolute inset-x-0 bottom-1 h-3 bg-[#D4AF37]/30 rounded-md z-0" aria-hidden="true"></span></span>.</p>
             </div>

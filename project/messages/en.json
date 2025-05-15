@@ -1,5 +1,6 @@
 {
   "common": {
+    "language": "Language",
     "welcome": "Welcome",
     "about": "About",
     "contact": "Contact",
@@ -9,13 +10,8 @@
     "bookNow": "Book now",
     "contactUs": "Contact us",
     "learnMore": "Learn more",
-    "footer": {
-      "terms": "Terms and Conditions",
-      "sales": "Sales Conditions",
-      "gallery": "Gallery",
-      "discover": "Discover",
-      "villaName": "Les Étoiles du Rocher"
-    }
+    "reserve": "Book",
+    "villaName": "Les Étoiles du Rocher"
   },
   "nav": {
     "home": "Home",
@@ -359,43 +355,31 @@
     "discoverButton": "Discover the surroundings"
   },
   "contact": {
-    "yourVilla": {
-      "subtitle": "Your Villa Awaits You",
-      "description": "Contact us to book your exceptional stay at Les Étoiles du Rocher",
-      "form": {
-        "name": "Full Name",
-        "namePlaceholder": "Your full name",
-        "email": "Email",
-        "emailPlaceholder": "Your email address",
-        "phone": "Phone",
-        "phonePlaceholder": "Your phone number",
-        "message": "Message",
-        "messagePlaceholder": "Your message",
-        "submit": "Send message"
-      }
-    },
+    "title": "Contact us",
+    "subtitle": "We are at your disposal",
     "form": {
-      "success": "Message sent successfully",
-      "successDetail": "We will get back to you as soon as possible.",
-      "name": "Full Name",
-      "namePlaceholder": "Your full name",
+      "firstName": "First Name",
+      "lastName": "Last Name",
       "email": "Email",
       "emailPlaceholder": "Your email address",
       "phone": "Phone",
       "phonePlaceholder": "Your phone number",
       "message": "Message",
       "messagePlaceholder": "Your message",
-      "submit": "Send message",
-      "countryCode": {
-        "label": "Country code",
-        "france": "France",
-        "code": "+33"
-      }
+      "submit": "Send",
+      "success": "Message sent successfully",
+      "successDetail": "Thank you for your message. Our team will contact you as soon as possible."
     },
-    "title": "Let's connect",
-    "intro": "Thank you for visiting our website!",
-    "description": "We would love to hear from you. Whether you have questions, feedback to share, or would like to learn more about our villas, please don't hesitate to contact us.",
-    "response": "Our advisors will get back to you as soon as possible."
+    "info": {
+      "address": "Roquebrune-Cap-Martin, France",
+      "phone": "+33 6 XX XX XX XX",
+      "email": "contact@lesetoilesdurocher.com"
+    },
+    "buttons": {
+      "bookStay": "Book your stay",
+      "requestInfo": "Request information",
+      "back": "Back"
+    }
   },
   "info": {
     "title": "Information",
@@ -410,87 +394,117 @@
   "discover": {
     "title": "Discover",
     "subtitle": "Explore the wonders of the French Riviera from Les Étoiles du Rocher.",
+    "hero": {
+      "title": "The sky and sea experience",
+      "subtitle": "Enjoy the heights of the French Riviera, a haven of peace with breathtaking views of the Mediterranean.",
+      "bookNow": "Book now",
+      "scrollDown": "Discover more"
+    },
     "enjoy": {
       "title": "Enjoy",
       "ourLocation": "Our location",
       "events": {
-        "title": "Unmissable Events",
+        "title": "Places & Events to Discover",
+        "description": "Discover our selection of must-visit places and events during your stay in our exceptional villa.",
+        "allPlaces": "All places",
         "monacoGP": {
-          "title": "Monaco Grand Prix 2025",
-          "type": "Sporting Event",
-          "date": "May 22-25, 2025",
-          "learnMore": "Learn more"
+          "title": "Monaco Grand Prix",
+          "description": "Experience the legendary race from our villa or with our VIP access to the best stands on the circuit.",
+          "date": "Late May each year",
+          "type": "Sporting event"
         },
         "casino": {
           "title": "Monte-Carlo Casino",
-          "type": "Gaming",
-          "hours": "2:00 PM - 4:00 AM",
-          "learnMore": "Learn more"
+          "description": "Try your luck at the legendary casino where James Bond is a regular. Belle Époque architecture and sophisticated atmosphere.",
+          "hours": "Open daily",
+          "type": "Entertainment"
         },
         "oceanographic": {
           "title": "Oceanographic Museum",
-          "type": "Culture",
-          "hours": "10:00 AM - 6:00 PM",
-          "learnMore": "Learn more"
+          "description": "More than 6000 marine species, giant aquariums and interactive exhibitions in a majestic building overlooking the sea.",
+          "hours": "Open daily",
+          "type": "Culture"
         },
         "rally": {
           "title": "Monte-Carlo Historic Rally",
-          "type": "Historic Car Event",
-          "date": "Jan 31 - Feb 5, 2025",
-          "learnMore": "Learn more"
+          "description": "Admire vintage cars traveling the winding roads of the countryside during this prestigious competition.",
+          "date": "January each year",
+          "type": "Sporting event"
         }
       },
       "secrets": {
-        "title": "Secrets to Discover",
+        "title": "Insider Secrets",
         "customsPath": {
-          "title": "Customs Path",
-          "category": "Hiking",
-          "description": "Discover the hidden part of Cap Martin, between Pointe du Cap and Villa E-1027. A wild trail with secret coves perfect for swimming.",
-          "difficulty": "Difficulty: Medium",
-          "duration": "Duration: 2-3 hours",
-          "bestTime": "Best time: Sunrise"
+          "title": "Customs Officers Path",
+          "description": "Preserved coastal walk offering spectacular views of the sea and secret coves of the French Riviera.",
+          "category": "secrets",
+          "difficulty": "Easy to moderate",
+          "duration": "1-3 hours",
+          "bestTime": "Sunrise or sunset"
         },
         "ezeVillage": {
-          "title": "Visit Èze Village",
-          "category": "History",
-          "description": "Wander through the picturesque streets of Èze, a medieval village with panoramic views of the Mediterranean.",
+          "title": "Èze Village",
+          "description": "Perched at 429m altitude, this medieval village offers a 360° view of the French Riviera and houses the famous Exotic Garden.",
+          "category": "secrets",
           "comments": {
-            "medieval": "Medieval village",
-            "view": "Panoramic view of the Mediterranean"
+            "medieval": "Authentic medieval village",
+            "view": "Exceptional panoramic view"
           }
         },
         "littleAfrica": {
-          "title": "Little Africa Valley",
-          "category": "Nature",
-          "description": "A secret Mediterranean jungle hidden in Beaulieu-sur-Mer. Shaded trails and breathtaking sea views, far from tourist paths.",
-          "difficulty": "Difficulty: Easy",
-          "duration": "Duration: 1 hour",
-          "bestTime": "Best time: Morning"
+          "title": "Little Africa in Beaulieu",
+          "description": "Secret botanical garden housing rare exotic species and an intimate beach away from the crowds.",
+          "category": "secrets",
+          "difficulty": "Easy",
+          "duration": "1-2 hours",
+          "bestTime": "Morning"
         },
         "corbusier": {
-          "title": "Le Corbusier's Rock",
-          "category": "Viewpoint",
-          "description": "A privileged meditation spot with sea views, accessible by a discreet path. A quiet place known only to the initiated.",
-          "difficulty": "Difficulty: Easy",
-          "duration": "Duration: 30 minutes",
-          "bestTime": "Best time: Sunset"
+          "title": "Le Corbusier Path",
+          "description": "Architectural route along the sea revealing iconic villas, including Eileen Gray's famous Villa E-1027.",
+          "category": "secrets",
+          "difficulty": "Easy to moderate",
+          "duration": "2-3 hours",
+          "bestTime": "Early morning"
         },
         "garnier": {
-          "title": "Garnier Opera",
-          "category": "Culture",
-          "description": "A masterpiece of Belle Époque architecture, the Garnier Opera is a must-see in Monaco.",
+          "title": "Monte-Carlo Garnier Opera House",
+          "description": "Architectural masterpiece usually closed to the public, but accessible during exclusive guided tours that we can organize.",
+          "category": "secrets",
           "comments": {
-            "opera": "Opera house",
-            "decor": "Belle Époque decor"
+            "opera": "Legendary opera house",
+            "decor": "Sumptuous Belle Époque decor"
           }
         },
         "blueGulf": {
-          "title": "Blue Gulf Beach",
-          "category": "Beach",
-          "description": "A peaceful beach with crystal clear waters, perfect for a relaxing day by the sea.",
-          "bestTime": "Best time: Afternoon"
+          "title": "Blue Gulf",
+          "description": "Secret cove accessible only by a discreet path or by sea, offering crystal clear waters and rare tranquility.",
+          "category": "secrets",
+          "bestTime": "Early day"
         }
+      },
+      "categories": {
+        "culture": "Culture & Events",
+        "sports": "Sports & Leisure",
+        "nature": "Nature & Landscapes",
+        "villages": "Villages",
+        "premium": "Premium Experiences",
+        "secrets": "Insider Secrets"
+      },
+      "filters": {
+        "placesCount": "{count} {count, plural, one {place} other {places}} in this category",
+        "learnMore": "Learn more"
       }
+    },
+    "quote": {
+      "text": "\"To see the world is to be beyond oneself. Art and culture are what make us living beings.\"",
+      "author": "F. Scott Fitzgerald"
+    },
+    "cta": {
+      "title": "Your unique experience on the French Riviera",
+      "description": "Enjoy all these exceptional places from your luxury villa at Les Étoiles du Rocher. Our concierge team is at your disposal to organize your excursions and create unforgettable tailor-made moments.",
+      "bookNow": "Book your stay",
+      "exploreGallery": "Explore our gallery"
     }
   },
   "footer": {
