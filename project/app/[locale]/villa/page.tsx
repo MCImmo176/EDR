@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Compass, Clock, Star, ShieldCheck, MapPin, Users, Key, Volume2, ArrowRight, Car, ChefHat as Chef, Home, ParkingMeter as Parking, School as Pool, Wifi } from "lucide-react";
-import SnakeRectangleAnimation from '../../../src/components/SnakeRectangleAnimation';
+import LuxuryTextReveal from '../../../src/components/LuxuryTextReveal';
 
 // Composant pour un élément d'accordéon
 function AccordionItem({ title, description, isOpen, toggleOpen }: { 
@@ -514,13 +514,71 @@ export default function VillaPage() {
           </div>
         </div>
 
+        {/* Overlay avec dégradé plus sophistiqué */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none z-[5]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent pointer-events-none z-[5]"></div>
         
-        <div className="relative z-10 h-full flex items-center justify-center">
-          <div className="w-full h-full">
-            <SnakeRectangleAnimation 
-              textKey="villaException"
-            />
+        {/* Contenu principal */}
+        <div className="relative z-10 h-full flex items-center">
+          <div className="w-full h-full flex flex-col justify-center items-start">
+            <div className="pl-[15%] md:pl-[10%] w-full max-w-[80%] md:max-w-[60%]">
+              {/* Nouveau composant de texte luxueux */}
+              <div className="mb-16">
+                <LuxuryTextReveal 
+                  textKey="villa"
+                  className="text-white text-6xl md:text-7xl font-light tracking-wide"
+                />
+              </div>
+              
+              {/* Texte secondaire avec animation de fondu */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.5, duration: 0.8 }}
+                className="mt-6 max-w-xl"
+              >
+                <p className="text-white/90 text-lg md:text-xl font-light leading-relaxed tracking-wide">
+                  {tVilla('hero.subtitle')}
+                </p>
+              </motion.div>
+              
+              {/* Bouton stylisé */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 2, duration: 0.8 }}
+                className="mt-12"
+              >
+                <Button
+                  asChild
+                  size="lg"
+                  className="relative bg-transparent text-white border border-[#b7a66b] overflow-hidden group hover:bg-[#b7a66b] transition-all duration-700 text-lg px-12 py-6 rounded-none"
+                >
+                  <Link href="/contact">
+                    <span className="relative z-10 tracking-wider">{tVilla('hero.ctaButton')}</span>
+                    <div className="absolute inset-0 bg-[#b7a66b] z-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+                  </Link>
+                </Button>
+              </motion.div>
+            </div>
           </div>
+          
+          {/* Indicateur de défilement élégant */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2.5, duration: 1 }}
+            className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+          >
+            <span className="text-white/70 text-sm uppercase tracking-[0.2em] mb-2 font-light">{tVilla('hero.scrollText')}</span>
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+              className="w-6 h-10 border border-white/30 rounded-full flex justify-center pt-1"
+            >
+              <motion.div className="w-1 h-1 bg-white/80 rounded-full" />
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
@@ -581,324 +639,823 @@ export default function VillaPage() {
         </div>
       </section>
 
-      {/* Custom Living Spaces Section */}
-      <section className="py-48 bg-gradient-to-b from-white via-neutral-50/30 to-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-[0.02]"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#b7a66b]/5 via-transparent to-[#b7a66b]/5"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#b7a66b]/5 via-transparent to-transparent"></div>
-        <div className="container max-w-[1400px] mx-auto px-4 relative">
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center"
+      {/* Custom Living Spaces Section - Version luxe redessinée */}
+      <section className="py-32 md:py-56 relative">
+        {/* Arrière-plan sophistiqué */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f9f9f9] to-white"></div>
+        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-[0.02] mix-blend-overlay"></div>
+        <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-[#b7a66b]/[0.03] via-[#b7a66b]/[0.01] to-transparent"></div>
+        <div className="absolute left-0 bottom-0 w-1/3 h-1/2 bg-gradient-to-tr from-[#b7a66b]/[0.02] to-transparent"></div>
+        
+        <div className="container mx-auto px-4 relative">
+          {/* Titre élégant */}
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1.2 }}
             viewport={{ once: true }}
+            className="mb-28 max-w-4xl mx-auto text-center"
           >
-            {/* Colonne gauche : texte */}
-            <div className="pl-8 md:pl-12 space-y-12">
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                viewport={{ once: true }}
-                className="relative"
-              >
-                <div className="absolute -left-8 top-0 w-1 h-24 bg-gradient-to-b from-[#b7a66b] via-[#b7a66b]/50 to-transparent"></div>
-                <h2 className="text-6xl font-bold mb-10 font-sans text-black tracking-tight">
-                  {tVilla('livingSpaces.title')}
-                </h2>
-                <div className="space-y-10 text-lg font-sans text-black/80 leading-relaxed">
-                  {[
-                    tVilla('livingSpaces.description1'),
-                    tVilla('livingSpaces.description2'),
-                    tVilla('livingSpaces.description3'),
-                    tVilla('livingSpaces.description4')
-                  ].map((text, index) => (
-                    <motion.p
-                      key={index}
-                      initial={{ opacity: 0, x: -30 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.8, delay: 0.6 + index * 0.15, ease: [0.22, 1, 0.36, 1] }}
-                      viewport={{ once: true }}
-                      className="transform hover:translate-x-6 transition-all duration-700 hover:text-[#b7a66b] relative group"
-                    >
-                      <span className="absolute -left-6 top-1/2 w-2 h-2 bg-[#b7a66b] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-y-1/2"></span>
-                      {text}
-                    </motion.p>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
-            {/* Colonne droite : image avec effet parallaxe */}
-            <motion.div 
-              className="relative"
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            <motion.div
+              initial={{ y: 40, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
               viewport={{ once: true }}
+              className="overflow-hidden inline-block"
             >
-              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl group">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-                <div className="absolute inset-0 border-2 border-white/20 rounded-2xl transform scale-105 group-hover:scale-110 transition-transform duration-1000"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#b7a66b]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-                <Image
-                  src="/images/villa/IMG_5967.JPEG"
-                  alt={tVilla('images.exterior.alt')}
-                  fill
-                  className="object-cover transform group-hover:scale-110 transition-transform duration-1000"
-                  priority
-                />
+              <span className="block text-[#b7a66b] font-light tracking-[0.2em] text-sm uppercase mb-6">Expérience</span>
+            </motion.div>
+            <div className="overflow-hidden">
+              <motion.h2
+                initial={{ y: 80, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-3xl md:text-6xl font-extralight tracking-tighter mb-10"
+              >
+                <span className="block leading-tight">ESPACES DE VIE</span>
+                <span className="block mt-1 leading-tight">EXCEPTIONNELS</span>
+              </motion.h2>
+            </div>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
+              viewport={{ once: true }}
+              className="h-px w-24 bg-[#b7a66b]/50 mx-auto my-10 origin-center"
+            />
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.6 }}
+              viewport={{ once: true }}
+              className="text-neutral-500 font-light max-w-xl mx-auto text-lg md:text-xl leading-relaxed"
+            >
+              Notre villa offre des espaces de vie méticuleusement conçus où chaque détail a été considéré pour créer une expérience de séjour incomparable.
+            </motion.p>
+          </motion.div>
+
+          {/* Première rangée */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12 mb-20">
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+              viewport={{ once: true }}
+              className="lg:col-span-2 relative h-[70vh] rounded-lg overflow-hidden"
+            >
+              <Image
+                src="/images/villa/IMG_2409.JPEG"
+                alt="Espace de vie principal"
+                fill
+                className="object-cover"
+                quality={100}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+              <div className="absolute bottom-8 left-8 z-10">
+                <span className="bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-sm text-sm tracking-wide font-light">
+                  SALON PRINCIPAL
+                </span>
               </div>
             </motion.div>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* Practical Information Section */}
-      <section className="py-48 bg-gradient-to-b from-white via-neutral-50/30 to-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-[0.02]"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#b7a66b]/5 via-transparent to-[#b7a66b]/5"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#b7a66b]/5 via-transparent to-transparent"></div>
-        <div className="container max-w-7xl mx-auto px-4 relative">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-            viewport={{ once: true }}
-            className="text-center mb-32"
-          >
-            <div className="inline-block relative">
-              <h2 className="text-7xl font-display mb-10 tracking-tight relative z-10">
-                {tVilla('practicalInfo.title')}
-              </h2>
-              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-transparent via-[#b7a66b] to-transparent"></div>
-            </div>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mt-12">
-              {tVilla('practicalInfo.subtitle')}
-            </p>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+              viewport={{ once: true }}
+              className="relative h-[70vh] rounded-lg overflow-hidden"
+            >
+              <Image
+                src="/images/villa/IMG_2286.JPEG"
+                alt="Espace salle à manger"
+                fill
+                className="object-cover"
+                quality={100}
+              />
+              <div className="absolute bottom-8 left-8 z-10">
+                <span className="bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-sm text-sm tracking-wide font-light">
+                  SALLE À MANGER
+                </span>
+              </div>
+            </motion.div>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-            {practicalInfo.map((info, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
-                viewport={{ once: true }}
-                className="group"
-              >
-                <div className="bg-white/90 backdrop-blur-sm p-12 rounded-2xl shadow-lg transition-all duration-700 hover:shadow-2xl hover:-translate-y-3 border border-neutral-100/50 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#b7a66b]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#b7a66b]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                  <div className="relative mb-10">
-                    <info.icon className="h-16 w-16 text-[#b7a66b] transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-700" />
-                    <div className="absolute -inset-4 bg-[#b7a66b]/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+          {/* Deuxième rangée */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12 mb-24">
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+              viewport={{ once: true }}
+              className="relative h-[70vh] rounded-lg overflow-hidden"
+            >
+              <Image
+                src="/images/villa/IMG_2359.jpg"
+                alt="Suite parentale"
+                fill
+                className="object-cover"
+                quality={100}
+              />
+              <div className="absolute bottom-8 left-8 z-10">
+                <span className="bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-sm text-sm tracking-wide font-light">
+                  SUITE PARENTALE
+                </span>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+              viewport={{ once: true }}
+              className="lg:col-span-2 relative h-[70vh] rounded-lg overflow-hidden"
+            >
+              <Image
+                src="/images/villa/IMG_2348.JPEG"
+                alt="Piscine et terrasse"
+                fill
+                className="object-cover"
+                quality={100}
+              />
+              <div className="absolute bottom-8 left-8 z-10">
+                <span className="bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-sm text-sm tracking-wide font-light">
+                  PISCINE & TERRASSE
+                </span>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Section caractéristiques - Redesign selon le screenshot */}
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md:grid-cols-3 gap-16 mt-20"
+            >
+              {[
+                {
+                  title: "ESPACES INTIMES",
+                  description: "Chaque espace a été conçu pour préserver votre intimité tout en offrant des ouvertures sur les extérieurs."
+                },
+                {
+                  title: "DESIGN INTEMPOREL",
+                  description: "Les intérieurs allient esthétique contemporaine et matériaux nobles pour un résultat à la fois élégant et chaleureux."
+                },
+                {
+                  title: "CONFORT ABSOLU",
+                  description: "Une attention méticuleuse a été portée à chaque détail pour garantir un confort optimal dans tous les espaces de vie."
+                }
+              ].map((item, index) => (
+                <motion.div 
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 + index * 0.2 }}
+                  viewport={{ once: true }}
+                  className="relative p-6"
+                >
+                  {/* Symbole "L" coin supérieur gauche */}
+                  <div className="absolute top-0 left-0 w-12 h-12">
+                    <div className="absolute top-0 left-0 w-px h-8 bg-[#b7a66b]/60"></div>
+                    <div className="absolute top-0 left-0 w-8 h-px bg-[#b7a66b]/60"></div>
                   </div>
-                  <h3 className="text-2xl font-display mb-6 transform group-hover:translate-x-3 transition-transform duration-700">{info.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{info.description}</p>
-                </div>
-              </motion.div>
-            ))}
+                  
+                  <h3 className="text-2xl font-serif mb-8 pt-6">{item.title}</h3>
+                  <p className="text-neutral-500 font-light leading-relaxed text-base">{item.description}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* Citation - Redesign selon le screenshot */}
+            <motion.div 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.5 }}
+              viewport={{ once: true }}
+              className="mt-40 text-center max-w-4xl mx-auto"
+            >
+              <div className="relative py-16">
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 text-[80px] text-[#b7a66b]/20 font-serif">"</div>
+                <motion.p 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="text-2xl md:text-3xl font-light text-neutral-700 italic max-w-3xl mx-auto leading-relaxed"
+                >
+                  L'art de vivre réside dans ces espaces où chaque regard découvre un détail pensé pour votre bien-être.
+                </motion.p>
+                <motion.div
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.6 }}
+                  viewport={{ once: true }}
+                  className="h-px w-16 bg-[#b7a66b]/50 mx-auto my-8 origin-center"
+                />
+                <motion.p 
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.8 }}
+                  viewport={{ once: true }}
+                  className="text-sm uppercase tracking-widest text-neutral-400"
+                >
+                  LES ÉTOILES DU ROCHER
+                </motion.p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-48 bg-gradient-to-b from-white via-neutral-50/30 to-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-[0.02]"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#b7a66b]/5 via-transparent to-[#b7a66b]/5"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#b7a66b]/5 via-transparent to-transparent"></div>
-        <div className="container relative">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-            viewport={{ once: true }}
-            className="text-center mb-32"
-          >
-            <div className="inline-block relative">
-              <h2 className="text-7xl font-display mb-10 tracking-tight relative z-10">
-                {tVilla('features.title')}
-              </h2>
-              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-transparent via-[#b7a66b] to-transparent"></div>
-            </div>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mt-12">
-              {tVilla('features.subtitle')}
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
+      {/* Practical Information Section - Redesigned for luxury */}
+      <section className="py-32 md:py-56 relative">
+        {/* Arrière-plan sophistiqué */}
+        <div className="absolute inset-0 bg-[#f8f7f5]"></div>
+        <div className="absolute inset-0 opacity-10 mix-blend-overlay" style={{ 
+          backgroundImage: 'url("/images/texture.png")',
+          backgroundSize: '300px',
+          backgroundRepeat: 'repeat'
+        }}></div>
+        
+        <div className="container mx-auto relative">
+          <div className="max-w-screen-xl mx-auto">
+            {/* En-tête de section */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.2 }}
+              viewport={{ once: true }}
+              className="mb-32 text-center"
+            >
+              <motion.span
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                 viewport={{ once: true }}
-                className="group flex justify-center"
+                className="block text-[#b7a66b] font-light tracking-[0.25em] text-xs uppercase mb-8"
               >
-                <div className="bg-white/95 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-lg transition-all duration-700 hover:shadow-2xl hover:-translate-y-3 border border-neutral-100/50 relative overflow-hidden max-w-xl w-full flex flex-col">
-                  <div className="flex items-center mb-4 gap-3">
-                    <feature.icon className="h-8 w-8 text-[#b7a66b] flex-shrink-0" />
-                    <h3 className="text-xl font-display font-semibold tracking-tight text-black">
-                      {feature.title}
-                    </h3>
+                COMMODITÉS
+              </motion.span>
+              
+              <motion.h2
+                initial={{ y: 30, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-3xl md:text-4xl lg:text-5xl font-extralight mb-12 tracking-wide"
+              >
+                L'ART DE RECEVOIR
+              </motion.h2>
+
+              <motion.div
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
+                viewport={{ once: true }}
+                className="h-px w-16 bg-[#b7a66b]/30 mx-auto my-10 origin-center"
+              />
+              
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-neutral-500 font-light max-w-xl mx-auto text-center text-base leading-relaxed"
+              >
+                Nous avons pensé à chaque détail pour que votre séjour soit d'un raffinement absolu, 
+                alliant quiétude et élégance dans les moindres aspects de votre expérience.
+              </motion.p>
+            </motion.div>
+
+            {/* Grille de services */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-[#b7a66b]/10">
+              {[
+                {
+                  icon: MapPin,
+                  title: "EMPLACEMENT PRESTIGIEUX",
+                  description: "À quelques minutes de Monaco, notre villa surplombe la mer dans un écrin de verdure où discrétion et élégance se rencontrent."
+                },
+                {
+                  icon: ShieldCheck,
+                  title: "SÉCURITÉ PRIVATIVE",
+                  description: "Un système de sécurité de pointe avec surveillance 24/7 et accès privatif pour garantir votre tranquillité absolue."
+                },
+                {
+                  icon: Clock,
+                  title: "SERVICE CONCIERGERIE",
+                  description: "Notre équipe dédiée se tient à votre disposition pour répondre à toute demande, à n'importe quelle heure du jour ou de la nuit."
+                },
+                {
+                  icon: MapPin,
+                  title: "ACCÈS PRIVILÉGIÉ",
+                  description: "Bénéficiez d'accès privés aux plus belles plages et établissements de la Côte d'Azur grâce à nos partenariats exclusifs."
+                }
+              ].map((info, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                  viewport={{ once: true }}
+                  className="group"
+                >
+                  <div className="p-10 lg:p-14 xl:p-16 relative overflow-hidden bg-white h-full flex flex-col justify-between">
+                    <div>
+                      <div className="mb-8 inline-flex">
+                        <info.icon className="h-5 w-5 text-[#b7a66b]" />
+                      </div>
+                      
+                      <h3 className="text-sm tracking-widest font-light mb-6 uppercase">{info.title}</h3>
+                      <p className="text-neutral-500 leading-relaxed font-light text-sm">{info.description}</p>
+                    </div>
+                    
+                    <div className="mt-10 pt-6 border-t border-[#b7a66b]/10">
+                      <span className="text-xs uppercase tracking-wide text-[#b7a66b]/70 font-light">Les Étoiles du Rocher</span>
+                    </div>
                   </div>
-                  <ul className="space-y-2">
-                    {feature.items.map((item, i) => (
-                      <li 
-                        key={i} 
-                        className="flex items-start text-muted-foreground text-base"
-                      >
-                        <span className="w-2 h-2 mt-2 bg-[#b7a66b] rounded-full mr-3 flex-shrink-0"></span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Section supplémentaire */}
+            <div className="mt-24 md:mt-32 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                viewport={{ once: true }}
+                className="flex flex-col justify-center"
+              >
+                <span className="block text-[#b7a66b] font-light tracking-[0.25em] text-xs uppercase mb-6">
+                  EXPÉRIENCE
+                </span>
+                
+                <h3 className="text-2xl md:text-3xl font-extralight mb-10 tracking-wide">
+                  SERVICE SUR MESURE
+                </h3>
+                
+                <p className="text-neutral-500 font-light leading-relaxed mb-10">
+                  Notre équipe dédiée anticipe vos besoins et personnalise chaque aspect de votre séjour. 
+                  De l'organisation d'événements privés à la réservation des meilleures tables de la Côte d'Azur, 
+                  nous sommes à votre service pour créer des moments d'exception.
+                </p>
+                
+                <ul className="space-y-4">
+                  {[
+                    "Check-in personnalisé et flexible",
+                    "Service de conciergerie 24/7",
+                    "Chef privé et service d'étage",
+                    "Organisation d'excursions exclusives"
+                  ].map((item, i) => (
+                    <li 
+                      key={i} 
+                      className="flex items-start text-neutral-500 font-light"
+                    >
+                      <span className="w-1 h-1 mt-3 bg-[#b7a66b] rounded-full mr-3 flex-shrink-0"></span>
+                      <span className="text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
-            ))}
+              
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+                viewport={{ once: true }}
+                className="relative aspect-[4/5] bg-neutral-100"
+              >
+                {/* Image avec cadre */}
+                <div className="absolute inset-0 transform translate-x-4 translate-y-4">
+                  <div className="absolute inset-0 bg-white shadow-sm">
+                    <Image
+                      src="/images/villa/IMG_2286.JPEG"
+                      alt="Service personnalisé"
+                      fill
+                      className="object-cover"
+                      quality={100}
+                    />
+                  </div>
+                </div>
+                
+                {/* Cadre décoratif */}
+                <div className="absolute inset-0 border border-[#b7a66b]/20"></div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Additional Services Section */}
-      <section className="py-48 bg-gradient-to-b from-white via-neutral-50/30 to-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-[0.02]"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#b7a66b]/5 via-transparent to-[#b7a66b]/5"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#b7a66b]/5 via-transparent to-transparent"></div>
-        <div className="container relative">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-            viewport={{ once: true }}
-            className="text-center mb-32"
-          >
-            <div className="inline-block relative">
-              <h2 className="text-7xl font-display mb-10 tracking-tight relative z-10">
-                {tVilla('additionalServices.title')}
-              </h2>
-              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-transparent via-[#b7a66b] to-transparent"></div>
-            </div>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mt-12">
-              {tVilla('additionalServices.subtitle')}
-            </p>
-          </motion.div>
+      {/* Features Section - Completement repensé pour un luxe absolu */}
+      <section className="py-32 md:py-56 relative">
+        {/* Fond minimaliste avec texture subtile */}
+        <div className="absolute inset-0 bg-white"></div>
+        <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay" style={{ 
+          backgroundImage: 'url("/images/texture.png")',
+          backgroundSize: '200px',
+          backgroundRepeat: 'repeat'
+        }}></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {additionalServices.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
-                viewport={{ once: true }}
-                className="group"
-              >
-                <div className="bg-white/90 backdrop-blur-sm p-14 rounded-2xl shadow-lg transition-all duration-700 hover:shadow-2xl hover:-translate-y-3 border border-neutral-100/50 text-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#b7a66b]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#b7a66b]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                  <div className="relative mb-12 inline-block">
-                    <service.icon className="h-20 w-20 text-[#b7a66b] transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-700" />
-                    <div className="absolute -inset-4 bg-[#b7a66b]/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                  </div>
-                  <h3 className="text-2xl font-display mb-8 transform group-hover:translate-y-3 transition-transform duration-700">{service.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
-                </div>
-              </motion.div>
-            ))}
+        <div className="container mx-auto px-8 relative max-w-[1600px]">
+          {/* Introduction élégante */}
+          <div className="max-w-screen-md mx-auto text-center mb-24">
+            <motion.span
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="inline-block text-[#b7a66b] font-light tracking-[0.25em] text-xs uppercase mb-4"
+            >
+              Exclusivité
+            </motion.span>
+            
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-4xl font-extralight mb-5 tracking-wide"
+            >
+              PERFECTION DES DÉTAILS
+            </motion.h2>
+            
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+              viewport={{ once: true }}
+              className="h-[1px] w-12 bg-[#b7a66b]/30 mx-auto my-6"
+            />
+            
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-neutral-500 font-light text-sm leading-relaxed"
+            >
+              Une propriété d'exception pensée pour offrir une expérience incomparable
+            </motion.p>
           </div>
 
+          {/* Grille de caractéristiques principale - Design premium */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
+            transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="text-center mt-32"
+            className="grid grid-cols-1 md:grid-cols-4 gap-0.5 bg-[#b7a66b]/5 mb-32"
           >
+            {[
+              {
+                title: "Emplacement",
+                items: [
+                  "10 minutes du centre de Monaco",
+                  "30 minutes de l'aéroport de Nice",
+                  "45 minutes de Cannes",
+                  "15 minutes de l'Italie"
+                ]
+              },
+              {
+                title: "Espaces de vie",
+                items: [
+                  "Salon avec vue panoramique",
+                  "Salle à manger ouverte",
+                  "Bar et espace lounge",
+                  "Cuisine équipée Gaggenau"
+                ]
+              },
+              {
+                title: "Chambres",
+                items: [
+                  "5 suites avec salles de bain",
+                  "Terrasses privatives",
+                  "Literie haut de gamme italienne",
+                  "Dressings sur mesure"
+                ]
+              },
+              {
+                title: "Prestations",
+                items: [
+                  "Piscine à débordement chauffée",
+                  "Système domotique intégral",
+                  "Climatisation réversible",
+                  "Cave à vin climatisée"
+                ]
+              }
+            ].map((category, index) => (
+              <div 
+                key={index}
+                className={`bg-white px-10 py-14 group`}
+              >
+                <div className="relative mb-10 pb-8 border-b border-[#b7a66b]/10">
+                  <h3 className="text-base uppercase tracking-widest font-light">{category.title}</h3>
+                  <div className="absolute bottom-[-1px] left-0 w-8 h-[1px] bg-[#b7a66b] group-hover:w-16 transition-all duration-700"></div>
+                </div>
+                
+                <ul className="space-y-5">
+                  {category.items.map((item, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <span className="block w-0.5 h-0.5 mt-2.5 bg-[#b7a66b] mr-3"></span>
+                      <span className="text-neutral-600 font-light text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </motion.div>
+
+          {/* Mise en avant sur fond contrasté */}
+          <div className="relative py-32 mb-32">
+            {/* Fond contrasté */}
+            <div className="absolute inset-0 bg-[#f9f7f4]"></div>
+            
+            <div className="relative grid grid-cols-1 md:grid-cols-3 gap-20 md:gap-10 lg:gap-20 max-w-screen-xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="md:col-span-2 flex flex-col justify-center"
+              >
+                <span className="text-[#b7a66b] font-light tracking-[0.25em] text-xs uppercase mb-5">
+                  Un lieu d'exception
+                </span>
+                
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-extralight tracking-wide leading-snug mb-10">
+                  Séjourner dans une villa où chaque détail<br className="hidden md:block" /> a été pensé pour l'excellence
+                </h2>
+                
+                <p className="text-neutral-500 font-light mb-12 leading-relaxed text-base max-w-2xl">
+                  Fraîchement achevée, Les Étoiles du Rocher vous offre un cadre idyllique entre mer et montagne. 
+                  Notre villa allie architecture contemporaine et matériaux nobles pour créer une atmosphère 
+                  où luxe discret et confort absolu se rencontrent.
+                </p>
+                
+                <div className="flex flex-wrap gap-x-12 gap-y-6">
+                  <div className="flex items-center">
+                    <div className="w-8 h-8 rounded-full flex items-center justify-center bg-[#b7a66b]/10 mr-4">
+                      <Users className="w-4 h-4 text-[#b7a66b]" />
+                    </div>
+                    <span className="text-neutral-700 text-sm">Jusqu'à 10 personnes</span>
+                  </div>
+                  
+                  <div className="flex items-center">
+                    <div className="w-8 h-8 rounded-full flex items-center justify-center bg-[#b7a66b]/10 mr-4">
+                      <Pool className="w-4 h-4 text-[#b7a66b]" />
+                    </div>
+                    <span className="text-neutral-700 text-sm">Piscine à débordement</span>
+                  </div>
+                  
+                  <div className="flex items-center">
+                    <div className="w-8 h-8 rounded-full flex items-center justify-center bg-[#b7a66b]/10 mr-4">
+                      <Parking className="w-4 h-4 text-[#b7a66b]" />
+                    </div>
+                    <span className="text-neutral-700 text-sm">Parking privé (8 places)</span>
+                  </div>
+                </div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="aspect-[3/4] relative"
+              >
+                <div className="absolute inset-0 border border-[#b7a66b]/20 transform translate-x-5 translate-y-5"></div>
+                <div className="absolute inset-0 bg-white">
+                  <Image
+                    src="/images/villa/IMG_5967.JPEG"
+                    alt="Vue extérieure de la villa"
+                    fill
+                    className="object-cover"
+                    quality={100}
+                  />
+                </div>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Services personnalisés */}
+          <div className="mb-32 max-w-screen-xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0.5 bg-[#b7a66b]/5">
+              {[
+                {
+                  icon: Chef,
+                  title: "CHEF PRIVÉ",
+                  description: "Dégustez des créations gastronomiques personnalisées dans l'intimité de votre villa. Notre chef étoilé compose des menus sur mesure selon vos préférences."
+                },
+                {
+                  icon: Car,
+                  title: "CONCIERGERIE LUXE",
+                  description: "Du service voiturier à la réservation des meilleures tables, notre équipe de conciergerie se charge de tous les détails pour un séjour sans le moindre souci."
+                },
+                {
+                  icon: Home,
+                  title: "SERVICE HÔTELIER",
+                  description: "Profitez d'un service de ménage quotidien, d'un changement de linge à la demande et d'une préparation sur mesure de votre villa avant votre arrivée."
+                }
+              ].map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.15 }}
+                  viewport={{ once: true }}
+                  className="relative bg-white px-10 py-16 group flex flex-col"
+                >
+                  <div className="mb-12 inline-flex">
+                    <service.icon className="h-5 w-5 text-[#b7a66b]" />
+                  </div>
+                  
+                  <h3 className="text-sm tracking-widest font-light mb-5">{service.title}</h3>
+                  <p className="text-neutral-500 leading-relaxed font-light text-sm flex-grow">{service.description}</p>
+                  
+                  <div className="mt-10 pt-6 border-t border-[#b7a66b]/10 flex justify-between items-center">
+                    <span className="text-xs text-[#b7a66b]/70 font-light">Service sur demande</span>
+                    <ArrowRight className="w-4 h-4 text-[#b7a66b]/40 group-hover:text-[#b7a66b] transition-colors duration-500" />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Appel à l'action final */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="text-center max-w-screen-md mx-auto"
+          >
+            <motion.h3
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-2xl md:text-3xl font-extralight tracking-wider mb-10"
+            >
+              UNE VILLA NICHÉE ENTRE CIEL ET MER
+            </motion.h3>
+            
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-neutral-500 font-light mb-16 leading-relaxed max-w-xl mx-auto"
+            >
+              Offrez-vous une parenthèse d'exception dans ce havre de paix entre Monaco et Menton, où mer azuréenne et montagnes se rencontrent pour créer un cadre unique.
+            </motion.p>
+            
             <Button
               asChild
               size="lg"
-              className="relative bg-[#b7a66b] text-white border-2 border-[#b7a66b] overflow-hidden group hover:bg-white hover:text-[#b7a66b] transition-all duration-1000 text-lg px-20 py-10 rounded-none"
+              className="relative bg-transparent text-black border border-[#b7a66b] overflow-hidden group hover:bg-[#b7a66b] hover:text-white transition-all duration-700 text-xs font-light tracking-widest px-12 py-5 uppercase"
             >
               <Link href="/contact">
-                <span className="relative z-10 transform group-hover:translate-x-4 transition-transform duration-700">
-                  {tVilla('bookNow')}
+                <span className="relative z-10 group-hover:translate-x-2 transition-transform duration-700">
+                  Réserver votre séjour
                 </span>
-                <div className="absolute inset-0 bg-white z-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-1000 origin-left" />
+                <div className="absolute inset-0 bg-[#b7a66b] z-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
               </Link>
             </Button>
           </motion.div>
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-48 bg-gradient-to-b from-white via-neutral-50/30 to-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-[0.02]"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#b7a66b]/5 via-transparent to-[#b7a66b]/5"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#b7a66b]/5 via-transparent to-transparent"></div>
-        <div className="container relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+      {/* Additional Services Section - Redesigned for luxury */}
+      <section className="py-32 md:py-48 relative">
+        <div className="absolute inset-0 bg-[#f8f7f5]"></div>
+        <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay" style={{ 
+          backgroundImage: 'url("/images/texture.png")',
+          backgroundSize: '200px',
+          backgroundRepeat: 'repeat'
+        }}></div>
+        
+        <div className="container mx-auto px-8 relative max-w-[1600px]">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            viewport={{ once: true }}
+            className="mb-28 overflow-hidden"
+          >
+            <div className="flex flex-col items-center">
+              <motion.span
+                initial={{ y: 40, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                viewport={{ once: true }}
+                className="block font-light tracking-[0.25em] text-xs uppercase mb-4 text-[#b7a66b]"
+              >
+                Art de vivre
+              </motion.span>
+              
+              <motion.h2
+                initial={{ y: 60, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-3xl md:text-4xl font-extralight text-center max-w-4xl leading-tight mb-6 tracking-wide"
+              >
+                POURQUOI CHOISIR LES ÉTOILES DU ROCHER
+              </motion.h2>
+              
+              <motion.div
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+                viewport={{ once: true }}
+                className="h-[1px] w-12 bg-[#b7a66b]/30 mx-auto my-8"
+              />
+            </div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center max-w-screen-xl mx-auto">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
               viewport={{ once: true }}
-              className="relative h-[800px] rounded-2xl overflow-hidden shadow-2xl group"
+              className="relative h-[650px]"
             >
-              <Image
-                src="/images/villa/IMG_2348.JPEG"
-                alt={tVilla('images.pool.alt')}
-                fill
-                className="object-cover transform group-hover:scale-110 transition-transform duration-1000"
-              />
+              <div className="absolute inset-0 overflow-hidden">
+                <Image
+                  src="/images/villa/IMG_2348.JPEG"
+                  alt={tVilla('images.pool.alt')}
+                  fill
+                  className="object-cover"
+                  quality={100}
+                />
+              </div>
+              
+              {/* Overlay et cadre élégant */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-              <div className="absolute inset-0 border-2 border-white/20 rounded-2xl transform scale-105 group-hover:scale-110 transition-transform duration-1000"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#b7a66b]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+              <div className="absolute inset-12 border border-white/20 pointer-events-none"></div>
             </motion.div>
+            
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
               viewport={{ once: true }}
-              className="space-y-16"
+              className="space-y-10"
             >
               <div>
-                <h2 className="text-7xl font-display tracking-tight mb-10">{tVilla('whyChooseUs.title')}</h2>
-                <div className="w-40 h-1 bg-gradient-to-r from-transparent via-[#b7a66b] to-transparent mb-10"></div>
-                <p className="text-xl text-muted-foreground leading-relaxed">
-                  {tVilla('whyChooseUs.description')}
+                <p className="text-neutral-500 font-light leading-relaxed text-base">
+                  C'est une véritable perle rare, neuve et prête à sublimer votre séjour. En choisissant Les Étoiles du Rocher, vous optez pour bien plus qu'un simple hébergement : une expérience complète où chaque détail a été pensé pour votre satisfaction absolue.
                 </p>
               </div>
-              <div className="grid grid-cols-2 gap-10">
+              
+              <div className="space-y-8">
                 {[
-                  { icon: Pool, text: tVilla('whyChooseUs.features.pool') },
-                  { icon: Parking, text: tVilla('whyChooseUs.features.parking') },
-                  { icon: Wifi, text: tVilla('whyChooseUs.features.wifi') },
-                  { icon: Users, text: tVilla('whyChooseUs.features.capacity') }
-                ].map((feature, index) => (
+                  {
+                    title: "UN LIEU PRIVILÉGIÉ",
+                    description: "Un environnement exceptionnel entre mer et montagne, offrant une vue imprenable sur la Méditerranée et un accès rapide aux joyaux de la Côte d'Azur."
+                  },
+                  {
+                    title: "DES PRESTATIONS HAUT DE GAMME",
+                    description: "Des matériaux et équipements sélectionnés avec le plus grand soin, des technologies dernier cri et des espaces de vie pensés pour le confort absolu."
+                  },
+                  {
+                    title: "INTIMITÉ ET SÉRÉNITÉ",
+                    description: "Une propriété totalement privative nichée dans un écrin de verdure méditerranéenne, vous garantissant tranquillité et discrétion."
+                  }
+                ].map((point, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 15 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.15 }}
+                    transition={{ duration: 0.6, delay: index * 0.15 }}
                     viewport={{ once: true }}
-                    className="group"
+                    className="pb-6 border-b border-[#b7a66b]/10"
                   >
-                    <div className="flex items-center space-x-6 p-6 rounded-xl transition-all duration-700 hover:bg-white/90 hover:shadow-lg">
-                      <div className="relative">
-                        <feature.icon className="h-12 w-12 text-[#b7a66b] transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-700" />
-                        <div className="absolute -inset-3 bg-[#b7a66b]/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                      </div>
-                      <span className="text-xl transform group-hover:translate-x-4 transition-transform duration-700 group-hover:text-[#b7a66b]">
-                        {feature.text}
-                      </span>
-                    </div>
+                    <h3 className="text-sm tracking-widest font-light mb-2">{point.title}</h3>
+                    <p className="text-neutral-500 font-light text-sm leading-relaxed">{point.description}</p>
                   </motion.div>
                 ))}
               </div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="pt-6"
+              >
+                <Link 
+                  href="/contact" 
+                  className="text-xs uppercase tracking-widest font-light text-[#b7a66b] hover:text-black transition-colors duration-300 flex items-center"
+                >
+                  <span>Réserver maintenant</span>
+                  <ArrowRight className="w-4 h-4 ml-3" />
+                </Link>
+              </motion.div>
             </motion.div>
           </div>
         </div>

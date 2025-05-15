@@ -273,6 +273,11 @@
         "description": "Une cuisine entièrement équipée avec îlot central et électroménagers haut de gamme.",
         "alt": "Cuisine gastronomique"
       }
+    },
+    "hero": {
+      "subtitle": "Profitez des hauteurs de la Côte d'Azur, un havre de paix avec vue imprenable sur la Méditerranée.",
+      "ctaButton": "Réserver maintenant",
+      "scrollText": "Découvrir plus"
     }
   },
   "gallery": {
@@ -372,50 +377,49 @@
         "customsPath": {
           "title": "Sentier des douaniers",
           "category": "Randonnée",
-          "description": "Découvrez la partie cachée du Cap Martin, entre la Pointe du Cap et la Villa E-1027. Un sentier sauvage avec des criques secrètes idéales pour la baignade.",
-          "difficulty": "Difficulté : Moyenne",
-          "duration": "Durée : 2-3 heures",
-          "bestTime": "Meilleur moment : Lever du soleil"
+          "description": "Magnifique sentier côtier longeant le Cap Martin avec des vues imprenables sur la mer. Découvrez des criques secrètes idéales pour la baignade loin de la foule.",
+          "difficulty": "🥾 Difficulté : Moyenne",
+          "duration": "⏱️ Durée : 2-3 heures",
+          "bestTime": "🌅 Meilleur moment : Lever du soleil"
         },
         "ezeVillage": {
           "title": "Visitez le village d'Èze",
           "category": "Histoire",
-          "description": "Parcourez les ruelles pittoresques d'Èze, un village médiéval avec vue panoramique sur la Méditerranée.",
-          "comments": {
-            "medieval": "Village médiéval",
-            "view": "Vue panoramique sur la Méditerranée"
-          }
+          "description": "Village médiéval perché à flanc de falaise avec une vue époustouflante sur toute la côte. Ruelles pittoresques bordées de boutiques d'artisans et d'ateliers d'art.",
+          "difficulty": "🥾 Difficulté : Moyenne (montée)",
+          "duration": "⏱️ Durée : 2 heures",
+          "bestTime": "🌅 Meilleur moment : Matin"
         },
         "littleAfrica": {
           "title": "Vallée de la Petite Afrique",
           "category": "Nature",
-          "description": "Une jungle méditerranéenne secrète cachée à Beaulieu-sur-Mer. Des sentiers ombragés et une vue imprenable sur la mer, loin des sentiers touristiques.",
-          "difficulty": "Difficulté : Facile",
-          "duration": "Durée : 1 heure",
-          "bestTime": "Meilleur moment : Matin"
+          "description": "Jardin exotique naturel caché à Beaulieu-sur-Mer avec microchmat subtropical. Sentiers ombragés entre palmiers et plantes exotiques loin des circuits touristiques.",
+          "difficulty": "🥾 Difficulté : Facile",
+          "duration": "⏱️ Durée : 1 heure",
+          "bestTime": "🌿 Meilleur moment : Matin"
         },
         "corbusier": {
           "title": "Rocher de Le Corbusier",
           "category": "Point de vue",
-          "description": "Un lieu privilégié de méditation avec vue sur la mer, accessible par un sentier discret. Un point calme connu uniquement des initiés.",
-          "difficulty": "Difficulté : Facile",
-          "duration": "Durée : 30 minutes",
-          "bestTime": "Meilleur moment : Coucher de soleil"
+          "description": "Promontoire paisible offrant une vue imprenable sur la Méditerranée et le Cap Martin. Lieu de méditation favori de l'architecte Le Corbusier.",
+          "difficulty": "🥾 Difficulté : Facile",
+          "duration": "⏱️ Durée : 30 minutes",
+          "bestTime": "🌇 Meilleur moment : Coucher de soleil"
         },
         "garnier": {
           "title": "Salle Garnier",
           "category": "Culture",
-          "description": "L'opéra de Monaco, un joyau architectural caché dans le Casino. Une salle intimiste aux ornements dorés élaborés, souvent méconnue des visiteurs.",
-          "comments": {
-            "opera": "Opéra Belle Époque",
-            "decor": "Décoration élaborée"
-          }
+          "description": "Opéra intimiste au cœur du Casino de Monte-Carlo, chef-d'œuvre de l'architecture Belle Époque. Décors et ornements dorés rivalisant avec l'Opéra Garnier de Paris.",
+          "price": "💰 Tarif : Visite guidée 17€",
+          "duration": "⏱️ Durée : 1 heure",
+          "bestTime": "🎭 Meilleur moment : Soirée de représentation"
         },
         "blueGulf": {
           "title": "Plage du Golfe Bleu",
           "category": "Plage",
-          "description": "Une plage préservée entre Monaco et Cap-Martin, idéale pour éviter la foule. Le point parfait pour les couchers de soleil.",
-          "bestTime": "Meilleur moment : Coucher de soleil"
+          "description": "Petite crique préservée entre Monaco et Cap-Martin aux eaux cristallines. Idéale pour échapper à la foule et profiter d'un cadre naturel exceptionnel.",
+          "difficulty": "🥾 Difficulté : Facile",
+          "bestTime": "🌊 Meilleur moment : Matinée ou coucher de soleil"
         }
       }
     }
@@ -447,7 +451,35 @@
       "line1": "Profitez de notre emplacement"
     },
     "villaException": {
-      "line1": "Une expérience unique"
+      "line1": "Une expérience exceptionnelle entre mer et ciel"
+    }
+  },
+  "luxuryText": {
+    "villa": {
+      "line1": "L'expérience ciel et mer"
+    },
+    "contact": {
+      "line1": "Votre séjour d'exception vous attend"
+    },
+    "gallery": {
+      "line1": "Découvrez notre villa d'exception"
+    },
+    "discover": {
+      "line1": "Un emplacement privilégié sur la Côte d'Azur"
+    }
+  },
+  "galleryOverlay": {
+    "gallery": {
+      "title": "Notre Galerie",
+      "subtitle": "Découvrez l'élégance et le luxe des Étoiles du Rocher"
+    }
+  },
+  "discoverOverlay": {
+    "discover": {
+      "title": "Explorez la Côte d'Azur",
+      "subtitle": "Découvrez les trésors cachés et les lieux d'exception depuis votre villa de luxe",
+      "tagline": "Monaco & Cap Martin",
+      "exploreButton": "Découvrir les secrets"
     }
   }
 } 

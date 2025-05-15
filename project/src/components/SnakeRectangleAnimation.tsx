@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
 
 interface SnakeRectangleAnimationProps {
   backgroundColor?: string;
@@ -10,6 +11,7 @@ interface SnakeRectangleAnimationProps {
   fontWeight?: string;
   letterSpacing?: string;
   lineHeight?: string;
+  highlightWords?: boolean;
 }
 
 const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({ 
@@ -20,7 +22,8 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
   fontSize = '3rem',
   fontWeight = 'bold',
   letterSpacing = '1px',
-  lineHeight = '1.2'
+  lineHeight = '1.2',
+  highlightWords = true
 }) => {
   const t = useTranslations('snakeRectangle');
   const [isAnimating, setIsAnimating] = useState(false);
@@ -182,18 +185,27 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
     };
   }, [finalTextLine1]);
 
-  // Style pour l'effet accordéon
+  // Style pour l'effet accordéon avec légère amélioration de l'animation
   const getLetterStyle = (index: number, visibleIndex: number) => ({
     opacity: index <= visibleIndex ? 1 : 0,
     transform: index <= visibleIndex 
-      ? 'translateX(0) scale(1)' 
-      : `translateX(-50px) scale(0.8)`,
+      ? 'translateY(0) scale(1)' 
+      : `translateY(20px) scale(0.9)`,
     display: 'inline-block',
-    transition: `opacity 0.2s cubic-bezier(0.2,0.8,0.4,1) ${index * 0.05}s, 
-                transform 0.3s cubic-bezier(0.2,0.8,0.4,1) ${index * 0.05}s`,
-    transformOrigin: 'right center',
-    willChange: 'transform, opacity'
+    transition: `opacity 0.3s cubic-bezier(0.4,0,0.2,1) ${index * 0.03}s, 
+                transform 0.4s cubic-bezier(0.2,0.8,0.2,1) ${index * 0.03}s`,
+    transformOrigin: 'center bottom',
+    willChange: 'transform, opacity',
+    textShadow: '0 2px 10px rgba(0,0,0,0.15)'
   });
+
+  // Fonction pour déterminer si un mot doit être mis en évidence
+  const shouldHighlightWord = (word: string): boolean => {
+    if (!highlightWords) return false;
+    // Liste des mots clés à mettre en évidence
+    const highlightKeywords = ['unique', 'exception', 'exceptionnel', 'exceptionnelle', 'unique', 'inoubliable'];
+    return highlightKeywords.some(keyword => word.toLowerCase().includes(keyword.toLowerCase()));
+  };
 
   // Fonction pour grouper les caractères par mots
   const groupCharactersByWord = (text: string) => {
@@ -209,7 +221,8 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
         word,
         characters,
         startIndex: currentIndex - word.length - 1,
-        endIndex: currentIndex - 1
+        endIndex: currentIndex - 1,
+        highlight: shouldHighlightWord(word)
       };
     });
   };
@@ -256,7 +269,8 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
                 left: 0,
                 height: '5px',
                 width: 0,
-                backgroundColor: '#b7a66b'
+                backgroundColor: backgroundColor,
+                boxShadow: '0 0 10px rgba(183, 166, 107, 0.5)'
               }}
             />
             <div 
@@ -267,7 +281,8 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
                 right: 0,
                 width: '5px',
                 height: 0,
-                backgroundColor: '#b7a66b'
+                backgroundColor: backgroundColor,
+                boxShadow: '0 0 10px rgba(183, 166, 107, 0.5)'
               }}
             />
             <div 
@@ -278,7 +293,8 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
                 right: 0,
                 height: '5px',
                 width: 0,
-                backgroundColor: '#b7a66b'
+                backgroundColor: backgroundColor,
+                boxShadow: '0 0 10px rgba(183, 166, 107, 0.5)'
               }}
             />
             <div 
@@ -289,7 +305,8 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
                 left: 0,
                 width: '5px',
                 height: 0,
-                backgroundColor: '#b7a66b'
+                backgroundColor: backgroundColor,
+                boxShadow: '0 0 10px rgba(183, 166, 107, 0.5)'
               }}
             />
           </div>
@@ -312,14 +329,14 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
               minWidth: 0,
             }}
           >
-            <div 
+            <motion.div 
               style={{
-                fontSize: '80px',
-                fontWeight: 700,
+                fontSize,
+                fontWeight,
                 color: 'white',
                 textTransform: 'none',
-                letterSpacing: '1px',
-                lineHeight: 1.05,
+                letterSpacing,
+                lineHeight,
                 whiteSpace: 'normal',
                 margin: '0',
                 overflow: 'visible',
@@ -332,26 +349,54 @@ const SnakeRectangleAnimation: React.FC<SnakeRectangleAnimationProps> = ({
                 minWidth: 0,
                 perspective: '1000px'
               }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
             >
               {words.map((word, wordIndex) => (
                 <span
                   key={wordIndex}
                   style={{
                     display: 'inline-block',
-                    marginRight: '0.2em'
+                    marginRight: '0.2em',
+                    position: 'relative'
                   }}
                 >
                   {word.characters.map(({ char, index }) => (
                     <span
                       key={index}
-                      style={getLetterStyle(index, visibleIndexes1)}
+                      style={{
+                        ...getLetterStyle(index, visibleIndexes1),
+                        color: word.highlight ? backgroundColor : 'white',
+                        fontWeight: word.highlight ? '700' : fontWeight
+                      }}
                     >
                       {char === ' ' ? '\u00A0' : char}
                     </span>
                   ))}
+                  {word.highlight && (
+                    <motion.span
+                      style={{
+                        position: 'absolute',
+                        bottom: '-3px',
+                        left: '0',
+                        width: '100%',
+                        height: '3px',
+                        backgroundColor: backgroundColor,
+                        borderRadius: '2px',
+                        opacity: 0
+                      }}
+                      animate={{ opacity: [0, 1, 1] }}
+                      transition={{ 
+                        duration: 1.5, 
+                        delay: (words.length * 0.05) + 0.5,
+                        times: [0, 0.8, 1]
+                      }}
+                    />
+                  )}
                 </span>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
