@@ -371,64 +371,85 @@ export default function DecouvrirPage() {
       <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-100 opacity-90"></div>
       <div className="absolute inset-0 bg-[url('/images/texture-dots.png')] opacity-5 pointer-events-none"></div>
       
-      <FullscreenVideo 
-        videoUrl="https://www.youtube.com/embed/KC_DhNv3iM4?autoplay=1&mute=1&loop=1&playlist=KC_DhNv3iM4&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
-        title="Vidéo découvrir villa"
-        overlay={true}
-      />
-      
-      <div className="relative z-10 h-full flex items-center">
-        <div className="w-full h-full flex flex-col justify-center items-start">
-          <div className="pl-[15%] md:pl-[10%] w-full max-w-[80%] md:max-w-[60%]">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-display mb-8 text-white">
-                {t('title')}
-              </h1>
-              <p className="text-white/90 text-xl md:text-2xl font-light leading-relaxed tracking-wide mt-6 max-w-xl">
-                {t('subtitle')}
-              </p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1, duration: 0.8 }}
-              className="mt-12"
-            >
-              <Button
-                asChild
-                size="lg"
-                className="relative bg-transparent text-white border border-[#b7a66b] overflow-hidden group hover:bg-[#b7a66b] transition-all duration-700 text-lg px-12 py-6 rounded-none"
-              >
-                <Link href="/contact">
-                  <span className="relative z-10 tracking-wider">Réserver votre séjour</span>
-                  <div className="absolute inset-0 bg-[#b7a66b] z-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
-                </Link>
-              </Button>
-            </motion.div>
+      <section className="relative h-screen w-full overflow-hidden p-0 m-0">
+        <div className="absolute inset-0 w-full h-full">
+          <div className="relative h-full w-full" style={{ paddingBottom: '56.25%' }}>
+            <iframe
+              src="https://www.youtube.com/embed/KC_DhNv3iM4?autoplay=1&mute=1&loop=1&playlist=KC_DhNv3iM4&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
+              title="Vidéo découvrir"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              style={{
+                transform: 'scale(1.2)',
+                transformOrigin: 'center center'
+              }}
+            />
           </div>
         </div>
+
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none z-[5]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent pointer-events-none z-[5]"></div>
         
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
-        >
-          <span className="text-white/70 text-sm uppercase tracking-[0.2em] mb-2 font-light">Découvrir plus</span>
+        <div className="relative z-10 h-full flex items-center">
+          <div className="w-full h-full flex flex-col justify-center items-start">
+            <div className="pl-[15%] md:pl-[10%] w-full max-w-[80%] md:max-w-[60%]">
+              <div className="mb-16">
+                <h1 className="text-white text-6xl md:text-7xl font-light tracking-wide">
+                  L'expérience<br />
+                  ciel et mer
+                </h1>
+              </div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.5, duration: 0.8 }}
+                className="mt-6 max-w-xl"
+              >
+                <p className="text-white/90 text-lg md:text-xl font-light leading-relaxed tracking-wide">
+                  Profitez des hauteurs de la Côte d'Azur, un havre de paix avec vue imprenable sur la Méditerranée.
+                </p>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 2, duration: 0.8 }}
+                className="mt-12"
+              >
+                <Button
+                  asChild
+                  size="lg"
+                  className="relative bg-transparent text-white border border-[#b7a66b] overflow-hidden group hover:bg-[#b7a66b] transition-all duration-700 text-lg px-12 py-6 rounded-none"
+                >
+                  <Link href="/contact">
+                    <span className="relative z-10 tracking-wider">Réserver maintenant</span>
+                    <div className="absolute inset-0 bg-[#b7a66b] z-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+                  </Link>
+                </Button>
+              </motion.div>
+            </div>
+          </div>
+          
           <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-            className="w-6 h-10 border border-white/30 rounded-full flex justify-center pt-1"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2.5, duration: 1 }}
+            className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
           >
-            <motion.div className="w-1 h-1 bg-white/80 rounded-full" />
+            <span className="text-white/70 text-sm uppercase tracking-[0.2em] mb-2 font-light">Découvrir plus</span>
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+              className="w-6 h-10 border border-white/30 rounded-full flex justify-center pt-1"
+            >
+              <motion.div className="w-1 h-1 bg-white/80 rounded-full" />
+            </motion.div>
           </motion.div>
-        </motion.div>
-      </div>
+        </div>
+      </section>
 
       <section className="py-16 sm:py-20 md:py-24 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-[#b7a66b]/5 to-transparent opacity-30 pointer-events-none"></div>
@@ -455,18 +476,18 @@ export default function DecouvrirPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-16"
           >
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4">
+            <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-5xl mx-auto">
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => setActiveCategory(null)}
-                className={`p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center h-24 md:h-32 ${
+                className={`p-4 rounded-lg transition-all duration-300 flex flex-col items-center justify-center w-[140px] h-24 ${
                   activeCategory === null
                     ? "bg-[#b7a66b] text-white shadow-lg shadow-[#b7a66b]/30"
                     : "bg-white text-gray-700 hover:bg-[#b7a66b]/80 hover:text-white border border-gray-200 shadow-sm"
                 }`}
               >
-                <Star className={`h-8 w-8 mb-3 ${activeCategory === null ? "text-white" : "text-[#b7a66b]"}`} />
+                <Star className={`h-6 w-6 mb-3 ${activeCategory === null ? "text-white" : "text-[#b7a66b]"}`} />
                 <span className="text-sm font-medium">Tous les lieux</span>
               </motion.button>
               
@@ -476,13 +497,13 @@ export default function DecouvrirPage() {
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                   onClick={() => setActiveCategory(category.code)}
-                  className={`p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center h-24 md:h-32 text-center ${
+                  className={`p-4 rounded-lg transition-all duration-300 flex flex-col items-center justify-center w-[140px] h-24 ${
                     activeCategory === category.code
                       ? "bg-[#b7a66b] text-white shadow-lg shadow-[#b7a66b]/30"
                       : "bg-white text-gray-700 hover:bg-[#b7a66b]/80 hover:text-white border border-gray-200 shadow-sm"
                   }`}
                 >
-                  <category.icon className={`h-8 w-8 mb-3 ${activeCategory === category.code ? "text-white" : "text-[#b7a66b]"}`} />
+                  <category.icon className={`h-6 w-6 mb-3 ${activeCategory === category.code ? "text-white" : "text-[#b7a66b]"}`} />
                   <span className="text-sm font-medium">{category.title.split(' ').slice(1).join(' ')}</span>
                 </motion.button>
               ))}
@@ -517,12 +538,13 @@ export default function DecouvrirPage() {
                     src={article.image}
                     alt={article.title}
                     fill
+                    priority={index < 6}
                     className="object-cover transition-transform duration-700 group-hover:scale-110 rounded-t-xl"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                   
                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 px-3 sm:px-4 py-2 rounded-full text-sm font-medium shadow-md transform transition-all duration-300 group-hover:scale-105">
-                    {categories.find(cat => cat.code === article.category)?.title}
+                    {categories.find(cat => cat.code === article.category)?.title.split(' ').slice(1).join(' ')}
                   </div>
                   
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
@@ -537,22 +559,25 @@ export default function DecouvrirPage() {
                   <div className="space-y-3 mt-4 text-gray-600">
                     {article.difficulty && (
                       <div className="flex items-center text-sm group-hover:text-gray-900 transition-colors duration-300">
-                        <span className="tracking-wide">{article.difficulty}</span>
+                        <Mountain className="mr-3 h-4 w-4 text-[#b7a66b]" />
+                        <span className="tracking-wide">{article.difficulty.replace('🥾', '')}</span>
                       </div>
                     )}
                     {article.duration && (
                       <div className="flex items-center text-sm group-hover:text-gray-900 transition-colors duration-300">
-                        <span className="tracking-wide">{article.duration}</span>
+                        <Clock className="mr-3 h-4 w-4 text-[#b7a66b]" />
+                        <span className="tracking-wide">{article.duration.replace('⏱️', '')}</span>
                       </div>
                     )}
                     {article.bestTime && (
                       <div className="flex items-center text-sm group-hover:text-gray-900 transition-colors duration-300">
-                        <span className="tracking-wide">{article.bestTime}</span>
+                        <Calendar className="mr-3 h-4 w-4 text-[#b7a66b]" />
+                        <span className="tracking-wide">{article.bestTime.replace(/🌅|☀️|🌇|🌿|🎭|🍽️|🎨|🛥️|🎵|🌊|🗓️|⏰/, '')}</span>
                       </div>
                     )}
                     {article.comments && article.comments.map((comment, i) => (
                       <div key={i} className="flex items-center text-sm group-hover:text-gray-900 transition-colors duration-300">
-                        <comment.icon className="mr-3 h-5 w-5 text-[#b7a66b]" />
+                        <comment.icon className="mr-3 h-4 w-4 text-[#b7a66b]" />
                         <span className="tracking-wide">{comment.text}</span>
                       </div>
                     ))}

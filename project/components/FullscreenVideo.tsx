@@ -8,7 +8,7 @@ interface FullscreenVideoProps {
   overlay?: boolean;
 }
 
-export function FullscreenVideo({ videoUrl, title, overlay = true }: FullscreenVideoProps) {
+export function FullscreenVideo({ videoUrl, title, overlay = false }: FullscreenVideoProps) {
   const videoRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
@@ -58,11 +58,12 @@ export function FullscreenVideo({ videoUrl, title, overlay = true }: FullscreenV
             width: '100%', 
             height: '100%',
             position: 'absolute',
-            objectFit: 'cover'
+            objectFit: 'cover',
+            filter: 'brightness(1.05) contrast(1.05)'
           }}
         />
       </div>
-      {overlay && <div className="absolute inset-0 bg-black/30" />}
+      {overlay && <div className="absolute inset-0 bg-black/10" />}
     </div>
   );
 } 

@@ -157,66 +157,95 @@ export default function GaleriePage() {
 
   return (
     <>
-      <FullscreenVideo 
-        videoUrl="https://www.youtube.com/embed/ZZ3G80btSc8?autoplay=1&mute=1&loop=1&playlist=ZZ3G80btSc8&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
-        title="Vidéo galerie villa"
-        overlay={true}
-      />
-      
-      <div className="relative z-10 h-full flex items-center">
-        <div className="w-full h-full flex flex-col justify-center items-start">
-          <div className="pl-[15%] md:pl-[10%] w-full max-w-[80%] md:max-w-[60%]">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-display mb-8 text-white">
-                {tGallery('title')}
-              </h1>
-              <p className="text-white/90 text-xl md:text-2xl font-light leading-relaxed tracking-wide mt-6 max-w-xl">
-                {tGallery('subtitle')}
-              </p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1, duration: 0.8 }}
-              className="mt-12"
-            >
-              <Button
-                asChild
-                size="lg"
-                className="relative bg-transparent text-white border border-[#b7a66b] overflow-hidden group hover:bg-[#b7a66b] transition-all duration-700 text-lg px-12 py-6 rounded-none"
-              >
-                <Link href="/contact">
-                  <span className="relative z-10 tracking-wider">Voir notre villa</span>
-                  <div className="absolute inset-0 bg-[#b7a66b] z-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
-                </Link>
-              </Button>
-            </motion.div>
+      {/* Section Hero avec vidéo YouTube en vrai plein écran */}
+      <section className="relative h-screen w-full overflow-hidden p-0 m-0">
+        {/* Conteneur vidéo qui couvre tout l'écran */}
+        <div className="absolute inset-0 w-full h-full">
+          <div className="relative h-full w-full" style={{ paddingBottom: '56.25%' }}> {/* Ratio 16:9 */}
+            <iframe
+              src="https://www.youtube.com/embed/ZZ3G80btSc8?autoplay=1&mute=1&loop=1&playlist=ZZ3G80btSc8&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
+              title="Vidéo galerie"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              style={{
+                transform: 'scale(1.2)', // Zoom pour éliminer les bords noirs
+                transformOrigin: 'center center'
+              }}
+            />
           </div>
         </div>
-        
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
-        >
-          <span className="text-white/70 text-sm uppercase tracking-[0.2em] mb-2 font-light">Découvrir plus</span>
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-            className="w-6 h-10 border border-white/30 rounded-full flex justify-center pt-1"
-          >
-            <motion.div className="w-1 h-1 bg-white/80 rounded-full" />
-          </motion.div>
-        </motion.div>
-      </div>
 
-      <section className="pt-16 sm:pt-24 md:pt-32 pb-12 sm:pb-16">
+        {/* Overlay avec dégradé plus sophistiqué */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none z-[5]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent pointer-events-none z-[5]"></div>
+        
+        {/* Contenu principal */}
+        <div className="relative z-10 h-full flex items-center">
+          <div className="w-full h-full flex flex-col justify-center items-start">
+            <div className="pl-[15%] md:pl-[10%] w-full max-w-[80%] md:max-w-[60%]">
+              {/* Nouveau composant de texte luxueux */}
+              <div className="mb-16">
+                <h1 className="text-white text-6xl md:text-7xl font-light tracking-wide">
+                  L'expérience<br />
+                  ciel et mer
+                </h1>
+              </div>
+              
+              {/* Texte secondaire avec animation de fondu */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.5, duration: 0.8 }}
+                className="mt-6 max-w-xl"
+              >
+                <p className="text-white/90 text-lg md:text-xl font-light leading-relaxed tracking-wide">
+                  Profitez des hauteurs de la Côte d'Azur, un havre de paix avec vue imprenable sur la Méditerranée.
+                </p>
+              </motion.div>
+              
+              {/* Bouton stylisé */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 2, duration: 0.8 }}
+                className="mt-12"
+              >
+                <Button
+                  asChild
+                  size="lg"
+                  className="relative bg-transparent text-white border border-[#b7a66b] overflow-hidden group hover:bg-[#b7a66b] transition-all duration-700 text-lg px-12 py-6 rounded-none"
+                >
+                  <Link href="/contact">
+                    <span className="relative z-10 tracking-wider">Réserver maintenant</span>
+                    <div className="absolute inset-0 bg-[#b7a66b] z-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+                  </Link>
+                </Button>
+              </motion.div>
+            </div>
+          </div>
+          
+          {/* Indicateur de défilement élégant */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2.5, duration: 1 }}
+            className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+          >
+            <span className="text-white/70 text-sm uppercase tracking-[0.2em] mb-2 font-light">Découvrir plus</span>
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+              className="w-6 h-10 border border-white/30 rounded-full flex justify-center pt-1"
+            >
+              <motion.div className="w-1 h-1 bg-white/80 rounded-full" />
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-16 sm:py-24 md:py-32 pb-12 sm:pb-16">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -616,184 +616,24 @@ export default function VillaPage() {
                       priority={index === 0}
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
+                    <div className="absolute bottom-8 left-8 z-10">
+                      <span className="bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-sm text-sm tracking-wide font-light">
+                        {room.title.toUpperCase()}
+                      </span>
+                    </div>
                   </div>
                   <h3 className="text-2xl font-semibold mb-3">{room.title}</h3>
                   <p className="text-muted-foreground">{room.description}</p>
                 </motion.div>
               ))}
             </div>
-          </motion.div>
-          {/* Bouton centré vers la galerie */}
-          <div className="flex justify-center mt-16">
-            <Button
-              asChild
-              size="lg"
-              className="relative bg-[#b7a66b] text-white border-2 border-[#b7a66b] overflow-hidden group hover:bg-white hover:text-[#b7a66b] transition-all duration-500 text-lg px-12 py-6 rounded-none"
-            >
-              <Link href="/galerie">
-                <span className="relative z-10">{tVilla('spaces.galleryButton')}</span>
-                <div className="absolute inset-0 bg-white z-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Custom Living Spaces Section - Version luxe redessinée */}
-      <section className="py-32 md:py-56 relative">
-        {/* Arrière-plan sophistiqué */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#f9f9f9] to-white"></div>
-        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-[0.02] mix-blend-overlay"></div>
-        <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-[#b7a66b]/[0.03] via-[#b7a66b]/[0.01] to-transparent"></div>
-        <div className="absolute left-0 bottom-0 w-1/3 h-1/2 bg-gradient-to-tr from-[#b7a66b]/[0.02] to-transparent"></div>
-        
-        <div className="container mx-auto px-4 relative">
-          {/* Titre élégant */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1.2 }}
-            viewport={{ once: true }}
-            className="mb-28 max-w-4xl mx-auto text-center"
-          >
-            <motion.div
-              initial={{ y: 40, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-              viewport={{ once: true }}
-              className="overflow-hidden inline-block"
-            >
-              <span className="block text-[#b7a66b] font-light tracking-[0.2em] text-sm uppercase mb-6">Expérience</span>
-            </motion.div>
-            <div className="overflow-hidden">
-              <motion.h2
-                initial={{ y: 80, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-3xl md:text-6xl font-extralight tracking-tighter mb-10"
-              >
-                <span className="block leading-tight">ESPACES DE VIE</span>
-                <span className="block mt-1 leading-tight">EXCEPTIONNELS</span>
-              </motion.h2>
-            </div>
-            <motion.div
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
-              viewport={{ once: true }}
-              className="h-px w-24 bg-[#b7a66b]/50 mx-auto my-10 origin-center"
-            />
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.6 }}
-              viewport={{ once: true }}
-              className="text-neutral-500 font-light max-w-xl mx-auto text-lg md:text-xl leading-relaxed"
-            >
-              Notre villa offre des espaces de vie méticuleusement conçus où chaque détail a été considéré pour créer une expérience de séjour incomparable.
-            </motion.p>
-          </motion.div>
-
-          {/* Première rangée */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12 mb-20">
-            <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-              viewport={{ once: true }}
-              className="lg:col-span-2 relative h-[70vh] rounded-lg overflow-hidden"
-            >
-              <Image
-                src="/images/villa/IMG_2409.JPEG"
-                alt="Espace de vie principal"
-                fill
-                className="object-cover"
-                quality={100}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
-              <div className="absolute bottom-8 left-8 z-10">
-                <span className="bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-sm text-sm tracking-wide font-light">
-                  SALON PRINCIPAL
-                </span>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-              viewport={{ once: true }}
-              className="relative h-[70vh] rounded-lg overflow-hidden"
-            >
-              <Image
-                src="/images/villa/IMG_2286.JPEG"
-                alt="Espace salle à manger"
-                fill
-                className="object-cover"
-                quality={100}
-              />
-              <div className="absolute bottom-8 left-8 z-10">
-                <span className="bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-sm text-sm tracking-wide font-light">
-                  SALLE À MANGER
-                </span>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Deuxième rangée */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12 mb-24">
-            <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-              viewport={{ once: true }}
-              className="relative h-[70vh] rounded-lg overflow-hidden"
-            >
-              <Image
-                src="/images/villa/IMG_2359.jpg"
-                alt="Suite parentale"
-                fill
-                className="object-cover"
-                quality={100}
-              />
-              <div className="absolute bottom-8 left-8 z-10">
-                <span className="bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-sm text-sm tracking-wide font-light">
-                  SUITE PARENTALE
-                </span>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-              viewport={{ once: true }}
-              className="lg:col-span-2 relative h-[70vh] rounded-lg overflow-hidden"
-            >
-              <Image
-                src="/images/villa/IMG_2348.JPEG"
-                alt="Piscine et terrasse"
-                fill
-                className="object-cover"
-                quality={100}
-              />
-              <div className="absolute bottom-8 left-8 z-10">
-                <span className="bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-sm text-sm tracking-wide font-light">
-                  PISCINE & TERRASSE
-                </span>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Section caractéristiques - Redesign selon le screenshot */}
-          <div className="max-w-7xl mx-auto">
+            
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
               viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-16 mt-20"
+              className="grid grid-cols-1 md:grid-cols-3 gap-16 mt-28"
             >
               {[
                 {
@@ -817,7 +657,6 @@ export default function VillaPage() {
                   viewport={{ once: true }}
                   className="relative p-6"
                 >
-                  {/* Symbole "L" coin supérieur gauche */}
                   <div className="absolute top-0 left-0 w-12 h-12">
                     <div className="absolute top-0 left-0 w-px h-8 bg-[#b7a66b]/60"></div>
                     <div className="absolute top-0 left-0 w-8 h-px bg-[#b7a66b]/60"></div>
@@ -828,14 +667,13 @@ export default function VillaPage() {
                 </motion.div>
               ))}
             </motion.div>
-
-            {/* Citation - Redesign selon le screenshot */}
+            
             <motion.div 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1.5 }}
               viewport={{ once: true }}
-              className="mt-40 text-center max-w-4xl mx-auto"
+              className="mt-32 text-center max-w-4xl mx-auto"
             >
               <div className="relative py-16">
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 text-[80px] text-[#b7a66b]/20 font-serif">"</div>
@@ -866,6 +704,19 @@ export default function VillaPage() {
                 </motion.p>
               </div>
             </motion.div>
+          </motion.div>
+          
+          <div className="flex justify-center mt-16">
+            <Button
+              asChild
+              size="lg"
+              className="relative bg-[#b7a66b] text-white border-2 border-[#b7a66b] overflow-hidden group hover:bg-white hover:text-[#b7a66b] transition-all duration-500 text-lg px-12 py-6 rounded-none"
+            >
+              <Link href="/galerie">
+                <span className="relative z-10">{tVilla('spaces.galleryButton')}</span>
+                <div className="absolute inset-0 bg-white z-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
