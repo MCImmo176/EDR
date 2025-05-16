@@ -411,9 +411,9 @@ export default function GaleriePage() {
                   key={`${photo.src}-${index}`}
                   className={cn(
                     "flex-shrink-0 relative group cursor-pointer transition-all duration-500 rounded overflow-hidden shadow-sm hover:shadow-md",
-                    photo.aspectRatio === "portrait" ? "w-60 h-[70vh]" : 
-                    photo.aspectRatio === "landscape" ? "w-[400px] h-[70vh]" : 
-                    "w-[600px] h-[70vh]"
+                    photo.aspectRatio === "portrait" ? "w-80 h-[70vh]" : 
+                    photo.aspectRatio === "landscape" ? "w-[500px] h-[70vh]" : 
+                    "w-[700px] h-[70vh]"
                   )}
                   onClick={() => openLightbox(index)}
                 >
@@ -426,7 +426,7 @@ export default function GaleriePage() {
                     className="object-cover transition-all duration-[1200ms] filter saturate-[0.9] group-hover:saturate-[1] group-hover:brightness-105"
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
-                    <p className="text-white text-sm font-light tracking-wider">{photo.alt}</p>
+                    <p className="text-white text-sm font-light tracking-wider backdrop-blur-[2px] bg-black/30 inline-block px-3 py-1 rounded">{photo.alt}</p>
                   </div>
                 </div>
               ))}
@@ -437,28 +437,6 @@ export default function GaleriePage() {
               {/* Image Counter */}
               <div className="text-[#9A9A98] font-mono text-sm tracking-wider">
                 {imageCounter}
-              </div>
-              
-              {/* Control Buttons */}
-              <div className="flex space-x-4">
-                <button 
-                  className="text-[#1A1A1A] hover:text-[#BC9A6B] transition-colors"
-                  onClick={toggleAutoplay}
-                  aria-label={isPlaying ? "Arrêter le défilement automatique" : "Démarrer le défilement automatique"}
-                >
-                  {isPlaying ? (
-                    <Pause className="w-5 h-5" />
-                  ) : (
-                    <Play className="w-5 h-5" />
-                  )}
-                </button>
-                <button 
-                  className="text-[#1A1A1A] hover:text-[#BC9A6B] transition-colors"
-                  onClick={() => openLightbox(currentIndex)}
-                  aria-label="Mode plein écran"
-                >
-                  <Maximize className="w-5 h-5" />
-                </button>
               </div>
             </div>
             
@@ -492,7 +470,7 @@ export default function GaleriePage() {
               <Button
                 asChild
                 size="lg"
-                className="relative bg-transparent text-[#1A1A1A] border border-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-white rounded-none px-10 py-6 transition-all duration-300"
+                className="relative bg-[#b7a66b] text-white border border-[#b7a66b] hover:bg-white hover:text-[#b7a66b] hover:border-[#b7a66b] rounded-none px-10 py-6 transition-all duration-300"
               >
                 <Link href="/contact">
                   <span className="uppercase text-sm tracking-[0.2em] font-light">Réserver votre séjour</span>
@@ -512,12 +490,12 @@ export default function GaleriePage() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-50 bg-[#080808]/98 flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 bg-black flex items-center justify-center p-4"
             onClick={closeLightbox}
           >
             {/* Close Button */}
             <button 
-              className="absolute top-6 left-6 text-white hover:text-white/80 transition-colors z-50"
+              className="absolute top-6 left-6 text-white hover:text-white/80 transition-colors z-50 bg-black/50 p-2 rounded-full"
               onClick={(e) => {
                 e.stopPropagation();
                 closeLightbox();
@@ -576,7 +554,7 @@ export default function GaleriePage() {
                 className="absolute bottom-0 left-0 right-0 text-center text-white p-6"
               >
                 <div className="w-10 h-[1px] bg-[#BC9A6B] mx-auto mb-4"></div>
-                <p className="text-lg md:text-xl font-light tracking-wider mb-1">
+                <p className="text-lg md:text-xl font-light tracking-wider mb-1 backdrop-blur-md bg-black/40 inline-block px-4 py-2 rounded">
                   {filteredPhotos[selectedImage].alt}
                 </p>
               </motion.div>
