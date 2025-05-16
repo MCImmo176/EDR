@@ -291,7 +291,12 @@ export default function VillaPage() {
                   L'expérience<br />
                   ciel et mer
                 </h1>
-                <div className="h-1 w-20 bg-[#b7a66b] mt-6"></div>
+                <motion.div 
+                  initial={{ width: 0 }}
+                  animate={{ width: 80 }}
+                  transition={{ duration: 1.5, delay: 1 }}
+                  className="h-[1px] bg-gradient-to-r from-[#BC9A6B] to-[#BC9A6B]/30 mt-8"
+                ></motion.div>
               </div>
               
               {/* Texte secondaire avec animation de fondu */}

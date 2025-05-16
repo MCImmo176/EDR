@@ -382,7 +382,7 @@ export default function Home() {
                 description: "Terrasse spacieuse aménagée pour la détente et les repas en plein air face à l'horizon azur."
               }
             ].map((image, index) => (
-              <div key={index} className="group relative overflow-hidden h-[350px] md:h-[400px] flex flex-col">
+              <div key={index} className="group relative overflow-hidden h-[450px] md:h-[500px] flex flex-col">
                 <div className="relative flex-grow overflow-hidden">
                   <Image
                     src={image.src}
@@ -452,7 +452,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="group bg-white/90 backdrop-blur-sm p-0 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col"
             >
-              <div className="relative h-48 w-full">
+              <div className="relative h-72 w-full">
                 <Image src="/images/discover/F1Monaco.jpg" alt="Monaco & Menton" fill className="object-cover" />
                 <div className="absolute top-4 left-4 bg-white/80 rounded-full p-2 shadow">
                   <Landmark className="w-7 h-7 text-[#b7a66b]" />
@@ -474,7 +474,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="group bg-white/90 backdrop-blur-sm p-0 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col"
             >
-              <div className="relative h-48 w-full">
+              <div className="relative h-72 w-full">
                 <Image src="/images/discover/plageroquebrune.jpg" alt="Évasion en Italie" fill className="object-cover" />
                 <div className="absolute top-4 left-4 bg-white/80 rounded-full p-2 shadow">
                   <Flag className="w-7 h-7 text-[#b7a66b]" />
@@ -496,7 +496,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="group bg-white/90 backdrop-blur-sm p-0 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col"
             >
-              <div className="relative h-48 w-full">
+              <div className="relative h-72 w-full">
                 <Image src="/images/discover/sentierdouaniers.jpg" alt="Trésors cachés de la Côte d'Azur" fill className="object-cover" />
                 <div className="absolute top-4 left-4 bg-white/80 rounded-full p-2 shadow">
                   <Map className="w-7 h-7 text-[#b7a66b]" />
@@ -608,7 +608,7 @@ export default function Home() {
                   size="lg"
                   className="bg-white border-2 border-[#b7a66b] text-[#b7a66b] hover:bg-[#b7a66b] hover:text-white transition-all duration-500 px-10 py-5 rounded-full font-semibold text-lg shadow-md group w-full"
                 >
-                  <Link href="#contact" scroll className="flex items-center justify-center gap-2">
+                  <Link href="/contact" scroll className="flex items-center justify-center gap-2">
                     Planifier une visite privée
                     <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
                   </Link>

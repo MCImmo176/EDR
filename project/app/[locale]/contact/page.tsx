@@ -154,7 +154,7 @@ export default function ContactPage() {
                                 <FormItem>
                                   <FormLabel className="text-white text-left block">Nom</FormLabel>
                                   <FormControl>
-                                    <Input placeholder="Votre nom" className="bg-white/20 border-white/20 text-white placeholder:text-white/50" {...field} />
+                                    <Input placeholder="Votre nom" className="bg-white/20 border-white/20 text-white placeholder:text-white/50 rounded-none" {...field} />
                                   </FormControl>
                                   <FormMessage className="text-red-300" />
                                 </FormItem>
@@ -169,7 +169,7 @@ export default function ContactPage() {
                                 <FormItem>
                                   <FormLabel className="text-white text-left block">Prénom</FormLabel>
                                   <FormControl>
-                                    <Input placeholder="Votre prénom" className="bg-white/20 border-white/20 text-white placeholder:text-white/50" {...field} />
+                                    <Input placeholder="Votre prénom" className="bg-white/20 border-white/20 text-white placeholder:text-white/50 rounded-none" {...field} />
                                   </FormControl>
                                   <FormMessage className="text-red-300" />
                                 </FormItem>
@@ -184,7 +184,7 @@ export default function ContactPage() {
                             <FormItem>
                               <FormLabel className="text-white text-left block">{t('yourVilla.form.email')}</FormLabel>
                               <FormControl>
-                                <Input placeholder={t('yourVilla.form.emailPlaceholder')} className="bg-white/20 border-white/20 text-white placeholder:text-white/50" {...field} />
+                                <Input placeholder={t('yourVilla.form.emailPlaceholder')} className="bg-white/20 border-white/20 text-white placeholder:text-white/50 rounded-none" {...field} />
                               </FormControl>
                               <FormMessage className="text-red-300" />
                             </FormItem>
@@ -202,6 +202,7 @@ export default function ContactPage() {
                                       value={field.value}
                                       onChange={field.onChange}
                                       countryCodes={countryCodes}
+                                      className="rounded-none"
                                     />
                                   </FormControl>
                                   <FormMessage className="text-red-300" />
@@ -219,7 +220,7 @@ export default function ContactPage() {
                                   <FormControl>
                                     <Input 
                                       placeholder="Votre numéro de téléphone"
-                                      className="bg-white/20 border-white/20 text-white placeholder:text-white/50" 
+                                      className="bg-white/20 border-white/20 text-white placeholder:text-white/50 rounded-none" 
                                       {...field} 
                                     />
                                   </FormControl>
@@ -238,7 +239,7 @@ export default function ContactPage() {
                               <FormControl>
                                 <Textarea 
                                   placeholder={t('yourVilla.form.messagePlaceholder')}
-                                  className="resize-none min-h-[120px] bg-white/20 border-white/20 text-white placeholder:text-white/50"
+                                  className="resize-none min-h-[120px] bg-white/20 border-white/20 text-white placeholder:text-white/50 rounded-none"
                                   {...field} 
                                 />
                               </FormControl>
@@ -250,13 +251,13 @@ export default function ContactPage() {
                           <Button
                             type="button"
                             onClick={() => setShowForm(false)}
-                            className="flex-1 bg-transparent text-white hover:bg-white/20 border-2 border-white transition-all duration-500 text-sm sm:text-base"
+                            className="flex-1 bg-transparent text-white hover:bg-white/20 border-2 border-white transition-all duration-500 text-sm sm:text-base rounded-none"
                           >
                             Retour
                           </Button>
                           <Button 
                             type="submit" 
-                            className="flex-1 bg-[#b7a66b] text-white hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-all duration-500 text-sm sm:text-base"
+                            className="flex-1 bg-[#b7a66b] text-white hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-all duration-500 text-sm sm:text-base rounded-none"
                           >
                             <span className="relative z-10">{t('yourVilla.form.submit')}</span>
                             <Send className="ml-2 h-4 w-4 relative z-10" />

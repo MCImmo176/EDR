@@ -407,11 +407,21 @@ export default function DecouvrirPage() {
           <div className="w-full h-full flex flex-col justify-center items-start">
             <div className="pl-[15%] md:pl-[10%] w-full max-w-[80%] md:max-w-[60%]">
               <div className="mb-16">
-                <h1 className="text-white text-6xl md:text-7xl font-light tracking-wide">
+                <motion.h1 
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1.2, delay: 0.3 }}
+                  className="text-white text-6xl md:text-7xl font-light tracking-wider"
+                >
                   L'expérience<br />
-                  ciel et mer
-                </h1>
-                <div className="h-1 w-20 bg-[#b7a66b] mt-6"></div>
+                  <span className="font-extralight tracking-wide">ciel et mer</span>
+                </motion.h1>
+                <motion.div 
+                  initial={{ width: 0 }}
+                  animate={{ width: 80 }}
+                  transition={{ duration: 1.5, delay: 1 }}
+                  className="h-[1px] bg-gradient-to-r from-[#BC9A6B] to-[#BC9A6B]/30 mt-8"
+                ></motion.div>
               </div>
               
               <motion.div
@@ -515,7 +525,6 @@ export default function DecouvrirPage() {
                         : "bg-white text-gray-700 hover:bg-[#b7a66b]/80 hover:text-white border border-gray-200 shadow-sm"
                     }`}
                   >
-                    <category.icon className={`h-4 sm:h-5 w-4 sm:w-5 mb-1 ${activeCategory === category.code ? "text-white" : "text-[#b7a66b]"}`} />
                     <span className="text-xs font-medium">{category.title}</span>
                   </motion.button>
                 ))}
@@ -534,7 +543,6 @@ export default function DecouvrirPage() {
                         : "bg-white text-gray-700 hover:bg-[#b7a66b]/80 hover:text-white border border-gray-200 shadow-sm"
                     }`}
                   >
-                    <category.icon className={`h-4 sm:h-5 w-4 sm:w-5 mb-1 ${activeCategory === category.code ? "text-white" : "text-[#b7a66b]"}`} />
                     <span className="text-xs font-medium">{category.title}</span>
                   </motion.button>
                 ))}

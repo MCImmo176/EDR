@@ -61,7 +61,7 @@ export function ContactForm() {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
-            className="relative w-full max-w-2xl bg-white rounded-lg shadow-xl overflow-hidden"
+            className="relative w-full max-w-2xl bg-white rounded-none shadow-xl overflow-hidden"
           >
             <button
               onClick={closeForm}
@@ -93,7 +93,7 @@ export function ContactForm() {
                             <FormItem>
                               <FormLabel>Nom</FormLabel>
                               <FormControl>
-                                <Input placeholder="Votre nom" {...field} />
+                                <Input placeholder="Votre nom" className="rounded-none" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -108,7 +108,7 @@ export function ContactForm() {
                             <FormItem>
                               <FormLabel>Prénom</FormLabel>
                               <FormControl>
-                                <Input placeholder="Votre prénom" {...field} />
+                                <Input placeholder="Votre prénom" className="rounded-none" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -123,7 +123,7 @@ export function ContactForm() {
                         <FormItem>
                           <FormLabel>{t('yourVilla.form.email')}</FormLabel>
                           <FormControl>
-                            <Input placeholder={t('yourVilla.form.emailPlaceholder')} {...field} />
+                            <Input placeholder={t('yourVilla.form.emailPlaceholder')} className="rounded-none" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -141,6 +141,7 @@ export function ContactForm() {
                                   value={field.value}
                                   onChange={field.onChange}
                                   countryCodes={countryCodes}
+                                  className="rounded-none"
                                 />
                               </FormControl>
                               <FormMessage />
@@ -158,6 +159,7 @@ export function ContactForm() {
                               <FormControl>
                                 <Input 
                                   placeholder="Votre numéro de téléphone"
+                                  className="rounded-none"
                                   {...field} 
                                 />
                               </FormControl>
@@ -176,7 +178,7 @@ export function ContactForm() {
                           <FormControl>
                             <Textarea 
                               placeholder={t('yourVilla.form.messagePlaceholder')}
-                              className="resize-none min-h-[150px]"
+                              className="resize-none min-h-[150px] rounded-none"
                               {...field} 
                             />
                           </FormControl>
@@ -188,13 +190,13 @@ export function ContactForm() {
                       <Button
                         type="button"
                         onClick={closeForm}
-                        className="flex-1 bg-transparent text-gray-700 hover:bg-gray-100 border-2 border-gray-200 transition-all duration-500"
+                        className="flex-1 bg-transparent text-gray-700 hover:bg-gray-100 border-2 border-gray-200 transition-all duration-500 rounded-none"
                       >
                         Retour
                       </Button>
                       <Button 
                         type="submit" 
-                        className="flex-1 bg-[#b7a66b] text-white hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-all duration-500"
+                        className="flex-1 bg-[#b7a66b] text-white hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-all duration-500 rounded-none"
                       >
                         <span className="relative z-10">{t('yourVilla.form.submit')}</span>
                         <Send className="ml-2 h-4 w-4 relative z-10" />

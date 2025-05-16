@@ -19,6 +19,7 @@ interface ComboboxCountryProps {
   onChange: (value: string) => void;
   label?: string;
   countryCodes: Country[];
+  className?: string;
 }
 
 function FlagIcon({ code }: { code: string }) {
@@ -42,7 +43,7 @@ function FlagIcon({ code }: { code: string }) {
   ) : null;
 }
 
-export const ComboboxCountry: React.FC<ComboboxCountryProps> = ({ value, onChange, label = 'Indicatif', countryCodes }) => {
+export const ComboboxCountry: React.FC<ComboboxCountryProps> = ({ value, onChange, label = 'Indicatif', countryCodes, className }) => {
   const [open, setOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const selected = countryCodes.find(c => c.dial_code === value);
@@ -57,7 +58,7 @@ export const ComboboxCountry: React.FC<ComboboxCountryProps> = ({ value, onChang
       {label && <label className="block mb-1 text-sm font-medium text-left">{label}</label>}
       <button
         type="button"
-        className="flex items-center w-full border rounded-md px-3 py-2 h-10 bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring hover:bg-accent transition-colors"
+        className={`flex items-center w-full border rounded-md px-3 py-2 h-10 bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring hover:bg-accent transition-colors ${className || ''}`}
         onClick={() => setOpen(!open)}
         aria-haspopup="listbox"
         aria-expanded={open}

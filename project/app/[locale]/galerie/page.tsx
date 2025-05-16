@@ -411,9 +411,9 @@ export default function GaleriePage() {
                   key={`${photo.src}-${index}`}
                   className={cn(
                     "flex-shrink-0 relative group cursor-pointer transition-all duration-500 rounded overflow-hidden shadow-sm hover:shadow-md",
-                    photo.aspectRatio === "portrait" ? "w-80 h-[70vh]" : 
-                    photo.aspectRatio === "landscape" ? "w-[500px] h-[70vh]" : 
-                    "w-[700px] h-[70vh]"
+                    photo.aspectRatio === "portrait" ? "w-[500px] h-[70vh]" : 
+                    photo.aspectRatio === "landscape" ? "w-[600px] h-[70vh]" : 
+                    "w-[800px] h-[70vh]"
                   )}
                   onClick={() => openLightbox(index)}
                 >
