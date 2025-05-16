@@ -516,12 +516,13 @@ export default function VillaPage() {
         <div className="relative z-10 h-full flex items-center">
           <div className="w-full h-full flex flex-col justify-center items-start">
             <div className="pl-[15%] md:pl-[10%] w-full max-w-[80%] md:max-w-[60%]">
-              {/* Nouveau composant de texte luxueux */}
+              {/* Remplacer le composant LuxuryTextReveal par du HTML statique pour correspondre à l'onglet GALERIE */}
               <div className="mb-16">
-                <LuxuryTextReveal 
-                  textKey="villa"
-                  className="text-white text-6xl md:text-7xl font-light tracking-wide"
-                />
+                <h1 className="text-white text-6xl md:text-7xl font-light tracking-wide">
+                  L'expérience<br />
+                  ciel et mer
+                </h1>
+                <div className="h-1 w-20 bg-[#b7a66b] mt-6"></div>
               </div>
               
               {/* Texte secondaire avec animation de fondu */}
@@ -536,7 +537,7 @@ export default function VillaPage() {
                 </p>
               </motion.div>
               
-              {/* Bouton stylisé */}
+              {/* Bouton stylisé pour correspondre à l'onglet GALERIE */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -546,11 +547,10 @@ export default function VillaPage() {
                 <Button
                   asChild
                   size="lg"
-                  className="relative bg-transparent text-white border border-[#b7a66b] overflow-hidden group hover:bg-[#b7a66b] transition-all duration-700 text-lg px-12 py-6 rounded-none"
+                  className="relative bg-[#b7a66b] text-white border-2 border-[#b7a66b] rounded-lg overflow-hidden group hover:bg-white hover:text-[#b7a66b] transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-[#b7a66b]/20 hover:-translate-y-1 text-lg px-8 py-4"
                 >
                   <Link href="/contact">
-                    <span className="relative z-10 tracking-wider">{tVilla('hero.ctaButton')}</span>
-                    <div className="absolute inset-0 bg-[#b7a66b] z-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+                    <span className="relative z-10 tracking-wider font-medium">{tVilla('hero.ctaButton')}</span>
                   </Link>
                 </Button>
               </motion.div>
@@ -600,7 +600,8 @@ export default function VillaPage() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <div className="relative h-[300px] overflow-hidden">
+                  {/* Augmenter la hauteur des images de 300px à 450px avec adaptation aux écrans mobiles */}
+                  <div className="relative h-[350px] sm:h-[400px] md:h-[450px] overflow-hidden">
                     <Image 
                       src={room.src} 
                       alt={room.alt}
