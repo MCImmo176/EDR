@@ -7,13 +7,15 @@ interface LuxuryTextRevealProps {
   textLine?: string;
   accentColor?: string;
   className?: string;
+  responsive?: boolean;
 }
 
 const LuxuryTextReveal: React.FC<LuxuryTextRevealProps> = ({
   textKey = 'villa',
   textLine,
   accentColor = '#b7a66b',
-  className = ''
+  className = '',
+  responsive = true
 }) => {
   const t = useTranslations('luxuryText');
   const text = textLine || t(`${textKey}.line1`);
@@ -96,9 +98,9 @@ const LuxuryTextReveal: React.FC<LuxuryTextRevealProps> = ({
                 delay: 0.2 + (lineIndex * 0.15),
                 ease: [0.22, 1, 0.36, 1]
               }}
-              className="relative"
+              className="relative truncate-fix"
             >
-              <span className="block text-[2.5em] md:text-[3.5em] lg:text-[4.5em] font-light tracking-wide leading-[1.1]">
+              <span className={`block ${responsive ? 'text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem]' : 'text-[3.5rem]'} font-light tracking-wide leading-[1.2] hyphens-none break-words`}>
                 {line.join(' ')}
               </span>
 

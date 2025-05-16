@@ -9,6 +9,8 @@ import { useLanguage } from "@/hooks/useLanguage";
 import Link from "next/link";
 import { FullscreenVideo } from "@/components/FullscreenVideo";
 import { Button } from "@/components/ui/button";
+import { Star } from "lucide-react";
+import DynamicBottomGallery from "@/components/DynamicBottomGallery";
 
 export default function GaleriePage() {
   const { tGallery } = useLanguage();
@@ -106,22 +108,30 @@ export default function GaleriePage() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Déterminer si on doit séparer les 3 dernières photos
+  const shouldSeparateLastThree = 
+    (activeCategory === tGallery('categories.views') || activeCategory === null) &&
+    columns === 3;
+  
+  // Extraire les 3 dernières photos avant la distribution
+  const lastThreePhotos = shouldSeparateLastThree
+    ? (activeCategory === null ? vuesPhotos : filteredPhotos.slice(filteredPhotos.length - 3))
+    : [];
+  
+  // Photos à distribuer dans la grille Masonry (sans les 3 dernières quand nécessaire)
+  const masonryPhotos = shouldSeparateLastThree
+    ? (activeCategory === null ? [...exterieurPhotos, ...suitesPhotos, ...interieurPhotos] : filteredPhotos.slice(0, filteredPhotos.length - 3))
+    : filteredPhotos;
+
   const getPhotoColumns = () => {
     const columnPhotos: any[][] = Array.from({ length: columns }, () => []);
     
-    // Calculer les hauteurs totales par colonne
+    // Distribution des photos dans les colonnes (seulement masonryPhotos)
     const columnHeights = Array(columns).fill(0);
     
-    // Distribuer les photos dans les colonnes de manière équilibrée
-    filteredPhotos.forEach((photo) => {
-      // Trouver la colonne avec la hauteur la plus petite
+    masonryPhotos.forEach((photo) => {
       const minHeightColumn = columnHeights.indexOf(Math.min(...columnHeights));
-      
-      // Ajouter la photo à cette colonne
       columnPhotos[minHeightColumn].push(photo);
-      
-      // Mettre à jour la hauteur de la colonne
-      // On utilise la taille de la photo (large=4, regular=3.5) pour calculer la hauteur
       columnHeights[minHeightColumn] += photo.size === "large" ? 4 : 3.5;
     });
 
@@ -129,7 +139,7 @@ export default function GaleriePage() {
   };
 
   const photoColumns = getPhotoColumns();
-
+  
   const handlePrevImage = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
@@ -226,11 +236,10 @@ export default function GaleriePage() {
                 <Button
                   asChild
                   size="lg"
-                  className="relative bg-transparent text-white border border-[#b7a66b] overflow-hidden group hover:bg-[#b7a66b] transition-all duration-700 text-lg px-12 py-6 rounded-none"
+                  className="relative bg-[#b7a66b] text-white border-2 border-[#b7a66b] rounded-lg overflow-hidden group hover:bg-white hover:text-[#b7a66b] transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-[#b7a66b]/20 hover:-translate-y-1 text-lg px-8 py-4"
                 >
                   <Link href="/contact">
-                    <span className="relative z-10 tracking-wider">Réserver maintenant</span>
-                    <div className="absolute inset-0 bg-[#b7a66b] z-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+                    <span className="relative z-10 tracking-wider font-medium">Réserver maintenant</span>
                   </Link>
                 </Button>
               </motion.div>
@@ -343,6 +352,14 @@ export default function GaleriePage() {
             ))}
           </div>
 
+          {/* Utilisation du composant DynamicBottomGallery pour les 3 dernières photos */}
+          <DynamicBottomGallery 
+            lastThreePhotos={lastThreePhotos}
+            shouldSeparateLastThree={shouldSeparateLastThree}
+            filteredPhotos={filteredPhotos}
+            setSelectedImage={setSelectedImage}
+          />
+
           {activeCategory === tGallery('categories.views') && (
             <div className="w-full flex justify-center mt-8">
               <iframe
@@ -370,6 +387,110 @@ export default function GaleriePage() {
             >
               {tGallery('discoverButton')}
             </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section Citation + CTA */}
+      <section className="py-16 relative overflow-hidden bg-gray-50">
+        <div className="absolute -top-32 -left-32 w-64 h-64 rounded-full bg-[#b7a66b]/10 blur-3xl"></div>
+        <div className="absolute -bottom-32 -right-32 w-64 h-64 rounded-full bg-[#b7a66b]/10 blur-3xl"></div>
+        
+        <div className="container relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className="mb-6"
+            >
+              <div className="w-20 h-20 text-[#b7a66b]/40 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                  <path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/>
+                </svg>
+              </div>
+            </motion.div>
+            
+            <motion.blockquote
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1.2, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-2xl md:text-3xl lg:text-4xl text-gray-800 font-light italic mb-8"
+            >
+              « L'art lave notre âme de la poussière du quotidien. »
+            </motion.blockquote>
+            
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="flex items-center justify-center"
+            >
+              <div className="w-10 h-0.5 bg-[#b7a66b] mr-4"></div>
+              <span className="text-gray-500 uppercase tracking-widest text-sm">Pablo Picasso</span>
+              <div className="w-10 h-0.5 bg-[#b7a66b] ml-4"></div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/images/discover/luxury-bg.jpg')] bg-cover bg-center opacity-30"></div>
+        <div className="absolute inset-0 bg-white/60 backdrop-blur-sm"></div>
+        
+        <div className="container relative z-10">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="mb-8"
+            >
+              <div className="w-16 h-16 bg-[#b7a66b]/20 backdrop-blur-md rounded-full flex items-center justify-center mx-auto">
+                <Star className="h-8 w-8 text-[#b7a66b]" />
+              </div>
+            </motion.div>
+            
+            <motion.h2 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-6 text-gray-900 leading-tight"
+            >
+              Une expérience artistique inoubliable
+            </motion.h2>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+            >
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-white bg-[#b7a66b] rounded-lg hover:bg-[#b7a66b]/90 transition-all duration-300 ease-in-out transform hover:scale-105 shadow-md"
+              >
+                Réservez votre séjour artistique dès maintenant →
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </section>

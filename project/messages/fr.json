@@ -355,6 +355,16 @@
         "title": "Lieux & Événements à Découvrir",
         "description": "Découvrez notre sélection des lieux et événements incontournables à visiter pendant votre séjour dans notre villa d'exception.",
         "allPlaces": "Tous les lieux",
+        "fortAntoine": {
+          "title": "Balade nocturne au Fort Antoine",
+          "description": "Théâtre en plein air situé sur les hauteurs de Monaco, le Fort Antoine accueille des représentations artistiques intimistes sous les étoiles. Profitez d'un spectacle dans ce lieu chargé d'histoire, face à la mer, dans une ambiance unique mêlant culture, patrimoine et magie nocturne.",
+          "date": "Soirées d'été",
+          "type": "Culture & Événements",
+          "comments": {
+            "theater": "Théâtre, musique, cinéma en plein air",
+            "view": "Vue panoramique sur la Méditerranée"
+          }
+        },
         "monacoGP": {
           "title": "Grand Prix de Monaco",
           "description": "Vivez la course mythique depuis notre villa ou avec nos accès VIP aux meilleures tribunes du circuit.",

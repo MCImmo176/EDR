@@ -12,8 +12,17 @@
 body {
   background: var(--luxury-bg);
   color: var(--luxury-dark);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Playfair Display', serif;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p, span, div, a, button, input, textarea, select, li {
+  font-family: 'Inter', sans-serif;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .font-display, h1, h2, h3, h4, h5, h6 {
@@ -24,6 +33,9 @@ body {
 .luxury-highlight {
   position: relative;
   display: inline-block;
+  margin: 0 0.2em;
+  padding: 0 0.1em;
+  z-index: 1;
 }
 
 .luxury-highlight > span {
@@ -34,11 +46,10 @@ body {
 .luxury-highlight::before {
   content: '';
   position: absolute;
-  inset: 0 0 0 0;
-  background: var(--luxury-gold);
-  opacity: 0.3;
+  inset: 0 0 -0.1em 0;
+  background: linear-gradient(to right, rgba(214,174,96,0.3), rgba(214,174,96,0.4), rgba(214,174,96,0.3));
   border-radius: 0.25rem;
-  transform: skewY(-2deg);
+  transform: skewY(-1deg);
   z-index: 0;
 }
 
@@ -49,7 +60,7 @@ body {
 }
 
 .luxury-btn {
-  @apply transition-transform duration-300 ease-in-out rounded-full px-8 py-3 font-semibold shadow-md;
+  @apply transition-all duration-300 ease-in-out rounded-lg px-8 py-3 font-semibold shadow-md;
   background: var(--luxury-gold);
   color: #fff;
 }
@@ -57,11 +68,13 @@ body {
 .luxury-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 32px 0 rgba(214,174,96,0.15);
-  background: #bfa05a;
+  background: #fff;
+  color: var(--luxury-gold);
+  border: 2px solid var(--luxury-gold);
 }
 
 .luxury-btn-outline {
-  @apply transition-transform duration-300 ease-in-out rounded-full px-8 py-3 font-semibold border-2;
+  @apply transition-all duration-300 ease-in-out rounded-lg px-8 py-3 font-semibold border-2;
   border-color: var(--luxury-gold);
   color: var(--luxury-gold);
   background: transparent;
@@ -88,6 +101,51 @@ body {
   background: linear-gradient(90deg, transparent, var(--luxury-gold), transparent);
   opacity: 0.7;
   pointer-events: none;
+}
+
+/* Correction pour les textes coupés en mode mobile */
+@media (max-width: 640px) {
+  .truncate-fix {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    display: inline-block;
+  }
+  
+  h1, h2, h3, .text-2xl, .text-3xl, .text-4xl {
+    line-height: 1.3;
+  }
+}
+
+/* Style harmonisé pour les éléments dorés de mise en valeur */
+.golden-accent {
+  color: var(--luxury-gold);
+  font-weight: 600;
+}
+
+.golden-bg {
+  background: linear-gradient(to right, rgba(214,174,96,0.1), rgba(214,174,96,0.15), rgba(214,174,96,0.1));
+  border-radius: 0.4em;
+  padding: 0.05em 0.25em;
+  transition: background 0.3s;
+}
+
+.golden-border {
+  border: 1px solid rgba(214,174,96,0.3);
+  border-radius: 0.4em;
+}
+
+.nav-link {
+  @apply relative text-sm font-medium text-gray-700 hover:text-[#b7a66b] transition-colors duration-300;
+}
+
+.nav-link::after {
+  @apply absolute content-[''] bottom-0 left-0 w-0 h-[2px] bg-[#b7a66b] transition-all duration-300 ease-in-out rounded-full opacity-0;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  @apply w-full opacity-100;
 }
 
 @layer base {

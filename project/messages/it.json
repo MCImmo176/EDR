@@ -442,10 +442,22 @@
       "scrollDown": "Scopri di più"
     },
     "enjoy": {
+      "title": "Goditi",
+      "ourLocation": "La nostra posizione",
       "events": {
         "title": "Luoghi ed Eventi da Scoprire",
-        "description": "Scopri la nostra selezione di luoghi ed eventi imperdibili da visitare durante il tuo soggiorno nella nostra villa eccezionale.",
+        "description": "Scopri la nostra selezione di luoghi ed eventi imperdibili da visitare durante il tuo soggiorno nella nostra villa d'eccezione.",
         "allPlaces": "Tutti i luoghi",
+        "fortAntoine": {
+          "title": "Passeggiata notturna a Fort Antoine",
+          "description": "Teatro all'aperto situato sulle alture di Monaco, Fort Antoine ospita rappresentazioni artistiche intime sotto le stelle. Goditi uno spettacolo in questo luogo ricco di storia, di fronte al mare, in un'atmosfera unica che mescola cultura, patrimonio e magia notturna.",
+          "date": "Serate estive",
+          "type": "Cultura ed Eventi",
+          "comments": {
+            "theater": "Teatro, musica, cinema all'aperto",
+            "view": "Vista panoramica sul Mediterraneo"
+          }
+        },
         "monacoGP": {
           "title": "Gran Premio di Monaco",
           "description": "Vivi la mitica gara dalla nostra villa o con i nostri accessi VIP alle migliori tribune del circuito.",
@@ -574,6 +586,20 @@
     },
     "villaException": {
       "line1": "Un'esperienza unica"
+    }
+  },
+  "luxuryText": {
+    "villa": {
+      "line1": "L'esperienza tra cielo e mare"
+    },
+    "contact": {
+      "line1": "Il tuo soggiorno d'eccezione ti aspetta"
+    },
+    "gallery": {
+      "line1": "Scopri la nostra villa d'eccezione"
+    },
+    "discover": {
+      "line1": "Una posizione privilegiata sulla Costa Azzurra"
     }
   }
 } 

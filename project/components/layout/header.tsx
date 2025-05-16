@@ -94,21 +94,21 @@ export function Header() {
         <Button
           variant="ghost"
           size="icon"
-          className="md:hidden"
+          className="md:hidden relative z-50 flex items-center justify-center w-10 h-10 bg-white/80 backdrop-blur-sm shadow-sm rounded-full border border-[#b7a66b]/20"
           onClick={toggleMobileMenu}
           aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
         >
           {isMobileMenuOpen ? (
-            <X className="h-6 w-6" />
+            <X className="h-6 w-6 text-[#b7a66b]" />
           ) : (
-            <Menu className="h-6 w-6" />
+            <Menu className="h-6 w-6 text-[#b7a66b]" />
           )}
         </Button>
 
         {/* Mobile Navigation */}
         <div
           className={cn(
-            "fixed inset-0 bg-background z-40 flex flex-col justify-center items-center space-y-8 transition-all duration-300 md:hidden",
+            "fixed inset-0 bg-background/98 backdrop-blur-sm z-40 flex flex-col justify-center items-center space-y-8 transition-all duration-300 md:hidden",
             isMobileMenuOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none"

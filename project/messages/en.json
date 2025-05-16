@@ -407,6 +407,16 @@
         "title": "Places & Events to Discover",
         "description": "Discover our selection of must-visit places and events during your stay in our exceptional villa.",
         "allPlaces": "All places",
+        "fortAntoine": {
+          "title": "Night Walk at Fort Antoine",
+          "description": "An open-air theater located on the heights of Monaco, Fort Antoine hosts intimate artistic performances under the stars. Enjoy a show in this historic venue, facing the sea, in a unique atmosphere blending culture, heritage and nocturnal magic.",
+          "date": "Summer evenings",
+          "type": "Culture & Events",
+          "comments": {
+            "theater": "Theater, music, open-air cinema",
+            "view": "Panoramic view of the Mediterranean"
+          }
+        },
         "monacoGP": {
           "title": "Monaco Grand Prix",
           "description": "Experience the legendary race from our villa or with our VIP access to the best stands on the circuit.",

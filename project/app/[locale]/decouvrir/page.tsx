@@ -132,11 +132,22 @@ export default function DecouvrirPage() {
       ]
     },
     {
+      title: t('enjoy.events.fortAntoine.title'),
+      description: t('enjoy.events.fortAntoine.description'),
+      image: "/images/discover/fort-antoine.jpg",
+      category: t('enjoy.events.fortAntoine.type'),
+      bestTime: t('enjoy.events.fortAntoine.date'),
+      comments: [
+        { icon: Building, text: t('enjoy.events.fortAntoine.comments.theater') },
+        { icon: Mountain, text: t('enjoy.events.fortAntoine.comments.view') }
+      ]
+    },
+    {
       title: "Top Marques Monaco",
       description: "Salon de luxe où vous pourrez admirer et même essayer les hypercars, montres et yachts les plus exclusifs au monde.",
       image: "/images/discover/top-marques.jpg",
       category: "Culture & Événements",
-      bestTime: "🗓️ Juin chaque année",
+      bestTime: "Juin chaque année",
       comments: [
         { icon: Sparkles, text: "Expérience immersive" }
       ]
@@ -146,14 +157,14 @@ export default function DecouvrirPage() {
       description: "Compétition équestre prestigieuse sur le port Hercule attirant les meilleurs cavaliers mondiaux dans un cadre exceptionnel.",
       image: "/images/discover/jumping.jpg",
       category: "Culture & Événements",
-      bestTime: "🗓️ Juillet chaque année"
+      bestTime: "Juillet chaque année"
     },
     {
       title: "Monaco Yacht Show",
       description: "Le rendez-vous incontournable du yachting de luxe, présentant les plus beaux navires et voiliers d'exception.",
       image: "/images/discover/yacht-show.jpg",
       category: "Culture & Événements",
-      bestTime: "🗓️ Septembre chaque année",
+      bestTime: "Septembre chaque année",
       comments: [
         { icon: Star, text: "120+ superyachts exposés" }
       ]
@@ -163,14 +174,14 @@ export default function DecouvrirPage() {
       description: "Course électrisante de Formule E sur le mythique circuit de Monaco, alliant innovation et tradition du sport automobile.",
       image: "/images/discover/e-prix.jpg",
       category: "Culture & Événements",
-      bestTime: "🗓️ Mai chaque année"
+      bestTime: "Mai chaque année"
     },
     {
       title: "Concerts au Palais Princier",
       description: "Soirées musicales d'exception dans la cour d'honneur du Palais sous les étoiles monégasques.",
       image: "/images/discover/palais-concerts.jpg",
       category: "Culture & Événements",
-      bestTime: "🎵 Saison estivale"
+      bestTime: "Saison estivale"
     }
   ];
 
@@ -180,15 +191,15 @@ export default function DecouvrirPage() {
       description: "Prestigieux tournoi de tennis sur terre battue au Monte-Carlo Country Club, avec vue imprenable sur la Méditerranée.",
       image: "/images/discover/tennis.jpg",
       category: "Sport & Loisirs",
-      bestTime: "🗓️ Avril chaque année"
+      bestTime: "Avril chaque année"
     },
     {
       title: "Activités nautiques & sportives",
       description: "Expériences sur-mesure organisées par notre conciergerie : golf, voilier privatisé, plongée ou paddle au lever du soleil.",
       image: "/images/discover/activites.jpg",
       category: "Sport & Loisirs",
-      difficulty: "🌟 Tous niveaux",
-      bestTime: "⏰ Sur réservation"
+      difficulty: "Tous niveaux",
+      bestTime: "Sur réservation"
     }
   ];
 
@@ -198,40 +209,40 @@ export default function DecouvrirPage() {
       description: "Collection spectaculaire de plantes succulentes avec vue panoramique sur la Principauté et grottes préhistoriques à explorer.",
       image: "/images/discover/jardin-exotique.jpg",
       category: "Nature & Paysages",
-      duration: "⏱️ 1-2 heures",
-      bestTime: "☀️ Matinée"
+      duration: "1-2 heures",
+      bestTime: "Matinée"
     },
     {
       title: "Le Rocher & le Palais Princier",
       description: "Promontoire historique abritant le Palais Princier. Ne manquez pas la relève de la garde des Carabiniers du Prince.",
       image: "/images/discover/rocher.jpg",
       category: "Nature & Paysages",
-      bestTime: "⏰ Relève de la garde à 11h55"
+      bestTime: "Relève de la garde à 11h55"
     },
     {
       title: "La Vallée des Merveilles",
       description: "Site archéologique fascinant avec 40 000+ gravures rupestres datant de l'âge du Bronze, niché dans un paysage alpin grandiose.",
       image: "/images/discover/vallee-merveilles.jpg",
       category: "Nature & Paysages",
-      difficulty: "🥾 Modérée à difficile",
-      duration: "⏱️ Journée complète",
-      bestTime: "☀️ Été (juin-septembre)"
+      difficulty: "Modérée à difficile",
+      duration: "Journée complète",
+      bestTime: "Été (juin-septembre)"
     },
     {
       title: "Crique secrète de Monaco",
       description: "Plage confidentielle aux eaux turquoise accessible par un sentier discret ou par la mer, loin de l'agitation.",
       image: "/images/discover/crique.jpg",
       category: "Nature & Paysages",
-      difficulty: "🥾 Facile",
-      bestTime: "🌅 Début de matinée"
+      difficulty: "Facile",
+      bestTime: "Début de matinée"
     },
     {
       title: "Les Joyaux de la Riviera",
       description: "Découvrez la Baie de Villefranche, Beaulieu-sur-Mer et les jardins du Cap Martin lors d'une excursion panoramique.",
       image: "/images/discover/baie.jpg",
       category: "Nature & Paysages",
-      duration: "⏱️ Demi-journée",
-      bestTime: "🌇 Fin d'après-midi"
+      duration: "Demi-journée",
+      bestTime: "Fin d'après-midi"
     }
   ];
 
@@ -241,39 +252,39 @@ export default function DecouvrirPage() {
       description: "Village médiéval authentique avec château du Xe siècle et olivier millénaire, plus vieux spécimen d'Europe.",
       image: "/images/discover/roquebrune.jpg",
       category: "Villages & Art de Vivre",
-      duration: "⏱️ 2 heures",
-      bestTime: "🍽️ Déjeuner dans le village"
+      duration: "2 heures",
+      bestTime: "Déjeuner dans le village"
     },
     {
       title: "Èze, le nid d'aigle",
       description: "Village perché offrant une vue spectaculaire, avec ruelles pavées, boutiques d'artisans et le célèbre Jardin Exotique.",
       image: "/images/discover/eze.jpg",
       category: "Villages & Art de Vivre",
-      difficulty: "🥾 Montée raide",
-      bestTime: "🌅 Lever de soleil"
+      difficulty: "Montée raide",
+      bestTime: "Lever de soleil"
     },
     {
       title: "Saint-Paul de Vence",
       description: "Musée à ciel ouvert abritant galeries prestigieuses et la Fondation Maeght. Ne manquez pas La Colombe d'Or et ses œuvres d'art.",
       image: "/images/discover/saint-paul.jpg",
       category: "Villages & Art de Vivre",
-      duration: "⏱️ Demi-journée",
-      bestTime: "🎨 Après-midi"
+      duration: "Demi-journée",
+      bestTime: "Après-midi"
     },
     {
       title: "Mougins",
       description: "Village pittoresque devenu la Mecque de la gastronomie française, avec restaurants étoilés et ateliers d'artistes.",
       image: "/images/discover/mougins.jpg",
       category: "Villages & Art de Vivre",
-      bestTime: "🍽️ Dîner gastronomique"
+      bestTime: "Dîner gastronomique"
     },
     {
       title: "Saint-Tropez",
       description: "De votre villa, rejoignez ce village mythique en hélicoptère ou yacht. Flânez sur le port et profitez des plages de Pampelonne.",
       image: "/images/discover/saint-tropez.jpg",
       category: "Villages & Art de Vivre",
-      duration: "⏱️ Journée complète",
-      bestTime: "🛥️ Arrivée par la mer"
+      duration: "Journée complète",
+      bestTime: "Arrivée par la mer"
     }
   ];
 
@@ -283,25 +294,25 @@ export default function DecouvrirPage() {
       description: "Liaison directe avec l'aéroport de Nice en 7 minutes ou excursions panoramiques pour découvrir la Côte d'Azur vue du ciel.",
       image: "/images/discover/helicoptere.jpg",
       category: "Transferts & Expériences Premium",
-      duration: "✈️ 7min depuis Nice",
-      bestTime: "🌞 Jour clair"
+      duration: "7min depuis Nice",
+      bestTime: "Jour clair"
     },
     {
       title: "Expériences nautiques",
       description: "Croisière privée au coucher du soleil, excursion vers les îles de Lérins ou transfert VIP vers les destinations côtières exclusives.",
       image: "/images/discover/croisiere.jpg",
       category: "Transferts & Expériences Premium",
-      bestTime: "🌅 Crépuscule"
+      bestTime: "Crépuscule"
     }
   ];
 
   const categories = [
-    { code: "culture-monaco", title: "🎭 Culture & Événements", icon: Building },
-    { code: "sport-loisirs", title: "🎾 Sport & Loisirs", icon: Star },
-    { code: "nature-paysages", title: "🏞 Nature & Paysages", icon: Mountain },
-    { code: "villages-art-vivre", title: "🏘 Villages", icon: Landmark },
-    { code: "premium-experiences", title: "✈ Expériences Premium", icon: Compass },
-    { code: "secrets", title: "🔍 Secrets d'Initiés", icon: MapPin }
+    { code: "sport-loisirs", title: t('enjoy.categories.sports'), icon: Star },
+    { code: "villages-art-vivre", title: t('enjoy.categories.villages'), icon: Landmark },
+    { code: "secrets", title: t('enjoy.categories.secrets'), icon: MapPin },
+    { code: "culture-monaco", title: t('enjoy.categories.culture'), icon: Building },
+    { code: "nature-paysages", title: t('enjoy.categories.nature'), icon: Mountain },
+    { code: "premium-experiences", title: t('enjoy.categories.premium'), icon: Compass }
   ];
 
   const allArticles = [
@@ -423,11 +434,10 @@ export default function DecouvrirPage() {
                 <Button
                   asChild
                   size="lg"
-                  className="relative bg-transparent text-white border border-[#b7a66b] overflow-hidden group hover:bg-[#b7a66b] transition-all duration-700 text-lg px-12 py-6 rounded-none"
+                  className="relative bg-[#b7a66b] text-white border-2 border-[#b7a66b] rounded-lg overflow-hidden group hover:bg-white hover:text-[#b7a66b] transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-[#b7a66b]/20 hover:-translate-y-1 text-lg px-8 py-4"
                 >
                   <Link href="/contact">
-                    <span className="relative z-10 tracking-wider">Réserver maintenant</span>
-                    <div className="absolute inset-0 bg-[#b7a66b] z-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+                    <span className="relative z-10 tracking-wider font-medium">Réserver maintenant</span>
                   </Link>
                 </Button>
               </motion.div>
@@ -466,9 +476,9 @@ export default function DecouvrirPage() {
             viewport={{ once: true }}
             className="text-center mb-12 sm:mb-16 sticky top-0 z-10 bg-white bg-opacity-90 backdrop-blur-sm pt-8 pb-4"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display mb-4 sm:mb-6 text-gray-900">{t('enjoy.events.title')}</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-light tracking-wide mb-4 sm:mb-6 text-gray-900">{t('enjoy.events.title')}</h2>
             <div className="h-1 w-20 bg-[#b7a66b] mx-auto" />
-            <p className="text-gray-700 mt-6 max-w-3xl mx-auto text-lg">Découvrez notre sélection des lieux et événements incontournables à visiter pendant votre séjour dans notre villa d'exception.</p>
+            <p className="text-gray-700 mt-6 max-w-3xl mx-auto text-lg font-light">{t('enjoy.events.description')}</p>
           </motion.div>
 
           <motion.div
@@ -477,37 +487,58 @@ export default function DecouvrirPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-16"
           >
-            <div className="flex flex-wrap justify-center gap-2 md:gap-3 max-w-6xl mx-auto px-2">
-              <motion.button
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                onClick={() => setActiveCategory(null)}
-                className={`p-2 sm:p-3 rounded-lg transition-all duration-300 flex flex-col items-center justify-center w-[100px] sm:w-[110px] h-14 sm:h-16 ${
-                  activeCategory === null
-                    ? "bg-[#b7a66b] text-white shadow-lg shadow-[#b7a66b]/30"
-                    : "bg-white text-gray-700 hover:bg-[#b7a66b]/80 hover:text-white border border-gray-200 shadow-sm"
-                }`}
-              >
-                <Star className={`h-4 sm:h-5 w-4 sm:w-5 mb-1 ${activeCategory === null ? "text-white" : "text-[#b7a66b]"}`} />
-                <span className="text-xs font-medium">Tous les lieux</span>
-              </motion.button>
-              
-              {categories.map((category, index) => (
+            <div className="grid grid-cols-1 gap-6 max-w-6xl mx-auto px-2">
+              <div className="flex flex-wrap justify-center gap-2 md:gap-3">
                 <motion.button
-                  key={index}
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
-                  onClick={() => setActiveCategory(category.code)}
-                  className={`p-2 sm:p-3 rounded-lg transition-all duration-300 flex flex-col items-center justify-center w-[100px] sm:w-[110px] h-14 sm:h-16 ${
-                    activeCategory === category.code
+                  onClick={() => setActiveCategory(null)}
+                  className={`p-2 sm:p-3 rounded-full transition-all duration-300 flex flex-col items-center justify-center w-[120px] sm:w-[130px] h-14 sm:h-16 ${
+                    activeCategory === null
                       ? "bg-[#b7a66b] text-white shadow-lg shadow-[#b7a66b]/30"
                       : "bg-white text-gray-700 hover:bg-[#b7a66b]/80 hover:text-white border border-gray-200 shadow-sm"
                   }`}
                 >
-                  <category.icon className={`h-4 sm:h-5 w-4 sm:w-5 mb-1 ${activeCategory === category.code ? "text-white" : "text-[#b7a66b]"}`} />
-                  <span className="text-xs font-medium">{category.title.split(' ').slice(1).join(' ')}</span>
+                  <Star className={`h-4 sm:h-5 w-4 sm:w-5 mb-1 ${activeCategory === null ? "text-white" : "text-[#b7a66b]"}`} />
+                  <span className="text-xs font-medium">{t('enjoy.events.allPlaces')}</span>
                 </motion.button>
-              ))}
+                
+                {categories.slice(0, 3).map((category, index) => (
+                  <motion.button
+                    key={index}
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.97 }}
+                    onClick={() => setActiveCategory(category.code)}
+                    className={`p-2 sm:p-3 rounded-full transition-all duration-300 flex flex-col items-center justify-center w-[120px] sm:w-[130px] h-14 sm:h-16 ${
+                      activeCategory === category.code
+                        ? "bg-[#b7a66b] text-white shadow-lg shadow-[#b7a66b]/30"
+                        : "bg-white text-gray-700 hover:bg-[#b7a66b]/80 hover:text-white border border-gray-200 shadow-sm"
+                    }`}
+                  >
+                    <category.icon className={`h-4 sm:h-5 w-4 sm:w-5 mb-1 ${activeCategory === category.code ? "text-white" : "text-[#b7a66b]"}`} />
+                    <span className="text-xs font-medium">{category.title}</span>
+                  </motion.button>
+                ))}
+              </div>
+              
+              <div className="flex flex-wrap justify-center gap-2 md:gap-3 mt-2 md:mt-3">
+                {categories.slice(3).map((category, index) => (
+                  <motion.button
+                    key={index}
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.97 }}
+                    onClick={() => setActiveCategory(category.code)}
+                    className={`p-2 sm:p-3 rounded-full transition-all duration-300 flex flex-col items-center justify-center w-[120px] sm:w-[130px] h-14 sm:h-16 ${
+                      activeCategory === category.code
+                        ? "bg-[#b7a66b] text-white shadow-lg shadow-[#b7a66b]/30"
+                        : "bg-white text-gray-700 hover:bg-[#b7a66b]/80 hover:text-white border border-gray-200 shadow-sm"
+                    }`}
+                  >
+                    <category.icon className={`h-4 sm:h-5 w-4 sm:w-5 mb-1 ${activeCategory === category.code ? "text-white" : "text-[#b7a66b]"}`} />
+                    <span className="text-xs font-medium">{category.title}</span>
+                  </motion.button>
+                ))}
+              </div>
             </div>
           </motion.div>
 
@@ -519,7 +550,7 @@ export default function DecouvrirPage() {
               className="text-center mb-12"
             >
               <p className="inline-block px-6 py-2 bg-white rounded-full text-gray-700 text-sm border border-gray-200 shadow-sm">
-                {filteredArticles.length} {filteredArticles.length > 1 ? 'lieux' : 'lieu'} dans cette catégorie
+                {t('enjoy.filters.placesCount', { count: filteredArticles.length })}
               </p>
             </motion.div>
           )}
@@ -544,7 +575,7 @@ export default function DecouvrirPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                   
                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 px-2 xs:px-3 sm:px-4 py-1 xs:py-2 rounded-full text-xs xs:text-sm font-medium shadow-md transform transition-all duration-300 group-hover:scale-105">
-                    {categories.find(cat => cat.code === article.category)?.title.split(' ').slice(1).join(' ')}
+                    {categories.find(cat => cat.code === article.category)?.title}
                   </div>
                   
                   <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
@@ -560,19 +591,19 @@ export default function DecouvrirPage() {
                     {article.difficulty && (
                       <div className="flex items-center text-xs sm:text-sm group-hover:text-gray-900 transition-colors duration-300">
                         <Mountain className="mr-2 sm:mr-3 h-3 sm:h-4 w-3 sm:w-4 text-[#b7a66b]" />
-                        <span className="tracking-wide">{article.difficulty.replace('🥾', '')}</span>
+                        <span className="tracking-wide">{article.difficulty}</span>
                       </div>
                     )}
                     {article.duration && (
                       <div className="flex items-center text-xs sm:text-sm group-hover:text-gray-900 transition-colors duration-300">
                         <Clock className="mr-2 sm:mr-3 h-3 sm:h-4 w-3 sm:w-4 text-[#b7a66b]" />
-                        <span className="tracking-wide">{article.duration.replace('⏱️', '')}</span>
+                        <span className="tracking-wide">{article.duration}</span>
                       </div>
                     )}
                     {article.bestTime && (
                       <div className="flex items-center text-xs sm:text-sm group-hover:text-gray-900 transition-colors duration-300">
                         <Calendar className="mr-2 sm:mr-3 h-3 sm:h-4 w-3 sm:w-4 text-[#b7a66b]" />
-                        <span className="tracking-wide">{article.bestTime.replace(/🌅|☀️|🌇|🌿|🎭|🍽️|🎨|🛥️|🎵|🌊|🗓️|⏰/, '')}</span>
+                        <span className="tracking-wide">{article.bestTime}</span>
                       </div>
                     )}
                     {article.comments && article.comments.map((comment, i) => (
@@ -585,7 +616,7 @@ export default function DecouvrirPage() {
                   
                   <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-gray-100">
                     <div className="flex items-center text-[#b7a66b] text-xs sm:text-sm font-medium cursor-pointer group-hover:translate-x-1 transition-transform duration-300">
-                      <span>En savoir plus</span>
+                      <span>{t('enjoy.filters.learnMore')}</span>
                       <ArrowRight className="ml-2 h-3 sm:h-4 w-3 sm:w-4" />
                     </div>
                   </div>
@@ -629,7 +660,7 @@ export default function DecouvrirPage() {
               viewport={{ once: true }}
               className="text-2xl md:text-3xl lg:text-4xl text-gray-800 font-light italic mb-8"
             >
-              "Voir le monde, c'est être au-delà de soi-même. L'art et la culture sont ce qui fait de nous des êtres vivants."
+              {t('quote.text')}
             </motion.blockquote>
             
             <motion.div
@@ -640,7 +671,7 @@ export default function DecouvrirPage() {
               className="flex items-center justify-center"
             >
               <div className="w-10 h-0.5 bg-[#b7a66b] mr-4"></div>
-              <span className="text-gray-500 uppercase tracking-widest text-sm">F. Scott Fitzgerald</span>
+              <span className="text-gray-500 uppercase tracking-widest text-sm">{t('quote.author')}</span>
               <div className="w-10 h-0.5 bg-[#b7a66b] ml-4"></div>
             </motion.div>
           </motion.div>
@@ -678,7 +709,7 @@ export default function DecouvrirPage() {
               viewport={{ once: true }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-6 text-gray-900 leading-tight"
             >
-              Votre expérience <span className="text-[#b7a66b]">unique</span> sur la Côte d'Azur
+              {t('cta.title')}
             </motion.h2>
             
             <motion.p
@@ -688,7 +719,7 @@ export default function DecouvrirPage() {
               viewport={{ once: true }}
               className="text-gray-700 text-lg mb-12 max-w-3xl mx-auto leading-relaxed"
             >
-              Profitez de tous ces lieux d'exception depuis votre villa de luxe aux Étoiles du Rocher. Notre équipe de conciergerie se tient à votre disposition pour organiser vos excursions et créer des moments inoubliables sur mesure.
+              {t('cta.description')}
             </motion.p>
             
             <motion.div
@@ -702,14 +733,14 @@ export default function DecouvrirPage() {
                 href="/contact"
                 className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-white bg-[#b7a66b] rounded-lg hover:bg-[#b7a66b]/90 transition-all duration-300 ease-in-out transform hover:scale-105 shadow-md"
               >
-                Réserver votre séjour
+                {t('cta.bookNow')}
               </Link>
               
               <Link
                 href="/galerie"
                 className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-[#b7a66b] border-2 border-[#b7a66b] rounded-lg hover:bg-[#b7a66b]/10 transition-all duration-300 ease-in-out"
               >
-                Explorer notre galerie
+                {t('cta.exploreGallery')}
               </Link>
             </motion.div>
           </motion.div>
