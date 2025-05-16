@@ -190,28 +190,52 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Section Art de vivre */}
+      {/* Section Art de vivre - modifiée avec citation inspirante */}
       <section className="py-32 bg-white">
-        <div className="container max-w-4xl mx-auto px-4">
+        <div className="container max-w-5xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-12"
+            className="text-center"
           >
-            <div className="text-center">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-light text-black mb-6">
-                Art de vivre
-              </h2>
-              <div className="h-px w-20 bg-[#b7a66b] mx-auto mb-8"></div>
+            <div className="mb-16">
+              <h1 className="text-5xl md:text-6xl font-light tracking-wide">
+                L'art de vivre<br />
+                méditerranéen
+              </h1>
+              <div className="h-1 w-20 bg-[#b7a66b] mx-auto mt-6"></div>
             </div>
             
-            <div className="space-y-8 text-lg md:text-xl text-neutral-800 leading-relaxed">
-              <p className="italic font-light">"Il y a des lieux où souffle l'esprit."</p>
-              <p>Ici, le murmure des <span className="relative inline-block align-baseline"><span className="z-10 relative">pins</span><span className="absolute inset-x-0 bottom-1 h-3 bg-[#D4AF37]/30 rounded-md z-0" aria-hidden="true"></span></span> se mêle au clapotis de la piscine. La <span className="relative inline-block align-baseline"><span className="z-10 relative">lumière dorée</span><span className="absolute inset-x-0 bottom-1 h-3 bg-[#D4AF37]/30 rounded-md z-0" aria-hidden="true"></span></span> caresse chaque pierre, chaque feuille. L'horizon s'ouvre, infini, sur la <span className="relative inline-block align-baseline"><span className="z-10 relative">Méditerranée</span><span className="absolute inset-x-0 bottom-1 h-3 bg-[#D4AF37]/30 rounded-md z-0" aria-hidden="true"></span></span>.</p>
-              <p>Chaque instant est une invitation au <span className="relative inline-block align-baseline"><span className="z-10 relative">voyage intérieur</span><span className="absolute inset-x-0 bottom-1 h-3 bg-[#D4AF37]/30 rounded-md z-0" aria-hidden="true"></span></span>, à la contemplation, à la <span className="relative inline-block align-baseline"><span className="z-10 relative">douceur de vivre</span><span className="absolute inset-x-0 bottom-1 h-3 bg-[#D4AF37]/30 rounded-md z-0" aria-hidden="true"></span></span>.</p>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+              viewport={{ once: true }}
+              className="mt-6 max-w-3xl mx-auto relative py-16"
+            >
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 text-[80px] text-[#b7a66b]/20 font-serif">"</div>
+              <p className="text-2xl md:text-3xl font-light text-neutral-700 italic max-w-3xl mx-auto leading-relaxed">
+                La beauté d'un lieu se révèle dans la lumière qui le caresse, dans le silence qui l'habite, et dans les émotions qu'il éveille en nous.
+              </p>
+              <motion.div
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.6 }}
+                viewport={{ once: true }}
+                className="h-px w-16 bg-[#b7a66b]/50 mx-auto my-8 origin-center"
+              />
+              <motion.p 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.8 }}
+                viewport={{ once: true }}
+                className="text-sm uppercase tracking-widest text-neutral-400"
+              >
+                LES ÉTOILES DU ROCHER
+              </motion.p>
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -328,77 +352,75 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.6 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
+          >
             {[
               {
                 src: "/images/gallery/chambres/8.jpeg",
                 alt: "Chambre principale",
+                caption: "Chambre principale",
                 category: "Chambres",
-                description: "Suite parentale avec vue mer"
+                description: "Suite parentale avec vue mer et salle de bain privative, baignée de lumière naturelle."
               },
               {
                 src: "/images/gallery/interieur/3.JPEG",
                 alt: "Salon",
+                caption: "Salon",
                 category: "Intérieur",
-                description: "Espace de vie lumineux"
+                description: "Espace de vie lumineux avec grandes baies vitrées offrant une vue panoramique sur la Méditerranée."
               },
               {
                 src: "/images/gallery/exterieur/2.JPEG",
                 alt: "Terrasse",
+                caption: "Terrasse",
                 category: "Extérieur",
-                description: "Terrasse panoramique avec vue"
+                description: "Terrasse spacieuse aménagée pour la détente et les repas en plein air face à l'horizon azur."
               }
             ].map((image, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl"
-              >
-          <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover transform group-hover:scale-110 transition-transform duration-1000"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute inset-0 border-2 border-white/20 rounded-2xl transform scale-105 group-hover:scale-110 transition-transform duration-1000"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#b7a66b]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  {image.description && (
-                    <span className="text-[#b7a66b] text-sm font-medium tracking-wider uppercase mb-2 block">
-                      {image.category}
-                    </span>
-                  )}
-                  <h3 className="text-white text-xl font-display mb-2">{image.alt}</h3>
-                  {image.description && (
-                    <p className="text-white/80 text-sm">{image.description}</p>
-                  )}
+              <div key={index} className="group relative overflow-hidden h-[350px] md:h-[400px] flex flex-col">
+                <div className="relative flex-grow overflow-hidden">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 </div>
-              </motion.div>
+                
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white z-10">
+                  <div className="h-px w-12 bg-[#b7a66b] mb-4 transform origin-left scale-0 group-hover:scale-100 transition-transform duration-500"></div>
+                  <span className="text-white/80 text-sm font-medium uppercase tracking-wider mb-2 block">
+                    {image.category}
+                  </span>
+                  <h3 className="text-xl font-light tracking-wide mb-3">{image.caption}</h3>
+                  <p className="text-white/80 text-sm font-light transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                    {image.description}
+                  </p>
+                </div>
+              </div>
             ))}
-        </div>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mt-12"
+            className="text-center mt-16"
           >
-            <Button
-              asChild
-              size="lg"
-              className="bg-white border-2 border-[#b7a66b] text-[#b7a66b] hover:bg-[#b7a66b] hover:text-white transition-all duration-500 px-10 py-5 rounded-full font-semibold text-lg shadow-md group"
+            <Link 
+              href="/galerie" 
+              className="inline-flex items-center justify-center bg-transparent border border-[#b7a66b] text-sm text-neutral-700 px-8 py-4 font-light tracking-wider hover:bg-[#b7a66b]/10 transition-all duration-300 max-w-max"
             >
-              <Link href="/galerie" className="flex items-center gap-2">
-                Voir la galerie complète
-                <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
+              <span>Voir la galerie complète</span>
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
           </motion.div>
         </div>
       </section>

@@ -60,7 +60,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="relative w-screen h-screen overflow-hidden p-0 m-0">
+      <section className="relative h-screen w-full overflow-hidden p-0 m-0">
         <div className="absolute inset-0 w-full h-full">
           <iframe
             src="https://www.youtube.com/embed/hoGfA3DP2PQ?autoplay=1&mute=1&loop=1&playlist=hoGfA3DP2PQ&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
@@ -83,12 +83,12 @@ export default function ContactPage() {
         </div>
         
         <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-          <div className="container max-w-6xl mx-auto px-2 sm:px-4 py-10 sm:py-0 overflow-auto max-h-screen">
+          <div className="container max-w-6xl mx-auto px-2 sm:px-4 py-10 sm:py-0 h-full flex items-center overflow-visible">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVideoLoaded ? 1 : 0, y: isVideoLoaded ? 0 : 20 }}
+              initial={{ opacity: 0, y: 0 }}
+              animate={{ opacity: isVideoLoaded ? 1 : 0, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="text-center text-white space-y-8 sm:space-y-12"
+              className="text-center text-white space-y-8 sm:space-y-12 w-full"
             >
               <div className="space-y-6 sm:space-y-8">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display">Les Étoiles du Rocher</h2>
