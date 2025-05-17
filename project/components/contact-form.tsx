@@ -5,15 +5,21 @@ import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Check, Send, X } from "lucide-react";
+import { Check, Send, X, Loader2 } from "lucide-react";
 import { ComboboxCountry } from "@/components/ui/combobox-country";
 import { countryCodes } from "@/data/country-codes";
 import { useContactForm } from "./providers/contact-form-provider";
+import emailjs from '@emailjs/browser';
+
+// Identifiants EmailJS fournis
+const EMAILJS_SERVICE_ID = "service_6q6y4b1";
+const EMAILJS_TEMPLATE_ID = "template_yd3mmom";
+const EMAILJS_PUBLIC_KEY = "iXQm2-_WREMX8F2dO";
 
 const formSchema = z.object({
   firstName: z.string().min(2, { message: "Le prénom doit contenir au moins 2 caractères" }),
@@ -28,6 +34,9 @@ export function ContactForm() {
   const t = useTranslations('contact');
   const { isOpen, closeForm } = useContactForm();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorSubmit, setErrorSubmit] = useState<string | null>(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -42,10 +51,36 @@ export function ContactForm() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    setTimeout(() => {
+    setIsSubmitting(true);
+    setErrorSubmit(null);
+
+    // Préparation des données pour EmailJS
+    const templateParams = {
+      nom: values.name,
+      prenom: values.firstName,
+      email: values.email,
+      indicatif: values.countryCode,
+      telephone: values.phone,
+      message: values.message,
+    };
+
+    // Envoi de l'email via EmailJS avec les identifiants spécifiques
+    emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      templateParams,
+      EMAILJS_PUBLIC_KEY
+    )
+    .then(() => {
       setIsSubmitted(true);
-    }, 1000);
+      setIsSubmitting(false);
+      form.reset();
+    })
+    .catch((error) => {
+      console.error("Erreur lors de l'envoi de l'email:", error);
+      setErrorSubmit("Une erreur est survenue lors de l'envoi du message. Veuillez réessayer.");
+      setIsSubmitting(false);
+    });
   }
 
   return (
@@ -83,7 +118,7 @@ export function ContactForm() {
                 </div>
               ) : (
                 <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                     <div className="flex flex-col md:flex-row gap-4">
                       <div className="flex-1">
                         <FormField
@@ -186,20 +221,38 @@ export function ContactForm() {
                         </FormItem>
                       )}
                     />
+                    
+                    {errorSubmit && (
+                      <div className="bg-red-50 border border-red-200 text-red-600 p-3 text-sm rounded">
+                        {errorSubmit}
+                      </div>
+                    )}
+                    
                     <div className="flex gap-4">
                       <Button
                         type="button"
                         onClick={closeForm}
                         className="flex-1 bg-transparent text-gray-700 hover:bg-gray-100 border-2 border-gray-200 transition-all duration-500 rounded-none"
+                        disabled={isSubmitting}
                       >
                         Retour
                       </Button>
                       <Button 
                         type="submit" 
                         className="flex-1 bg-[#b7a66b] text-white hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-all duration-500 rounded-none"
+                        disabled={isSubmitting}
                       >
-                        <span className="relative z-10">{t('yourVilla.form.submit')}</span>
-                        <Send className="ml-2 h-4 w-4 relative z-10" />
+                        {isSubmitting ? (
+                          <>
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                            <span>Envoi en cours...</span>
+                          </>
+                        ) : (
+                          <>
+                            <span className="relative z-10">{t('yourVilla.form.submit')}</span>
+                            <Send className="ml-2 h-4 w-4 relative z-10" />
+                          </>
+                        )}
                       </Button>
                     </div>
                   </form>
