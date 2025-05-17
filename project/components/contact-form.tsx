@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -38,6 +38,11 @@ export function ContactForm() {
   const [errorSubmit, setErrorSubmit] = useState<string | null>(null);
   const formRef = useRef<HTMLFormElement>(null);
 
+  // Initialiser EmailJS
+  useEffect(() => {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+  }, []);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -64,6 +69,10 @@ export function ContactForm() {
       message: values.message,
     };
 
+    console.log("Envoi de l'email avec les paramètres:", templateParams);
+    console.log("Service ID:", EMAILJS_SERVICE_ID);
+    console.log("Template ID:", EMAILJS_TEMPLATE_ID);
+
     // Envoi de l'email via EmailJS avec les identifiants spécifiques
     emailjs.send(
       EMAILJS_SERVICE_ID,
@@ -71,7 +80,8 @@ export function ContactForm() {
       templateParams,
       EMAILJS_PUBLIC_KEY
     )
-    .then(() => {
+    .then((response) => {
+      console.log("Email envoyé avec succès:", response);
       setIsSubmitted(true);
       setIsSubmitting(false);
       form.reset();
@@ -126,9 +136,9 @@ export function ContactForm() {
                           name="firstName"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Nom</FormLabel>
+                              <FormLabel>{t('form.firstName')}</FormLabel>
                               <FormControl>
-                                <Input placeholder="Votre nom" className="rounded-none" {...field} />
+                                <Input placeholder={t('form.firstName')} className="rounded-none" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -141,9 +151,9 @@ export function ContactForm() {
                           name="name"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Prénom</FormLabel>
+                              <FormLabel>{t('form.lastName')}</FormLabel>
                               <FormControl>
-                                <Input placeholder="Votre prénom" className="rounded-none" {...field} />
+                                <Input placeholder={t('form.lastName')} className="rounded-none" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -156,9 +166,9 @@ export function ContactForm() {
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>{t('yourVilla.form.email')}</FormLabel>
+                          <FormLabel>{t('form.email')}</FormLabel>
                           <FormControl>
-                            <Input placeholder={t('yourVilla.form.emailPlaceholder')} className="rounded-none" {...field} />
+                            <Input placeholder={t('form.emailPlaceholder')} className="rounded-none" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -190,10 +200,10 @@ export function ContactForm() {
                           name="phone"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Téléphone</FormLabel>
+                              <FormLabel>{t('form.phone')}</FormLabel>
                               <FormControl>
                                 <Input 
-                                  placeholder="Votre numéro de téléphone"
+                                  placeholder={t('form.phonePlaceholder')}
                                   className="rounded-none"
                                   {...field} 
                                 />
@@ -209,10 +219,10 @@ export function ContactForm() {
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>{t('yourVilla.form.message')}</FormLabel>
+                          <FormLabel>{t('form.message')}</FormLabel>
                           <FormControl>
                             <Textarea 
-                              placeholder={t('yourVilla.form.messagePlaceholder')}
+                              placeholder={t('form.messagePlaceholder')}
                               className="resize-none min-h-[150px] rounded-none"
                               {...field} 
                             />
@@ -235,7 +245,7 @@ export function ContactForm() {
                         className="flex-1 bg-transparent text-gray-700 hover:bg-gray-100 border-2 border-gray-200 transition-all duration-500 rounded-none"
                         disabled={isSubmitting}
                       >
-                        Retour
+                        {t('buttons.back')}
                       </Button>
                       <Button 
                         type="submit" 
@@ -249,7 +259,7 @@ export function ContactForm() {
                           </>
                         ) : (
                           <>
-                            <span className="relative z-10">{t('yourVilla.form.submit')}</span>
+                            <span className="relative z-10">{t('form.submit')}</span>
                             <Send className="ml-2 h-4 w-4 relative z-10" />
                           </>
                         )}
