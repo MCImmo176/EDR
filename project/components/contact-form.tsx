@@ -40,7 +40,12 @@ export function ContactForm() {
 
   // Initialiser EmailJS
   useEffect(() => {
-    emailjs.init(EMAILJS_PUBLIC_KEY);
+    try {
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+      console.log("EmailJS initialisé avec succès");
+    } catch (error) {
+      console.error("Erreur lors de l'initialisation d'EmailJS:", error);
+    }
   }, []);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -73,21 +78,30 @@ export function ContactForm() {
     console.log("Service ID:", EMAILJS_SERVICE_ID);
     console.log("Template ID:", EMAILJS_TEMPLATE_ID);
 
-    // Envoi de l'email via EmailJS avec les identifiants spécifiques
+    // Version plus directe d'envoi avec EmailJS (méthode alternative)
     emailjs.send(
       EMAILJS_SERVICE_ID,
       EMAILJS_TEMPLATE_ID,
       templateParams,
-      EMAILJS_PUBLIC_KEY
+      {
+        publicKey: EMAILJS_PUBLIC_KEY,
+      }
     )
     .then((response) => {
       console.log("Email envoyé avec succès:", response);
+      console.log("Status:", response.status);
+      console.log("Text:", response.text);
       setIsSubmitted(true);
       setIsSubmitting(false);
       form.reset();
     })
     .catch((error) => {
       console.error("Erreur lors de l'envoi de l'email:", error);
+      
+      // Log détaillé de l'erreur
+      if (error.text) console.error("Message d'erreur:", error.text);
+      if (error.status) console.error("Status de l'erreur:", error.status);
+      
       setErrorSubmit("Une erreur est survenue lors de l'envoi du message. Veuillez réessayer.");
       setIsSubmitting(false);
     });
@@ -181,6 +195,7 @@ export function ContactForm() {
                           name="countryCode"
                           render={({ field }) => (
                             <FormItem className="w-full">
+                              <FormLabel>Indicatif</FormLabel>
                               <FormControl>
                                 <ComboboxCountry
                                   value={field.value}

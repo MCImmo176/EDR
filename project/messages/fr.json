@@ -306,6 +306,24 @@
   "contact": {
     "title": "Contact",
     "description": "Contactez-nous",
+    "form": {
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Email",
+      "emailPlaceholder": "Votre adresse email",
+      "phone": "Téléphone",
+      "phonePlaceholder": "Votre numéro de téléphone",
+      "message": "Message",
+      "messagePlaceholder": "Votre message",
+      "submit": "Envoyer",
+      "success": "Message envoyé avec succès",
+      "successDetail": "Nous vous répondrons dans les plus brefs délais."
+    },
+    "buttons": {
+      "bookStay": "Réserver votre séjour",
+      "requestInfo": "Demander des informations",
+      "back": "Retour"
+    },
     "yourVilla": {
       "title": "Votre villa vous attend",
       "subtitle": "Contactez-nous !",
