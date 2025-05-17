@@ -10,8 +10,15 @@
     "bookNow": "Book now",
     "contactUs": "Contact us",
     "learnMore": "Learn more",
-    "reserve": "Book",
-    "villaName": "Les Étoiles du Rocher"
+    "reserve": "Reserve",
+    "villaName": "Les Étoiles du Rocher",
+    "footer": {
+      "terms": "Terms of use",
+      "sales": "Terms of sale",
+      "gallery": "Gallery",
+      "discover": "Discover",
+      "villaName": "Les Étoiles du Rocher"
+    }
   },
   "nav": {
     "home": "Home",
@@ -78,7 +85,74 @@
         "nightDesc": "A magical atmosphere under the stars"
       }
     },
-    "description": "Discover an exceptional place where luxury and authenticity meet to create unforgettable moments."
+    "description": "Discover an exceptional place where luxury and authenticity meet to create unforgettable moments.",
+    "hero": {
+      "title": "Les Étoiles du Rocher",
+      "subtitle": "Let yourself be enchanted by the golden morning rays, the discreet song of pine trees, and the endless horizon of the Mediterranean."
+    },
+    "cta": {
+      "bookStay": "Book your stay",
+      "discoverVilla": "Discover the villa",
+      "mediterranean": "The Mediterranean art of living"
+    },
+    "quote": "The beauty of a place reveals itself in the caress of light, the silence that inhabits it, and the emotion it evokes.",
+    "villa": {
+      "title": "The Villa Les Étoiles du Rocher",
+      "description": "A jewel set facing the sea, where every detail invites contemplation. Upon waking, the whisper of waves and the azure view will compose your first memory of the day. The refined volumes, open to the exterior, offer a subtle sensory experience, combining sophistication and Riviera authenticity."
+    },
+    "features": {
+      "panoramicView": "Panoramic view of the Mediterranean",
+      "infinityPool": "Infinity pool",
+      "garden": "Mediterranean garden",
+      "services": "Tailored services"
+    },
+    "actionButton": "Discover the villa",
+    "gallery": {
+      "title": "Gallery",
+      "description": "Immerse yourself in the unique atmosphere of the spaces: light-bathed suites, a pool suspended above the sea, a rooftop with poetic accents...",
+      "mainSuite": {
+        "title": "Master Suite",
+        "description": "A serene parenthesis, bathed in clarity, with a view of the water and a private bathroom."
+      },
+      "livingRoom": {
+        "title": "Living Room",
+        "description": "Open volume, large bay windows, and an infinite perspective on the azure."
+      },
+      "terrace": {
+        "title": "Terrace",
+        "description": "A plateau in the open sky, designed for your moments of tranquility and outdoor dining."
+      },
+      "seeAll": "See the complete gallery"
+    },
+    "surroundings": {
+      "title": "Surroundings",
+      "description": "Explore nearby treasures, chosen for their character and discretion.",
+      "monaco": {
+        "title": "Monaco & Menton",
+        "description": "Hanging gardens, intimate museums, confidential addresses."
+      },
+      "italy": {
+        "title": "Escape to Italy",
+        "description": "Markets of Ventimiglia, Ligurian flavors, dolce vita within reach."
+      },
+      "trails": {
+        "title": "Secret paths of the French Riviera",
+        "description": "Perched villages, quiet coves, preserved panoramas."
+      },
+      "guide": "We will be your guides to compose a stay according to your finest desires."
+    },
+    "contact": {
+      "title": "Contact & Reservation",
+      "description": "For any request or to organize your private visit, our team responds with discretion and promptness.",
+      "phone": "Tel.: +33 6 XX XX XX XX",
+      "email": "Email: contact@lesetoilesdurocher.com",
+      "address": "Address: Roquebrune-Cap-Martin, French Riviera",
+      "stats": {
+        "experience": "Years of expertise: 10+",
+        "satisfaction": "Satisfied clients: 100%",
+        "support": "Dedicated support: 24/7"
+      }
+    }
   },
   "about": {
     "title": "About us",
@@ -368,17 +442,22 @@
       "messagePlaceholder": "Your message",
       "submit": "Send",
       "success": "Message sent successfully",
-      "successDetail": "Thank you for your message. Our team will contact you as soon as possible."
-    },
-    "info": {
-      "address": "Roquebrune-Cap-Martin, France",
-      "phone": "+33 6 XX XX XX XX",
-      "email": "contact@lesetoilesdurocher.com"
+      "successDetail": "Thank you for your message. Our team will contact you as soon as possible.",
+      "countryCode": {
+        "label": "Country Code",
+        "france": "France",
+        "code": "+33"
+      }
     },
     "buttons": {
       "bookStay": "Book your stay",
       "requestInfo": "Request information",
       "back": "Back"
+    },
+    "info": {
+      "address": "Roquebrune-Cap-Martin, France",
+      "phone": "+33 6 XX XX XX XX",
+      "email": "contact@lesetoilesdurocher.com"
     }
   },
   "info": {

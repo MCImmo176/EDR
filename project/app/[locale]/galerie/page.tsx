@@ -231,10 +231,6 @@ export default function GaleriePage() {
           </div>
         </div>
 
-        {/* Overlay Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none z-[5]"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent pointer-events-none z-[5]"></div>
-        
         {/* Hero Content */}
         <div className="relative z-10 h-full flex items-center">
           <div className="w-full h-full flex flex-col justify-center items-start">
@@ -425,7 +421,7 @@ export default function GaleriePage() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-all duration-[1200ms] filter saturate-[0.9] group-hover:saturate-[1] group-hover:brightness-105"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
+                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
                     <p className="text-white text-sm font-light tracking-wider backdrop-blur-[2px] bg-black/30 inline-block px-3 py-1 rounded">{photo.alt}</p>
                   </div>
                 </div>

@@ -2,10 +2,10 @@
   "common": {
     "welcome": "Benvenuto",
     "about": "Chi siamo",
-    "contact": "Contatto",
+    "contact": "Contatti",
     "services": "Servizi",
-    "readMore": "Scopri di più",
-    "discover": "Scoprire",
+    "readMore": "Leggi di più",
+    "discover": "Scopri",
     "bookNow": "Prenota ora",
     "contactUs": "Contattaci",
     "learnMore": "Scopri di più",
@@ -13,10 +13,10 @@
     "reserve": "Prenota",
     "villaName": "Les Étoiles du Rocher",
     "footer": {
-      "terms": "Termini e condizioni",
+      "terms": "Termini di utilizzo",
       "sales": "Condizioni di vendita",
       "gallery": "Galleria",
-      "discover": "Scoprire",
+      "discover": "Scopri",
       "villaName": "Les Étoiles du Rocher"
     },
     "menu": {
@@ -74,7 +74,79 @@
         "nightDesc": "Un'atmosfera magica sotto le stelle"
       }
     },
-    "description": "Scopri un luogo eccezionale dove lusso e autenticità si incontrano per creare momenti indimenticabili."
+    "description": "Scopri un luogo eccezionale dove lusso e autenticità si incontrano per creare momenti indimenticabili.",
+    "hero": {
+      "title": "Les Étoiles du Rocher",
+      "subtitle": "Lasciati incantare dall'oro dei raggi mattutini, dal canto discreto dei pini e dall'orizzonte infinito del Mediterraneo."
+    },
+    "cta": {
+      "bookStay": "Prenota il tuo soggiorno",
+      "discoverVilla": "Scopri la villa",
+      "mediterranean": "L'arte di vivere mediterranea"
+    },
+    "quote": "La bellezza di un luogo si rivela nella carezza della luce, nel silenzio che lo abita e nell'emozione che suscita.",
+    "villa": {
+      "title": "La Villa Les Étoiles du Rocher",
+      "description": "Un gioiello di fronte al mare, dove ogni dettaglio invita alla contemplazione. Al risveglio, il mormorio delle onde e la vista azzurra comporranno il tuo primo ricordo del giorno. I volumi raffinati, aperti verso l'esterno, offrono un'esperienza sensoriale sottile, combinando raffinatezza e autenticità della Costa Azzurra."
+    },
+    "features": {
+      "panoramicView": "Vista panoramica sul Mediterraneo",
+      "infinityPool": "Piscina a sfioro",
+      "garden": "Giardino con essenze mediterranee",
+      "services": "Servizi su misura"
+    },
+    "actionButton": "Scopri la villa",
+    "gallery": {
+      "title": "Galleria",
+      "description": "Immergiti nell'atmosfera unica degli spazi: suite inondate di luce, piscina sospesa sul mare, rooftop con accenti poetici...",
+      "mainSuite": {
+        "title": "Suite principale",
+        "description": "Parentesi serena, inondata di chiarezza, con vista sul mare e bagno privato."
+      },
+      "livingRoom": {
+        "title": "Salone",
+        "description": "Volume aperto, ampie vetrate e prospettiva infinita sull'azzurro."
+      },
+      "terrace": {
+        "title": "Terrazza",
+        "description": "Un altopiano in cielo aperto, progettato per i tuoi momenti di tranquillità e i pasti all'aperto."
+      },
+      "seeAll": "Vedi la galleria completa"
+    },
+    "surroundings": {
+      "title": "Nei dintorni",
+      "description": "Esplora tesori vicini, scelti per il loro carattere e la loro discrezione.",
+      "monaco": {
+        "title": "Monaco & Mentone",
+        "description": "Giardini pensili, musei intimi, indirizzi confidenziali."
+      },
+      "italy": {
+        "title": "Fuga in Italia",
+        "description": "Mercati di Ventimiglia, sapori liguri, dolce vita a portata di mano."
+      },
+      "trails": {
+        "title": "Sentieri segreti della Costa Azzurra",
+        "description": "Villaggi arroccati, calette silenziose, panorami preservati."
+      },
+      "guide": "Saremo le tue guide per comporre un soggiorno secondo i tuoi desideri più raffinati."
+    },
+    "contact": {
+      "title": "Contatti & Prenotazione",
+      "description": "Per qualsiasi richiesta o per organizzare la tua visita privata, il nostro team risponde con discrezione e prontezza.",
+      "phone": "Tel.: +33 6 XX XX XX XX",
+      "email": "Email: contact@lesetoilesdurocher.com",
+      "address": "Indirizzo: Roquebrune-Cap-Martin, Costa Azzurra",
+      "stats": {
+        "experience": "Anni di esperienza: 10+",
+        "satisfaction": "Clienti soddisfatti: 100%",
+        "support": "Supporto dedicato: 24/7"
+      }
+    },
+    "stats": {
+      "experience": "Anni di esperienza: 10+",
+      "satisfaction": "Clienti soddisfatti: 100%",
+      "support": "Supporto dedicato: 24 ore su 24, 7 giorni su 7"
+    }
   },
   "villa": {
     "title": "La Villa",
@@ -388,17 +460,22 @@
       "messagePlaceholder": "Il tuo messaggio",
       "submit": "Invia",
       "success": "Messaggio inviato con successo",
-      "successDetail": "Grazie per il tuo messaggio. Il nostro team ti contatterà al più presto."
-    },
-    "info": {
-      "address": "Roquebrune-Cap-Martin, Francia",
-      "phone": "+33 6 XX XX XX XX",
-      "email": "contact@lesetoilesdurocher.com"
+      "successDetail": "Grazie per il tuo messaggio. Il nostro team ti contatterà al più presto.",
+      "countryCode": {
+        "label": "Prefisso internazionale",
+        "france": "Francia",
+        "code": "+33"
+      }
     },
     "buttons": {
       "bookStay": "Prenota il tuo soggiorno",
       "requestInfo": "Richiedi informazioni",
       "back": "Indietro"
+    },
+    "info": {
+      "address": "Roquebrune-Cap-Martin, Francia",
+      "phone": "+33 6 XX XX XX XX",
+      "email": "contact@lesetoilesdurocher.com"
     },
     "yourVilla": {
       "title": "La tua villa ti aspetta",

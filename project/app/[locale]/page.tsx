@@ -5,14 +5,14 @@ import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { ArrowRight, Sun, Mountain, Landmark, ShoppingBag, Map, Leaf, Flag, School as Pool, Phone, Mail, MapPin } from 'lucide-react';
-import { useLanguage } from "@/hooks/useLanguage";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
 
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
 export default function Home() {
-  const { t } = useLanguage();
+  const t = useTranslations('home');
   const [hasWindow, setHasWindow] = useState(false);
   const videoRef = useRef<HTMLIFrameElement>(null);
   const { scrollYProgress } = useScroll();
@@ -31,7 +31,7 @@ export default function Home() {
       handleResize();
       return () => window.removeEventListener('resize', handleResize);
     }
-  }, []); // <-- This was the missing closing part
+  }, []);
 
   const handleResize = () => {
     if (videoRef.current) {
@@ -147,7 +147,6 @@ export default function Home() {
             }}
           />
         </motion.div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -156,10 +155,10 @@ export default function Home() {
           className="relative z-20 h-full flex flex-col items-center justify-center text-white px-4"
         >
           <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-light text-center mb-6 sm:mb-8 leading-tight tracking-wide luxury-text-shadow">
-            Les Étoiles du Rocher
+            {t('hero.title')}
           </h1>
           <p className="text-base sm:text-lg md:text-2xl font-light text-center max-w-3xl mb-8 sm:mb-12 leading-relaxed tracking-wide luxury-text-shadow">
-            Laissez-vous porter par la lumière dorée, le murmure des pins<br className="hidden sm:block" />et l'horizon infini de la Méditerranée.
+            {t('hero.subtitle')}
           </p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -173,7 +172,7 @@ export default function Home() {
               className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border-2 border-white/50 rounded-full px-8 py-6 text-lg transition-all duration-500"
             >
               <Link href="/contact">
-                Réserver votre séjour
+                {t('cta.bookStay')}
               </Link>
             </Button>
             <Button 
@@ -183,7 +182,7 @@ export default function Home() {
               className="bg-transparent hover:bg-white/10 text-white border-2 border-white/50 rounded-full px-8 py-6 text-lg transition-all duration-500"
             >
               <Link href="/galerie">
-                Découvrir la villa
+                {t('cta.discoverVilla')}
               </Link>
             </Button>
           </motion.div>
@@ -202,8 +201,7 @@ export default function Home() {
           >
             <div className="mb-16">
               <h1 className="text-5xl md:text-6xl font-light tracking-wide">
-                L'art de vivre<br />
-                méditerranéen
+                {t('cta.mediterranean')}
               </h1>
               <div className="h-1 w-20 bg-[#b7a66b] mx-auto mt-6"></div>
             </div>
@@ -217,7 +215,7 @@ export default function Home() {
             >
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 text-[80px] text-[#b7a66b]/20 font-serif">"</div>
               <p className="text-2xl md:text-3xl font-light text-neutral-700 italic max-w-3xl mx-auto leading-relaxed">
-                La beauté d'un lieu se révèle dans la lumière qui le caresse, dans le silence qui l'habite, et dans les émotions qu'il éveille en nous.
+                {t('quote')}
               </p>
               <motion.div
                 initial={{ scaleX: 0 }}
@@ -260,9 +258,6 @@ export default function Home() {
                 className="object-cover transform group-hover:scale-110 transition-transform duration-1000"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-              <div className="absolute inset-0 border-2 border-white/20 rounded-2xl transform scale-105 group-hover:scale-110 transition-transform duration-1000"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#b7a66b]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
               <div className="luxury-badge">Exclusivité</div>
             </motion.div>
 
@@ -275,23 +270,21 @@ export default function Home() {
             >
               <div className="space-y-4">
                 <h2 className="text-4xl md:text-5xl font-display font-bold text-black">
-                  Une villa d'exception
-              </h2>
+                  {t('villa.title')}
+                </h2>
                 <div className="h-px w-20 bg-[#b7a66b]"></div>
-            </div>
+              </div>
               
               <p className="text-lg md:text-xl text-neutral-800 leading-relaxed">
-                Réveillez-vous avec le doux murmure des vagues et une vue imprenable sur la Méditerranée. 
-                Chaque espace de la villa a été pensé pour vous offrir une expérience sensorielle unique, 
-                où le luxe se mêle à l'authenticité de la Côte d'Azur.
+                {t('villa.description')}
               </p>
 
               <div className="grid grid-cols-2 gap-6 pt-4">
                 {[ 
-                  { icon: <Sun className="w-7 h-7 text-[#b7a66b]" />, text: "Vue panoramique mer" },
-                  { icon: <Pool className="w-7 h-7 text-[#b7a66b]" />, text: "Piscine avec vue sur mer" },
-                  { icon: <Leaf className="w-7 h-7 text-[#b7a66b]" />, text: "Jardin méditerranéen" },
-                  { icon: <ShoppingBag className="w-7 h-7 text-[#b7a66b]" />, text: "Services VIP" }
+                  { icon: <Sun className="w-7 h-7 text-[#b7a66b]" />, text: t('features.panoramicView') },
+                  { icon: <Pool className="w-7 h-7 text-[#b7a66b]" />, text: t('features.infinityPool') },
+                  { icon: <Leaf className="w-7 h-7 text-[#b7a66b]" />, text: t('features.garden') },
+                  { icon: <ShoppingBag className="w-7 h-7 text-[#b7a66b]" />, text: t('features.services') }
                 ].map((feature, index) => (
                   <motion.div
                     key={index}
@@ -309,7 +302,7 @@ export default function Home() {
                     </span>
                   </motion.div>
                 ))}
-            </div>
+              </div>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -323,7 +316,7 @@ export default function Home() {
                   className="bg-white border-2 border-[#b7a66b] text-[#b7a66b] hover:bg-[#b7a66b] hover:text-white transition-all duration-500 px-10 py-5 rounded-full font-semibold text-lg shadow-md"
                 >
                   <Link href="/villa">
-                    Découvrir la villa
+                    {t('discoverButton')}
                   </Link>
                 </Button>
               </motion.div>
@@ -344,11 +337,10 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-black mb-6">Galerie</h2>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-black mb-6">{t('gallery.title')}</h2>
             <div className="h-px w-20 bg-[#b7a66b] mx-auto mb-8"></div>
             <p className="text-lg md:text-xl text-neutral-800 leading-relaxed max-w-3xl mx-auto">
-              Explorez les plus beaux espaces de la propriété : suites baignées de lumière, 
-              piscine vue sur mer, rooftop panoramique… Laissez-vous inspirer par l'atmosphère unique de la villa.
+              {t('gallery.description')}
             </p>
           </motion.div>
 
@@ -362,24 +354,24 @@ export default function Home() {
             {[
               {
                 src: "/images/gallery/chambres/8.jpeg",
-                alt: "Chambre principale",
-                caption: "Chambre principale",
+                alt: t('gallery.mainSuite.title'),
+                caption: t('gallery.mainSuite.title'),
                 category: "Chambres",
-                description: "Suite parentale avec vue mer et salle de bain privative, baignée de lumière naturelle."
+                description: t('gallery.mainSuite.description')
               },
               {
                 src: "/images/gallery/interieur/3.JPEG",
-                alt: "Salon",
-                caption: "Salon",
+                alt: t('gallery.livingRoom.title'),
+                caption: t('gallery.livingRoom.title'),
                 category: "Intérieur",
-                description: "Espace de vie lumineux avec grandes baies vitrées offrant une vue panoramique sur la Méditerranée."
+                description: t('gallery.livingRoom.description')
               },
               {
                 src: "/images/gallery/exterieur/2.JPEG",
-                alt: "Terrasse",
-                caption: "Terrasse",
+                alt: t('gallery.terrace.title'),
+                caption: t('gallery.terrace.title'),
                 category: "Extérieur",
-                description: "Terrasse spacieuse aménagée pour la détente et les repas en plein air face à l'horizon azur."
+                description: t('gallery.terrace.description')
               }
             ].map((image, index) => (
               <div key={index} className="group relative overflow-hidden h-[450px] md:h-[500px] flex flex-col">
@@ -390,7 +382,6 @@ export default function Home() {
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 </div>
                 
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white z-10">
@@ -418,7 +409,7 @@ export default function Home() {
               href="/galerie" 
               className="inline-flex items-center justify-center bg-transparent border border-[#b7a66b] text-sm text-neutral-700 px-8 py-4 font-light tracking-wider hover:bg-[#b7a66b]/10 transition-all duration-300 max-w-max"
             >
-              <span>Voir la galerie complète</span>
+              <span>{t('gallery.seeAll')}</span>
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </motion.div>
@@ -437,10 +428,10 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-black mb-6">Autour de la Villa</h2>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-black mb-6">{t('surroundings.title')}</h2>
             <div className="h-px w-20 bg-[#b7a66b] mx-auto mb-8"></div>
             <p className="text-lg md:text-xl text-neutral-800 leading-relaxed max-w-3xl mx-auto">
-              Découvrez les expériences exclusives et les trésors de la Côte d'Azur à quelques minutes de la villa.
+              {t('surroundings.description')}
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -453,14 +444,14 @@ export default function Home() {
               className="group bg-white/90 backdrop-blur-sm p-0 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col"
             >
               <div className="relative h-72 w-full">
-                <Image src="/images/discover/F1Monaco.jpg" alt="Monaco & Menton" fill className="object-cover" />
+                <Image src="/images/discover/F1Monaco.jpg" alt={t('surroundings.monaco.title')} fill className="object-cover" />
                 <div className="absolute top-4 left-4 bg-white/80 rounded-full p-2 shadow">
                   <Landmark className="w-7 h-7 text-[#b7a66b]" />
                 </div>
               </div>
               <div className="flex-1 flex flex-col p-6">
-                <h3 className="text-xl font-display font-bold text-black mb-2">Monaco & Menton</h3>
-                <p className="text-neutral-600 leading-relaxed mb-4">Luxe, shopping, musées, jardins suspendus…</p>
+                <h3 className="text-xl font-display font-bold text-black mb-2">{t('surroundings.monaco.title')}</h3>
+                <p className="text-neutral-600 leading-relaxed mb-4">{t('surroundings.monaco.description')}</p>
                 <Button asChild size="sm" className="bg-[#b7a66b] text-white hover:bg-[#a08c4a] rounded-full mt-auto">
                   <Link href="/decouvrir/monaco" className="flex items-center gap-2">Explorer Monaco <ArrowRight className="w-4 h-4" /></Link>
                 </Button>
@@ -475,14 +466,14 @@ export default function Home() {
               className="group bg-white/90 backdrop-blur-sm p-0 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col"
             >
               <div className="relative h-72 w-full">
-                <Image src="/images/discover/plageroquebrune.jpg" alt="Évasion en Italie" fill className="object-cover" />
+                <Image src="/images/discover/plageroquebrune.jpg" alt={t('surroundings.italy.title')} fill className="object-cover" />
                 <div className="absolute top-4 left-4 bg-white/80 rounded-full p-2 shadow">
                   <Flag className="w-7 h-7 text-[#b7a66b]" />
                 </div>
               </div>
               <div className="flex-1 flex flex-col p-6">
-                <h3 className="text-xl font-display font-bold text-black mb-2">Évasion en Italie</h3>
-                <p className="text-neutral-600 leading-relaxed mb-4">Marchés de Vintimille, cuisine ligure, Dolce Vita à moins de 30 min.</p>
+                <h3 className="text-xl font-display font-bold text-black mb-2">{t('surroundings.italy.title')}</h3>
+                <p className="text-neutral-600 leading-relaxed mb-4">{t('surroundings.italy.description')}</p>
                 <Button asChild size="sm" className="bg-[#b7a66b] text-white hover:bg-[#a08c4a] rounded-full mt-auto">
                   <Link href="/decouvrir/italie" className="flex items-center gap-2">Passer la frontière <ArrowRight className="w-4 h-4" /></Link>
                 </Button>
@@ -497,14 +488,14 @@ export default function Home() {
               className="group bg-white/90 backdrop-blur-sm p-0 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col"
             >
               <div className="relative h-72 w-full">
-                <Image src="/images/discover/sentierdouaniers.jpg" alt="Trésors cachés de la Côte d'Azur" fill className="object-cover" />
+                <Image src="/images/discover/sentierdouaniers.jpg" alt={t('surroundings.trails.title')} fill className="object-cover" />
                 <div className="absolute top-4 left-4 bg-white/80 rounded-full p-2 shadow">
                   <Map className="w-7 h-7 text-[#b7a66b]" />
                 </div>
               </div>
               <div className="flex-1 flex flex-col p-6">
-                <h3 className="text-xl font-display font-bold text-black mb-2">Trésors cachés de la Côte d'Azur</h3>
-                <p className="text-neutral-600 leading-relaxed mb-4">Villages perchés, sentiers secrets, criques sauvages…</p>
+                <h3 className="text-xl font-display font-bold text-black mb-2">{t('surroundings.trails.title')}</h3>
+                <p className="text-neutral-600 leading-relaxed mb-4">{t('surroundings.trails.description')}</p>
                 <Button asChild size="sm" className="bg-[#b7a66b] text-white hover:bg-[#a08c4a] rounded-full mt-auto">
                   <Link href="/decouvrir/azur" className="flex items-center gap-2">Nos coins secrets <ArrowRight className="w-4 h-4" /></Link>
                 </Button>
@@ -512,7 +503,7 @@ export default function Home() {
             </motion.div>
           </div>
           <div className="text-center mt-12">
-            <p className="text-lg text-neutral-700 mb-4">Nous vous conseillerons personnellement selon vos envies.</p>
+            <p className="text-lg text-neutral-700 mb-4">{t('surroundings.guide')}</p>
             <Button asChild size="lg" className="bg-white border-2 border-[#b7a66b] text-[#b7a66b] hover:bg-[#b7a66b] hover:text-white transition-all duration-500 px-10 py-5 rounded-full font-semibold text-lg shadow-md group">
               <Link href="#contact" scroll className="flex items-center gap-2">
                 Contactez-nous pour un séjour sur-mesure
@@ -535,11 +526,10 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-black mb-6">Contact & Réservation</h2>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-black mb-6">{t('contact.title')}</h2>
             <div className="h-px w-20 bg-[#b7a66b] mx-auto mb-8"></div>
             <p className="text-lg md:text-xl text-neutral-800 leading-relaxed max-w-3xl mx-auto">
-              Un séjour sur-mesure, une question ? Notre équipe vous répond avec discrétion et réactivité. 
-              Contactez-nous pour vivre l'exception.
+              {t('contact.description')}
             </p>
           </motion.div>
 
@@ -558,9 +548,6 @@ export default function Home() {
                 className="object-cover transform group-hover:scale-110 transition-transform duration-1000"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-              <div className="absolute inset-0 border-2 border-white/20 rounded-2xl transform scale-105 group-hover:scale-110 transition-transform duration-1000"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#b7a66b]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
             </motion.div>
 
             <motion.div
@@ -577,7 +564,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-black">Téléphone</h3>
-                    <p className="text-neutral-600">+33 6 XX XX XX XX</p>
+                    <p className="text-neutral-600">{t('contact.phone')}</p>
                   </div>
                 </div>
 
@@ -587,7 +574,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-black">Email</h3>
-                    <p className="text-neutral-600">contact@lesetoilesdurocher.com</p>
+                    <p className="text-neutral-600">{t('contact.email')}</p>
                   </div>
                 </div>
 
@@ -597,7 +584,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-black">Adresse</h3>
-                    <p className="text-neutral-600">Roquebrune-Cap-Martin, Côte d'Azur</p>
+                    <p className="text-neutral-600">{t('contact.address')}</p>
                   </div>
                 </div>
               </div>
@@ -618,17 +605,17 @@ export default function Home() {
               <div className="flex items-center justify-center space-x-6 pt-6">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-[#b7a66b]">10+</div>
-                  <div className="text-sm text-neutral-600">Années d'expertise</div>
+                  <div className="text-sm text-neutral-600">{t('contact.stats.experience')}</div>
                 </div>
                 <div className="h-12 w-px bg-neutral-200"></div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-[#b7a66b]">100%</div>
-                  <div className="text-sm text-neutral-600">Clients satisfaits</div>
+                  <div className="text-sm text-neutral-600">{t('contact.stats.satisfaction')}</div>
                 </div>
                 <div className="h-12 w-px bg-neutral-200"></div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-[#b7a66b]">24/7</div>
-                  <div className="text-sm text-neutral-600">Support dédié</div>
+                  <div className="text-sm text-neutral-600">{t('contact.stats.support')}</div>
                 </div>
               </div>
             </motion.div>

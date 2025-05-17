@@ -67,7 +67,7 @@ export default function DecouvrirPage() {
     {
       title: t('enjoy.secrets.customsPath.title'),
       description: t('enjoy.secrets.customsPath.description'),
-      image: "/images/discover/sentierdouaniers.jpg",
+      image: "/images/discover/sentier_des_douaniers.png",
       category: t('enjoy.secrets.customsPath.category'),
       difficulty: t('enjoy.secrets.customsPath.difficulty'),
       duration: t('enjoy.secrets.customsPath.duration'),
@@ -76,7 +76,7 @@ export default function DecouvrirPage() {
     {
       title: t('enjoy.secrets.ezeVillage.title'),
       description: t('enjoy.secrets.ezeVillage.description'),
-      image: "/images/discover/eze.jpg",
+      image: "/images/discover/eze.png",
       category: t('enjoy.secrets.ezeVillage.category'),
       comments: [
         { icon: Landmark, text: t('enjoy.secrets.ezeVillage.comments.medieval') },
@@ -86,7 +86,7 @@ export default function DecouvrirPage() {
     {
       title: t('enjoy.secrets.littleAfrica.title'),
       description: t('enjoy.secrets.littleAfrica.description'),
-      image: "/images/discover/beaulieu.jpg",
+      image: "/images/discover/petite_afrique.png",
       category: t('enjoy.secrets.littleAfrica.category'),
       difficulty: t('enjoy.secrets.littleAfrica.difficulty'),
       duration: t('enjoy.secrets.littleAfrica.duration'),
@@ -95,7 +95,7 @@ export default function DecouvrirPage() {
     {
       title: t('enjoy.secrets.corbusier.title'),
       description: t('enjoy.secrets.corbusier.description'),
-      image: "/images/discover/sentierlecorbusier.jpg",
+      image: "/images/discover/le_corbusier.png",
       category: t('enjoy.secrets.corbusier.category'),
       difficulty: t('enjoy.secrets.corbusier.difficulty'),
       duration: t('enjoy.secrets.corbusier.duration'),
@@ -104,7 +104,7 @@ export default function DecouvrirPage() {
     {
       title: t('enjoy.secrets.garnier.title'),
       description: t('enjoy.secrets.garnier.description'),
-      image: "/images/discover/theatre.jpg",
+      image: "/images/discover/opera.png",
       category: t('enjoy.secrets.garnier.category'),
       comments: [
         { icon: Building, text: t('enjoy.secrets.garnier.comments.opera') },
@@ -114,7 +114,7 @@ export default function DecouvrirPage() {
     {
       title: t('enjoy.secrets.blueGulf.title'),
       description: t('enjoy.secrets.blueGulf.description'),
-      image: "/images/discover/plageroquebrune.jpg",
+      image: "/images/discover/golfe_bleu.png",
       category: t('enjoy.secrets.blueGulf.category'),
       bestTime: t('enjoy.secrets.blueGulf.bestTime')
     }
@@ -124,7 +124,7 @@ export default function DecouvrirPage() {
     {
       title: "Forum Grimaldi",
       description: "Centre de congrès accueillant le Festival International de la Télévision et d'autres événements exclusifs de la Principauté.",
-      image: "/images/discover/forum-grimaldi.jpg",
+      image: "/images/discover/grimaldi.png",
       category: "Culture & Événements",
       comments: [
         { icon: Building, text: "Architecture contemporaine" },
@@ -134,7 +134,7 @@ export default function DecouvrirPage() {
     {
       title: t('enjoy.events.fortAntoine.title'),
       description: t('enjoy.events.fortAntoine.description'),
-      image: "/images/discover/fort-antoine.jpg",
+      image: "/images/discover/fort_antoine_nuit.png",
       category: t('enjoy.events.fortAntoine.type'),
       bestTime: t('enjoy.events.fortAntoine.date'),
       comments: [
@@ -145,7 +145,7 @@ export default function DecouvrirPage() {
     {
       title: "Top Marques Monaco",
       description: "Salon de luxe où vous pourrez admirer et même essayer les hypercars, montres et yachts les plus exclusifs au monde.",
-      image: "/images/discover/top-marques.jpg",
+      image: "/images/discover/top_marques.png",
       category: "Culture & Événements",
       bestTime: "Juin chaque année",
       comments: [
@@ -155,14 +155,14 @@ export default function DecouvrirPage() {
     {
       title: "Jumping International de Monte-Carlo",
       description: "Compétition équestre prestigieuse sur le port Hercule attirant les meilleurs cavaliers mondiaux dans un cadre exceptionnel.",
-      image: "/images/discover/jumping.jpg",
+      image: "/images/discover/jumping.png",
       category: "Culture & Événements",
       bestTime: "Juillet chaque année"
     },
     {
       title: "Monaco Yacht Show",
       description: "Le rendez-vous incontournable du yachting de luxe, présentant les plus beaux navires et voiliers d'exception.",
-      image: "/images/discover/yacht-show.jpg",
+      image: "/images/discover/yatch_show.png",
       category: "Culture & Événements",
       bestTime: "Septembre chaque année",
       comments: [
@@ -172,14 +172,14 @@ export default function DecouvrirPage() {
     {
       title: "E-Prix de Monaco",
       description: "Course électrisante de Formule E sur le mythique circuit de Monaco, alliant innovation et tradition du sport automobile.",
-      image: "/images/discover/e-prix.jpg",
+      image: "/images/discover/e_prix.png",
       category: "Culture & Événements",
       bestTime: "Mai chaque année"
     },
     {
       title: "Concerts au Palais Princier",
       description: "Soirées musicales d'exception dans la cour d'honneur du Palais sous les étoiles monégasques.",
-      image: "/images/discover/palais-concerts.jpg",
+      image: "/images/discover/concert_palais_princier.png",
       category: "Culture & Événements",
       bestTime: "Saison estivale"
     }
@@ -189,14 +189,14 @@ export default function DecouvrirPage() {
     {
       title: "Rolex Monte-Carlo Masters",
       description: "Prestigieux tournoi de tennis sur terre battue au Monte-Carlo Country Club, avec vue imprenable sur la Méditerranée.",
-      image: "/images/discover/tennis.jpg",
+      image: "/images/discover/newpiscine.JPG",
       category: "Sport & Loisirs",
       bestTime: "Avril chaque année"
     },
     {
       title: "Activités nautiques & sportives",
       description: "Expériences sur-mesure organisées par notre conciergerie : golf, voilier privatisé, plongée ou paddle au lever du soleil.",
-      image: "/images/discover/activites.jpg",
+      image: "/images/discover/criquecapmartin.jpg",
       category: "Sport & Loisirs",
       difficulty: "Tous niveaux",
       bestTime: "Sur réservation"
@@ -207,7 +207,7 @@ export default function DecouvrirPage() {
     {
       title: "Jardin Exotique de Monaco",
       description: "Collection spectaculaire de plantes succulentes avec vue panoramique sur la Principauté et grottes préhistoriques à explorer.",
-      image: "/images/discover/jardin-exotique.jpg",
+      image: "/images/discover/jardin_exotique.png",
       category: "Nature & Paysages",
       duration: "1-2 heures",
       bestTime: "Matinée"
@@ -215,14 +215,14 @@ export default function DecouvrirPage() {
     {
       title: "Le Rocher & le Palais Princier",
       description: "Promontoire historique abritant le Palais Princier. Ne manquez pas la relève de la garde des Carabiniers du Prince.",
-      image: "/images/discover/rocher.jpg",
+      image: "/images/discover/palais_princier.png",
       category: "Nature & Paysages",
       bestTime: "Relève de la garde à 11h55"
     },
     {
       title: "La Vallée des Merveilles",
       description: "Site archéologique fascinant avec 40 000+ gravures rupestres datant de l'âge du Bronze, niché dans un paysage alpin grandiose.",
-      image: "/images/discover/vallee-merveilles.jpg",
+      image: "/images/discover/vallee_des_merveilles.png",
       category: "Nature & Paysages",
       difficulty: "Modérée à difficile",
       duration: "Journée complète",
@@ -231,7 +231,7 @@ export default function DecouvrirPage() {
     {
       title: "Crique secrète de Monaco",
       description: "Plage confidentielle aux eaux turquoise accessible par un sentier discret ou par la mer, loin de l'agitation.",
-      image: "/images/discover/crique.jpg",
+      image: "/images/discover/criques_secretes.png",
       category: "Nature & Paysages",
       difficulty: "Facile",
       bestTime: "Début de matinée"
@@ -239,7 +239,7 @@ export default function DecouvrirPage() {
     {
       title: "Les Joyaux de la Riviera",
       description: "Découvrez la Baie de Villefranche, Beaulieu-sur-Mer et les jardins du Cap Martin lors d'une excursion panoramique.",
-      image: "/images/discover/baie.jpg",
+      image: "/images/discover/baie_villefranche.png",
       category: "Nature & Paysages",
       duration: "Demi-journée",
       bestTime: "Fin d'après-midi"
@@ -250,7 +250,7 @@ export default function DecouvrirPage() {
     {
       title: "Roquebrune-Cap-Martin",
       description: "Village médiéval authentique avec château du Xe siècle et olivier millénaire, plus vieux spécimen d'Europe.",
-      image: "/images/discover/roquebrune.jpg",
+      image: "/images/discover/DJI_0017.JPG",
       category: "Villages & Art de Vivre",
       duration: "2 heures",
       bestTime: "Déjeuner dans le village"
@@ -258,7 +258,7 @@ export default function DecouvrirPage() {
     {
       title: "Èze, le nid d'aigle",
       description: "Village perché offrant une vue spectaculaire, avec ruelles pavées, boutiques d'artisans et le célèbre Jardin Exotique.",
-      image: "/images/discover/eze.jpg",
+      image: "/images/discover/eze.png",
       category: "Villages & Art de Vivre",
       difficulty: "Montée raide",
       bestTime: "Lever de soleil"
@@ -266,7 +266,7 @@ export default function DecouvrirPage() {
     {
       title: "Saint-Paul de Vence",
       description: "Musée à ciel ouvert abritant galeries prestigieuses et la Fondation Maeght. Ne manquez pas La Colombe d'Or et ses œuvres d'art.",
-      image: "/images/discover/saint-paul.jpg",
+      image: "/images/discover/st_paul_de_vence.png",
       category: "Villages & Art de Vivre",
       duration: "Demi-journée",
       bestTime: "Après-midi"
@@ -274,14 +274,14 @@ export default function DecouvrirPage() {
     {
       title: "Mougins",
       description: "Village pittoresque devenu la Mecque de la gastronomie française, avec restaurants étoilés et ateliers d'artistes.",
-      image: "/images/discover/mougins.jpg",
+      image: "/images/discover/beaulieu.jpg",
       category: "Villages & Art de Vivre",
       bestTime: "Dîner gastronomique"
     },
     {
       title: "Saint-Tropez",
       description: "De votre villa, rejoignez ce village mythique en hélicoptère ou yacht. Flânez sur le port et profitez des plages de Pampelonne.",
-      image: "/images/discover/saint-tropez.jpg",
+      image: "/images/discover/cou.png",
       category: "Villages & Art de Vivre",
       duration: "Journée complète",
       bestTime: "Arrivée par la mer"
@@ -292,7 +292,7 @@ export default function DecouvrirPage() {
     {
       title: "Transferts héliportés",
       description: "Liaison directe avec l'aéroport de Nice en 7 minutes ou excursions panoramiques pour découvrir la Côte d'Azur vue du ciel.",
-      image: "/images/discover/helicoptere.jpg",
+      image: "/images/discover/DJI_0017.JPG",
       category: "Transferts & Expériences Premium",
       duration: "7min depuis Nice",
       bestTime: "Jour clair"
@@ -300,7 +300,7 @@ export default function DecouvrirPage() {
     {
       title: "Expériences nautiques",
       description: "Croisière privée au coucher du soleil, excursion vers les îles de Lérins ou transfert VIP vers les destinations côtières exclusives.",
-      image: "/images/discover/croisiere.jpg",
+      image: "/images/discover/ile_de_lerons.png",
       category: "Transferts & Expériences Premium",
       bestTime: "Crépuscule"
     }
@@ -359,7 +359,6 @@ export default function DecouvrirPage() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
                 
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-black px-3 sm:px-4 py-2 rounded-full text-sm font-medium">
                   {item.category}
@@ -399,9 +398,6 @@ export default function DecouvrirPage() {
             />
           </div>
         </div>
-
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none z-[5]"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent pointer-events-none z-[5]"></div>
         
         <div className="relative z-10 h-full flex items-center">
           <div className="w-full h-full flex flex-col justify-center items-start">
@@ -580,7 +576,6 @@ export default function DecouvrirPage() {
                     priority={true}
                     className="object-cover transition-transform duration-700 group-hover:scale-110 rounded-t-xl"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                   
                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-gray-900 px-2 xs:px-3 sm:px-4 py-1 xs:py-2 rounded-full text-xs xs:text-sm font-medium shadow-md transform transition-all duration-300 group-hover:scale-105">
                     {categories.find(cat => cat.code === article.category)?.title}

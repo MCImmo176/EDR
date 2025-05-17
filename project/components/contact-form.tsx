@@ -193,7 +193,7 @@ export function ContactForm() {
                           name="countryCode"
                           render={({ field }) => (
                             <FormItem className="w-full">
-                              <FormLabel>Indicatif</FormLabel>
+                              <FormLabel>{t('form.countryCode.label') || 'Indicatif'}</FormLabel>
                               <FormControl>
                                 <ComboboxCountry
                                   value={field.value}

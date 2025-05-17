@@ -11,7 +11,14 @@
     "contactUs": "Contactez-nous",
     "learnMore": "En savoir plus",
     "reserve": "Réserver",
-    "villaName": "Les Étoiles du Rocher"
+    "villaName": "Les Étoiles du Rocher",
+    "footer": {
+      "terms": "Conditions d'utilisation",
+      "sales": "Conditions de vente",
+      "gallery": "Galerie",
+      "discover": "Découvrir",
+      "villaName": "Les Étoiles du Rocher"
+    }
   },
   "nav": {
     "home": "Accueil",
@@ -27,7 +34,7 @@
       "title": "Réservez votre séjour d'exception"
     },
     "content": {
-      "quote": "« Il y a des lieux où souffle l'esprit. »",
+      "quote": "La beauté d'un lieu se révèle dans la caresse de la lumière, le silence qui l'habite et l'émotion qu'il suscite.",
       "quoteAuthor": "— Maurice Barrès",
       "description1": "Imaginez un lieu où le luxe rencontre l'authenticité, où chaque détail a été pensé pour votre bien-être. Notre domaine, niché à seulement 5 minutes de Monaco, vous offre l'équilibre parfait entre tranquillité absolue et accès privilégié aux plus belles plages, boutiques de prestige et événements de la Côte d'Azur.",
       "description2": "Plongez dans un univers de 350 m² répartis sur deux étages, où cinq suites privatives vous accueillent avec une literie d'exception. Une dépendance discrète, lovée dans la végétation méditerranéenne, s'offre à vous pour accueillir vos invités dans un cadre idyllique.",
@@ -61,251 +68,282 @@
         "nightDesc": "Une ambiance magique sous les étoiles"
       }
     },
-    "description": "Découvrez un lieu d'exception où luxe et authenticité se rencontrent pour créer des moments inoubliables."
-  },
-  "about": {
-    "title": "À propos de nous",
-    "description": "Notre histoire et notre mission"
-  },
-  "villa": {
-    "title": "La Villa",
-    "description": "Une demeure d'exception",
-    "features": {
-      "title": "Louez une villa d'exception à 10 minutes de Monaco avec vue mer imprenable",
-      "subtitle": "Fraîchement achevée en début d'année, cette villa de luxe, encore jamais louée, est prête à vous offrir des moments inoubliables, en famille ou entre amis.",
-      "location": {
-        "title": "📍 Emplacement idéal",
-        "items": {
-          "monaco": "À seulement 10 minutes du centre de Monaco",
-          "airport": "À 30 minutes de l'aéroport de Nice",
-          "cannes": "À 45 minutes de Cannes",
-          "italy": "Et à 15 minutes de l'Italie"
-        }
-      },
-      "interior": {
-        "title": "À l'intérieur",
-        "items": {
-          "living": "Un salon élégant avec vue mer",
-          "dining": "Une salle à manger lumineuse",
-          "bar": "Un bar raffiné",
-          "tv": "Un coin TV",
-          "kitchen": "Une cuisine entièrement équipée avec du matériel haut de gamme"
-        }
-      },
-      "bedrooms": {
-        "title": "L'espace nuit",
-        "items": {
-          "total": "5 chambres luxueuses avec literie et surmatelas d'hôtel",
-          "sea": "4 chambres avec vue mer et terrasses privées",
-          "pine": "1 chambre paisible donnant sur une pinède",
-          "bedding": "Toutes dotées de coffre-fort, cafetière Nespresso, bouilloire et minibar",
-          "amenities": "5 salles de bain équipées de packs bien-être et sèche-cheveux"
-        }
-      },
-      "services": {
-        "title": "Services inclus",
-        "items": {
-          "bathrooms": "5 salles de bain équipées",
-          "wc": "6 WC dont 1 invités à l'étage",
-          "wellness": "Packs bien-être complets",
-          "wifi": "Wifi haut débit",
-          "safe": "Coffre-fort dans chaque chambre"
-        }
-      }
-    },
-    "additionalServices": {
-      "title": "Extras disponibles",
-      "subtitle": "Personnalisez votre séjour avec nos services sur mesure",
-      "chef": {
-        "title": "Chef à domicile",
-        "description": "Profitez des services d'un chef privé pour des repas d'exception"
-      },
-      "valet": {
-        "title": "Service voiturier",
-        "description": "Transport et gestion de vos véhicules en toute sérénité"
-      },
-      "cleaning": {
-        "title": "Femme de ménage",
-        "description": "Service de ménage quotidien sur demande"
-      }
-    },
-    "bookNow": "Réserver votre séjour",
-    "images": {
-      "pool": {
-        "alt": "Piscine privée de la villa avec vue mer"
-      }
-    },
-    "whyChooseUs": {
-      "title": "Pourquoi choisir cette villa ?",
-      "description": "C'est une véritable perle rare, neuve et prête à sublimer votre séjour. Que ce soit pour des vacances reposantes ou une escapade luxueuse, vous serez conquis par ses prestations haut de gamme et son emplacement unique.",
-      "features": {
-        "pool": "Piscine privée avec vue imprenable",
-        "parking": "Parking privé pour 8 voitures",
-        "wifi": "Wifi haut débit",
-        "capacity": "Jusqu'à 10 personnes"
-      }
-    },
-    "kitchen": {
-      "images": {
-        "alt": "Cuisine de la villa avec équipements modernes"
-      },
-      "noPoints": "Cliquez sur l'un des points pour voir les détails spécifiques de cette partie de la cuisine.",
-      "cabinets": {
-        "title": "Meubles hauts et bas",
-        "description": "Des rangements optimisés pour une organisation parfaite"
-      },
-      "appliances": {
-        "title": "Électroménager",
-        "description": "Des appareils haut de gamme pour une cuisine professionnelle"
-      },
-      "island": {
-        "title": "Îlot central",
-        "description": "Un espace convivial pour préparer et partager"
-      },
-      "storage": {
-        "title": "Rangements",
-        "description": "Des espaces de stockage intelligents et fonctionnels"
-      }
-    },
-    "spaces": {
-      "title": "Découvrez nos espaces",
-      "subtitle": "Chaque espace des Étoiles du Rocher a été conçu pour vous offrir confort, élégance et moments inoubliables.",
-      "galleryButton": "Accéder à la galerie",
-      "living": {
-        "title": "Salon lumineux",
-        "description": "Un espace convivial avec vue panoramique sur la Méditerranée",
-        "alt": "Salon lumineux avec vue panoramique sur la Méditerranée"
-      },
-      "living2": {
-        "title": "Salon ouvert et lumineux",
-        "description": "Un vaste espace de vie baigné de lumière, idéal pour se détendre ou recevoir",
-        "alt": "Grand salon lumineux, parfait pour la détente et la réception"
-      },
-      "pool": {
-        "title": "Piscine privative",
-        "description": "Profitez d'une baignade face à la mer",
-        "alt": "Piscine privée avec vue sur la mer"
-      },
-      "suites": {
-        "title": "5 suites privatives",
-        "description": "Chaque chambre dispose de sa salle de bain, s'ouvre sur l'extérieur et profite d'une lumière naturelle abondante",
-        "alt": "Cinq suites privatives avec salles de bain et lumière naturelle"
-      }
-    },
-    "livingSpaces": {
-      "title": "DES LIEUX DE VIE SUR-MESURE",
-      "description1": "Découvrez un lieu de vie idéal pour recevoir ou passer des moments en famille.",
-      "description2": "Les villas ont été méticuleusement pensées pour donner vie à des espaces intelligents, fonctionnels et harmonieux.",
-      "description3": "Les intérieurs des villas sont conçus pour préserver votre intimité tout en offrant de belles ouvertures sur les espaces extérieurs.",
-      "description4": "Chacune des 5 suites propose des espaces de vie intérieurs et extérieurs spacieux et parfaitement agencés."
-    },
-    "practicalInfo": {
-      "title": "Informations pratiques",
-      "subtitle": "Tout ce que vous devez savoir pour profiter pleinement de votre séjour aux Étoiles du Rocher",
-      "location": {
-        "title": "Situation",
-        "description": "Idéalement située à Roquebrune Cap Martin, à quelques minutes de Monaco et des plus belles plages de la Côte d'Azur"
-      },
-      "availability": {
-        "title": "Disponibilité",
-        "description": "La villa est disponible à la location toute l'année, avec une durée minimale de séjour d'une semaine"
-      },
-      "equipment": {
-        "title": "Équipements",
-        "description": "Des équipements haut de gamme et des services personnalisés pour un séjour d'exception"
-      },
-      "security": {
-        "title": "Sécurité",
-        "description": "Propriété entièrement sécurisée avec système d'alarme, vidéosurveillance et service de sécurité sur demande"
-      }
-    },
-    "houseRules": {
-      "checkin": {
-        "title": "Check-in & Check-out",
-        "description": "Arrivée à partir de 16h00 et départ au plus tard à 10h00. Un accueil personnalisé vous sera réservé"
-      },
-      "access": {
-        "title": "Accès & Sécurité",
-        "description": "La villa est équipée d'un système de sécurité dernière génération. Les codes d'accès vous seront remis à votre arrivée"
-      },
-      "quiet": {
-        "title": "Tranquillité",
-        "description": "Par respect pour le voisinage, nous vous demandons de maintenir un niveau sonore raisonnable, particulièrement après 22h00"
-      }
-    },
-    "distances": {
-      "monaco": "Monaco",
-      "nice": "Nice",
-      "cannes": "Cannes",
-      "saintTropez": "Saint-Tropez",
-      "airport": "Aéroport Nice",
-      "beach": "Plage"
-    },
-    "images": {
-      "exterior": {
-        "alt": "Extérieur de la villa avec piscine et vue sur mer"
-      },
-      "living": {
-        "alt": "Salon de luxe avec portes vitrées"
-      },
-      "bedroom": {
-        "alt": "Chambre principale avec vue sur mer"
-      }
-    },
-    "rooms": {
-      "master": {
-        "title": "Suite Principale",
-        "description": "Une spacieuse suite principale avec vue panoramique sur la mer, salle de bain en marbre et dressing.",
-        "alt": "Suite de la chambre principale"
-      },
-      "main": {
-        "title": "Salon Principal",
-        "description": "Un élégant salon avec portes vitrées offrant une vue incomparable sur la Méditerranée.",
-        "alt": "Salon principal"
-      },
-      "terrace": {
-        "title": "Terrasse & Piscine",
-        "description": "Une vaste terrasse avec piscine infinity et espace détente avec vue sur mer.",
-        "alt": "Terrasse avec piscine infinity"
-      },
-      "gourmet": {
-        "title": "Cuisine Gastronomique",
-        "description": "Une cuisine entièrement équipée avec îlot central et électroménagers haut de gamme.",
-        "alt": "Cuisine gastronomique"
-      }
-    },
+    "description": "Découvrez un lieu d'exception où luxe et authenticité se rencontrent pour créer des moments inoubliables.",
     "hero": {
-      "subtitle": "Profitez des hauteurs de la Côte d'Azur, un havre de paix avec vue imprenable sur la Méditerranée.",
+      "title": "Les Étoiles du Rocher",
+      "subtitle": "Laissez-vous envoûter par l'or des rayons matins, le chant discret des pins et l'horizon infini de la Méditerranée.",
       "ctaButton": "Réserver maintenant",
       "scrollText": "Découvrir plus"
+    },
+    "cta": {
+      "bookStay": "Réservez votre séjour",
+      "discoverVilla": "Découvrez la villa",
+      "mediterranean": "L'art de vivre méditerranéen"
+    },
+    "quote": "La beauté d'un lieu se révèle dans la caresse de la lumière, le silence qui l'habite et l'émotion qu'il suscite.",
+    "villa": {
+      "title": "La Villa Les Étoiles du Rocher",
+      "description": "Un écrin posé face à la mer, où chaque détail invite à la contemplation. À votre réveil, le murmure des vagues et la vue azur composeront votre premier souvenir du jour. Les volumes épurés, ouverts sur l'extérieur, offrent une expérience sensorielle subtile, alliant raffinement et authenticité azuréenne.",
+      "features": {
+        "title": "Louez une villa d'exception à 10 minutes de Monaco avec vue mer imprenable",
+        "subtitle": "Fraîchement achevée en début d'année, cette villa de luxe, encore jamais louée, est prête à vous offrir des moments inoubliables, en famille ou entre amis.",
+        "location": {
+          "title": "📍 Emplacement idéal",
+          "items": {
+            "monaco": "À seulement 10 minutes du centre de Monaco",
+            "airport": "À 30 minutes de l'aéroport de Nice",
+            "cannes": "À 45 minutes de Cannes",
+            "italy": "Et à 15 minutes de l'Italie"
+          }
+        },
+        "interior": {
+          "title": "À l'intérieur",
+          "items": {
+            "living": "Un salon élégant avec vue mer",
+            "dining": "Une salle à manger lumineuse",
+            "bar": "Un bar raffiné",
+            "tv": "Un coin TV",
+            "kitchen": "Une cuisine entièrement équipée avec du matériel haut de gamme"
+          }
+        },
+        "bedrooms": {
+          "title": "L'espace nuit",
+          "items": {
+            "total": "5 chambres luxueuses avec literie et surmatelas d'hôtel",
+            "sea": "4 chambres avec vue mer et terrasses privées",
+            "pine": "1 chambre paisible donnant sur une pinède",
+            "bedding": "Toutes dotées de coffre-fort, cafetière Nespresso, bouilloire et minibar",
+            "amenities": "5 salles de bain équipées de packs bien-être et sèche-cheveux"
+          }
+        },
+        "services": {
+          "title": "Services inclus",
+          "items": {
+            "bathrooms": "5 salles de bain équipées",
+            "wc": "6 WC dont 1 invités à l'étage",
+            "wellness": "Packs bien-être complets",
+            "wifi": "Wifi haut débit",
+            "safe": "Coffre-fort dans chaque chambre"
+          }
+        },
+        "panoramicView": "Vue panoramique sur la Méditerranée",
+        "infinityPool": "Piscine à débordement",
+        "garden": "Jardin aux essences méditerranéennes",
+        "services": "Services sur-mesure"
+      },
+      "additionalServices": {
+        "title": "Extras disponibles",
+        "subtitle": "Personnalisez votre séjour avec nos services sur mesure",
+        "chef": {
+          "title": "Chef à domicile",
+          "description": "Profitez des services d'un chef privé pour des repas d'exception"
+        },
+        "valet": {
+          "title": "Service voiturier",
+          "description": "Transport et gestion de vos véhicules en toute sérénité"
+        },
+        "cleaning": {
+          "title": "Femme de ménage",
+          "description": "Service de ménage quotidien sur demande"
+        }
+      },
+      "bookNow": "Réserver votre séjour",
+      "images": {
+        "pool": {
+          "alt": "Piscine privée de la villa avec vue mer"
+        }
+      },
+      "whyChooseUs": {
+        "title": "Pourquoi choisir cette villa ?",
+        "description": "C'est une véritable perle rare, neuve et prête à sublimer votre séjour. Que ce soit pour des vacances reposantes ou une escapade luxueuse, vous serez conquis par ses prestations haut de gamme et son emplacement unique.",
+        "features": {
+          "pool": "Piscine privée avec vue imprenable",
+          "parking": "Parking privé pour 8 voitures",
+          "wifi": "Wifi haut débit",
+          "capacity": "Jusqu'à 10 personnes"
+        }
+      },
+      "kitchen": {
+        "images": {
+          "alt": "Cuisine de la villa avec équipements modernes"
+        },
+        "noPoints": "Cliquez sur l'un des points pour voir les détails spécifiques de cette partie de la cuisine.",
+        "cabinets": {
+          "title": "Meubles hauts et bas",
+          "description": "Des rangements optimisés pour une organisation parfaite"
+        },
+        "appliances": {
+          "title": "Électroménager",
+          "description": "Des appareils haut de gamme pour une cuisine professionnelle"
+        },
+        "island": {
+          "title": "Îlot central",
+          "description": "Un espace convivial pour préparer et partager"
+        },
+        "storage": {
+          "title": "Rangements",
+          "description": "Des espaces de stockage intelligents et fonctionnels"
+        }
+      },
+      "spaces": {
+        "title": "Découvrez nos espaces",
+        "subtitle": "Chaque espace des Étoiles du Rocher a été conçu pour vous offrir confort, élégance et moments inoubliables.",
+        "galleryButton": "Accéder à la galerie",
+        "living": {
+          "title": "Salon lumineux",
+          "description": "Un espace convivial avec vue panoramique sur la Méditerranée",
+          "alt": "Salon lumineux avec vue panoramique sur la Méditerranée"
+        },
+        "living2": {
+          "title": "Salon ouvert et lumineux",
+          "description": "Un vaste espace de vie baigné de lumière, idéal pour se détendre ou recevoir",
+          "alt": "Grand salon lumineux, parfait pour la détente et la réception"
+        },
+        "pool": {
+          "title": "Piscine privative",
+          "description": "Profitez d'une baignade face à la mer",
+          "alt": "Piscine privée avec vue sur la mer"
+        },
+        "suites": {
+          "title": "5 suites privatives",
+          "description": "Chaque chambre dispose de sa salle de bain, s'ouvre sur l'extérieur et profite d'une lumière naturelle abondante",
+          "alt": "Cinq suites privatives avec salles de bain et lumière naturelle"
+        }
+      },
+      "livingSpaces": {
+        "title": "DES LIEUX DE VIE SUR-MESURE",
+        "description1": "Découvrez un lieu de vie idéal pour recevoir ou passer des moments en famille.",
+        "description2": "Les villas ont été méticuleusement pensées pour donner vie à des espaces intelligents, fonctionnels et harmonieux.",
+        "description3": "Les intérieurs des villas sont conçus pour préserver votre intimité tout en offrant de belles ouvertures sur les espaces extérieurs.",
+        "description4": "Chacune des 5 suites propose des espaces de vie intérieurs et extérieurs spacieux et parfaitement agencés."
+      },
+      "practicalInfo": {
+        "title": "Informations pratiques",
+        "subtitle": "Tout ce que vous devez savoir pour profiter pleinement de votre séjour aux Étoiles du Rocher",
+        "location": {
+          "title": "Situation",
+          "description": "Idéalement située à Roquebrune Cap Martin, à quelques minutes de Monaco et des plus belles plages de la Côte d'Azur"
+        },
+        "availability": {
+          "title": "Disponibilité",
+          "description": "La villa est disponible à la location toute l'année, avec une durée minimale de séjour d'une semaine"
+        },
+        "equipment": {
+          "title": "Équipements",
+          "description": "Des équipements haut de gamme et des services personnalisés pour un séjour d'exception"
+        },
+        "security": {
+          "title": "Sécurité",
+          "description": "Propriété entièrement sécurisée avec système d'alarme, vidéosurveillance et service de sécurité sur demande"
+        }
+      },
+      "houseRules": {
+        "checkin": {
+          "title": "Check-in & Check-out",
+          "description": "Arrivée à partir de 16h00 et départ au plus tard à 10h00. Un accueil personnalisé vous sera réservé"
+        },
+        "access": {
+          "title": "Accès & Sécurité",
+          "description": "La villa est équipée d'un système de sécurité dernière génération. Les codes d'accès vous seront remis à votre arrivée"
+        },
+        "quiet": {
+          "title": "Tranquillité",
+          "description": "Par respect pour le voisinage, nous vous demandons de maintenir un niveau sonore raisonnable, particulièrement après 22h00"
+        }
+      },
+      "distances": {
+        "monaco": "Monaco",
+        "nice": "Nice",
+        "cannes": "Cannes",
+        "saintTropez": "Saint-Tropez",
+        "airport": "Aéroport Nice",
+        "beach": "Plage"
+      },
+      "images": {
+        "exterior": {
+          "alt": "Extérieur de la villa avec piscine et vue sur mer"
+        },
+        "living": {
+          "alt": "Salon de luxe avec portes vitrées"
+        },
+        "bedroom": {
+          "alt": "Chambre principale avec vue sur mer"
+        }
+      },
+      "rooms": {
+        "master": {
+          "title": "Suite Principale",
+          "description": "Une spacieuse suite principale avec vue panoramique sur la mer, salle de bain en marbre et dressing.",
+          "alt": "Suite de la chambre principale"
+        },
+        "main": {
+          "title": "Salon Principal",
+          "description": "Un élégant salon avec portes vitrées offrant une vue incomparable sur la Méditerranée.",
+          "alt": "Salon principal"
+        },
+        "terrace": {
+          "title": "Terrasse & Piscine",
+          "description": "Une vaste terrasse avec piscine infinity et espace détente avec vue sur mer.",
+          "alt": "Terrasse avec piscine infinity"
+        },
+        "gourmet": {
+          "title": "Cuisine Gastronomique",
+          "description": "Une cuisine entièrement équipée avec îlot central et électroménagers haut de gamme.",
+          "alt": "Cuisine gastronomique"
+        }
+      },
+      "actionButton": "Découvrez la villa"
+    },
+    "gallery": {
+      "title": "Galerie",
+      "description": "Plongez dans l'atmosphère unique des espaces : suites baignées de lumière, piscine suspendue au-dessus de la mer, rooftop aux accents poétiques…",
+      "mainSuite": {
+        "title": "Suite principale",
+        "description": "Parenthèse sereine, baignée de clarté, avec vue sur l'eau et salle de bains privative."
+      },
+      "livingRoom": {
+        "title": "Salon",
+        "description": "Volume ouvert, larges baies vitrées et perspective infinie sur l'azur."
+      },
+      "terrace": {
+        "title": "Terrasse",
+        "description": "Un plateau en plein ciel, aménagé pour vos instants de quiétude et vos repas en plein air."
+      },
+      "seeAll": "Voir la galerie complète"
+    },
+    "surroundings": {
+      "title": "Aux alentours",
+      "description": "Explorez des trésors proches, choisis pour leur caractère et leur discrétion.",
+      "monaco": {
+        "title": "Monaco & Menton",
+        "description": "Jardins suspendus, musées intimes, adresses confidentielles."
+      },
+      "italy": {
+        "title": "Évasion en Italie",
+        "description": "Marchés de Vintimille, saveurs ligures, dolce vita à portée de main."
+      },
+      "trails": {
+        "title": "Sentiers secrets de la Côte d'Azur",
+        "description": "Villages perchés, criques silencieuses, panoramas préservés."
+      },
+      "guide": "Nous serons vos guides pour composer un séjour selon vos envies les plus fines."
+    },
+    "contact": {
+      "title": "Contact & Réservation",
+      "description": "Pour toute demande ou pour organiser votre visite privée, notre équipe vous répond avec discrétion et promptitude.",
+      "phone": "Tél. : +33 6 XX XX XX XX",
+      "email": "Email : contact@lesetoilesdurocher.com",
+      "address": "Adresse : Roquebrune-Cap-Martin, Côte d'Azur",
+      "stats": {
+        "experience": "Années d'expertise : 10+",
+        "satisfaction": "Clients satisfaits : 100 %",
+        "support": "Support dédié : 24 h/24, 7 j/7"
+      }
     }
-  },
-  "gallery": {
-    "title": "Galerie",
-    "subtitle": "Découvrez nos photos",
-    "categories": {
-      "all": "Toutes les photos",
-      "exterior": "Extérieur",
-      "interior": "Intérieur",
-      "views": "Vue"
-    },
-    "description": "Découvrez la beauté de notre villa à travers nos photos.",
-    "photos": {
-      "exterior": "Vue extérieure de la villa avec piscine et vue mer",
-      "living": "Salon de luxe avec portes vitrées",
-      "bedroom": "Chambre principale avec vue mer",
-      "terrace": "Terrasse avec piscine à débordement",
-      "kitchen": "Cuisine entièrement équipée",
-      "seaView": "Vue panoramique sur la Méditerranée",
-      "dining": "Salle à manger élégante",
-      "aerial": "Vue aérienne de la villa",
-      "master": "Suite principale"
-    },
-    "discoverButton": "Découvrir les alentours"
   },
   "contact": {
     "title": "Contact",
-    "description": "Contactez-nous",
+    "subtitle": "Nous sommes à votre disposition",
     "form": {
       "firstName": "Prénom",
       "lastName": "Nom",
@@ -317,35 +355,22 @@
       "messagePlaceholder": "Votre message",
       "submit": "Envoyer",
       "success": "Message envoyé avec succès",
-      "successDetail": "Nous vous répondrons dans les plus brefs délais."
+      "successDetail": "Nous vous répondrons dans les plus brefs délais.",
+      "countryCode": {
+        "label": "Indicatif",
+        "france": "France",
+        "code": "+33"
+      }
     },
     "buttons": {
       "bookStay": "Réserver votre séjour",
       "requestInfo": "Demander des informations",
       "back": "Retour"
     },
-    "yourVilla": {
-      "title": "Votre villa vous attend",
-      "subtitle": "Contactez-nous !",
-      "description": "Merci d'avoir visité notre site web ! Nous serions ravis d'échanger avec vous. Que vous ayez des questions, des retours à partager ou que vous souhaitiez en savoir plus sur nos villas, n'hésitez pas à nous contacter. Nos conseillers vous répondront dans les plus brefs délais.",
-      "form": {
-        "name": "Nom & Prénom",
-        "namePlaceholder": "Votre nom complet",
-        "email": "Email",
-        "emailPlaceholder": "Votre adresse email",
-        "phone": "Téléphone",
-        "phonePlaceholder": "Votre numéro de téléphone",
-        "message": "Message",
-        "messagePlaceholder": "Votre message",
-        "submit": "Envoyer le message",
-        "success": "Message envoyé avec succès",
-        "successDetail": "Nous vous répondrons dans les plus brefs délais.",
-        "countryCode": {
-          "label": "Indicatif",
-          "france": "France",
-          "code": "+33"
-        }
-      }
+    "info": {
+      "address": "Roquebrune-Cap-Martin, France",
+      "phone": "+33 6 XX XX XX XX",
+      "email": "contact@lesetoilesdurocher.com"
     }
   },
   "info": {
@@ -540,5 +565,27 @@
       "tagline": "Monaco & Cap Martin",
       "exploreButton": "Découvrir les secrets"
     }
+  },
+  "surroundings": {
+    "title": "Aux alentours",
+    "description": "Explorez des trésors proches, choisis pour leur caractère et leur discrétion.",
+    "monaco": {
+      "title": "Monaco & Menton",
+      "description": "Jardins suspendus, musées intimes, adresses confidentielles."
+    },
+    "italy": {
+      "title": "Évasion en Italie",
+      "description": "Marchés de Vintimille, saveurs ligures, dolce vita à portée de main."
+    },
+    "trails": {
+      "title": "Sentiers secrets de la Côte d'Azur",
+      "description": "Villages perchés, criques silencieuses, panoramas préservés."
+    },
+    "guide": "Nous serons vos guides pour composer un séjour selon vos envies les plus fines."
+  },
+  "stats": {
+    "experience": "Années d'expertise : 10+",
+    "satisfaction": "Clients satisfaits : 100 %",
+    "support": "Support dédié : 24 h/24, 7 j/7"
   }
 } 
