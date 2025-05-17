@@ -6,7 +6,7 @@ Ce document explique la configuration d'EmailJS pour le formulaire de contact du
 
 Le formulaire de contact est déjà configuré avec les identifiants suivants :
 
-- Service ID : `service_6q6y4b1` (Service Gmail)
+- Service ID : `service_mv5ctkt` (Service Gmail)
 - Template ID : `template_yd3mmom`
 - Public Key : `iXQm2-_WREMX8F2dO`
 
