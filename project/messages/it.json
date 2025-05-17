@@ -24,6 +24,18 @@
       "villa": "La Villa",
       "gallery": "Galleria",
       "contact": "Contatti"
+    },
+    "labels": {
+      "room": "Camera",
+      "interior": "Interno",
+      "exterior": "Esterno",
+      "phone": "Telefono",
+      "email": "Email",
+      "address": "Indirizzo",
+      "customRequest": "Contattateci per un soggiorno personalizzato"
+    },
+    "header": {
+      "planVisit": "Organizzo una visita"
     }
   },
   "nav": {
@@ -114,7 +126,14 @@
         "title": "Terrazza",
         "description": "Un altopiano in pieno cielo, attrezzato per i tuoi momenti di quiete e pasti all'aperto."
       },
-      "seeAll": "Vedi la galleria completa"
+      "seeAll": "Vedi la galleria completa",
+      "categories": {
+        "all": "Tutto",
+        "room": "Camera",
+        "interior": "Interno",
+        "exterior": "Esterno",
+        "view": "Vista"
+      }
     },
     "surroundings": {
       "title": "Dintorni",

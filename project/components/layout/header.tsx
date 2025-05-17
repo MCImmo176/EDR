@@ -86,7 +86,7 @@ export function Header() {
             onClick={openForm}
             className="luxury-btn ml-6 px-6 py-2 text-base font-semibold shadow-md hover:scale-105 transition-transform duration-200 rounded-full bg-[#b7a66b] text-white border-none"
           >
-            J'organise une visite
+            {t('common.header.planVisit')}
           </Button>
         </nav>
 
@@ -135,7 +135,7 @@ export function Header() {
             }}
             className="luxury-btn px-8 py-3 text-lg font-semibold shadow-md hover:scale-105 transition-transform duration-200 rounded-full bg-[#b7a66b] text-white border-none"
           >
-            J'organise une visite
+            {t('common.header.planVisit')}
           </Button>
         </div>
       </div>

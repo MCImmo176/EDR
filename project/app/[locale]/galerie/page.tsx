@@ -19,7 +19,7 @@ interface Photo {
 }
 
 export default function GaleriePage() {
-  const { tGallery } = useLanguage();
+  const { tGallery, t } = useLanguage();
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -78,10 +78,10 @@ export default function GaleriePage() {
   // Liste des catégories pour la navigation
   const categories = [
     { id: null, label: tGallery('categories.all') },
-    { id: tGallery('categories.exterior'), label: "Extérieur" },
-    { id: tGallery('categories.suites'), label: "Suites" },
-    { id: tGallery('categories.interior'), label: "Intérieur" },
-    { id: tGallery('categories.views'), label: "Vue" },
+    { id: tGallery('categories.exterior'), label: t('common.labels.exterior') },
+    { id: tGallery('categories.suites'), label: t('common.labels.room') },
+    { id: tGallery('categories.interior'), label: t('common.labels.interior') },
+    { id: tGallery('categories.views'), label: tGallery('categories.views') },
   ];
 
   // Déterminer les photos à afficher selon la catégorie sélectionnée
@@ -335,7 +335,11 @@ export default function GaleriePage() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               <span className="uppercase tracking-[0.15em] font-light">
-                {categories.find(cat => cat.id === activeCategory)?.label || "Toutes les photos"}
+                {activeCategory === null ? tGallery('categories.all') : 
+                 activeCategory === tGallery('categories.exterior') ? tGallery('common.labels.exterior') :
+                 activeCategory === tGallery('categories.suites') ? tGallery('common.labels.room') :
+                 activeCategory === tGallery('categories.interior') ? tGallery('common.labels.interior') :
+                 tGallery('categories.views')}
               </span>
               <motion.div
                 animate={{ rotate: isMobileMenuOpen ? 180 : 0 }}

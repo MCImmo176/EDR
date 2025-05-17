@@ -18,6 +18,18 @@
       "gallery": "Галерея",
       "discover": "Откройте для себя",
       "villaName": "Les Étoiles du Rocher"
+    },
+    "labels": {
+      "room": "Комната",
+      "interior": "Интерьер",
+      "exterior": "Экстерьер",
+      "phone": "Телефон",
+      "email": "Email",
+      "address": "Адрес",
+      "customRequest": "Свяжитесь с нами для индивидуального пребывания"
+    },
+    "header": {
+      "planVisit": "Я организую визит"
     }
   },
   "nav": {
@@ -108,7 +120,14 @@
         "title": "Терраса",
         "description": "Плато под открытым небом, обустроенное для ваших моментов спокойствия и трапез на свежем воздухе."
       },
-      "seeAll": "Посмотреть полную галерею"
+      "seeAll": "Посмотреть полную галерею",
+      "categories": {
+        "all": "Все",
+        "room": "Комната",
+        "interior": "Интерьер",
+        "exterior": "Экстерьер",
+        "view": "Вид"
+      }
     },
     "surroundings": {
       "title": "Окрестности",
@@ -290,10 +309,10 @@
     "subtitle": "Откройте для себя Les Étoiles du Rocher через нашу фотогалерею",
     "categories": {
       "all": "Все",
-      "exterior": "Экстерьер",
+      "room": "Комната",
       "interior": "Интерьер",
-      "suites": "Люксы",
-      "views": "Виды"
+      "exterior": "Экстерьер",
+      "view": "Вид"
     },
     "discoverButton": "Откройте для себя окрестности",
     "mainSuite": {

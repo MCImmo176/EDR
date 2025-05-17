@@ -18,6 +18,18 @@
       "gallery": "Galerie",
       "discover": "Découvrir",
       "villaName": "Les Étoiles du Rocher"
+    },
+    "labels": {
+      "room": "Chambre",
+      "interior": "Intérieur",
+      "exterior": "Extérieur",
+      "phone": "Téléphone",
+      "email": "Email",
+      "address": "Adresse",
+      "customRequest": "Contactez-nous pour un séjour sur-mesure"
+    },
+    "header": {
+      "planVisit": "J'organise une visite"
     }
   },
   "nav": {
@@ -312,7 +324,14 @@
         "title": "Terrasse",
         "description": "Un plateau en plein ciel, aménagé pour vos instants de quiétude et vos repas en plein air."
       },
-      "seeAll": "Voir la galerie complète"
+      "seeAll": "Voir la galerie complète",
+      "categories": {
+        "all": "Tout",
+        "room": "Chambre",
+        "interior": "Intérieur",
+        "exterior": "Extérieur",
+        "view": "Vue"
+      }
     },
     "surroundings": {
       "title": "Aux alentours",

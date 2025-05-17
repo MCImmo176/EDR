@@ -13,6 +13,8 @@ const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
 export default function Home() {
   const t = useTranslations('home');
+  const tCommon = useTranslations('common');
+  const tContact = useTranslations('contact');
   const [hasWindow, setHasWindow] = useState(false);
   const videoRef = useRef<HTMLIFrameElement>(null);
   const { scrollYProgress } = useScroll();
@@ -281,10 +283,10 @@ export default function Home() {
 
               <div className="grid grid-cols-2 gap-6 pt-4">
                 {[ 
-                  { icon: <Sun className="w-7 h-7 text-[#b7a66b]" />, text: t('features.panoramicView') },
-                  { icon: <Pool className="w-7 h-7 text-[#b7a66b]" />, text: t('features.infinityPool') },
-                  { icon: <Leaf className="w-7 h-7 text-[#b7a66b]" />, text: t('features.garden') },
-                  { icon: <ShoppingBag className="w-7 h-7 text-[#b7a66b]" />, text: t('features.services') }
+                  { icon: <Sun className="w-7 h-7 text-[#b7a66b]" />, key: 'villa.features.panoramicView' },
+                  { icon: <Pool className="w-7 h-7 text-[#b7a66b]" />, key: 'villa.features.infinityPool' },
+                  { icon: <Leaf className="w-7 h-7 text-[#b7a66b]" />, key: 'villa.features.garden' },
+                  { icon: <ShoppingBag className="w-7 h-7 text-[#b7a66b]" />, key: 'villa.features.services' }
                 ].map((feature, index) => (
                   <motion.div
                     key={index}
@@ -298,7 +300,7 @@ export default function Home() {
                       {feature.icon}
                     </span>
                     <span className="text-neutral-800 group-hover:text-[#b7a66b] transition-colors duration-300">
-                      {feature.text}
+                      {t(feature.key)}
                     </span>
                   </motion.div>
                 ))}
@@ -356,21 +358,21 @@ export default function Home() {
                 src: "/images/gallery/chambres/8.jpeg",
                 alt: t('gallery.mainSuite.title'),
                 caption: t('gallery.mainSuite.title'),
-                category: "Chambres",
+                category: tCommon('labels.room'),
                 description: t('gallery.mainSuite.description')
               },
               {
                 src: "/images/gallery/interieur/3.JPEG",
                 alt: t('gallery.livingRoom.title'),
                 caption: t('gallery.livingRoom.title'),
-                category: "Intérieur",
+                category: tCommon('labels.interior'),
                 description: t('gallery.livingRoom.description')
               },
               {
                 src: "/images/gallery/exterieur/2.JPEG",
                 alt: t('gallery.terrace.title'),
                 caption: t('gallery.terrace.title'),
-                category: "Extérieur",
+                category: tCommon('labels.exterior'),
                 description: t('gallery.terrace.description')
               }
             ].map((image, index) => (
@@ -506,7 +508,7 @@ export default function Home() {
             <p className="text-lg text-neutral-700 mb-4">{t('surroundings.guide')}</p>
             <Button asChild size="lg" className="bg-white border-2 border-[#b7a66b] text-[#b7a66b] hover:bg-[#b7a66b] hover:text-white transition-all duration-500 px-10 py-5 rounded-full font-semibold text-lg shadow-md group">
               <Link href="#contact" scroll className="flex items-center gap-2">
-                Contactez-nous pour un séjour sur-mesure
+                {tCommon('labels.customRequest')}
                 <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
@@ -563,8 +565,8 @@ export default function Home() {
                     <Phone className="w-7 h-7 text-[#b7a66b]" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-black">Téléphone</h3>
-                    <p className="text-neutral-600">{t('contact.phone')}</p>
+                    <h3 className="text-lg font-semibold text-black">{tCommon('labels.phone')}</h3>
+                    <p className="text-neutral-600">{tContact('info.phone')}</p>
                   </div>
                 </div>
 
@@ -573,8 +575,8 @@ export default function Home() {
                     <Mail className="w-7 h-7 text-[#b7a66b]" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-black">Email</h3>
-                    <p className="text-neutral-600">{t('contact.email')}</p>
+                    <h3 className="text-lg font-semibold text-black">{tCommon('labels.email')}</h3>
+                    <p className="text-neutral-600">{tContact('info.email')}</p>
                   </div>
                 </div>
 
@@ -583,8 +585,8 @@ export default function Home() {
                     <MapPin className="w-7 h-7 text-[#b7a66b]" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-black">Adresse</h3>
-                    <p className="text-neutral-600">{t('contact.address')}</p>
+                    <h3 className="text-lg font-semibold text-black">{tCommon('labels.address')}</h3>
+                    <p className="text-neutral-600">{tContact('info.address')}</p>
                   </div>
                 </div>
               </div>
