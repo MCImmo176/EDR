@@ -93,7 +93,10 @@
     "cta": {
       "bookStay": "Book your stay",
       "discoverVilla": "Discover the villa",
-      "mediterranean": "The Mediterranean art of living"
+      "mediterranean": "The Mediterranean art of living",
+      "planPrivateVisit": "Plan a private visit",
+      "exploreFrontier": "Cross the border",
+      "discoverSecrets": "Our secret spots"
     },
     "quote": "The beauty of a place reveals itself in the caress of light, the silence that inhabits it, and the emotion it evokes.",
     "villa": {
@@ -144,15 +147,24 @@
     "contact": {
       "title": "Contact & Reservation",
       "description": "For any request or to organize your private visit, our team responds with discretion and promptness.",
-      "phone": "Tel.: +33 6 XX XX XX XX",
-      "email": "Email: contact@lesetoilesdurocher.com",
-      "address": "Address: Roquebrune-Cap-Martin, French Riviera",
+      "phone": "+33 6 46 25 77 56",
+      "email": "contact@lesetoilesdurocher.fr",
+      "address": "Roquebrune-Cap-Martin, French Riviera",
       "stats": {
-        "experience": "Years of expertise: 10+",
-        "satisfaction": "Satisfied clients: 100%",
-        "support": "Dedicated support: 24/7"
+        "experience": "Years of expertise",
+        "satisfaction": "Satisfied clients",
+        "support": "Dedicated support"
       }
-    }
+    },
+    "buttons": {
+      "bookNow": "Book now",
+      "discover": "Discover",
+      "contact": "Contact us",
+      "seeMore": "See more",
+      "planVisit": "Plan a private visit",
+      "viewAll": "View all"
+    },
+    "discoverButton": "Discover the villa"
   },
   "about": {
     "title": "About us",
@@ -452,7 +464,8 @@
     "buttons": {
       "bookStay": "Book your stay",
       "requestInfo": "Request information",
-      "back": "Back"
+      "back": "Back",
+      "sendMessage": "Send message"
     },
     "info": {
       "address": "Roquebrune-Cap-Martin, France",

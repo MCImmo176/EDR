@@ -475,7 +475,7 @@ export default function Home() {
                 <h3 className="text-xl font-display font-bold text-black mb-2">{t('surroundings.italy.title')}</h3>
                 <p className="text-neutral-600 leading-relaxed mb-4">{t('surroundings.italy.description')}</p>
                 <Button asChild size="sm" className="bg-[#b7a66b] text-white hover:bg-[#a08c4a] rounded-full mt-auto">
-                  <Link href="/decouvrir/italie" className="flex items-center gap-2">Passer la frontière <ArrowRight className="w-4 h-4" /></Link>
+                  <Link href="/decouvrir/italie" className="flex items-center gap-2">{t('cta.exploreFrontier')} <ArrowRight className="w-4 h-4" /></Link>
                 </Button>
               </div>
             </motion.div>
@@ -497,7 +497,7 @@ export default function Home() {
                 <h3 className="text-xl font-display font-bold text-black mb-2">{t('surroundings.trails.title')}</h3>
                 <p className="text-neutral-600 leading-relaxed mb-4">{t('surroundings.trails.description')}</p>
                 <Button asChild size="sm" className="bg-[#b7a66b] text-white hover:bg-[#a08c4a] rounded-full mt-auto">
-                  <Link href="/decouvrir/azur" className="flex items-center gap-2">Nos coins secrets <ArrowRight className="w-4 h-4" /></Link>
+                  <Link href="/decouvrir/azur" className="flex items-center gap-2">{t('cta.discoverSecrets')} <ArrowRight className="w-4 h-4" /></Link>
                 </Button>
               </div>
             </motion.div>
@@ -596,7 +596,7 @@ export default function Home() {
                   className="bg-white border-2 border-[#b7a66b] text-[#b7a66b] hover:bg-[#b7a66b] hover:text-white transition-all duration-500 px-10 py-5 rounded-full font-semibold text-lg shadow-md group w-full"
                 >
                   <Link href="/contact" scroll className="flex items-center justify-center gap-2">
-                    Planifier une visite privée
+                    {t('cta.planPrivateVisit')}
                     <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>

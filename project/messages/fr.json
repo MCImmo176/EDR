@@ -78,7 +78,10 @@
     "cta": {
       "bookStay": "Réservez votre séjour",
       "discoverVilla": "Découvrez la villa",
-      "mediterranean": "L'art de vivre méditerranéen"
+      "mediterranean": "L'art de vivre méditerranéen",
+      "planPrivateVisit": "Planifier une visite privée",
+      "exploreFrontier": "Passer la frontière",
+      "discoverSecrets": "Nos coins secrets"
     },
     "quote": "La beauté d'un lieu se révèle dans la caresse de la lumière, le silence qui l'habite et l'émotion qu'il suscite.",
     "villa": {
@@ -331,15 +334,24 @@
     "contact": {
       "title": "Contact & Réservation",
       "description": "Pour toute demande ou pour organiser votre visite privée, notre équipe vous répond avec discrétion et promptitude.",
-      "phone": "Tél. : +33 6 XX XX XX XX",
-      "email": "Email : contact@lesetoilesdurocher.com",
-      "address": "Adresse : Roquebrune-Cap-Martin, Côte d'Azur",
+      "phone": "+33 6 46 25 77 56",
+      "email": "contact@lesetoilesdurocher.fr",
+      "address": "Roquebrune-Cap-Martin, Côte d'Azur",
       "stats": {
-        "experience": "Années d'expertise : 10+",
-        "satisfaction": "Clients satisfaits : 100 %",
-        "support": "Support dédié : 24 h/24, 7 j/7"
+        "experience": "Années d'expertise",
+        "satisfaction": "Clients satisfaits",
+        "support": "Support dédié"
       }
-    }
+    },
+    "buttons": {
+      "bookNow": "Réserver maintenant",
+      "discover": "Découvrir",
+      "contact": "Nous contacter",
+      "seeMore": "Voir plus",
+      "planVisit": "Planifier une visite privée",
+      "viewAll": "Voir tout"
+    },
+    "discoverButton": "Découvrir la villa"
   },
   "contact": {
     "title": "Contact",
@@ -365,7 +377,8 @@
     "buttons": {
       "bookStay": "Réserver votre séjour",
       "requestInfo": "Demander des informations",
-      "back": "Retour"
+      "back": "Retour",
+      "sendMessage": "Envoyer un message"
     },
     "info": {
       "address": "Roquebrune-Cap-Martin, France",
