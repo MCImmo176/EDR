@@ -619,5 +619,161 @@
     "experience": "Années d'expertise : 10+",
     "satisfaction": "Clients satisfaits : 100 %",
     "support": "Support dédié : 24 h/24, 7 j/7"
+  },
+  "villa": {
+    "hero": {
+      "title": "Horizon méditerranéen",
+      "description": "Suspendue entre ciel et mer, la Villa Les Étoiles du Rocher vous convie à savourer la douceur de la Côte d'Azur, un refuge perché face à l'azur infini.",
+      "bookNow": "Réserver maintenant",
+      "discoverMore": "Découvrir plus",
+      "scrollDown": "Découvrir plus"
+    },
+    "spaces": {
+      "title": "Espaces conçus pour inspirer",
+      "description": "Chaque pièce des Étoiles du Rocher a été pensée pour mêler confort feutré, lignes délicates et instants mémorables.",
+      "livingRoom": {
+        "title": "Salon baigné de lumière",
+        "description": "Vaste ouverture sur la Méditerranée."
+      },
+      "pool": {
+        "title": "Piscine privée",
+        "description": "Miroir d'eau prolongé par l'horizon."
+      },
+      "suites": {
+        "title": "Cinq suites",
+        "description": "Retraites intimes, inondées de clarté naturelle."
+      }
+    },
+    "features": {
+      "privacy": {
+        "title": "Intimité préservée",
+        "description": "Volumes généreux et vues cadrées garantissent votre quiétude tout en invitant le paysage à l'intérieur."
+      },
+      "harmony": {
+        "title": "Harmonie des matériaux",
+        "description": "Lignes épurées, finitions choisies et matières nobles se combinent pour une ambiance chaleureuse et contemporaine."
+      },
+      "wellness": {
+        "title": "Bien-être raffiné",
+        "description": "Chaque détail — literie, éclairage, textures — est orchestré pour une quiétude absolue, discrète et sans compromis."
+      },
+      "artOfLiving": "L'art de vivre se dessine dans ces lieux où chaque regard croise un trait d'attention dédié à votre plaisir.",
+      "signature": "LES ÉTOILES DU ROCHER"
+    },
+    "location": {
+      "title": "Riviera française : un site privilégié",
+      "description": "Perchée entre Monaco et Menton, la villa jouit d'un cadre rare, mêlant jardin méditerranéen privé et accès rapide aux trésors de la Côte d'Azur.",
+      "distances": {
+        "title": "Distances",
+        "monaco": {
+          "name": "Monaco",
+          "time": "10 min"
+        },
+        "nice": {
+          "name": "Nice",
+          "time": "30 min"
+        },
+        "airport": {
+          "name": "Aéroport Nice Côte d'Azur",
+          "time": "35 min"
+        },
+        "cannes": {
+          "name": "Cannes",
+          "time": "50 min"
+        }
+      },
+      "nearby": {
+        "title": "À découvrir à deux pas",
+        "beaches": {
+          "name": "Plages secrètes",
+          "time": "5 min"
+        },
+        "golf": {
+          "name": "Parcours de golf",
+          "time": "15 min"
+        },
+        "italy": {
+          "name": "Frontière italienne",
+          "time": "15 min"
+        },
+        "saintTropez": {
+          "name": "Saint-Tropez",
+          "time": "1 h 30"
+        }
+      },
+      "exploreButton": "Explorer les environs"
+    },
+    "services": {
+      "title": "PERSONNALISATION & SERVICES SUR MESURE",
+      "description": "Votre séjour se compose selon vos désirs : accueil discret, conciergerie 24 h/24, chef privé, escapades confidentielles… Chaque moment s'écrit à votre mesure.",
+      "welcome": "Accueil personnalisé et check-in privatif",
+      "concierge": "Conciergerie disponible jour et nuit",
+      "chef": "Chef en résidence et service en chambre",
+      "excursions": "Excursions exclusives, hors des sentiers battus",
+      "customizeButton": "Personnaliser mon séjour"
+    },
+    "property": {
+      "title": "CARACTÉRISTIQUES DE LA PROPRIÉTÉ",
+      "location": {
+        "title": "Situation",
+        "monaco": "À 10 min du centre de Monaco",
+        "airport": "À 30 min de l'aéroport de Nice",
+        "cannes": "À 45 min de Cannes",
+        "italy": "À 15 min de l'Italie"
+      },
+      "livingSpace": {
+        "title": "Espaces de vie",
+        "livingRoom": "Salon panoramique de 150 m²",
+        "diningRoom": "Salle à manger face à la mer",
+        "bar": "Bar et salon de réception",
+        "kitchen": "Cuisine Gaggenau sur mesure"
+      },
+      "suites": {
+        "title": "Suites",
+        "count": "5 suites avec salles de bains privatives",
+        "terraces": "Terrasses individuelles",
+        "bedding": "Literie Hästens sur mesure",
+        "dressing": "Dressings en bois précieux"
+      },
+      "exterior": {
+        "title": "Extérieurs",
+        "pool": "Piscine à débordement chauffée (15 × 6 m)",
+        "poolhouse": "Pool house avec cuisine d'été",
+        "garden": "Jardin méditerranéen paysager",
+        "terraces": "Terrasses en pierre naturelle"
+      },
+      "technical": {
+        "title": "Excellence technique & confort",
+        "description": "Les dernières innovations, pensées pour disparaître, vous offrent un cadre apaisant : domotique intégrée, climatisation invisible, isolation acoustique, sécurité 24 h/24 et wifi ultra-rapide."
+      },
+      "capacity": {
+        "people": "Jusqu'à 10 personnes",
+        "pool": "Piscine 15 m × 6 m",
+        "parking": "8 places de parking",
+        "automation": "Domotique complète",
+        "security": "Sécurité permanente"
+      },
+      "allEquipments": "Voir tous nos équipements"
+    },
+    "experience": {
+      "title": "EXPÉRIENCE SIGNATURE : POURQUOI LES ÉTOILES DU ROCHER",
+      "description": "Au-delà d'un simple séjour, cette demeure est une promesse d'évasion où chaque matériau, chaque perspective et chaque service conjuguent leurs talents pour révéler la quintessence de la douceur de vivre méditerranéenne.",
+      "commitment": {
+        "quote": "« Offrir à nos hôtes des instants authentiques, où l'art de recevoir se mêle à la discrétion la plus délicate. »"
+      },
+      "exceptional": {
+        "title": "Une propriété d'exception",
+        "description": "Un joyau architectural récemment érigé, offrant depuis chaque espace un panorama à couper le souffle, dans un écrin de tranquillité absolue."
+      },
+      "harmony": {
+        "title": "Harmonie & authenticité",
+        "description": "Une symphonie de matières nobles, de technologies muettes et d'aménagements soignés, au service d'une expérience sensorielle tout en subtilité."
+      },
+      "service": {
+        "title": "Un service attentif",
+        "description": "Une équipe dédiée, anticipant vos souhaits pour composer des moments sur-mesure, à l'image de vos aspirations les plus délicates."
+      },
+      "bookButton": "Réservez votre expérience"
+    }
   }
 } 

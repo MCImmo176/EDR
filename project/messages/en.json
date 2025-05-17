@@ -192,29 +192,202 @@
   "villa": {
     "title": "The Villa",
     "description": "An exceptional residence",
+    "hero": {
+      "title": "Mediterranean horizon",
+      "description": "Suspended between sky and sea, Villa Les Étoiles du Rocher invites you to savor the sweetness of the French Riviera, a refuge perched facing the infinite azure.",
+      "bookNow": "Book now",
+      "discoverMore": "Discover more",
+      "scrollDown": "Discover more",
+      "ctaButton": "Book now",
+      "subtitle": "Let yourself be enchanted by the golden morning rays, the discreet song of pine trees, and the endless horizon of the Mediterranean.",
+      "experienceTitle": "The sky and sea",
+      "experienceSubtitle": "experience",
+      "videoTitle": "Villa video"
+    },
     "spaces": {
-      "title": "Discover our spaces",
-      "subtitle": "Each space at Les Étoiles du Rocher has been designed to offer you comfort, elegance and unforgettable moments.",
-      "galleryButton": "Access the gallery",
-      "living": {
-        "title": "Main Living Room",
-        "description": "An elegant living space with panoramic view of the Mediterranean",
-        "alt": "Main living room with panoramic view"
-      },
-      "living2": {
-        "title": "Second Living Room",
-        "description": "A cozy space for intimate moments",
-        "alt": "Second living room"
+      "title": "Spaces Designed to Inspire",
+      "description": "Each room at Les Étoiles du Rocher has been designed to blend subtle comfort, delicate lines and memorable moments.",
+      "livingRoom": {
+        "title": "Light-bathed living room",
+        "description": "Vast opening onto the Mediterranean."
       },
       "pool": {
-        "title": "Infinity Pool",
-        "description": "A stunning infinity pool with breathtaking sea view",
-        "alt": "Infinity pool with sea view"
+        "title": "Private pool",
+        "description": "Water mirror extended by the horizon."
       },
       "suites": {
-        "title": "Private Suites",
-        "description": "Five elegant suites offering comfort and privacy",
-        "alt": "Private suite"
+        "title": "Five suites",
+        "description": "Intimate retreats, flooded with natural light."
+      }
+    },
+    "features": {
+      "privacy": {
+        "title": "Preserved privacy",
+        "description": "Generous volumes and framed views guarantee your tranquility while inviting the landscape inside."
+      },
+      "harmony": {
+        "title": "Harmony of materials",
+        "description": "Clean lines, selected finishes, and noble materials combine for a warm and contemporary atmosphere."
+      },
+      "wellness": {
+        "title": "Refined well-being",
+        "description": "Every detail — bedding, lighting, textures — is orchestrated for absolute, discreet, and uncompromising tranquility."
+      },
+      "artOfLiving": "The art of living is drawn in these places where every glance crosses a line of attention dedicated to your pleasure.",
+      "signature": "LES ÉTOILES DU ROCHER"
+    },
+    "location": {
+      "title": "French Riviera: a privileged site",
+      "region": "French Riviera",
+      "description": "Perched between Monaco and Menton, the villa enjoys a rare setting, combining a private Mediterranean garden with quick access to the treasures of the French Riviera.",
+      "exploreButton": "Explore the surroundings",
+      "distances": {
+        "title": "Distances",
+        "monaco": {
+          "name": "Monaco",
+          "time": "10 min"
+        },
+        "nice": {
+          "name": "Nice",
+          "time": "30 min"
+        },
+        "airport": {
+          "name": "Nice Airport",
+          "time": "35 min"
+        },
+        "cannes": {
+          "name": "Cannes",
+          "time": "50 min"
+        }
+      },
+      "nearby": {
+        "title": "Discover nearby",
+        "beaches": {
+          "name": "Secret beaches",
+          "time": "5 min"
+        },
+        "golf": {
+          "name": "Golf course",
+          "time": "15 min"
+        },
+        "italy": {
+          "name": "Italian border",
+          "time": "15 min"
+        },
+        "saintTropez": {
+          "name": "Saint-Tropez",
+          "time": "1h30"
+        }
+      },
+      "features": {
+        "panoramic": {
+          "title": "Panoramic View",
+          "alt": "Panoramic view of the Mediterranean"
+        },
+        "gardens": {
+          "title": "Gardens",
+          "alt": "Mediterranean gardens"
+        },
+        "terraces": {
+          "title": "Terraces",
+          "alt": "Rooftop with view"
+        }
+      }
+    },
+    "services": {
+      "customization": "Customization",
+      "title": "Tailored services",
+      "description": "Your stay is composed according to your desires: discreet welcome, 24/7 concierge, private chef, confidential excursions... Each moment is written to your measure.",
+      "excellence": {
+        "title": "Excellence at your service",
+        "description": "Our exceptional team anticipates your wishes with subtle intuition. From private events to reservations at the most sought-after establishments, we take care of the perfect organization of each moment of your stay."
+      },
+      "welcome": "Personalized welcome and private check-in",
+      "concierge": "Concierge service available 24/7",
+      "chef": "Starred chef and room service",
+      "excursions": "Organization of confidential excursions",
+      "customizeButton": "Customize your experience"
+    },
+    "property": {
+      "category": "Characteristics",
+      "title": "Property details",
+      "location": {
+        "title": "Location",
+        "monaco": "10 min from Monaco center",
+        "airport": "30 min from Nice airport",
+        "cannes": "45 min from Cannes",
+        "italy": "15 min from Italy"
+      },
+      "livingSpace": {
+        "title": "Living spaces",
+        "livingRoom": "150m² panoramic living room",
+        "diningRoom": "Dining room with sea view",
+        "bar": "Bar and reception lounge",
+        "kitchen": "Custom Gaggenau kitchen"
+      },
+      "suites": {
+        "title": "Suites",
+        "count": "5 suites with private bathrooms",
+        "terraces": "Individual terraces with sea view",
+        "bedding": "Custom Hästens bedding",
+        "dressing": "Dressing rooms in precious wood"
+      },
+      "exterior": {
+        "title": "Exteriors",
+        "pool": "Heated infinity pool",
+        "poolhouse": "Pool house with summer kitchen",
+        "garden": "Landscaped Mediterranean garden",
+        "terraces": "Natural stone terraces"
+      },
+      "technical": {
+        "category": "Technical excellence",
+        "title": "Comfort and technologies at the service of your well-being",
+        "description": "Les Étoiles du Rocher benefits from the latest innovations to guarantee you absolute comfort. Advanced home automation system, invisible air conditioning, perfect sound insulation... Every technical detail has been designed to be forgotten and let you fully enjoy the present moment."
+      },
+      "capacity": {
+        "people": "10 people",
+        "pool": "Pool 15m x 6m",
+        "parking": "8 parking spaces",
+        "wifi": "Ultra-fast Wi-Fi",
+        "automation": "Integrated home automation",
+        "security": "24/7 security"
+      },
+      "allEquipments": "Discover all our equipment"
+    },
+    "experience": {
+      "category": "Unique experience",
+      "title": "Why choose Les Étoiles du Rocher",
+      "description": "Beyond a simple stay, this residence is a promise of escape where each material, each perspective, and each service combine their talents to reveal the quintessence of Mediterranean sweet living.",
+      "commitment": {
+        "title": "Our Commitment",
+        "quote": "\"Offering our guests authentic moments, where the art of hospitality mingles with the most delicate discretion.\""
+      },
+      "exceptional": {
+        "title": "An exceptional property",
+        "description": "An architectural jewel recently built, offering from each space a breathtaking panorama, in an environment of absolute tranquility."
+      },
+      "harmony": {
+        "title": "Harmony & authenticity",
+        "description": "A symphony of noble materials, silent technologies, and careful arrangements, serving a sensory experience of subtlety."
+      },
+      "service": {
+        "title": "Attentive service",
+        "description": "A dedicated team, anticipating your wishes to compose tailor-made moments, reflecting your most delicate aspirations."
+      },
+      "bookButton": "Book your experience"
+    },
+    "kitchen": {
+      "island": {
+        "title": "Central island",
+        "description": "Marble central island with integrated storage space and designer stools."
+      },
+      "appliances": {
+        "title": "High-end appliances",
+        "description": "Gaggenau equipment with integrated refrigerator, steam oven and induction cooktop."
+      },
+      "dining": {
+        "title": "Dining area",
+        "description": "Solid oak table that can accommodate up to 8 people."
       }
     },
     "common": {
@@ -251,13 +424,47 @@
       "title": "Rent an exceptional villa 10 minutes from Monaco with breathtaking sea views",
       "subtitle": "Freshly completed at the beginning of the year, this luxury villa, never rented before, is ready to offer you unforgettable moments, with family or friends.",
       "location": {
-        "title": "📍 Ideal location",
-        "items": {
-          "monaco": "Just 10 minutes from Monaco city center",
-          "airport": "30 minutes from Nice airport",
-          "cannes": "45 minutes from Cannes",
-          "italy": "And 15 minutes from Italy"
-        }
+        "title": "French Riviera: a privileged site",
+        "description": "Perched between Monaco and Menton, the villa enjoys a rare setting, blending private Mediterranean garden and quick access to the treasures of the French Riviera.",
+        "distances": {
+          "title": "Distances",
+          "monaco": {
+            "name": "Monaco",
+            "time": "10 min"
+          },
+          "nice": {
+            "name": "Nice",
+            "time": "30 min"
+          },
+          "airport": {
+            "name": "Nice Côte d'Azur Airport",
+            "time": "35 min"
+          },
+          "cannes": {
+            "name": "Cannes",
+            "time": "50 min"
+          }
+        },
+        "nearby": {
+          "title": "To discover nearby",
+          "beaches": {
+            "name": "Secret beaches",
+            "time": "5 min"
+          },
+          "golf": {
+            "name": "Golf courses",
+            "time": "15 min"
+          },
+          "italy": {
+            "name": "Italian border",
+            "time": "15 min"
+          },
+          "saintTropez": {
+            "name": "Saint-Tropez",
+            "time": "1 h 30"
+          }
+        },
+        "exploreButton": "Explore the surroundings"
       },
       "interior": {
         "title": "Interior",
@@ -280,14 +487,13 @@
         }
       },
       "services": {
-        "title": "Included services",
-        "items": {
-          "bathrooms": "5 equipped bathrooms",
-          "wc": "6 toilets including 1 guest toilet upstairs",
-          "wellness": "Complete wellness packs",
-          "wifi": "High-speed WiFi",
-          "safe": "Safe in each bedroom"
-        }
+        "title": "PERSONALIZATION & TAILOR-MADE SERVICES",
+        "description": "Your stay is tailored to your desires: discreet welcome, 24/7 concierge, private chef, confidential getaways... Each moment is written to your measure.",
+        "welcome": "Personalized welcome and private check-in",
+        "concierge": "Concierge available day and night",
+        "chef": "Resident chef and room service",
+        "excursions": "Exclusive excursions, off the beaten path",
+        "customizeButton": "Customize my stay"
       }
     },
     "kitchen": {
@@ -390,6 +596,76 @@
         "wifi": "High-speed WiFi",
         "capacity": "Up to 10 people"
       }
+    },
+    "hero": {
+      "title": "Mediterranean Horizon",
+      "description": "Suspended between sky and sea, Les Étoiles du Rocher invites you to savor the sweetness of the French Riviera, a haven perched facing infinite azure.",
+      "bookNow": "Book Now",
+      "discoverMore": "Discover More",
+      "scrollDown": "Discover More"
+    },
+    "property": {
+      "title": "PROPERTY FEATURES",
+      "location": {
+        "title": "Location",
+        "monaco": "10 min from Monaco center",
+        "airport": "30 min from Nice airport",
+        "cannes": "45 min from Cannes",
+        "italy": "15 min from Italy"
+      },
+      "livingSpace": {
+        "title": "Living Spaces",
+        "livingRoom": "150 m² panoramic living room",
+        "diningRoom": "Sea-facing dining room",
+        "bar": "Bar and reception lounge",
+        "kitchen": "Custom Gaggenau kitchen"
+      },
+      "suites": {
+        "title": "Suites",
+        "count": "5 suites with private bathrooms",
+        "terraces": "Individual terraces",
+        "bedding": "Custom Hästens bedding",
+        "dressing": "Precious wood wardrobes"
+      },
+      "exterior": {
+        "title": "Exterior",
+        "pool": "Heated infinity pool (15 × 6 m)",
+        "poolhouse": "Pool house with summer kitchen",
+        "garden": "Landscaped Mediterranean garden",
+        "terraces": "Natural stone terraces"
+      },
+      "technical": {
+        "title": "Technical Excellence & Comfort",
+        "description": "The latest innovations, designed to disappear, offer you a soothing environment: integrated home automation, invisible air conditioning, acoustic insulation, 24/7 security and ultra-fast WiFi."
+      },
+      "capacity": {
+        "people": "Up to 10 people",
+        "pool": "Pool 15 m × 6 m",
+        "parking": "8 parking spaces",
+        "automation": "Complete home automation",
+        "security": "Permanent security"
+      },
+      "allEquipments": "View all our facilities"
+    },
+    "experience": {
+      "title": "SIGNATURE EXPERIENCE: WHY LES ÉTOILES DU ROCHER",
+      "description": "Beyond a simple stay, this residence is a promise of escape where each material, each perspective and each service combine their talents to reveal the quintessence of the Mediterranean sweetness of life.",
+      "commitment": {
+        "quote": "\"Offering our guests authentic moments, where the art of hospitality blends with the most delicate discretion.\""
+      },
+      "exceptional": {
+        "title": "An exceptional property",
+        "description": "A recently built architectural jewel, offering from each space a breathtaking panorama, in a setting of absolute tranquility."
+      },
+      "harmony": {
+        "title": "Harmony & authenticity",
+        "description": "A symphony of noble materials, silent technologies and meticulous arrangements, serving a sensory experience of subtle sophistication."
+      },
+      "service": {
+        "title": "Attentive service",
+        "description": "A dedicated team, anticipating your wishes to compose tailor-made moments, reflecting your most delicate aspirations."
+      },
+      "bookButton": "Book your experience"
     }
   },
   "gallery": {

@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useLanguage } from "@/hooks/useLanguage";
+import { useTranslations } from 'next-intl';
 import { SectionTitle } from "@/components/ui/section-title";
 import { Divider } from "@/components/ui/divider";
 import { ImageCarousel } from "@/components/ui/image-carousel";
@@ -64,7 +64,7 @@ function AccordionItem({ title, description, isOpen, toggleOpen }: {
 }
 
 export default function VillaPage() {
-  const { tVilla } = useLanguage();
+  const tVilla = useTranslations('villa');
   const [kitchenData, setKitchenData] = useState<any>(null);
   const [activePoint, setActivePoint] = useState<number | null>(null);
   const [hoverPoint, setHoverPoint] = useState<number | null>(null);
@@ -231,29 +231,29 @@ export default function VillaPage() {
             x: 30,
             y: 25,
             id: "ilot",
-            title: "Îlot central",
-            description: "Îlot central en marbre avec espace de rangement intégré et tabourets design."
+            title: tVilla('kitchen.island.title'),
+            description: tVilla('kitchen.island.description')
           },
           {
             x: 65,
             y: 40,
             id: "electromenagers",
-            title: "Électroménagers haut de gamme",
-            description: "Équipement Gaggenau avec réfrigérateur intégré, four vapeur et plaque à induction."
+            title: tVilla('kitchen.appliances.title'),
+            description: tVilla('kitchen.appliances.description')
           },
           {
             x: 20,
             y: 60,
             id: "repas",
-            title: "Espace repas",
-            description: "Table en chêne massif pouvant accueillir jusqu'à 8 personnes."
+            title: tVilla('kitchen.dining.title'),
+            description: tVilla('kitchen.dining.description')
           }
         ]
       });
     };
 
     loadKitchenData();
-  }, []);
+  }, [tVilla]);
 
   return (
     <main className="min-h-screen bg-white">
@@ -264,7 +264,7 @@ export default function VillaPage() {
           <div className="relative h-full w-full" style={{ paddingBottom: '56.25%' }}> {/* Ratio 16:9 */}
             <iframe
               src="https://www.youtube.com/embed/GYvCKCN_J9s?autoplay=1&mute=1&loop=1&playlist=GYvCKCN_J9s&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
-              title="Vidéo villa"
+              title={tVilla('hero.videoTitle')}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -284,8 +284,8 @@ export default function VillaPage() {
               {/* Remplacer le composant LuxuryTextReveal par du HTML statique pour correspondre à l'onglet GALERIE */}
               <div className="mb-16">
                 <h1 className="text-white text-6xl md:text-7xl font-light tracking-wide">
-                  L'expérience<br />
-                  ciel et mer
+                  {tVilla('hero.experienceTitle')}<br />
+                  {tVilla('hero.experienceSubtitle')}
                 </h1>
                 <motion.div 
                   initial={{ width: 0 }}
@@ -400,16 +400,16 @@ export default function VillaPage() {
             >
               {[
                 {
-                  title: "ESPACES INTIMES",
-                  description: "Chaque espace a été conçu pour préserver votre intimité tout en offrant des ouvertures sur les extérieurs."
+                  title: tVilla('features.privacy.title'),
+                  description: tVilla('features.privacy.description')
                 },
                 {
-                  title: "DESIGN INTEMPOREL",
-                  description: "Les intérieurs allient esthétique contemporaine et matériaux nobles pour un résultat à la fois élégant et chaleureux."
+                  title: tVilla('features.harmony.title'),
+                  description: tVilla('features.harmony.description')
                 },
                 {
-                  title: "CONFORT ABSOLU",
-                  description: "Une attention méticuleuse a été portée à chaque détail pour garantir un confort optimal dans tous les espaces de vie."
+                  title: tVilla('features.wellness.title'),
+                  description: tVilla('features.wellness.description')
                 }
               ].map((item, index) => (
                 <motion.div 
@@ -447,7 +447,7 @@ export default function VillaPage() {
                   viewport={{ once: true }}
                   className="text-2xl md:text-3xl font-light text-neutral-700 italic max-w-3xl mx-auto leading-relaxed"
                 >
-                  L'art de vivre réside dans ces espaces où chaque regard découvre un détail pensé pour votre bien-être.
+                  {tVilla('features.artOfLiving')}
                 </motion.p>
                 <motion.div
                   initial={{ scaleX: 0 }}
@@ -463,7 +463,7 @@ export default function VillaPage() {
                   viewport={{ once: true }}
                   className="text-sm uppercase tracking-widest text-neutral-400"
                 >
-                  LES ÉTOILES DU ROCHER
+                  {tVilla('features.signature')}
                 </motion.p>
               </div>
             </motion.div>
@@ -485,31 +485,28 @@ export default function VillaPage() {
             className="lg:col-span-5 flex flex-col justify-center px-8 lg:px-0 lg:pl-8"
           >
             <span className="text-[#b7a66b] font-light tracking-[0.25em] text-xs uppercase mb-6">
-              RIVIERA FRANÇAISE
+              {tVilla('location.region')}
             </span>
             
             <h2 className="text-3xl md:text-4xl font-extralight mb-10 tracking-wide">
-              EMPLACEMENT D'EXCEPTION
+              {tVilla('location.title')}
             </h2>
             
             <div className="h-px w-16 bg-[#b7a66b]/30 mb-10"></div>
             
             <p className="text-neutral-600 font-light leading-relaxed mb-12 text-base max-w-xl">
-              Nichée au cœur d'un rivage légendaire entre Monaco et Menton, Les Étoiles du Rocher 
-              offre un point de vue privilégié sur la Méditerranée. Un emplacement rarissime qui 
-              conjugue l'intimité d'un jardin méditerranéen privatif à la proximité des lieux les 
-              plus prestigieux de la Côte d'Azur.
+              {tVilla('location.description')}
             </p>
             
             <div className="grid grid-cols-2 gap-8">
               <div>
-                <h3 className="text-sm uppercase tracking-widest font-medium text-neutral-700 mb-6">Distances</h3>
+                <h3 className="text-sm uppercase tracking-widest font-medium text-neutral-700 mb-6">{tVilla('location.distances.title')}</h3>
                 <ul className="space-y-5">
                   {[
-                    { destination: "Monaco", duration: "10 min" },
-                    { destination: "Nice", duration: "30 min" },
-                    { destination: "Aéroport", duration: "35 min" },
-                    { destination: "Cannes", duration: "50 min" },
+                    { destination: tVilla('location.distances.monaco.name'), duration: tVilla('location.distances.monaco.time') },
+                    { destination: tVilla('location.distances.nice.name'), duration: tVilla('location.distances.nice.time') },
+                    { destination: tVilla('location.distances.airport.name'), duration: tVilla('location.distances.airport.time') },
+                    { destination: tVilla('location.distances.cannes.name'), duration: tVilla('location.distances.cannes.time') },
                   ].map((item, index) => (
                     <li key={index} className="flex items-center justify-between text-sm">
                       <span className="text-neutral-600 font-light">{item.destination}</span>
@@ -520,13 +517,13 @@ export default function VillaPage() {
               </div>
               
               <div>
-                <h3 className="text-sm uppercase tracking-widest font-medium text-neutral-700 mb-6">À proximité</h3>
+                <h3 className="text-sm uppercase tracking-widest font-medium text-neutral-700 mb-6">{tVilla('location.nearby.title')}</h3>
                 <ul className="space-y-5">
                   {[
-                    { place: "Plages", distance: "5 min" },
-                    { place: "Golf", distance: "15 min" },
-                    { place: "Italie", distance: "15 min" },
-                    { place: "St-Tropez", distance: "1h30" },
+                    { place: tVilla('location.nearby.beaches.name'), distance: tVilla('location.nearby.beaches.time') },
+                    { place: tVilla('location.nearby.golf.name'), distance: tVilla('location.nearby.golf.time') },
+                    { place: tVilla('location.nearby.italy.name'), distance: tVilla('location.nearby.italy.time') },
+                    { place: tVilla('location.nearby.saintTropez.name'), distance: tVilla('location.nearby.saintTropez.time') },
                   ].map((item, index) => (
                     <li key={index} className="flex items-center justify-between text-sm">
                       <span className="text-neutral-600 font-light">{item.place}</span>
@@ -542,7 +539,7 @@ export default function VillaPage() {
                 href="/decouvrir" 
                 className="inline-flex items-center justify-center rounded-none bg-[#b7a66b] text-white px-8 py-4 text-sm font-light tracking-wider hover:bg-[#a89659] transition-all duration-300"
               >
-                <span>Découvrez les environs</span>
+                <span>{tVilla('location.exploreButton')}</span>
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
@@ -558,7 +555,7 @@ export default function VillaPage() {
             <div className="relative h-[300px] md:h-[400px] overflow-hidden group sm:col-span-2">
               <Image
                 src="/images/villa/DJI_0004.JPG"
-                alt="Vue panoramique sur la mer Méditerranée"
+                alt={tVilla('location.features.panoramic.alt')}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 quality={100}
@@ -566,7 +563,7 @@ export default function VillaPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <div className="absolute bottom-6 left-6 z-10">
                 <span className="bg-white/20 backdrop-blur-md text-white px-4 py-2 rounded-sm text-xs tracking-wider uppercase">
-                  Vue Panoramique
+                  {tVilla('location.features.panoramic.title')}
                 </span>
               </div>
             </div>
@@ -574,7 +571,7 @@ export default function VillaPage() {
             <div className="relative h-[220px] md:h-[280px] overflow-hidden group">
               <Image
                 src="/images/villa/exterieur.jpg"
-                alt="Jardins méditerranéens"
+                alt={tVilla('location.features.gardens.alt')}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 quality={90}
@@ -582,7 +579,7 @@ export default function VillaPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <div className="absolute bottom-6 left-6 z-10">
                 <span className="bg-white/20 backdrop-blur-md text-white px-4 py-2 rounded-sm text-xs tracking-wider uppercase">
-                  Jardins
+                  {tVilla('location.features.gardens.title')}
                 </span>
               </div>
             </div>
@@ -590,7 +587,7 @@ export default function VillaPage() {
             <div className="relative h-[220px] md:h-[280px] overflow-hidden group">
               <Image
                 src="/images/villa/IMG_8032.jpg"
-                alt="Rooftop avec vue"
+                alt={tVilla('location.features.terraces.alt')}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 quality={90}
@@ -598,7 +595,7 @@ export default function VillaPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <div className="absolute bottom-6 left-6 z-10">
                 <span className="bg-white/20 backdrop-blur-md text-white px-4 py-2 rounded-sm text-xs tracking-wider uppercase">
-                  Terrasses
+                  {tVilla('location.features.terraces.title')}
                 </span>
               </div>
             </div>
@@ -634,7 +631,7 @@ export default function VillaPage() {
                   viewport={{ once: true }}
                   className="block text-[#b7a66b] font-light tracking-[0.25em] text-xs uppercase mb-6"
                 >
-                  PERSONNALISATION
+                  {tVilla('services.customization')}
                 </motion.span>
                 
                 <motion.h2
@@ -644,7 +641,7 @@ export default function VillaPage() {
                   viewport={{ once: true }}
                   className="text-3xl md:text-4xl font-extralight mb-8 tracking-wide"
                 >
-                  SERVICES SUR MESURE
+                  {tVilla('services.title')}
                 </motion.h2>
                 
                 <motion.div
@@ -662,8 +659,7 @@ export default function VillaPage() {
                   viewport={{ once: true }}
                   className="text-neutral-500 font-light max-w-2xl mx-auto text-center text-base md:text-lg leading-relaxed"
                 >
-                  Notre démarche s'articule autour de vos désirs. Nous orchestrons chaque détail pour vous offrir 
-                  une expérience où l'exceptionnel devient norme, et l'inattendu, une délicate attention.
+                  {tVilla('services.description')}
                 </motion.p>
               </motion.div>
               
@@ -676,21 +672,19 @@ export default function VillaPage() {
                   className="flex flex-col justify-center"
                 >
                   <h3 className="text-2xl md:text-3xl font-extralight mb-10 tracking-wide">
-                    L'EXCELLENCE À VOTRE SERVICE
+                    {tVilla('services.excellence.title')}
                   </h3>
                   
                   <p className="text-neutral-500 font-light leading-relaxed mb-12">
-                    Notre équipe d'exception anticipe vos souhaits avec une subtile intuition. Des événements privés 
-                    aux réservations dans les établissements les plus prisés, nous nous chargeons de l'organisation 
-                    parfaite de chaque moment de votre séjour.
+                    {tVilla('services.excellence.description')}
                   </p>
                   
                   <ul className="space-y-6 mb-16">
                     {[
-                      "Accueil personnalisé et check-in privatif",
-                      "Service de conciergerie disponible 24h/24",
-                      "Chef étoilé et service en chambre",
-                      "Organisation d'excursions confidentielles"
+                      tVilla('services.welcome'),
+                      tVilla('services.concierge'),
+                      tVilla('services.chef'),
+                      tVilla('services.excursions')
                     ].map((item, i) => (
                       <li 
                         key={i} 
@@ -708,7 +702,7 @@ export default function VillaPage() {
                     href="/contact" 
                     className="inline-flex items-center justify-center bg-transparent border border-[#b7a66b] text-sm text-neutral-700 px-8 py-4 font-light tracking-wider hover:bg-[#b7a66b]/10 transition-all duration-300 max-w-max"
                   >
-                    <span>Personnalisez votre expérience</span>
+                    <span>{tVilla('services.customizeButton')}</span>
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </motion.div>
@@ -762,7 +756,7 @@ export default function VillaPage() {
               viewport={{ once: true }}
               className="inline-block text-[#b7a66b] font-light tracking-[0.25em] text-xs uppercase mb-6"
             >
-              CARACTÉRISTIQUES
+              {tVilla('property.category')}
             </motion.span>
             
             <motion.h2
@@ -772,7 +766,7 @@ export default function VillaPage() {
               viewport={{ once: true }}
               className="text-3xl md:text-4xl font-extralight mb-8 tracking-wide"
             >
-              DÉTAILS DE LA PROPRIÉTÉ
+              {tVilla('property.title')}
             </motion.h2>
             
             <motion.div
@@ -794,39 +788,39 @@ export default function VillaPage() {
           >
             {[
               {
-                title: "Situation",
+                title: tVilla('property.location.title'),
                 items: [
-                  "À 10 min du centre de Monaco",
-                  "À 30 min de l'aéroport de Nice",
-                  "À 45 min de Cannes",
-                  "À 15 min de la frontière italienne"
+                  tVilla('property.location.monaco'),
+                  tVilla('property.location.airport'),
+                  tVilla('property.location.cannes'),
+                  tVilla('property.location.italy')
                 ]
               },
               {
-                title: "Espaces de vie",
+                title: tVilla('property.livingSpace.title'),
                 items: [
-                  "Salon panoramique de 150m²",
-                  "Salle à manger avec vue mer",
-                  "Bar et salon de réception",
-                  "Cuisine Gaggenau sur mesure"
+                  tVilla('property.livingSpace.livingRoom'),
+                  tVilla('property.livingSpace.diningRoom'),
+                  tVilla('property.livingSpace.bar'),
+                  tVilla('property.livingSpace.kitchen')
                 ]
               },
               {
-                title: "Suites",
+                title: tVilla('property.suites.title'),
                 items: [
-                  "5 suites avec salles de bain privatives",
-                  "Terrasses individuelles vue mer",
-                  "Literie Hästens sur mesure",
-                  "Dressings en bois précieux"
+                  tVilla('property.suites.count'),
+                  tVilla('property.suites.terraces'),
+                  tVilla('property.suites.bedding'),
+                  tVilla('property.suites.dressing')
                 ]
               },
               {
-                title: "Extérieurs",
+                title: tVilla('property.exterior.title'),
                 items: [
-                  "Piscine à débordement chauffée",
-                  "Pool house avec cuisine d'été",
-                  "Jardin méditerranéen paysager",
-                  "Terrasses en pierre naturelle"
+                  tVilla('property.exterior.pool'),
+                  tVilla('property.exterior.poolhouse'),
+                  tVilla('property.exterior.garden'),
+                  tVilla('property.exterior.terraces')
                 ]
               }
             ].map((category, index) => (
@@ -869,17 +863,15 @@ export default function VillaPage() {
               className="md:col-span-2 flex flex-col justify-center"
             >
               <span className="text-[#b7a66b] font-light tracking-[0.25em] text-xs uppercase mb-5">
-                EXCELLENCE TECHNIQUE
+                {tVilla('property.technical.category')}
               </span>
               
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-extralight tracking-wide leading-snug mb-10">
-                Confort et technologies<br className="hidden md:block" /> au service de votre bien-être
+                {tVilla('property.technical.title')}
               </h2>
               
               <p className="text-neutral-500 font-light mb-12 leading-relaxed text-base max-w-2xl">
-                Les Étoiles du Rocher bénéficie des dernières innovations pour vous garantir un confort absolu. 
-                Système domotique de pointe, climatisation invisible, isolation phonique parfaite... 
-                Chaque détail technique a été pensé pour se faire oublier et vous laisser profiter pleinement de l'instant présent.
+                {tVilla('property.technical.description')}
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-6">
@@ -887,42 +879,42 @@ export default function VillaPage() {
                   <div className="w-8 h-8 rounded-full flex items-center justify-center bg-[#b7a66b]/10 mr-4">
                     <Users className="w-4 h-4 text-[#b7a66b]" />
                   </div>
-                  <span className="text-neutral-700 text-sm">10 personnes</span>
+                  <span className="text-neutral-700 text-sm">{tVilla('property.capacity.people')}</span>
                 </div>
                 
                 <div className="flex items-center mb-5">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center bg-[#b7a66b]/10 mr-4">
                     <Pool className="w-4 h-4 text-[#b7a66b]" />
                   </div>
-                  <span className="text-neutral-700 text-sm">Piscine 15m x 6m</span>
+                  <span className="text-neutral-700 text-sm">{tVilla('property.capacity.pool')}</span>
                 </div>
                 
                 <div className="flex items-center mb-5">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center bg-[#b7a66b]/10 mr-4">
                     <Parking className="w-4 h-4 text-[#b7a66b]" />
                   </div>
-                  <span className="text-neutral-700 text-sm">8 places de parking</span>
+                  <span className="text-neutral-700 text-sm">{tVilla('property.capacity.parking')}</span>
                 </div>
                 
                 <div className="flex items-center mb-5">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center bg-[#b7a66b]/10 mr-4">
                     <Wifi className="w-4 h-4 text-[#b7a66b]" />
                   </div>
-                  <span className="text-neutral-700 text-sm">Wi-Fi ultra-rapide</span>
+                  <span className="text-neutral-700 text-sm">{tVilla('property.capacity.wifi')}</span>
                 </div>
                 
                 <div className="flex items-center mb-5">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center bg-[#b7a66b]/10 mr-4">
                     <Home className="w-4 h-4 text-[#b7a66b]" />
                   </div>
-                  <span className="text-neutral-700 text-sm">Domotique intégrée</span>
+                  <span className="text-neutral-700 text-sm">{tVilla('property.capacity.automation')}</span>
                 </div>
                 
                 <div className="flex items-center mb-5">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center bg-[#b7a66b]/10 mr-4">
                     <ShieldCheck className="w-4 h-4 text-[#b7a66b]" />
                   </div>
-                  <span className="text-neutral-700 text-sm">Sécurité 24/7</span>
+                  <span className="text-neutral-700 text-sm">{tVilla('property.capacity.security')}</span>
                 </div>
               </div>
               
@@ -931,7 +923,7 @@ export default function VillaPage() {
                   href="/contact" 
                   className="inline-flex items-center justify-center rounded-none border border-[#b7a66b] text-sm text-neutral-700 px-8 py-4 font-light tracking-wider hover:bg-[#b7a66b]/10 transition-all duration-300"
                 >
-                  <span>Découvrez tous nos équipements</span>
+                  <span>{tVilla('property.allEquipments')}</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
@@ -984,7 +976,7 @@ export default function VillaPage() {
                 viewport={{ once: true }}
                 className="block font-light tracking-[0.25em] text-xs uppercase mb-4 text-[#b7a66b]"
               >
-                EXPÉRIENCE UNIQUE
+                {tVilla('experience.category')}
               </motion.span>
               
               <motion.h2
@@ -994,7 +986,7 @@ export default function VillaPage() {
                 viewport={{ once: true }}
                 className="text-3xl md:text-4xl font-extralight text-center max-w-4xl leading-tight mb-8 tracking-wide"
               >
-                POURQUOI CHOISIR LES ÉTOILES DU ROCHER
+                {tVilla('experience.title')}
               </motion.h2>
               
               <motion.div
@@ -1012,9 +1004,7 @@ export default function VillaPage() {
                 viewport={{ once: true }}
                 className="text-neutral-600 font-light max-w-3xl mx-auto text-center text-base md:text-lg leading-relaxed mb-20"
               >
-                Au-delà d'un simple hébergement, Les Étoiles du Rocher incarne une philosophie où chaque élément a 
-                été imaginé pour créer une expérience de séjour exceptionnelle, alliant la quintessence du 
-                raffinement méditerranéen à un service personnalisé inégalé.
+                {tVilla('experience.description')}
               </motion.p>
             </div>
           </motion.div>
@@ -1043,10 +1033,9 @@ export default function VillaPage() {
               
               <div className="absolute inset-0 flex items-end p-12">
                 <div className="bg-white/80 backdrop-blur-sm p-6 md:p-10 max-w-md">
-                  <h3 className="text-xl font-light tracking-wide mb-4">Notre Engagement</h3>
+                  <h3 className="text-xl font-light tracking-wide mb-4">{tVilla('experience.commitment.title')}</h3>
                   <p className="text-neutral-600 font-light text-sm md:text-base leading-relaxed">
-                    "Offrir à nos hôtes l'expérience d'un séjour inoubliable, où le luxe se mesure par 
-                    l'authenticité des moments vécus et la discrétion d'un service d'exception."
+                    {tVilla('experience.commitment.quote')}
                   </p>
                 </div>
               </div>
@@ -1062,16 +1051,16 @@ export default function VillaPage() {
               <div className="space-y-12">
                 {[
                   {
-                    title: "UNE PROPRIÉTÉ EXCEPTIONNELLE",
-                    description: "Un véritable joyau architectural récemment achevé, offrant une vue à couper le souffle sur la Méditerranée depuis chaque espace de vie, dans un environnement privilégiant votre intimité absolue."
+                    title: tVilla('experience.exceptional.title'),
+                    description: tVilla('experience.exceptional.description')
                   },
                   {
-                    title: "L'ALLIANCE DU LUXE ET DE L'AUTHENTICITÉ",
-                    description: "Une symphonie de matériaux nobles, de technologies discrètes et d'aménagements raffinés, au service d'une expérience sensorielle harmonieuse où rien n'est laissé au hasard."
+                    title: tVilla('experience.harmony.title'),
+                    description: tVilla('experience.harmony.description')
                   },
                   {
-                    title: "UN SERVICE SUR MESURE",
-                    description: "Une équipe dévouée qui fait de votre bien-être sa priorité absolue, anticipant vos désirs et créant pour vous des moments d'exception adaptés à vos envies les plus personnelles."
+                    title: tVilla('experience.service.title'),
+                    description: tVilla('experience.service.description')
                   }
                 ].map((point, index) => (
                   <motion.div
@@ -1100,7 +1089,7 @@ export default function VillaPage() {
                   className="relative bg-[#b7a66b] text-white border border-[#b7a66b] overflow-hidden group hover:bg-white hover:text-[#b7a66b] transition-all duration-300 rounded-none px-8 py-4 text-sm font-light tracking-wider"
                 >
                   <Link href="/contact">
-                    <span className="relative z-10">Réservez votre expérience d'exception</span>
+                    <span className="relative z-10">{tVilla('experience.bookButton')}</span>
                     <ArrowRight className="w-4 h-4 ml-2 inline-block" />
                   </Link>
                 </Button>

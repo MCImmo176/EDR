@@ -177,30 +177,203 @@
   "villa": {
     "title": "La Villa",
     "description": "Una residenza eccezionale",
+    "hero": {
+      "title": "Orizzonte mediterraneo",
+      "description": "Sospesa tra cielo e mare, la Villa Les Étoiles du Rocher vi invita a gustare la dolcezza della Costa Azzurra, un rifugio arroccato di fronte all'azzurro infinito.",
+      "bookNow": "Prenota ora",
+      "discoverMore": "Scopri di più",
+      "scrollDown": "Scopri di più",
+      "ctaButton": "Prenota ora",
+      "subtitle": "Lasciati incantare dall'oro dei raggi mattutini, dal canto discreto dei pini e dall'orizzonte infinito del Mediterraneo.",
+      "experienceTitle": "L'esperienza",
+      "experienceSubtitle": "tra cielo e mare",
+      "videoTitle": "Video della villa"
+    },
     "spaces": {
-      "title": "Gli spazi",
-      "subtitle": "Ogni spazio a Le Stelle della Roccia è stato progettato per offrirti comfort, eleganza e momenti indimenticabili.",
-      "living": {
-        "title": "Soggiorno",
-        "description": "Un ampio soggiorno con vista panoramica sul mare.",
-        "alt": "Soggiorno principale con vista panoramica"
-      },
-      "living2": {
-        "title": "Secondo soggiorno",
-        "description": "Uno spazio accogliente per momenti intimi",
-        "alt": "Secondo soggiorno"
+      "title": "Spazi progettati per ispirare",
+      "subtitle": "Ogni spazio a Les Étoiles du Rocher è stato progettato per offrire comfort discreto, linee delicate e momenti memorabili.",
+      "livingRoom": {
+        "title": "Soggiorno inondato di luce",
+        "description": "Ampia apertura sul Mediterraneo."
       },
       "pool": {
-        "title": "Piscina a sfioro",
-        "description": "Una splendida piscina a sfioro con vista mozzafiato sul mare",
-        "alt": "Piscina a sfioro con vista mare"
+        "title": "Piscina privata",
+        "description": "Specchio d'acqua esteso dall'orizzonte."
       },
       "suites": {
-        "title": "Suite private",
-        "description": "Cinque suite eleganti che offrono comfort e privacy",
-        "alt": "Suite privata"
+        "title": "Cinque suite",
+        "description": "Rifugi intimi, inondati di luce naturale."
+      }
+    },
+    "features": {
+      "privacy": {
+        "title": "Privacy preservata",
+        "description": "Volumi generosi e viste incorniciate garantiscono la tua tranquillità invitando il paesaggio all'interno."
       },
-      "galleryButton": "Accedi alla galleria"
+      "harmony": {
+        "title": "Armonia dei materiali",
+        "description": "Linee pulite, finiture selezionate e materiali nobili si combinano per un'atmosfera calda e contemporanea."
+      },
+      "wellness": {
+        "title": "Benessere raffinato",
+        "description": "Ogni dettaglio — biancheria da letto, illuminazione, texture — è orchestrato per una quiete assoluta, discreta e senza compromessi."
+      },
+      "artOfLiving": "L'arte di vivere si delinea in questi luoghi dove ogni sguardo incrocia un tratto di attenzione dedicato al tuo piacere.",
+      "signature": "LES ÉTOILES DU ROCHER"
+    },
+    "location": {
+      "title": "Riviera francese: un sito privilegiato",
+      "region": "Riviera francese",
+      "description": "Arroccata tra Monaco e Mentone, la villa gode di un contesto raro, mescolando giardino mediterraneo privato e accesso rapido ai tesori della Costa Azzurra.",
+      "exploreButton": "Esplora i dintorni",
+      "distances": {
+        "title": "Distanze",
+        "monaco": {
+          "name": "Monaco",
+          "time": "10 min"
+        },
+        "nice": {
+          "name": "Nizza",
+          "time": "30 min"
+        },
+        "airport": {
+          "name": "Aeroporto di Nizza",
+          "time": "35 min"
+        },
+        "cannes": {
+          "name": "Cannes",
+          "time": "50 min"
+        }
+      },
+      "nearby": {
+        "title": "Da scoprire a due passi",
+        "beaches": {
+          "name": "Spiagge segrete",
+          "time": "5 min"
+        },
+        "golf": {
+          "name": "Campo da golf",
+          "time": "15 min"
+        },
+        "italy": {
+          "name": "Confine italiano",
+          "time": "15 min"
+        },
+        "saintTropez": {
+          "name": "Saint-Tropez",
+          "time": "1h30"
+        }
+      },
+      "features": {
+        "panoramic": {
+          "title": "Vista panoramica",
+          "alt": "Vista panoramica sul Mediterraneo"
+        },
+        "gardens": {
+          "title": "Giardini",
+          "alt": "Giardini mediterranei"
+        },
+        "terraces": {
+          "title": "Terrazze",
+          "alt": "Terrazza con vista"
+        }
+      }
+    },
+    "services": {
+      "customization": "Personalizzazione",
+      "title": "Servizi su misura",
+      "description": "Il tuo soggiorno si compone secondo i tuoi desideri: accoglienza discreta, concierge 24h/24, chef privato, fughe confidenziali... Ogni momento è scritto su misura per te.",
+      "excellence": {
+        "title": "L'eccellenza al tuo servizio",
+        "description": "Il nostro team eccezionale anticipa i tuoi desideri con una sottile intuizione. Dagli eventi privati alle prenotazioni nei luoghi più ambiti, ci occupiamo dell'organizzazione perfetta di ogni momento del tuo soggiorno."
+      },
+      "welcome": "Accoglienza personalizzata e check-in privato",
+      "concierge": "Servizio di concierge disponibile 24h/24",
+      "chef": "Chef stellato e servizio in camera",
+      "excursions": "Organizzazione di escursioni confidenziali",
+      "customizeButton": "Personalizza la tua esperienza"
+    },
+    "property": {
+      "category": "Caratteristiche",
+      "title": "Dettagli della proprietà",
+      "location": {
+        "title": "Posizione",
+        "monaco": "A 10 min dal centro di Monaco",
+        "airport": "A 30 min dall'aeroporto di Nizza",
+        "cannes": "A 45 min da Cannes",
+        "italy": "A 15 min dal confine italiano"
+      },
+      "livingSpace": {
+        "title": "Spazi abitativi",
+        "livingRoom": "Soggiorno panoramico di 150m²",
+        "diningRoom": "Sala da pranzo con vista mare",
+        "bar": "Bar e salone di ricevimento",
+        "kitchen": "Cucina Gaggenau su misura"
+      },
+      "suites": {
+        "title": "Suite",
+        "count": "5 suite con bagni privati",
+        "terraces": "Terrazze individuali con vista mare",
+        "bedding": "Biancheria da letto Hästens su misura",
+        "dressing": "Guardaroba in legno pregiato"
+      },
+      "exterior": {
+        "title": "Esterni",
+        "pool": "Piscina a sfioro riscaldata",
+        "poolhouse": "Pool house con cucina estiva",
+        "garden": "Giardino mediterraneo paesaggistico",
+        "terraces": "Terrazze in pietra naturale"
+      },
+      "technical": {
+        "category": "Eccellenza tecnica",
+        "title": "Comfort e tecnologie al servizio del tuo benessere",
+        "description": "Les Étoiles du Rocher beneficia delle ultime innovazioni per garantirti un comfort assoluto. Sistema domotico all'avanguardia, climatizzazione invisibile, isolamento acustico perfetto... Ogni dettaglio tecnico è stato pensato per essere dimenticato e lasciarti godere pienamente del momento presente."
+      },
+      "capacity": {
+        "people": "10 persone",
+        "pool": "Piscina 15m x 6m",
+        "parking": "8 posti auto",
+        "wifi": "Wi-Fi ultra veloce",
+        "automation": "Domotica integrata",
+        "security": "Sicurezza 24/7"
+      },
+      "allEquipments": "Scopri tutte le nostre attrezzature"
+    },
+    "experience": {
+      "category": "Esperienza unica",
+      "title": "Perché scegliere Les Étoiles du Rocher",
+      "description": "Al di là di un semplice soggiorno, questa dimora è una promessa di evasione dove ogni materiale, ogni prospettiva e ogni servizio coniugano i loro talenti per rivelare la quintessenza del dolce vivere mediterraneo.",
+      "commitment": {
+        "title": "Il nostro impegno",
+        "quote": "\"Offrire ai nostri ospiti momenti autentici, dove l'arte dell'accoglienza si mescola alla più delicata discrezione.\""
+      },
+      "exceptional": {
+        "title": "Una proprietà eccezionale",
+        "description": "Un gioiello architettonico recentemente costruito, che offre da ogni spazio un panorama mozzafiato, in un ambiente di assoluta tranquillità."
+      },
+      "harmony": {
+        "title": "Armonia e autenticità",
+        "description": "Una sinfonia di materiali nobili, tecnologie silenziose e allestimenti curati, al servizio di un'esperienza sensoriale tutta in sottigliezza."
+      },
+      "service": {
+        "title": "Un servizio attento",
+        "description": "Un team dedicato, che anticipa i tuoi desideri per comporre momenti su misura, rispecchiando le tue aspirazioni più raffinate."
+      },
+      "bookButton": "Prenota la tua esperienza"
+    },
+    "kitchen": {
+      "island": {
+        "title": "Isola centrale",
+        "description": "Isola centrale in marmo con spazio di archiviazione integrato e sgabelli di design."
+      },
+      "appliances": {
+        "title": "Elettrodomestici di alta gamma",
+        "description": "Attrezzatura Gaggenau con frigorifero integrato, forno a vapore e piano cottura a induzione."
+      },
+      "dining": {
+        "title": "Area pranzo",
+        "description": "Tavolo in rovere massiccio che può ospitare fino a 8 persone."
+      }
     },
     "common": {
       "gallery": "Galleria"
@@ -403,6 +576,22 @@
       "cannes": "Cannes",
       "saintTropez": "Saint-Tropez",
       "niceAirport": "Aeroporto di Nizza"
+    },
+    "spaces": {
+      "title": "Spazi progettati per ispirare",
+      "description": "Ogni stanza di Les Étoiles du Rocher è stata pensata per fondere comfort ovattato, linee delicate e momenti memorabili.",
+      "livingRoom": {
+        "title": "Salone inondato di luce",
+        "description": "Ampia apertura sul Mediterraneo."
+      },
+      "pool": {
+        "title": "Piscina privata",
+        "description": "Specchio d'acqua prolungato dall'orizzonte."
+      },
+      "suites": {
+        "title": "Cinque suite",
+        "description": "Rifugi intimi, inondati di luce naturale."
+      }
     }
   },
   "gallery": {
