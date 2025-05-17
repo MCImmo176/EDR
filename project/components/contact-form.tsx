@@ -17,7 +17,7 @@ import { useContactForm } from "./providers/contact-form-provider";
 import emailjs from '@emailjs/browser';
 
 // Identifiants EmailJS fournis
-const EMAILJS_SERVICE_ID = "service_6q6y4b1";
+const EMAILJS_SERVICE_ID = "service_mv5ctkt";
 const EMAILJS_TEMPLATE_ID = "template_yd3mmom";
 const EMAILJS_PUBLIC_KEY = "iXQm2-_WREMX8F2dO";
 
@@ -72,6 +72,7 @@ export function ContactForm() {
       indicatif: values.countryCode,
       telephone: values.phone,
       message: values.message,
+      source: "formulaire_visite"
     };
 
     console.log("Envoi de l'email avec les paramètres:", templateParams);
@@ -114,13 +115,13 @@ export function ContactForm() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm overflow-y-auto"
         >
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
-            className="relative w-full max-w-2xl bg-white rounded-none shadow-xl overflow-hidden"
+            className="relative w-full max-w-xl bg-white rounded-none shadow-xl overflow-hidden my-4"
           >
             <button
               onClick={closeForm}
@@ -129,7 +130,7 @@ export function ContactForm() {
               <X className="w-6 h-6" />
             </button>
 
-            <div className="p-8">
+            <div className="p-6">
               {isSubmitted ? (
                 <div className="text-center py-8">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#b7a66b] mb-6">
@@ -142,7 +143,7 @@ export function ContactForm() {
                 </div>
               ) : (
                 <Form {...form}>
-                  <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
                     <div className="flex flex-col md:flex-row gap-4">
                       <div className="flex-1">
                         <FormField
@@ -188,14 +189,14 @@ export function ContactForm() {
                         </FormItem>
                       )}
                     />
-                    <div className="flex gap-4 items-end">
-                      <div className="w-[180px] flex items-end">
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <div className="w-full sm:w-[180px]">
                         <FormField
                           control={form.control}
                           name="countryCode"
                           render={({ field }) => (
                             <FormItem className="w-full">
-                              <FormLabel>Indicatif</FormLabel>
+                              <FormLabel>{t('form.phone')} (Indicatif)</FormLabel>
                               <FormControl>
                                 <ComboboxCountry
                                   value={field.value}
@@ -238,7 +239,7 @@ export function ContactForm() {
                           <FormControl>
                             <Textarea 
                               placeholder={t('form.messagePlaceholder')}
-                              className="resize-none min-h-[150px] rounded-none"
+                              className="resize-none min-h-[120px] rounded-none"
                               {...field} 
                             />
                           </FormControl>
