@@ -74,7 +74,7 @@ export default function ContactPage() {
     setIsSubmitting(true);
     setErrorSubmit(null);
 
-    // Préparation des données pour EmailJS
+    // Préparation des données pour EmailJS selon les variables attendues dans le template
     const templateParams = {
       nom: values.name,
       prenom: values.firstName,
@@ -89,14 +89,11 @@ export default function ContactPage() {
     console.log("Service ID:", EMAILJS_SERVICE_ID);
     console.log("Template ID:", EMAILJS_TEMPLATE_ID);
 
-    // Version plus directe d'envoi avec EmailJS
+    // Envoyer l'email avec la méthode send
     emailjs.send(
       EMAILJS_SERVICE_ID,
       EMAILJS_TEMPLATE_ID,
-      templateParams,
-      {
-        publicKey: EMAILJS_PUBLIC_KEY,
-      }
+      templateParams
     )
     .then((response) => {
       console.log("Email envoyé avec succès:", response);
@@ -107,7 +104,7 @@ export default function ContactPage() {
       form.reset();
     })
     .catch((error) => {
-      console.error("Erreur lors de l'envoi de l'email:", error);
+      console.error("Erreur détaillée lors de l'envoi de l'email:", error);
       
       // Log détaillé de l'erreur
       if (error.text) console.error("Message d'erreur:", error.text);
@@ -309,11 +306,13 @@ export default function ContactPage() {
                             </FormItem>
                           )}
                         />
+                        
                         {errorSubmit && (
                           <div className="bg-red-50 border border-red-200 text-red-600 p-3 text-sm rounded">
                             {errorSubmit}
                           </div>
                         )}
+                        
                         <div className="flex gap-4 pt-4">
                           <Button
                             type="button"

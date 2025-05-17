@@ -64,7 +64,7 @@ export function ContactForm() {
     setIsSubmitting(true);
     setErrorSubmit(null);
 
-    // Préparation des données pour EmailJS
+    // Préparation des données pour EmailJS selon les variables attendues dans le template
     const templateParams = {
       nom: values.name,
       prenom: values.firstName,
@@ -79,14 +79,11 @@ export function ContactForm() {
     console.log("Service ID:", EMAILJS_SERVICE_ID);
     console.log("Template ID:", EMAILJS_TEMPLATE_ID);
 
-    // Version plus directe d'envoi avec EmailJS (méthode alternative)
+    // Envoyer l'email avec la méthode send
     emailjs.send(
       EMAILJS_SERVICE_ID,
       EMAILJS_TEMPLATE_ID,
-      templateParams,
-      {
-        publicKey: EMAILJS_PUBLIC_KEY,
-      }
+      templateParams
     )
     .then((response) => {
       console.log("Email envoyé avec succès:", response);
@@ -97,7 +94,7 @@ export function ContactForm() {
       form.reset();
     })
     .catch((error) => {
-      console.error("Erreur lors de l'envoi de l'email:", error);
+      console.error("Erreur détaillée lors de l'envoi de l'email:", error);
       
       // Log détaillé de l'erreur
       if (error.text) console.error("Message d'erreur:", error.text);
@@ -248,6 +245,7 @@ export function ContactForm() {
                         </FormItem>
                       )}
                     />
+                    <input type="hidden" name="source" value="formulaire_visite" />
                     
                     {errorSubmit && (
                       <div className="bg-red-50 border border-red-200 text-red-600 p-3 text-sm rounded">
