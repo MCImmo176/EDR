@@ -17,7 +17,7 @@ import { useContactForm } from "./providers/contact-form-provider";
 import emailjs from '@emailjs/browser';
 
 // Identifiants EmailJS fournis
-const EMAILJS_SERVICE_ID = "service_mv5ctkt";
+const EMAILJS_SERVICE_ID = "service_6q6y4b1";
 const EMAILJS_TEMPLATE_ID = "template_yd3mmom";
 const EMAILJS_PUBLIC_KEY = "iXQm2-_WREMX8F2dO";
 
@@ -189,19 +189,20 @@ export function ContactForm() {
                         </FormItem>
                       )}
                     />
-                    <div className="flex flex-col sm:flex-row gap-4">
+                    <div className="flex flex-col sm:flex-row gap-4 items-end">
                       <div className="w-full sm:w-[180px]">
                         <FormField
                           control={form.control}
                           name="countryCode"
                           render={({ field }) => (
                             <FormItem className="w-full">
-                              <FormLabel>{t('form.phone')} (Indicatif)</FormLabel>
+                              <FormLabel>Indicatif</FormLabel>
                               <FormControl>
                                 <ComboboxCountry
                                   value={field.value}
                                   onChange={field.onChange}
                                   countryCodes={countryCodes}
+                                  label=""
                                   className="rounded-none"
                                 />
                               </FormControl>

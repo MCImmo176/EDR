@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { Send, Phone, Mail, MapPin, Check } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import { Send, Phone, Mail, MapPin, Check, Loader2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -12,6 +12,7 @@ import * as z from "zod";
 import { ComboboxCountry } from "@/components/ui/combobox-country";
 import { countryCodes } from "@/data/country-codes";
 import SnakeRectangleAnimation from "@/src/components/SnakeRectangleAnimation";
+import emailjs from '@emailjs/browser';
 
 import {
   Form,
@@ -33,11 +34,29 @@ const formSchema = z.object({
   message: z.string().min(10, { message: "Le message doit contenir au moins 10 caractères" }),
 });
 
+// Identifiants EmailJS fournis
+const EMAILJS_SERVICE_ID = "service_6q6y4b1";
+const EMAILJS_TEMPLATE_ID = "template_yd3mmom";
+const EMAILJS_PUBLIC_KEY = "iXQm2-_WREMX8F2dO";
+
 export default function ContactPage() {
   const t = useTranslations('contact');
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorSubmit, setErrorSubmit] = useState<string | null>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  // Initialiser EmailJS
+  useEffect(() => {
+    try {
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+      console.log("EmailJS initialisé avec succès");
+    } catch (error) {
+      console.error("Erreur lors de l'initialisation d'EmailJS:", error);
+    }
+  }, []);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -52,10 +71,51 @@ export default function ContactPage() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    setTimeout(() => {
+    setIsSubmitting(true);
+    setErrorSubmit(null);
+
+    // Préparation des données pour EmailJS
+    const templateParams = {
+      nom: values.name,
+      prenom: values.firstName,
+      email: values.email,
+      indicatif: values.countryCode,
+      telephone: values.phone,
+      message: values.message,
+      source: "formulaire_contact"
+    };
+
+    console.log("Envoi de l'email avec les paramètres:", templateParams);
+    console.log("Service ID:", EMAILJS_SERVICE_ID);
+    console.log("Template ID:", EMAILJS_TEMPLATE_ID);
+
+    // Version plus directe d'envoi avec EmailJS
+    emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      templateParams,
+      {
+        publicKey: EMAILJS_PUBLIC_KEY,
+      }
+    )
+    .then((response) => {
+      console.log("Email envoyé avec succès:", response);
+      console.log("Status:", response.status);
+      console.log("Text:", response.text);
       setIsSubmitted(true);
-    }, 1000);
+      setIsSubmitting(false);
+      form.reset();
+    })
+    .catch((error) => {
+      console.error("Erreur lors de l'envoi de l'email:", error);
+      
+      // Log détaillé de l'erreur
+      if (error.text) console.error("Message d'erreur:", error.text);
+      if (error.status) console.error("Status de l'erreur:", error.status);
+      
+      setErrorSubmit("Une erreur est survenue lors de l'envoi du message. Veuillez réessayer.");
+      setIsSubmitting(false);
+    });
   }
 
   return (
@@ -144,7 +204,7 @@ export default function ContactPage() {
                     </div>
                   ) : (
                     <Form {...form}>
-                      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6 pb-4">
+                      <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6 pb-4">
                         <div className="flex flex-col md:flex-row gap-4">
                           <div className="flex-1">
                             <FormField
@@ -197,11 +257,13 @@ export default function ContactPage() {
                               name="countryCode"
                               render={({ field }) => (
                                 <FormItem className="w-full">
+                                  <FormLabel className="text-white text-left block">Indicatif</FormLabel>
                                   <FormControl>
                                     <ComboboxCountry
                                       value={field.value}
                                       onChange={field.onChange}
                                       countryCodes={countryCodes}
+                                      label=""
                                       className="rounded-none"
                                     />
                                   </FormControl>
@@ -247,20 +309,36 @@ export default function ContactPage() {
                             </FormItem>
                           )}
                         />
+                        {errorSubmit && (
+                          <div className="bg-red-50 border border-red-200 text-red-600 p-3 text-sm rounded">
+                            {errorSubmit}
+                          </div>
+                        )}
                         <div className="flex gap-4 pt-4">
                           <Button
                             type="button"
                             onClick={() => setShowForm(false)}
                             className="flex-1 bg-transparent text-white hover:bg-white/20 border-2 border-white transition-all duration-500 text-sm sm:text-base rounded-none"
+                            disabled={isSubmitting}
                           >
                             Retour
                           </Button>
                           <Button 
                             type="submit" 
                             className="flex-1 bg-[#b7a66b] text-white hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-all duration-500 text-sm sm:text-base rounded-none"
+                            disabled={isSubmitting}
                           >
-                            <span className="relative z-10">{t('yourVilla.form.submit')}</span>
-                            <Send className="ml-2 h-4 w-4 relative z-10" />
+                            {isSubmitting ? (
+                              <>
+                                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                                <span>Envoi en cours...</span>
+                              </>
+                            ) : (
+                              <>
+                                <span className="relative z-10">{t('yourVilla.form.submit')}</span>
+                                <Send className="ml-2 h-4 w-4 relative z-10" />
+                              </>
+                            )}
                           </Button>
                         </div>
                       </form>
