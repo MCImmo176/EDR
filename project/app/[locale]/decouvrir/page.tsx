@@ -480,7 +480,7 @@ export default function DecouvrirPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-12 sm:mb-16 sticky top-0 z-10 bg-white bg-opacity-90 backdrop-blur-sm pt-8 pb-4"
+              className="text-center mb-12 sm:mb-16 bg-white bg-opacity-90 backdrop-blur-sm pt-8 pb-4"
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-light tracking-wide mb-4 sm:mb-6 text-gray-900">{t('enjoy.events.title')}</h2>
               <div className="h-1 w-20 bg-[#b7a66b] mx-auto" />
