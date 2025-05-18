@@ -201,13 +201,13 @@
         }
       },
       "spaces": {
-        "title": "Découvrez nos espaces",
-        "subtitle": "Chaque espace des Étoiles du Rocher a été conçu pour vous offrir confort, élégance et moments inoubliables.",
-        "galleryButton": "Accéder à la galerie",
+        "title": "Espaces conçus pour inspirer",
+        "description": "Chaque pièce des Étoiles du Rocher a été pensée pour mêler confort feutré, lignes délicates et instants mémorables.",
+        "subtitle": "Chaque espace des Étoiles du Rocher a été conçu pour allier confort subtil, lignes délicates et moments mémorables.",
         "living": {
-          "title": "Salon lumineux",
-          "description": "Un espace convivial avec vue panoramique sur la Méditerranée",
-          "alt": "Salon lumineux avec vue panoramique sur la Méditerranée"
+          "title": "Salon baigné de lumière",
+          "description": "Vaste ouverture sur la Méditerranée.",
+          "alt": "Salon spacieux avec vue panoramique"
         },
         "living2": {
           "title": "Salon ouvert et lumineux",
@@ -307,7 +307,8 @@
           "alt": "Cuisine gastronomique"
         }
       },
-      "actionButton": "Découvrez la villa"
+      "actionButton": "Découvrez la villa",
+      "scrollText": "Découvrir plus"
     },
     "gallery": {
       "title": "Galerie",
@@ -626,22 +627,32 @@
       "description": "Suspendue entre ciel et mer, la Villa Les Étoiles du Rocher vous convie à savourer la douceur de la Côte d'Azur, un refuge perché face à l'azur infini.",
       "bookNow": "Réserver maintenant",
       "discoverMore": "Découvrir plus",
-      "scrollDown": "Découvrir plus"
+      "scrollDown": "Découvrir plus",
+      "scrollText": "Découvrir plus",
+      "experienceTitle": "L'expérience",
+      "experienceSubtitle": "ciel et mer",
+      "subtitle": "Laissez-vous envoûter par l'or des rayons matins, le chant discret des pins et l'horizon infini de la Méditerranée.",
+      "ctaButton": "Réserver maintenant",
+      "videoTitle": "Vidéo de la villa"
     },
     "spaces": {
       "title": "Espaces conçus pour inspirer",
       "description": "Chaque pièce des Étoiles du Rocher a été pensée pour mêler confort feutré, lignes délicates et instants mémorables.",
-      "livingRoom": {
+      "subtitle": "Chaque espace des Étoiles du Rocher a été conçu pour allier confort subtil, lignes délicates et moments mémorables.",
+      "living": {
         "title": "Salon baigné de lumière",
-        "description": "Vaste ouverture sur la Méditerranée."
+        "description": "Vaste ouverture sur la Méditerranée.",
+        "alt": "Salon spacieux avec vue panoramique"
       },
       "pool": {
         "title": "Piscine privée",
-        "description": "Miroir d'eau prolongé par l'horizon."
+        "description": "Miroir d'eau prolongé par l'horizon.",
+        "alt": "Piscine à débordement avec vue sur la mer"
       },
       "suites": {
         "title": "Cinq suites",
-        "description": "Retraites intimes, inondées de clarté naturelle."
+        "description": "Retraites intimes, inondées de clarté naturelle.",
+        "alt": "Suite de luxe avec vue panoramique"
       }
     },
     "features": {
@@ -701,7 +712,22 @@
           "time": "1 h 30"
         }
       },
-      "exploreButton": "Explorer les environs"
+      "exploreButton": "Explorer les environs",
+      "features": {
+        "panoramic": {
+          "title": "Vue panoramique",
+          "alt": "Vue panoramique sur la Méditerranée"
+        },
+        "gardens": {
+          "title": "Jardins",
+          "alt": "Jardins méditerranéens"
+        },
+        "terraces": {
+          "title": "Terrasses",
+          "alt": "Terrasse avec vue"
+        }
+      },
+      "region": "Côte d'Azur"
     },
     "services": {
       "title": "PERSONNALISATION & SERVICES SUR MESURE",
@@ -710,7 +736,12 @@
       "concierge": "Conciergerie disponible jour et nuit",
       "chef": "Chef en résidence et service en chambre",
       "excursions": "Excursions exclusives, hors des sentiers battus",
-      "customizeButton": "Personnaliser mon séjour"
+      "customizeButton": "Personnaliser mon séjour",
+      "customization": "Personnalisation",
+      "excellence": {
+        "title": "L'excellence à votre service",
+        "description": "Notre équipe d'exception anticipe vos désirs avec une intuition subtile. Des événements privés aux réservations dans les établissements les plus recherchés, nous prenons en charge l'organisation parfaite de chaque moment de votre séjour."
+      }
     },
     "property": {
       "title": "CARACTÉRISTIQUES DE LA PROPRIÉTÉ",
@@ -744,21 +775,25 @@
       },
       "technical": {
         "title": "Excellence technique & confort",
-        "description": "Les dernières innovations, pensées pour disparaître, vous offrent un cadre apaisant : domotique intégrée, climatisation invisible, isolation acoustique, sécurité 24 h/24 et wifi ultra-rapide."
+        "description": "Les dernières innovations, pensées pour disparaître, vous offrent un cadre apaisant : domotique intégrée, climatisation invisible, isolation acoustique, sécurité 24 h/24 et wifi ultra-rapide.",
+        "category": "Excellence technique"
       },
       "capacity": {
         "people": "Jusqu'à 10 personnes",
         "pool": "Piscine 15 m × 6 m",
         "parking": "8 places de parking",
+        "wifi": "Wi-Fi ultra-rapide",
         "automation": "Domotique complète",
         "security": "Sécurité permanente"
       },
-      "allEquipments": "Voir tous nos équipements"
+      "allEquipments": "Voir tous nos équipements",
+      "category": "Caractéristiques"
     },
     "experience": {
       "title": "EXPÉRIENCE SIGNATURE : POURQUOI LES ÉTOILES DU ROCHER",
       "description": "Au-delà d'un simple séjour, cette demeure est une promesse d'évasion où chaque matériau, chaque perspective et chaque service conjuguent leurs talents pour révéler la quintessence de la douceur de vivre méditerranéenne.",
       "commitment": {
+        "title": "Notre engagement",
         "quote": "« Offrir à nos hôtes des instants authentiques, où l'art de recevoir se mêle à la discrétion la plus délicate. »"
       },
       "exceptional": {
@@ -773,7 +808,8 @@
         "title": "Un service attentif",
         "description": "Une équipe dédiée, anticipant vos souhaits pour composer des moments sur-mesure, à l'image de vos aspirations les plus délicates."
       },
-      "bookButton": "Réservez votre expérience"
+      "bookButton": "Réservez votre expérience",
+      "category": "Expérience unique"
     }
   }
 } 

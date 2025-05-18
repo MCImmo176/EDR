@@ -281,7 +281,7 @@ export default function VillaPage() {
         <div className="relative z-10 h-full flex items-center">
           <div className="w-full h-full flex flex-col justify-center items-start">
             <div className="pl-[15%] md:pl-[10%] w-full max-w-[80%] md:max-w-[60%]">
-              {/* Remplacer le composant LuxuryTextReveal par du HTML statique pour correspondre à l'onglet GALERIE */}
+              {/* Titre principal avec animation */}
               <div className="mb-16">
                 <h1 className="text-white text-6xl md:text-7xl font-light tracking-wide">
                   {tVilla('hero.experienceTitle')}<br />
@@ -747,22 +747,27 @@ export default function VillaPage() {
         }}></div>
 
         <div className="container mx-auto px-8 relative max-w-[1600px]">
-          {/* Introduction élégante */}
-          <div className="max-w-screen-md mx-auto text-center mb-28">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
             <motion.span
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6 }}
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               viewport={{ once: true }}
-              className="inline-block text-[#b7a66b] font-light tracking-[0.25em] text-xs uppercase mb-6"
+              className="block text-[#b7a66b] font-light tracking-[0.25em] text-xs uppercase mb-4"
             >
               {tVilla('property.category')}
             </motion.span>
             
             <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
               viewport={{ once: true }}
               className="text-3xl md:text-4xl font-extralight mb-8 tracking-wide"
             >
@@ -772,11 +777,11 @@ export default function VillaPage() {
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
               viewport={{ once: true }}
-              className="h-[1px] w-16 bg-[#b7a66b]/30 mx-auto my-8"
+              className="h-px w-20 bg-[#b7a66b]/30 mx-auto my-8 origin-center"
             />
-          </div>
+          </motion.div>
 
           {/* Grille de caractéristiques principale - Design premium */}
           <motion.div

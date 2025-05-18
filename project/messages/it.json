@@ -187,22 +187,26 @@
       "subtitle": "Lasciati incantare dall'oro dei raggi mattutini, dal canto discreto dei pini e dall'orizzonte infinito del Mediterraneo.",
       "experienceTitle": "L'esperienza",
       "experienceSubtitle": "tra cielo e mare",
-      "videoTitle": "Video della villa"
+      "videoTitle": "Video della villa",
+      "scrollText": "Scorri verso il basso"
     },
     "spaces": {
       "title": "Spazi progettati per ispirare",
       "subtitle": "Ogni spazio a Les Étoiles du Rocher è stato progettato per offrire comfort discreto, linee delicate e momenti memorabili.",
-      "livingRoom": {
-        "title": "Soggiorno inondato di luce",
-        "description": "Ampia apertura sul Mediterraneo."
+      "living": {
+        "title": "Spazio abitativo",
+        "description": "Ampia apertura sul Mediterraneo.",
+        "alt": "Soggiorno spazioso con vista panoramica"
       },
       "pool": {
         "title": "Piscina privata",
-        "description": "Specchio d'acqua esteso dall'orizzonte."
+        "description": "Specchio d'acqua prolungato dall'orizzonte.",
+        "alt": "Piscina a sfioro con vista mare"
       },
       "suites": {
         "title": "Cinque suite",
-        "description": "Rifugi intimi, inondati di luce naturale."
+        "description": "Rifugi intimi, inondati di luce naturale.",
+        "alt": "Suite di lusso con vista panoramica"
       }
     },
     "features": {
@@ -556,7 +560,7 @@
     },
     "houseRules": {
       "title": "Regole della casa",
-      "checkIn": {
+      "checkin": {
         "title": "Check-in/Check-out",
         "description": "Check-in dalle 16:00, check-out entro le 11:00."
       },
@@ -564,7 +568,7 @@
         "title": "Accesso",
         "description": "Accesso riservato ai soli ospiti registrati."
       },
-      "noise": {
+      "quiet": {
         "title": "Rumore",
         "description": "Rispetto del silenzio dopo le 22:00."
       }
