@@ -155,214 +155,254 @@ export default function ContactPage() {
         </div>
       </div>
       
-      <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-        <div className="container max-w-6xl mx-auto px-2 sm:px-4 py-10 sm:py-0 h-full flex items-center overflow-visible">
-          <motion.div
-            initial={{ opacity: 0, y: 0 }}
-            animate={{ opacity: isVideoLoaded ? 1 : 0, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-center text-white space-y-8 sm:space-y-12 w-full"
-          >
-            <div className="space-y-6 sm:space-y-8">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display">{t('title')}</h2>
-              <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-8 lg:gap-16">
-                <div className="flex items-center gap-2 sm:gap-3">
-                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-[#b7a66b]" />
-                  <span className="text-xs sm:text-sm md:text-base text-white">{t('phone')}</span>
-                </div>
-                <div className="flex items-center gap-2 sm:gap-3">
-                  <Mail className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-[#b7a66b]" />
-                  <span className="text-xs sm:text-sm md:text-base text-white">{t('email')}</span>
-                </div>
-                <div className="flex items-center gap-2 sm:gap-3">
-                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-[#b7a66b]" />
-                  <span className="text-xs sm:text-sm md:text-base text-white">{t('address')}</span>
-                </div>
-              </div>
-            </div>
-
-            {!showForm ? (
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
-                <Button
-                  size="lg"
-                  onClick={() => setShowForm(true)}
-                  className="bg-[#b7a66b] text-white hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-all duration-500 px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 rounded-none text-sm sm:text-base min-w-[180px] sm:min-w-[220px] w-full sm:w-auto"
-                >
-                  {t('buttons.bookStay')}
-                </Button>
-                <Button
-                  size="lg"
-                  onClick={() => setShowForm(true)}
-                  className="bg-transparent text-white hover:bg-white hover:text-[#b7a66b] border-2 border-white transition-all duration-500 px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 rounded-none text-sm sm:text-base min-w-[180px] sm:min-w-[220px] w-full sm:w-auto"
-                >
-                  {t('buttons.infoRequest')}
-                </Button>
-              </div>
-            ) : (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
+      <div className="relative z-10 h-full flex items-center">
+        <div className="w-full h-full flex flex-col justify-center items-start">
+          <div className="pl-[15%] md:pl-[10%] w-full max-w-[80%] md:max-w-[60%]">
+            <div className="mb-16">
+              <motion.h1 
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white/10 backdrop-blur-md p-3 sm:p-4 md:p-6 lg:p-8 rounded-lg max-w-2xl mx-auto mb-12 sm:mb-4"
+                transition={{ duration: 1.2, delay: 0.3 }}
+                className="text-white text-6xl md:text-7xl font-light tracking-wider"
               >
-                {isSubmitted ? (
-                  <div className="text-center py-8">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#b7a66b] mb-6">
-                      <Check className="h-8 w-8 text-white" />
+                {t('title')}<br />
+                <span className="font-extralight tracking-wide">{t('subtitle')}</span>
+              </motion.h1>
+              <motion.div 
+                initial={{ width: 0 }}
+                animate={{ width: 80 }}
+                transition={{ duration: 1.5, delay: 1 }}
+                className="h-[1px] bg-gradient-to-r from-[#BC9A6B] to-[#BC9A6B]/30 mt-8"
+              ></motion.div>
+            </div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.5, duration: 0.8 }}
+              className="mt-6 max-w-xl"
+            >
+              <div className="flex flex-col md:flex-row items-center justify-start gap-6 md:gap-8 lg:gap-16">
+                <div className="flex items-center gap-3">
+                  <Phone className="w-6 h-6 text-[#b7a66b]" />
+                  <span className="text-base text-white">{t('phone')}</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Mail className="w-6 h-6 text-[#b7a66b]" />
+                  <span className="text-base text-white">{t('email')}</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <MapPin className="w-6 h-6 text-[#b7a66b]" />
+                  <span className="text-base text-white">{t('address')}</span>
+                </div>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 2, duration: 0.8 }}
+              className="mt-12"
+            >
+              {!showForm ? (
+                <div className="flex items-center gap-4">
+                  <Button
+                    size="lg"
+                    onClick={() => setShowForm(true)}
+                    className="bg-[#b7a66b] text-white hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-all duration-500 px-8 py-5 rounded-lg text-base"
+                  >
+                    {t('buttons.bookStay')}
+                  </Button>
+                  <Button
+                    size="lg"
+                    onClick={() => setShowForm(true)}
+                    className="bg-transparent text-white hover:bg-white hover:text-[#b7a66b] border-2 border-white transition-all duration-500 px-8 py-5 rounded-lg text-base"
+                  >
+                    {t('buttons.infoRequest')}
+                  </Button>
+                </div>
+              ) : (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="bg-white/10 backdrop-blur-md p-6 lg:p-8 rounded-lg w-full max-w-2xl"
+                >
+                  {isSubmitted ? (
+                    <div className="text-center py-8">
+                      <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#b7a66b] mb-6">
+                        <Check className="h-8 w-8 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-display mb-4 text-white">{t('form.success')}</h3>
+                      <p className="text-white/80">
+                        {t('form.successDetail')}
+                      </p>
                     </div>
-                    <h3 className="text-2xl font-display mb-4">{t('form.success')}</h3>
-                    <p className="text-white/80">
-                      {t('form.successDetail')}
-                    </p>
-                  </div>
-                ) : (
-                  <Form {...form}>
-                    <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6 pb-4">
-                      <div className="flex flex-col md:flex-row gap-4">
-                        <div className="flex-1">
-                          <FormField
-                            control={form.control}
-                            name="firstName"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel className="text-white text-left block">{t('form.firstName')}</FormLabel>
-                                <FormControl>
-                                  <Input placeholder={t('form.firstNamePlaceholder')} className="bg-white/20 border-white/20 text-white placeholder:text-white/50 rounded-none" {...field} />
-                                </FormControl>
-                                <FormMessage className="text-red-300" />
-                              </FormItem>
-                            )}
-                          />
+                  ) : (
+                    <Form {...form}>
+                      <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 pb-4">
+                        <div className="flex flex-col md:flex-row gap-4">
+                          <div className="flex-1">
+                            <FormField
+                              control={form.control}
+                              name="firstName"
+                              render={({ field }) => (
+                                <FormItem>
+                                  <FormLabel className="text-white text-left block">{t('form.firstName')}</FormLabel>
+                                  <FormControl>
+                                    <Input placeholder={t('form.firstNamePlaceholder')} className="bg-white/20 border-white/20 text-white placeholder:text-white/50 rounded-lg" {...field} />
+                                  </FormControl>
+                                  <FormMessage className="text-red-300" />
+                                </FormItem>
+                              )}
+                            />
+                          </div>
+                          <div className="flex-1">
+                            <FormField
+                              control={form.control}
+                              name="name"
+                              render={({ field }) => (
+                                <FormItem>
+                                  <FormLabel className="text-white text-left block">{t('form.lastName')}</FormLabel>
+                                  <FormControl>
+                                    <Input placeholder={t('form.lastNamePlaceholder')} className="bg-white/20 border-white/20 text-white placeholder:text-white/50 rounded-lg" {...field} />
+                                  </FormControl>
+                                  <FormMessage className="text-red-300" />
+                                </FormItem>
+                              )}
+                            />
+                          </div>
                         </div>
-                        <div className="flex-1">
-                          <FormField
-                            control={form.control}
-                            name="name"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel className="text-white text-left block">{t('form.lastName')}</FormLabel>
-                                <FormControl>
-                                  <Input placeholder={t('form.lastNamePlaceholder')} className="bg-white/20 border-white/20 text-white placeholder:text-white/50 rounded-none" {...field} />
-                                </FormControl>
-                                <FormMessage className="text-red-300" />
-                              </FormItem>
-                            )}
-                          />
-                        </div>
-                      </div>
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-white text-left block">{t('form.email')}</FormLabel>
-                            <FormControl>
-                              <Input placeholder={t('form.emailPlaceholder')} className="bg-white/20 border-white/20 text-white placeholder:text-white/50 rounded-none" {...field} />
-                            </FormControl>
-                            <FormMessage className="text-red-300" />
-                          </FormItem>
-                        )}
-                      />
-                      <div className="flex gap-4 items-end">
-                        <div className="w-[140px] sm:w-[180px] flex items-end">
-                          <FormField
-                            control={form.control}
-                            name="countryCode"
-                            render={({ field }) => (
-                              <FormItem className="w-full">
-                                <FormLabel className="text-white text-left block">{t('form.countryCode')}</FormLabel>
-                                <FormControl>
-                                  <ComboboxCountry
-                                    value={field.value}
-                                    onChange={field.onChange}
-                                    countryCodes={countryCodes}
-                                    label=""
-                                    className="rounded-none"
-                                  />
-                                </FormControl>
-                                <FormMessage className="text-red-300" />
-                              </FormItem>
-                            )}
-                          />
-                        </div>
-                        <div className="flex-1">
-                          <FormField
-                            control={form.control}
-                            name="phone"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel className="text-white text-left block">{t('form.phone')}</FormLabel>
-                                <FormControl>
-                                  <Input 
-                                    placeholder={t('form.phonePlaceholder')}
-                                    className="bg-white/20 border-white/20 text-white placeholder:text-white/50 rounded-none" 
-                                    {...field} 
-                                  />
-                                </FormControl>
-                                <FormMessage className="text-red-300" />
-                              </FormItem>
-                            )}
-                          />
-                        </div>
-                      </div>
-                      <FormField
-                        control={form.control}
-                        name="message"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-white text-left block">{t('form.message')}</FormLabel>
-                            <FormControl>
-                              <Textarea 
-                                placeholder={t('form.messagePlaceholder')}
-                                className="resize-none min-h-[120px] bg-white/20 border-white/20 text-white placeholder:text-white/50 rounded-none"
-                                {...field} 
-                              />
-                            </FormControl>
-                            <FormMessage className="text-red-300" />
-                          </FormItem>
-                        )}
-                      />
-                      
-                      {errorSubmit && (
-                        <div className="bg-red-50 border border-red-200 text-red-600 p-3 text-sm rounded">
-                          {errorSubmit}
-                        </div>
-                      )}
-                      
-                      <div className="flex gap-4 pt-4">
-                        <Button
-                          type="button"
-                          onClick={() => setShowForm(false)}
-                          className="flex-1 bg-transparent text-white hover:bg-white/20 border-2 border-white transition-all duration-500 text-sm sm:text-base rounded-none"
-                          disabled={isSubmitting}
-                        >
-                          {t('buttons.back')}
-                        </Button>
-                        <Button 
-                          type="submit" 
-                          className="flex-1 bg-[#b7a66b] text-white hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-all duration-500 text-sm sm:text-base rounded-none"
-                          disabled={isSubmitting}
-                        >
-                          {isSubmitting ? (
-                            <>
-                              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                              <span>{t('buttons.sending')}</span>
-                            </>
-                          ) : (
-                            <>
-                              <span className="relative z-10">{t('buttons.submit')}</span>
-                              <Send className="ml-2 h-4 w-4 relative z-10" />
-                            </>
+                        <FormField
+                          control={form.control}
+                          name="email"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-white text-left block">{t('form.email')}</FormLabel>
+                              <FormControl>
+                                <Input placeholder={t('form.emailPlaceholder')} className="bg-white/20 border-white/20 text-white placeholder:text-white/50 rounded-lg" {...field} />
+                              </FormControl>
+                              <FormMessage className="text-red-300" />
+                            </FormItem>
                           )}
-                        </Button>
-                      </div>
-                    </form>
-                  </Form>
-                )}
-              </motion.div>
-            )}
-          </motion.div>
+                        />
+                        <div className="flex gap-4 items-end">
+                          <div className="w-[140px] sm:w-[180px] flex items-end">
+                            <FormField
+                              control={form.control}
+                              name="countryCode"
+                              render={({ field }) => (
+                                <FormItem className="w-full">
+                                  <FormLabel className="text-white text-left block">{t('form.countryCode')}</FormLabel>
+                                  <FormControl>
+                                    <ComboboxCountry
+                                      value={field.value}
+                                      onChange={field.onChange}
+                                      countryCodes={countryCodes}
+                                      label=""
+                                      className="rounded-lg"
+                                    />
+                                  </FormControl>
+                                  <FormMessage className="text-red-300" />
+                                </FormItem>
+                              )}
+                            />
+                          </div>
+                          <div className="flex-1">
+                            <FormField
+                              control={form.control}
+                              name="phone"
+                              render={({ field }) => (
+                                <FormItem>
+                                  <FormLabel className="text-white text-left block">{t('form.phone')}</FormLabel>
+                                  <FormControl>
+                                    <Input 
+                                      placeholder={t('form.phonePlaceholder')}
+                                      className="bg-white/20 border-white/20 text-white placeholder:text-white/50 rounded-lg" 
+                                      {...field} 
+                                    />
+                                  </FormControl>
+                                  <FormMessage className="text-red-300" />
+                                </FormItem>
+                              )}
+                            />
+                          </div>
+                        </div>
+                        <FormField
+                          control={form.control}
+                          name="message"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-white text-left block">{t('form.message')}</FormLabel>
+                              <FormControl>
+                                <Textarea 
+                                  placeholder={t('form.messagePlaceholder')}
+                                  className="resize-none min-h-[120px] bg-white/20 border-white/20 text-white placeholder:text-white/50 rounded-lg"
+                                  {...field} 
+                                />
+                              </FormControl>
+                              <FormMessage className="text-red-300" />
+                            </FormItem>
+                          )}
+                        />
+                        
+                        {errorSubmit && (
+                          <div className="bg-red-50 border border-red-200 text-red-600 p-3 text-sm rounded-lg">
+                            {errorSubmit}
+                          </div>
+                        )}
+                        
+                        <div className="flex gap-4 pt-4">
+                          <Button
+                            type="button"
+                            onClick={() => setShowForm(false)}
+                            className="flex-1 bg-transparent text-white hover:bg-white/20 border-2 border-white transition-all duration-500 text-base rounded-lg"
+                            disabled={isSubmitting}
+                          >
+                            {t('buttons.back')}
+                          </Button>
+                          <Button 
+                            type="submit" 
+                            className="flex-1 bg-[#b7a66b] text-white hover:bg-white hover:text-[#b7a66b] border-2 border-[#b7a66b] transition-all duration-500 text-base rounded-lg"
+                            disabled={isSubmitting}
+                          >
+                            {isSubmitting ? (
+                              <>
+                                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                                <span>{t('buttons.sending')}</span>
+                              </>
+                            ) : (
+                              <>
+                                <span className="relative z-10">{t('buttons.submit')}</span>
+                                <Send className="ml-2 h-4 w-4 relative z-10" />
+                              </>
+                            )}
+                          </Button>
+                        </div>
+                      </form>
+                    </Form>
+                  )}
+                </motion.div>
+              )}
+            </motion.div>
+          </div>
         </div>
+        
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2.5, duration: 1 }}
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+        >
+          <span className="text-white/70 text-sm uppercase tracking-[0.2em] mb-2 font-light">{t('scrollDown')}</span>
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+            className="w-6 h-10 border border-white/30 rounded-full flex justify-center pt-1"
+          >
+            <motion.div className="w-1 h-1 bg-white/80 rounded-full" />
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   </>
