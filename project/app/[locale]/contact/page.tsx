@@ -25,6 +25,16 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
+// Création d'un schéma sans messages qui seront ajoutés dynamiquement
+const createFormSchema = (t: any) => z.object({
+  firstName: z.string().min(2, { message: t('form.errors.firstName') }),
+  name: z.string().min(2, { message: t('form.errors.name') }),
+  email: z.string().email({ message: t('form.errors.email') }),
+  countryCode: z.string().min(2, { message: t('form.errors.countryCode') }),
+  phone: z.string().min(5, { message: t('form.errors.phone') }),
+  message: z.string().min(10, { message: t('form.errors.message') }),
+});
+
 // Identifiants EmailJS fournis
 const EMAILJS_SERVICE_ID = "service_mv5ctkt";
 const EMAILJS_TEMPLATE_ID = "template_yd3mmom";
@@ -33,15 +43,8 @@ const EMAILJS_PUBLIC_KEY = "iXQm2-_WREMX8F2dO";
 export default function ContactPage() {
   const t = useTranslations('contact');
   
-  // Déplacement du schéma de validation à l'intérieur du composant
-  const formSchema = z.object({
-    firstName: z.string().min(2, { message: t('form.errors.firstName') }),
-    name: z.string().min(2, { message: t('form.errors.name') }),
-    email: z.string().email({ message: t('form.errors.email') }),
-    countryCode: z.string().min(2, { message: t('form.errors.countryCode') }),
-    phone: z.string().min(5, { message: t('form.errors.phone') }),
-    message: z.string().min(10, { message: t('form.errors.message') }),
-  });
+  // Utilisation du schéma avec la fonction t
+  const formSchema = createFormSchema(t);
   
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [showForm, setShowForm] = useState(false);
@@ -59,6 +62,19 @@ export default function ContactPage() {
       console.error("Erreur lors de l'initialisation d'EmailJS:", error);
     }
   }, []);
+
+  // Forcer l'affichage de l'interface même si la vidéo ne se charge pas
+  useEffect(() => {
+    // Après 2 secondes, on force l'affichage de l'interface
+    const timer = setTimeout(() => {
+      if (!isVideoLoaded) {
+        setIsVideoLoaded(true);
+        console.log("Affichage forcé de l'interface après délai");
+      }
+    }, 2000);
+    
+    return () => clearTimeout(timer);
+  }, [isVideoLoaded]);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -120,7 +136,24 @@ export default function ContactPage() {
  return (
   <>
     <section className="relative h-screen w-full overflow-hidden p-0 m-0">
-      {/* ... (iframe inchangé) */}
+      <div className="absolute inset-0 w-full h-full">
+        <div className="relative h-full w-full" style={{ paddingBottom: '56.25%' }}>
+          <iframe
+            src="https://www.youtube.com/embed/hoGfA3DP2PQ?autoplay=1&mute=1&loop=1&playlist=hoGfA3DP2PQ&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
+            title={t('discover.videoTitle')}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="absolute top-0 left-0 w-full h-full object-cover"
+            style={{
+              transform: 'scale(1.2)',
+              transformOrigin: 'center center'
+            }}
+            onLoad={() => setIsVideoLoaded(true)}
+            onError={() => setIsVideoLoaded(true)}
+          />
+        </div>
+      </div>
       
       <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
         <div className="container max-w-6xl mx-auto px-2 sm:px-4 py-10 sm:py-0 h-full flex items-center overflow-visible">
