@@ -5,25 +5,19 @@
     "about": "Chi siamo",
     "contact": "Contatto",
     "services": "Servizi",
-    "readMore": "Leggi di più",
+    "readMore": "Scopri di più",
     "discover": "Scoprire",
     "bookNow": "Prenota ora",
     "contactUs": "Contattaci",
     "learnMore": "Scopri di più",
-    "reserve": "Riservare",
-    "villaName": "Les Étoiles du Rocher",
+    "reserve": "Prenotare",
+    "villaName": "Le Stelle della Roccia",
     "footer": {
-      "terms": "Termini di utilizzo",
-      "sales": "Termini di vendita",
+      "terms": "Termini e condizioni",
+      "sales": "Condizioni di vendita",
       "gallery": "Galleria",
       "discover": "Scoprire",
-      "villaName": "Les Étoiles du Rocher"
-    },
-    "menu": {
-      "home": "Home",
-      "villa": "La Villa",
-      "gallery": "Galleria",
-      "contact": "Contatti"
+      "villaName": "Le Stelle della Roccia"
     },
     "labels": {
       "room": "Camera",
@@ -32,7 +26,7 @@
       "phone": "Telefono",
       "email": "Email",
       "address": "Indirizzo",
-      "customRequest": "Contattateci per un soggiorno personalizzato"
+      "customRequest": "Contattaci per un soggiorno su misura"
     },
     "header": {
       "planVisit": "Organizzo una visita"
@@ -42,22 +36,22 @@
     "home": "Home",
     "villa": "La nostra villa",
     "gallery": "Galleria",
-    "discover": "Scoprire",
+    "discover": "Scoperta",
     "contact": "Contatto"
   },
   "home": {
-    "title": "Les Étoiles du Rocher",
-    "subtitle": "Il tuo angolo di paradiso sulla Costa Azzurra",
+    "title": "Le Stelle della Roccia",
+    "subtitle": "Il tuo rifugio di pace sulla Costa Azzurra",
     "booking": {
       "title": "Prenota il tuo soggiorno eccezionale"
     },
     "content": {
-      "quote": "« Ci sono luoghi dove respira lo spirito. »",
+      "quote": "La bellezza di un luogo si rivela nella carezza della luce, nel silenzio che lo abita e nell'emozione che suscita.",
       "quoteAuthor": "— Maurice Barrès",
-      "description1": "Alcuni luoghi possiedono un'anima rara, un'energia silenziosa che ispira e conforta. La nostra proprietà ne è l'illustrazione perfetta: situata a soli 5 minuti dal trambusto monegasco, offre assoluta tranquillità, garantendo al contempo accesso immediato alle più belle spiagge, boutique prestigiose ed eventi della Costa Azzurra.",
-      "description2": "Goditi 350 m² distribuiti su due piani, con cinque suite private con letti eccezionali. Una discreta dependance immersa nella vegetazione mediterranea offre spazio aggiuntivo per i tuoi ospiti.",
-      "description3": "Scopri la nostra piscina con vista sul mare e il nostro rooftop che offre un panorama eccezionale su Monaco e il Mediterraneo.",
-      "description4": "Tra intimità, eleganza e arte del vivere, la nostra proprietà è l'indirizzo perfetto per una fuga unica in Riviera."
+      "description1": "Immagina un luogo dove il lusso incontra l'autenticità, dove ogni dettaglio è stato pensato per il tuo benessere. Il nostro dominio, situato a soli 5 minuti da Monaco, ti offre il perfetto equilibrio tra assoluta tranquillità e accesso privilegiato alle più belle spiagge, boutique di prestigio ed eventi della Costa Azzurra.",
+      "description2": "Immergiti in un universo di 350 m² distribuiti su due piani, dove cinque suite private ti accolgono con una biancheria da letto eccezionale. Una dependance discreta, nascosta nella vegetazione mediterranea, è a tua disposizione per accogliere i tuoi ospiti in un ambiente idilliaco.",
+      "description3": "Lasciati sedurre dalla nostra piscina a sfioro che si fonde con l'orizzonte marino, e scopri il nostro rooftop che offre un panorama mozzafiato su Monaco e il Mediterraneo.",
+      "description4": "Tra intimità, eleganza e arte di vivere, il nostro dominio è lo scrigno ideale per una fuga indimenticabile sulla Riviera."
     },
     "slogan": {
       "title": "VIVI L'ECCEZIONALE",
@@ -69,62 +63,267 @@
         "reception": "Sala di ricevimento",
         "receptionDesc": "Uno spazio elegante per i tuoi momenti di convivialità",
         "salon": "Salone principale",
-        "salonDesc": "Uno spazio elegante con vista panoramica",
-        "kitchen": "Cucina gastronomica",
+        "salonDesc": "Uno spazio abitativo elegante con vista panoramica",
+        "kitchen": "Cucina gourmet",
         "kitchenDesc": "Dotata degli ultimi elettrodomestici di alta gamma",
         "dining": "Sala da pranzo",
         "diningDesc": "Per momenti di convivialità raffinati",
         "master": "Suite principale",
-        "masterDesc": "Un'oasi di pace con vista mare",
+        "masterDesc": "Un rifugio di pace con vista sul mare",
         "bathroom": "Bagno",
-        "bathroomDesc": "Uno spazio spa privato con vasca ad angolo",
+        "bathroomDesc": "Uno spazio spa privato con vasca angolare",
         "pool": "Piscina",
         "poolDesc": "Una piscina a sfioro con vista panoramica",
         "exterior": "Vista esterna",
-        "exteriorDesc": "Un ambiente eccezionale tra cielo e mare",
+        "exteriorDesc": "Una cornice eccezionale tra cielo e mare",
         "night": "Vista notturna",
         "nightDesc": "Un'atmosfera magica sotto le stelle"
       }
     },
     "description": "Scopri un luogo eccezionale dove lusso e autenticità si incontrano per creare momenti indimenticabili.",
     "hero": {
-      "title": "Les Étoiles du Rocher",
-      "subtitle": "Lasciati incantare dall'oro dei raggi mattutini, dal canto discreto dei pini e dall'orizzonte infinito del Mediterraneo."
+      "title": "Le Stelle della Roccia",
+      "subtitle": "Lasciati incantare dall'oro dei raggi mattutini, dal canto discreto dei pini e dall'orizzonte infinito del Mediterraneo.",
+      "ctaButton": "Prenota ora",
+      "scrollText": "Scopri di più"
     },
     "cta": {
       "bookStay": "Prenota il tuo soggiorno",
       "discoverVilla": "Scopri la villa",
       "mediterranean": "L'arte di vivere mediterranea",
       "planPrivateVisit": "Pianifica una visita privata",
-      "exploreFrontier": "Attraversa il confine",
-      "discoverSecrets": "I nostri luoghi segreti"
+      "exploreFrontier": "Supera il confine",
+      "discoverSecrets": "I nostri angoli segreti"
     },
     "quote": "La bellezza di un luogo si rivela nella carezza della luce, nel silenzio che lo abita e nell'emozione che suscita.",
     "villa": {
-      "title": "La Villa Les Étoiles du Rocher",
-      "description": "Un gioiello di fronte al mare, dove ogni dettaglio invita alla contemplazione. Al tuo risveglio, il mormorio delle onde e la vista azzurra comporranno il tuo primo ricordo del giorno. I volumi raffinati, aperti verso l'esterno, offrono un'esperienza sensoriale sottile, combinando raffinatezza e autenticità della Costa Azzurra."
+      "title": "La Villa Le Stelle della Roccia",
+      "description": "Uno scrigno posato di fronte al mare, dove ogni dettaglio invita alla contemplazione. Al tuo risveglio, il mormorio delle onde e la vista azzurra comporranno il tuo primo ricordo del giorno. I volumi essenziali, aperti sull'esterno, offrono un'esperienza sensoriale sottile, unendo raffinatezza e autenticità azzurra.",
+      "features": {
+        "title": "Affitta una villa eccezionale a 10 minuti da Monaco con vista mare mozzafiato",
+        "subtitle": "Completata all'inizio dell'anno, questa villa di lusso, mai affittata prima, è pronta a offrirti momenti indimenticabili, in famiglia o tra amici.",
+        "location": {
+          "title": "📍 Posizione ideale",
+          "items": {
+            "monaco": "A soli 10 minuti dal centro di Monaco",
+            "airport": "A 30 minuti dall'aeroporto di Nizza",
+            "cannes": "A 45 minuti da Cannes",
+            "italy": "E a 15 minuti dall'Italia"
+          }
+        },
+        "interior": {
+          "title": "All'interno",
+          "items": {
+            "living": "Un salone elegante con vista mare",
+            "dining": "Una sala da pranzo luminosa",
+            "bar": "Un bar raffinato",
+            "tv": "Un angolo TV",
+            "kitchen": "Una cucina completamente attrezzata con materiale di alta gamma"
+          }
+        },
+        "bedrooms": {
+          "title": "La zona notte",
+          "items": {
+            "total": "5 camere lussuose con biancheria da letto e materassi da hotel",
+            "sea": "4 camere con vista mare e terrazze private",
+            "pine": "1 camera tranquilla che si affaccia su una pineta",
+            "bedding": "Tutte dotate di cassaforte, macchina per caffè Nespresso, bollitore e minibar",
+            "amenities": "5 bagni equipaggiati con kit benessere e asciugacapelli"
+          }
+        },
+        "services": {
+          "title": "Servizi inclusi",
+          "items": {
+            "bathrooms": "5 bagni equipaggiati",
+            "wc": "6 bagni di cui 1 per gli ospiti al piano superiore",
+            "wellness": "Kit benessere completi",
+            "wifi": "Wi-Fi ad alta velocità",
+            "safe": "Cassaforte in ogni camera"
+          }
+        },
+        "panoramicView": "Vista panoramica sul Mediterraneo",
+        "infinityPool": "Piscina a sfioro",
+        "garden": "Giardino con essenze mediterranee",
+        "services": "Servizi su misura"
+      },
+      "additionalServices": {
+        "title": "Extra disponibili",
+        "subtitle": "Personalizza il tuo soggiorno con i nostri servizi su misura",
+        "chef": {
+          "title": "Chef a domicilio",
+          "description": "Approfitta dei servizi di uno chef privato per pasti eccezionali"
+        },
+        "valet": {
+          "title": "Servizio autista",
+          "description": "Trasporto e gestione dei tuoi veicoli in tutta serenità"
+        },
+        "cleaning": {
+          "title": "Servizio di pulizia",
+          "description": "Servizio di pulizia giornaliero su richiesta"
+        }
+      },
+      "bookNow": "Prenota il tuo soggiorno",
+      "images": {
+        "pool": {
+          "alt": "Piscina privata della villa con vista mare"
+        }
+      },
+      "whyChooseUs": {
+        "title": "Perché scegliere questa villa?",
+        "description": "È una vera rarità, nuova e pronta a rendere il tuo soggiorno indimenticabile. Che sia per una vacanza rilassante o una fuga lussuosa, sarai conquistato dai suoi servizi di alta gamma e dalla sua posizione unica.",
+        "features": {
+          "pool": "Piscina privata con vista mozzafiato",
+          "parking": "Parcheggio privato per 8 auto",
+          "wifi": "Wi-Fi ad alta velocità",
+          "capacity": "Fino a 10 persone"
+        }
+      },
+      "kitchen": {
+        "images": {
+          "alt": "Cucina della villa con attrezzature moderne"
+        },
+        "noPoints": "Clicca su uno dei punti per vedere i dettagli specifici di questa parte della cucina.",
+        "cabinets": {
+          "title": "Mobili alti e bassi",
+          "description": "Spazi di archiviazione ottimizzati per un'organizzazione perfetta"
+        },
+        "appliances": {
+          "title": "Elettrodomestici",
+          "description": "Elettrodomestici di alta gamma per una cucina professionale"
+        },
+        "island": {
+          "title": "Isola centrale",
+          "description": "Uno spazio conviviale per preparare e condividere"
+        },
+        "storage": {
+          "title": "Archiviazione",
+          "description": "Spazi di archiviazione intelligenti e funzionali"
+        }
+      },
+      "spaces": {
+        "title": "Scopri i nostri spazi",
+        "subtitle": "Ogni spazio delle Stelle della Roccia è stato progettato per unire comfort sottile, linee delicate e momenti memorabili.",
+        "galleryButton": "Accedi alla galleria",
+        "living": {
+          "title": "Zona giorno",
+          "description": "Uno spazio accogliente con vista panoramica sul Mediterraneo",
+          "alt": "Salone luminoso con vista panoramica sul Mediterraneo"
+        },
+        "living2": {
+          "title": "Salone aperto e luminoso",
+          "description": "Un vasto spazio abitativo immerso nella luce, ideale per rilassarsi o ricevere",
+          "alt": "Grande salone luminoso, perfetto per il relax e l'intrattenimento"
+        },
+        "pool": {
+          "title": "Piscina privata",
+          "description": "Goditi una nuotata di fronte al mare",
+          "alt": "Piscina privata con vista sul mare"
+        },
+        "suites": {
+          "title": "5 suite private",
+          "description": "Ogni camera ha il suo bagno, si apre sull'esterno e gode di abbondante luce naturale",
+          "alt": "Cinque suite private con bagni e luce naturale"
+        }
+      },
+      "livingSpaces": {
+        "title": "SPAZI ABITATIVI SU MISURA",
+        "description1": "Scopri uno spazio abitativo ideale per ricevere o passare momenti in famiglia.",
+        "description2": "Le ville sono state meticolosamente pensate per dare vita a spazi intelligenti, funzionali e armoniosi.",
+        "description3": "Gli interni delle ville sono progettati per preservare la tua intimità offrendo al contempo belle aperture sugli spazi esterni.",
+        "description4": "Ognuna delle 5 suite propone spazi abitativi interni ed esterni spaziosi e perfettamente organizzati."
+      },
+      "practicalInfo": {
+        "title": "Informazioni pratiche",
+        "subtitle": "Tutto quello che devi sapere per goderti appieno il tuo soggiorno alle Stelle della Roccia",
+        "location": {
+          "title": "Posizione",
+          "description": "Situata in posizione ideale a Roquebrune Cap Martin, a pochi minuti da Monaco e dalle più belle spiagge della Costa Azzurra"
+        },
+        "availability": {
+          "title": "Disponibilità",
+          "description": "La villa è disponibile per l'affitto tutto l'anno, con una durata minima del soggiorno di una settimana"
+        },
+        "equipment": {
+          "title": "Attrezzature",
+          "description": "Attrezzature di alta gamma e servizi personalizzati per un soggiorno eccezionale"
+        },
+        "security": {
+          "title": "Sicurezza",
+          "description": "Proprietà completamente sicura con sistema di allarme, videosorveglianza e servizio di sicurezza su richiesta"
+        }
+      },
+      "houseRules": {
+        "checkin": {
+          "title": "Check-in & Check-out",
+          "description": "Arrivo dalle 16:00 e partenza entro le 10:00. Ti sarà riservato un benvenuto personalizzato"
+        },
+        "access": {
+          "title": "Accesso & Sicurezza",
+          "description": "La villa è dotata di un sistema di sicurezza di ultima generazione. I codici di accesso ti saranno consegnati all'arrivo"
+        },
+        "quiet": {
+          "title": "Tranquillità",
+          "description": "Per rispetto del vicinato, ti chiediamo di mantenere un livello sonoro ragionevole, specialmente dopo le 22:00"
+        }
+      },
+      "distances": {
+        "monaco": "Monaco",
+        "nice": "Nizza",
+        "cannes": "Cannes",
+        "saintTropez": "Saint-Tropez",
+        "airport": "Aeroporto di Nizza",
+        "beach": "Spiaggia"
+      },
+      "images": {
+        "exterior": {
+          "alt": "Esterno della villa con piscina e vista sul mare"
+        },
+        "living": {
+          "alt": "Salone di lusso con porte vetrate"
+        },
+        "bedroom": {
+          "alt": "Camera principale con vista sul mare"
+        }
+      },
+      "rooms": {
+        "master": {
+          "title": "Suite Principale",
+          "description": "Una spaziosa suite principale con vista panoramica sul mare, bagno in marmo e guardaroba.",
+          "alt": "Suite della camera principale"
+        },
+        "main": {
+          "title": "Salone Principale",
+          "description": "Un elegante salone con porte vetrate che offrono una vista incomparabile sul Mediterraneo.",
+          "alt": "Salone principale"
+        },
+        "terrace": {
+          "title": "Terrazza & Piscina",
+          "description": "Una vasta terrazza con piscina infinity e area relax con vista sul mare.",
+          "alt": "Terrazza con piscina infinity"
+        },
+        "gourmet": {
+          "title": "Cucina Gourmet",
+          "description": "Una cucina completamente attrezzata con isola centrale ed elettrodomestici di alta gamma.",
+          "alt": "Cucina gourmet"
+        }
+      },
+      "actionButton": "Scopri la villa",
+      "scrollText": "Scopri di più"
     },
-    "features": {
-      "panoramicView": "Vista panoramica sul Mediterraneo",
-      "infinityPool": "Piscina a sfioro",
-      "garden": "Giardino con essenze mediterranee",
-      "services": "Servizi personalizzati"
-    },
-    "actionButton": "Scopri la villa",
     "gallery": {
       "title": "Galleria",
-      "description": "Immergiti nell'atmosfera unica degli spazi: suite inondate di luce, piscina sospesa sul mare, terrazza con accenti poetici...",
+      "description": "Immergiti nell'atmosfera unica degli spazi: suite immerse nella luce, piscina sospesa sopra il mare, rooftop con accenti poetici...",
       "mainSuite": {
         "title": "Suite principale",
-        "description": "Una parentesi serena, inondata di luce, con vista sull'acqua e bagno privato."
+        "description": "Parentesi serena, immersa nella luce, con vista sull'acqua e bagno privato."
       },
       "livingRoom": {
-        "title": "Soggiorno",
+        "title": "Salone",
         "description": "Volume aperto, ampie vetrate e prospettiva infinita sull'azzurro."
       },
       "terrace": {
         "title": "Terrazza",
-        "description": "Un altopiano in pieno cielo, attrezzato per i tuoi momenti di quiete e pasti all'aperto."
+        "description": "Un plateau nel cielo, allestito per i tuoi momenti di quiete e i tuoi pasti all'aperto."
       },
       "seeAll": "Vedi la galleria completa",
       "categories": {
@@ -136,11 +335,11 @@
       }
     },
     "surroundings": {
-      "title": "Dintorni",
-      "description": "Esplora i tesori vicini, scelti per il loro carattere e la loro discrezione.",
+      "title": "Nei dintorni",
+      "description": "Esplora tesori vicini, selezionati per il loro carattere e discrezione.",
       "monaco": {
-        "title": "Monaco e Mentone",
-        "description": "Giardini pensili, musei intimi, indirizzi confidenziali."
+        "title": "Monaco & Mentone",
+        "description": "Giardini pensili, musei intimi, indirizzi riservati."
       },
       "italy": {
         "title": "Fuga in Italia",
@@ -148,13 +347,13 @@
       },
       "trails": {
         "title": "Sentieri segreti della Costa Azzurra",
-        "description": "Villaggi arroccati, calette silenziose, panorami preservati."
+        "description": "Borghi arroccati, calette silenziose, panorami preservati."
       },
       "guide": "Saremo le tue guide per comporre un soggiorno secondo i tuoi desideri più raffinati."
     },
     "contact": {
-      "title": "Contatto e prenotazione",
-      "description": "Per qualsiasi richiesta o per organizzare la tua visita privata, il nostro team risponde con discrezione e prontezza.",
+      "title": "Contatto & Prenotazione",
+      "description": "Per qualsiasi richiesta o per organizzare la tua visita privata, il nostro team ti risponderà con discrezione e prontezza.",
       "phone": "+33 6 46 25 77 56",
       "email": "contact@lesetoilesdurocher.fr",
       "address": "Roquebrune-Cap-Martin, Costa Azzurra",
@@ -174,497 +373,6 @@
     },
     "discoverButton": "Scopri la villa"
   },
-  "villa": {
-    "title": "La Villa",
-    "description": "Una residenza eccezionale",
-    "hero": {
-      "title": "Orizzonte mediterraneo",
-      "description": "Sospesa tra cielo e mare, la Villa Les Étoiles du Rocher vi invita a gustare la dolcezza della Costa Azzurra, un rifugio arroccato di fronte all'azzurro infinito.",
-      "bookNow": "Prenota ora",
-      "discoverMore": "Scopri di più",
-      "scrollDown": "Scopri di più",
-      "ctaButton": "Prenota ora",
-      "subtitle": "Lasciati incantare dall'oro dei raggi mattutini, dal canto discreto dei pini e dall'orizzonte infinito del Mediterraneo.",
-      "experienceTitle": "L'esperienza",
-      "experienceSubtitle": "tra cielo e mare",
-      "videoTitle": "Video della villa",
-      "scrollText": "Scorri verso il basso"
-    },
-    "spaces": {
-      "title": "Spazi progettati per ispirare",
-      "subtitle": "Ogni spazio a Les Étoiles du Rocher è stato progettato per offrire comfort discreto, linee delicate e momenti memorabili.",
-      "living": {
-        "title": "Spazio abitativo",
-        "description": "Ampia apertura sul Mediterraneo.",
-        "alt": "Soggiorno spazioso con vista panoramica"
-      },
-      "pool": {
-        "title": "Piscina privata",
-        "description": "Specchio d'acqua prolungato dall'orizzonte.",
-        "alt": "Piscina a sfioro con vista mare"
-      },
-      "suites": {
-        "title": "Cinque suite",
-        "description": "Rifugi intimi, inondati di luce naturale.",
-        "alt": "Suite di lusso con vista panoramica"
-      }
-    },
-    "features": {
-      "privacy": {
-        "title": "Privacy preservata",
-        "description": "Volumi generosi e viste incorniciate garantiscono la tua tranquillità invitando il paesaggio all'interno."
-      },
-      "harmony": {
-        "title": "Armonia dei materiali",
-        "description": "Linee pulite, finiture selezionate e materiali nobili si combinano per un'atmosfera calda e contemporanea."
-      },
-      "wellness": {
-        "title": "Benessere raffinato",
-        "description": "Ogni dettaglio — biancheria da letto, illuminazione, texture — è orchestrato per una quiete assoluta, discreta e senza compromessi."
-      },
-      "artOfLiving": "L'arte di vivere si delinea in questi luoghi dove ogni sguardo incrocia un tratto di attenzione dedicato al tuo piacere.",
-      "signature": "LES ÉTOILES DU ROCHER"
-    },
-    "location": {
-      "title": "Riviera francese: un sito privilegiato",
-      "region": "Riviera francese",
-      "description": "Arroccata tra Monaco e Mentone, la villa gode di un contesto raro, mescolando giardino mediterraneo privato e accesso rapido ai tesori della Costa Azzurra.",
-      "exploreButton": "Esplora i dintorni",
-      "distances": {
-        "title": "Distanze",
-        "monaco": {
-          "name": "Monaco",
-          "time": "10 min"
-        },
-        "nice": {
-          "name": "Nizza",
-          "time": "30 min"
-        },
-        "airport": {
-          "name": "Aeroporto di Nizza",
-          "time": "35 min"
-        },
-        "cannes": {
-          "name": "Cannes",
-          "time": "50 min"
-        }
-      },
-      "nearby": {
-        "title": "Da scoprire a due passi",
-        "beaches": {
-          "name": "Spiagge segrete",
-          "time": "5 min"
-        },
-        "golf": {
-          "name": "Campo da golf",
-          "time": "15 min"
-        },
-        "italy": {
-          "name": "Confine italiano",
-          "time": "15 min"
-        },
-        "saintTropez": {
-          "name": "Saint-Tropez",
-          "time": "1h30"
-        }
-      },
-      "features": {
-        "panoramic": {
-          "title": "Vista panoramica",
-          "alt": "Vista panoramica sul Mediterraneo"
-        },
-        "gardens": {
-          "title": "Giardini",
-          "alt": "Giardini mediterranei"
-        },
-        "terraces": {
-          "title": "Terrazze",
-          "alt": "Terrazza con vista"
-        }
-      }
-    },
-    "services": {
-      "customization": "Personalizzazione",
-      "title": "Servizi su misura",
-      "description": "Il tuo soggiorno si compone secondo i tuoi desideri: accoglienza discreta, concierge 24h/24, chef privato, fughe confidenziali... Ogni momento è scritto su misura per te.",
-      "excellence": {
-        "title": "L'eccellenza al tuo servizio",
-        "description": "Il nostro team eccezionale anticipa i tuoi desideri con una sottile intuizione. Dagli eventi privati alle prenotazioni nei luoghi più ambiti, ci occupiamo dell'organizzazione perfetta di ogni momento del tuo soggiorno."
-      },
-      "welcome": "Accoglienza personalizzata e check-in privato",
-      "concierge": "Servizio di concierge disponibile 24h/24",
-      "chef": "Chef stellato e servizio in camera",
-      "excursions": "Organizzazione di escursioni confidenziali",
-      "customizeButton": "Personalizza la tua esperienza"
-    },
-    "property": {
-      "category": "Caratteristiche",
-      "title": "Dettagli della proprietà",
-      "location": {
-        "title": "Posizione",
-        "monaco": "A 10 min dal centro di Monaco",
-        "airport": "A 30 min dall'aeroporto di Nizza",
-        "cannes": "A 45 min da Cannes",
-        "italy": "A 15 min dal confine italiano"
-      },
-      "livingSpace": {
-        "title": "Spazi abitativi",
-        "livingRoom": "Soggiorno panoramico di 150m²",
-        "diningRoom": "Sala da pranzo con vista mare",
-        "bar": "Bar e salone di ricevimento",
-        "kitchen": "Cucina Gaggenau su misura"
-      },
-      "suites": {
-        "title": "Suite",
-        "count": "5 suite con bagni privati",
-        "terraces": "Terrazze individuali con vista mare",
-        "bedding": "Biancheria da letto Hästens su misura",
-        "dressing": "Guardaroba in legno pregiato"
-      },
-      "exterior": {
-        "title": "Esterni",
-        "pool": "Piscina a sfioro riscaldata",
-        "poolhouse": "Pool house con cucina estiva",
-        "garden": "Giardino mediterraneo paesaggistico",
-        "terraces": "Terrazze in pietra naturale"
-      },
-      "technical": {
-        "category": "Eccellenza tecnica",
-        "title": "Comfort e tecnologie al servizio del tuo benessere",
-        "description": "Les Étoiles du Rocher beneficia delle ultime innovazioni per garantirti un comfort assoluto. Sistema domotico all'avanguardia, climatizzazione invisibile, isolamento acustico perfetto... Ogni dettaglio tecnico è stato pensato per essere dimenticato e lasciarti godere pienamente del momento presente."
-      },
-      "capacity": {
-        "people": "10 persone",
-        "pool": "Piscina 15m x 6m",
-        "parking": "8 posti auto",
-        "wifi": "Wi-Fi ultra veloce",
-        "automation": "Domotica integrata",
-        "security": "Sicurezza 24/7"
-      },
-      "allEquipments": "Scopri tutte le nostre attrezzature"
-    },
-    "experience": {
-      "category": "Esperienza unica",
-      "title": "Perché scegliere Les Étoiles du Rocher",
-      "description": "Al di là di un semplice soggiorno, questa dimora è una promessa di evasione dove ogni materiale, ogni prospettiva e ogni servizio coniugano i loro talenti per rivelare la quintessenza del dolce vivere mediterraneo.",
-      "commitment": {
-        "title": "Il nostro impegno",
-        "quote": "\"Offrire ai nostri ospiti momenti autentici, dove l'arte dell'accoglienza si mescola alla più delicata discrezione.\""
-      },
-      "exceptional": {
-        "title": "Una proprietà eccezionale",
-        "description": "Un gioiello architettonico recentemente costruito, che offre da ogni spazio un panorama mozzafiato, in un ambiente di assoluta tranquillità."
-      },
-      "harmony": {
-        "title": "Armonia e autenticità",
-        "description": "Una sinfonia di materiali nobili, tecnologie silenziose e allestimenti curati, al servizio di un'esperienza sensoriale tutta in sottigliezza."
-      },
-      "service": {
-        "title": "Un servizio attento",
-        "description": "Un team dedicato, che anticipa i tuoi desideri per comporre momenti su misura, rispecchiando le tue aspirazioni più raffinate."
-      },
-      "bookButton": "Prenota la tua esperienza"
-    },
-    "kitchen": {
-      "island": {
-        "title": "Isola centrale",
-        "description": "Isola centrale in marmo con spazio di archiviazione integrato e sgabelli di design."
-      },
-      "appliances": {
-        "title": "Elettrodomestici di alta gamma",
-        "description": "Attrezzatura Gaggenau con frigorifero integrato, forno a vapore e piano cottura a induzione."
-      },
-      "dining": {
-        "title": "Area pranzo",
-        "description": "Tavolo in rovere massiccio che può ospitare fino a 8 persone."
-      }
-    },
-    "common": {
-      "gallery": "Galleria"
-    },
-    "livingSpaces": {
-      "title": "Scopri i nostri spazi",
-      "description1": "Ogni spazio a Le Stelle della Roccia è stato progettato per offrirti comfort, eleganza e momenti indimenticabili.",
-      "description2": "Goditi 350 m² distribuiti su due piani, con cinque suite private dotate di letti eccezionali.",
-      "description3": "Una dependance discreta, incastonata nella vegetazione mediterranea, offre uno spazio aggiuntivo per i tuoi ospiti.",
-      "description4": "Scopri la nostra piscina a sfioro che domina il mare e il nostro rooftop che offre un panorama eccezionale su Monaco e il Mediterraneo."
-    },
-    "images": {
-      "exterior": {
-        "alt": "Vista esterna della villa con piscina e vista mare"
-      }
-    },
-    "practicalInfo": {
-      "title": "Informazioni pratiche",
-      "subtitle": "Tutto ciò che devi sapere per preparare il tuo soggiorno",
-      "location": {
-        "title": "Posizione",
-        "description": "Situata a soli 5 minuti da Monaco, la villa offre un accesso privilegiato alle principali attrazioni della Costa Azzurra."
-      },
-      "availability": {
-        "title": "Disponibilità",
-        "description": "La villa è disponibile tutto l'anno. Contattateci per verificare le date disponibili e le tariffe stagionali."
-      },
-      "equipment": {
-        "title": "Dotazioni",
-        "description": "La villa è completamente attrezzata con tutti i comfort moderni, inclusi Wi-Fi ad alta velocità, aria condizionata e una cucina gourmet."
-      },
-      "security": {
-        "title": "Sicurezza",
-        "description": "La villa è dotata di un sistema di sicurezza all'avanguardia e di un servizio di vigilanza 24/7 per garantire la vostra tranquillità."
-      }
-    },
-    "ourVilla": {
-      "title": "La Nostra Villa",
-      "description": "Scopri la nostra villa di lusso con vista mozzafiato sul Mediterraneo.",
-      "features": {
-        "title": "Caratteristiche",
-        "area": "Superficie",
-        "bedrooms": "Camere da letto",
-        "bathrooms": "Bagni",
-        "pool": "Piscina",
-        "view": "Vista",
-        "beach": "Accesso alla spiaggia"
-      },
-      "spaces": {
-        "title": "Spazi",
-        "living": "Soggiorno",
-        "dining": "Sala da pranzo",
-        "kitchen": "Cucina",
-        "bedrooms": "Camere da letto",
-        "bathrooms": "Bagni",
-        "terrace": "Terrazza",
-        "garden": "Giardino"
-      },
-      "amenities": {
-        "title": "Servizi",
-        "wifi": "Wi-Fi",
-        "parking": "Parcheggio",
-        "security": "Sicurezza",
-        "cleaning": "Servizio di pulizia",
-        "concierge": "Concierge"
-      }
-    },
-    "features": {
-      "title": "Affitta una villa eccezionale a 10 minuti da Monaco con vista mare mozzafiato",
-      "subtitle": "Completata all'inizio dell'anno, questa villa di lusso, mai affittata prima, è pronta a offrirti momenti indimenticabili, in famiglia o con amici.",
-      "location": {
-        "title": "📍 Posizione ideale",
-        "items": {
-          "monaco": "A soli 10 minuti dal centro di Monaco",
-          "airport": "30 minuti dall'aeroporto di Nizza",
-          "cannes": "45 minuti da Cannes",
-          "italy": "E 15 minuti dall'Italia"
-        }
-      },
-      "interior": {
-        "title": "Interni",
-        "items": {
-          "living": "Un elegante soggiorno con vista mare",
-          "dining": "Una luminosa sala da pranzo",
-          "bar": "Un raffinato bar",
-          "tv": "Un angolo TV",
-          "kitchen": "Una cucina completamente attrezzata con elettrodomestici di alta gamma"
-        }
-      },
-      "bedrooms": {
-        "title": "Camere da letto",
-        "items": {
-          "total": "5 lussuose camere da letto con biancheria da hotel",
-          "sea": "4 camere con vista mare e terrazze private",
-          "pine": "1 camera tranquilla che si affaccia su una pineta",
-          "bedding": "Tutte dotate di cassaforte, macchina Nespresso, bollitore e minibar",
-          "amenities": "5 bagni attrezzati con kit benessere e asciugacapelli"
-        }
-      },
-      "services": {
-        "title": "Servizi inclusi",
-        "items": {
-          "bathrooms": "5 bagni attrezzati",
-          "wc": "6 servizi igienici inclusi 1 per gli ospiti al piano superiore",
-          "wellness": "Kit benessere completi",
-          "wifi": "WiFi ad alta velocità",
-          "safe": "Cassaforte in ogni camera"
-        }
-      }
-    },
-    "additionalServices": {
-      "title": "Extra disponibili",
-      "subtitle": "Personalizza il tuo soggiorno con i nostri servizi su misura",
-      "chef": {
-        "title": "Chef privato",
-        "description": "Goditi i servizi di uno chef privato per pasti eccezionali"
-      },
-      "valet": {
-        "title": "Servizio parcheggiatore",
-        "description": "Trasporto e gestione dei tuoi veicoli in tutta serenità"
-      },
-      "cleaning": {
-        "title": "Servizio pulizie",
-        "description": "Servizio di pulizia giornaliero su richiesta"
-      }
-    },
-    "bookNow": "Prenota il tuo soggiorno",
-    "images": {
-      "pool": {
-        "alt": "Piscina privata della villa con vista mare"
-      }
-    },
-    "whyChooseUs": {
-      "title": "Perché scegliere questa villa?",
-      "description": "È una vera rarità, nuova di zecca e pronta a valorizzare il tuo soggiorno. Che sia per una vacanza rilassante o una fuga di lusso, sarai conquistato dalle sue prestazioni di alta gamma e dalla sua posizione unica.",
-      "features": {
-        "pool": "Piscina privata con vista mozzafiato",
-        "parking": "Parcheggio privato per 8 auto",
-        "wifi": "WiFi ad alta velocità",
-        "capacity": "Fino a 10 persone"
-      }
-    },
-    "kitchen": {
-      "images": {
-        "alt": "Cucina della villa con elettrodomestici moderni"
-      },
-      "noPoints": "Clicca su uno dei punti per vedere i dettagli specifici di questa parte della cucina.",
-      "cabinets": {
-        "title": "Mobili alti e bassi",
-        "description": "Mobili alti con fissaggi invisibili e vetro satinato al centro, mobili bassi rialzati con due ripiani e 15% di spazio aggiuntivo."
-      },
-      "counter": {
-        "title": "Piano di lavoro e schienale",
-        "description": "Piano di lavoro in quarzo nero con finitura opaca contrastante, schienale in vetro temperato per una facile pulizia."
-      },
-      "sink": {
-        "title": "Lavello e rubinetto",
-        "description": "Lavello sottopiano in acciaio inox con rubinetto estraibile a flusso variabile per maggiore flessibilità."
-      },
-      "dishwasher": {
-        "title": "Lavastoviglie intelligente",
-        "description": "Lavastoviglie integrata con programma eco e rilevamento automatico del carico per un consumo ottimizzato."
-      },
-      "fridge": {
-        "title": "Frigoriferi combinati",
-        "description": "Frigorifero-congelatore combinato con scomparti No-Frost e zona fresca speciale per alimenti sensibili."
-      },
-      "oven": {
-        "title": "Forno e microonde",
-        "description": "Forno multifunzione con funzione vapore e microonde combinato per una cottura rapida e sana."
-      },
-      "stove": {
-        "title": "Piano cottura",
-        "description": "Piano cottura a induzione con 5 zone di cottura e ponte variabile per adattarsi a tutti i tipi di pentole."
-      },
-      "island": {
-        "title": "Isola centrale",
-        "description": "Isola centrale con spazio di stoccaggio integrato e prese elettriche nascoste per maggiore praticità."
-      }
-    },
-    "houseRules": {
-      "title": "Regole della casa",
-      "checkin": {
-        "title": "Check-in/Check-out",
-        "description": "Check-in dalle 16:00, check-out entro le 11:00."
-      },
-      "access": {
-        "title": "Accesso",
-        "description": "Accesso riservato ai soli ospiti registrati."
-      },
-      "quiet": {
-        "title": "Rumore",
-        "description": "Rispetto del silenzio dopo le 22:00."
-      }
-    },
-    "distances": {
-      "title": "Distanze",
-      "monaco": "Monaco",
-      "nice": "Nizza",
-      "cannes": "Cannes",
-      "saintTropez": "Saint-Tropez",
-      "niceAirport": "Aeroporto di Nizza"
-    },
-    "spaces": {
-      "title": "Spazi progettati per ispirare",
-      "description": "Ogni stanza di Les Étoiles du Rocher è stata pensata per fondere comfort ovattato, linee delicate e momenti memorabili.",
-      "livingRoom": {
-        "title": "Salone inondato di luce",
-        "description": "Ampia apertura sul Mediterraneo."
-      },
-      "pool": {
-        "title": "Piscina privata",
-        "description": "Specchio d'acqua prolungato dall'orizzonte."
-      },
-      "suites": {
-        "title": "Cinque suite",
-        "description": "Rifugi intimi, inondati di luce naturale."
-      }
-    }
-  },
-  "gallery": {
-    "title": "Galleria",
-    "subtitle": "Scopri Les Étoiles du Rocher attraverso la nostra galleria fotografica",
-    "categories": {
-      "all": "Tutto",
-      "exterior": "Esterno",
-      "interior": "Interno",
-      "suites": "Suite",
-      "views": "Viste"
-    },
-    "images": {
-      "exterior": {
-        "1": "Facciata della villa con vista mare",
-        "2": "Giardino mediterraneo e terrazza",
-        "3": "Piscina a sfioro con vista mare",
-        "4": "Ingresso principale della villa",
-        "5": "Vista panoramica sulla baia",
-        "6": "Terrazza ombreggiata con salotto estivo"
-      },
-      "suites": {
-        "1": "Suite principale luminosa",
-        "2": "Suite doppia con vista giardino",
-        "3": "Suite accogliente con balcone",
-        "4": "Suite contemporanea",
-        "5": "Suite familiare spaziosa",
-        "6": "Suite con bagno privato",
-        "7": "Suite elegante con guardaroba",
-        "8": "Suite con terrazza privata",
-        "9": "Suite design e colorata",
-        "10": "Suite con vista mare",
-        "11": "Suite raffinata",
-        "12": "Suite con spazio ufficio",
-        "13": "Suite luminosa e tranquilla",
-        "14": "Suite con accesso diretto al giardino",
-        "15": "Suite con grande armadio",
-        "16": "Suite con bagno moderno",
-        "17": "Suite con letto king size",
-        "18": "Suite con vista pineta",
-        "19": "Suite con arredamento minimalista",
-        "20": "Suite con bagno privato",
-        "21": "Suite con terrazza fiorita",
-        "22": "Suite con vista mare",
-        "23": "Suite con atmosfera zen"
-      },
-      "interior": {
-        "1": "Soggiorno spazioso e luminoso",
-        "2": "Sala da pranzo elegante",
-        "3": "Cucina moderna completamente attrezzata",
-        "4": "Bagno design",
-        "5": "Angolo lettura accogliente",
-        "6": "Ingresso accogliente",
-        "7": "Sala giochi per bambini",
-        "8": "Bagno aggiuntivo",
-        "9": "Camera per gli ospiti",
-        "10": "Sala TV",
-        "11": "Sala fitness",
-        "12": "Ufficio con vista",
-        "13": "Guardaroba moderno"
-      },
-      "views": {
-        "1": "Tramonto sul mare",
-        "2": "Vista sulla baia al crepuscolo",
-        "3": "Panorama mediterraneo"
-      }
-    },
-    "discoverButton": "Scopri i dintorni"
-  },
   "contact": {
     "title": "Contatto",
     "subtitle": "Siamo a tua disposizione",
@@ -679,9 +387,9 @@
       "messagePlaceholder": "Il tuo messaggio",
       "submit": "Invia",
       "success": "Messaggio inviato con successo",
-      "successDetail": "Ti risponderemo nel più breve tempo possibile.",
+      "successDetail": "Ti risponderemo al più presto.",
       "countryCode": {
-        "label": "Prefisso internazionale",
+        "label": "Prefisso",
         "france": "Francia",
         "code": "+33"
       }
@@ -690,51 +398,29 @@
       "bookStay": "Prenota il tuo soggiorno",
       "requestInfo": "Richiedi informazioni",
       "back": "Indietro",
-      "sendMessage": "Invia messaggio"
+      "sendMessage": "Invia un messaggio"
     },
     "info": {
       "address": "Roquebrune-Cap-Martin, Francia",
-      "phone": "+33 6 46 25 77 56",
-      "email": "contact@lesetoilesdurocher.fr"
-    },
-    "yourVilla": {
-      "title": "La tua villa ti aspetta",
-      "subtitle": "Contattaci!",
-      "description": "Grazie per aver visitato il nostro sito web! Saremo felici di parlare con te. Che tu abbia domande, feedback o desideri saperne di più sulle nostre ville, non esitare a contattarci. I nostri consulenti ti risponderanno il prima possibile.",
-      "form": {
-        "name": "Nome e Cognome",
-        "namePlaceholder": "Il tuo nome completo",
-        "email": "Email",
-        "emailPlaceholder": "Il tuo indirizzo email",
-        "phone": "Telefono",
-        "phonePlaceholder": "Il tuo numero di telefono",
-        "message": "Messaggio",
-        "messagePlaceholder": "Il tuo messaggio",
-        "submit": "Invia messaggio",
-        "countryCode": {
-          "label": "Prefisso internazionale",
-          "france": "Francia",
-          "code": "+33"
-        }
-      }
+      "phone": "+33 6 XX XX XX XX",
+      "email": "contact@lesetoilesdurocher.com"
     }
   },
   "info": {
-    "title": "Informazioni",
-    "description": "Informazioni utili per il tuo soggiorno",
-    "sections": {
-      "arrival": "Arrivo",
-      "departure": "Partenza",
-      "rules": "Regole",
-      "amenities": "Servizi"
+    "title": "Informazioni pratiche",
+    "subtitle": "Tutto quello che devi sapere per goderti appieno il tuo soggiorno alle Stelle della Roccia",
+    "services": {
+      "title": "Attrezzature & Servizi",
+      "subtitle": "Le Stelle della Roccia offre una gamma completa di attrezzature e servizi per soddisfare ogni tua aspettativa.",
+      "description": "Le Stelle della Roccia ti offre una gamma completa di servizi e attrezzature per rendere il tuo soggiorno il più piacevole possibile."
     }
   },
   "discover": {
-    "title": "Scopri",
-    "subtitle": "Esplora le meraviglie della Costa Azzurra da Le Stelle della Roccia.",
+    "title": "Scoprire",
+    "subtitle": "Esplora le meraviglie della Costa Azzurra dalle Stelle della Roccia.",
     "hero": {
       "title": "L'esperienza cielo e mare",
-      "subtitle": "Goditi le alture della Costa Azzurra, un'oasi di pace con vista mozzafiato sul Mediterraneo.",
+      "subtitle": "Goditi le alture della Costa Azzurra, un rifugio di pace con vista mozzafiato sul Mediterraneo.",
       "bookNow": "Prenota ora",
       "scrollDown": "Scopri di più"
     },
@@ -742,14 +428,14 @@
       "title": "Goditi",
       "ourLocation": "La nostra posizione",
       "events": {
-        "title": "Luoghi ed Eventi da Scoprire",
-        "description": "Scopri la nostra selezione di luoghi ed eventi imperdibili da visitare durante il tuo soggiorno nella nostra villa d'eccezione.",
+        "title": "Luoghi & Eventi da Scoprire",
+        "description": "Scopri la nostra selezione di luoghi ed eventi imperdibili da visitare durante il tuo soggiorno nella nostra villa eccezionale.",
         "allPlaces": "Tutti i luoghi",
         "fortAntoine": {
-          "title": "Passeggiata notturna a Fort Antoine",
-          "description": "Teatro all'aperto situato sulle alture di Monaco, Fort Antoine ospita rappresentazioni artistiche intime sotto le stelle. Goditi uno spettacolo in questo luogo ricco di storia, di fronte al mare, in un'atmosfera unica che mescola cultura, patrimonio e magia notturna.",
+          "title": "Passeggiata notturna al Fort Antoine",
+          "description": "Teatro all'aperto situato sulle alture di Monaco, il Fort Antoine ospita rappresentazioni artistiche intime sotto le stelle. Goditi uno spettacolo in questo luogo carico di storia, di fronte al mare, in un'atmosfera unica che unisce cultura, patrimonio e magia notturna.",
           "date": "Serate estive",
-          "type": "Cultura ed Eventi",
+          "type": "Cultura & Eventi",
           "comments": {
             "theater": "Teatro, musica, cinema all'aperto",
             "view": "Vista panoramica sul Mediterraneo"
@@ -757,35 +443,35 @@
         },
         "monacoGP": {
           "title": "Gran Premio di Monaco",
-          "description": "Vivi la mitica gara dalla nostra villa o con i nostri accessi VIP alle migliori tribune del circuito.",
-          "date": "Fine maggio di ogni anno",
+          "description": "Vivi la corsa mitica dalla nostra villa o con i nostri accessi VIP alle migliori tribune del circuito.",
+          "date": "Fine maggio ogni anno",
           "type": "Evento sportivo"
         },
         "casino": {
           "title": "Casinò di Monte-Carlo",
-          "description": "Tenta la fortuna nel leggendario casinò frequentato da James Bond. Architettura Belle Époque e atmosfera sofisticata.",
+          "description": "Tenta la fortuna nel casinò leggendario dove James Bond ha le sue abitudini. Architettura Belle Époque e atmosfera raffinata.",
           "hours": "Aperto tutti i giorni",
-          "type": "Intrattenimento"
+          "type": "Divertimento"
         },
         "oceanographic": {
           "title": "Museo Oceanografico",
-          "description": "Più di 6000 specie marine, acquari giganti ed esposizioni interattive in un maestoso edificio che domina il mare.",
+          "description": "Oltre 6000 specie marine, acquari giganti e mostre interattive in un edificio maestoso che domina il mare.",
           "hours": "Aperto tutti i giorni",
           "type": "Cultura"
         },
         "rally": {
-          "title": "Rally Storico di Monte-Carlo",
-          "description": "Ammira le auto d'epoca che percorrono le strade tortuose dell'entroterra durante questa prestigiosa competizione.",
-          "date": "Gennaio di ogni anno",
+          "title": "Rally Monte-Carlo Storico",
+          "description": "Ammira le auto d'epoca percorrere le strade sinuose dell'entroterra durante questa prestigiosa competizione.",
+          "date": "Gennaio ogni anno",
           "type": "Evento sportivo"
         }
       },
       "secrets": {
-        "title": "Segreti per Iniziati",
+        "title": "Segreti da iniziati",
         "customsPath": {
           "title": "Sentiero dei Doganieri",
           "description": "Passeggiata costiera preservata che offre viste spettacolari sul mare e sulle calette segrete della Costa Azzurra.",
-          "category": "secrets",
+          "category": "segreti",
           "difficulty": "Facile a moderata",
           "duration": "1-3 ore",
           "bestTime": "Alba o tramonto"
@@ -793,7 +479,7 @@
         "ezeVillage": {
           "title": "Villaggio di Èze",
           "description": "Arroccato a 429m di altitudine, questo villaggio medievale offre una vista a 360° sulla Costa Azzurra e ospita il famoso Giardino Esotico.",
-          "category": "secrets",
+          "category": "segreti",
           "comments": {
             "medieval": "Autentico villaggio medievale",
             "view": "Vista panoramica eccezionale"
@@ -801,43 +487,43 @@
         },
         "littleAfrica": {
           "title": "La Piccola Africa di Beaulieu",
-          "description": "Giardino botanico segreto che ospita rare specie esotiche e una spiaggia intima lontana dalla folla.",
-          "category": "secrets",
+          "description": "Giardino botanico segreto che ospita specie esotiche rare e una spiaggia intima lontano dalla folla.",
+          "category": "segreti",
           "difficulty": "Facile",
           "duration": "1-2 ore",
           "bestTime": "Mattina"
         },
         "corbusier": {
           "title": "Sentiero Le Corbusier",
-          "description": "Percorso architettonico lungo il mare che rivela ville iconiche, tra cui la famosa Villa E-1027 di Eileen Gray.",
-          "category": "secrets",
+          "description": "Percorso architettonico che costeggia il mare e rivela ville iconiche, tra cui la famosa Villa E-1027 di Eileen Gray.",
+          "category": "segreti",
           "difficulty": "Facile a moderata",
           "duration": "2-3 ore",
           "bestTime": "Prima mattina"
         },
         "garnier": {
-          "title": "Opera Garnier di Monte-Carlo",
+          "title": "Opéra Garnier di Monte-Carlo",
           "description": "Capolavoro architettonico solitamente chiuso al pubblico, ma accessibile durante visite guidate esclusive che possiamo organizzare.",
-          "category": "secrets",
+          "category": "segreti",
           "comments": {
-            "opera": "Teatro dell'opera leggendario",
-            "decor": "Sontuoso decoro Belle Époque"
+            "opera": "Sala d'opera leggendaria",
+            "decor": "Decorazione Belle Époque sontuosa"
           }
         },
         "blueGulf": {
           "title": "Golfo Blu",
-          "description": "Caletta segreta accessibile solo da un sentiero discreto o dal mare, che offre acque cristalline e rara tranquillità.",
-          "category": "secrets",
-          "bestTime": "Prima parte della giornata"
+          "description": "Cala segreta accessibile solo da un sentiero discreto o via mare, che offre acque cristalline e una tranquillità rara.",
+          "category": "segreti",
+          "bestTime": "Prima mattina"
         }
       },
       "categories": {
-        "culture": "Cultura ed Eventi",
-        "sports": "Sport e Tempo Libero",
-        "nature": "Natura e Paesaggi",
+        "culture": "Cultura & Eventi",
+        "sports": "Sport & Tempo libero",
+        "nature": "Natura & Paesaggi",
         "villages": "Villaggi",
         "premium": "Esperienze Premium",
-        "secrets": "Segreti per Iniziati"
+        "secrets": "Segreti da Iniziati"
       },
       "filters": {
         "placesCount": "{count} {count, plural, one {luogo} other {luoghi}} in questa categoria",
@@ -845,28 +531,28 @@
       }
     },
     "quote": {
-      "text": "\"Vedere il mondo significa essere oltre sé stessi. L'arte e la cultura sono ciò che ci rende esseri viventi.\"",
+      "text": "\"Vedere il mondo, significa essere al di là di se stessi. L'arte e la cultura sono ciò che ci rende esseri viventi.\"",
       "author": "F. Scott Fitzgerald"
     },
     "cta": {
       "title": "La tua esperienza unica sulla Costa Azzurra",
-      "description": "Goditi tutti questi luoghi eccezionali dalla tua villa di lusso a Les Étoiles du Rocher. Il nostro team di concierge è a tua disposizione per organizzare le tue escursioni e creare momenti indimenticabili su misura.",
+      "description": "Approfitta di tutti questi luoghi eccezionali dalla tua villa di lusso alle Stelle della Roccia. Il nostro team di concierge è a tua disposizione per organizzare le tue escursioni e creare momenti indimenticabili su misura.",
       "bookNow": "Prenota il tuo soggiorno",
       "exploreGallery": "Esplora la nostra galleria"
     }
   },
+  "footer": {
+    "terms": "Termini e condizioni",
+    "sales": "Condizioni generali di vendita",
+    "rights": "Tutti i diritti riservati"
+  },
   "terms": {
-    "title": "Condizioni Generali",
-    "content": "Condizioni Generali\nVilla Les Étoiles du Rocher\nL'affitto della villa, di proprietà di SAS ALPHA GROUP, è regolato dalle presenti condizioni, accettate integralmente dal locatario con la firma del contratto.\n\n1. Capienza Massima\nLa villa ospita massimo 10 persone (bambini inclusi). Il superamento comporta risoluzione immediata senza rimborso.\n\n2. Feste, Rumori & Orari di Silenzio\nVietati feste, eventi o riunioni.\nSilenzio obbligatorio 7:00-22:00.\nViolazioni possono portare a sfratto immediato senza rimborso.\n\n3. Animali\nAnimali non ammessi, salvo autorizzazione scritta. Inosservanza causa risoluzione del contratto.\n\n4. Uso della Proprietà\nIl locatario si impegna a:\nUsare la villa in modo tranquillo e solo per vacanze.\nRispettare regolamento, strutture e vicini.\n\n5. Accesso & Sicurezza\nChiavi/badge devono essere restituiti alla partenza.\nSmarriti? Costo a carico del locatario.\nChiudere porte, cancelli e allarmi quando si esce.\n\n6. Pulizia & Stato\nLa villa è consegnata pulita e perfetta. Deve essere restituita allo stesso stato. Spese extra per pulizie straordinarie.\n\n7. Diritti d'Immagine\nFoto/video della villa sono proprietà esclusiva di SAS ALPHA GROUP. Riproduzione non autorizzata vietata (azioni legali possibili).\n\n8. Videosorveglianza\nAlcune aree esterne possono essere videosorvegliate (legge consentita). Nessuna camera negli spazi privati.\n\n9. Responsabilità & Assicurazione\nIl locatario è responsabile di danni o perdite.\nConsigliata assicurazione vacanze (copre responsabilità civile).\n\n10. Accettazione\nLa firma del contratto implica accettazione:\nDi queste condizioni,\nDei Termini di Vendita,\nE del Regolamento Interno."
+    "title": "Termini e condizioni",
+    "content": "Termini e condizioni - Villa Le Stelle della Roccia\nL'affitto della villa Le Stelle della Roccia, proprietà della società SAS ALPHA GROUP, è soggetto alle presenti condizioni generali, che il locatario accetta integralmente e senza riserve al momento della firma del contratto di locazione.\n\n1. Capacità di accoglienza\nLa villa è prevista per un massimo di 10 persone (bambini compresi). È severamente vietato superare questa capacità, pena l'immediata risoluzione del soggiorno, senza rimborso.\n\n2. Feste, rumori e tranquillità\nÈ severamente vietato organizzare feste, serate o eventi nella villa.\nNessun disturbo sonoro è tollerato tra le 7:00 e le 22:00 per rispettare la tranquillità del vicinato.\nOgni violazione di questa regola potrà comportare l'intervento delle forze dell'ordine e l'immediata espulsione del locatario senza rimborso.\n\n3. Animali\nGli animali non sono ammessi nella proprietà, senza eccezioni, salvo autorizzazione scritta preventiva di SAS ALPHA GROUP. Ogni violazione comporterà l'immediata risoluzione del contratto, a esclusiva responsabilità del locatario.\n\n4. Uso dei locali\nIl locatario si impegna a utilizzare la villa in modo pacifico, esclusivamente per uso vacanza. Si impegna a rispettare il regolamento interno, i locali, le attrezzature e il vicinato.\n\n5. Accesso e sicurezza\nLe chiavi, badge e mezzi di accesso forniti sono strettamente personali e devono essere restituiti alla partenza. Ogni perdita comporterà l'addebito della sostituzione. Il locatario è tenuto a chiudere porte, cancelli e allarmi quando lascia la villa.\n\n6. Pulizia e stato dei locali\nLa villa viene consegnata pulita e in perfetto stato. Il locatario dovrà restituirla in condizioni simili. Potranno essere applicati costi aggiuntivi per le pulizie in caso di mancato rispetto.\n\n7. Diritti all'immagine e proprietà intellettuale\nTutte le foto, video, planimetrie e immagini diffuse che rappresentano la villa Le Stelle della Roccia sono proprietà esclusiva di SAS ALPHA GROUP.\nNon sono né liberi da diritti, né riutilizzabili, né sfruttabili senza autorizzazione scritta preventiva. Ogni violazione sarà oggetto di azioni legali civili e/o penali.\n\n8. Sorveglianza e sicurezza dei locali\nPer motivi di sicurezza, alcuni accessi esterni possono essere sottoposti a videosorveglianza, conformemente alla legislazione vigente. Nessuna telecamera è installata negli spazi privati o interni.\n\n9. Responsabilità e assicurazione\nIl locatario è responsabile dei danni, perdite o degrado causati alla villa o alle sue attrezzature.\nSi raccomanda vivamente di sottoscrivere un'assicurazione vacanze che copra la responsabilità civile locativa.\n\n10. Accettazione\nLa firma del contratto di locazione vale come accettazione integrale delle presenti condizioni generali, delle condizioni generali di vendita, nonché del regolamento interno."
   },
   "sales": {
     "title": "Condizioni Generali di Vendita",
-    "content": "Condizioni Generali di Vendita\n1. Prenotazione\nLa prenotazione della villa Les Étoiles du Rocher, di proprietà di SAS ALPHA GROUP, è considerata confermata solo dopo:\nRicezione di un acconto del 50% dell'importo totale,\nFirma di un contratto di locazione per ogni prenotazione.\nIl contratto deve essere firmato da entrambe le parti prima dell'accesso.\nIl saldo deve essere pagato entro 60 giorni prima dell'arrivo. Il mancato pagamento comporta la cancellazione senza rimborso dell'acconto.\n\n2. Cauzione\nÈ richiesta una cauzione di €5.000 all'arrivo, rimborsabile entro 15 giorni dalla partenza, dedotti eventuali danni o costi aggiuntivi.\n\n3. Cancellazione\nOltre 90 giorni prima: rimborso del 70% dell'acconto,\nTra 90 e 60 giorni: rimborso del 50%,\nTra 60 e 30 giorni: nessun rimborso,\nMeno di 30 giorni: addebito dell'intero importo.\nNon è previsto diritto di recesso.\n\n4. Arrivo & Partenza\nCheck-in: Dalle 16:00,\nCheck-out: Entro le 10:00.\nRitardi non autorizzati saranno addebitati.\n\n5. Capacità & Utilizzo\nOspiti massimi: 10 persone (bambini inclusi).\nVietati: feste, eventi o ricevimenti.\nSilenzio obbligatorio 7:00-22:00.\nAnimali non ammessi (salvo autorizzazione scritta).\nIl mancato rispetto può causare risoluzione immediata senza rimborso.\n\n6. Regolamento Interno\nL'ospite deve rispettare il regolamento. Violazioni gravi (danni, rumori) comportano perdita della cauzione e azioni legali.\n\n7. Servizi Aggiuntivi\nServizi extra (chef, maggiordomo) vanno prenotati 15 giorni prima. Modifiche/annullamenti richiedono 7 giorni di preavviso, altrimenti sono dovuti.\n\n8. Diritti d'Immagine\nFoto/video della villa sono proprietà esclusiva di SAS ALPHA GROUP. Riproduzione non autorizzata vietata.\n\n9. Responsabilità\nL'ospite è responsabile dei danni. Assicurazione obbligatoria (può essere richiesta).\n\n10. Controversie\nIn caso di dispute, si cercherà un accordo amichevole. Altrimenti, competenti i tribunali locali."
-  },
-  "footer": {
-    "terms": "Termini generali",
-    "sales": "Termini generali di vendita",
-    "rights": "Tutti i diritti riservati"
+    "content": "Condizioni Generali di Vendita - Le Stelle della Roccia\n1. Prenotazione\nLa prenotazione della villa Le Stelle della Roccia, proprietà della società SAS ALPHA GROUP, è considerata ferma e definitiva solo dopo:\nla ricezione di un acconto del 50% dell'importo totale del soggiorno,\ne la firma di un contratto di locazione, stabilito per ogni prenotazione.\nIl contratto di locazione è obbligatoriamente redatto e firmato da entrambe le parti prima di qualsiasi ingresso nei locali.\nIl saldo del soggiorno dovrà essere pagato integralmente entro e non oltre 60 giorni prima della data di arrivo. In caso di mancato pagamento a questa scadenza, la prenotazione potrà essere annullata di diritto senza rimborso dell'acconto.\n\n2. Deposito cauzionale\nÈ richiesto un deposito cauzionale di 5.000 € all'arrivo. Sarà restituito entro un massimo di 15 giorni dopo la partenza, dedotti eventuali danni, violazioni del regolamento o costi aggiuntivi.\n\n3. Annullamento\nOgni annullamento da parte del cliente comporta le seguenti condizioni:\nPiù di 90 giorni prima dell'arrivo: rimborso del 70% dell'acconto versato,\nTra 90 e 60 giorni: rimborso del 50% dell'acconto,\nTra 60 e 30 giorni: nessun rimborso dell'acconto,\nMeno di 30 giorni prima dell'arrivo: nessun rimborso, l'importo totale del soggiorno resta dovuto.\nNon esiste diritto di recesso.\n\n4. Arrivo e partenza\nArrivo: a partire dalle 16:00,\nPartenza: entro le 10:00.\nOgni superamento dell'orario non autorizzato per iscritto comporterà un addebito aggiuntivo.\n\n5. Capacità e uso\nNumero massimo di persone autorizzate: 10 persone, bambini compresi.\nÈ severamente vietato organizzare feste, eventi o ricevimenti nella villa.\nNessun disturbo sonoro è tollerato tra le 7:00 e le 22:00.\nGli animali non sono accettati, salvo accordo scritto preventivo.\nOgni violazione di queste regole potrà comportare l'immediata risoluzione del contratto a esclusiva responsabilità del cliente, senza possibilità di rimborso.\n\n6. Regolamento interno\nIl cliente si impegna a rispettare il regolamento interno consegnato all'arrivo. Questo documento è parte integrante del contratto. Ogni violazione grave (danni, mancato rispetto del vicinato, mancato rispetto dei divieti) comporterà la perdita del deposito cauzionale e potrà dar luogo a procedimenti legali.\n\n7. Servizi aggiuntivi\nI servizi aggiuntivi (chef privato, maggiordomo, concierge, ecc.) devono essere prenotati almeno 15 giorni prima dell'arrivo. Ogni modifica o annullamento di questi servizi deve essere effettuato almeno 7 giorni prima; in caso contrario, l'importo resta dovuto.\n\n8. Diritti d'immagine e proprietà intellettuale\nTutte le fotografie, video e immagini che rappresentano la villa Le Stelle della Roccia sono proprietà esclusiva di SAS ALPHA GROUP.\nOgni riproduzione, pubblicazione o utilizzo senza autorizzazione scritta preventiva è severamente vietato.\n\n9. Responsabilità\nIl cliente è responsabile dei danni causati da sé stesso o dai suoi accompagnatori. È tenuto a sottoscrivere un'assicurazione vacanze. Un'attestazione potrà essere richiesta all'arrivo.\n\n10. Controversie\nIn caso di controversia, le parti cercheranno una soluzione amichevole. In mancanza, i tribunali competenti sono quelli del luogo dove si trova la villa."
   },
   "snakeRectangle": {
     "villa": {
@@ -882,21 +568,246 @@
       "line1": "Goditi la nostra posizione"
     },
     "villaException": {
-      "line1": "Un'esperienza unica"
+      "line1": "Un'esperienza eccezionale tra mare e cielo"
     }
   },
   "luxuryText": {
     "villa": {
-      "line1": "L'esperienza tra cielo e mare"
+      "line1": "L'esperienza cielo e mare"
     },
     "contact": {
-      "line1": "Il tuo soggiorno d'eccezione ti aspetta"
+      "line1": "Il tuo soggiorno eccezionale ti aspetta"
     },
     "gallery": {
-      "line1": "Scopri la nostra villa d'eccezione"
+      "line1": "Scopri la nostra villa eccezionale"
     },
     "discover": {
       "line1": "Una posizione privilegiata sulla Costa Azzurra"
     }
+  },
+  "galleryOverlay": {
+    "gallery": {
+      "title": "La nostra Galleria",
+      "subtitle": "Scopri l'eleganza e il lusso delle Stelle della Roccia"
+    }
+  },
+  "discoverOverlay": {
+    "discover": {
+      "title": "Esplora la Costa Azzurra",
+      "subtitle": "Scopri i tesori nascosti e i luoghi eccezionali dalla tua villa di lusso",
+      "tagline": "Monaco & Cap Martin",
+      "exploreButton": "Scopri i segreti"
+    }
+  },
+  "surroundings": {
+    "title": "Nei dintorni",
+    "description": "Esplora tesori vicini, selezionati per il loro carattere e discrezione.",
+    "monaco": {
+      "title": "Monaco & Mentone",
+      "description": "Giardini pensili, musei intimi, indirizzi riservati."
+    },
+    "italy": {
+      "title": "Fuga in Italia",
+      "description": "Mercati di Ventimiglia, sapori liguri, dolce vita a portata di mano."
+    },
+    "trails": {
+      "title": "Sentieri segreti della Costa Azzurra",
+      "description": "Borghi arroccati, calette silenziose, panorami preservati."
+    },
+    "guide": "Saremo le tue guide per comporre un soggiorno secondo i tuoi desideri più raffinati."
+  },
+  "stats": {
+    "experience": "Anni di esperienza: 10+",
+    "satisfaction": "Clienti soddisfatti: 100%",
+    "support": "Supporto dedicato: 24 ore su 24, 7 giorni su 7"
+  },
+  "villa": {
+    "hero": {
+      "title": "Orizzonte mediterraneo",
+      "description": "Sospesa tra cielo e mare, la Villa Le Stelle della Roccia ti invita a gustare la dolcezza della Costa Azzurra, un rifugio arroccato di fronte all'azzurro infinito.",
+      "bookNow": "Prenota ora",
+      "discoverMore": "Scopri di più",
+      "scrollDown": "Scopri di più",
+      "scrollText": "Scopri di più",
+      "experienceTitle": "L'esperienza",
+      "experienceSubtitle": "cielo e mare",
+      "subtitle": "Lasciati incantare dall'oro dei raggi mattutini, dal canto discreto dei pini e dall'orizzonte infinito del Mediterraneo.",
+      "ctaButton": "Prenota ora"
+    },
+    "spaces": {
+      "title": "Spazi progettati per ispirare",
+      "description": "Ogni stanza delle Stelle della Roccia è stata pensata per unire comfort raffinato, linee delicate e momenti memorabili.",
+      "subtitle": "Ogni spazio delle Stelle della Roccia è stato progettato per unire comfort sottile, linee delicate e momenti memorabili.",
+      "living": {
+        "title": "Salone immerso nella luce",
+        "description": "Vasta apertura sul Mediterraneo.",
+        "alt": "Salone spazioso con vista panoramica"
+      },
+      "pool": {
+        "title": "Piscina privata",
+        "description": "Specchio d'acqua prolungato dall'orizzonte.",
+        "alt": "Piscina a sfioro con vista sul mare"
+      },
+      "suites": {
+        "title": "Cinque suite",
+        "description": "Ritiri intimi, inondati di luce naturale.",
+        "alt": "Suite di lusso con vista panoramica"
+      }
+    },
+    "features": {
+      "privacy": {
+        "title": "Intimità preservata",
+        "description": "Volumi generosi e viste incorniciate garantiscono la tua quiete invitando al contempo il paesaggio all'interno."
+      },
+      "harmony": {
+        "title": "Armonia dei materiali",
+        "description": "Linee essenziali, finiture scelte e materiali nobili si combinano per un'atmosfera calda e contemporanea."
+      },
+      "wellness": {
+        "title": "Benessere raffinato",
+        "description": "Ogni dettaglio - biancheria da letto, illuminazione, texture - è orchestrato per una quiete assoluta, discreta e senza compromessi."
+      },
+      "artOfLiving": "L'arte di vivere si disegna in questi luoghi dove ogni sguardo incrocia un tratto di attenzione dedicato al tuo piacere.",
+      "signature": "LE STELLE DELLA ROCCIA"
+    },
+    "location": {
+      "title": "Riviera francese: un sito privilegiato",
+      "description": "Arroccata tra Monaco e Mentone, la villa gode di una cornice rara, che unisce giardino mediterraneo privato e accesso rapido ai tesori della Costa Azzurra.",
+      "distances": {
+        "title": "Distanze",
+        "monaco": {
+          "name": "Monaco",
+          "time": "10 min"
+        },
+        "nice": {
+          "name": "Nizza",
+          "time": "30 min"
+        },
+        "airport": {
+          "name": "Aeroporto Nizza Costa Azzurra",
+          "time": "35 min"
+        },
+        "cannes": {
+          "name": "Cannes",
+          "time": "50 min"
+        }
+      },
+      "nearby": {
+        "title": "Da scoprire a due passi",
+        "beaches": {
+          "name": "Spiagge segrete",
+          "time": "5 min"
+        },
+        "golf": {
+          "name": "Percorso di golf",
+          "time": "15 min"
+        },
+        "italy": {
+          "name": "Confine italiano",
+          "time": "15 min"
+        },
+        "saintTropez": {
+          "name": "Saint-Tropez",
+          "time": "1 h 30"
+        }
+      },
+      "exploreButton": "Esplora i dintorni",
+      "features": {
+        "panoramic": {
+          "title": "Vista panoramica",
+          "alt": "Vista panoramica sul Mediterraneo"
+        },
+        "gardens": {
+          "title": "Giardini",
+          "alt": "Giardini mediterranei"
+        },
+        "terraces": {
+          "title": "Terrazze",
+          "alt": "Terrazza con vista"
+        }
+      },
+      "region": "Costa Azzurra"
+    },
+    "services": {
+      "title": "PERSONALIZZAZIONE & SERVIZI SU MISURA",
+      "description": "Il tuo soggiorno si compone secondo i tuoi desideri: accoglienza discreta, concierge 24 ore su 24, chef privato, fughe riservate... Ogni momento si scrive su misura per te.",
+      "welcome": "Accoglienza personalizzata e check-in privato",
+      "concierge": "Concierge disponibile giorno e notte",
+      "chef": "Chef in residenza e servizio in camera",
+      "excursions": "Escursioni esclusive, fuori dai sentieri battuti",
+      "customizeButton": "Personalizza il mio soggiorno",
+      "customization": "Personalizzazione",
+      "excellence": {
+        "title": "L'eccellenza al tuo servizio",
+        "description": "Il nostro team eccezionale anticipa i tuoi desideri con un'intuizione sottile. Dagli eventi privati alle prenotazioni negli stabilimenti più ricercati, ci occupiamo dell'organizzazione perfetta di ogni momento del tuo soggiorno."
+      }
+    },
+    "property": {
+      "title": "CARATTERISTICHE DELLA PROPRIETÀ",
+      "location": {
+        "title": "Posizione",
+        "monaco": "A 10 minuti dal centro di Monaco",
+        "airport": "A 30 minuti dall'aeroporto di Nizza",
+        "cannes": "A 45 minuti da Cannes",
+        "italy": "A 15 minuti dall'Italia"
+      },
+      "livingSpace": {
+        "title": "Spazi abitativi",
+        "livingRoom": "Salone panoramico di 150 m²",
+        "diningRoom": "Sala da pranzo con vista sul mare",
+        "bar": "Bar e salone di ricevimento",
+        "kitchen": "Cucina Gaggenau su misura"
+      },
+      "suites": {
+        "title": "Suite",
+        "count": "5 suite con bagni privati",
+        "terraces": "Terrazze individuali",
+        "bedding": "Biancheria da letto Hästens su misura",
+        "dressing": "Guardaroba in legno pregiato"
+      },
+      "exterior": {
+        "title": "Esterni",
+        "pool": "Piscina a sfioro riscaldata (15 × 6 m)",
+        "poolhouse": "Pool house con cucina estiva",
+        "garden": "Giardino mediterraneo paesaggistico",
+        "terraces": "Terrazze in pietra naturale"
+      },
+      "technical": {
+        "title": "Eccellenza tecnica & comfort",
+        "description": "Le ultime innovazioni, pensate per scomparire, ti offrono una cornice rilassante: domotica integrata, climatizzazione invisibile, isolamento acustico, sicurezza 24 ore su 24 e wi-fi ultraveloce.",
+        "category": "Eccellenza tecnica"
+      },
+      "capacity": {
+        "people": "Fino a 10 persone",
+        "pool": "Piscina 15 m × 6 m",
+        "parking": "8 posti auto",
+        "automation": "Domotica completa",
+        "security": "Sicurezza permanente",
+        "wifi": "Wi-Fi ultraveloce"
+      },
+      "allEquipments": "Vedi tutte le nostre attrezzature"
+    },
+    "experience": {
+      "title": "ESPERIENZA FIRMA: PERCHÉ LE STELLE DELLA ROCCIA",
+      "description": "Oltre a un semplice soggiorno, questa dimora è una promessa di evasione dove ogni materiale, ogni prospettiva e ogni servizio uniscono i loro talenti per rivelare la quintessenza della dolcezza di vivere mediterranea.",
+      "commitment": {
+        "title": "Il nostro impegno",
+        "quote": "\"Offrire ai nostri ospiti momenti autentici, dove l'arte di ricevere si mescola alla discrezione più delicata.\""
+      },
+      "exceptional": {
+        "title": "Una proprietà eccezionale",
+        "description": "Un gioiello architettonico recentemente eretto, che offre da ogni spazio un panorama mozzafiato, in uno scrigno di assoluta tranquillità."
+      },
+      "harmony": {
+        "title": "Armonia & autenticità",
+        "description": "Una sinfonia di materiali nobili, tecnologie silenziose e allestimenti curati, al servizio di un'esperienza sensoriale tutta in sottigliezza."
+      },
+      "service": {
+        "title": "Un servizio attento",
+        "description": "Un team dedicato, che anticipa i tuoi desideri per comporre momenti su misura, all'immagine delle tue aspirazioni più delicate."
+      },
+      "bookButton": "Prenota la tua esperienza",
+      "category": "Esperienza unica"
+    }
   }
-} 
+}

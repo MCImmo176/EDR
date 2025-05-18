@@ -11,16 +11,16 @@
     "contactUs": "Contact us",
     "learnMore": "Learn more",
     "reserve": "Reserve",
-    "villaName": "Les Étoiles du Rocher",
+    "villaName": "The Stars of the Rock",
     "footer": {
       "terms": "Terms of use",
-      "sales": "Terms of sale",
+      "sales": "Sales conditions",
       "gallery": "Gallery",
       "discover": "Discover",
-    "villaName": "Les Étoiles du Rocher"
+      "villaName": "The Stars of the Rock"
     },
     "labels": {
-      "room": "Room",
+      "room": "Bedroom",
       "interior": "Interior",
       "exterior": "Exterior",
       "phone": "Phone",
@@ -34,44 +34,27 @@
   },
   "nav": {
     "home": "Home",
-    "villa": "Our Villa",
+    "villa": "Our villa",
     "gallery": "Gallery",
     "discover": "Discover",
     "contact": "Contact"
   },
-  "snakeRectangle": {
-    "villa": {
-      "line1": "Your villa awaits you"
-    },
-    "contact": {
-      "line1": "Contact us for your stay"
-    },
-    "gallery": {
-      "line1": "Explore the villa gallery"
-    },
-    "discover": {
-      "line1": "Enjoy our location"
-    },
-    "villaException": {
-      "line1": "A unique experience"
-    }
-  },
   "home": {
-    "title": "Les Étoiles du Rocher",
+    "title": "The Stars of the Rock",
     "subtitle": "Your haven of peace on the French Riviera",
     "booking": {
       "title": "Book your exceptional stay"
     },
     "content": {
-      "quote": "« There are places where the spirit breathes. »",
+      "quote": "The beauty of a place is revealed in the caress of light, the silence it inhabits, and the emotion it evokes.",
       "quoteAuthor": "— Maurice Barrès",
-      "description1": "Picture a place where luxury meets authenticity, where every detail has been crafted for your comfort. Our estate, nestled just 5 minutes from Monaco, offers you the perfect balance between absolute tranquility and privileged access to the most beautiful beaches, luxury boutiques, and events on the French Riviera.",
-      "description2": "Immerse yourself in a 350 m² universe spread over two floors, where five private suites welcome you with exceptional bedding. A discreet guesthouse, nestled in Mediterranean vegetation, awaits to host your guests in an idyllic setting.",
-      "description3": "Let yourself be seduced by our infinity pool that blends into the marine horizon, and discover our rooftop offering a breathtaking panorama of Monaco and the Mediterranean.",
-      "description4": "Between intimacy, elegance, and the art of living, our estate is the perfect setting for an unforgettable getaway on the Riviera."
+      "description1": "Imagine a place where luxury meets authenticity, where every detail has been designed for your well-being. Our estate, nestled just 5 minutes from Monaco, offers the perfect balance between absolute tranquility and privileged access to the most beautiful beaches, prestigious boutiques, and events on the French Riviera.",
+      "description2": "Immerse yourself in a 350 m² space spread over two floors, where five private suites welcome you with exceptional bedding. A discreet guesthouse, nestled in Mediterranean vegetation, is available to accommodate your guests in an idyllic setting.",
+      "description3": "Be charmed by our infinity pool blending into the marine horizon, and discover our rooftop offering a breathtaking panorama of Monaco and the Mediterranean.",
+      "description4": "Between intimacy, elegance, and art of living, our estate is the perfect setting for an unforgettable getaway on the Riviera."
     },
     "slogan": {
-      "title": "LIVE THE EXCEPTION",
+      "title": "LIVE THE EXCEPTIONAL",
       "subtitle": "Enjoy Monaco, without its constraints."
     },
     "excellence": {
@@ -89,58 +72,263 @@
         "masterDesc": "A haven of peace with sea view",
         "bathroom": "Bathroom",
         "bathroomDesc": "A private spa space with corner bathtub",
-        "pool": "Swimming pool",
+        "pool": "Pool",
         "poolDesc": "An infinity pool with panoramic view",
         "exterior": "Exterior view",
         "exteriorDesc": "An exceptional setting between sky and sea",
         "night": "Night view",
-        "nightDesc": "A magical atmosphere under the stars"
+        "nightDesc": "A magical ambiance under the stars"
       }
     },
     "description": "Discover an exceptional place where luxury and authenticity meet to create unforgettable moments.",
     "hero": {
-      "title": "Les Étoiles du Rocher",
-      "subtitle": "Let yourself be enchanted by the golden morning rays, the discreet song of pine trees, and the endless horizon of the Mediterranean."
+      "title": "The Stars of the Rock",
+      "subtitle": "Let yourself be enchanted by the golden morning rays, the discreet song of the pines, and the infinite horizon of the Mediterranean.",
+      "ctaButton": "Book now",
+      "scrollText": "Discover more"
     },
     "cta": {
       "bookStay": "Book your stay",
       "discoverVilla": "Discover the villa",
       "mediterranean": "The Mediterranean art of living",
-      "planPrivateVisit": "Plan a private visit",
+      "planPrivateVisit": "Schedule a private visit",
       "exploreFrontier": "Cross the border",
       "discoverSecrets": "Our secret spots"
     },
-    "quote": "The beauty of a place reveals itself in the caress of light, the silence that inhabits it, and the emotion it evokes.",
+    "quote": "The beauty of a place is revealed in the caress of light, the silence it inhabits, and the emotion it evokes.",
     "villa": {
-      "title": "The Villa Les Étoiles du Rocher",
-      "description": "A jewel set facing the sea, where every detail invites contemplation. Upon waking, the whisper of waves and the azure view will compose your first memory of the day. The refined volumes, open to the exterior, offer a subtle sensory experience, combining sophistication and Riviera authenticity."
+      "title": "The Stars of the Rock Villa",
+      "description": "A jewel facing the sea, where every detail invites contemplation. Upon waking, the murmur of the waves and the azure view will compose your first memory of the day. The clean volumes, open to the outside, offer a subtle sensory experience, combining refinement and authentic Riviera charm.",
+      "features": {
+        "title": "Rent an exceptional villa 10 minutes from Monaco with an breathtaking sea view",
+        "subtitle": "Recently completed at the beginning of the year, this luxury villa, never rented before, is ready to offer you unforgettable moments, with family or friends.",
+        "location": {
+          "title": "📍 Ideal location",
+          "items": {
+            "monaco": "Just 10 minutes from the center of Monaco",
+            "airport": "30 minutes from Nice airport",
+            "cannes": "45 minutes from Cannes",
+            "italy": "And 15 minutes from Italy"
+          }
+        },
+        "interior": {
+          "title": "Inside",
+          "items": {
+            "living": "An elegant living room with sea view",
+            "dining": "A bright dining room",
+            "bar": "A refined bar",
+            "tv": "A TV area",
+            "kitchen": "A fully equipped kitchen with high-end appliances"
+          }
+        },
+        "bedrooms": {
+          "title": "Sleeping area",
+          "items": {
+            "total": "5 luxurious bedrooms with hotel bedding and mattress toppers",
+            "sea": "4 bedrooms with sea view and private terraces",
+            "pine": "1 peaceful bedroom overlooking a pine forest",
+            "bedding": "All equipped with safe, Nespresso coffee machine, kettle, and minibar",
+            "amenities": "5 bathrooms equipped with wellness kits and hair dryers"
+          }
+        },
+        "services": {
+          "title": "Included services",
+          "items": {
+            "bathrooms": "5 equipped bathrooms",
+            "wc": "6 toilets including 1 guest toilet upstairs",
+            "wellness": "Complete wellness kits",
+            "wifi": "High-speed WiFi",
+            "safe": "Safe in each bedroom"
+          }
+        },
+        "panoramicView": "Panoramic view of the Mediterranean",
+        "infinityPool": "Infinity pool",
+        "garden": "Garden with Mediterranean essences",
+        "services": "Tailor-made services"
+      },
+      "additionalServices": {
+        "title": "Available extras",
+        "subtitle": "Customize your stay with our tailor-made services",
+        "chef": {
+          "title": "Private chef",
+          "description": "Enjoy the services of a private chef for exceptional meals"
+        },
+        "valet": {
+          "title": "Valet service",
+          "description": "Transport and management of your vehicles with complete peace of mind"
+        },
+        "cleaning": {
+          "title": "Housekeeping",
+          "description": "Daily cleaning service on request"
+        }
+      },
+      "bookNow": "Book your stay",
+      "images": {
+        "pool": {
+          "alt": "Villa's private pool with sea view"
+        }
+      },
+      "whyChooseUs": {
+        "title": "Why choose this villa?",
+        "description": "It's a true rare gem, brand new and ready to enhance your stay. Whether for a relaxing vacation or a luxurious getaway, you'll be won over by its high-end amenities and unique location.",
+        "features": {
+          "pool": "Private pool with breathtaking view",
+          "parking": "Private parking for 8 cars",
+          "wifi": "High-speed WiFi",
+          "capacity": "Up to 10 people"
+        }
+      },
+      "kitchen": {
+        "images": {
+          "alt": "Villa's kitchen with modern appliances"
+        },
+        "noPoints": "Click on one of the points to see specific details of this part of the kitchen.",
+        "cabinets": {
+          "title": "Upper and lower cabinets",
+          "description": "Optimized storage for perfect organization"
+        },
+        "appliances": {
+          "title": "Appliances",
+          "description": "High-end appliances for professional cooking"
+        },
+        "island": {
+          "title": "Central island",
+          "description": "A convivial space to prepare and share"
+        },
+        "storage": {
+          "title": "Storage",
+          "description": "Smart and functional storage spaces"
+        }
+      },
+      "spaces": {
+        "title": "Spaces designed to inspire",
+        "description": "Every room at The Stars of the Rock has been designed to combine subtle comfort, delicate lines, and memorable moments.",
+        "subtitle": "Every space at The Stars of the Rock has been conceived to combine subtle comfort, delicate lines, and memorable moments.",
+        "living": {
+          "title": "Sunlit living room",
+          "description": "Vast opening onto the Mediterranean.",
+          "alt": "Spacious living room with panoramic view"
+        },
+        "living2": {
+          "title": "Open and bright living room",
+          "description": "A vast living space bathed in light, ideal for relaxing or entertaining",
+          "alt": "Large bright living room, perfect for relaxation and reception"
+        },
+        "pool": {
+          "title": "Private pool",
+          "description": "Enjoy a swim facing the sea",
+          "alt": "Private pool with sea view"
+        },
+        "suites": {
+          "title": "5 private suites",
+          "description": "Each bedroom has its own bathroom, opens to the outside, and enjoys abundant natural light",
+          "alt": "Five private suites with bathrooms and natural light"
+        }
+      },
+      "livingSpaces": {
+        "title": "TAILOR-MADE LIVING SPACES",
+        "description1": "Discover an ideal living space for entertaining or spending time with family.",
+        "description2": "The villas have been meticulously designed to bring to life intelligent, functional, and harmonious spaces.",
+        "description3": "The villa interiors are designed to preserve your privacy while offering beautiful openings to outdoor spaces.",
+        "description4": "Each of the 5 suites offers spacious and perfectly arranged indoor and outdoor living spaces."
+      },
+      "practicalInfo": {
+        "title": "Practical information",
+        "subtitle": "Everything you need to know to fully enjoy your stay at The Stars of the Rock",
+        "location": {
+          "title": "Location",
+          "description": "Ideally located in Roquebrune Cap Martin, just minutes from Monaco and the most beautiful beaches of the French Riviera"
+        },
+        "availability": {
+          "title": "Availability",
+          "description": "The villa is available for rent year-round, with a minimum stay of one week"
+        },
+        "equipment": {
+          "title": "Equipment",
+          "description": "High-end amenities and personalized services for an exceptional stay"
+        },
+        "security": {
+          "title": "Security",
+          "description": "Fully secured property with alarm system, video surveillance, and security service on request"
+        }
+      },
+      "houseRules": {
+        "checkin": {
+          "title": "Check-in & Check-out",
+          "description": "Arrival from 4:00 PM and departure by 10:00 AM at the latest. A personalized welcome will be arranged for you"
+        },
+        "access": {
+          "title": "Access & Security",
+          "description": "The villa is equipped with a state-of-the-art security system. Access codes will be provided upon your arrival"
+        },
+        "quiet": {
+          "title": "Quiet hours",
+          "description": "Out of respect for the neighborhood, we ask you to maintain a reasonable noise level, especially after 10:00 PM"
+        }
+      },
+      "distances": {
+        "monaco": "Monaco",
+        "nice": "Nice",
+        "cannes": "Cannes",
+        "saintTropez": "Saint-Tropez",
+        "airport": "Nice Airport",
+        "beach": "Beach"
+      },
+      "images": {
+        "exterior": {
+          "alt": "Villa exterior with pool and sea view"
+        },
+        "living": {
+          "alt": "Luxury living room with glass doors"
+        },
+        "bedroom": {
+          "alt": "Master bedroom with sea view"
+        }
+      },
+      "rooms": {
+        "master": {
+          "title": "Master Suite",
+          "description": "A spacious master suite with panoramic sea view, marble bathroom, and walk-in closet.",
+          "alt": "Master suite"
+        },
+        "main": {
+          "title": "Main Living Room",
+          "description": "An elegant living room with glass doors offering an incomparable view of the Mediterranean.",
+          "alt": "Main living room"
+        },
+        "terrace": {
+          "title": "Terrace & Pool",
+          "description": "A vast terrace with infinity pool and relaxation area with sea view.",
+          "alt": "Terrace with infinity pool"
+        },
+        "gourmet": {
+          "title": "Gourmet Kitchen",
+          "description": "A fully equipped kitchen with central island and high-end appliances.",
+          "alt": "Gourmet kitchen"
+        }
+      },
+      "actionButton": "Discover the villa",
+      "scrollText": "Discover more"
     },
-    "features": {
-      "panoramicView": "Panoramic view of the Mediterranean",
-      "infinityPool": "Infinity pool",
-      "garden": "Mediterranean garden",
-      "services": "Tailored services"
-    },
-    "actionButton": "Discover the villa",
     "gallery": {
       "title": "Gallery",
-      "description": "Immerse yourself in the unique atmosphere of the spaces: light-bathed suites, a pool suspended above the sea, a rooftop with poetic accents...",
+      "description": "Immerse yourself in the unique atmosphere of the spaces: suites bathed in light, pool suspended above the sea, rooftop with poetic accents...",
       "mainSuite": {
-        "title": "Master Suite",
-        "description": "A serene parenthesis, bathed in clarity, with a view of the water and a private bathroom."
+        "title": "Master suite",
+        "description": "A serene haven, bathed in light, with water view and private bathroom."
       },
       "livingRoom": {
-        "title": "Living Room",
-        "description": "Open volume, large bay windows, and an infinite perspective on the azure."
+        "title": "Living room",
+        "description": "Open space, large bay windows, and infinite perspective on the azure."
       },
       "terrace": {
         "title": "Terrace",
-        "description": "A plateau in the open sky, designed for your moments of tranquility and outdoor dining."
+        "description": "A plateau in the open sky, arranged for your moments of tranquility and outdoor meals."
       },
-      "seeAll": "See the complete gallery",
+      "seeAll": "See full gallery",
       "categories": {
         "all": "All",
-        "room": "Room",
+        "room": "Bedroom",
         "interior": "Interior",
         "exterior": "Exterior",
         "view": "View"
@@ -155,17 +343,17 @@
       },
       "italy": {
         "title": "Escape to Italy",
-        "description": "Markets of Ventimiglia, Ligurian flavors, dolce vita within reach."
+        "description": "Ventimiglia markets, Ligurian flavors, dolce vita within reach."
       },
       "trails": {
-        "title": "Secret paths of the French Riviera",
-        "description": "Perched villages, quiet coves, preserved panoramas."
+        "title": "Secret trails of the French Riviera",
+        "description": "Perched villages, silent coves, preserved panoramas."
       },
       "guide": "We will be your guides to compose a stay according to your finest desires."
     },
     "contact": {
-      "title": "Contact & Reservation",
-      "description": "For any request or to organize your private visit, our team responds with discretion and promptness.",
+      "title": "Contact & Booking",
+      "description": "For any request or to organize your private visit, our team will respond with discretion and promptness.",
       "phone": "+33 6 46 25 77 56",
       "email": "contact@lesetoilesdurocher.fr",
       "address": "Roquebrune-Cap-Martin, French Riviera",
@@ -180,524 +368,17 @@
       "discover": "Discover",
       "contact": "Contact us",
       "seeMore": "See more",
-      "planVisit": "Plan a private visit",
+      "planVisit": "Schedule a private visit",
       "viewAll": "View all"
     },
     "discoverButton": "Discover the villa"
   },
-  "about": {
-    "title": "About us",
-    "description": "Our story and mission"
-  },
-  "villa": {
-    "title": "The Villa",
-    "description": "An exceptional residence",
-    "hero": {
-      "title": "Mediterranean horizon",
-      "description": "Suspended between sky and sea, Villa Les Étoiles du Rocher invites you to savor the sweetness of the French Riviera, a refuge perched facing the infinite azure.",
-      "bookNow": "Book now",
-      "discoverMore": "Discover more",
-      "scrollDown": "Discover more",
-      "ctaButton": "Book now",
-      "subtitle": "Let yourself be enchanted by the golden morning rays, the discreet song of pine trees, and the endless horizon of the Mediterranean.",
-      "experienceTitle": "The sky and sea",
-      "experienceSubtitle": "experience",
-      "videoTitle": "Villa video",
-      "scrollText": "Scroll down"
-    },
-    "spaces": {
-      "title": "Spaces Designed to Inspire",
-      "description": "Each room at Les Étoiles du Rocher has been designed to blend subtle comfort, delicate lines and memorable moments.",
-      "livingRoom": {
-        "title": "Light-bathed living room",
-        "description": "Vast opening onto the Mediterranean."
-      },
-      "pool": {
-        "title": "Private pool",
-        "description": "Water mirror extended by the horizon.",
-        "alt": "Infinity pool with sea view"
-      },
-      "suites": {
-        "title": "Five suites",
-        "description": "Intimate retreats, flooded with natural light.",
-        "alt": "Luxury suite with panoramic view"
-      },
-      "living": {
-        "title": "Light-bathed living room",
-        "description": "Vast opening onto the Mediterranean.",
-        "alt": "Spacious living room with panoramic view"
-      },
-      "subtitle": "Each room at Les Étoiles du Rocher has been designed to blend subtle comfort, delicate lines and memorable moments."
-    },
-    "features": {
-      "privacy": {
-        "title": "Preserved privacy",
-        "description": "Generous volumes and framed views guarantee your tranquility while inviting the landscape inside."
-      },
-      "harmony": {
-        "title": "Harmony of materials",
-        "description": "Clean lines, selected finishes, and noble materials combine for a warm and contemporary atmosphere."
-      },
-      "wellness": {
-        "title": "Refined well-being",
-        "description": "Every detail — bedding, lighting, textures — is orchestrated for absolute, discreet, and uncompromising tranquility."
-      },
-      "artOfLiving": "The art of living is drawn in these places where every glance crosses a line of attention dedicated to your pleasure.",
-      "signature": "LES ÉTOILES DU ROCHER",
-      "title": "Rent an exceptional villa 10 minutes from Monaco with breathtaking sea views",
-      "subtitle": "Freshly completed at the beginning of the year, this luxury villa, never rented before, is ready to offer you unforgettable moments, with family or friends.",
-      "location": {
-        "title": "📍 Ideal location",
-        "items": {
-          "monaco": "Just 10 minutes from Monaco center",
-          "airport": "30 minutes from Nice airport",
-          "cannes": "45 minutes from Cannes",
-          "italy": "And 15 minutes from Italy"
-        }
-      },
-      "interior": {
-        "title": "Interior",
-        "items": {
-          "living": "An elegant living room with sea view",
-          "dining": "A bright dining room",
-          "bar": "A refined bar",
-          "tv": "A TV corner",
-          "kitchen": "A fully equipped kitchen with high-end appliances"
-        }
-      },
-      "bedrooms": {
-        "title": "Bedrooms",
-        "items": {
-          "total": "5 luxurious bedrooms with hotel-quality bedding",
-          "sea": "4 bedrooms with sea view and private terraces",
-          "pine": "1 peaceful bedroom overlooking a pine forest",
-          "bedding": "All equipped with safe, Nespresso coffee maker, kettle and minibar",
-          "amenities": "5 bathrooms equipped with wellness packs and hair dryers"
-        }
-      },
-      "services": {
-        "title": "Included services",
-        "items": {
-          "bathrooms": "5 fully equipped bathrooms",
-          "wc": "6 toilets including 1 guest toilet upstairs",
-          "wellness": "Complete wellness packs",
-          "wifi": "High-speed WiFi",
-          "safe": "Safe in each bedroom"
-        }
-      },
-      "panoramicView": "Panoramic view of the Mediterranean",
-      "infinityPool": "Infinity pool",
-      "garden": "Mediterranean garden",
-      "services": "Tailored services"
-    },
-    "location": {
-      "title": "French Riviera: a privileged site",
-      "region": "French Riviera",
-      "description": "Perched between Monaco and Menton, the villa enjoys a rare setting, combining a private Mediterranean garden with quick access to the treasures of the French Riviera.",
-      "exploreButton": "Explore the surroundings",
-      "distances": {
-        "title": "Distances",
-        "monaco": {
-          "name": "Monaco",
-          "time": "10 min"
-        },
-        "nice": {
-          "name": "Nice",
-          "time": "30 min"
-        },
-        "airport": {
-          "name": "Nice Airport",
-          "time": "35 min"
-        },
-        "cannes": {
-          "name": "Cannes",
-          "time": "50 min"
-        }
-      },
-      "nearby": {
-        "title": "Discover nearby",
-        "beaches": {
-          "name": "Secret beaches",
-          "time": "5 min"
-        },
-        "golf": {
-          "name": "Golf course",
-          "time": "15 min"
-        },
-        "italy": {
-          "name": "Italian border",
-          "time": "15 min"
-        },
-        "saintTropez": {
-          "name": "Saint-Tropez",
-          "time": "1h30"
-        }
-      },
-      "features": {
-        "panoramic": {
-          "title": "Panoramic View",
-          "alt": "Panoramic view of the Mediterranean"
-        },
-        "gardens": {
-          "title": "Gardens",
-          "alt": "Mediterranean gardens"
-        },
-        "terraces": {
-          "title": "Terraces",
-          "alt": "Rooftop with view"
-        }
-      }
-    },
-    "services": {
-      "customization": "Customization",
-      "title": "Tailored services",
-      "description": "Your stay is composed according to your desires: discreet welcome, 24/7 concierge, private chef, confidential excursions... Each moment is written to your measure.",
-      "excellence": {
-        "title": "Excellence at your service",
-        "description": "Our exceptional team anticipates your wishes with subtle intuition. From private events to reservations at the most sought-after establishments, we take care of the perfect organization of each moment of your stay."
-      },
-      "welcome": "Personalized welcome and private check-in",
-      "concierge": "Concierge service available 24/7",
-      "chef": "Starred chef and room service",
-      "excursions": "Organization of confidential excursions",
-      "customizeButton": "Customize your experience"
-    },
-    "property": {
-      "title": "PROPERTY FEATURES",
-      "category": "Characteristics",
-      "location": {
-        "title": "Location",
-        "monaco": "10 min from Monaco center",
-        "airport": "30 min from Nice airport",
-        "cannes": "45 min from Cannes",
-        "italy": "15 min from Italy"
-      },
-      "livingSpace": {
-        "title": "Living spaces",
-        "livingRoom": "150m² panoramic living room",
-        "diningRoom": "Dining room with sea view",
-        "bar": "Bar and reception lounge",
-        "kitchen": "Custom Gaggenau kitchen"
-      },
-      "suites": {
-        "title": "Suites",
-        "count": "5 suites with private bathrooms",
-        "terraces": "Individual terraces with sea view",
-        "bedding": "Custom Hästens bedding",
-        "dressing": "Dressing rooms in precious wood"
-      },
-      "exterior": {
-        "title": "Exteriors",
-        "pool": "Heated infinity pool",
-        "poolhouse": "Pool house with summer kitchen",
-        "garden": "Landscaped Mediterranean garden",
-        "terraces": "Natural stone terraces"
-      },
-      "technical": {
-        "category": "Technical features",
-        "title": "Technical Excellence & Comfort",
-        "description": "The latest innovations, designed to disappear, offer you a soothing environment: integrated home automation, invisible air conditioning, acoustic insulation, 24/7 security and ultra-fast WiFi."
-      },
-      "capacity": {
-        "people": "Up to 10 people",
-        "pool": "Pool 15 m × 6 m",
-        "parking": "8 parking spaces",
-        "wifi": "Ultra-fast Wi-Fi",
-        "automation": "Complete home automation",
-        "security": "Permanent security"
-      },
-      "allEquipments": "Discover all our equipment"
-    },
-    "experience": {
-      "category": "Experience",
-      "title": "SIGNATURE EXPERIENCE: WHY LES ÉTOILES DU ROCHER",
-      "description": "Beyond a simple stay, this residence is a promise of escape where each material, each perspective and each service combine their talents to reveal the quintessence of the Mediterranean sweetness of life.",
-      "commitment": {
-        "title": "Our commitment",
-        "quote": "\"Offering our guests authentic moments, where the art of hospitality blends with the most delicate discretion.\""
-      },
-      "exceptional": {
-        "title": "An exceptional property",
-        "description": "A recently built architectural jewel, offering from each space a breathtaking panorama, in a setting of absolute tranquility."
-      },
-      "harmony": {
-        "title": "Harmony & authenticity",
-        "description": "A symphony of noble materials, silent technologies and meticulous arrangements, serving a sensory experience of subtle sophistication."
-      },
-      "service": {
-        "title": "Attentive service",
-        "description": "A dedicated team, anticipating your wishes to compose tailor-made moments, reflecting your most delicate aspirations."
-      },
-      "bookButton": "Book your experience"
-    },
-    "kitchen": {
-      "island": {
-        "title": "Central island",
-        "description": "Marble central island with integrated storage space and designer stools."
-      },
-      "appliances": {
-        "title": "High-end appliances",
-        "description": "Gaggenau equipment with integrated refrigerator, steam oven and induction cooktop."
-      },
-      "dining": {
-        "title": "Dining area",
-        "description": "Solid oak table that can accommodate up to 8 people."
-      }
-    },
-    "common": {
-      "gallery": "Gallery"
-    },
-    "livingSpaces": {
-      "title": "Discover our spaces",
-      "description1": "Each space at Les Étoiles du Rocher has been designed to offer you comfort, elegance and unforgettable moments.",
-      "description2": "Enjoy 350 m² spread over two floors, with five private suites featuring exceptional bedding.",
-      "description3": "A discreet guesthouse, nestled in Mediterranean vegetation, offers additional space for your guests.",
-      "description4": "Discover our infinity pool overlooking the sea and our rooftop offering an exceptional panorama of Monaco and the Mediterranean."
-    },
-    "practicalInfo": {
-      "title": "Practical Information",
-      "subtitle": "Everything you need to know for your stay",
-      "location": {
-        "title": "Location",
-        "description": "Located in Roquebrune Cap Martin, just 5 minutes from Monaco"
-      },
-      "availability": {
-        "title": "Availability",
-        "description": "Available for rent all year round"
-      },
-      "equipment": {
-        "title": "Equipment",
-        "description": "Fully equipped with high-end appliances and amenities"
-      },
-      "security": {
-        "title": "Security",
-        "description": "24/7 security and surveillance system"
-      }
-    },
-    "images": {
-      "exterior": {
-        "alt": "Villa exterior with pool and sea view"
-      },
-      "living": {
-        "alt": "Luxury living room with glass doors"
-      },
-      "bedroom": {
-        "alt": "Master bedroom with sea view"
-      },
-      "pool": {
-        "alt": "Private pool of the villa with sea view"
-      }
-    },
-    "rooms": {
-      "master": {
-        "title": "Master Suite",
-        "description": "A spacious master suite with panoramic sea view, marble bathroom and walk-in closet.",
-        "alt": "Master suite"
-      },
-      "main": {
-        "title": "Main Living Room",
-        "description": "An elegant living room with glass doors offering an incomparable view of the Mediterranean.",
-        "alt": "Main living room"
-      },
-      "terrace": {
-        "title": "Terrace & Pool",
-        "description": "A vast terrace with infinity pool and relaxation area with sea view.",
-        "alt": "Terrace with infinity pool"
-      },
-      "gourmet": {
-        "title": "Gourmet Kitchen",
-        "description": "A fully equipped kitchen with central island and high-end appliances.",
-        "alt": "Gourmet kitchen"
-      }
-    },
-    "additionalServices": {
-      "title": "Available extras",
-      "subtitle": "Customize your stay with our tailored services",
-      "chef": {
-        "title": "Private Chef",
-        "description": "Enjoy the services of a private chef for exceptional meals"
-      },
-      "valet": {
-        "title": "Valet Service",
-        "description": "Transport and management of your vehicles with peace of mind"
-      },
-      "cleaning": {
-        "title": "Cleaning Service",
-        "description": "Daily cleaning service upon request"
-      }
-    },
-    "bookNow": "Book your stay",
-    "whyChooseUs": {
-      "title": "Why choose this villa?",
-      "description": "It's a true rare gem, brand new and ready to enhance your stay. Whether for a relaxing vacation or a luxury getaway, you'll be won over by its high-end amenities and unique location.",
-      "features": {
-        "pool": "Private pool with breathtaking view",
-        "parking": "Private parking for 8 cars",
-        "wifi": "High-speed WiFi",
-        "capacity": "Up to 10 people"
-      }
-    },
-    "hero": {
-      "title": "Mediterranean Horizon",
-      "description": "Suspended between sky and sea, Les Étoiles du Rocher invites you to savor the sweetness of the French Riviera, a haven perched facing infinite azure.",
-      "bookNow": "Book Now",
-      "discoverMore": "Discover More",
-      "scrollDown": "Discover More"
-    },
-    "property": {
-      "title": "PROPERTY FEATURES",
-      "category": "Characteristics",
-      "location": {
-        "title": "Location",
-        "monaco": "10 min from Monaco center",
-        "airport": "30 min from Nice airport",
-        "cannes": "45 min from Cannes",
-        "italy": "15 min from Italy"
-      },
-      "livingSpace": {
-        "title": "Living Spaces",
-        "livingRoom": "150 m² panoramic living room",
-        "diningRoom": "Sea-facing dining room",
-        "bar": "Bar and reception lounge",
-        "kitchen": "Custom Gaggenau kitchen"
-      },
-      "suites": {
-        "title": "Suites",
-        "count": "5 suites with private bathrooms",
-        "terraces": "Individual terraces",
-        "bedding": "Custom Hästens bedding",
-        "dressing": "Precious wood wardrobes"
-      },
-      "exterior": {
-        "title": "Exterior",
-        "pool": "Heated infinity pool (15 × 6 m)",
-        "poolhouse": "Pool house with summer kitchen",
-        "garden": "Landscaped Mediterranean garden",
-        "terraces": "Natural stone terraces"
-      },
-      "technical": {
-        "title": "Technical Excellence & Comfort",
-        "description": "The latest innovations, designed to disappear, offer you a soothing environment: integrated home automation, invisible air conditioning, acoustic insulation, 24/7 security and ultra-fast WiFi."
-      },
-      "capacity": {
-        "people": "Up to 10 people",
-        "pool": "Pool 15 m × 6 m",
-        "parking": "8 parking spaces",
-        "wifi": "Ultra-fast Wi-Fi",
-        "automation": "Complete home automation",
-        "security": "Permanent security"
-      },
-      "allEquipments": "View all our facilities"
-    },
-    "experience": {
-      "category": "Experience",
-      "title": "SIGNATURE EXPERIENCE: WHY LES ÉTOILES DU ROCHER",
-      "description": "Beyond a simple stay, this residence is a promise of escape where each material, each perspective and each service combine their talents to reveal the quintessence of the Mediterranean sweetness of life.",
-      "commitment": {
-        "quote": "\"Offering our guests authentic moments, where the art of hospitality blends with the most delicate discretion.\""
-      },
-      "exceptional": {
-        "title": "An exceptional property",
-        "description": "A recently built architectural jewel, offering from each space a breathtaking panorama, in a setting of absolute tranquility."
-      },
-      "harmony": {
-        "title": "Harmony & authenticity",
-        "description": "A symphony of noble materials, silent technologies and meticulous arrangements, serving a sensory experience of subtle sophistication."
-      },
-      "service": {
-        "title": "Attentive service",
-        "description": "A dedicated team, anticipating your wishes to compose tailor-made moments, reflecting your most delicate aspirations."
-      },
-      "bookButton": "Book your experience"
-    },
-    "houseRules": {
-      "checkin": {
-        "title": "Check-in/Check-out",
-        "description": "Check-in from 4:00 PM, check-out by 11:00 AM."
-      },
-      "access": {
-        "title": "Access",
-        "description": "Access reserved for registered guests only."
-      },
-      "quiet": {
-        "title": "Quiet Hours",
-        "description": "Please respect quiet hours after 10:00 PM."
-      }
-    }
-  },
-  "gallery": {
-    "title": "Gallery",
-    "subtitle": "Discover Les Étoiles du Rocher through our photo gallery",
-    "categories": {
-      "all": "All",
-      "exterior": "Exterior",
-      "interior": "Interior",
-      "suites": "Suites",
-      "views": "Views"
-    },
-    "images": {
-      "exterior": {
-        "1": "Villa facade with sea view",
-        "2": "Mediterranean garden and terrace",
-        "3": "Infinity pool with sea view",
-        "4": "Main entrance of the villa",
-        "5": "Panoramic view of the bay",
-        "6": "Shaded terrace with summer lounge"
-      },
-      "suites": {
-        "1": "Bright master suite",
-        "2": "Double suite with garden view",
-        "3": "Cozy suite with balcony",
-        "4": "Contemporary suite",
-        "5": "Spacious family suite",
-        "6": "Suite with private bathroom",
-        "7": "Elegant suite with walk-in closet",
-        "8": "Suite with private terrace",
-        "9": "Design and colorful suite",
-        "10": "Suite with sea view",
-        "11": "Refined suite",
-        "12": "Suite with office space",
-        "13": "Bright and peaceful suite",
-        "14": "Suite with direct garden access",
-        "15": "Suite with large wardrobe",
-        "16": "Suite with modern bathroom",
-        "17": "Suite with king size bed",
-        "18": "Suite with pine forest view",
-        "19": "Suite with minimalist decor",
-        "20": "Suite with en-suite bathroom",
-        "21": "Suite with flowered terrace",
-        "22": "Suite with sea view",
-        "23": "Suite with zen atmosphere"
-      },
-      "interior": {
-        "1": "Spacious and bright living room",
-        "2": "Elegant dining room",
-        "3": "Modern fully equipped kitchen",
-        "4": "Design bathroom",
-        "5": "Cozy reading corner",
-        "6": "Welcoming entrance",
-        "7": "Children's playroom",
-        "8": "Additional bathroom",
-        "9": "Guest room",
-        "10": "TV lounge",
-        "11": "Fitness room",
-        "12": "Office with view",
-        "13": "Modern walk-in closet"
-      },
-      "views": {
-        "1": "Sunset over the sea",
-        "2": "Bay view at dusk",
-        "3": "Mediterranean panorama"
-      }
-    },
-    "discoverButton": "Discover the surroundings"
-  },
   "contact": {
-    "title": "Contact us",
+    "title": "Contact",
     "subtitle": "We are at your disposal",
     "form": {
-      "firstName": "First Name",
-      "lastName": "Last Name",
+      "firstName": "First name",
+      "lastName": "Last name",
       "email": "Email",
       "emailPlaceholder": "Your email address",
       "phone": "Phone",
@@ -706,9 +387,9 @@
       "messagePlaceholder": "Your message",
       "submit": "Send",
       "success": "Message sent successfully",
-      "successDetail": "Thank you for your message. Our team will contact you as soon as possible.",
+      "successDetail": "We will respond to you as soon as possible.",
       "countryCode": {
-        "label": "Country Code",
+        "label": "Country code",
         "france": "France",
         "code": "+33"
       }
@@ -717,7 +398,7 @@
       "bookStay": "Book your stay",
       "requestInfo": "Request information",
       "back": "Back",
-      "sendMessage": "Send message"
+      "sendMessage": "Send a message"
     },
     "info": {
       "address": "Roquebrune-Cap-Martin, France",
@@ -726,21 +407,20 @@
     }
   },
   "info": {
-    "title": "Information",
-    "description": "Useful information for your stay",
-    "sections": {
-      "arrival": "Arrival",
-      "departure": "Departure",
-      "rules": "Rules",
-      "amenities": "Services"
+    "title": "Practical information",
+    "subtitle": "Everything you need to know to fully enjoy your stay at The Stars of the Rock",
+    "services": {
+      "title": "Amenities & Services",
+      "subtitle": "The Stars of the Rock offers a complete range of amenities and services to meet all your expectations.",
+      "description": "The Stars of the Rock offers you a complete range of services and amenities to make your stay as pleasant as possible."
     }
   },
   "discover": {
     "title": "Discover",
-    "subtitle": "Explore the wonders of the French Riviera from Les Étoiles du Rocher.",
+    "subtitle": "Explore the wonders of the French Riviera from The Stars of the Rock.",
     "hero": {
       "title": "The sky and sea experience",
-      "subtitle": "Enjoy the heights of the French Riviera, a haven of peace with breathtaking views of the Mediterranean.",
+      "subtitle": "Enjoy the heights of the French Riviera, a haven of peace with a breathtaking view of the Mediterranean.",
       "bookNow": "Book now",
       "scrollDown": "Discover more"
     },
@@ -749,11 +429,11 @@
       "ourLocation": "Our location",
       "events": {
         "title": "Places & Events to Discover",
-        "description": "Discover our selection of must-visit places and events during your stay in our exceptional villa.",
+        "description": "Discover our selection of must-see places and events to visit during your stay in our exceptional villa.",
         "allPlaces": "All places",
         "fortAntoine": {
-          "title": "Night Walk at Fort Antoine",
-          "description": "An open-air theater located on the heights of Monaco, Fort Antoine hosts intimate artistic performances under the stars. Enjoy a show in this historic venue, facing the sea, in a unique atmosphere blending culture, heritage and nocturnal magic.",
+          "title": "Evening walk at Fort Antoine",
+          "description": "Open-air theater located on the heights of Monaco, Fort Antoine hosts intimate artistic performances under the stars. Enjoy a show in this historic place facing the sea, in a unique atmosphere combining culture, heritage, and nighttime magic.",
           "date": "Summer evenings",
           "type": "Culture & Events",
           "comments": {
@@ -769,19 +449,19 @@
         },
         "casino": {
           "title": "Monte-Carlo Casino",
-          "description": "Try your luck at the legendary casino where James Bond is a regular. Belle Époque architecture and sophisticated atmosphere.",
-          "hours": "Open daily",
+          "description": "Try your luck at the legendary casino where James Bond is a regular. Belle Époque architecture and hushed ambiance.",
+          "hours": "Open every day",
           "type": "Entertainment"
         },
         "oceanographic": {
           "title": "Oceanographic Museum",
-          "description": "More than 6000 marine species, giant aquariums and interactive exhibitions in a majestic building overlooking the sea.",
-          "hours": "Open daily",
+          "description": "Over 6,000 marine species, giant aquariums, and interactive exhibitions in a majestic building overlooking the sea.",
+          "hours": "Open every day",
           "type": "Culture"
         },
         "rally": {
           "title": "Monte-Carlo Historic Rally",
-          "description": "Admire vintage cars traveling the winding roads of the countryside during this prestigious competition.",
+          "description": "Admire vintage cars traveling the winding roads of the hinterland during this prestigious competition.",
           "date": "January each year",
           "type": "Sporting event"
         }
@@ -789,7 +469,7 @@
       "secrets": {
         "title": "Insider Secrets",
         "customsPath": {
-          "title": "Customs Officers Path",
+          "title": "Customs Officers' Path",
           "description": "Preserved coastal walk offering spectacular views of the sea and secret coves of the French Riviera.",
           "category": "secrets",
           "difficulty": "Easy to moderate",
@@ -798,7 +478,7 @@
         },
         "ezeVillage": {
           "title": "Èze Village",
-          "description": "Perched at 429m altitude, this medieval village offers a 360° view of the French Riviera and houses the famous Exotic Garden.",
+          "description": "Perched at 429m altitude, this medieval village offers a 360° view of the French Riviera and is home to the famous Exotic Garden.",
           "category": "secrets",
           "comments": {
             "medieval": "Authentic medieval village",
@@ -806,7 +486,7 @@
           }
         },
         "littleAfrica": {
-          "title": "Little Africa in Beaulieu",
+          "title": "Beaulieu's Little Africa",
           "description": "Secret botanical garden housing rare exotic species and an intimate beach away from the crowds.",
           "category": "secrets",
           "difficulty": "Easy",
@@ -822,7 +502,7 @@
           "bestTime": "Early morning"
         },
         "garnier": {
-          "title": "Monte-Carlo Garnier Opera House",
+          "title": "Monte-Carlo's Garnier Opera",
           "description": "Architectural masterpiece usually closed to the public, but accessible during exclusive guided tours that we can organize.",
           "category": "secrets",
           "comments": {
@@ -832,9 +512,9 @@
         },
         "blueGulf": {
           "title": "Blue Gulf",
-          "description": "Secret cove accessible only by a discreet path or by sea, offering crystal clear waters and rare tranquility.",
+          "description": "Secret cove accessible only by a discreet path or by sea, offering crystal-clear waters and rare tranquility.",
           "category": "secrets",
-          "bestTime": "Early day"
+          "bestTime": "Early in the day"
         }
       },
       "categories": {
@@ -856,22 +536,280 @@
     },
     "cta": {
       "title": "Your unique experience on the French Riviera",
-      "description": "Enjoy all these exceptional places from your luxury villa at Les Étoiles du Rocher. Our concierge team is at your disposal to organize your excursions and create unforgettable tailor-made moments.",
+      "description": "Enjoy all these exceptional places from your luxury villa at The Stars of the Rock. Our concierge team is at your disposal to organize your excursions and create unforgettable tailor-made moments.",
       "bookNow": "Book your stay",
       "exploreGallery": "Explore our gallery"
     }
   },
   "footer": {
     "terms": "General Terms",
-    "sales": "General Terms of Sale",
+    "sales": "General Sales Conditions",
     "rights": "All rights reserved"
   },
   "terms": {
-    "title": "General Terms & Conditions",
-    "content": "General Terms & Conditions\nVilla Les Étoiles du Rocher\nThe rental of Villa Les Étoiles du Rocher, owned by SAS ALPHA GROUP, is governed by these General Terms, which the tenant fully and unconditionally accepts upon signing the rental agreement.\n\n1. Maximum Occupancy\nThe villa accommodates a maximum of 10 people (including children). Exceeding this number is strictly prohibited and may result in immediate termination of the stay without refund.\n\n2. Parties, Noise & Quiet Hours\nParties, gatherings, or events are strictly forbidden.\nNo excessive noise is permitted between 7:00 AM and 10:00 PM to respect neighbors.\nViolations may lead to police intervention and immediate eviction without refund.\n\n3. Pets\nPets are not allowed unless prior written approval is obtained from SAS ALPHA GROUP. Unauthorized pets will result in immediate contract termination at the tenant's expense.\n\n4. Property Use\nThe tenant agrees to:\nUse the villa peacefully and exclusively for vacation purposes.\nRespect the house rules, property, equipment, and neighbors.\n\n5. Access & Security\nKeys, badges, and access devices are strictly personal and must be returned upon departure.\nLost items will be charged for replacement.\nThe tenant must secure doors, gates, and alarms when leaving the villa.\n\n6. Cleanliness & Condition\nThe villa is delivered clean and in perfect condition. The tenant must return it in a similar state. Additional cleaning fees may apply if not respected.\n\n7. Image & Intellectual Property Rights\nAll photos, videos, and visuals of the villa are the exclusive property of SAS ALPHA GROUP.\nUnauthorized use, reproduction, or exploitation is prohibited and will lead to legal action.\n\n8. Surveillance & Security\nFor security reasons, certain outdoor areas may be under video surveillance (compliant with local laws). No cameras are installed in private or indoor spaces.\n\n9. Liability & Insurance\nThe tenant is fully responsible for damages, losses, or deterioration caused to the villa or its contents.\nTravel insurance covering rental liability is strongly recommended.\n\n10. Acceptance\nSigning the rental agreement constitutes full acceptance of:\nThese General Terms,\nThe General Terms of Sale,\nAnd the House Rules."
+    "title": "General terms",
+    "content": "General Terms – Villa The Stars of the Rock\nThe rental of the villa The Stars of the Rock, property of the company SAS ALPHA GROUP, is subject to these general terms, which the tenant fully and unreservedly accepts when signing the rental contract.\n\n1. Occupancy capacity\nThe villa is designed for a maximum of 10 people (including children). It is strictly forbidden to exceed this capacity, under penalty of immediate termination of the stay, without refund.\n\n2. Parties, nuisances, and tranquility\nIt is strictly forbidden to organize parties, evenings, or events at the villa.\nNo noise nuisance is tolerated between 7:00 AM and 10:00 PM to respect the neighborhood's tranquility.\nAny breach of this rule may result in the intervention of law enforcement and immediate eviction of the tenant without refund.\n\n3. Animals\nPets are not allowed on the property, without exception, unless prior written authorization from SAS ALPHA GROUP. Any breach will result in immediate termination of the contract, solely at the tenant's fault.\n\n4. Use of premises\nThe tenant agrees to use the villa peacefully, exclusively for vacation purposes. They agree to respect the house rules, the premises, the equipment, and the neighborhood.\n\n5. Access and security\nThe keys, badges, and access means provided are strictly personal and must be returned upon departure. Any loss will result in the invoicing of replacement. The tenant is required to close doors, gates, and alarms when leaving the villa.\n\n6. Cleanliness and inventory\nThe villa is handed over clean and in perfect condition. The tenant must return it in a similar state. Additional cleaning fees may be applied in case of non-compliance.\n\n7. Image rights and intellectual property\nAll photos, videos, plans, and visuals representing the villa The Stars of the Rock are the exclusive property of SAS ALPHA GROUP.\nThey are not free of rights, nor reusable, nor exploitable without prior written authorization. Any infringement will result in civil and/or criminal proceedings.\n\n8. Surveillance and security of premises\nFor security reasons, some exterior accesses may be under video surveillance, in accordance with current legislation. No cameras are installed in private or interior spaces.\n\n9. Liability and insurance\nThe tenant is responsible for damages, losses, or degradation caused to the villa or its equipment.\nIt is strongly recommended to take out vacation insurance covering their rental civil liability.\n\n10. Acceptance\nThe signature of the rental contract constitutes full acceptance of these general terms, the general sales conditions, as well as the house rules."
   },
   "sales": {
-    "title": "General Terms and Conditions of Sale",
-    "content": "General Terms and Conditions of Sale\n1. Booking\nThe reservation of the villa Les Étoiles du Rocher, owned by SAS ALPHA GROUP, is considered firm and final only after:\nReceipt of a 50% deposit of the total stay amount,\nAnd the signing of a rental contract established for each booking.\nThe rental contract must be drafted and signed by both parties before any access to the property is granted.\nThe remaining balance must be paid in full no later than 60 days before arrival. Failure to pay by this deadline may result in automatic cancellation without refund of the deposit.\n\n2. Security Deposit\nA €5,000 security deposit is required upon arrival. It will be refunded within 15 days after departure, minus any deductions for damages, breaches of regulations, or additional costs.\n\n3. Cancellation\nAny cancellation by the client will result in the following conditions:\nMore than 90 days before arrival: 70% refund of the deposit,\nBetween 90 and 60 days: 50% refund of the deposit,\nBetween 60 and 30 days: No refund of the deposit,\nLess than 30 days before arrival: No refund, the full stay amount remains due.\nThere is no right of withdrawal.\n\n4. Arrival & Departure\nCheck-in: From 4:00 PM,\nCheck-out: By 10:00 AM.\nAny unauthorized delay will result in additional charges.\n\n5. Capacity & Usage\nMaximum occupancy: 10 people (including children).\nStrictly prohibited: Parties, events, or receptions.\nNo excessive noise between 7:00 AM and 10:00 PM.\nNo pets allowed unless prior written approval.\nViolations may result in immediate termination of the contract with no refund.\n\n6. House Rules\nThe guest must comply with the house rules provided upon arrival. Serious violations (damages, disturbances, breach of prohibitions) may lead to loss of the deposit and legal action.\n\n7. Additional Services\nExtra services (private chef, butler, concierge, etc.) must be booked at least 15 days before arrival. Modifications/cancellations require 7 days' notice; otherwise, full payment is due.\n\n8. Image & Intellectual Property Rights\nAll photos, videos, and visuals of the villa are the exclusive property of SAS ALPHA GROUP. Unauthorized reproduction or use is strictly prohibited.\n\n9. Liability\nThe guest is responsible for damages caused by themselves or their companions. Travel insurance is mandatory and may be requested upon arrival.\n\n10. Disputes\nIn case of disputes, parties will seek an amicable solution. Otherwise, jurisdiction falls to the courts where the villa is located."
+    "title": "General Sales Conditions",
+    "content": "General Sales Conditions – The Stars of the Rock\n1. Booking\nThe booking of the villa The Stars of the Rock, property of the company SAS ALPHA GROUP, is considered firm and definitive only after:\nreceipt of a 50% deposit of the total amount of the stay,\nand the signing of a rental contract, established for each booking.\nThe rental contract must necessarily be drafted and signed by both parties before any entry into the premises.\nThe balance of the stay must be paid in full no later than 60 days before the arrival date. In case of non-payment by this deadline, the booking may be canceled by operation of law without refund of the deposit.\n\n2. Security deposit\nA security deposit of €5,000 is required upon arrival. It will be refunded within a maximum period of 15 days after departure, less any damages, breaches of the rules, or additional costs.\n\n3. Cancellation\nAny cancellation by the client entails the following conditions:\nMore than 90 days before arrival: refund of 70% of the deposit paid,\nBetween 90 and 60 days: refund of 50% of the deposit,\nBetween 60 and 30 days: no refund of the deposit,\nLess than 30 days before arrival: no refund, the total amount of the stay remains due.\nThere is no right of withdrawal.\n\n4. Arrival and departure\nArrival: from 4:00 PM,\nDeparture: by 10:00 AM at the latest.\nAny unauthorized overtime will result in additional charges.\n\n5. Capacity and use\nMaximum number of people allowed: 10 people, including children.\nIt is strictly forbidden to organize parties, events, or receptions in the villa.\nNo noise nuisance is tolerated between 7:00 AM and 10:00 PM.\nPets are not accepted, except with prior written agreement.\nAny breach of these rules may result in immediate termination of the contract solely at the client's fault, without possible refund.\n\n6. House rules\nThe client agrees to respect the house rules provided upon arrival. This document is an integral part of the contract. Any serious breach (damages, disrespect to the neighborhood, non-compliance with prohibitions) will result in the loss of the security deposit and may lead to legal action.\n\n7. Additional services\nAdditional services (private chef, butler, concierge, etc.) must be booked at least 15 days before arrival. Any modification or cancellation of these services must be made at least 7 days in advance; otherwise, the amount remains due.\n\n8. Image rights and intellectual property\nAll photographs, videos, and visuals representing the villa The Stars of the Rock are the exclusive property of SAS ALPHA GROUP.\nAny reproduction, publication, or use without prior written authorization is strictly prohibited.\n\n9. Liability\nThe client is responsible for damages caused by themselves or their companions. They are required to take out vacation insurance. A certificate may be required upon arrival.\n\n10. Disputes\nIn case of dispute, the parties will seek an amicable solution. Failing this, the competent courts are those of the location of the villa."
+  },
+  "snakeRectangle": {
+    "villa": {
+      "line1": "Your villa awaits you"
+    },
+    "contact": {
+      "line1": "Contact us for your stay"
+    },
+    "gallery": {
+      "line1": "Explore the villa gallery"
+    },
+    "discover": {
+      "line1": "Enjoy our location"
+    },
+    "villaException": {
+      "line1": "An exceptional experience between sea and sky"
+    }
+  },
+  "luxuryText": {
+    "villa": {
+      "line1": "The sky and sea experience"
+    },
+    "contact": {
+      "line1": "Your exceptional stay awaits you"
+    },
+    "gallery": {
+      "line1": "Discover our exceptional villa"
+    },
+    "discover": {
+      "line1": "A privileged location on the French Riviera"
+    }
+  },
+  "galleryOverlay": {
+    "gallery": {
+      "title": "Our Gallery",
+      "subtitle": "Discover the elegance and luxury of The Stars of the Rock"
+    }
+  },
+  "discoverOverlay": {
+    "discover": {
+      "title": "Explore the French Riviera",
+      "subtitle": "Discover hidden treasures and exceptional places from your luxury villa",
+      "tagline": "Monaco & Cap Martin",
+      "exploreButton": "Discover the secrets"
+    }
+  },
+  "surroundings": {
+    "title": "Surroundings",
+    "description": "Explore nearby treasures, chosen for their character and discretion.",
+    "monaco": {
+      "title": "Monaco & Menton",
+      "description": "Hanging gardens, intimate museums, confidential addresses."
+    },
+    "italy": {
+      "title": "Escape to Italy",
+      "description": "Ventimiglia markets, Ligurian flavors, dolce vita within reach."
+    },
+    "trails": {
+      "title": "Secret trails of the French Riviera",
+      "description": "Perched villages, silent coves, preserved panoramas."
+    },
+    "guide": "We will be your guides to compose a stay according to your finest desires."
+  },
+  "stats": {
+    "experience": "Years of expertise: 10+",
+    "satisfaction": "Satisfied clients: 100%",
+    "support": "Dedicated support: 24/7"
+  },
+  "villa": {
+    "hero": {
+      "title": "Mediterranean horizon",
+      "description": "Suspended between sky and sea, Villa The Stars of the Rock invites you to savor the sweetness of the French Riviera, a perched refuge facing the infinite azure.",
+      "bookNow": "Book now",
+      "discoverMore": "Discover more",
+      "scrollDown": "Discover more",
+      "scrollText": "Discover more",
+      "experienceTitle": "The experience",
+      "experienceSubtitle": "sky and sea",
+      "subtitle": "Let yourself be enchanted by the golden morning rays, the discreet song of the pines, and the infinite horizon of the Mediterranean.",
+      "ctaButton": "Book now",
+      "videoTitle": "Villa video"
+    },
+    "spaces": {
+      "title": "Spaces designed to inspire",
+      "description": "Every room at The Stars of the Rock has been designed to combine subtle comfort, delicate lines, and memorable moments.",
+      "subtitle": "Every space at The Stars of the Rock has been conceived to combine subtle comfort, delicate lines, and memorable moments.",
+      "living": {
+        "title": "Sunlit living room",
+        "description": "Vast opening onto the Mediterranean.",
+        "alt": "Spacious living room with panoramic view"
+      },
+      "pool": {
+        "title": "Private pool",
+        "description": "Water mirror extended by the horizon.",
+        "alt": "Infinity pool with sea view"
+      },
+      "suites": {
+        "title": "Five suites",
+        "description": "Intimate retreats, flooded with natural light.",
+        "alt": "Luxury suite with panoramic view"
+      }
+    },
+    "features": {
+      "privacy": {
+        "title": "Preserved privacy",
+        "description": "Generous volumes and framed views ensure your tranquility while inviting the landscape inside."
+      },
+      "harmony": {
+        "title": "Harmony of materials",
+        "description": "Clean lines, chosen finishes, and noble materials combine for a warm and contemporary ambiance."
+      },
+      "wellness": {
+        "title": "Refined well-being",
+        "description": "Every detail—bedding, lighting, textures—is orchestrated for absolute, discreet, and uncompromising tranquility."
+      },
+      "artOfLiving": "The art of living is drawn in these places where every glance meets a trait of attention dedicated to your pleasure.",
+      "signature": "THE STARS OF THE ROCK"
+    },
+    "location": {
+      "title": "French Riviera: a privileged site",
+      "description": "Perched between Monaco and Menton, the villa enjoys a rare setting, combining private Mediterranean garden and quick access to the treasures of the French Riviera.",
+      "distances": {
+        "title": "Distances",
+        "monaco": {
+          "name": "Monaco",
+          "time": "10 min"
+        },
+        "nice": {
+          "name": "Nice",
+          "time": "30 min"
+        },
+        "airport": {
+          "name": "Nice Côte d'Azur Airport",
+          "time": "35 min"
+        },
+        "cannes": {
+          "name": "Cannes",
+          "time": "50 min"
+        }
+      },
+      "nearby": {
+        "title": "To discover nearby",
+        "beaches": {
+          "name": "Secret beaches",
+          "time": "5 min"
+        },
+        "golf": {
+          "name": "Golf course",
+          "time": "15 min"
+        },
+        "italy": {
+          "name": "Italian border",
+          "time": "15 min"
+        },
+        "saintTropez": {
+          "name": "Saint-Tropez",
+          "time": "1 h 30"
+        }
+      },
+      "exploreButton": "Explore the surroundings",
+      "features": {
+        "panoramic": {
+          "title": "Panoramic view",
+          "alt": "Panoramic view of the Mediterranean"
+        },
+        "gardens": {
+          "title": "Gardens",
+          "alt": "Mediterranean gardens"
+        },
+        "terraces": {
+          "title": "Terraces",
+          "alt": "Terrace with view"
+        }
+      },
+      "region": "French Riviera"
+    },
+    "services": {
+      "title": "PERSONALIZATION & TAILOR-MADE SERVICES",
+      "description": "Your stay is composed according to your desires: discreet welcome, 24/7 concierge, private chef, confidential escapades... Every moment is written to your measure.",
+      "welcome": "Personalized welcome and private check-in",
+      "concierge": "Concierge available day and night",
+      "chef": "Resident chef and room service",
+      "excursions": "Exclusive excursions, off the beaten track",
+      "customizeButton": "Customize my stay",
+      "customization": "Personalization",
+      "excellence": {
+        "title": "Excellence at your service",
+        "description": "Our exceptional team anticipates your desires with subtle intuition. From private events to reservations in the most sought-after establishments, we take care of the perfect organization of every moment of your stay."
+      }
+    },
+    "property": {
+      "title": "PROPERTY CHARACTERISTICS",
+      "location": {
+        "title": "Location",
+        "monaco": "10 min from the center of Monaco",
+        "airport": "30 min from Nice airport",
+        "cannes": "45 min from Cannes",
+        "italy": "15 min from Italy"
+      },
+      "livingSpace": {
+        "title": "Living spaces",
+        "livingRoom": "150 m² panoramic living room",
+        "diningRoom": "Dining room facing the sea",
+        "bar": "Bar and reception lounge",
+        "kitchen": "Custom Gaggenau kitchen"
+      },
+      "suites": {
+        "title": "Suites",
+        "count": "5 suites with private bathrooms",
+        "terraces": "Individual terraces",
+        "bedding": "Custom Hästens bedding",
+        "dressing": "Precious wood dressing rooms"
+      },
+      "exterior": {
+        "title": "Exterior",
+        "pool": "Heated infinity pool (15 × 6 m)",
+        "poolhouse": "Pool house with summer kitchen",
+        "garden": "Landscaped Mediterranean garden",
+        "terraces": "Natural stone terraces"
+      },
+      "technical": {
+        "title": "Technical excellence & comfort",
+        "description": "The latest innovations, designed to disappear, offer you a soothing setting: integrated home automation, invisible air conditioning, acoustic insulation, 24/7 security, and ultra-fast wifi.",
+        "category": "Technical excellence"
+      },
+      "capacity": {
+        "people": "Up to 10 people",
+        "pool": "15 m × 6 m pool",
+        "parking": "8 parking spaces",
+        "wifi": "Ultra-fast Wi-Fi",
+        "automation": "Complete home automation",
+        "security": "Permanent security"
+      },
+      "allEquipments": "See all our amenities",
+      "category": "Characteristics"
+    },
+    "experience": {
+      "title": "SIGNATURE EXPERIENCE: WHY THE STARS OF THE ROCK",
+      "description": "Beyond a simple stay, this residence is a promise of escape where every material, every perspective, and every service combine their talents to reveal the quintessence of Mediterranean sweetness of living.",
+      "commitment": {
+        "title": "Our commitment",
+        "quote": "\"To offer our guests authentic moments, where the art of hospitality blends with the most delicate discretion.\""
+      },
+      "exceptional": {
+        "title": "An exceptional property",
+        "description": "A recently erected architectural gem, offering from every space a breathtaking panorama, in a setting of absolute tranquility."
+      },
+      "harmony": {
+        "title": "Harmony & authenticity",
+        "description": "A symphony of noble materials, silent technologies, and carefully arranged amenities, at the service of a sensory experience full of subtlety."
+      },
+      "service": {
+        "title": "Attentive service",
+        "description": "A dedicated team, anticipating your wishes to compose tailor-made moments, in the image of your most delicate aspirations."
+      },
+      "bookButton": "Book your experience",
+      "category": "Unique experience"
+    }
   }
-} 
+}
