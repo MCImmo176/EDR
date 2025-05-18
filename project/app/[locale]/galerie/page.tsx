@@ -33,38 +33,38 @@ export default function GaleriePage() {
 
   // Définition des collections d'images par catégorie
   const exterieurPhotos: Photo[] = [
-    { src: "/images/gallery/exterieur/1.JPG", alt: "Façade de la villa côté mer", category: tGallery('categories.exterior'), aspectRatio: "portrait" },
-    { src: "/images/gallery/exterieur/2.JPEG", alt: "Jardin méditerranéen et terrasse", category: tGallery('categories.exterior'), aspectRatio: "landscape" },
-    { src: "/images/gallery/exterieur/3.JPEG", alt: "Piscine à débordement vue mer", category: tGallery('categories.exterior'), aspectRatio: "landscape" },
-    { src: "/images/gallery/exterieur/4.JPEG", alt: "Entrée principale de la villa", category: tGallery('categories.exterior'), aspectRatio: "portrait" },
-    { src: "/images/gallery/exterieur/5.JPEG", alt: "Vue panoramique sur la baie", category: tGallery('categories.exterior'), aspectRatio: "panoramic" },
-    { src: "/images/gallery/exterieur/6.JPEG", alt: "Terrasse ombragée avec salon d'été", category: tGallery('categories.exterior'), aspectRatio: "landscape" },
+    { src: "/images/gallery/exterieur/1.JPG", alt: t('home.gallery.exterior.alt1', { defaultValue: "Façade de la villa côté mer" }), category: tGallery('categories.exterior'), aspectRatio: "portrait" },
+    { src: "/images/gallery/exterieur/2.JPEG", alt: t('home.gallery.exterior.alt2', { defaultValue: "Jardin méditerranéen et terrasse" }), category: tGallery('categories.exterior'), aspectRatio: "landscape" },
+    { src: "/images/gallery/exterieur/3.JPEG", alt: t('home.gallery.exterior.alt3', { defaultValue: "Piscine à débordement vue mer" }), category: tGallery('categories.exterior'), aspectRatio: "landscape" },
+    { src: "/images/gallery/exterieur/4.JPEG", alt: t('home.gallery.exterior.alt4', { defaultValue: "Entrée principale de la villa" }), category: tGallery('categories.exterior'), aspectRatio: "portrait" },
+    { src: "/images/gallery/exterieur/5.JPEG", alt: t('home.gallery.exterior.alt5', { defaultValue: "Vue panoramique sur la baie" }), category: tGallery('categories.exterior'), aspectRatio: "panoramic" },
+    { src: "/images/gallery/exterieur/6.JPEG", alt: t('home.gallery.exterior.alt6', { defaultValue: "Terrasse ombragée avec salon d'été" }), category: tGallery('categories.exterior'), aspectRatio: "landscape" },
   ];
 
   const suitesPhotos: Photo[] = [
-    { src: "/images/gallery/chambres/1.JPG", alt: "Suite parentale lumineuse", category: tGallery('categories.suites'), aspectRatio: "landscape" },
-    { src: "/images/gallery/chambres/2.JPEG", alt: "Suite double avec vue jardin", category: tGallery('categories.suites'), aspectRatio: "portrait" },
-    { src: "/images/gallery/chambres/3.JPEG", alt: "Suite cosy avec balcon", category: tGallery('categories.suites'), aspectRatio: "portrait" },
-    { src: "/images/gallery/chambres/4.jpg", alt: "Suite contemporaine", category: tGallery('categories.suites'), aspectRatio: "landscape" },
-    { src: "/images/gallery/chambres/5.jpg", alt: "Suite familiale spacieuse", category: tGallery('categories.suites'), aspectRatio: "landscape" },
-    { src: "/images/gallery/chambres/17.JPEG", alt: "Suite avec lit king size", category: tGallery('categories.suites'), aspectRatio: "landscape" },
-    { src: "/images/gallery/chambres/11.JPEG", alt: "Suite raffinée", category: tGallery('categories.suites'), aspectRatio: "portrait" },
-    { src: "/images/gallery/chambres/23.JPEG", alt: "Suite avec ambiance zen", category: tGallery('categories.suites'), aspectRatio: "portrait" },
+    { src: "/images/gallery/chambres/1.JPG", alt: t('home.gallery.suites.alt1', { defaultValue: "Suite parentale lumineuse" }), category: tGallery('categories.suites'), aspectRatio: "landscape" },
+    { src: "/images/gallery/chambres/2.JPEG", alt: t('home.gallery.suites.alt2', { defaultValue: "Suite double avec vue jardin" }), category: tGallery('categories.suites'), aspectRatio: "portrait" },
+    { src: "/images/gallery/chambres/3.JPEG", alt: t('home.gallery.suites.alt3', { defaultValue: "Suite cosy avec balcon" }), category: tGallery('categories.suites'), aspectRatio: "portrait" },
+    { src: "/images/gallery/chambres/4.jpg", alt: t('home.gallery.suites.alt4', { defaultValue: "Suite contemporaine" }), category: tGallery('categories.suites'), aspectRatio: "landscape" },
+    { src: "/images/gallery/chambres/5.jpg", alt: t('home.gallery.suites.alt5', { defaultValue: "Suite familiale spacieuse" }), category: tGallery('categories.suites'), aspectRatio: "landscape" },
+    { src: "/images/gallery/chambres/17.JPEG", alt: t('home.gallery.suites.alt6', { defaultValue: "Suite avec lit king size" }), category: tGallery('categories.suites'), aspectRatio: "landscape" },
+    { src: "/images/gallery/chambres/11.JPEG", alt: t('home.gallery.suites.alt7', { defaultValue: "Suite raffinée" }), category: tGallery('categories.suites'), aspectRatio: "portrait" },
+    { src: "/images/gallery/chambres/23.JPEG", alt: t('home.gallery.suites.alt8', { defaultValue: "Suite avec ambiance zen" }), category: tGallery('categories.suites'), aspectRatio: "portrait" },
   ];
 
   const interieurPhotos: Photo[] = [
-    { src: "/images/gallery/interieur/1.JPEG", alt: "Salon spacieux et lumineux", category: tGallery('categories.interior'), aspectRatio: "landscape" },
-    { src: "/images/gallery/interieur/2.JPEG", alt: "Salle à manger élégante", category: tGallery('categories.interior'), aspectRatio: "portrait" },
-    { src: "/images/gallery/interieur/3.JPEG", alt: "Cuisine moderne toute équipée", category: tGallery('categories.interior'), aspectRatio: "landscape" },
-    { src: "/images/gallery/interieur/4.JPEG", alt: "Salle de bain design", category: tGallery('categories.interior'), aspectRatio: "landscape" },
-    { src: "/images/gallery/interieur/10.JPG", alt: "Salon TV", category: tGallery('categories.interior'), aspectRatio: "landscape" },
-    { src: "/images/gallery/interieur/13.png", alt: "Dressing moderne", category: tGallery('categories.interior'), aspectRatio: "portrait" },
+    { src: "/images/gallery/interieur/1.JPEG", alt: t('home.gallery.interior.alt1', { defaultValue: "Salon spacieux et lumineux" }), category: tGallery('categories.interior'), aspectRatio: "landscape" },
+    { src: "/images/gallery/interieur/2.JPEG", alt: t('home.gallery.interior.alt2', { defaultValue: "Salle à manger élégante" }), category: tGallery('categories.interior'), aspectRatio: "portrait" },
+    { src: "/images/gallery/interieur/3.JPEG", alt: t('home.gallery.interior.alt3', { defaultValue: "Cuisine moderne toute équipée" }), category: tGallery('categories.interior'), aspectRatio: "landscape" },
+    { src: "/images/gallery/interieur/4.JPEG", alt: t('home.gallery.interior.alt4', { defaultValue: "Salle de bain design" }), category: tGallery('categories.interior'), aspectRatio: "landscape" },
+    { src: "/images/gallery/interieur/10.JPG", alt: t('home.gallery.interior.alt5', { defaultValue: "Salon TV" }), category: tGallery('categories.interior'), aspectRatio: "landscape" },
+    { src: "/images/gallery/interieur/13.png", alt: t('home.gallery.interior.alt6', { defaultValue: "Dressing moderne" }), category: tGallery('categories.interior'), aspectRatio: "portrait" },
   ];
 
   const vuesPhotos: Photo[] = [
-    { src: "/images/gallery/vues/Coucher de soleil.png", alt: "Coucher de soleil sur la mer", category: tGallery('categories.views'), aspectRatio: "panoramic" },
-    { src: "/images/gallery/vues/Coucher de soleil 2.png", alt: "Vue sur la baie au crépuscule", category: tGallery('categories.views'), aspectRatio: "landscape" },
-    { src: "/images/gallery/vues/Coucher de soleil 3.png", alt: "Panorama méditerranéen", category: tGallery('categories.views'), aspectRatio: "panoramic" },
+    { src: "/images/gallery/vues/Coucher de soleil.png", alt: t('home.gallery.views.alt1', { defaultValue: "Coucher de soleil sur la mer" }), category: tGallery('categories.views'), aspectRatio: "panoramic" },
+    { src: "/images/gallery/vues/Coucher de soleil 2.png", alt: t('home.gallery.views.alt2', { defaultValue: "Vue sur la baie au crépuscule" }), category: tGallery('categories.views'), aspectRatio: "landscape" },
+    { src: "/images/gallery/vues/Coucher de soleil 3.png", alt: t('home.gallery.views.alt3', { defaultValue: "Panorama méditerranéen" }), category: tGallery('categories.views'), aspectRatio: "panoramic" },
   ];
 
   // Toutes les photos combinées pour la section "Tous"
@@ -218,7 +218,7 @@ export default function GaleriePage() {
           <div className="relative h-full w-full" style={{ paddingBottom: '56.25%' }}>
             <iframe
               src="https://www.youtube.com/embed/ZZ3G80btSc8?autoplay=1&mute=1&loop=1&playlist=ZZ3G80btSc8&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
-              title="Vidéo galerie"
+              title={tGallery('videoTitle', { defaultValue: "Vidéo galerie" })}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -242,8 +242,8 @@ export default function GaleriePage() {
                   transition={{ duration: 1.2, delay: 0.3 }}
                   className="text-white text-6xl md:text-7xl font-light tracking-wider"
                 >
-                  L'expérience<br />
-                  <span className="font-extralight tracking-wide">ciel et mer</span>
+                  {tGallery('hero.title', { defaultValue: "L'expérience" })}<br />
+                  <span className="font-extralight tracking-wide">{tGallery('hero.subtitle', { defaultValue: "ciel et mer" })}</span>
                 </motion.h1>
                 <motion.div 
                   initial={{ width: 0 }}
@@ -260,7 +260,7 @@ export default function GaleriePage() {
                 className="mt-6 max-w-xl"
               >
                 <p className="text-white/90 text-lg md:text-xl font-light leading-relaxed tracking-wide">
-                  Une collection d'images exclusives de notre propriété d'exception surplombant la Méditerranée.
+                  {tGallery('heroDescription', { defaultValue: "Une collection d'images exclusives de notre propriété d'exception surplombant la Méditerranée." })}
                 </p>
               </motion.div>
             </div>
@@ -273,7 +273,7 @@ export default function GaleriePage() {
             transition={{ delay: 2.5, duration: 1 }}
             className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
           >
-            <span className="text-white/70 text-sm uppercase tracking-[0.2em] mb-2 font-light">Découvrir plus</span>
+            <span className="text-white/70 text-sm uppercase tracking-[0.2em] mb-2 font-light">{tGallery('scrollText', { defaultValue: "Découvrir plus" })}</span>
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
@@ -296,7 +296,7 @@ export default function GaleriePage() {
           >
             <SectionTitle
               title={tGallery('title')}
-              subtitle={tGallery('subtitle')}
+              subtitle={tGallery('subtitle', { defaultValue: tGallery('description') })}
               centered
             />
           </motion.div>
@@ -336,9 +336,9 @@ export default function GaleriePage() {
             >
               <span className="uppercase tracking-[0.15em] font-light">
                 {activeCategory === null ? tGallery('categories.all') : 
-                 activeCategory === tGallery('categories.exterior') ? tGallery('common.labels.exterior') :
-                 activeCategory === tGallery('categories.suites') ? tGallery('common.labels.room') :
-                 activeCategory === tGallery('categories.interior') ? tGallery('common.labels.interior') :
+                 activeCategory === tGallery('categories.exterior') ? t('common.labels.exterior') :
+                 activeCategory === tGallery('categories.suites') ? t('common.labels.room') :
+                 activeCategory === tGallery('categories.interior') ? t('common.labels.interior') :
                  tGallery('categories.views')}
               </span>
               <motion.div
@@ -464,7 +464,7 @@ export default function GaleriePage() {
           >
             <div className="max-w-2xl mx-auto">
               <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-light mb-10 text-[#1A1A1A] leading-tight">
-                Découvrez l'expérience unique de notre propriété
+                {tGallery('ctaTitle', { defaultValue: "Découvrez l'expérience unique de notre propriété" })}
               </h2>
               
               <Button
@@ -473,7 +473,7 @@ export default function GaleriePage() {
                 className="relative bg-[#b7a66b] text-white border border-[#b7a66b] hover:bg-white hover:text-[#b7a66b] hover:border-[#b7a66b] rounded-none px-10 py-6 transition-all duration-300"
               >
                 <Link href="/contact">
-                  <span className="uppercase text-sm tracking-[0.2em] font-light">Réserver votre séjour</span>
+                  <span className="uppercase text-sm tracking-[0.2em] font-light">{tGallery('ctaButton', { defaultValue: t('common.bookNow') })}</span>
                   <ArrowRight className="ml-2 w-4 h-4 inline-block" />
                 </Link>
               </Button>
@@ -501,64 +501,62 @@ export default function GaleriePage() {
                 closeLightbox();
               }}
             >
-              <X className="h-6 w-6" />
+              <X className="w-6 h-6" />
             </button>
             
-            {/* Left Navigation */}
-            <button
-              className="absolute left-6 top-1/2 -translate-y-1/2 text-white hover:text-white/80 transition-colors p-2 rounded-full cursor-pointer z-50"
+            {/* Navigation Buttons */}
+            <button 
+              className="absolute left-6 top-1/2 -translate-y-1/2 text-white hover:text-white/80 transition-colors z-50 bg-black/50 p-2 rounded-full"
               onClick={(e) => {
                 e.stopPropagation();
-                setSelectedImage(selectedImage === 0 ? filteredPhotos.length - 1 : selectedImage - 1);
+                selectedImage !== null && setSelectedImage(
+                  selectedImage === 0 ? filteredPhotos.length - 1 : selectedImage - 1
+                );
               }}
             >
-              <ChevronLeft className="h-6 sm:h-8 w-6 sm:w-8" />
-            </button>
-
-            {/* Right Navigation */}
-            <button
-              className="absolute right-6 top-1/2 -translate-y-1/2 text-white hover:text-white/80 transition-colors p-2 rounded-full cursor-pointer z-50"
-              onClick={(e) => {
-                e.stopPropagation();
-                setSelectedImage((selectedImage + 1) % filteredPhotos.length);
-              }}
-            >
-              <ChevronRight className="h-6 sm:h-8 w-6 sm:w-8" />
+              <ChevronLeft className="w-6 h-6" />
             </button>
             
-            {/* Image Container */}
+            <button 
+              className="absolute right-6 top-1/2 -translate-y-1/2 text-white hover:text-white/80 transition-colors z-50 bg-black/50 p-2 rounded-full"
+              onClick={(e) => {
+                e.stopPropagation();
+                selectedImage !== null && setSelectedImage(
+                  (selectedImage + 1) % filteredPhotos.length
+                );
+              }}
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+            
+            {/* Image Display */}
             <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="relative w-full max-w-7xl max-h-[85vh]"
+              className="relative max-w-[90vw] max-h-[85vh] overflow-hidden"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3 }}
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Main Image */}
-              <div className="relative w-full max-h-[85vh] flex items-center justify-center">
-                <Image
-                  src={filteredPhotos[selectedImage].src}
-                  alt={filteredPhotos[selectedImage].alt}
-                  width={1920}
-                  height={1080}
-                  className="object-contain max-h-[85vh] max-w-full"
-                  priority
-                />
-              </div>
+              <Image
+                src={filteredPhotos[selectedImage].src}
+                alt={filteredPhotos[selectedImage].alt}
+                width={1920}
+                height={1080}
+                priority
+                className="w-auto h-auto max-w-full max-h-[85vh] object-contain"
+              />
               
-              {/* Image Caption */}
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="absolute bottom-0 left-0 right-0 text-center text-white p-6"
-              >
-                <div className="w-10 h-[1px] bg-[#BC9A6B] mx-auto mb-4"></div>
-                <p className="text-lg md:text-xl font-light tracking-wider mb-1 backdrop-blur-md bg-black/40 inline-block px-4 py-2 rounded">
-                  {filteredPhotos[selectedImage].alt}
-                </p>
-              </motion.div>
+              {/* Caption */}
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/50 text-white backdrop-blur-sm">
+                <p className="text-sm font-light tracking-wide">{filteredPhotos[selectedImage].alt}</p>
+              </div>
             </motion.div>
+            
+            {/* Image Counter */}
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/80 font-mono text-sm backdrop-blur-sm bg-black/40 px-4 py-2 rounded-full">
+              {selectedImage !== null ? `${selectedImage + 1} / ${filteredPhotos.length}` : ''}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

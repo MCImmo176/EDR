@@ -122,13 +122,13 @@ export default function DecouvrirPage() {
 
   const cultureEvents: Article[] = [
     {
-      title: "Forum Grimaldi",
-      description: "Centre de congrès accueillant le Festival International de la Télévision et d'autres événements exclusifs de la Principauté.",
+      title: t('enjoy.events.forumGrimaldi.title'),
+      description: t('enjoy.events.forumGrimaldi.description'),
       image: "/images/discover/grimaldi.png",
-      category: "Culture & Événements",
+      category: t('enjoy.events.forumGrimaldi.category'),
       comments: [
-        { icon: Building, text: "Architecture contemporaine" },
-        { icon: Star, text: "Événements prestigieux" }
+        { icon: Building, text: t('enjoy.events.forumGrimaldi.comments.architecture') },
+        { icon: Star, text: t('enjoy.events.forumGrimaldi.comments.events') }
       ]
     },
     {
@@ -143,166 +143,166 @@ export default function DecouvrirPage() {
       ]
     },
     {
-      title: "Top Marques Monaco",
-      description: "Salon de luxe où vous pourrez admirer et même essayer les hypercars, montres et yachts les plus exclusifs au monde.",
+      title: t('enjoy.events.topMarques.title'),
+      description: t('enjoy.events.topMarques.description'),
       image: "/images/discover/top_marques.png",
-      category: "Culture & Événements",
-      bestTime: "Juin chaque année",
+      category: t('enjoy.events.topMarques.category'),
+      bestTime: t('enjoy.events.topMarques.bestTime'),
       comments: [
-        { icon: Sparkles, text: "Expérience immersive" }
+        { icon: Sparkles, text: t('enjoy.events.topMarques.comments.experience') }
       ]
     },
     {
-      title: "Jumping International de Monte-Carlo",
-      description: "Compétition équestre prestigieuse sur le port Hercule attirant les meilleurs cavaliers mondiaux dans un cadre exceptionnel.",
+      title: t('enjoy.events.jumping.title'),
+      description: t('enjoy.events.jumping.description'),
       image: "/images/discover/jumping.png",
-      category: "Culture & Événements",
-      bestTime: "Juillet chaque année"
+      category: t('enjoy.events.jumping.category'),
+      bestTime: t('enjoy.events.jumping.bestTime')
     },
     {
-      title: "Monaco Yacht Show",
-      description: "Le rendez-vous incontournable du yachting de luxe, présentant les plus beaux navires et voiliers d'exception.",
+      title: t('enjoy.events.yachtShow.title'),
+      description: t('enjoy.events.yachtShow.description'),
       image: "/images/discover/yatch_show.png",
-      category: "Culture & Événements",
-      bestTime: "Septembre chaque année",
+      category: t('enjoy.events.yachtShow.category'),
+      bestTime: t('enjoy.events.yachtShow.bestTime'),
       comments: [
-        { icon: Star, text: "120+ superyachts exposés" }
+        { icon: Star, text: t('enjoy.events.yachtShow.comments.yachts') }
       ]
     },
     {
-      title: "E-Prix de Monaco",
-      description: "Course électrisante de Formule E sur le mythique circuit de Monaco, alliant innovation et tradition du sport automobile.",
+      title: t('enjoy.events.ePrix.title'),
+      description: t('enjoy.events.ePrix.description'),
       image: "/images/discover/e_prix.png",
-      category: "Culture & Événements",
-      bestTime: "Mai chaque année"
+      category: t('enjoy.events.ePrix.category'),
+      bestTime: t('enjoy.events.ePrix.bestTime')
     },
     {
-      title: "Concerts au Palais Princier",
-      description: "Soirées musicales d'exception dans la cour d'honneur du Palais sous les étoiles monégasques.",
+      title: t('enjoy.events.concerts.title'),
+      description: t('enjoy.events.concerts.description'),
       image: "/images/discover/concert_palais_princier.png",
-      category: "Culture & Événements",
-      bestTime: "Saison estivale"
+      category: t('enjoy.events.concerts.category'),
+      bestTime: t('enjoy.events.concerts.bestTime')
     }
   ];
 
   const sportsLoisirs: Article[] = [
     {
-      title: "Rolex Monte-Carlo Masters",
-      description: "Prestigieux tournoi de tennis sur terre battue au Monte-Carlo Country Club, avec vue imprenable sur la Méditerranée.",
+      title: t('enjoy.sports.monteCarloMasters.title'),
+      description: t('enjoy.sports.monteCarloMasters.description'),
       image: "/images/discover/newpiscine.JPG",
-      category: "Sport & Loisirs",
-      bestTime: "Avril chaque année"
+      category: t('enjoy.sports.monteCarloMasters.category'),
+      bestTime: t('enjoy.sports.monteCarloMasters.bestTime')
     },
     {
-      title: "Activités nautiques & sportives",
-      description: "Expériences sur-mesure organisées par notre conciergerie : golf, voilier privatisé, plongée ou paddle au lever du soleil.",
+      title: t('enjoy.sports.nautical.title'),
+      description: t('enjoy.sports.nautical.description'),
       image: "/images/discover/criquecapmartin.jpg",
-      category: "Sport & Loisirs",
-      difficulty: "Tous niveaux",
-      bestTime: "Sur réservation"
+      category: t('enjoy.sports.nautical.category'),
+      difficulty: t('enjoy.sports.nautical.difficulty'),
+      bestTime: t('enjoy.sports.nautical.bestTime')
     }
   ];
 
   const naturePaysages: Article[] = [
     {
-      title: "Jardin Exotique de Monaco",
-      description: "Collection spectaculaire de plantes succulentes avec vue panoramique sur la Principauté et grottes préhistoriques à explorer.",
+      title: t('enjoy.nature.exoticGarden.title'),
+      description: t('enjoy.nature.exoticGarden.description'),
       image: "/images/discover/jardin_exotique.png",
-      category: "Nature & Paysages",
-      duration: "1-2 heures",
-      bestTime: "Matinée"
+      category: t('enjoy.nature.exoticGarden.category'),
+      duration: t('enjoy.nature.exoticGarden.duration'),
+      bestTime: t('enjoy.nature.exoticGarden.bestTime')
     },
     {
-      title: "Le Rocher & le Palais Princier",
-      description: "Promontoire historique abritant le Palais Princier. Ne manquez pas la relève de la garde des Carabiniers du Prince.",
+      title: t('enjoy.nature.rock.title'),
+      description: t('enjoy.nature.rock.description'),
       image: "/images/discover/palais_princier.png",
-      category: "Nature & Paysages",
-      bestTime: "Relève de la garde à 11h55"
+      category: t('enjoy.nature.rock.category'),
+      bestTime: t('enjoy.nature.rock.bestTime')
     },
     {
-      title: "La Vallée des Merveilles",
-      description: "Site archéologique fascinant avec 40 000+ gravures rupestres datant de l'âge du Bronze, niché dans un paysage alpin grandiose.",
+      title: t('enjoy.nature.valley.title'),
+      description: t('enjoy.nature.valley.description'),
       image: "/images/discover/vallee_des_merveilles.png",
-      category: "Nature & Paysages",
-      difficulty: "Modérée à difficile",
-      duration: "Journée complète",
-      bestTime: "Été (juin-septembre)"
+      category: t('enjoy.nature.valley.category'),
+      difficulty: t('enjoy.nature.valley.difficulty'),
+      duration: t('enjoy.nature.valley.duration'),
+      bestTime: t('enjoy.nature.valley.bestTime')
     },
     {
-      title: "Crique secrète de Monaco",
-      description: "Plage confidentielle aux eaux turquoise accessible par un sentier discret ou par la mer, loin de l'agitation.",
+      title: t('enjoy.nature.secretCove.title'),
+      description: t('enjoy.nature.secretCove.description'),
       image: "/images/discover/criques_secretes.png",
-      category: "Nature & Paysages",
-      difficulty: "Facile",
-      bestTime: "Début de matinée"
+      category: t('enjoy.nature.secretCove.category'),
+      difficulty: t('enjoy.nature.secretCove.difficulty'),
+      bestTime: t('enjoy.nature.secretCove.bestTime')
     },
     {
-      title: "Les Joyaux de la Riviera",
-      description: "Découvrez la Baie de Villefranche, Beaulieu-sur-Mer et les jardins du Cap Martin lors d'une excursion panoramique.",
+      title: t('enjoy.nature.rivieraJewels.title'),
+      description: t('enjoy.nature.rivieraJewels.description'),
       image: "/images/discover/baie_villefranche.png",
-      category: "Nature & Paysages",
-      duration: "Demi-journée",
-      bestTime: "Fin d'après-midi"
+      category: t('enjoy.nature.rivieraJewels.category'),
+      duration: t('enjoy.nature.rivieraJewels.duration'),
+      bestTime: t('enjoy.nature.rivieraJewels.bestTime')
     }
   ];
 
   const villagesArtVivre: Article[] = [
     {
-      title: "Roquebrune-Cap-Martin",
-      description: "Village médiéval authentique avec château du Xe siècle et olivier millénaire, plus vieux spécimen d'Europe.",
+      title: t('enjoy.villages.roquebrune.title'),
+      description: t('enjoy.villages.roquebrune.description'),
       image: "/images/discover/DJI_0017.JPG",
-      category: "Villages & Art de Vivre",
-      duration: "2 heures",
-      bestTime: "Déjeuner dans le village"
+      category: t('enjoy.villages.roquebrune.category'),
+      duration: t('enjoy.villages.roquebrune.duration'),
+      bestTime: t('enjoy.villages.roquebrune.bestTime')
     },
     {
-      title: "Èze, le nid d'aigle",
-      description: "Village perché offrant une vue spectaculaire, avec ruelles pavées, boutiques d'artisans et le célèbre Jardin Exotique.",
+      title: t('enjoy.villages.eze.title'),
+      description: t('enjoy.villages.eze.description'),
       image: "/images/discover/eze.png",
-      category: "Villages & Art de Vivre",
-      difficulty: "Montée raide",
-      bestTime: "Lever de soleil"
+      category: t('enjoy.villages.eze.category'),
+      difficulty: t('enjoy.villages.eze.difficulty'),
+      bestTime: t('enjoy.villages.eze.bestTime')
     },
     {
-      title: "Saint-Paul de Vence",
-      description: "Musée à ciel ouvert abritant galeries prestigieuses et la Fondation Maeght. Ne manquez pas La Colombe d'Or et ses œuvres d'art.",
+      title: t('enjoy.villages.saintPaul.title'),
+      description: t('enjoy.villages.saintPaul.description'),
       image: "/images/discover/st_paul_de_vence.png",
-      category: "Villages & Art de Vivre",
-      duration: "Demi-journée",
-      bestTime: "Après-midi"
+      category: t('enjoy.villages.saintPaul.category'),
+      duration: t('enjoy.villages.saintPaul.duration'),
+      bestTime: t('enjoy.villages.saintPaul.bestTime')
     },
     {
-      title: "Mougins",
-      description: "Village pittoresque devenu la Mecque de la gastronomie française, avec restaurants étoilés et ateliers d'artistes.",
+      title: t('enjoy.villages.mougins.title'),
+      description: t('enjoy.villages.mougins.description'),
       image: "/images/discover/beaulieu.jpg",
-      category: "Villages & Art de Vivre",
-      bestTime: "Dîner gastronomique"
+      category: t('enjoy.villages.mougins.category'),
+      bestTime: t('enjoy.villages.mougins.bestTime')
     },
     {
-      title: "Saint-Tropez",
-      description: "De votre villa, rejoignez ce village mythique en hélicoptère ou yacht. Flânez sur le port et profitez des plages de Pampelonne.",
+      title: t('enjoy.villages.saintTropez.title'),
+      description: t('enjoy.villages.saintTropez.description'),
       image: "/images/discover/cou.png",
-      category: "Villages & Art de Vivre",
-      duration: "Journée complète",
-      bestTime: "Arrivée par la mer"
+      category: t('enjoy.villages.saintTropez.category'),
+      duration: t('enjoy.villages.saintTropez.duration'),
+      bestTime: t('enjoy.villages.saintTropez.bestTime')
     }
   ];
 
   const premiumExperiences: Article[] = [
     {
-      title: "Transferts héliportés",
-      description: "Liaison directe avec l'aéroport de Nice en 7 minutes ou excursions panoramiques pour découvrir la Côte d'Azur vue du ciel.",
+      title: t('enjoy.premium.helicopter.title'),
+      description: t('enjoy.premium.helicopter.description'),
       image: "/images/discover/DJI_0017.JPG",
-      category: "Transferts & Expériences Premium",
-      duration: "7min depuis Nice",
-      bestTime: "Jour clair"
+      category: t('enjoy.premium.helicopter.category'),
+      duration: t('enjoy.premium.helicopter.duration'),
+      bestTime: t('enjoy.premium.helicopter.bestTime')
     },
     {
-      title: "Expériences nautiques",
-      description: "Croisière privée au coucher du soleil, excursion vers les îles de Lérins ou transfert VIP vers les destinations côtières exclusives.",
+      title: t('enjoy.premium.nautical.title'),
+      description: t('enjoy.premium.nautical.description'),
       image: "/images/discover/ile_de_lerons.png",
-      category: "Transferts & Expériences Premium",
-      bestTime: "Crépuscule"
+      category: t('enjoy.premium.nautical.category'),
+      bestTime: t('enjoy.premium.nautical.bestTime')
     }
   ];
 
@@ -314,7 +314,7 @@ export default function DecouvrirPage() {
     { code: "nature-paysages", title: t('enjoy.categories.nature'), icon: Mountain },
     { code: "premium-experiences", title: t('enjoy.categories.premium'), icon: Compass }
   ];
-
+  
   const allArticles = [
     ...cultureEvents.map(event => ({ ...event, category: "culture-monaco" })),
     ...sportsLoisirs.map(event => ({ ...event, category: "sport-loisirs" })),
@@ -386,7 +386,7 @@ export default function DecouvrirPage() {
           <div className="relative h-full w-full" style={{ paddingBottom: '56.25%' }}>
             <iframe
               src="https://www.youtube.com/embed/KC_DhNv3iM4?autoplay=1&mute=1&loop=1&playlist=KC_DhNv3iM4&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0"
-              title="Vidéo découvrir"
+              title={t('discover.videoTitle')}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -409,8 +409,8 @@ export default function DecouvrirPage() {
                   transition={{ duration: 1.2, delay: 0.3 }}
                   className="text-white text-6xl md:text-7xl font-light tracking-wider"
                 >
-                  L'expérience<br />
-                  <span className="font-extralight tracking-wide">ciel et mer</span>
+                  {t('luxuryText.villa.line1')}<br />
+                  <span className="font-extralight tracking-wide">{t('villa.hero.subtitle')}</span>
                 </motion.h1>
                 <motion.div 
                   initial={{ width: 0 }}
@@ -427,7 +427,7 @@ export default function DecouvrirPage() {
                 className="mt-6 max-w-xl"
               >
                 <p className="text-white/90 text-lg md:text-xl font-light leading-relaxed tracking-wide">
-                  Profitez des hauteurs de la Côte d'Azur, un havre de paix avec vue imprenable sur la Méditerranée.
+                  {t('discover.hero.subtitle')}
                 </p>
               </motion.div>
               
@@ -443,7 +443,7 @@ export default function DecouvrirPage() {
                   className="relative bg-[#b7a66b] text-white border-2 border-[#b7a66b] rounded-lg overflow-hidden group hover:bg-white hover:text-[#b7a66b] transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-[#b7a66b]/20 hover:-translate-y-1 text-lg px-8 py-4"
                 >
                   <Link href="/contact">
-                    <span className="relative z-10 tracking-wider font-medium">Réserver maintenant</span>
+                    <span className="relative z-10 tracking-wider font-medium">{t('common.bookNow')}</span>
                   </Link>
                 </Button>
               </motion.div>
@@ -456,7 +456,7 @@ export default function DecouvrirPage() {
             transition={{ delay: 2.5, duration: 1 }}
             className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
           >
-            <span className="text-white/70 text-sm uppercase tracking-[0.2em] mb-2 font-light">Découvrir plus</span>
+            <span className="text-white/70 text-sm uppercase tracking-[0.2em] mb-2 font-light">{t('villa.hero.scrollText')}</span>
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}

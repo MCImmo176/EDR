@@ -808,6 +808,27 @@
       },
       "bookButton": "Prenota la tua esperienza",
       "category": "Esperienza unica"
+    },
+    "gallery": {
+      "title": "Galleria",
+      "subtitle": "Scopri l'eleganza e il lusso delle Étoiles du Rocher",
+      "description": "Immergiti nell'atmosfera unica degli spazi: suite illuminate dalla luce naturale, piscina sospesa sopra il mare, rooftop con accenti poetici...",
+      "videoTitle": "Video galleria",
+      "hero": {
+        "title": "L'esperienza",
+        "subtitle": "cielo e mare"
+      },
+      "heroDescription": "Una collezione di immagini esclusive della nostra proprietà eccezionale che domina il Mediterraneo.",
+      "scrollText": "Scopri di più",
+      "ctaTitle": "Scopri l'esperienza unica della nostra proprietà",
+      "ctaButton": "Prenota il tuo soggiorno",
+      "categories": {
+        "all": "Tutto",
+        "suites": "Camere",
+        "interior": "Interno",
+        "exterior": "Esterno",
+        "views": "Viste"
+      }
     }
   }
 }

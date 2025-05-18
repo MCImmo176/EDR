@@ -201,13 +201,13 @@
         }
       },
       "spaces": {
-        "title": "Espaces conçus pour inspirer",
-        "description": "Chaque pièce des Étoiles du Rocher a été pensée pour mêler confort feutré, lignes délicates et instants mémorables.",
+        "title": "Découvrez nos espaces",
         "subtitle": "Chaque espace des Étoiles du Rocher a été conçu pour allier confort subtil, lignes délicates et moments mémorables.",
+        "galleryButton": "Accéder à la galerie",
         "living": {
-          "title": "Salon baigné de lumière",
-          "description": "Vaste ouverture sur la Méditerranée.",
-          "alt": "Salon spacieux avec vue panoramique"
+          "title": "Espace de vie",
+          "description": "Un espace convivial avec vue panoramique sur la Méditerranée",
+          "alt": "Salon lumineux avec vue panoramique sur la Méditerranée"
         },
         "living2": {
           "title": "Salon ouvert et lumineux",
@@ -332,6 +332,37 @@
         "interior": "Intérieur",
         "exterior": "Extérieur",
         "view": "Vue"
+      },
+      "exterior": {
+        "alt1": "Façade de la villa côté mer",
+        "alt2": "Jardin méditerranéen et terrasse",
+        "alt3": "Piscine à débordement vue mer",
+        "alt4": "Entrée principale de la villa",
+        "alt5": "Vue panoramique sur la baie",
+        "alt6": "Terrasse ombragée avec salon d'été"
+      },
+      "suites": {
+        "alt1": "Suite parentale lumineuse",
+        "alt2": "Suite double avec vue jardin",
+        "alt3": "Suite cosy avec balcon",
+        "alt4": "Suite contemporaine",
+        "alt5": "Suite familiale spacieuse",
+        "alt6": "Suite avec lit king size",
+        "alt7": "Suite raffinée",
+        "alt8": "Suite avec ambiance zen"
+      },
+      "interior": {
+        "alt1": "Salon spacieux et lumineux",
+        "alt2": "Salle à manger élégante",
+        "alt3": "Cuisine moderne toute équipée",
+        "alt4": "Salle de bain design",
+        "alt5": "Salon TV",
+        "alt6": "Dressing moderne"
+      },
+      "views": {
+        "alt1": "Coucher de soleil sur la mer",
+        "alt2": "Vue sur la baie au crépuscule",
+        "alt3": "Panorama méditerranéen"
       }
     },
     "surroundings": {
@@ -374,31 +405,47 @@
     "discoverButton": "Découvrir la villa"
   },
   "contact": {
-    "title": "Contact",
+    "videoTitle": "Vidéo contact villa",
+    "title": "Les Étoiles du Rocher",
     "subtitle": "Nous sommes à votre disposition",
-    "form": {
-      "firstName": "Prénom",
-      "lastName": "Nom",
-      "email": "Email",
-      "emailPlaceholder": "Votre adresse email",
-      "phone": "Téléphone",
-      "phonePlaceholder": "Votre numéro de téléphone",
-      "message": "Message",
-      "messagePlaceholder": "Votre message",
+    "phone": "+33 6 XX XX XX XX",
+    "email": "contact@lesetoilesdurocher.com",
+    "address": "Roquebrune-Cap-Martin, France",
+    "buttons": {
+      "bookStay": "Réservez votre séjour",
+      "infoRequest": "Demande d'informations",
+      "back": "Retour",
       "submit": "Envoyer",
-      "success": "Message envoyé avec succès",
-      "successDetail": "Nous vous répondrons dans les plus brefs délais.",
+      "sending": "Envoi en cours...",
+      "sendMessage": "Envoyer un message"
+    },
+    "form": {
+      "firstName": "Nom",
+      "firstNamePlaceholder": "Votre nom",
+      "lastName": "Prénom",
+      "lastNamePlaceholder": "Votre prénom",
+      "email": "Email",
+      "emailPlaceholder": "Votre email",
       "countryCode": {
         "label": "Indicatif",
         "france": "France",
         "code": "+33"
+      },
+      "phone": "Téléphone",
+      "phonePlaceholder": "Votre numéro de téléphone",
+      "message": "Message",
+      "messagePlaceholder": "Votre message",
+      "success": "Message envoyé !",
+      "successDetail": "Nous vous recontacterons dans les plus brefs délais.",
+      "errors": {
+        "firstName": "Le prénom doit contenir au moins 2 caractères",
+        "name": "Le nom doit contenir au moins 2 caractères",
+        "email": "Veuillez entrer une adresse e-mail valide",
+        "countryCode": "Veuillez sélectionner un indicatif",
+        "phone": "Veuillez entrer un numéro de téléphone valide",
+        "message": "Le message doit contenir au moins 10 caractères",
+        "submitError": "Une erreur est survenue lors de l'envoi du message. Veuillez réessayer."
       }
-    },
-    "buttons": {
-      "bookStay": "Réserver votre séjour",
-      "requestInfo": "Demander des informations",
-      "back": "Retour",
-      "sendMessage": "Envoyer un message"
     },
     "info": {
       "address": "Roquebrune-Cap-Martin, France",
@@ -418,11 +465,22 @@
   "discover": {
     "title": "Découvrir",
     "subtitle": "Explorez les merveilles de la Côte d'Azur depuis Les Étoiles du Rocher.",
+    "luxuryText": {
+      "villa": {
+        "line1": "L'expérience ciel et mer"
+      }
+    },
+    "villa": {
+      "hero": {
+        "subtitle": "Suspendue entre ciel et mer, la Villa Les Étoiles du Rocher vous convie à savourer la douceur de la Côte d'Azur",
+        "scrollText": "Découvrir plus"
+      }
+    },
     "hero": {
-      "title": "L'expérience ciel et mer",
-      "subtitle": "Profitez des hauteurs de la Côte d'Azur, un havre de paix avec vue imprenable sur la Méditerranée.",
-      "bookNow": "Réserver maintenant",
-      "scrollDown": "Découvrir plus"
+      "subtitle": "Profitez des hauteurs de la Côte d'Azur, un havre de paix avec vue imprenable sur la Méditerranée."
+    },
+    "common": {
+      "bookNow": "Réserver maintenant"
     },
     "enjoy": {
       "title": "Profitez",
@@ -433,7 +491,7 @@
         "allPlaces": "Tous les lieux",
         "fortAntoine": {
           "title": "Balade nocturne au Fort Antoine",
-          "description": "Théâtre en plein air situé sur les hauteurs de Monaco, le Fort Antoine accueille des représentations artistiques intimistes sous les étoiles. Profitez d'un spectacle dans ce lieu chargé d'histoire, face à la mer, dans une ambiance unique mêlant culture, patrimoine et magie nocturne.",
+          "description": "Le Fort Antoine accueille des représentations artistiques sous les étoiles. Profitez d'un spectacle dans une ambiance unique.",
           "date": "Soirées d'été",
           "type": "Culture & Événements",
           "comments": {
@@ -464,6 +522,154 @@
           "description": "Admirez les voitures de collection parcourant les routes sinueuses de l'arrière-pays lors de cette compétition prestigieuse.",
           "date": "Janvier chaque année",
           "type": "Événement sportif"
+        },
+        "forumGrimaldi": {
+          "title": "Forum Grimaldi",
+          "description": "Centre de congrès accueillant le Festival International de la Télévision et d'autres événements exclusifs de la Principauté.",
+          "category": "Culture & Événements",
+          "comments": {
+            "architecture": "Architecture contemporaine",
+            "events": "Événements prestigieux"
+          }
+        },
+        "topMarques": {
+          "title": "Top Marques Monaco",
+          "description": "Salon de luxe où vous pourrez admirer et même essayer les hypercars, montres et yachts les plus exclusifs au monde.",
+          "category": "Culture & Événements",
+          "bestTime": "Juin chaque année",
+          "comments": {
+            "experience": "Expérience immersive"
+          }
+        },
+        "jumping": {
+          "title": "Jumping International de Monte-Carlo",
+          "description": "Compétition équestre prestigieuse sur le port Hercule attirant les meilleurs cavaliers mondiaux dans un cadre exceptionnel.",
+          "category": "Culture & Événements",
+          "bestTime": "Juillet chaque année"
+        },
+        "yachtShow": {
+          "title": "Monaco Yacht Show",
+          "description": "Le rendez-vous incontournable du yachting de luxe, présentant les plus beaux navires et voiliers d'exception.",
+          "category": "Culture & Événements",
+          "bestTime": "Septembre chaque année",
+          "comments": {
+            "yachts": "120+ superyachts exposés"
+          }
+        },
+        "ePrix": {
+          "title": "E-Prix de Monaco",
+          "description": "Course électrisante de Formule E sur le mythique circuit de Monaco, alliant innovation et tradition du sport automobile.",
+          "category": "Culture & Événements",
+          "bestTime": "Mai chaque année"
+        },
+        "concerts": {
+          "title": "Concerts au Palais Princier",
+          "description": "Soirées musicales d'exception dans la cour d'honneur du Palais sous les étoiles monégasques.",
+          "category": "Culture & Événements",
+          "bestTime": "Saison estivale"
+        }
+      },
+      "sports": {
+        "monteCarloMasters": {
+          "title": "Rolex Monte-Carlo Masters",
+          "description": "Prestigieux tournoi de tennis sur terre battue au Monte-Carlo Country Club, avec vue imprenable sur la Méditerranée.",
+          "category": "Sport & Loisirs",
+          "bestTime": "Avril chaque année"
+        },
+        "nautical": {
+          "title": "Activités nautiques & sportives",
+          "description": "Expériences sur-mesure organisées par notre conciergerie : golf, voilier privatisé, plongée ou paddle au lever du soleil.",
+          "category": "Sport & Loisirs",
+          "difficulty": "Tous niveaux",
+          "bestTime": "Sur réservation"
+        }
+      },
+      "nature": {
+        "exoticGarden": {
+          "title": "Jardin Exotique de Monaco",
+          "description": "Collection spectaculaire de plantes succulentes avec vue panoramique sur la Principauté et grottes préhistoriques à explorer.",
+          "category": "Nature & Paysages",
+          "duration": "1-2 heures",
+          "bestTime": "Matinée"
+        },
+        "rock": {
+          "title": "Le Rocher & le Palais Princier",
+          "description": "Promontoire historique abritant le Palais Princier. Ne manquez pas la relève de la garde des Carabiniers du Prince.",
+          "category": "Nature & Paysages",
+          "bestTime": "Relève de la garde à 11h55"
+        },
+        "valley": {
+          "title": "La Vallée des Merveilles",
+          "description": "Site archéologique fascinant avec 40 000+ gravures rupestres datant de l'âge du Bronze, niché dans un paysage alpin grandiose.",
+          "category": "Nature & Paysages",
+          "difficulty": "Modérée à difficile",
+          "duration": "Journée complète",
+          "bestTime": "Été (juin-septembre)"
+        },
+        "secretCove": {
+          "title": "Crique secrète de Monaco",
+          "description": "Plage confidentielle aux eaux turquoise accessible par un sentier discret ou par la mer, loin de l'agitation.",
+          "category": "Nature & Paysages",
+          "difficulty": "Facile",
+          "bestTime": "Début de matinée"
+        },
+        "rivieraJewels": {
+          "title": "Les Joyaux de la Riviera",
+          "description": "Découvrez la Baie de Villefranche, Beaulieu-sur-Mer et les jardins du Cap Martin lors d'une excursion panoramique.",
+          "category": "Nature & Paysages",
+          "duration": "Demi-journée",
+          "bestTime": "Fin d'après-midi"
+        }
+      },
+      "villages": {
+        "roquebrune": {
+          "title": "Roquebrune-Cap-Martin",
+          "description": "Village médiéval authentique avec château du Xe siècle et olivier millénaire, plus vieux spécimen d'Europe.",
+          "category": "Villages & Art de Vivre",
+          "duration": "2 heures",
+          "bestTime": "Déjeuner dans le village"
+        },
+        "eze": {
+          "title": "Èze, le nid d'aigle",
+          "description": "Village perché offrant une vue spectaculaire, avec ruelles pavées, boutiques d'artisans et le célèbre Jardin Exotique.",
+          "category": "Villages & Art de Vivre",
+          "difficulty": "Montée raide",
+          "bestTime": "Lever de soleil"
+        },
+        "saintPaul": {
+          "title": "Saint-Paul de Vence",
+          "description": "Musée à ciel ouvert abritant galeries prestigieuses et la Fondation Maeght. Ne manquez pas La Colombe d'Or et ses œuvres d'art.",
+          "category": "Villages & Art de Vivre",
+          "duration": "Demi-journée",
+          "bestTime": "Après-midi"
+        },
+        "mougins": {
+          "title": "Mougins",
+          "description": "Village pittoresque devenu la Mecque de la gastronomie française, avec restaurants étoilés et ateliers d'artistes.",
+          "category": "Villages & Art de Vivre",
+          "bestTime": "Dîner gastronomique"
+        },
+        "saintTropez": {
+          "title": "Saint-Tropez",
+          "description": "De votre villa, rejoignez ce village mythique en hélicoptère ou yacht. Flânez sur le port et profitez des plages de Pampelonne.",
+          "category": "Villages & Art de Vivre",
+          "duration": "Journée complète",
+          "bestTime": "Arrivée par la mer"
+        }
+      },
+      "premium": {
+        "helicopter": {
+          "title": "Transferts héliportés",
+          "description": "Liaison directe avec l'aéroport de Nice en 7 minutes ou excursions panoramiques pour découvrir la Côte d'Azur vue du ciel.",
+          "category": "Transferts & Expériences Premium",
+          "duration": "7min depuis Nice",
+          "bestTime": "Jour clair"
+        },
+        "nautical": {
+          "title": "Expériences nautiques",
+          "description": "Croisière privée au coucher du soleil, excursion vers les îles de Lérins ou transfert VIP vers les destinations côtières exclusives.",
+          "category": "Transferts & Expériences Premium",
+          "bestTime": "Crépuscule"
         }
       },
       "secrets": {
@@ -781,12 +987,11 @@
         "people": "Jusqu'à 10 personnes",
         "pool": "Piscine 15 m × 6 m",
         "parking": "8 places de parking",
-        "wifi": "Wi-Fi ultra-rapide",
         "automation": "Domotique complète",
-        "security": "Sécurité permanente"
+        "security": "Sécurité permanente",
+        "wifi": "Wi-Fi ultra-rapide"
       },
-      "allEquipments": "Voir tous nos équipements",
-      "category": "Caractéristiques"
+      "allEquipments": "Voir tous nos équipements"
     },
     "experience": {
       "title": "EXPÉRIENCE SIGNATURE : POURQUOI LES ÉTOILES DU ROCHER",
@@ -810,5 +1015,26 @@
       "bookButton": "Réservez votre expérience",
       "category": "Expérience unique"
     }
+  },
+  "gallery": {
+    "title": "Galerie",
+    "subtitle": "Découvrez l'élégance et le luxe des Étoiles du Rocher",
+    "description": "Plongez dans l'atmosphère unique des espaces : suites baignées de lumière, piscine suspendue au-dessus de la mer, rooftop aux accents poétiques…",
+    "videoTitle": "Vidéo galerie",
+    "hero": {
+      "title": "L'expérience",
+      "subtitle": "ciel et mer"
+    },
+    "heroDescription": "Une collection d'images exclusives de notre propriété d'exception surplombant la Méditerranée.",
+    "scrollText": "Découvrir plus",
+    "ctaTitle": "Découvrez l'expérience unique de notre propriété",
+    "ctaButton": "Réserver votre séjour",
+    "categories": {
+      "all": "Tout",
+      "suites": "Chambres",
+      "interior": "Intérieur",
+      "exterior": "Extérieur",
+      "views": "Vues"
+    }
   }
-} 
+}
