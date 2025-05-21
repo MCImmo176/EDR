@@ -477,7 +477,9 @@
       }
     },
     "hero": {
-      "subtitle": "Enjoy the heights of the French Riviera, a haven of peace with a breathtaking view of the Mediterranean."
+      "title": "Discover a unique way of life",
+      "description": "Explore the refined world of our villa, its history, its ambiance, and the treasures of the surrounding French Riviera.",
+      "cta": "DISCOVER MORE"
     },
     "common": {
       "bookNow": "Book now"

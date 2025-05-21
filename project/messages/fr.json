@@ -477,7 +477,9 @@
       }
     },
     "hero": {
-      "subtitle": "Profitez des hauteurs de la Côte d'Azur, un havre de paix avec vue imprenable sur la Méditerranée."
+      "title1": "À la découverte d'un art de vivre unique",
+      "title2": "Explorez l'univers raffiné de notre villa, son histoire, son ambiance et les trésors de la Côte d'Azur environnante.",
+      "subtitle": ""
     },
     "common": {
       "bookNow": "Réserver maintenant"

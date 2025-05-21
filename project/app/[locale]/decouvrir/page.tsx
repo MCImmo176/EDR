@@ -408,8 +408,8 @@ export default function DecouvrirPage() {
                 transition={{ duration: 1.2, delay: 0.3 }}
                 className="text-white text-6xl md:text-7xl font-light tracking-wider"
               >
-                L'expérience<br />
-                <span className="font-extralight tracking-wide">ciel et mer</span>
+                {t('hero.title')}
+                {t('hero.subtitle') && <><br /><span className="font-extralight tracking-wide">{t('hero.subtitle')}</span></>}
               </motion.h1>
               
               <motion.div 
@@ -426,8 +426,7 @@ export default function DecouvrirPage() {
                 className="my-8"
               >
                 <p className="text-white/90 text-xl md:text-2xl font-light leading-relaxed tracking-wider">
-                  Une collection d'images exclusives de notre propriété<br />
-                  d'exception surplombant la Méditerranée.
+                  {t('hero.description')}
                 </p>
               </motion.div>
               
@@ -442,7 +441,7 @@ export default function DecouvrirPage() {
                   className="bg-transparent text-white hover:bg-white hover:text-[#b7a66b] border-2 border-white transition-all duration-500 relative overflow-hidden group uppercase tracking-[0.2em] text-sm py-4 px-8 rounded-none"
                 >
                   <a href="#discover-content">
-                    <span className="relative z-10">Découvrir plus</span>
+                    <span className="relative z-10">{t('hero.cta')}</span>
                   </a>
                 </Button>
               </motion.div>
