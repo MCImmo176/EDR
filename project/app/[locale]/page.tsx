@@ -365,7 +365,7 @@ export default function Home() {
                 description: t('gallery.mainSuite.description')
               },
               {
-                src: "/images/gallery/interieur/3.JPEG",
+                src: "/images/gallery/interieur/13.png",
                 alt: t('gallery.livingRoom.title'),
                 caption: t('gallery.livingRoom.title'),
                 category: tCommon('labels.interior'),
