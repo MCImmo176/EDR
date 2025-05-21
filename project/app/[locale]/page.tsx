@@ -8,6 +8,7 @@ import { ArrowRight, Sun, Mountain, Landmark, ShoppingBag, Map, Leaf, Flag, Scho
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
+import { MobileWrapper } from '@/components/mobile/MobileWrapper';
 
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
@@ -125,6 +126,8 @@ export default function Home() {
 
   return (
     <>
+      <MobileWrapper>{null}</MobileWrapper>
+      {/* Contenu desktop (sera masqué sur mobile par MobileWrapper) */}
       {/* Section Hero améliorée */}
       <section className="relative h-screen w-full overflow-hidden">
         <motion.div 

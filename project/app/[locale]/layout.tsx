@@ -12,7 +12,6 @@ import { ThemeProvider } from '@/components/providers/theme-provider';
 import { LanguageProvider } from '@/components/providers/language-provider';
 import { ContactFormProvider } from "@/components/providers/contact-form-provider";
 import { ContactForm } from "@/components/contact-form";
-import { MobileWrapper } from '@/components/mobile/MobileWrapper';
 
 const playfair = Playfair_Display({ 
   subsets: ['latin'],
@@ -61,12 +60,10 @@ export default async function LocaleLayout({
           <LanguageProvider>
             <NextIntlClientProvider locale={locale} messages={messages}>
               <ContactFormProvider>
-                <MobileWrapper>
-                  <Header />
-                  <main className="flex-grow">{children}</main>
-                  <Footer />
-                  <ContactForm />
-                </MobileWrapper>
+                <Header />
+                <main className="flex-grow">{children}</main>
+                <Footer />
+                <ContactForm />
               </ContactFormProvider>
             </NextIntlClientProvider>
           </LanguageProvider>
