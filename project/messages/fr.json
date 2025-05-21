@@ -308,11 +308,23 @@
         }
       },
       "actionButton": "Découvrez la villa",
-      "scrollText": "Découvrir plus"
+      "scrollText": "Découvrir plus",
+      "introduction": {
+        "title": "Un havre de paix au bord de la Méditerranée",
+        "description": "Découvrez chaque détail de notre villa d'exception, conçue pour marier luxe discret et vues spectaculaires sur la mer."
+      }
     },
     "gallery": {
       "title": "Galerie",
-      "description": "Plongez dans l'atmosphère unique des espaces : suites baignées de lumière, piscine suspendue au-dessus de la mer, rooftop aux accents poétiques…",
+      "subtitle": "L'expérience en images",
+      "description": "Laissez-vous inspirer par une sélection de clichés capturant l'atmosphère unique des lieux",
+      "videoTitle": "Vidéo galerie",
+      "hero": {
+        "title": "L'expérience en images",
+        "subtitle": "",
+        "description": "Laissez-vous inspirer par une sélection de clichés capturant l'atmosphère unique des lieux"
+      },
+      "heroDescription": "Laissez-vous inspirer par une sélection de clichés capturant l'atmosphère unique des lieux",
       "mainSuite": {
         "title": "Suite principale",
         "description": "Parenthèse sereine, baignée de clarté, avec vue sur l'eau et salle de bains privative."
@@ -363,6 +375,10 @@
         "alt1": "Coucher de soleil sur la mer",
         "alt2": "Vue sur la baie au crépuscule",
         "alt3": "Panorama méditerranéen"
+      },
+      "introduction": {
+        "title": "Plongez dans l'élégance méditerranéenne",
+        "description": "Une sélection de clichés capturant l'essence de notre demeure et la beauté naturelle de son environnement."
       }
     },
     "surroundings": {
@@ -464,7 +480,13 @@
   },
   "discover": {
     "title": "Découvrir",
-    "subtitle": "Explorez les merveilles de la Côte d'Azur depuis Les Étoiles du Rocher.",
+    "subtitle": "Les merveilles de la Côte d'Azur",
+    "hero": {
+      "title": "Les merveilles de la Côte d'Azur",
+      "subtitle": "",
+      "description": "Partez à la rencontre des plus belles expériences que la région a à offrir : plages secrètes, villages perchés, balades en mer",
+      "cta": "Réserver maintenant"
+    },
     "luxuryText": {
       "villa": {
         "line1": "L'expérience ciel et mer"
@@ -475,11 +497,6 @@
         "subtitle": "Suspendue entre ciel et mer, la Villa Les Étoiles du Rocher vous convie à savourer la douceur de la Côte d'Azur",
         "scrollText": "Découvrir plus"
       }
-    },
-    "hero": {
-      "title1": "À la découverte d'un art de vivre unique",
-      "title2": "Explorez l'univers raffiné de notre villa, son histoire, son ambiance et les trésors de la Côte d'Azur environnante.",
-      "subtitle": ""
     },
     "common": {
       "bookNow": "Réserver maintenant"
@@ -746,7 +763,11 @@
       "title": "Votre expérience unique sur la Côte d'Azur",
       "description": "Profitez de tous ces lieux d'exception depuis votre villa de luxe aux Étoiles du Rocher. Notre équipe de conciergerie se tient à votre disposition pour organiser vos excursions et créer des moments inoubliables sur mesure.",
       "bookNow": "Réserver votre séjour",
-      "exploreGallery": "Explorer notre galerie"
+      "exploreGallery": "Explorer notre galerie",
+      "introduction": {
+        "title": "À la découverte d'un art de vivre unique",
+        "description": "Explorez l'univers raffiné de notre villa, son histoire, son ambiance et les trésors de la Côte d'Azur environnante."
+      }
     }
   },
   "footer": {
@@ -993,7 +1014,8 @@
         "security": "Sécurité permanente",
         "wifi": "Wi-Fi ultra-rapide"
       },
-      "allEquipments": "Voir tous nos équipements"
+      "allEquipments": "Voir tous nos équipements",
+      "category": "Catégorie de la propriété"
     },
     "experience": {
       "title": "EXPÉRIENCE SIGNATURE : POURQUOI LES ÉTOILES DU ROCHER",
@@ -1020,14 +1042,15 @@
   },
   "gallery": {
     "title": "Galerie",
-    "subtitle": "Découvrez l'élégance et le luxe des Étoiles du Rocher",
-    "description": "Plongez dans l'atmosphère unique des espaces : suites baignées de lumière, piscine suspendue au-dessus de la mer, rooftop aux accents poétiques…",
+    "subtitle": "L'expérience en images",
+    "description": "Laissez-vous inspirer par une sélection de clichés capturant l'atmosphère unique des lieux",
     "videoTitle": "Vidéo galerie",
     "hero": {
-      "title": "L'expérience",
-      "subtitle": "ciel et mer"
+      "title": "L'expérience en images",
+      "subtitle": "",
+      "description": "Laissez-vous inspirer par une sélection de clichés capturant l'atmosphère unique des lieux"
     },
-    "heroDescription": "Une collection d'images exclusives de notre propriété d'exception surplombant la Méditerranée.",
+    "heroDescription": "Laissez-vous inspirer par une sélection de clichés capturant l'atmosphère unique des lieux",
     "scrollText": "Découvrir plus",
     "ctaTitle": "Découvrez l'expérience unique de notre propriété",
     "ctaButton": "Réserver votre séjour",

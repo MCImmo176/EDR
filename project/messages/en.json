@@ -308,7 +308,11 @@
         }
       },
       "actionButton": "Discover the villa",
-      "scrollText": "Discover more"
+      "scrollText": "Discover more",
+      "introduction": {
+        "title": "A haven of peace overlooking the Mediterranean",
+        "description": "Discover every detail of our exceptional villa, designed to blend understated luxury with spectacular sea views."
+      }
     },
     "gallery": {
       "title": "Gallery",
@@ -363,6 +367,10 @@
         "alt1": "Sunset over the sea",
         "alt2": "View of the bay at dusk",
         "alt3": "Mediterranean panorama"
+      },
+      "introduction": {
+        "title": "Immerse yourself in Mediterranean elegance",
+        "description": "A curated selection of photographs capturing the soul of our home and the natural beauty that surrounds it."
       }
     },
     "surroundings": {
@@ -464,7 +472,13 @@
   },
   "discover": {
     "title": "Discover",
-    "subtitle": "Explore the wonders of the French Riviera from Les Étoiles du Rocher.",
+    "subtitle": "The Wonders of the French Riviera",
+    "hero": {
+      "title": "The Wonders of the French Riviera",
+      "subtitle": "",
+      "description": "Discover the most beautiful experiences the region has to offer: hidden beaches, hilltop villages, and sea excursions",
+      "cta": "Book now"
+    },
     "luxuryText": {
       "villa": {
         "line1": "The sky and sea experience"
@@ -475,11 +489,6 @@
         "subtitle": "Suspended between sky and sea, the Villa Les Étoiles du Rocher invites you to savor the sweetness of the French Riviera",
         "scrollText": "Discover more"
       }
-    },
-    "hero": {
-      "title": "Discover a unique way of life",
-      "description": "Explore the refined world of our villa, its history, its ambiance, and the treasures of the surrounding French Riviera.",
-      "cta": "DISCOVER MORE"
     },
     "common": {
       "bookNow": "Book now"
@@ -736,6 +745,10 @@
       "filters": {
         "placesCount": "{count} {count, plural, one {place} other {places}} in this category",
         "learnMore": "Learn more"
+      },
+      "introduction": {
+        "title": "Discover a unique way of life",
+        "description": "Explore the refined world of our villa—its story, its atmosphere, and the treasures of the surrounding French Riviera."
       }
     },
     "quote": {
@@ -840,7 +853,11 @@
       "experienceTitle": "The experience",
       "experienceSubtitle": "sky and sea",
       "subtitle": "Let yourself be enchanted by the gold of morning rays, the discreet song of pines, and the infinite horizon of the Mediterranean.",
-      "ctaButton": "Book now"
+      "ctaButton": "Book now",
+      "introduction": {
+        "title": "A haven of peace overlooking the Mediterranean",
+        "description": "Discover every detail of our exceptional villa, designed to blend understated luxury with spectacular sea views."
+      }
     },
     "spaces": {
       "title": "Spaces designed to inspire",
@@ -993,7 +1010,8 @@
         "security": "Permanent security",
         "wifi": "Ultra-fast Wi-Fi"
       },
-      "allEquipments": "See all our equipment"
+      "allEquipments": "See all our equipment",
+      "category": "Property category"
     },
     "experience": {
       "title": "SIGNATURE EXPERIENCE: WHY LES ÉTOILES DU ROCHER",
@@ -1020,14 +1038,15 @@
   },
   "gallery": {
     "title": "Gallery",
-    "subtitle": "Discover the elegance and luxury of Les Étoiles du Rocher",
-    "description": "Immerse yourself in the unique atmosphere of the spaces: suites bathed in light, pool suspended above the sea, rooftop with poetic accents...",
+    "subtitle": "The Experience in Pictures",
+    "description": "Let yourself be inspired by a selection of images capturing the unique atmosphere of the place",
     "videoTitle": "Gallery video",
     "hero": {
-      "title": "The experience",
-      "subtitle": "sky and sea"
+      "title": "The Experience in Pictures",
+      "subtitle": "",
+      "description": "Let yourself be inspired by a selection of images capturing the unique atmosphere of the place"
     },
-    "heroDescription": "An exclusive collection of images of our exceptional property overlooking the Mediterranean.",
+    "heroDescription": "Let yourself be inspired by a selection of images capturing the unique atmosphere of the place",
     "scrollText": "Discover more",
     "ctaTitle": "Discover the unique experience of our property",
     "ctaButton": "Book your stay",
@@ -1037,6 +1056,10 @@
       "interior": "Interior",
       "exterior": "Exterior",
       "views": "Views"
+    },
+    "introduction": {
+      "title": "Immerse yourself in Mediterranean elegance",
+      "description": "A curated selection of photographs capturing the soul of our home and the natural beauty that surrounds it."
     }
   }
 }

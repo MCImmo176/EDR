@@ -308,7 +308,11 @@
         }
       },
       "actionButton": "Scopri la villa",
-      "scrollText": "Scopri di più"
+      "scrollText": "Scopri di più",
+      "introduction": {
+        "title": "Un rifugio di pace affacciato sul Mediterraneo",
+        "description": "Scoprite ogni dettaglio della nostra villa esclusiva, pensata per unire lusso discreto e viste spettacolari sul mare."
+      }
     },
     "gallery": {
       "title": "Galleria",
@@ -363,6 +367,10 @@
         "alt1": "Tramonto sul mare",
         "alt2": "Vista sulla baia al crepuscolo",
         "alt3": "Panorama mediterraneo"
+      },
+      "introduction": {
+        "title": "Immergetevi nell'eleganza mediterranea",
+        "description": "Una selezione curata di immagini che catturano l'anima della nostra dimora e la bellezza naturale che la circonda."
       }
     },
     "surroundings": {
@@ -464,7 +472,7 @@
   },
   "discover": {
     "title": "Scoprire",
-    "subtitle": "Esplora le meraviglie della Costa Azzurra dalle Stelle della Roccia.",
+    "subtitle": "Le meraviglie della Costa Azzurra",
     "luxuryText": {
       "villa": {
         "line1": "L'esperienza cielo e mare"
@@ -477,9 +485,10 @@
       }
     },
     "hero": {
-      "title": "Alla scoperta di uno stile di vita unico",
-      "description": "Esplora l'universo raffinato della nostra villa, la sua storia, la sua atmosfera e i tesori della Costa Azzurra circostante.",
-      "cta": "SCOPRI DI PIÙ"
+      "title": "Le meraviglie della Costa Azzurra",
+      "subtitle": "",
+      "description": "Scoprite le esperienze più affascinanti che la regione ha da offrire: spiagge segrete, borghi arroccati, escursioni in mare",
+      "cta": "Prenota ora"
     },
     "common": {
       "bookNow": "Prenota ora"
@@ -736,6 +745,10 @@
       "filters": {
         "placesCount": "{count} {count, plural, one {luogo} other {luoghi}} in questa categoria",
         "learnMore": "Scopri di più"
+      },
+      "introduction": {
+        "title": "Scoprite un modo di vivere unico",
+        "description": "Esplorate l'universo raffinato della nostra villa: la sua storia, la sua atmosfera e i tesori della Costa Azzurra circostante."
       }
     },
     "quote": {
@@ -993,7 +1006,8 @@
         "security": "Sicurezza permanente",
         "wifi": "Wi-Fi ultra-veloce"
       },
-      "allEquipments": "Vedi tutte le nostre dotazioni"
+      "allEquipments": "Vedi tutte le nostre dotazioni",
+      "category": "Categoria della proprietà"
     },
     "experience": {
       "title": "ESPERIENZA FIRMA: PERCHÉ LE STELLE DELLA ROCCIA",
@@ -1020,14 +1034,15 @@
   },
   "gallery": {
     "title": "Galleria",
-    "subtitle": "Scopri l'eleganza e il lusso delle Stelle della Roccia",
-    "description": "Immergiti nell'atmosfera unica degli spazi: suite immerse nella luce, piscina sospesa sopra il mare, rooftop con accenti poetici...",
+    "subtitle": "L'esperienza in immagini",
+    "description": "Lasciatevi ispirare da una selezione di scatti che catturano l'atmosfera unica del luogo",
     "videoTitle": "Video galleria",
     "hero": {
-      "title": "L'esperienza",
-      "subtitle": "cielo e mare"
+      "title": "L'esperienza in immagini",
+      "subtitle": "",
+      "description": "Lasciatevi ispirare da una selezione di scatti che catturano l'atmosfera unica del luogo"
     },
-    "heroDescription": "Una collezione di immagini esclusive della nostra proprietà eccezionale che domina il Mediterraneo.",
+    "heroDescription": "Lasciatevi ispirare da una selezione di scatti che catturano l'atmosfera unica del luogo",
     "scrollText": "Scopri di più",
     "ctaTitle": "Scopri l'esperienza unica della nostra proprietà",
     "ctaButton": "Prenota il tuo soggiorno",
