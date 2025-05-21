@@ -196,7 +196,7 @@ export default function DecouvrirPage() {
     {
       title: t('enjoy.sports.nautical.title'),
       description: t('enjoy.sports.nautical.description'),
-      image: "/images/discover/criquecapmartin.jpg",
+      image: "/images/discover/nautique.jpg",
       category: t('enjoy.sports.nautical.category'),
       difficulty: t('enjoy.sports.nautical.difficulty'),
       bestTime: t('enjoy.sports.nautical.bestTime')
@@ -250,7 +250,7 @@ export default function DecouvrirPage() {
     {
       title: t('enjoy.villages.roquebrune.title'),
       description: t('enjoy.villages.roquebrune.description'),
-      image: "/images/discover/roquebrunecapmartin.png",
+      image: "/images/discover/roquebrunecapmartin.jpg",
       category: t('enjoy.villages.roquebrune.category'),
       duration: t('enjoy.villages.roquebrune.duration'),
       bestTime: t('enjoy.villages.roquebrune.bestTime')
@@ -292,7 +292,7 @@ export default function DecouvrirPage() {
     {
       title: t('enjoy.premium.helicopter.title'),
       description: t('enjoy.premium.helicopter.description'),
-      image: "/images/discover/DJI_0017.JPG",
+      image: "/images/discover/helicoptere.jpg",
       category: t('enjoy.premium.helicopter.category'),
       duration: t('enjoy.premium.helicopter.duration'),
       bestTime: t('enjoy.premium.helicopter.bestTime')
