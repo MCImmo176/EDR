@@ -358,7 +358,7 @@ export default function Home() {
           >
             {[
               {
-                src: "/images/gallery/chambres/8.jpeg",
+                src: "/images/gallery/chambres/8.JPEG",
                 alt: t('gallery.mainSuite.title'),
                 caption: t('gallery.mainSuite.title'),
                 category: tCommon('labels.room'),
