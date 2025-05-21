@@ -429,22 +429,6 @@ export default function DecouvrirPage() {
                   {t('hero.description')}
                 </p>
               </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 2, duration: 0.8 }}
-                className="mt-16"
-              >
-                <Button
-                  asChild
-                  className="bg-transparent text-white hover:bg-white hover:text-[#b7a66b] border-2 border-white transition-all duration-500 relative overflow-hidden group uppercase tracking-[0.2em] text-sm py-4 px-8 rounded-none"
-                >
-                  <a href="#discover-content">
-                    <span className="relative z-10">{t('hero.cta')}</span>
-                  </a>
-                </Button>
-              </motion.div>
             </div>
           </div>
           
@@ -731,13 +715,6 @@ export default function DecouvrirPage() {
                 viewport={{ once: true }}
                 className="flex flex-col sm:flex-row gap-4 justify-center"
               >
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-white bg-[#b7a66b] rounded-lg hover:bg-[#b7a66b]/90 transition-all duration-300 ease-in-out transform hover:scale-105 shadow-md"
-                >
-                  {t('cta.bookNow')}
-                </Link>
-                
                 <Link
                   href="/galerie"
                   className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-[#b7a66b] border-2 border-[#b7a66b] rounded-lg hover:bg-[#b7a66b]/10 transition-all duration-300 ease-in-out"
