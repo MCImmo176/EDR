@@ -11,10 +11,10 @@ export const MobileButton = ({
   className = '',
   ...props 
 }: MobileButtonProps) => {
-  const baseStyles = 'w-full py-3 px-6 rounded-lg font-medium transition-all duration-300';
+  const baseStyles = 'min-w-[44px] min-h-[44px] px-6 py-3 rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-luxury-gold focus:ring-offset-2 active:scale-95';
   const variantStyles = {
-    primary: 'bg-luxury-gold text-white hover:bg-opacity-90',
-    secondary: 'border-2 border-luxury-gold text-luxury-gold hover:bg-luxury-gold hover:text-white'
+    primary: 'bg-luxury-gold text-white hover:bg-luxury-gold/90',
+    secondary: 'border-2 border-luxury-gold text-luxury-gold bg-white hover:bg-luxury-gold hover:text-white'
   };
 
   return (
