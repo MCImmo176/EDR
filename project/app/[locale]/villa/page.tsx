@@ -944,7 +944,7 @@ export default function VillaPage() {
               <div className="absolute inset-0 border border-[#b7a66b]/20 transform translate-x-5 translate-y-5"></div>
               <div className="absolute inset-0 bg-white">
                 <Image
-                  src="/images/villa/IMG_5967.JPEG"
+                  src="/images/gallery/interieur/8.JPEG"
                   alt="Vue extérieure de la villa"
                   fill
                   className="object-cover"
@@ -1024,7 +1024,7 @@ export default function VillaPage() {
             >
               <div className="absolute inset-0 overflow-hidden">
                 <Image
-                  src="/images/gallery/vues/Coucher de soleil.png"
+                  src="/images/gallery/vues/Coucher de soleil 3.png"
                   alt={tVilla('images.pool.alt')}
                   fill
                   className="object-cover"
