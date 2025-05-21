@@ -1,3 +1,4 @@
+"use client"
 import { ButtonHTMLAttributes } from 'react';
 
 interface MobileButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
