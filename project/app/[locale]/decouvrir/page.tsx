@@ -189,7 +189,7 @@ export default function DecouvrirPage() {
     {
       title: t('enjoy.sports.monteCarloMasters.title'),
       description: t('enjoy.sports.monteCarloMasters.description'),
-      image: "/images/discover/newpiscine.JPG",
+      image: "/images/discover/newmasters.png",
       category: t('enjoy.sports.monteCarloMasters.category'),
       bestTime: t('enjoy.sports.monteCarloMasters.bestTime')
     },
@@ -250,7 +250,7 @@ export default function DecouvrirPage() {
     {
       title: t('enjoy.villages.roquebrune.title'),
       description: t('enjoy.villages.roquebrune.description'),
-      image: "/images/discover/DJI_0017.JPG",
+      image: "/images/discover/roquebrunecapmartin.png",
       category: t('enjoy.villages.roquebrune.category'),
       duration: t('enjoy.villages.roquebrune.duration'),
       bestTime: t('enjoy.villages.roquebrune.bestTime')
