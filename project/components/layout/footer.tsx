@@ -3,14 +3,17 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useLanguage } from '@/hooks/useLanguage';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import Cookies from 'js-cookie';
 
 export function Footer() {
   const { t } = useLanguage();
   const currentLocale = useParams().locale as string;
   const [isAtBottom, setIsAtBottom] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +25,24 @@ export function Footer() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleLanguageChange = (newLocale: string) => {
+    // Sauvegarder la préférence
+    Cookies.set('NEXT_LOCALE', newLocale, { 
+      expires: 365,
+      path: '/',
+      sameSite: 'strict'
+    });
+    localStorage.setItem('preferredLocale', newLocale);
+
+    // Construire le nouveau chemin
+    const segments = pathname.split('/');
+    segments[1] = newLocale;
+    const newPath = segments.join('/');
+    
+    // Rediriger
+    router.push(newPath);
+  };
 
   const flags = [
     { locale: "fr", src: "/images/flags/france.png", alt: "Drapeau français" },
@@ -51,30 +72,24 @@ export function Footer() {
           </div>
           
           <div className="flex gap-4 items-center order-2 md:order-last">
-            {flags.map((flag) => {
-              const pathname = usePathname();
-              const currentPath = pathname ? pathname.split('/').slice(2).join('/') : '';
-              const newPath = `/${flag.locale}/${currentPath}`;
-              
-              return (
-                <Link 
-                  key={flag.locale} 
-                  href={newPath}
-                  className="block hover:opacity-80 transition-opacity"
-                >
-                  <div className="w-[35px] h-[25px] relative">
-                    <Image
-                      src={flag.src}
-                      alt={flag.alt}
-                      fill
-                      sizes="35px"
-                      className="object-cover"
-                      unoptimized
-                    />
-                  </div>
-                </Link>
-              );
-            })}
+            {flags.map((flag) => (
+              <button 
+                key={flag.locale} 
+                onClick={() => handleLanguageChange(flag.locale)}
+                className="block hover:opacity-80 transition-opacity"
+              >
+                <div className="w-[35px] h-[25px] relative">
+                  <Image
+                    src={flag.src}
+                    alt={flag.alt}
+                    fill
+                    sizes="35px"
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
+              </button>
+            ))}
           </div>
         </div>
       </div>
