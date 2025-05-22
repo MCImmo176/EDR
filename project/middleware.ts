@@ -12,21 +12,28 @@ export function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
-  // Si l'URL a déjà un préfixe de langue, on ne redirige pas
-  const isMissingLocale = !/^\/(fr|en|el|ru|it)(\/|$)/.test(pathname);
-
-  if (isMissingLocale) {
-    // On vérifie d'abord le cookie NEXT_LOCALE
-    const localeFromCookie = req.cookies.get('NEXT_LOCALE')?.value;
-    
-    // Si pas de cookie, on utilise le français par défaut
-    const locale = localeFromCookie || 'fr';
-    
-    // Redirection vers la page avec la bonne langue
-    return NextResponse.redirect(new URL(`/${locale}${pathname}`, req.url));
+  // Récupérer la langue du cookie
+  const localeFromCookie = req.cookies.get('NEXT_LOCALE')?.value;
+  
+  // Si l'URL a déjà un préfixe de langue
+  const hasLocale = /^\/(fr|en|el|ru|it)(\/|$)/.test(pathname);
+  
+  if (hasLocale) {
+    // Si on a un cookie et que la langue dans l'URL est différente
+    if (localeFromCookie) {
+      const currentLocale = pathname.split('/')[1];
+      if (currentLocale !== localeFromCookie) {
+        // Rediriger vers la langue du cookie
+        const newPath = pathname.replace(/^\/(fr|en|el|ru|it)/, `/${localeFromCookie}`);
+        return NextResponse.redirect(new URL(newPath, req.url));
+      }
+    }
+    return NextResponse.next();
   }
 
-  return NextResponse.next();
+  // Si pas de préfixe de langue, rediriger vers la langue du cookie ou le français par défaut
+  const locale = localeFromCookie || 'fr';
+  return NextResponse.redirect(new URL(`/${locale}${pathname}`, req.url));
 }
 
 export const config = {

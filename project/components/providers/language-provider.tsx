@@ -54,25 +54,21 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     router.push(newPath);
   };
 
-  // Au chargement initial, vérifier si on a une préférence stockée
+  // Au chargement initial et à chaque changement de page
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const cookieLocale = Cookies.get('NEXT_LOCALE') as Language;
-      const storedLocale = localStorage.getItem('preferredLocale') as Language;
       
-      // Si on a une préférence stockée différente de la locale actuelle
+      // Si on a un cookie et que la langue actuelle est différente
       if (cookieLocale && cookieLocale !== currentLocale) {
         handleLanguageChange(cookieLocale);
-      } else if (storedLocale && storedLocale !== currentLocale) {
-        handleLanguageChange(storedLocale);
       }
     }
-  }, []); // Uniquement au montage du composant
+  }, [pathname]); // Réagir aux changements de page
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage: handleLanguageChange }}>
       {children}
     </LanguageContext.Provider>
   );
-}
 }
