@@ -35,15 +35,12 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     // Mettre à jour le state
     setLanguage(newLang);
     
-    // Sauvegarder dans le cookie (prioritaire)
+    // Sauvegarder dans le cookie
     Cookies.set('NEXT_LOCALE', newLang, { 
       expires: 365,
       path: '/',
       sameSite: 'strict'
     });
-
-    // Sauvegarder dans le localStorage comme backup
-    localStorage.setItem('preferredLocale', newLang);
 
     // Construire le nouveau chemin
     const segments = pathname.split('/');
@@ -54,17 +51,19 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     router.push(newPath);
   };
 
-  // Au chargement initial et à chaque changement de page
+  // Vérifier la cohérence de la langue à chaque changement de page
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const cookieLocale = Cookies.get('NEXT_LOCALE') as Language;
-      
-      // Si on a un cookie et que la langue actuelle est différente
-      if (cookieLocale && cookieLocale !== currentLocale) {
-        handleLanguageChange(cookieLocale);
-      }
+    const cookieLocale = Cookies.get('NEXT_LOCALE') as Language;
+    
+    // Si on a un cookie et que la langue actuelle est différente
+    if (cookieLocale && cookieLocale !== currentLocale) {
+      // Forcer la redirection vers la langue du cookie
+      const segments = pathname.split('/');
+      segments[1] = cookieLocale;
+      const newPath = segments.join('/');
+      router.replace(newPath);
     }
-  }, [pathname]); // Réagir aux changements de page
+  }, [pathname, currentLocale]);
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage: handleLanguageChange }}>
