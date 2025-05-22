@@ -27,50 +27,52 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const currentLocale = useLocale() as Language;
   
+  // Initialiser avec la locale actuelle
   const [language, setLanguage] = useState<Language>(currentLocale);
 
   // Fonction pour changer la langue
   const handleLanguageChange = (newLang: Language) => {
+    // Mettre à jour le state
     setLanguage(newLang);
     
-    if (typeof window !== 'undefined') {
-      // Sauvegarder dans le localStorage
-      localStorage.setItem('preferredLocale', newLang);
-      
-      // Sauvegarder dans un cookie qui expire dans 1 an
-      Cookies.set('NEXT_LOCALE', newLang, { 
-        expires: 365,
-        path: '/',
-        sameSite: 'strict'
-      });
-    }
+    // Sauvegarder dans le cookie (prioritaire)
+    Cookies.set('NEXT_LOCALE', newLang, { 
+      expires: 365,
+      path: '/',
+      sameSite: 'strict'
+    });
 
-    // Construire le nouveau chemin en préservant le reste de l'URL
+    // Sauvegarder dans le localStorage comme backup
+    localStorage.setItem('preferredLocale', newLang);
+
+    // Construire le nouveau chemin
     const segments = pathname.split('/');
-    segments[1] = newLang; // Remplacer la locale dans l'URL
+    segments[1] = newLang;
     const newPath = segments.join('/');
     
+    // Rediriger
     router.push(newPath);
   };
 
-  // Synchroniser avec la locale de l'URL et les préférences stockées
+  // Au chargement initial, vérifier si on a une préférence stockée
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const storedLocale = localStorage.getItem('preferredLocale') as Language;
       const cookieLocale = Cookies.get('NEXT_LOCALE') as Language;
+      const storedLocale = localStorage.getItem('preferredLocale') as Language;
       
-      // Priorité : 1. Cookie, 2. localStorage, 3. URL actuelle
-      const preferredLocale = cookieLocale || storedLocale || currentLocale;
-      
-      if (preferredLocale && preferredLocale !== currentLocale) {
-        handleLanguageChange(preferredLocale);
+      // Si on a une préférence stockée différente de la locale actuelle
+      if (cookieLocale && cookieLocale !== currentLocale) {
+        handleLanguageChange(cookieLocale);
+      } else if (storedLocale && storedLocale !== currentLocale) {
+        handleLanguageChange(storedLocale);
       }
     }
-  }, []);
+  }, []); // Uniquement au montage du composant
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage: handleLanguageChange }}>
       {children}
     </LanguageContext.Provider>
   );
+}
 }

@@ -16,8 +16,14 @@ export function middleware(req: NextRequest) {
   const isMissingLocale = !/^\/(fr|en|el|ru|it)(\/|$)/.test(pathname);
 
   if (isMissingLocale) {
-    const localeFromCookie = req.cookies.get('NEXT_LOCALE')?.value || 'fr';
-    return NextResponse.redirect(new URL(`/${localeFromCookie}${pathname}`, req.url));
+    // On vérifie d'abord le cookie NEXT_LOCALE
+    const localeFromCookie = req.cookies.get('NEXT_LOCALE')?.value;
+    
+    // Si pas de cookie, on utilise le français par défaut
+    const locale = localeFromCookie || 'fr';
+    
+    // Redirection vers la page avec la bonne langue
+    return NextResponse.redirect(new URL(`/${locale}${pathname}`, req.url));
   }
 
   return NextResponse.next();

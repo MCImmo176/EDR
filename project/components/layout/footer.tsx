@@ -3,17 +3,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useLanguage } from '@/hooks/useLanguage';
-import { usePathname, useRouter } from 'next/navigation';
 import { useParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import Cookies from 'js-cookie';
+import { useLanguageContext } from '@/components/providers/language-provider';
 
 export function Footer() {
   const { t } = useLanguage();
   const currentLocale = useParams().locale as string;
   const [isAtBottom, setIsAtBottom] = useState(false);
-  const router = useRouter();
-  const pathname = usePathname();
+  const { language, setLanguage } = useLanguageContext();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,24 +23,6 @@ export function Footer() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const handleLanguageChange = (newLocale: string) => {
-    // Sauvegarder la préférence
-    Cookies.set('NEXT_LOCALE', newLocale, { 
-      expires: 365,
-      path: '/',
-      sameSite: 'strict'
-    });
-    localStorage.setItem('preferredLocale', newLocale);
-
-    // Construire le nouveau chemin
-    const segments = pathname.split('/');
-    segments[1] = newLocale;
-    const newPath = segments.join('/');
-    
-    // Rediriger
-    router.push(newPath);
-  };
 
   const flags = [
     { locale: "fr", src: "/images/flags/france.png", alt: "Drapeau français" },
@@ -75,8 +55,8 @@ export function Footer() {
             {flags.map((flag) => (
               <button 
                 key={flag.locale} 
-                onClick={() => handleLanguageChange(flag.locale)}
-                className="block hover:opacity-80 transition-opacity"
+                onClick={() => setLanguage(flag.locale as any)}
+                className={`block hover:opacity-80 transition-opacity ${language === flag.locale ? 'ring-2 ring-primary rounded-sm' : ''}`}
               >
                 <div className="w-[35px] h-[25px] relative">
                   <Image
